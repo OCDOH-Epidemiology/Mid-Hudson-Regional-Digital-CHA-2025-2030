@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap");
+
+$font-family-sans-serif: "Source Sans 3", "Segoe UI", sans-serif;
+$headings-font-family: "Source Serif 4", "Georgia", serif;
+
+$primary: #0f5e9c;
+$secondary: #6c757d;
+$success: #2f855a;
+$info: #0d6efd;
+$warning: #d97706;
+$danger: #b91c1c;
+$light: #f5f7fa;
+$dark: #1f2a37;
+
+$body-color: #1f2937;
+$body-bg: #fdfcf9;
+$link-color: #0f5e9c;
+$link-hover-color: #0b4978;
+
+$border-radius: 0.75rem;
+$card-border-radius: 1rem;
+$card-border-color: rgba(15, 94, 156, 0.15);
+
+:root {
+  --cha-accent: #ff9f1c;
+  --cha-muted: #5b6770;
+  --cha-surface: #ffffff;
+}
+
+body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.01em;
+}
+
+.hero {
+  background: linear-gradient(120deg, rgba(15, 94, 156, 0.08), rgba(255, 159, 28, 0.12));
+  border: 1px solid rgba(15, 94, 156, 0.15);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+}
+
+.kpi-card {
+  background: var(--cha-surface);
+  box-shadow: 0 18px 35px rgba(15, 94, 156, 0.08);
+  border: 1px solid rgba(15, 94, 156, 0.12);
+}
+
+.kpi-card h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cha-muted);
+}
+
+.kpi-card strong {
+  font-size: 1.8rem;
+  color: $primary;
+}
+
+.callout-note {
+  border-left: 4px solid $primary;
+}
+
+.card {
+  backdrop-filter: blur(2px);
+}
+

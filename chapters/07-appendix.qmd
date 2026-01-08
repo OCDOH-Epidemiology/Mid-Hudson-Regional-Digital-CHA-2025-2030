@@ -1,0 +1,1668 @@
+---
+title: "Appendix"
+jupyter: python3
+execute:
+  freeze: auto
+---
+
+This appendix contains county-level summaries and references from the draft CHA document.
+
+TODO: Reconcile appendix references and insert final appendices (maps, tables, and survey instruments).
+
+## County Health Summaries
+
+### Dutchess County Health Summary
+
+#### Demographics
+
+Dutchess County is in the center of the Hudson Valley, midway between
+New York City (NYC) and New York State's (NYS) capital, Albany. The
+western border includes 30 miles of Hudson River shoreline with
+Connecticut forming the eastern border. Dutchess County is 825 square
+miles, made up of 30 municipalities, consisting of 20 towns, 8 villages,
+and two cities, Poughkeepsie (the county seat) and the city of Beacon.
+The southwestern region of Dutchess County is the most densely populated
+part of the county and includes the cities of Beacon and Poughkeepsie.
+The rest of the county is predominantly suburban and rural. Dutchess
+County has a population of almost 300,000 with a majority of residents
+between 35 and 64 years old. In Dutchess County 8.3% of adults report
+having poor physical health and 11.7% of adults report having poor
+mental health.
+
+#### Community Survey findings
+
+##### Mid-Hudson Regional Community Health Survey 2025
+
+As a primary data collection method, Dutchess County collaborated with
+Putnam County on the third iteration of the Mid-Hudson Regional
+Community Health Survey \[[see Appendix L](#section-11)\]. The
+66-question survey, which was administered by Siena Research Institute
+(SRI), asked 500 Dutchess County residents about overall quality of
+life, social determinants of health, perception of health and
+well-being, health behaviors, and access and utilization of health
+services. By administering a revised version of the 2018 and 2022
+iterations of the Mid-Hudson Regional Community Health Survey,
+Dutchess and Putnam Counties were able to analyze changes of responses
+over time.
+
+The survey was fielded from May 1 – June 3, 2025, and was open to
+residents of Dutchess and Putnam County aged 18 years and older.
+Respondents were contacted via landline telephone and cell phone.
+Telephone sampling was conducted via a stratified dual frame probability
+sample of landline and cell phone telephone numbers. County samples were
+weighted by age, gender, reported race and ethnicity, and income using
+American Community Survey population estimates to ensure statistical
+representativeness. A total of 500 residents of Dutchess County
+completed the survey. The margin of error (MOE) including the design
+effects resulting from weighting with a 95% confidence interval for the
+Dutchess County sample was +/- 6.4%.
+
+The self-reported physical health status of Dutchess County residents
+increased from 2022 to 2025, with 73% and 78% reporting excellent or
+good physical health, respectively. In 2025, individuals who rent their
+home, are unemployed, households with disabled persons, and low-income
+individuals reported poorer overall physical health compared to their
+peers. Residents of the Western portion of Dutchess County also reported
+poor overall physical health when compared to those residing in the
+Eastern portion of the county.
+
+Similarly to physical health, the self-reported mental health status of
+Dutchess County residents increased from 2022 to 2025, with 69% and 75%
+reporting excellent or good mental health, respectively. In 2025,
+individuals who are non-White, rent their home, households without
+children, and households with disabled persons reported poorer overall
+mental health compared to their peers. Self-reported mental health
+status also seemed to correlate with age, with individuals 18-34 years
+old having poorer mental health compared to those 35-54 and 55+.
+
+Respondents were asked a series of questions regarding psychological
+distress. According to the Kessler Score, the summation of the responses
+to those questions, 46% of Dutchess County residents reported moderate
+or severe mental distress. Moderate or severe mental distress was more
+commonly reported by individuals residing in the Eastern portion of the
+county, 18–54-year-old residents, non-White individuals, those who rent
+their home, employed residents, and households with disabled persons.
+
+When asked about their ability to get basic necessities, like food,
+housing, utilities, transportation, and access to a phone and internet,
+Dutchess County residents reported having less trouble accessing these
+necessities in 2025 when compared to 2022. In 2025, some groups more
+frequently reported having trouble accessing these necessities when
+compared to their peers. In general, this includes those residing in the
+Western portion of the county, Non-White residents, households with
+disabled persons, individuals who rent their home, and lower income
+individuals.
+
+Self-reported ability to get healthcare, including physical, mental, and
+dental, varied by demographic group. Individuals residing in the Eastern
+portion of the county reported worse access to physical and mental
+health care, but better access to dental care, when compared to those
+residing in the Western portion. Non-White individuals, those who rent
+their home, and households with disabled persons reported more trouble
+accessing all healthcare compared to their counterparts.
+
+25% of Dutchess County residents said they have not been to a primary
+care physician for a routine physical/check up in the last 12 months.
+This is an increase from 2022 and 2018 where 22% and 16%, respectively,
+reported not visiting a primary care physician in the last year. The
+most common reasons for not visiting a primary care provider in the past
+year included not having time (37%), choosing not to go for another
+reason (31%), not having enough money (24%), or not having insurance
+(23%).
+
+In 2025, 6% of Dutchess County residents reported visiting the emergency
+room in the last year for a non-emergent issue. This is similar to 2022
+(8%) and 2018 (7%). The most common reason for visiting the emergency
+room for a non-emergency issue was due to the convenience of emergency
+room operating hours, accounting for nearly 50% of responses in 2025.
+
+More information regarding the methodology, design, and results is
+available in Dutchess County’s report.
+
+##### Dutchess County Resident Priority Voting
+
+In addition to the phone-based survey, DCDOH also gathered input from
+residents at community events. Attendees were given two stones and were
+asked to put them in a flowerpot labeled with the Prevention Agenda 2025
+– 2030 priority areas. 830 Dutchess County residents participated at six
+events across Summer 2025. As shown in Figure 194, Mental Wellbeing and
+Substance Use was the most common response, followed by Health Insurance
+Coverage and Access to Care and Healthy Children.
+
+<figure>
+<img src="media/media/image193.emf"
+style="width:7.5in;height:3.99444in" />
+</figure>
+
+#### Areas of Focus
+
+In Dutchess County, there is a strong need to focus on factors of
+chronic disease and mental and behavioral health. Cardiovascular is the
+leading cause of death in Dutchess County and other chronic health
+conditions, like hypertension, diabetes, and obesity, can contribute to
+and exacerbate cardiovascular disease. Those with a mental health
+condition, including but not limited to depression, anxiety, other mood
+disorder or substance or alcohol use disorder, are also more likely to
+have a chronic health condition than those without. Due to the
+interrelatedness of both physical and mental well-being, it is important
+to focus not only on physical health but mental health as well. Within
+both sectors, there are several disparities that exist between the more
+urban-suburban western side of the county and the rural eastern side,
+between White non-Hispanic residents and Black non-Hispanic and Hispanic
+residents, and between those who have disabilities’ health and those who
+do not. These disparities can be seen in the rates of preventable
+hospitalizations, premature death, opioid overdose, participation in
+primary care, and provision of mental health services. In order to
+combat these issues, it is important that the residents of Dutchess
+County have access to and support from sufficient, competent health
+providers to manage their health.
+
+Areas of focus should include, though not be limited to:
+
+- Cardiovascular disease, the leading cause of death in the county
+
+- Cancer, including screening rates
+
+- Respiratory diseases including asthma and chronic lower respiratory
+  disease (CLRD)
+
+- Other chronic diseases, like diabetes, hypertension, and obesity
+
+- Childhood immunizations
+
+- Mental health and wellbeing
+
+- Suicide and self-harm
+
+- Opioid overdose
+
+- Behavioral health including diet/exercise, smoking, alcohol and drug
+  use
+
+#### Assets and Resources
+
+Dutchess County Department of Health (DCDOH) works closely with a
+variety of organizations, including academic institutions (public
+schools and colleges), community-based organizations (CBOs), hospitals
+and other medical facilities, federally qualified health centers, and
+governmental departments. DCDOH also has a Mobile Health Unit that is
+deployed to community events and areas of high need to provide clinical
+services (immunizations, sexual health) and public health education.
+Additionally, Department of Health employees participate in an array of
+coalitions and workgroups aimed at improving Dutchess County residents’
+health, including Eastern Dutchess Rural Health Network, Bringing
+Agencies Together, Poughkeepsie Healthy Black and LatinX Coalition, Fit
+Dutchess, the Dutchess County Food Security Council. and Vassar Brothers
+and Northern Dutchess Hospital’s Community Health Committee Meetings,
+fostering collaboration between DCDOH and other participating
+organizations.
+
+### Orange County Health Summary
+
+#### Demographics
+
+Orange County is in the southeastern area of NYS, bounded on the east by
+the Hudson River and on the west by the Delaware River. It is located
+approximately 40 miles north of NYC with 43 municipalities. Orange
+County is the second most populous in the M-H Region with approximately
+403,840 residents \[Table 1\]. Of Orange County residents, 50.1% are
+male, 59.2% are non-Hispanic White, 10.5% are non-Hispanic Black, and
+23.2% are Hispanic \[Tables 2, 5, and 4\]. Orange County is both
+racially and ethnically diverse, with the second highest percentage of
+Hispanic persons in the M-H Region and 17.5% of individuals identifying
+as a race other than non-Hispanic White \[Table 5\]. Twenty-nine percent
+of people living in Orange County speak a language other than English at
+home, third highest in the M-H Region next to Westchester and Rockland
+counties \[Table 6\]. Nearly 30% of Orange County residents are 19 years
+or younger, the second highest percentage among M-H counties \[Table
+3\]. Nearly half (49.5%) of Orange County students are considered
+economically disadvantaged, which ranks second in the M-H region
+\[Figure 12\]. Although 89% of students graduate with a high school
+diploma, third highest in M-H Region, only 14.1% of residents hold a
+graduate or professional degree, the second worst among M-H Region
+counties \[Table 8\]. Unemployment has remained steady in the last three
+years of data available around 5.4% \[Figure 2\] and the percentage of
+the population under poverty has been 13% since 2022 \[Figure 7\]. In
+Orange County, 20% of households spent half or more of their income on
+housing, which is the second highest in the M-H Region and higher than
+the NYS average of 19% \[Figure 6\].
+
+Orange County is a mix of urban, suburban, farmland, and rural areas.
+Agriculture is a leading industry in Orange County and constitutes more
+than half of the county’s open space. The availability of multiple modes
+of transportation, including bus, train, and major highways, allows
+residents to travel to NYC, New Jersey, and Southern NYS for employment.
+Orange County also contains New York Stewart International Airport in
+Newburgh, NY, West Point Military Academy in Highland Falls, NY, and
+major tourist attractions such as LEGOLAND New York and the Woodbury
+Commons Premium Outlets.
+
+#### Community Survey Findings
+
+##### Orange County Community Health Survey
+
+As part of the CHA process, the Orange County Department of Health
+(OCDOH) collected primary data known as the Orange County Community
+Health Survey\[[see Appendix M](#section-12)\], in partnership with
+Siena Research Institute to collect data on 900 residents to help better
+characterize the needs of the community. The 63-question survey, which
+was administered by Siena Research Institute (SRI), asked residents
+about overall quality of life, social determinants of health, perception
+of health and well-being, health behaviors, and access and utilization
+of health services. Orange County conducted this survey in coordination
+with the Mid-Hudson Region in 2018 and 2022 and unilaterally in 2023 and
+2024. By administering this survey over time, OCDOH was able to analyze
+response changes over time.  The survey was fielded from May 20 – June
+26, 2024, and was open to Orange County residents aged 18 years and
+older. Respondents were contacted via landline telephone and cell phone.
+There were 800 respondents who completed the survey through a dual frame
+(landline and cell phone) mode, and 100 who completed the survey via the
+online panel (Lucid). The county-wide sample of 900 was weighted by age,
+gender, reported race and ethnicity, income and county using the
+2015-2020 American Community Survey 5-year estimates to ensure
+statistical representativeness. The margin of error (MOE) including the
+design effects resulting from weighting with a 95% confidence interval
+for the sample was +/- 3.8%. More information regarding the methodology,
+design, and results is available in the Orange County Community Health
+Survey Report is found on the OCDOH website. Overall, Orange
+County residents with an income under \$25,000 (\$25K), had worse health
+outcomes and reported struggling to obtain basic needs such as food,
+housing, and transportation.
+
+Below are several data points of note:
+
+- Overall, 74% of respondents rated their physical health as excellent
+  or good compared to 79% in 2018. Comparatively only 60% of those
+  making \<\$25K per year reported excellent or good physical health.
+
+- Respondents report excellent mental health has declined significantly
+  since 2018 (52% vs. 37% in 2024).
+
+- 47% of Orange County respondents aged 18-34 reported having moderate
+  or serious mental (psychological) distress, compared to 25% of those
+  aged 55 and over.
+
+- 89% of Orange County respondents aged 55 and older reported visiting a
+  primary care physician for a routine physical or checkup in the last
+  12 months, compared to 69% of those aged 18-34.
+
+- 19% of Orange County respondents aged 18-34 reported that they, or a
+  member of their household, had trouble obtaining housing when it was
+  really needed at some point in the last 12 months. This compares to
+  10% of Orange County respondents aged 55+.
+
+- Over 20% of respondents reported being unable to get any healthcare
+  (including dental or vision) when it was really needed compared to
+  14.7% in 2018.
+
+<!-- -->
+
+- 15.3% of respondents reported being unable to access food when they
+  needed it in 2024, which is similar to 2023 (15.5%) but significantly
+  higher than in 2018 and 2022, (9.8% and 12.4% respectively).
+
+- 30% of respondents with \<\$25K yearly income were unable to get
+  transportation when needed in the previous 12 months, compared to only
+  17% of Orange County respondents.
+
+- 27% of Orange County respondents making \<\$25K per year reported that
+  they were unable to access the internet to 18% of all respondents.
+
+##### Orange County Community Asset Survey
+
+In addition to the Orange County Community Health Survey conducted in
+2024, OCDOH conducted the Community Asset Survey \[[see Appendix
+N](#section-13)\] from April 25 – September 4, 2025. This convenience
+sample survey was developed to ask residents about the greatest
+strengths of the community, where community efforts should be focused to
+improve quality of life, and to identify the most important health
+issues. Over 800 residents participated in the convenience sample
+survey.
+
+The greatest strengths of the community were identified as:
+
+- Access to good education
+
+- Parks and recreation
+
+- Access to basic health care
+
+The top three areas identified to improve quality of life were:
+
+- More affordable housing
+
+- Better jobs and economy
+
+- Improving public transportation
+
+The top three important health issues identified by the respondents
+were:
+
+- Mental health including depression and anxiety
+
+- Drug use
+
+- Aging problems (Alzheimer’s disease, arthritis, hearing/vision loss,
+  etc.)
+
+#### Areas of Focus
+
+Premature death for those less than 65 years is the 2<sup>nd</sup> worst
+in the M-H Region and worse than the NYS rate \[see Figure 86\]. Heart
+disease and cancer are the leading causes of death and premature death
+(death before age 75) by a large margin. These margins are larger for
+those among racial and ethnic lines, with Orange County have the second
+highest percentage difference between Black Non-Hispanics and White
+Non-Hispanics, in the M-H Region \[see Figure 87\]. Obesity is a leading
+contributor to these top causes of death, as well as cancer, diabetes,
+stroke, and hypertension, all of which can lead to premature death.
+Orange County’s percentage of adults overweight or obese is the highest
+in the M-H Region 75% \[see Figure 118\]. Over the past ten years, the
+rates of obesity have continually grown, as well as the subsequent
+morbidity of cardiovascular disease, prediabetes, and hypertension.
+Orange County’s age-adjusted all cancer mortality is the highest in the
+M-H Region at 155.5 per 100,000 residents, and 1.4 times higher than the
+NYS rate based on the latest available data \[see Figure 123\]. Within
+these preventable causes of death, there are disparities among racial
+and ethnic minorities. These disparities can be seen in the rates of
+premature deaths, food insecurity, infant mortality, asthma
+hospitalizations, hospitalizations and mortality due to heart disease,
+breast cancer mortality, colorectal cancer mortality, and premature
+births. Many of these health outcomes are influenced by the social
+determinants of health, conditions where systems and policies determine
+the environments in which people live. Given the connectivity between
+physical health and mental health, it is important to focus on both
+physical health and mental health. In 2024, 36% of Orange County adults
+18 years and older reported they experience either moderate or serious
+psychological distress. However, 47% of adults with income less than
+\$25K per year reported moderate or serious psychological distress. This
+highlights the role poverty plays in impacting residents’ well-being.
+
+Where data are available across the M-H Region from 2019-22, Orange
+County ranks 4<sup>th</sup> in the M-H region in overdose deaths
+involving any opioid and higher than the NYS excluding NYC rate.
+However, strides have been made in addressing substance use in Orange
+County, including a 45.5% reduction in overdose deaths which have from
+2021 to 2024.
+
+Other health areas where Orange County falls behind NYS or have worsened
+since the last assessment include:
+
+- Food insecurity
+
+- Severely cost burdened households
+
+- Cardiovascular disease hospitalization rate
+
+- Adults with prediabetes
+
+- Asthma hospitalization rate among adults
+
+- Emergency department visits for asthma in children 17 years and
+  younger
+
+- Stroke hospitalization rate
+
+- Cancer mortality including all cancer, female breast cancer, lung and
+  bronchus, and colorectal cancer
+
+- Childhood immunization rates among children 24-35 months of age
+
+- Percentage of births with late or no prenatal care
+
+- Percentage of women age 50-74 years receiving breast cancer screening
+  based on recent guidelines
+
+- Early syphilis case rate
+
+#### Assets and Resources
+
+OCDOH has strong community partnerships with hundreds of organizations
+serving its residents, including five area hospitals, federally
+qualified health centers (FQHC), private medical providers, school
+districts, two-year and four-year colleges, a medical school,
+community-based organizations (CBOs), and governmental departments
+serving a broad variety of community needs. OCDOH has established
+multiple coalitions including Chronic Disease Coalition (Healthy
+Orange), Orange County Breastfeeding Coalition, Food Insecurity
+Workgroup, Orange County Cancer Screening Collaborative, Orange County
+Infection Control Committee, the Healthcare Coalition, and the Hudson
+Valley Public Health Collaborative. OCDOH also co-leads and participates
+in many countywide coalitions aimed at improving the health of residents
+including: Changing the Orange County Addiction Treatment Ecosystem,
+Orange County Community Alliance for Prevention, Middletown Cares
+Coalition, Perinatal Infant Family Health Collaborative, Newburgh
+Healthy Black and LatinX Coalition, Hudson Valley Health Coalition, Head
+Start Health Advisory Committee, RECAP Health Services Advisory
+Committee, System of Care 0-5 Infant and Early Childhood Mental Health
+Collaborative, System of Care Children Youth and Families, Orange County
+Suicide Task Force, Hudson Valley Waterworks Conference, Orange County
+Water Authority, Team Newburgh, Child Fatality Review Board, WELCOME
+Orange, and the Orange County Resilience Project.
+
+### Putnam County Health Summary
+
+#### Demographics
+
+Putnam County is located approximately 60 miles north of NYC and is
+bordered by the Hudson River to the west, Connecticut to the east,
+Dutchess County to the north, and Westchester County to the south. NYC
+is accessible by Metro-North rail lines running on the eastern and
+western sides of the County. With just 230 square miles of land area,
+Putnam is the third smallest county in NY, excluding the five boroughs
+of NYC. Putnam’s terrain includes a mix of rural and suburban
+areas with numerous lake communities, parklands, and reservoirs. The
+County is divided into six towns with three villages and no urban
+centers. More than a third of the population resides in the town
+of Carmel, which occupies southern central portion of the
+county.<sup>254</sup>
+
+With an estimated 2023 population of 97,988, Putnam is the second least
+populous county in the M-H Region, constituting 4.1% of the region’s
+population and 0.5% of the population of NYS \[see Table 1\]. The
+county’s population decreased by 2% between the 2010 and 2020 census,
+but American Community Survey population estimates have been relatively
+stable from 2021-2023, and the three-year average birth rate is
+trending up.
+
+Putnam’s age distribution, with 19.6% under the age of 18 years and
+26.5% age 60 and older, is slightly older than that of the M-H Region
+(22.6% \< 18 and 24.1% ≥ 60), and more similar to NYS excluding NYC
+(20.9% \< 18 and 25.6% ≥ 60) \[see Table 3\]. By race and ethnicity, the
+county is comparatively homogenous, with a greater majority non-Hispanic
+White population (72.4%) than both the M-H Region (58.5%) and NYS
+(53.4%). Approximately 19% of the population is Hispanic, and all other
+racial and ethnic groups combined make up only 8.6% of the population
+\[see Tables 4 and 5\]. The majority of the population (79%) speak only
+English at home, with Spanish (12.6%) being the most common non-English
+language spoken at home \[see Table 6\]. A little more than 4% of
+Putnam’s population are veterans, slightly higher than that for the M-H
+Region (3.9%), but lower than that for NYS excluding NYC (5.3%) \[see
+Table 11\]. Putnam has a slightly lower disabled population (9.6%)
+compared to the M-H Region (10.2%) and NYS (11.6%). Ambulatory
+difficulty is the most common type of disability in Putnam (5.4%), as
+well as in the M-H Region (5.2%) and NYS (6.6%) \[see Table 12\].
+
+Putnam is a well-educated and affluent county. Over 90% of the
+population has a high school or higher degree, and nearly 44% have a
+bachelor’s degree or higher \[see Table 8\]. The median annual household
+income has trended up in the last decade, and in 2022 was the third
+highest in the state,<sup>257</sup> however median household income is
+lower in Asian and Hispanic populations.
+
+#### Community Survey Findings
+
+##### Mid-Hudson Regional Community Health Survey 
+
+Alongside Dutchess, Putnam County participated in the third iteration of
+the [Mid-Hudson Regional Community Health Survey
+(MHRCHS)](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf),
+a broad-based assessment designed to enhance understanding of local
+health status, quality of life, and factors that impact health for
+Putnam County residents. As in 2018 and 2022, when all seven M-H Region
+Counties were able to participate, the MHRCHS was administered by [Siena
+Research Institute (SRI)](https://scri.siena.edu/about-us/). In 2025,
+the 50+ question survey instrument included both new questions and many
+of the same questions offered in previous surveys to allow for
+assessment of change over time \[[see Appendix L](#section-11)\].
+
+The survey was fielded from May 1 – June 3, 2025, and was open to
+residents of Dutchess and Putnam County aged 18 years and older.
+Respondents were contacted via landline telephone and cell phone.
+Telephone sampling was conducted via a stratified dual frame probability
+sample of landline and cell phone numbers. County samples were weighted
+by age, gender, reported race and ethnicity, and income using American
+Community Survey population estimates to ensure statistical
+representativeness. A total of 602 residents of Putnam County completed
+the survey. The margin of error (MOE) including the design effects
+resulting from weighting with a 95% confidence interval for the Putnam
+County sample was +/- 5.5%.
+
+Notable findings include:
+
+- Overall, Putnam County performed similarly or favorably as compared to
+  Dutchess County, and there were few differences outside the MOE when
+  comparing Putnam results from previous surveys.
+
+- The vast majority of Putnam residents have a positive impression of
+  the overall quality of life (84%) and safety (97%) in their
+  communities. About two-thirds think their communities are good places
+  to live as they age and there are safe places to walk or bike.
+  However, residents with a disabled household member have a lower
+  opinion of their community as a place to age and of safety for walking
+  and biking. Women and residents of the western side of the county also
+  have a lower opinion of safety for walking and biking in their
+  communities.
+
+- As compared to previous surveys, overall improvement was seen in the
+  ability of Putnam County residents to access needed resources such as
+  housing, childcare and transportation in the last year. Notably,
+  inability to maintain employment that pays a living wage, a new
+  edition in the series of questions, emerged as the most commonly unmet
+  need at 19% of the population. For all other resources, the proportion
+  of the population with an unmet need in the last year ranged from
+  4%-9%.
+
+- Difficulties accessing healthcare in the last year were similar across
+  different types of care, ranging from 10% having difficulty getting
+  mental healthcare, to 14% having difficulty getting dental care and
+  physical health care. Inability to get care to meet the needs of
+  household members with disabilities was more common (29% of those with
+  a disabled household member).
+
+- Similar to past surveys, utilization rates were high for routine
+  physical exams (82%) and dental check-ups (80%), and inappropriate use
+  of emergency departments for non-emergencies was low (6%). Outside of
+  being too busy and choosing not to go, lack of money and insurance
+  were the common barriers to getting routine dental care, and inability
+  to get an appointment was the most common barrier to getting a routine
+  physical.
+
+- The K6 Index, a series of questions that provide a standardized
+  measure of prevalence of mental distress in the population, was added
+  to the 2025 survey. The K-6 Index proved to be more sensitive than
+  self-reported ratings of mental health with K6 scores of 9% for severe
+  mental distress and 29% for moderate mental distress, as compared to
+  self-reported mental health ratings of 5% poor and 18% fair. K6 and
+  self-reported ratings yielded similar results in distribution of
+  mental health concerns in the population, with higher distress/poorer
+  ratings seen in younger adults, renters, those with a disabled
+  household member, and those with household income less than \$50,000
+  per year.
+
+- The most notable finding related to potentially harmful behaviors is
+  the decreasing proportion of residents who never use drugs for
+  non-medical purposes (75% in 2025 as compared to 80% in 2022 and 90%
+  in 2018) alongside a cannabis consumption rate of 26%. Frequency of
+  cannabis consumption was newly added to the 2025 survey to facilitate
+  tracking of cannabis utilization rates since legalization in New York
+  State, so we can only hypothesize that increasing cannabis consumption
+  may be contributing to the overall rise in drug use for non-medicinal
+  purposes.
+
+##### Community Health Experience Survey
+
+Putnam also participated in the [Community Health Experience Survey
+(CHES)](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/Resident_Survey_Report_DataGen_FINAL.pdf),
+a public survey conducted by Nuvance Health in support of its Community
+Health Needs Assessment. The survey instrument was designed to collect
+information to assess resident perception of health and well-being,
+health behaviors, health concerns, and needs in the community \[[see
+Appendix O](#section-14)\]. Promotion of this self-administered online
+survey in the community and through local partners resulted in 267
+responses from adult residents of Putnam County. The survey population
+skewed heavily toward female and older age groups, and results were not
+considered generalizable to the entire population of Putnam County.
+Nonetheless, consistent with MHRCHS findings, mental health and
+healthcare access (particularly primary care) emerged as top concerns in
+this survey. Affordable housing was also a chief concern, with the
+highest proportion of respondents selecting affordable housing as an
+area of need to improve health in the community, and more than half of
+respondents anticipating that housing affordability will be worse in
+five years. Concern regarding healthcare access, mental health, and
+affordable housing were also supported by findings of the
+Community-based Organization Survey, detailed earlier in the M-H
+Regional CHA.
+
+#### Areas of Focus
+
+Areas of focus were identified through a systematic review of primary
+data collected in community surveys and secondary data indicators
+included in the M-H Regional CHA, the 2025-2030 NYSPA, and/or the
+[NYS County Health Indicators by Race/Ethnicity (CHIRE)
+Dashboard](https://www.health.ny.gov/community/health_equity/reports/county/putnam.htm).
+Indicators were flagged if they met any of the following criteria:
+prevention agenda objective not met; performance worse than the M-H
+Region, NYS, or five or more counties in the M-H Region; indicator
+performance worsening over time; or disparities between sub-groups
+within the county. Flagged indicators were then examined for patterns,
+and determinants of health or health issues with two or more flags were
+given consideration as an area of focus. On this basis, areas of focus
+include: decreasing economic stability; access to healthy food and
+healthy eating; mental health and suicide; alcohol and tobacco use;
+healthcare access; childhood preventive services; maternal child health;
+and tickborne disease. Data points in this summary are linked and/or
+footnoted if they are not otherwise found in the M-H Regional CHA.
+
+While Putnam is a comparatively affluent county, CHA data shows signs of
+decreasing economic stability and disparities that could have downstream
+impacts on health and well-being. Putnam has the lowest poverty rate in
+the M-H Region, but the percentage of the population in poverty ticked
+up from 2021 (6.0%) to 2022 (6.3%) and again in 2023 (6.5%) \[see Figure
+7\] with higher rates seen in the Hispanic population \[see Figure 8\].
+Similarly, in the 2023-2024 school year, Putnam has the lowest
+proportion of economically disadvantaged students enrolled in schools in
+the M-H Region (32.5%), but this too rose from 2021-2022 (28.5%) and
+2022-2023 (32.1%) \[see Figure 9\]. Putnam enjoys a low and decreasing
+unemployment rate (4.1% in 2023) \[see Figure 2\], but at 6.6%, rates
+are higher in the Black population. In spite of high employment
+rates, income may not be sufficient for the cost of living, as evidenced
+by 19% of
+[MHRCHS](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf)
+respondents stating they were unable to maintain employment that pays a
+living wage in the past year. Imbalance between income and the cost of
+living, in particular the cost of housing, is further reflected in an
+increasing percentage of cost burdened renter occupied units (56.5% in
+2023) \[see Figure 5\] and severely cost burdened households (17% in
+2019-2023) \[see Figure 6\]. These findings are reinforced by high
+levels of concern regarding the cost of housing seen on both the
+[Community Health Experience
+Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/Resident_Survey_Report_DataGen_FINAL.pdf)
+and the [Community-based Organization
+Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf).
+
+Access to healthy food is essential to healthy eating habits, which in
+turn are essential to maintaining overall health. While in 2023 Putnam
+County had the lowest rates among M-H Region Counites of food insecurity
+both in the overall population (8.9%) and in children 18 years and
+younger (6.6%), rates have increased since 2021\[see Figures 3 and 4\].
+In 2019, 6.7% of Putnam’s population was considered to have limited
+access to healthy foods (low income and do not live close to a grocery
+store). Although there was improvement from 2015 to 2019, Putnam’s rate
+was still the highest among M-H Region Counites \[see Figure 28\].
+Difficulties accessing healthy foods may contribute to an increasing
+percentage of Putnam adults consuming less than one fruit and less than
+one vegetable daily (30.1% in 2021) \[see Figure 84\] and increasing
+proportions of both children (34.7% from 2021-2023) and adults (65.1% in
+2021) who are overweight or obese \[see Figures 118, 119 and 120\].
+Obesity puts individuals at greater risk of developing a whole host of
+chronic diseases, including heart disease and cancer, which were
+the top two leading causes of death in Putnam County in all years from
+2013-2022.
+
+There is consistent evidence across component CHA assessments for a need
+to focus on mental health and suicide prevention in Putnam County. In
+2021, Putnam had the highest proportion of adults reporting poor mental
+health for 14 or more days in the last month among M-H Region counties
+(17.4%), a considerable jump up from 10% in 2018 \[see Figure 166\]. The
+percentage of adults reporting a depressive disorder also increased
+sequentially from 2016 to 2018 and 2021 \[see Figure 167\]. While the
+rate of suicide in Putnam County is lower than most other counties in
+the region and NYS, the three-year average suicide mortality rate
+increased from 4.6 per 100,000 population for 2019-2021 to 7.3 per
+100,000 for 2020-2022 \[see Figure 182\]. These secondary data
+indicators are supported by findings of high levels of community concern
+about mental health in both [the Community Health Experience
+Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/Resident_Survey_Report_DataGen_FINAL.pdf)
+and the [Community-based Organization
+Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf),
+as well as K6 index scores of 9% for severe mental distress and 29% for
+moderate mental distress on the
+[MHRCHS](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf),
+with higher distress/poorer ratings seen in younger adults, renters,
+those with a disabled household member, and those with household income
+less than \$50,000 per year.
+
+CHA data reveal comparatively high rates of smoking and binge drinking
+in Putnam County adults. The percentage of adults who are current
+smokers jumped from 9% in 2018 to 16.7% in 2021, exceeding rates in the
+M-H Region (11.1%) and NYS excluding NYC (14.1%) \[see Figure 169\].
+High prevalence of smoking could be contributing to Putnam 2018-2022
+lung and bronchus cancer incidence (57.6 per 100,000 population) and
+mortality (27.7 per 100,000) rates that exceed those of NYS (52.4 and
+26.5 per 100,000 population, respectively) \[see Figure 129\].
+Similarly, the percentage of adults binge drinking during the past month
+increased from 14.1% in 2018 to 18.7% in 2021, exceeding rates in the
+M-H Region (13.1%) and NYS excluding NYC (16.1%), and giving Putnam the
+highest rate among M-H Region counties \[see Figure 170\]. Excessive use
+of alcohol could be contributing to mortality from cirrhosis, which is
+trending up and, at 8.3 per 100,000 population in 2021, exceeded the NYS
+rate of 8.2 per 100,000 population \[see Figure 122\]. Unfortunately,
+there is evidence that high prevalence of smoking and drinking is
+continuing in younger residents of Putnam County. The [Prevention Needs
+Assessment](https://preventioncouncilputnam.org/wp-content/uploads/2025/03/Putnam-County-Profile-Report.pdf)
+(PNA), a survey administered every other year to Putnam public school
+students in 8<sup>th</sup>, 10<sup>th</sup> and 12<sup>th</sup> grades,
+demonstrates a downward trends in the percentage of survey respondents
+who have used alcohol in the last month (18.9% in 2024), and the
+percentage who have engaged in binge drinking (7.8% in 2024), however,
+both of these numbers still exceed the national benchmark (14.3% and
+5.7% respectively). PNA results also show increasing proportions of
+students engaging in drinking and driving (1.7% in 2024) and riding with
+a drinking driver (13.4%) with both rates exceeding national benchmarks
+(1.5% and 11.4%, respectively). PNA results are mixed for tobacco use,
+with cigarette (1.5% in 2024) and E-cigarette (7.7% in 2024) use in the
+last thirty days decreasing and below the national benchmark (2.1% and
+11.8%, respectively), but an increasing proportion of students smoking ½
+pack of cigarettes daily (0.4% in 2024), which is just below the
+national benchmark of 0.5%.
+
+Access to healthcare services plays a critical role in achieving optimal
+health outcomes through disease prevention, timely diagnosis and
+treatment, and appropriate management of chronic conditions. Secondary
+data indicators related to healthcare access are mixed for Putnam
+County. Compared to other counties in the M-H Region, Putnam has the
+lowest rate of uninsured children (2.4% in 2023) and the highest rate of
+insured adults (94.9% in 2023) \[see Figures 18 and 19\], but health
+insurance may not always alleviate cost barriers to getting care. Among
+the M-H Region Counties in 2021, Putnam had the highest proportion of
+adults who were not able to receive medical care due to cost (9.9%)
+\[see Figure 17\]. Access to care may also be impacted by deficits in
+providers per capita. While Putnam had the second best ratio of
+residents to mental health providers among the M-H Region Counites in
+2024 (210:1), it had the second worst ratio of residents to dentists in
+2022 (1610:1) and the second worst ratio of residents to primary care
+providers in 2021 (1880:1) \[see Figures 20, 21, and 22\]. In spite of
+concerning per capita ratios, Putnam had the highest percentage of
+adults with a regular primary care provider (90.5%) among the M-H Region
+Counties in 2021\[see Figure 23\]. [MHRCHS
+2025](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf)
+findings are also mixed for healthcare access in Putnam County. A high
+proportion of residents received routine annual dental (80%) and primary
+care (82%); however substantial proportions of the population report
+difficulty getting mental (10%), dental (14%) and physical (14%)
+healthcare in the past year when it was really needed. Inability to meet
+care needs for family members with disabilities was even more common
+(29% of those with a disabled household member). MHRCHS data indicate
+cost is a bigger limiting factor for dental care, while availability of
+providers is a bigger limiting factor for routine primary care.
+[Community Health
+Experience](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/Resident_Survey_Report_DataGen_FINAL.pdf)
+and [Community-Based Organization
+Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf)
+results corroborate high levels of community concern about access to
+healthcare.
+
+Prenatal and infant health are the foundation for a healthy future in
+Putnam County. Although Putnam County performs well in both the
+percentage of births with early prenatal care (84%, 2020-2022 three-year
+average) and the percentage of births with late or no prenatal care
+(3.1%, 2020-2022 three-year average) as compared to other counties in
+the M-H Region \[see Figures 151 and 152\], disparities can be seen when
+these indicators are examined by race and ethnicity. As compared to
+births to Non-Hispanic White Putnam residents (89%), lower proportions
+of births to Hispanic (74.6%), Non-Hispanic Asian/Pacific Islander
+(79.2%) and Non-Hispanic Black (86.4%) residents had early prenatal care
+\[see Figure 153\]. Findings are similar for birth outcomes, with both
+the 2020-2022 three-year average percentages for preterm births (9.1%)
+\[see Figure 159\] and babies born at a low birthweight (7.3%) \[see
+Figure 160\] in Putnam falling below those for NYS excluding NYC, but
+disparities seen by race and ethnicity. A higher proportion of births to
+Hispanic residents were premature (10.0%), as compared to births in
+Non-Hispanic White residents (8.7%). When looking at birthweight
+outcomes, there was a higher percentage of low birthweight births in
+Hispanic (7.6%) and Non-Hispanic Black (10.2%, unstable rate)
+populations as compared to Non-Hispanic White (7.1%) \[see Figure 161\].
+Similar to NYS excluding NYC, and all other M-H Region Counties besides
+Ulster, Putnam has seen a concerning downtrend in babies who are
+exclusively breastfed in the hospital. In 2022, only 38.5% of Putnam
+infants were exclusively breastfed in the hospital, well below the
+2025-2030 NYSPA objective of 48.2% \[see Figure 163\].
+
+Preventive services for children, including immunizations and healthcare
+screenings, are key to ensuring that Putnam’s youngest residents have
+the opportunity to achieve optimal health. While improvements have been
+made in early childhood vaccination rates, and Putnam now performs well
+in comparison to both NYS and other M-H Region Counties \[see Figure
+137\], the same cannot be said for HPV vaccination rates or lead
+screening. The percentage of 13-year-olds with a completed HPV vaccine
+series has trended down in Putnam since 2019, and in 2024 Putnam joined
+Ulster County in having the lowest percentage (14.5%) among M-H Region
+Counties. This is considerably lower than the percentage in NYS
+excluding NYC (24.4%) and the 2025-2030 NYSPA objective of 28.7% \[see
+Figure 139\]. Regarding lead screening, data included in the M-H
+Regional CHA demonstrates a decline in the percentage of children tested
+at least twice for lead before 36 months of age from 2013 (61.3%) to
+2019 (58%) \[see Figure 31\].
+
+Putnam County bears a disproportionally high burden of tickborne
+disease. The geographic distribution of tickborne disease in the United
+States is highly concentrated in Upper Midwestern and Northeastern
+states, and within NYS some of the highest concentrations of disease are
+seen in the M-H Region. The most common tickborne diseases seen in
+Putnam County are Lyme disease, anaplasmosis, and babesiosis. Increases
+were seen in all three of these diseases in Putnam County from 2020 to
+2023 \[see Figures 147, 148 and 149\]. Lyme disease rates rose each
+year, and the 2023 rate (351.9 cases per 100,000 population) was higher
+than that of NYS (109 cases per 100,000 population) and the
+4<sup>th</sup> highest among M-H Region Counties \[see Figure 147\].
+Rates of anaplasmosis and babesiosis were more volatile, and displayed
+alternating year peaks and troughs related to the two-year lifecycle of
+the blacklegged tick vector. Putnam’s 2023 anaplasmosis (96.6
+cases per 100,000 population) and babesiosis (61 cases per 100,000
+population) were by far the highest in the M-H Region, and approximately
+ten times higher than that those for NYS (10.3 and 5.9 cases per 100,000
+population, respectively) \[see Figures 148 and 149\].
+
+#### Assets and Resources
+
+The Putnam County Department of Health (PCDOH) has strong community
+partnerships that operate through a variety of channels:
+
+- Live Healthy Putnam (LHP) is a coalition of community organizations
+  whose mission is to improve individual and community health and
+  well-being for all residents by addressing social determinants of
+  health through education, advocacy, and collaboration. LHP meets
+  quarterly and works to achieve its mission by acting as the primary
+  forum for collaborative development and implementation of a
+  comprehensive Community Health Improvement Plan (CHIP). NYS Prevention
+  Agenda priorities are well represented within the coalition, with
+  eight organizations working on priorities within the Economic
+  Stability Domain; 14 working within the Social and Community Context
+  Domain; 10 working within the Neighborhood and Built Environment
+  Domain; and nine working within the Education Access and Quality
+  Domain.
+
+- PCDOH participates in a variety of other coalitions and task forces
+  including the Communities that Care Coalition (adolescent substance
+  misuse prevention), Suicide Prevention Task Force, The Co-Occurring
+  System of Care Coalition, the BR;DGE Alliance (harm reduction and
+  overdose prevention), The Putnam Hospital Community Health Committee,
+  Tri-County Steering Committee (HIV prevention), and the Mid-Hudson
+  Adult Immunization Coalition.
+
+- PCDOH partners closely with Putnam-Westchester Borad of Cooperative
+  Educational Services (BOCES) on various school-based initiatives, as
+  well as directly with school districts and The Prevention Council of
+  Putnam on harm reduction programming.
+
+- Restaurants, camps, and recreational areas work closely with the
+  Environmental Health Services Division to distribute health
+  information and maintain safe environments.
+
+- Putnam County has a robust Medical Reserve Corps (MRC) with over 100
+  volunteers and an active partnership with Putnam County Bureau of
+  Emergency Services.
+
+- Putnam County’s bilingual health education team has an active presence
+  in Spanish-speaking communities throughout the county. Community
+  connections are maintained through strong partnerships with community
+  leaders and delivery of person-centered, culturally informed health
+  education and communication.
+
+The [Putnam Community Resource
+Guide](https://www.putnamcap.org/_files/ugd/e7b10f_a08d822ee4054bd88e66b4b8930ac425.pdf),
+a publication of the [Putnam Community Action Partnership
+(CAP)](https://www.putnamcap.org/community-resources), provides a
+central location for residents to find local resources to meet their
+needs. The guide includes 191 service listings from approximately 120
+unique organizations. Organizations listed in the guide serve a broad
+range of populations including children and youth, senior citizens,
+veterans, immigrants, and people with disabilities. A wide variety of
+services are offered in areas such as housing, food and nutrition, legal
+aid, mental health, alcohol and substance use, educational resources,
+and youth services. Language support is common, with more than half of
+listed organizations specifying services offered in Spanish, and another
+15 organizations offering translation in languages such as Italian,
+Portuguese, Hungarian and Chinese.
+
+### Rockland County Health Summary
+
+#### Demographics
+
+Rockland is the sixth smallest county by land area in NYS, and the
+smallest in the M-H Region. Despite its size, Rockland County has the
+third highest population in the M-H region, and its population is
+growing at the fastest rate of any county in the region. \[see Table 1\]
+Rockland County’s population is also the youngest in the region, with
+the highest percentage of residents below age 20 (32%). \[see Table 3\]
+
+Rockland County is among the most diverse counties in the region
+regarding race and ethnicity, with the third highest percentage of
+Hispanic residents in the region, the third highest percentage of
+Non-Hispanic Black residents in the region, and the second highest
+percentage of Non-Hispanic Asian residents in the region.\[see Tables 4
+and 5\] Linguistically, Rockland County is also very diverse, with the
+highest percentage of languages ‘other than English’ spoken in the
+region, at 43.6%. \[see Table 6\]
+
+Educational attainment for people aged 25 or older is highly variable in
+Rockland County. For those with degrees beyond high school, Rockland
+County has the second lowest percentage of those achieving an Associates
+degree in the region (7.8%), the third highest percentage of those
+achieving a Bachelor’s degree in the region (23.2%), and the third
+highest percentage of those achieving a Graduate or professional degree
+in the region (18.9%). Rockland County also has a relatively high
+percentage of residents with low educational attainment, with the
+highest percentage of people with less than a 9<sup>th</sup> grade
+education in the region (5.7%), the second highest percentage of those
+with 9<sup>th</sup>-12<sup>th</sup> grade education without a diploma in
+the region (6.6%), and the second lowest percent of those achieving a
+high school degree or equivalent in the region (21.6%).\[see Table 8\]
+
+Household income, like Educational Attainment, is also relatively
+variable in Rockland County. Rockland County has the second highest
+percentage of households with an income greater than \$200,000 at 24.6%,
+as well as the second lowest percent of households with an income less
+than \$10,000 and between \$10,000 and \$14,999 in the region (3.7% and
+2.1% respectively). For the remaining Census income ranges, Rockland
+County occupies a relative middle position with regard to the other
+counties and differs from the regional average by no more than a few
+tenths of a percent, with the exception of the \$75,000-\$99,999 income
+range, where Rockland is third lowest in the region (10.0%) and eight
+tenths of a percent below the regional average (10.8%).\[see Table 10\]
+
+#### Community Survey Findings
+
+The main source of primary data for Rockland County was the inaugural
+Rockland County Community Health Assessment Survey \[[see Appendix
+P](#section-15)\]. The survey was held from May 28<sup>th</sup>, 2025
+through July 31<sup>st</sup>, 2025 and was made available digitally via
+Jotform in English, Spanish, and Creole (paper versions were also made
+available). The survey was extensive and encompassed each of the five
+domains of the 2025-2030 NYSPA.
+
+**Limitations:**
+
+This survey format qualifies as a *convenience sample. T*herefore,
+conclusions derived from this data cannot be generalized to the
+population of Rockland County as a whole. Rather, the conclusions based
+on the data collected from the survey are confined to the pool of survey
+respondents.
+
+**Methods:**
+
+The survey consisted of a maximum of 50 questions. The survey was only
+available to people who were aged 18 years or older who resided in
+Rockland County during the survey period. The specific type and number
+of questions available to be answered varied depending on the
+demographics of the survey-taker (such as zip code, sex, child \< 6
+years old in household, and pregnant or planning to become pregnant), as
+well as by their choices for the top three *Priorities for Community
+Health and Wellbeing—*question. \[[see Appendix P](#section-15)\]
+
+The survey’s primary format was digital, but paper versions in all three
+languages were made available at multiple publicly accessible locations
+throughout the county (three public libraries, a town hall, a community
+center, and a church). Paper versions had directions that differed
+slightly to those of the Jotform version of the survey, due to logical
+differences between digital and paper formats. Paper surveys were
+hand-entered by RCDOH staff. When the answers on a paper survey came
+into conflict with the logic of the Jotform version, the Jotform logic
+was adhered to.
+
+The survey was promoted via Rockland County’s social media accounts, the
+county website, the placement of flyers and palm cards throughout the
+county, and promotion by community county agencies (such as the Office
+of the Aging, Department of Social Services, Department of Mental
+Health), town governments, and community partners (such as the
+Haverstraw, Spring Valley, and Western Ramapo Collaboratives, WMC
+Health, and Montefiore Nyack, and individual community leaders). The
+survey was also promoted at public events by RCDOH staff and was
+promoted by an outreach worker in zip codes where survey response rates
+were relatively low.
+
+Incentives for the survey included the ability to enter a sweepstakes
+for one of several \$50 gift cards, upon completion of the survey. An
+additional limited promotion was vouchers for free NY Boulders tickets.
+This promotion was organized with the help of the Town of Ramapo and NY
+Boulders Baseball. Vouchers were made available (to those who completed
+the survey) at four Boulders games during the survey period, and by the
+RCDOH outreach worker in the aforementioned zip codes.
+
+**  
+**
+
+**Results of Note:**
+
+- The RCDOH received 603 responses to the survey. Sixty-eight percent of
+  respondents were female, compared to 29.9% male (and 2.2% prefer not
+  to answer). The majority of respondents identified as White/Caucasian
+  (55.2%) followed by Hispanic/Latino (14.1%) and Black/African American
+  (12.7%). \[see Table 21\]
+
+- The three most well represented zip codes among our survey responses
+  were 10977, 10956, and 10901 (at 14.43%, 12.44%, and 11.44% of total
+  survey responses, respectively).\[see Figure 198\]
+
+- A majority of survey respondents rated their Quality of Life in
+  Rockland County as either Good (51.2%) or Excellent (21.6%).\[see
+  Figure 199\]
+
+- Safe Neighborhoods (61.5%), Opportunities for outdoor
+  recreation/physical activity (41%), and Good Schools (35%) were
+  selected as the Top Three Factors that Make a Positive Contribution to
+  Healthy Living in Rockland County. \[see Figure 1200\]
+
+- The vast majority of our respondents found that the top three areas
+  that need improvement in Rockland County are Economic Wellbeing
+  (73.3%), Safe and Healthy Communities (71.5%), and Education
+  (49.8).\[see Figure 201\]
+
+- According to our survey respondents, the area most in need of
+  improvement in the category of Economic Wellbeing was Affordable
+  Housing. \[see Figure 202\]
+
+- According to our survey respondents, Traffic Safety was the area most
+  in need of improvement in the category of Safe and Healthy
+  Communities. \[see Figure 203\]
+
+- For the category of Educational Priorities, our survey respondents
+  selected the three sub-categories--Vocational Programs, Options for
+  Continuing Education, and Health and Wellness Programs in
+  Schools--with relative parity in terms of what needs the most
+  improvement. \[see Figure 204\]
+
+Table 21
+
+| **Rockland County Community Health Assessment Demographics** |  |  |
+|----|:--:|:--:|
+| ** ** | **Count** | **Percent** |
+| **Sex** | ** ** | ** ** |
+| **Male** | 180 | 29.9% |
+| **Female** | 410 | 68.0% |
+| **Age** |   |   |
+| **18-29** | 90 | 14.9% |
+| **30-39** | 122 | 20.2% |
+| **40-49** | 104 | 17.2% |
+| **50-59** | 102 | 16.9% |
+| **60+** | 185 | 30.7% |
+| **Race/Ethnicity** |   |   |
+| **White/Caucasian** | 344 | 55.2% |
+| **Black/African American** | 79 | 12.7% |
+| **Hispanic/Latino/Latinx** | 88 | 14.1% |
+| **Asian or Asian American** | 25 | 4.0% |
+| **American Indian or Alaskan Native** | 2 | 0.3% |
+| **Native Hawaiian or Other Pacific Islander** | 0 | 0.0% |
+| **2 or more selected** | 10 | 1.6% |
+| **Other** | 16 | 2.6% |
+| **Income** |   |   |
+| **0-29,999** | 71 | 11.8% |
+| **30,000-69,999** | 98 | 16.3% |
+| **70,000-109,999** | 116 | 19.2% |
+| **110,000-140,999** | 86 | 14.3% |
+| **150,000-189,999** | 46 | 7.6% |
+| **190,000-229,999** | 37 | 6.1% |
+| **230,000+** | 50 | 8.3% |
+| **Household Size** |   |   |
+| **1** | 75 | 12.4% |
+| **2** | 164 | 27.2% |
+| **3** | 107 | 17.7% |
+| **4** | 126 | 20.9% |
+| **5+** | 117 | 19.4% |
+
+Figure 198
+
+<img src="media/media/image194.png"
+style="width:5.80051in;height:3.01359in"
+alt="Chart AI-generated content may be incorrect." />
+
+Figure 199
+
+<img src="media/media/image195.png"
+style="width:4.74041in;height:3.01359in"
+alt="Chart, bar chart AI-generated content may be incorrect." />
+
+Figure 200
+
+<img src="media/media/image196.png"
+style="width:6.4739in;height:3.4403in" />
+
+Figure 201
+
+<img src="media/media/image197.png"
+style="width:5.01377in;height:3.01359in"
+alt="Chart, bar chart AI-generated content may be incorrect." />
+
+Figure 202
+
+<img src="media/media/image198.png" style="width:7.5in;height:3.48958in"
+alt="Chart, bar chart AI-generated content may be incorrect." />
+
+Figure 203
+
+<img src="media/media/image199.png" style="width:7.5in;height:2.98958in"
+alt="Chart, bar chart AI-generated content may be incorrect." />
+
+Figure 204
+
+<img src="media/media/image200.png" style="width:7.5in;height:3.23958in"
+alt="Chart AI-generated content may be incorrect." />
+
+#### Areas of Focus
+
+Rockland continues to struggle with chronic diseases as previously
+reported in prior community health assessments. This can be seen in the
+2022 top five leading causes of death for Rockland County, which
+includes three chronic conditions: heart disease, cancer, and
+cerebrovascular disease. During the previous cycle, it was an expressed
+goal to look at the core issues driving the trends. While progress was
+made, this is an issue that requires continued attention and adaptation
+to changing populations and needs. Specifically, disparities across
+racial and ethnic lines continue to be reflected across the chronic
+diseases. For example, between 2020-2022 the cerebrovascular disease
+mortality for non-Hispanic black and Hispanic populations were higher
+than the non-Hispanic white population. Culturally competent programs
+and interventions are key to helping to address this issue.
+
+In addition to chronic disease, communicable disease prevention is also
+a key issue. Specifically, vaccine preventable diseases continue to be
+an issue for Rockland County. In 2022, a polio outbreak was declared in
+Rockland County after a case of paralytic polio was reported. Rockland
+County has also struggled with other vaccine preventable diseases such
+as measles and pertussis. A contributing factor to the prevalence of
+these diseases in Rockland is low childhood vaccination rates. Rockland
+has the lowest on time childhood vaccination rates in the region. This
+low rate leaves our population more vulnerable to the spread of these
+diseases. Continuous work has been devoted to improving these numbers,
+but more needs to be done to appropriately address this complex ongoing
+issue.
+
+Poor socioeconomic conditions continue to be a significant barrier to
+health for a number of Rockland County communities. Many communities in
+Rockland County are poor or otherwise struggle to meet basic needs such
+as food and housing. Additionally, lower educational achievement and
+language barriers mean that individuals who may be struggling to meet
+basic needs, will not be aware of or will otherwise have trouble
+accessing, available services to help them meet their needs. Poor
+socioeconomic conditions (such as those mentioned above) are not evenly
+distributed through out the population of Rockland County. Communities
+in Rockland County that experience limitations in education, language,
+wealth, and housing (among other factors), are sharply contrasted by
+other communities in Rockland that experience little or no limitations
+in the aforementioned factors. The causes of poor socioeconomic
+conditions, as well as their unequal distribution across local
+communities, exist largely upstream of the interventions that are
+typically employed by local health departments. As such, the actions of
+any particular local health department are limited in their ability to
+improve these factors. That said, the RCDOH is committed to utilizing
+its own resources and to working with its partners in the community to
+mitigate the effects that poor socioeconomic conditions have on the
+health outcomes in our community.
+
+The following are areas that the RCDOH is committed to improving by its
+own means and through collaboration with its partners.
+
+- The lowest childhood immunization rates in the region, increasing the
+  risk of outbreaks of vaccine-preventable diseases.
+
+- Some of the most severe housing problems in the region, both in terms
+  of housing quality and cost; residential segregation rates are among
+  the highest in region.
+
+- Racial and ethnic disparities in mortality from Diabetes and
+  Cardiovascular Disease.
+
+- A recent increase in both overall food insecurity and childhood food
+  insecurity.
+
+- Screening rates for Colorectal Cancer and Cervix Uteri Cancer remain
+  low.
+
+- The highest suicide mortality rate in the region.
+
+- Decreasing percentage of adults with health insurance in recent years.
+
+- The incidence of gonorrhea has been steadily increasing since 2020.
+
+- Lead screening rates for children younger than 36 months, have
+  decreased.
+
+- An increase in the percentage of adults who are “current smokers,” in
+  recent years.
+
+- Linguistic, cultural, and educational barriers to healthcare, and a
+  need for improved health literacy among the population.
+
+#### Assets and Resources
+
+Rockland is a resource rich county, considering that it is so dense and
+in the heart of the New York Metropolitan Area. The local stakeholders
+in the county have historically been eager, focused, and engaged. This
+was clearly demonstrated in the assessment process for this document.
+The RCDOH was able to work with established and new partners to complete
+our assessment. Plans are in place to reestablish the Public Health
+Priorities Group which is a partnership between the RCDOH and various
+stakeholders to highlight different areas of health that may be of
+concern or need. This group will be utilized to help establish
+priorities for community health improvement interventions and
+strategies.
+
+Rockland County has an abundance of partners and facilities to provide
+assistance and resources to accomplish community health improvement
+goals. Good Samaritan Hospital and Montefiore Nyack Hospital are the
+county’s hospital partners that help to support the community health
+improvement strategies. Support in these efforts is also expected from
+the FQHCs (Sun River Health and Refuah Health), other county departments
+(Mental Health, Youth Bureau, Office of the Aging, Social Services, and
+Planning), as well as from the various CBOs that have assisted in
+developing this assessment. Several active village collectives (notably
+the Spring Valley Collaborative, the Haverstraw Collaborative, and the
+Western Ramapo Collaborative) that meet regularly in Rockland and
+provide opportunities for community-based networking, intervention
+deployment, and resident level feedback. A variety of smaller cultural
+associations also exist in the county. Increasing inclusivity of these
+groups to better support the health needs of the entire population is an
+expressed goal in this improvement cycle. In addition to supporting
+previous community health improvement interventions, these partners have
+provided assistance in times when urgent response is needed such as
+disease outbreaks.
+
+All of the organizations and collaborative groups mentioned above were
+critical in conducting this assessment, as they were the partners who
+provided critical input during the community health partner survey.
+Their feedback on the factors most influencing health and the leading
+barriers to care at the neighborhood level, allowed for a unique health
+perspective tailored to the local community. Soliciting survey responses
+from the groups listed above provided a means of gathering information
+on subpopulations that otherwise may not have been captured in our
+Community Health Assessment Survey. It is expected that the partners
+engaged during the assessment process will contribute a portion of their
+assets and resources to countywide community health improvement efforts
+as needed.
+
+### Sullivan County Health Summary
+
+#### Demographics
+
+Sullivan County is a geographically large rural county located in the
+northwestern part of the M-H Region, approximately 90 miles northwest of
+New York City in the Catskill Mountains. Bordered by Delaware County to
+the north, Ulster County to the east, Orange County to the south, and
+Pennsylvania to the west, the county covers 997 square miles and
+includes 15 towns, seven incorporated villages, seven public school
+districts, and one two-year college (SUNY Sullivan).
+
+Home to approximately 80,000 residents, Sullivan County has one of the
+lowest population densities in the region. The area is characterized by
+small rural communities, agricultural land, and seasonal tourism tied to
+its natural beauty, including lakes, rivers, and mountains. The county
+has a rich history in recreation and tourism as a Catskills vacation
+destination and contains more than 100 summer camps that draw in tens of
+thousands of visitors. During the summer months, the year-round
+population increases to nearly 300,000 as seasonal residents, visitors,
+and members of the Orthodox Jewish community temporarily reside in the
+area. Because many are not year-round residents, their associated health
+needs may not be fully reflected in county-level data.
+
+The majority of Sullivan County residents are Non-Hispanic White
+(67.1%), followed by Hispanic (18.4%) and Non-Hispanic Black or African
+American (7.9%) populations. About 20 percent of residents speak a
+language other than English at home \[See Table 6\]. Sullivan County
+also has the highest percentages of civilian veterans (6.0%) and
+residents with disabilities (15.9%) among the M-H counties \[see Tables
+11 and 12\]. Health indicators reflect rural disparities, including
+higher rates of chronic disease, maternal and child health challenges,
+transportation barriers, and limited access to specialty care. These
+characteristics shape the county’s public health priorities and
+emphasize the importance of community-based outreach, education, and
+preventive services.
+
+#### Community Survey findings
+
+Sullivan County participated in primary data collection through
+participation in the Greater New York Hospital Association 2025
+Community Health Needs Assessment Survey
+\[<span id="AppendixQ_GNYHACommunitySurvey" class="anchor"></span>[see
+Appendix Q](#AppendixQ_GNYHACommunitySurvey)\]. Input was also collected
+from residents and healthcare providers at various events within the
+county, where attendees voted for two Prevention Agenda 2025-2030
+priority areas. The results of these were used to inform the Community
+Health Improvement Plan and can also be found in the Sullivan County
+Community Health Assessment on the Sullivan County Department of Public
+Health website.
+
+#### Areas of Focus
+
+Sullivan County residents are greatly affected by chronic illness and
+unintentional injury. The leading causes of death in 2022 were heart
+disease, cancer, unintentional injury, COVID-19, and chronic lower
+respiratory disease (CLRD) \[see Table 17\]. In general, Sullivan County
+had the highest overall mortality rate in the M-H region, as well as the
+highest mortality rates of CLRD, congestive heart failure, and
+cardiovascular disease. Despite having a lower rate of physician
+diagnosed diabetes than NYS, Sullivan County had the highest diabetes
+hospitalization rate in the region in 2021 \[see Figures 112 and 113\].
+Overweight and obesity remain common; the percent of school-aged
+children and adolescents overweight or obese was 41.6% in 2021-2023
+\[see Figure 120\]. Additionally, the rate of asthma emergency
+department visits among individuals aged 0-17 years old more than
+doubled from 2021 to 2023, surpassing pre-COVID-19 rates \[see Figure
+96\].
+
+There are also racial disparities in diabetes hospitalizations and
+mortality, chronic lower respiratory disease hospitalizations, asthma
+hospitalizations, and cerebrovascular disease hospitalization and
+mortality. These mortality and hospitalization rates are higher among
+non-Hispanic Black individuals compared to the rates among non-Hispanic
+White and Hispanic individuals.
+
+Unintentional injury deaths have increased from 2018 to 2021and Sullivan
+County sees higher rates of deaths from motor vehicle injuries,
+suicides, and overdoses compared to other M-H counties. In particular,
+from 2019 to 2022, the rate of overdose deaths involving opioids was
+61.5 per 100,000, continuing to far exceed the rates in other M-H
+counties and NYS \[see Figure 174\]. While the rate of opioid analgesic
+prescriptions has decreased, Sullivan County’s rate remains high
+compared to other M-H counties \[see Figure 179\]. However, there has
+been a slight increase in individuals receiving buprenorphine treatment
+for opioid use disorder \[see Figure 180\].
+
+Economic wellbeing factors were identified in the provider survey as
+impactful on the health of Sullivan County residents. The unemployment
+rate has been decreasing since 2021, falling to 6.1% in 2023 \[see
+Figure 2\]. However, there has also been an increase in food insecurity
+and poverty, a decreasing high school graduation rate, and an increase
+in the percent of disconnected youth. Regarding housing, the percent of
+cost burdened renter occupied units was 48.7 (2023) and the percent of
+households with severe housing problems was 16% (2017-2021) \[see
+Figures 5 and 32\]. These rates are lower than other M-H counties and
+NYS but represent a sizeable percent of the population. The rural
+landscape is another factor that influences the health factors and
+outcomes in Sullivan County. Large areas of the county are remote and
+lack access to public transportation, and in 2023, 8.8% of households in
+Sullivan County had no vehicles available \[see Figure 33\].
+
+Healthcare access is another major issue in Sullivan County. Sullivan
+County has the higher ratios of residents to primary care providers,
+residents to dentists, and residents to mental health providers when
+compared to other M-H counties and the state \[see Figures 20 through
+22\]. There are also low rates of preventive care and screenings:
+
+- Sullivan County had the lowest percentage of children tested for lead
+  before 36 months of age (36.6% in 2019) compared to other M-H counties
+  and New York \[see Figure 31\].
+
+- Sullivan County has the lowest rate of prenatal care (61.3%) and
+  highest of late or no prenatal care (8.0%) in the region \[see Figures
+  151 and 152\].
+
+- Only 29.1% of Medicaid enrollees had at least one dental visit in last
+  year (2021-2023) \[see Figure 165\].
+
+- Screening rates for colorectal cancer, cervical cancer, and breast
+  cancer remain below the rates of NYS and some other M-H counties \[see
+  Figures 128, 134, and 135\].
+
+Other noted concerns are rising rates of reported poor mental health,
+early syphilis incidence, rabies treatments, and Lyme disease and other
+tickborne illnesses.
+
+These data reinforce the county’s priority areas of chronic disease
+prevention, maternal and child health, behavioral health, and access to
+care, while emphasizing the importance of addressing the underlying
+social determinants that shape health outcomes. Addressing these issues
+will require cross-sector collaboration to improve access to care,
+strengthen prevention and early intervention efforts, and expand
+community-based resources that promote health equity and well-being
+across all populations.
+
+#### Assets and Resources
+
+Sullivan County Department of Public Health has strong community
+partnerships with organizations serving residents across the county.
+These include the local hospital, Federally Qualified Health Centers
+(FQHCs), urgent care centers, schools, and numerous community-based
+organizations. The Department also leads the Sullivan County Rural
+Health Network and participates in the Sullivan County Substance Use
+Task Force. In addition, the County collaborates with Unite Us Sullivan,
+a coordinated care network that connects health and social service
+providers to better address residents’ social determinants of health.
+Sullivan County government continues to expand the “Move Sullivan”
+program, improving access to affordable public transportation for
+residents. Together, these partnerships are leveraged to address
+priority health areas and emerging public health needs identified
+through the Community Health Assessment (CHA) and Community Health
+Improvement Plan (CHIP).
+
+### Ulster County Health Summary
+
+#### Demographics
+
+Ulster County is located in the southeastern part of NYS, south of
+Albany and immediately west of the Hudson River. According to the US
+Census Bureau, the county has a total area of 1,161 square miles, which
+is approximately the size of Rhode Island. Much of Ulster County can be
+characterized as suburban and semi-rural, with only one major urban
+area, the city of Kingston, which is in the eastern central portion of
+the county and encompasses just 7.4 square miles of the county’s total
+area. Ulster County is part of the Kingston Metropolitan Statistical
+Area.
+
+According to the latest estimates available from the US Census Bureau,
+Ulster County’s population was 182,109 in 2023. The total number of
+households was 73,105 and the household median income was approximately
+\$85,878.
+
+#### Areas of Focus
+
+The data analyzed points to several areas of focus for Ulster County.
+Ulster County has an exceptionally high suicide mortality rate \[see
+Figure 181\], including among teens and older adults; a high percentage
+of children and adolescents who are overweight or obese \[see Figure
+120\]; and opioid fatality \[see Figure 174\] and emergency department
+visit rates \[see Figure 171\] that are well above the M-H Region and
+NYS averages.
+
+Other areas of concern:
+
+The leading cause of death is heart disease \[see Table 17\]; Ulster
+County has the second highest rate in the region for cardiovascular
+disease mortality \[see Figure 99\].
+
+Ulster County is among the counties in the region with the highest
+percentages reporting food insecurity \[see Figure 31\], as well as
+population at poverty level or below \[see Figure 7\]. In addition, a
+high percentage of people report living with a disability \[see Table
+12\].
+
+The Community Partner Survey indicated that access to mental health
+providers is a challenge \[see Figure 69\], which aligns with the high
+percentage of adults reporting poor mental health for 14 or more days in
+the last month \[see Figure 166\], as well as those reporting a
+depressive disorder \[see Figure 167\].
+
+Ulster County has the highest three-year average rate for alcohol
+related motor vehicle injury and fatality \[see Figure 188\] in the
+region.
+
+Disparities persist among all indicators where data is available,
+especially among the non-Hispanic Black population.
+
+Finally, the housing crisis in Ulster County continues to persist. The
+Community Partner Survey reported that access to affordable, decent and
+safe housing is the leading issue that affects health in Ulster County
+\[see Figure 69\]. This problem can be attributed to the limited
+construction of new, affordable rental and ownership units and the
+associated inflated costs of building materials and labor. In addition,
+the post-pandemic influx of NYC Metropolitan area individuals and
+families seeking weekend and permanent residences, has increased demand
+and prices for affordable housing. The expanding tourism industry in
+Ulster County has also resulted in many previously available and
+affordable housing units being converted into short-term rentals.
+Affordable, healthy, and safe housing is the foundation upon which
+individuals, families, and the community build their strength, wellness
+and resiliency and county leadership from every sector has recognized
+the urgency of immediate action in this area.
+
+#### Assets and Resources
+
+UCDOH has strong community partnerships with hundreds of organizations
+serving its residents, including two area hospitals, FQHCs, private
+medical providers, local two-year and four-year colleges, CBOs, and
+regional organizations serving a broad variety of community needs. UCDOH
+and the Ulster County Department of Mental Health have established
+multiple coalitions, including Healthy Ulster Council, Integrated
+Ulster, Ulster County Human Services Coalition, Ulster County Suicide
+Prevention Coalition, Ulster County Opioid Prevention Strategic Action
+Leadership Team, and Ulster County Public Health Preparedness Task
+Force. In addition to participating in numerous public health-focused
+coalitions, UCDOH serves with Live Well Kingston, Ellenville Rural
+Health Network, Mano-a-Mano, Bringing Agencies Together, Ulster County
+Healthy Families, Maternal Infant Services Network, Ulster Prevention
+Council, and Tobacco Free Action Communities, among others. The
+coalitions’ partners and others are mobilized to address the health
+areas of focus and emerging issues of the 2025-2030 CHA/CHIP cycle.
+
+#### Efforts Moving Forward
+
+- Ulster County continues to make significant improvements in the built
+  environment through a combination of federal, state, and local funds.
+  These include ongoing development of a world-class rail trail system
+  throughout the county, pedestrian and bike friendly complete street
+  initiatives, safe routes to schools, and others. All are designed to
+  encourage physical activity, improve access to fresh and healthier
+  foods, and increased social engagement to help prevent chronic
+  diseases. This will also continue to reduce our carbon footprint,
+  while reducing air pollution.
+
+- Ulster County will continue to build on a strong foundation of tobacco
+  prevention policy change by updating legislation to further strengthen
+  regulations designed to protect youth and low income and minority
+  populations from the impacts of tobacco marketing and increasing the
+  awareness of the risks of tobacco and vaping products.
+
+- Ulster County has strengthened the availability of and access to
+  mental health services with the establishment of a walk-in mental
+  health clinic and a crisis stabilization center.
+
+- There are many other health initiatives that Ulster County will be
+  involved with to monitor and enhance the progress of public health.
+
+More details are available in the Ulster County CHIP.
+
+### Westchester County Health Summary
+
+#### Demographics
+
+With an area of about 450 square miles, Westchester County is located
+just north of New York City. It is bordered on the west by the Hudson
+River, on the north by Putnam County, and on the east by the Long Island
+Sound and Connecticut’s Fairfield County. With its six cities, 19 towns,
+and 23 villages, Westchester is the home to a mix of urban and suburban
+communities.
+
+According to the 2023 American Community Survey the total population,
+residing in Westchester is 996,888, with 48.4% males and 51.6% females.
+Among them, 50% are non-Hispanic White, 12.9% non-Hispanic Black, and
+6.0% non-Hispanic Asian or Pacific Islander, and 11.7% are of some other
+race. Just under a quarter of its population is of Hispanic origin and
+25.4% of the population is foreign born. About one-third of the
+residents speak a non-English language at home.
+
+The majority of Westchester residents over the age of 25 have received a
+high school diploma/GED and almost quarter have obtained a college
+and/or beyond college education. The median household income is
+estimated at \$118,411.
+
+While an affluent county in general, there are pockets of communities
+living in less desirable conditions. About 8.88% of the population lives
+in poverty, with higher poverty rates among the non-Hispanic Black and
+Hispanic populations. About 4.98% of the population are uninsured, and
+About 3.9% of the residents are living in overcrowded housing.
+
+Rather than driving alone, 48.6% of the population uses an alternative
+mode of transportation for the commute to work, including carpooling,
+public transportation, walking, bicycling, or telecommuting.
+
+In summary, Westchester is a diverse and prosperous county, yet
+socioeconomic and health disparities continue to impact segments of its
+population. The data points toward ongoing need for targeted
+interventions to address disparities and ensure that all residents
+benefit from the county’s overall affluence.
+
+#### Area of Focus and Efforts Moving Forward
+
+Given the complexity of Westchester County’s geographic, demographic,
+and socioeconomic compositions. Based on the Mid-Hudson Regional
+Community Partner Survey, Westchester County will work to improve
+communication about existing resources and help residents navigate
+complex health insurance plans. Addressing health literacy through plain
+language will be one of our county’s priorities. This information
+gathered by the survey will help guide the Health Departments and its
+partners in focusing services on the county’s current and emerging
+health issues to enhance community wellness.
+
+Based on the striking findings from the regional community survey, the
+need for increased mental health services, specialty services, and
+access to affordable and safe housing were generally top concerns of the
+providers in the community.
+
+#### Assets and Resources
+
+Westchester County has a rich supply of assets and resources that
+support the health and well-being of its residents. Some examples
+include:
+
+- Ample green spaces as well as County and State parks provide about 98%
+  of the population with access to outdoor recreation and exercise
+  opportunities
+
+- Extensive health care systems, including hospitals, federally
+  qualified health cares, urgent care centers, and laboratories,
+  operating within the county providing timely and state-of-art direct
+  health care
+
+  - [Healthcare facilities Dashboard
+    Westchester](https://wcgis.maps.arcgis.com/apps/dashboards/b64cec31acfe48469fd921d50df17344)
+    https://wcgis.maps.arcgis.com/apps/dashboards/b64cec31acfe48469fd921d50df17344
+
+- A large number of colleges and universities located within the county
+  provide opportunities for health education
+
+- The extensive Bee-Line bus system serving over 27 million passengers
+  annually, providing transportation services to over 65% of all
+  Westchester County residents and workplaces with walking distance to a
+  Bee-Line bus route, making the bus both close and convenient
+
+- United Way's 211 information and referral system contains information
+  on non-profit organizations for many communities in Westchester
+
+- A variety of community organizations, task forces, coalitions, and
+  other agencies working on providing direct services as well as policy
+  and structural change within the county.
+
+## List of Appendices
+
+A – Mid-Hudson Region Map
+
+B – Dutchess County Map
+
+C – Orange County Map
+
+D – Putnam County Map
+
+E – Rockland County Map
+
+F – Sullivan County Map
+
+G – Ulster County Map
+
+H – Westchester County Map
+
+I – Mid-Hudson Region Community Partner Survey
+
+J – Mid-Hudson Region Community Partner Survey References
+
+K – Putnam County and Nuvance CBO and Partner Survey
+
+L – Mid-Hudson Regional Community Health Survey
+
+M – Orange County Community Health Survey
+
+N – Orange County Community Asset Survey
+
+O – Putnam County and Nuvance Community Health Experience Survey
+
+P – Rockland County Community Health Assessment Survey
+
+Q – Greater New York Hospital Association 2025 Community Health Needs
+Assessment Survey
+
+########## 
+
+#### A - Mid-Hudson Region Map
+
+<img src="media/media/image201.png" style="width:6.1in;height:7.89in"
+alt="Map AI-generated content may be incorrect." />
+
+########## 
+
+#### B - Dutchess County Map
+
+<img src="media/media/image202.png"
+style="width:6.08333in;height:7.88542in"
+alt="Map AI-generated content may be incorrect." />
+
+########## 
+
+#### C - Orange County Map
+
+<img src="media/media/image203.png"
+style="width:6.10694in;height:7.90764in" />
+
+########## 
+
+#### D - Putnam County Map
+
+<img src="media/media/image204.png"

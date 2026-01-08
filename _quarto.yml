@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Orange County Community Health Assessment 2025"
+  subtitle: "Mid-Hudson Regional CHA"
+  author: "Orange County Department of Health"
+  chapters:
+    - index.qmd
+    - chapters/01-introduction.qmd
+    - chapters/02-demographics.qmd
+    - chapters/03-sdoh.qmd
+    - chapters/04-health-behaviors.qmd
+    - chapters/05-clinical-care.qmd
+    - chapters/06-physical-environment.qmd
+    - chapters/07-appendix.qmd
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 2
+
+format:
+  html:
+    theme:
+      - flatly
+      - theme.scss
+    toc: true
+    toc-depth: 3
+    page-layout: full
+    code-fold: true
+    code-tools: true
+    number-sections: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto
+

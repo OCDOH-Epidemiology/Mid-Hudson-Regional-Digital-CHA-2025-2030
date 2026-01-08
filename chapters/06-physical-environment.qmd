@@ -1,0 +1,1111 @@
+---
+title: "Physical Environment"
+jupyter: python3
+execute:
+  freeze: auto
+---
+
+This chapter focuses on neighborhood conditions, environmental exposures, and safety indicators that influence health outcomes.
+
+### Neighborhood and Built Environment
+
+#### Access to Foods that Support Healthy Eating Patterns
+
+Healthy dietary patterns are essential to living a healthy lifestyle.
+According to the *Dietary Guidelines for Americans 2020-2025*, the core
+elements of a healthy dietary pattern include vegetables, fruits, whole
+grains, low-fat dairy or fortified dairy alternatives, protein foods,
+and plant-based oils. A healthy diet lowers risk of chronic
+diseases such as obesity, type 2 diabetes, and heart disease. It is
+also essential for managing chronic conditions and preventing
+complications for those who have chronic diagnoses.
+
+When measuring food access, travel time to supermarkets, availability of
+healthy foods, and food prices all play a role. For those without a
+personal vehicle, convenient public transportation, or a supermarket
+within walking distance, finding fresh, healthy options can be a
+challenge. High grocery prices can deter people with lower socioeconomic
+status from purchasing healthy options, minimizing food access.
+Low-income communities tend to have more difficulty accessing food, and
+a study in Detroit found that people living in predominantly Black
+low-income neighborhoods travel an average of 1.1 miles farther to the
+closest supermarket than people living in predominantly White low-income
+neighborhoods.
+
+The County Health Rankings and Roadmaps measure of the food environment
+accounts for proximity to healthy foods and income. The index is a scale
+that ranges from zero (worst) to 10 (best). Limited access to healthy
+foods estimates the percentage of the population that is low income and
+does not live close to a grocery store. Food insecurity estimates the
+percentage of the population that did not have access to a reliable
+source of food during the past year.
+
+Ulster County had the lowest food environment index (8.1), while
+Westchester (9.3) and Putnam (9.0) Counties had the highest. The
+majority of counties fell below NYS’ score of 8.7 except for Westchester
+and Putnam Counties. \[see Figure 27\]
+
+Figure 27
+
+<img src="media/media/image29.emf"
+style="width:7.5in;height:4.02292in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2018** | 8.6 | 8.6 | 8.2 | 8.7 | 8.2 | 8.0 | 9.2 | 9.0 |
+| **2019** | 8.6 | 8.5 | 9.0 | 8.7 | 8.3 | 8.1 | 9.3 | 9.0 |
+| **2022** | 8.7 | 8.4 | 9.0 | 8.6 | 8.3 | 8.1 | 9.3 | 8.7 |
+
+Note: The County Health Rankings measure of the food environment
+accounts for proximity to healthy foods and income. The index is a scale
+that ranges from 0 (worst) to 10 (best). Limited access to healthy foods
+estimates the percentage of the population that is low income and does
+not live close to a grocery store. Food insecurity estimates the
+percentage of the population that did not have access to a reliable
+source of food during the past year.
+
+Source: University of Wisconsin Population Health Institute. County
+Health Rankings & Roadmaps, July 2025 sourced from US Department of
+Agriculture - Food Environment Atlas and Feeding America - Map the Meal
+Gap
+
+<https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Food+Environment+Index&tab=1>
+
+Limited access to healthy foods and food insecurity are indicators which
+are both equally weighted in the Food Environment Index. To see a
+county comparison of food insecurity, see Figure 3 from above.
+
+The “limited access to healthy foods” indicator measures the percentage
+of the population that is low-income and does not live close to a
+grocery store. “Low income” is defined as census tracts where the
+poverty rate is 20% or greater, or the median family income is at or
+below 80% of the state's median income. “Low access” areas are defined
+as census tracts where at least 500 people, or 33% of the population,
+live more than 1 mile (urban area) or 10 miles (rural area) from a
+supermarket or large grocery store.
+
+Many M-H Counties experienced a decrease in the percentage of the
+population with low income and low access to food, which is a positive
+trend. Putnam County had the highest percentage of residents with
+limited access to healthy food (6.7%) and was almost five times that of
+Westchester County (1.4%). Most of the counties in the M-H Region fall
+above NYS (2.0%) excluding Westchester County. \[see Figure 28\]
+
+Figure 28
+
+<img src="media/media/image30.emf"
+style="width:7.5in;height:3.99722in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2015** | 6.1 | 6.4 | 7.5 | 3.7 | 2.2 | 7.5 | 1.4 | 3.7 |
+| **2019** | 5.7 | 6.0 | 6.7 | 4.4 | 2.9 | 6.1 | 1.4 | 2.0 |
+
+Note: Percentage of population who are low-income and do not live close
+to a grocery store.
+
+Source: US Department of Agriculture - Food Environment Atlas, July 2025
+
+<https://gisportal.ers.usda.gov/portal/apps/experiencebuilder/experience/?page=Full-FEA-Map>
+
+#### Crime and Violence
+
+Crime and violence both pose as major public health issues on various
+levels. Violent crime can affect the quality of life for those it
+reaches, including victims of violent crimes, witnesses of violent
+crimes, or residents who hear about violent crimes in their areas.
+Studies have shown that those who fear crime in their communities engage
+in less physical activity and as a result may have higher Body Mass
+Indexes (BMIs) and levels of obesity. Exposure to violence can also
+have negative impacts on mental health. Consequences can particularly
+affect children and adolescents. It can increase behavioral problems,
+depression, anxiety, Post Traumatic Stress Disorder (PTSD), and can lead
+to risky behavior, such as substance use, risky sexual behavior, and
+unsafe driving.
+
+The NYS Division of Criminal Justice Services collects crime reports
+from police and sheriffs’ departments to submit to the Federal Bureau of
+Investigation (FBI) as New York’s official crime statistics. Violent
+crime totals include reports of murder, rape, robbery, and aggravated
+assault.
+
+The M-H Region saw fluctuations in violent crime rates between 2018 and
+2021. In 2021 all M-H Counites remained below the NYS without NYC rate
+and the NYS rate. Putnam County consistently had the lowest violent
+crime rate in the M-H Region from 2018 through 2021. Orange County has
+the highest rate (192.4 per 100,000). Sullivan County had the highest
+rates in 2018 and 2019 but has shown a consistent decrease over the four
+years. \[see Figure 29\].
+
+Figure 29
+
+<img src="media/media/image31.emf"
+style="width:7.5in;height:4.06667in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2018** | 186.4 | 210.7 | 55.4 | 113.5 | 264.2 | 161.1 | 173.6 | 204.0 | 351.0 |
+| **2019** | 194.8 | 190.9 | 49.9 | 115.5 | 249.9 | 145.6 | 169.3 | 199.4 | 359.4 |
+| **2020** | 198.0 | 174.6 | 37.9 | 104.9 | 196.7 | 128.5 | 164.4 | 206.2 | 365.7 |
+| **2021** | 180.7 | 192.4 | 48.5 | 97.9 | 168.8 | 130.9 | 151.5 | 201.3 | 384.4 |
+
+Note: Murder, rape, robbery, and aggravated assault are classified as
+violent crimes.
+
+Source: NYS Division of Criminal Justice Services, Uniform Crime and
+Incident-Based Reporting System, July 2025
+
+<https://www.criminaljustice.ny.gov/crimnet/ojsa/countycrimestats.htm>
+
+#### Environmental Conditions
+
+Three environmental conditions that negatively impact population health
+include air pollution, poor water quality, and extreme heat. A
+study reported by the *United States Environmental Protection Agency*
+shows socially vulnerable populations, including racial and ethnic
+minorities, are disproportionately affected by environmental
+hazards.
+
+##### Air Pollution
+
+Air pollution has been linked to several poor health outcomes,
+particularly those related to the respiratory system. Negative
+consequences resulting from exposure to fine particulate matter in the
+air include, but are not limited to, decreased lung function, chronic
+bronchitis, and premature death. Air particulate matter can come
+from a variety of sources, such as automobiles, industry, and forest
+fires.
+
+Across all M-H Region Counties and New York State, the average daily
+density of fine particulate matter generally declined between 2014 and
+2020. Westchester County consistently has the highest levels, it also
+experienced a decline since 2014. Sullivan County and Orange County
+fluctuate between having the lowest levels. Only Sullivan County and
+Orange County have periodically had levels lower than NYS. \[see Figure
+30\]
+
+Figure 30
+
+<img src="media/media/image32.emf"
+style="width:7.5in;height:3.98056in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2014** | 9.3 | 9.0 | 9.3 | 9.7 | 8.4 | 8.9 | 10.4 | 8.5 |
+| **2016** | 7.9 | 6.2 | 8.0 | 8.5 | 7.3 | 7.5 | 9.0 | 6.6 |
+| **2018** | 7.7 | 6.4 | 7.9 | 8.8 | 7.2 | 7.4 | 9.3 | 6.9 |
+| **2020** | 8.3 | 8.1 | 8.2 | 8.4 | 6.9 | 8.0 | 8.8 | 6.9 |
+
+Note: This is a measure of the average daily density of fine particulate
+matter. Fine particulate matter is defined as particles of air
+pollutants with an aerodynamic diameter less than 2.5 micrometers.
+
+Source: University of Wisconsin Population Health Institute. County
+Health Rankings & Roadmaps, July 2025 sourced from US Environmental
+Protection Agency's Air Quality System - Environmental Public Health
+Tracking Network
+
+https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Air+Pollution%3A+Particulate+Matter&tab=1
+
+##### Water Quality
+
+There are many challenges when trying to maintain water quality. Sources
+of water contamination include:
+
+- Sewage releases.
+
+- Naturally occurring chemicals and minerals like arsenic, radon, and
+  uranium.
+
+- Local land use practices like fertilizers, pesticides, livestock, and
+  concentrated feeding operations.
+
+- Manufacturing processes like heavy metals and cyanide.
+
+- Malfunctioning on-site wastewater treatment systems like septic
+  systems.
+
+Runoff can pose a risk to water quality and the health of the people
+exposed to it. When it rains, as water flows over impervious surfaces,
+such as pavement, it can pick up contaminants. Pollution can originate
+over large land areas or from a single point, such as an industrial
+pipe. Runoff can pick up sediment, nutrients, bacteria, pesticides, or
+petroleum byproducts from sources such as farms, waste, and
+roadways. “The presence of certain contaminants in our water can
+lead to health issues, including gastrointestinal illness, reproductive
+problems, and neurological disorders. Infants, young children, pregnant
+women, the elderly, and people with weakened immune systems may be
+especially at risk for illness.”
+
+##### Lead Poisoning
+
+Lead affects every system of the body, and no safe blood lead level
+exists. Children are especially vulnerable to the negative impacts of
+lead exposure which can lead to slowed growth and development, damage to
+the brain and nervous system, behavioral problems, and hearing and
+speech problems.
+
+Lead exposure can occur from ingesting, coming in contact with, or
+breathing in lead dust or lead fumes. Sources of lead can include
+lead-based paints in homes built before 1978, consumer products such as
+certain jewelry or toys, aviation gas, working with stained glass, and
+water pipes that contain lead. For children, lead-based paint is
+the most common source of lead exposure. Populations at higher risk
+for lead exposure include children from low-income households, children
+less than six years old, immigrant and refugee children from less
+developed countries, pregnant people, and adults working in industries
+that expose them to lead.
+
+NYS requires health care providers to obtain a blood lead level for all
+children at age one and again at age two. Westchester County had
+the highest testing rate in the M-H Region with 60.2% of children born
+in 2019 tested. Sullivan County had the lowest testing rate at 36.6%.
+Only Westchester County exceeded NYS’ rate in for all four years. \[see
+Figure 31\]
+
+Figure 31
+
+<img src="media/media/image33.emf"
+style="width:7.5in;height:4.01458in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **Mid-Hudson** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2013** | 57.2 | 53.4 | 61.3 | 71.3 | 36.4 | 51.7 | 65.5 | 61.6 | 62.8 |
+| **2016** | 58.8 | 52.3 | 62.4 | 60.3 | 46.1 | 53.5 | 64.3 | 59.4 | 63.3 |
+| **2017** | 60.7 | 51.0 | 60.8 | 57.0 | 44.4 | 55.3 | 63.6 | 58.4 | 62.4 |
+| **2019** | 53.3 | 41.4 | 58.0 | 43.8 | 36.6 | 49.5 | 60.2 | 50.9 | 59.3 |
+
+Note: This is a measure of the percentage of children in a single birth
+cohort tested at least twice for lead before 36 months of age.
+
+Source: NYS Community Health Indicator Reports Dashboard, July 2025
+sourced from NYS Child Health Lead Poisoning Prevention Program
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+
+#### Quality of Housing
+
+According to Healthy People 2030, housing quality refers to the physical
+condition of a person’s home as well as the quality of the social and
+physical environment in which the home is located, including aspects of
+air quality, home safety, space per individual, and the presence of
+mold, asbestos, or lead. Poor housing quality is associated with
+negative health outcomes including poor mental health, chronic disease,
+and injury.
+
+Housing continues to face a prolonged crisis, where both affordability
+and quality remain pressing concerns. Beyond inflated rents and high
+mortgage payments, many households live in poor quality housing that can
+cost more to heat, lack air conditioning, possess inadequate plumbing,
+or have insufficient kitchen facilities. Fluctuating temperatures make
+it difficult to maintain safe indoor environments, contributing to
+adverse health outcomes. For individuals striving to maintain healthy
+lifestyles, the absence of a stove or refrigerator can hinder the
+ability to store and prepare fresh foods, while also complicating the
+safe storage of temperature-sensitive medications. Inadequate plumbing
+further restricts personal and environmental hygiene. Low-income
+families are disproportionately affected by these conditions,
+underscoring persistent social and economic disparities in housing
+access and quality.<sup>  
+  
+</sup>For this measure severe housing problems are the percentage of
+households with one or more of the following housing problems: lack of
+complete kitchen facilities, lack of complete plumbing facilities,
+overcrowding, and severely cost burdened households.
+
+Rockland County had the highest percentage (26.0%) of households with
+severe housing problems, three percent higher than that of NYS (23.0%).
+Putnam and Sullivan Counties had the lowest percentage (17.0% and 16.0%,
+respectively) of households with severe housing problems. \[see Figure
+32\]
+
+Figure 32
+
+<img src="media/media/image34.emf"
+style="width:7.5in;height:4.09444in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** | **US** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2017–2021** | 17.0 | 21.0 | 17.0 | 26.0 | 16.0 | 18.0 | 22.0 | 23.0 | 17.0 |
+
+Note: Severe housing problems is the percentage of households with one
+or more housing problems: lack of complete kitchen facilities; lack of
+complete plumbing facilities; overcrowding; or the household is severely
+cost burdened.
+
+Source: University of Wisconsin Population Health Institute. County
+Health Rankings & Roadmaps, July 2025 sourced from US Census Bureau,
+Comprehensive Housing Affordability Strategy data
+
+https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Severe+Housing+Problems&tab=1https%3A%2F%2Fwebbi1.health.ny.gov%2FSASStoredProcess%2Fguest%3F_program%3D%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=it&ind_id=Cg27
+
+#### Transportation
+
+Transportation can include walking, driving, biking, or utilizing public
+transportation, such as subways and buses. Access to transportation can
+affect all aspects of life including the ability to find or keep
+employment, the quantity and quality of food that can be accessed, and
+access to health care. Studies have shown that those with access to a
+car are less likely to miss appointments or delay care when compared to
+those relying on other forms of transportation.
+
+Westchester County had the highest percentage of households with no
+available vehicles at 14.2%. Putnam County had the lowest percentage of
+households with no available vehicles at 4.2%. All counties within the
+M-H Region were below the NYS rate with residents having more access to
+vehicles. \[see Figure 33\]
+
+Figure 33
+
+<img src="media/media/image35.emf"
+style="width:7.5in;height:4.02222in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2021** | 7.2 | 8.9 | 4.7 | 10.4 | 10.4 | 6.8 | 14.3 | 28.9 |
+| **2022** | 7.2 | 8.6 | 4.1 | 9.9 | 9.9 | 7.2 | 14.2 | 29.0 |
+| **2023** | 7.0 | 8.6 | 4.2 | 9.7 | 8.8 | 7.5 | 14.2 | 29.0 |
+
+Note: The American Community Survey asks respondents how many
+automobiles, vans, and trucks of one-ton capacity or less are kept at
+home for use by members of the household.
+
+Source: US Census Bureau; American Community Survey, 2023 American
+Community Survey 5-Year Estimates, Table DP04, April 2025
+
+<https://data.census.gov/table/ACSDP5Y2022.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36>
+
+##### Modes of Transportation
+
+In addition to privately-owned vehicles, modes of transportation can
+include walking, mass public transportation, or biking. Pros to choosing
+mass public transportation, walking, and biking include protecting the
+environment by producing far less air pollution than cars and engaging
+in physical activity. However, these modes require individuals to
+rely more heavily on proper infrastructure, investment, and city
+planning to make travel safe and effective. Car-dependent cities and
+communities make it more difficult to use alternative modes of
+transportation to complete necessary daily tasks like going to the
+grocery store or getting to school, due to lack of safe sidewalks and
+public transportation options. The transportation method in which
+people most often get to work can be an indicator of how car-dependent
+an area is or how conducive it is to alternative modes of
+transportation.
+
+The majority of residents in the M-H Region report driving alone to work
+as their most common means of commuting. Sullivan County had the highest
+percentage of commuters driving alone to work (74.1%). Westchester
+County had a significantly larger share of commuters using public
+transportation than the rest of the M-H Region (17.8%), as well as the
+lowest percentage of commuters driving alone to work (51.9%). M-H Region
+residents were less likely to use public transportation or walk to work
+compared to NYS. An emerging trend of working from home was noted, with
+Putnam County (13.7)m Ulster County (15.3%) and Westchester County
+(17.3%) have the highest percentages in the M-H Region and exceeding
+NYS. \[see Figure 34\]
+
+Figure 34
+
+<img src="media/media/image36.emf"
+style="width:7.5in;height:4.09444in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Drove Alone** | 71.4 | 69.8 | 70.6 | 66.6 | 74.1 | 71.7 | 51.9 | 50 |
+| **Carpooled** | 7.5 | 9.6 | 7.6 | 8.5 | 8.8 | 6.7 | 7.2 | 6.3 |
+| **Public transportation** | 3.7 | 4.4 | 5.6 | 6.2 | 1.2 | 2.1 | 17.8 | 22.4 |
+| **Walked** | 2.3 | 3.1 | 1.5 | 3.1 | 2.4 | 2.4 | 3.7 | 5.3 |
+| **Taxicab, motorcycle, bicycle, or other means** | 1.7 | 2 | 1 | 2.8 | 1.9 | 1.8 | 2.1 | 2.6 |
+| **Worked from home** | 13.4 | 11.1 | 13.7 | 12.7 | 11.6 | 15.3 | 17.3 | 13.3 |
+
+Note: The American Community Survey asks respondents how they usually
+got to work last week. For respondents who use multiple transportation
+modes they are restricted to the single method of transportation used
+for the longest distance.
+
+Source: US Census Bureau; American Community Survey, 2023 American
+Community Survey 5-Year Estimates, Table B08141, April 2025
+https://data.census.gov/table/ACSDT5Y2023.B08141?q=b08141&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+
+##### Average Commute Time
+
+Average commute time, whether long or short, can be attributed to
+several factors. Long commute times can indicate a lack of job
+opportunities in an area, slow transit options, and a higher
+transportation cost burden on households and individuals. It can
+also negatively impact the community as it contributes to pollution.
+
+Putnam County consistently has the longest mean travel time to work (39
+minutes) among the M-H Region and exceeds NYS. Westchester County (35
+minutes) and Orange County (34 minutes) also exceeded NYS (33 minutes).
+The remaining counties in the M-H Region had commute times lower than
+NYS. \[see Figure 35\]
+
+Figure 35
+
+<img src="media/media/image37.emf"
+style="width:7.5in;height:4.01875in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2021** | 32.0 | 34.1 | 39.2 | 31.2 | 28.6 | 28.6 | 34.8 | 33.3 |
+| **2022** | 32.3 | 34.1 | 39.9 | 31.0 | 28.1 | 28.1 | 34.8 | 33.2 |
+| **2023** | 31.4 | 34.2 | 39.5 | 30.3 | 27.8 | 27.8 | 34.7 | 32.8 |
+
+Note: The American Community Survey asks respondents in the workforce
+how many minutes it usually takes them to get from home to work. The
+travel time refers to a one-way trip on a typical day. This includes
+time spent waiting for public transportation, picking up passengers in
+carpools, and time spent in other activities related to getting to work.
+Sullivan County and Ulster County do have the same data according to the
+Census.
+
+Source: US Census Bureau; American Community Survey, 2023 American
+Community Survey 5-Year Estimates, Table DP03, April 2025
+
+[*https://data.census.gov/table/ACSDP5Y2023.DP03?q=DP03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36*](https://data.census.gov/table/ACSDP5Y2023.DP03?q=DP03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36)
+
+## Environmental Indicators
+
+### Safety
+
+#### Injury
+
+Injuries fall into two distinct categories: intentional acts (like
+assaults or suicides) and unintentional incidents (such as falls, car
+accidents, or poisoning). Their predictable patterns and identifiable
+risk factors make injuries largely preventable. 
+
+Unintentional injury was the fourth leading cause of death in NYS in
+2022, accounting for 10,920 fatalities statewide, which is equivalent to
+a rate of 50.6 deaths per 100,000 population. It is the number one
+cause of death for residents aged 1 to 44 years.<sup>227</sup> Beyond
+mortality, injuries contribute to significant societal burdens,
+including financial costs, long-term disability, mental health
+challenges, and lost productivity.
+
+In the M-H Region from 2020-2022, Sullivan County had the highest
+three-year average unintentional injury mortality rate (92 per 100,000
+population), while Westchester County recorded the lowest rate (32 per
+100,000 population). The unintentional injury mortality rate is trending
+up in all seven counties, alongside NYS excluding NYC and the state
+overall. \[see Figure 184\]
+
+Figure 184
+
+<img src="media/media/image180.emf"
+style="width:7.5in;height:3.97917in" />
+
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong> </strong></th>
+<th colspan="7" style="text-align: center;"><p><strong>Three-Year
+Average</strong></p>
+<p><strong> </strong></p></th>
+<th colspan="2"
+style="text-align: center;"><strong>Single-Year</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><strong> </strong></th>
+<td style="text-align: center;"><strong>Dutchess</strong></td>
+<td style="text-align: center;"><strong>Orange</strong></td>
+<td style="text-align: center;"><strong>Putnam</strong></td>
+<td style="text-align: center;"><strong>Rockland</strong></td>
+<td style="text-align: center;"><strong>Sullivan</strong></td>
+<td style="text-align: center;"><strong>Ulster</strong></td>
+<td style="text-align: center;"><strong>Westchester</strong></td>
+<td style="text-align: center;"><strong>NYS excl NYC</strong></td>
+<td style="text-align: center;"><strong>NYS</strong></td>
+</tr>
+<tr>
+<th><strong>2018</strong></th>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">34</td>
+</tr>
+<tr>
+<th><strong>2019</strong></th>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">34</td>
+</tr>
+<tr>
+<th><strong>2020</strong></th>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">41</td>
+</tr>
+<tr>
+<th><strong>2021</strong></th>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">47</td>
+</tr>
+</tbody>
+</table>
+
+*Note: Three-year averages are used for counties and single-year rates
+are used for NYS and NYS excluding NYC. Y-axis does not begin at zero in
+order to clearly display trend lines. The ICD-10 codes for unintentional
+injury are: V01-X59, Y85-Y86.  
+*Source: NYS Community Health Indicator Reports Dashboard , May 2025
+sourced from Vital Statistics of NYS  
+*<u>https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county</u>*
+
+Poisonings
+
+In 2023, preventable poisonings resulted in 100,304 U.S. deaths, with a
+death rate of 29.9 per 100,000 population, nearly eight times higher
+than 1999 levels despite a modest 2.5% decline from 2022.
+Poisonings disproportionately affected adults aged 19 and older, who
+accounted for 98.4% of fatal unintentional poisonings and 90% of
+non-fatal poisonings. These poisoning trends were driven largely
+by drug overdoses, primarily involving opioids, which accounted for 93%
+of fatalities. In contrast, based on call data from the American
+Association of Poison Control Centers, 40% of poison exposures in the
+United States in 2023 occurred in children under 5 years old and were
+largely attributable to the ingestion of personal care and household
+cleaning products.<sup>231</sup>
+
+In New York, poison control centers handled 96,197 calls statewide
+during 2023. Approximately 80% of calls in the state stemmed from
+unintentional exposure. Residential settings accounted for 93% of these
+cases. Children aged 5 years and younger were disproportionately
+affected, with 34,522 exposure cases reported, representing 36% of all
+New York poison exposure incidents that year. The leading causes for
+exposures in young children included ingestion of cleaning substances
+(10.1%), personal care products (10%), foreign bodies or toys (9.3%),
+and analgesics (9%).
+
+The Upstate New York Poison Center handles poison exposure calls for all
+Mid-Hudson (M-H) Region counties except Westchester, which receives
+coverage from the NYC Poison Center. In 2024, call rates varied
+significantly: Putnam County reported 226 exposures per 100,000
+residents, while Sullivan County saw the highest rate at 636 per
+100,000. \[See Figure 185\]
+
+Figure 185
+
+<img src="media/media/image181.emf"
+style="width:7.5in;height:3.98264in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2020** | 541 | 604 | 237 | 431 | 583 | 609 | 497 |
+| **2021** | 421 | 593 | 220 | 456 | 589 | 494 | 441 |
+| **2022** | 436 | 613 | 222 | 470 | 542 | 446 | 408 |
+| **2023** | 443 | 573 | 230 | 399 | 642 | 444 | 404 |
+| **2024** | 464 | 570 | 226 | 366 | 636 | 530 | 388 |
+
+*Note: Rates calculated using population estimates from U.S. Census
+Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table
+B01003.*
+
+Source: Data request from Upstate NY Poison Center and NYC Poison
+Center, May 2025
+
+Orange and Rockland County had the highest proportion of calls for
+poisoning exposures involving children under 5 (38.5% and 38.4%,
+respectively), while Putnam County reported the lowest (28.5%). \[See
+Figure 186\]
+
+Figure 186
+
+<img src="media/media/image182.emf"
+style="width:7.5in;height:3.99236in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2020** | 29.7 | 30.9 | 20.1 | 32.7 | 34.6 | 31.1 | 34.6 |
+| **2021** | 30.9 | 33.4 | 26.4 | 36.1 | 30.4 | 30.2 | 34.2 |
+| **2022** | 31.9 | 35.8 | 26.7 | 36.8 | 34.0 | 30.3 | 33.8 |
+| **2023** | 32.6 | 40.5 | 26.7 | 41.3 | 32.7 | 28.8 | 33.8 |
+| **2024** | 30.6 | 38.5 | 28.5 | 38.4 | 30.8 | 29.0 | 31.6 |
+
+Source: Data request from Upstate NY Poison Center and NYC Poison
+Center, May 2025
+
+In NYS cannabis has been legal for medical purposes since 2016, and for
+recreational use since 2021. Increased availability could increase
+risk for cannabis-related poisoning, but this trend is not consistently
+evident in call center data for M-H Region counties from 2020-2024. In
+2024 Sullivan County saw the highest rate of cannabis related calls at
+8.8 per 100,000 people, whereas Rockland County recorded the lowest rate
+at 1.8 per 100,000 people. \[See Figure 187\]
+
+Figure 187
+
+<img src="media/media/image183.emf"
+style="width:7.5in;height:3.98264in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2020** | 1.4 | 5.8 | 2.0 | 2.2 | 0.0 | 1.7 | 5.5 |
+| **2021** | 3.0 | 5.3 | 2.0 | 1.8 | 10.2 | 3.3 | 7.1 |
+| **2022** | 5.1 | 7.7 | 3.1 | 3.6 | 7.6 | 2.7 | 6.4 |
+| **2023** | 5.0 | 5.7 | 3.1 | 2.4 | 8.8 | 1.1 | 6.7 |
+| **2024** | 5.7 | 6.7 | 2.0 | 1.8 | 8.8 | 3.3 | 5.9 |
+
+*Note: Rates calculated using population estimates from U.S. Census
+Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table
+B01003.*
+
+Source: Data request from Upstate NY Poison Center and NYC Poison
+Center, May 2025
+
+##### Motor Vehicle Accidents
+
+Motor vehicle accidents are a leading cause of injury and death in the
+United States for all age groups. According to the CDC, in 2022 there
+were over 2.6 million emergency department visits for injuries from
+motor vehicle accidents and more than 44,000 deaths due to motor vehicle
+accidents, equivalent to 120 people killed daily. Major risk
+factors include speeding, not wearing seat belts, and impaired
+driving. Proven strategies targeting these risk factors can
+prevent motor vehicle-related injuries and fatalities.
+
+Between 2020-2022, Sullivan County had the highest three-year average
+motor vehicle-related mortality rate in the M-H Region at 14.9 per
+100,000 population, and alongside Ulster it was above the Healthy People
+2030 target of 10.1 per 100,000 population. Westchester (4.5 per
+100,000 population) and Rockland County (5.7 per 100,000 population) had
+the lowest rates. Rates are trending up in NYS, and for all M-H counties
+except for Orange, where rates are flat.  \[see Figure 188\].
+
+Figure 188
+
+<img src="media/media/image184.emf"
+style="width:7.5in;height:4.01875in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 8.2 | 9.0 | 3.7 | 4.7 | 13.3 | 8.4 | 3.4 | 7.0 | 5.3 |
+| **2019** | 9.2 | 7.9 | 4.7 | 4.5 | 12.4 | 9.5 | 3.7 | 7.1 | 5.5 |
+| **2020** | 8.8 | 8.2 | 5.4 | 5.1 | 12.6 | 10.9 | 4.2 | 7.6 | 6.0 |
+| **2021** | 9.9 | 8.3 | 7.8 | 5.7 | 14.9 | 10.7 | 4.5 | 8.5 | 6.7 |
+
+*Note: Three-year averages are used for counties and single-year rates
+are used for NYS and NYS excluding NYC. The ICD-10 codes for motor
+vehicle related injuries are: V02-V04, V09.0, V09.2, V12-V14,
+V19.0-V19.2, V19.4-V19.6, V20-V79, V80.3-V80.5, V81.0-V81.1,
+V82.0-V82.1, V83-V86, V87.0-V87.8, V88.0-V88.8,V89.0,V89.2.*
+
+Source: NYS Community Health Indicator Reports Dashboard , May 2025
+sourced from Vital Statistics of NYS
+
+*<u>https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county</u>*
+
+According to the National Highway Traffic Safety Administration (NHTSA),
+there was a 7.6% decrease in fatalities related to alcohol-impaired
+motor vehicle driving in the US from 2022 to 2023. In 2023, there were
+12,429 fatalities, or about a fatality every 42 minutes.
+
+Among the M-H Region’s seven counties, Ulster (40.2 per 100,000
+population), Orange (38.7 per 100,000 population), and Sullivan (36.6
+per 100,000 population) had the highest 3-year average incidence of
+injuries and fatalities due to alcohol related driving accidents from
+2020-2022, while Westchester had the lowest incidence rate at 22.5 per
+100,000 population. From 2017 to 2022, there is an overall downward
+trend in the rate of alcohol related injuries and fatalities in NYS and
+M-H Region Counties. \[see Figure 189\].
+
+Figure 189
+
+<img src="media/media/image185.emf"
+style="width:7.5in;height:4.01875in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 35.2 | 34.9 | 44.2 | 29.2 | 50.1 | 44.8 | 28.9 | 35.1 | 28.8 |
+| **2019** | 33.9 | 34.2 | 37.1 | 29.0 | 39.8 | 43.1 | 26.6 | 33.5 | 27.6 |
+| **2020** | 32.5 | 34.4 | 33.1 | 27.9 | 31.2 | 42.0 | 24.1 | 28.6 | 23.0 |
+| **2021** | 31.7 | 38.7 | 28.1 | 27.1 | 36.6 | 40.2 | 22.5 | 31.4 | 25.4 |
+
+*Note: Three-year averages are used for counties and single-year rates
+are used for NYS and NYS excluding NYC. Y-axis does not begin at zero in
+order to clearly display trend lines. Data include persons killed or
+injured in motor vehicle crashes where alcohol was considered to be a
+factor. It also includes pedestrians, bicyclists and all other
+non-vehicle involved persons as well as vehicle occupants. These data
+were gathered from police reports. Crashes are reported by the county
+where the event occurred.*
+
+Source: NYS Community Health Indicator Reports Dashboard, May 2025
+sourced from Vital Statistics of NYS
+
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+
+Motor vehicle mortality rates are known to vary by age and gender. In
+the US during 2023, males had a higher motor vehicle mortality rate than
+females in all age groups. The highest motor vehicle mortality rate was
+seen in persons 20 to 24 years of age. Determining motor
+vehicle-related fatalities by race and ethnicity allows counties to
+target prevention messaging further if disparities are detected.
+
+From 2020–2022, Hispanic and Non-Hispanic Black populations experienced
+some of the highest motor vehicle–related mortality rates across the M-H
+Region; however, Non-Hispanic White residents had the highest rates in
+Dutchess and Sullivan counties. In Ulster County, the Hispanic
+population had the highest rate at 13.4 per 100,000 population. \[see
+Figure 190\]
+
+<figure>
+<img src="media/media/image186.emf"
+style="width:7.5in;height:4.02292in" />
+<figcaption><p>Figure 190</p></figcaption>
+</figure>
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Non-Hispanic White** | 10.1 | 7.9 | 6.0 | 4.9 | 15.8 | 9.2 | 2.4 | 7.6 | 6.3 |
+| **Non-Hispanic Black** | 6.3\* | 11.9 | 0.0\* | 7.7 | 12.7\* | 11.6\* | 6.0 | 9.7 | 6.6 |
+| **Non-Hispanic Asian/Pacific** | 5.8\* | 0.0\* | 0.0\* | 2.0\* | 12.4\* | 0.0\* | 1.6\* | 3.4 | 2.7 |
+| **Hispanic** | 8.0 | 6.1 | 7.1\* | 8.1 | 12.1\* | 13.4\* | 6.0 | 8.7 | 5.9 |
+| **Total** | 9.4 | 8.4 | 7.0 | 5.7 | 14.7 | 9.9 | 4.2 | 8.0 | 6.2 |
+
+*\*: The rate is unstable.*
+
+*Note: This indicator includes deaths with motor vehicle related as the
+primary cause of death. The ICD-10 codes for motor vehicle related
+injuries are: V02-V04, V09.0, V09.2, V12-V14, V19.0-V19.2, V19.4-V19.6,
+V20-V79, V80.3-V80.5, V81.0-V81.1, V82.0-V82.1, V83-V86, V87.0-V87.8,
+V88.0-V88.8,V89.0,V89.2.*
+
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard,
+May 2025 sourced from Vital Statistics of NYS
+
+[*https://www.health.ny.gov/community/health_equity/reports/county/*](https://www.health.ny.gov/community/health_equity/reports/county/)
+
+##### Falls
+
+Falls pose a significant injury risk across all age groups, with adults
+aged 65 years and older facing the greatest risk. More than one in four
+older adults fall annually, yet less than half report these falls to
+their doctor. Key risk factors for falls include lower body weakness,
+difficulties with walking and balance, certain medications (including
+tranquilizers, sedatives, antidepressants, and some over-the-counter
+drugs), poor vision, vitamin D deficiency, foot pain or poor footwear,
+and environmental hazards such as broken steps, throw rugs, and clutter.
+Most falls result from a combination of these risk factors, and the risk
+rises with each additional factor present.
+
+Falls have multifaceted impacts, with key consequences including:
+
+- Acute injuries:
+
+  - Most common cause of traumatic brain injury (TBI)
+
+  - Responsible for about 88% of hip fractures
+
+- Functional decline:
+
+  - Cause serious injury requiring medical care/activity restriction in
+    37% of cases
+
+  - Trigger reduced activity due to fear of falling, worsening physical
+    weakness and doubling future fall risk
+
+- System burden:
+
+  - Drive ∼3 million emergency department visits and 1 million
+    hospitalizations annually
+
+  - Incur \$80 billion in healthcare costs for non-fatal injuries
+    (2020), a 60% increase from 2015, with Medicare/Medicaid covering
+    70%
+
+In the M-H Region from 2020-2022, 3-year average fall related
+hospitalization rates in Orange, Sullivan and Ulster Counties were
+higher than the 2021 rate in New York State (excluding NYC). Conversely,
+Putnam and Rockland Counties consistently report the lowest fall rates
+in the region \[see Figure 191\].
+
+Figure 191
+
+<img src="media/media/image187.emf"
+style="width:7.5in;height:4.01875in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 34.6 | 39.8 | 29.2 | 30.9 | 33.8 | 39.6 | 31.8 | 37.6 | 35.1 |
+| **2019** | 35.1 | 39.8 | 29.3 | 30.4 | 35.3 | 40.0 | 33.0 | 38.0 | 36.4 |
+| **2020** | 35.3 | 39.4 | 28.6 | 29.4 | 36.2 | 39.7 | 34.1 | 35.2 | 34.1 |
+| **2021** | 36.5 | 39.9 | 27.8 | 29.6 | 39.9 | 39.3 | 33.6 | 38.0 | 36.4 |
+
+*Note: Three-year averages were used for counties, while single-year
+estimates were used for NYS and NYS excluding NYC. Y-axis does not begin
+at zero in order to clearly display trend lines. The ICD-10 codes for
+falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,
+and Y01XXX.*
+
+Source: NYS Community Health Indicator Reports Dashboard, May 2025
+sourced from NY Statewide Planning and Research Cooperative System
+*<u>https://www.health.ny.gov/community/health_equity/reports/county/</u>*
+
+When analyzed by age group, individuals aged ≥85 years exhibited the
+highest rates of fall-related hospitalizations in NYS in 2022. In
+the M-H Region from 2020-2022, Orange and Ulster Counties had the
+highest 3-year average falls hospitalization rate in persons ≥85 years
+of age, at 695 and 680 per 10,000 residents, respectively. Conversely,
+Rockland County recorded the lowest rate (520 per 10,000 population) in
+this age cohort. \[see Figure 192\]
+
+Figure 192
+
+<img src="media/media/image188.emf"
+style="width:7.5in;height:4.0125in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 575 | 690 | 618 | 523 | 545 | 682 | 577 | 650 | 572 |
+| **2019** | 582 | 707 | 606 | 494 | 550 | 691 | 595 | 644 | 581 |
+| **2020** | 610 | 690 | 583 | 495 | 558 | 688 | 610 | 577 | 515 |
+| **2021** | 645 | 695 | 540 | 520 | 647 | 680 | 597 | 679 | 597 |
+
+*Note: Three-year averages were used for counties, while single-year
+estimates were used for NYS and NYS excluding NYC. Y-axis does not begin
+at zero in order to clearly display trend lines. The ICD-10 codes for
+falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,
+and Y01XXX.*
+
+Source: NYS Community Health Indicator Reports Dashboard, May 2025
+sourced from NY Statewide Planning and Research Cooperative System
+*<u>https://www.health.ny.gov/community/health_equity/reports/county/</u>*
+
+When examining hospitalizations due to falls in persons aged 65 years
+and older from 2020 to 2022 in the M-H Region, the highest rates were
+seen in Orange and Ulster Counties (213 and 211 per 10,000 population,
+respectively), and the lowest rate was seen in Putnam County (156 per
+10,000 population). When stratified by race and ethnicity, non-Hispanic
+White individuals showed the highest fall-related hospitalization rates
+across all Mid-Hudson counties. Hispanic populations exhibited the
+second-highest rates per 10,000 in Rockland and Dutchess Counties.
+Higher rates among non-Hispanic Black residents were observed in Orange,
+Sullivan, Westchester and Ulster Counties. \[see Figure 193\]
+
+Figure 193
+
+<img src="media/media/image189.emf"
+style="width:7.5in;height:3.98264in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **Non-Hispanic White** | 205.3 | 222.8 | 156.0 | 191.7 | 192.9 | 210.6 | 181.9 | 202.9 | 197.5 |
+| **Non-Hispanic Black** | 48.3 | 112.7 | **s** | 71.1 | 134.7 | 129.9 | 100.8 | 114.7 | 103.7 |
+| **Non-Hispanic Asian/Pacific** | 48.6 | 78.1 | 93.8\* | 46.3 | s | 61.2\* | 55.0 | 76.4 | 83.4 |
+| **Hispanic** | 82.6 | 106.8 | 54.2 | 93.3 | 97.6 | 88.1 | 73.5 | 106.5 | 120.5 |
+| **Total** | 205.8 | 212.8 | 155.9 | 171.6 | 188.1 | 210.9 | 196.0 | 203.2 | 188.7 |
+
+*\*: The rate is unstable.*
+
+*s: Data are suppressed due to not meeting confidentiality criteria.*
+
+*Note: Three-year average is used for this indicator. This indicator
+includes deaths with falls as the primary cause of death. The ICD-10
+codes for falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX.
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,
+and Y01XXX.*
+
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard,
+May 2025 sourced from NY Statewide Planning and Research Cooperative
+System
+*<u>https://www.health.ny.gov/community/health_equity/reports/county/</u>*
+
+#### Domestic Violence / Intrapersonal Violence
+
+Violence is a critical public health issue affecting individuals,
+families and communities. The World Health Organization’s *World Report
+on Violence and Health* defines violence as "the intentional use of
+physical force or power, threatened or actual, against oneself, another
+person, or against a group or community, that either results in or has a
+high likelihood of resulting in injury, death, psychological harm,
+maldevelopment, or deprivation," and further subdivides violence into
+types including self-directed violence (self-harm), interpersonal
+violence, and collective violence (violence committed by large groups of
+individuals). Interpersonal violence refers to all violence between
+individuals, including that which takes place within a family or between
+intimate partners, and community violence, which may take place between
+acquaintances or strangers.
+
+During 2019–2021, nationwide an average of 1.5 million people per year
+received emergency treatment for nonfatal assault related
+injuries. In 2023, homicides claimed over 19,482 lives nationwide,
+marking an 11% decrease from 2022 levels. While this decline
+offers hope, crime statistics tend to be volatile. Despite improvements
+in recent data, more research is needed to better understand the root
+causes behind these fluctuations in rates.
+
+In 2022, New York recorded 853 homicides, which translates to a
+mortality rate of 4.5 deaths per 100,000 population and the
+14<sup>th</sup> lowest homicide rate among states. While annual
+homicide mortality rates climbed from 2018 to 2021 in both New York
+state as a whole and New York State excluding New York City, 3-year
+average mortality rates in M-H Region counties remained relatively
+stable during this period. Sullivan County consistently reported the
+highest rate among the counties, with increasing 3-year average rates.
+Putnam County stood out with the region’s lowest rate for 2020-2022 at
+0.7 per 100,000 \[see Figure 194\].
+
+Figure 194
+
+<img src="media/media/image190.emf"
+style="width:7.5in;height:4.01875in" />
+
+|   | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|   | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 1.9 | 2.5 | 1.0\* | 1.7 | 2.4\* | 1.5\* | 2.4 | 2.9 | 3.2 |
+| **2019** | 2.4 | 2.7 | 0.5\* | 2.4 | 2.6\* | 2.1 | 2.6 | 2.7 | 3.1 |
+| **2020** | 2.4 | 2.8 | 0.5\* | 2.3 | 4.6 | 2.2 | 2.8 | 3.8 | 4.5 |
+| **2021** | 2.5 | 2.6 | 0.7\* | 2.2 | 5.5 | 2.6 | 2.9 | 4.1 | 4.8 |
+
+*\*: Data are unstable due to fewer than 10 events in the numerator.*
+
+*Note: Three-year averages were used for counties, while single-year
+estimates were used for NYS and NYS excluding NYC. The ICD-10 codes for
+homicide are: X85-Y09, Y87.1*
+
+Source: NYS Community Health Indicator Reports Dashboard, May 2025
+sourced from Vital Statistics of NYS
+
+*<u>https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county</u>*
+
+There was variation between Mid-Hudson region counties in 3-year average
+age-adjusted assault-related hospitalizations rates from 2017 to 2022,
+but county rates were almost all lower than one-year rates for NYS
+excluding NYC. Most counties experienced relatively stable rates during
+the time period, with rates ranging between 0.9 and 2.6 per 10,000
+population for 2020- 2022.
+
+Among the region’s counties, Dutchess County recorded the highest rates,
+increasing from 2.2 per 10,000 population for 2017-2019 to 2.6 per
+10,000 for 2020-2022. In contrast, Putnam County maintained consistently
+low rates throughout the period, ranging from 0.6 to 0.9 per 10,000
+population, far below the statewide rate. Sullivan County saw the most
+pronounced decline, with rates dropping from 2.6 per 10,000 for
+2017-2019 to 2.0 per 10,000 for 2020-2022. \[see Figure 195\]
+
+Figure 195
+
+<img src="media/media/image191.emf"
+style="width:7.5in;height:4.01875in" />
+
+| ** ** | **Three-Year Average** |  |  |  |  |  |  | **Single-Year** |  |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+| **2018** | 2.2 | 1.9 | 0.6 | 1.2 | 2.6 | 1.6 | 2.2 | 2.3 | 3.3 |
+| **2019** | 2.4 | 2.1 | 0.6 | 1.3 | 2.3 | 1.7 | 2.1 | 2.4 | 3.3 |
+| **2020** | 2.6 | 2.1 | 0.7 | 1.2 | 1.8 | 1.7 | 2.2 | 2.7 | 3.7 |
+| **2021** | 2.6 | 2.1 | 0.9 | 1.0 | 2.0 | 1.8 | 2.0 | 2.5 | 3.6 |
+
+*Note: Three-year averages were used for counties, while single-year
+estimates were used for NYS and NYS excluding NYC. The ICD-10 codes for
+assault are:???.*
+
+Source: NYS Community Health Indicator Reports Dashboard, May 2025
+sourced from NY Statewide Planning and Research Cooperative System
+
+*<u>https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county</u>*
+
+Domestic violence, also known as intimate partner violence (IPV), is a
+pattern of abusive behavior in relationships designed to control or
+dominate an intimate partner through physical, sexual, emotional,
+economic, psychological or technological means. These abusive behaviors
+include intimidation, manipulation, humiliation, isolation, threats,
+blame, injuries or other coercive tactics that instill fear and
+compliance.
+
+IPV can lead to severe injury, chronic health conditions, and mental
+health struggles like depression or PTSD. Survivors may engage in risky
+behaviors such as smoking, binge drinking or unsafe sexual practices.
+Marginalized communities, particularly youth, face disproportionate
+risks tied to systemic inequities, with higher rates of sexual or dating
+violence. Approximately 16 million women and 11 million men who reported
+experiencing IPV in their lifetimes first experienced it before age
+18.
+
+Reported domestic violence victimization rates trended up in both NYS
+and NYS excluding NYC from 2020-2023. Across the M-H Region rates also
+generally trended upward. Orange County consistently had the highest
+rate among the counties, and outpaced New York State (excluding New York
+City), though there was a notable decline from a 2021 peak of 512
+reported domestic violence victims per 100,000 population to 470 per
+100,000 population in 2023. Putnam County, meanwhile, maintained the
+region’s lowest rates, ranging from 48 to 108 per 100,000 population
+during the four-year period from 2020 to 2023. \[see Figure 196\]
+
+Figure 196
+
+<img src="media/media/image192.emf"
+style="width:7.5in;height:3.99236in" />
+
+| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS excl NYC** | **NYS** |
+|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **2020** | 292 | 448 | 108 | 249 | 162 | 295 | 178 | 423 | 402 |
+| **2021** | 285 | 512 | 53 | 204 | 180 | 297 | 181 | 428 | 422 |
+| **2022** | 305 | 483 | 48 | 229 | 182 | 294 | 173 | 437 | 451 |
+| **2023** | 363 | 470 | 93 | 288 | 256 | 362 | 230 | 464 | 484 |
+
+*Note: Rates calculated using population estimates from U.S. Census
+Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table
+B01003. Police agencies in New York State collect data on the number of
+individuals victimized during domestic incidents involving members of
+the same family, including but not limited to parents, children and
+siblings, and intimate partners. These individuals may or may not live
+together at the time of the incident. Victim counts are reported for the
+following offenses: aggravated assault, simple assault, sex offenses,
+and violation of protective orders.*
+
+Source: NYS Division of Criminal Justice Services, June 2025 sourced
+from Domestic Violence Victim Data by County: 2020-2023
+
+[*<u>https://www.criminaljustice.ny.gov/crimnet/ojsa/domestic-violence-data.html</u>*](https://www.criminaljustice.ny.gov/crimnet/ojsa/domestic-violence-data.html)
+
+## County Health Summaries
+

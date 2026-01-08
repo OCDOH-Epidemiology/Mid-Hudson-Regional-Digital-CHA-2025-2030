@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Quarto
+.quarto/
+_site/
+
+# Data
+/data/raw/
+
+# OS
+.DS_Store

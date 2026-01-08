@@ -1,0 +1,667 @@
+---
+title: "Introduction"
+jupyter: python3
+execute:
+  freeze: auto
+---
+
+This chapter summarizes the regional purpose, methods, and scope of the 2025 Orange County Community Health Assessment within the Mid-Hudson Region. Narrative below is drafted from the converted Word document and still needs light editorial cleanup where noted.
+
+::: {.callout-note}
+Draft content from `draft/draft.md` is included verbatim where possible. TODO markers highlight areas needing refinement.
+:::
+
+## Executive Summary
+
+The 2025 Mid-Hudson Valley Regional Community Health Assessment (CHA)
+provides a comprehensive overview of the health status, needs, and
+priorities across the seven Mid-Hudson counties—Dutchess, Orange,
+Putnam, Rockland, Sullivan, Ulster, and Westchester. This systematic
+process was a joint effort across the seven counties to collect,
+analyze, and interpret data on health outcomes, behaviors, and social
+determinants of health. It serves as a foundation for coordinated public
+health action by identifying key challenges and guiding local health
+departments, hospitals, and community partners in planning
+evidence-based strategies.
+
+The assessment reveals that despite the Mid-Hudson Region’s geographic,
+economic, and demographic diversity, the seven counties share several
+core health challenges that have been identified as joint regional
+priorities. Mental health and substance use consistently emerged as the
+top concerns across every county. Rates of anxiety, depression, and
+suicide have continued to rise, particularly among youth and working-age
+adults, while substance use, especially related to opioids, alcohol, and
+emerging synthetic drugs, remains a major public health threat. Limited
+access to behavioral health services, provider shortages, and stigma
+around seeking care further exacerbate these issues.
+
+Chronic disease prevention and management represent another shared
+regional priority. Conditions such as cardiovascular disease, obesity,
+diabetes, and cancer contribute significantly to morbidity and mortality
+in all seven counties. Contributing factors include limited access to
+affordable, healthy foods, physical inactivity, and poor nutrition.
+Preventive care and early screening rates vary across the region, with
+rural areas and low-income populations facing additional barriers to
+care.
+
+Access to healthcare and social services remains a foundational concern
+throughout the Mid-Hudson Region. Residents report difficulty obtaining
+timely appointments, navigating complex insurance systems, or affording
+medical care. Shortages of primary care, dental, and mental health
+providers, especially in rural counties such as Sullivan and Ulster,
+limit the availability of preventive and specialty services.
+Transportation barriers and limited health literacy also contribute to
+disparities in access and outcomes.
+
+The CHA also highlights the widespread influence of social determinants
+of health, including housing instability, economic insecurity, food
+access, and transportation. These factors directly affect residents’
+ability to maintain good health. High housing costs and limited
+affordable options are major challenges in Dutchess, Orange, and
+Westchester Counties, while poverty and underemployment are more
+prevalent in Sullivan and Ulster Counties. Across the region, food
+insecurity remains a persistent concern, especially for families with
+children and older adults.
+
+Collectively, these findings illustrate that the seven Mid-Hudson
+counties face interrelated challenges rooted in both medical and social
+factors. By focusing on shared priorities such as mental health and
+substance use, chronic disease prevention, access to healthcare, and the
+social determinants of health, the region can align efforts, share
+resources, and strengthen partnerships to create sustainable
+improvements. The 2025 CHA provides the evidence base for coordinated
+regional action through the Community Health Improvement Plan (CHIP),
+ensuring that public health interventions are data-driven, equitable,
+and responsive to the needs of all Mid-Hudson residents.
+
+## Introduction
+
+### Prevention Agenda
+
+The Prevention Agenda 2025-2030 is New York State’s Health Improvement
+Plan, a six-year strategic initiative designed to improve public health
+and serve as a blueprint for state and local health departments to
+enhance the health of all residents. The main strategy of the
+Prevention Agenda is to promote health equity for populations who
+experience health disparities through prevention of chronic disease and
+barriers to health care access. Achieving well-being and good quality of
+life requires a strong focus on prevention, with health behaviors,
+access to care, and social determinants of health playing key roles in
+promoting long-term health outcomes.
+
+The Prevention Agenda has five domains with specific action plans
+developed for each area. The five domains, based on Healthy People
+2030's Social Determinants of Health, are Economic Stability, Social
+and Community Context, Neighborhood and Built Environment, Health Care
+Access and Quality, and Education Access and Quality.
+
+Since 2012, the New York State Department of Health (NYSDOH) has
+required LHDs to collaboratively work with their local hospitals and
+community partners in the development of the Community Health Assessment
+(CHA) and Community Health Improvement Plan (CHIP).
+
+### Community Health Assessment
+
+The CHA serves as the foundation of essential services provided by local
+public health departments, enabling the assessment and monitoring of
+population health status, influencing factors, and community needs and
+assets. CHAs are a comprehensive assessment of a community’s health
+status, challenges, and strengths. Data are compiled from a collection
+of local, state, and federal resources to ensure a complete picture is
+captured. With a comprehensive review of the community’s health, this
+data aids in identifying populations at higher risk of poor health
+outcomes.
+
+This document guides public health planning, program development, policy
+changes, resource coordination, funding applications, and innovative
+ways to collaboratively leverage community assets. Once completed, the
+information is shared with community members and stakeholders to
+initiate health improvement planning and development.
+
+### Community Health Needs Assessment and Community Service Plan
+
+For hospitals classified as charitable organizations, they must meet
+general requirements for tax exemption under Section 501(c)(3) and
+Revenue Ruling 69-545. They must also meet the requirements imposed
+by Section 501(r) on a facility-by-facility basis in order to be
+treated as an organization described in Section 501(c)(3). This involves
+completing a Community Health Needs Assessment (CHNA) and a Community
+Service Plan (CSP) every three years.
+
+The CHNA must define the community that it serves including the
+geographic area, target populations, and any focus on specialty areas or
+targeted diseases. It must also assess the health needs of the defined
+community including social determinants of health. As part of this
+process, they should include input from partners, stakeholders, and
+those with knowledge of the community’s health needs. As with the CHA,
+the CHNA should be shared widely.
+
+Through the CHNA, CHA, and partnership with the LHDs, the hospitals
+develop a CSP. The CSP, like the CHIP, develops and implements effective
+approaches to health promotion and disease prevention at the community
+level. The plan involves the use of evidence-based programs that target
+health areas identified in the CHNA that are of particular concern to
+their hospital service areas. For those hospitals that partner with
+LHDs, these areas are of concern to the greater county or regional
+efforts.
+
+### Community Health Improvement Plan
+
+The CHIP is a strategic plan for developing targeted interventions for
+issues identified in the CHA. The purpose of a CHIP is to describe how
+the local public health system, led by the LHDs and hospitals, will work
+together to improve the health of their community. The document sets
+priorities, identifies programs and policies for implementation,
+outlines partner responsibilities, directs use of assets, and sets
+measurable strategic goals, all within a community driven process.
+
+### Partnership
+
+The seven Mid-Hudson Region (M-H Region) LHDs have vast experience with
+assessing health and developing partnerships to advance the health of
+their communities. The LHDs lead the CHA and CHIP process via
+partnerships and follow the requirements of the NYSDOH.
+
+The CHA and CHIP process allows health departments to work with a
+network of partners and stakeholders focused on health improvement.
+Collaboration ensures that this process is dynamic and evolves with what
+is happening to residents. Engaging the community is key to
+understanding, supporting, and implementing strategies and ensuring
+successful outcomes.
+
+### Data Sources and Indicator Selection
+
+To create this document, the following data sources were utilized. In
+certain instances, data were obtained by request and is not readily
+available to the public.
+
+**American Community Survey (ACS)**: A nationwide survey conducted by
+the US Census Bureau to gather information about the social and economic
+need of communities, reaching over 3.5 million addresses each year.
+*Secondary source*
+
+**American Medical Association (AMA) Online Data Collection Center**:
+The AMA allows licensed physicians to update their AMA listing and
+credentialing. *Secondary source*
+
+**Area Health Resource Files**: A database maintained by the Health
+Resources and Services Administration of the Department of Health and
+Human Services which provides data from over 50 sources on health care
+professions, health facilities, population characteristics, economics,
+health professions training, hospital utilization, hospital
+expenditures, and environment at the county, state, and national levels.
+*Secondary source*
+
+**Behavioral Risk Factor Surveillance System (BRFSS)**: An annual
+national phone survey coordinated and funded by the Centers for Disease
+Control and Prevention (CDC) and conducted by each State’s health
+department. Data includes health related behaviors, health conditions,
+and use of health services. *Secondary source*
+
+**National Provider Identifier (NPI) Standard**: Overseen by the Centers
+for Medicare & Medicaid Services, the NPI is a Health Insurance
+Portability and Accountability Act (HIPAA) Administrative Simplification
+Standard. The NPI is a unique identification number for covered health
+care providers. Covered health care providers and all health plans and
+health care clearinghouses must use the NPIs in the administrative and
+financial transactions adopted under HIPAA. *Secondary source*
+
+**Comprehensive Housing Affordability Strategy (CHAS)**: Custom
+tabulations of ACS data about housing problems and housing needs from
+the US Census Bureau sent to the U.S. Department of Housing and Urban
+Development (HUD). HUD and local governments use this data to plan how
+to distribute their funds. *Secondary source*
+
+**County Health Rankings & Roadmaps**: A collaboration between the
+Robert Wood Johnson Foundation and the University of Wisconsin
+Population Health Institute. County Health Rankings and Roadmaps pulls
+from multiple sources to measure key health factors across counties in
+the US. *Secondary source*
+
+**Feeding America**: Feeding America is the nation’s largest domestic
+hunger-relief organization, a network of food banks in every county in
+the world. Programs help provide meals to children, seniors, families,
+and survivors of natural disasters. Using sources such as the ACS, the
+Bureau of Labor Statistics, and the US Department of Agriculture,
+Feeding America conducts Map the Meal Gap, a county level analysis of
+food insecurity. *Secondary source*
+
+**Health Resources and Services Administration (HRSA) Data Warehouse**:
+A database maintained by the Department of Health and Human Services
+which provides maps, data, reports, and dashboards about HRSA’s health
+care programs, including Health Professional Shortage Areas, Health
+Resource Files, and Medically Underserved Populations. *Secondary
+source*
+
+**Healthy People 2030**: A collaborative process, guided by the Office
+of Disease Prevention and Health Promotion within HHS, that reflects
+input from a diverse group of individuals and organizations. Healthy
+People 2030 includes 10-year national objectives for improving the
+health of all Americans. Healthy People 2030 has established measurable
+objectives and monitors benchmark progress over time. *Secondary source*
+
+**Local Health Department Surveys:** Surveys conducted by the counties
+to poll their residents on various aspects of health. *Primary source*
+
+**Mid-Hudson Community Partner Survey:** An online survey distributed by
+the Hudson Valley Public Health Collaborative to those who provide
+services in the region. *Primary source*
+
+**Mid-Hudson Region Community Health Survey**: A random digit dial and
+online survey conducted by Siena Research Institute (SRI). Created in
+collaboration with the HVPHC, local hospital partners, and SRI. *Primary
+source*
+
+**National Environmental Public Health Tracking Network**: A data hub
+provided by the CDC which brings together health and environmental data.
+*Secondary source*
+
+**New York City Poison Center**: A call center and research organization
+which provides poison emergency telephone management, poison information
+resources, public education, professional education, research and data
+collection, and toxicosurveillance in real time. Its coverage area
+includes all New York City (NYC) counties, Nassau, Suffolk, and
+Westchester counties. *Secondary source*
+
+**New York Citywide Immunization Registry**: The NY Citywide
+Immunization Registry (CIR) keeps immunization records for all children
+and adults who live in NYC. CIR consolidates immunization information
+and shares it with health care providers, families and agencies
+concerned with public health. *Secondary source*
+
+**New York County/NYC Neighborhood Cancer Statistics Dashboards:** The
+Cancer Statistics Dashboards provide easy access to a wide range of
+cancer statistics in the New York State, including cancer incidence,
+mortality, trends, stage at cancer diagnosis, survival, and prevalence
+information. The dashboards are organized according to the geography at
+which the statistics are available. *Secondary source*
+
+**New York State Cancer Registry**: A registry which collects,
+processes, and reports information about New Yorkers diagnosed with
+cancer from all physicians, dentists, laboratories, and other health
+care providers who are required to report all cancers to the NYS
+Department of Health (DOH). *Secondary source*
+
+**New York State Childhood Lead Poisoning Prevention Program (CLPPP)**:
+The CLPPP is the largest in the country working to make homes safe from
+lead. It funds NYS local health departments (LHD) to approach high-risk
+housing to educate, inspect and control lead hazards. It looks for
+properties with lead paint hazards, then it takes action to make them
+lead safe, protecting children from lead poisoning. Blood lead testing
+data and blood lead levels are monitored through CLPPP. *Secondary
+source*
+
+**New York State Communicable Disease Annual Reports**: Documents are
+released annually from NYSDOH containing mandated reports of suspected
+or confirmed communicable diseases. *Secondary source*
+
+**  
+**
+
+**New York State Communicable Disease Electronic Surveillance System
+(CDESS)**: Reporting of suspected or confirmed communicable diseases is
+mandated under the NYS Sanitary Code (10NYCRR 2.10). Although physicians
+have primary responsibility for reporting, school nurses, laboratory
+directors, infection control practitioners, daycare center directors,
+health care facilities, state institutions, and any other
+individuals/locations providing health care services are also required
+to report communicable diseases. All reportable communicable disease
+data coming through the Electronic Clinical Laboratory Reporting System
+Introduction are reported to CDESS in a timely and complete manner. LHDs
+review each lab report for proper initiation of a case investigation.
+Once the investigation is created, the LHD may create a reportable case
+or may dismiss it if evidence does not support the case definition.
+*Primary source*
+
+**New York State Department of Health Bureau of Communicable Disease
+Control:** This Bureau is responsible for preventing and controlling the
+spread of disease by conducting disease surveillance, epidemiological
+investigations, and disseminating public health information. *Secondary
+source*
+
+**New York State Department of Health Community Health Indicator Reports
+(CHIRS)**: The CHIRS Dashboard tracks about 350 indicators organized by
+15 health topics and is updated regularly to include the most recent
+year of data available for these indicators. Each NYS County has their
+own dashboard allowing for comparison of each county's data to regional
+and NYS totals. Visualizations include tables, maps, charts, and graphs
+at state and county levels. *Secondary source*
+
+**New York State Department of Health County Health Indicators by
+Race/Ethnicity (CHIRE)**: The CHIRE is a map-based tool that allows
+users to view health indicators by race and ethnicity in NYS and by
+county. It includes a variety of health indicators by race and ethnicity
+including mortality, vital statistics, injuries, chronic diseases, and
+substance abuse. *Secondary source*
+
+**New York State Department of Health Electronic Clinical Laboratory
+Reporting System (ECLRS)**: ECLRS provides laboratories that serve NYS
+with a single electronic system for secure and rapid transmission of
+reportable disease information to the NYSDOH, county health departments,
+and the NYC Department of Health and Mental Hygiene. ECLRS provides
+timely reporting, improving completeness and accuracy of reports, and
+generally facilitating the identification of emergent public health
+problems by monitoring communicable diseases, lead poisoning, HIV/AIDS,
+and cancer. *Secondary source*
+
+**New York State Department of Health Office of Sexual Health and
+Epidemiology**: A special projects unit responsible for conducting
+Sexually Transmitted Infection (STI) surveillance activities related to
+screening, disease morbidity, and HIV/STI Partner Services disease
+intervention activities. Oversees surveillance activities for chlamydia,
+gonorrhea, and syphilis for NYS (excluding NYC). *Secondary source*
+
+**New York State Department of Health Rabies Laboratory**: Located at
+Wadsworth Center’s Griffin Laboratory, provides monthly reports of the
+number of animals tested for rabies, as well as the number that tested
+positive for rabies in every NYS county. *Secondary source*
+
+**  
+**
+
+**New York State Department of Health Wadsworth Center**: Wadsworth
+Center is a science-based community committed to protecting and
+improving the health of New Yorkers through laboratory analysis,
+investigations, and research, as well as laboratory certification and
+educational programs. As the state's public health reference laboratory,
+Wadsworth responds to urgent public health threats as they arise,
+develops advanced methods to detect microbial agents and genetic
+disorders, and measures and analyzes environmental chemicals. *Secondary
+source*
+
+**New York State Division of Criminal Justice**: A criminal justice
+support agency which provides resources and services that inform
+decision-making and improve the quality of the criminal justice system.
+It maintains, analyzes, and publishes criminal and youth justice system
+data, including incidents of crimes and arrests and dispositions, as
+reported by police departments, sheriffs’ offices, probation
+departments, and the state Office of Court Administration. *Secondary
+source*
+
+**New York State Education Department**: Website publicly reports
+educational data submitted by educational institutions. *Secondary
+source*
+
+**New York State HIV Surveillance System**: An HIV surveillance system
+conducted by the AIDS Institute Bureau of HIV/AIDS Epidemiology that
+facilitates and monitors HIV-related laboratories and clinician
+reporting in NYS. *Secondary source*
+
+**New York State Immunization Information System**: A web-based registry
+that provides immunization records that are easily accessible and
+promotes public health by documenting all individuals of appropriate age
+and risk. All health care providers are required to report all
+immunizations administered to persons less than 19 years of age, along
+with the person’s immunization histories, to the NYS Department of
+Health. *Secondary source*
+
+**New York State Medicaid Program**: NYS’s Medicaid program provides
+comprehensive health coverage to more than 7.5 million lower-income New
+Yorkers (as of December 2023). Medicaid pays for a wide range of
+services, depending on a resident’s age, financial circumstances, family
+situation, or living arrangements. These services are provided through a
+large network of health care providers that can be accessed directly
+using Medicaid or through a managed care plan. *Secondary source*
+
+**New York State Office of Addiction Services and Supports (OASAS)**:
+The OASAS Office of Data Management, Research and Planning closely
+monitors substance use disorder data and trends to better anticipate and
+meet the needs of New Yorkers living with addiction. Data is made
+available to partners, providers, and localities to inform the
+collective efforts to understand and address addiction in NYS.
+*Secondary source*
+
+**New York State Opioid Data Dashboard**: This is an interactive visual
+presentation of indicators tracking opioid data at state and county
+levels. It is a key resource for monitoring fatal and nonfatal opioid
+overdoses, opioid prescribing, opioid use disorder treatment, and the
+overall opioid overdose burden. It displays a view of current and
+historical data for 98 opioid-related indicators. *Secondary source*
+
+**New York State Prescription Monitoring Program Registry**: This
+resource provides practitioners with direct, secure access to view
+dispensed controlled substance prescription histories for their
+patients. Patient reports include all controlled substances that were
+dispensed in NYS and reported by the pharmacy/dispenser for the past
+year. This information will allow practitioners to better evaluate their
+patients' treatment with controlled substances and determine whether
+there may be abuse or non-medical use. *Secondary source*
+
+**New York State Prevention Agenda Tracking Dashboard:** This is an
+interactive visual presentation of the most current tracking indicator
+data to track progress of the New York State’s Health Improvement Plan
+at state and county levels. It serves as a key source for monitoring
+progress that communities around the state have made regarding meeting
+the Prevention Agenda objectives. *Secondary source*
+
+**New York State Student Weight Status Category Reporting System**: A
+system that collects weight status category data on children and
+adolescents attending public schools in NYS outside of NYC. *Secondary
+source*
+
+**New York Statewide Planning and Research Cooperative System
+(SPARCS)**: SPARCS is a comprehensive all-payer data reporting system
+established from cooperation between the health care industry and
+government. The system currently collects patient level data on
+characteristics, diagnoses and treatments, services, and charges for
+each hospital inpatient and outpatient visit. *Secondary source*
+
+**Data Small Area Health Insurance Estimates (SAHIE)**: SAHIE is a
+program of the US Census Bureau which estimates health insurance
+coverage for all states and counties nationally. *Secondary source*
+
+**United for ALICE**: ALICE is an acronym that stands for Asset,
+Limited, Income Constrained, Employed. ALICE reports use a standardized
+methodology that assesses cost of living and financial hardship on a
+county level calculated by United Way of Northern New Jersey. *Secondary
+source*
+
+**Upstate New York Poison Center**: A call center and research
+organization which provides poison emergency telephone management,
+poison information resources, public education, professional education,
+research and data collection, and toxicosurveillance in real time. Its
+coverage area includes all NYS counties except Westchester, NYC, and
+Long Island. *Secondary source*
+
+**US Census Bureau**: The Census Bureau publishes population estimates
+and demographic components of change, such as births, deaths, and
+migration. This data can be sorted by characteristics such as age, sex,
+and race, as well as by national, state, and county location. *Secondary
+source*
+
+**US Department of Agriculture (USDA) Food Environment Atlas**: An atlas
+from the USDA which assembles data regarding food environment factors,
+such as food choices, health and well-being, and community
+characteristics. *Secondary source*
+
+**US Department of Housing and Urban Development (HUD):** HUD provides
+reports on programs provided by HUD or predecessor agencies that provide
+subsidized housing. These reports provide information to get a picture
+of subsidized households in the US. *Secondary source*
+
+**Vital Statistics of New York State**: A registry of all births,
+marriages, divorces/dissolutions of marriage, deaths, induced
+termination of pregnancy/abortions, and fetal deaths that have occurred
+in NYS outside of NYC. It is maintained by the NYS Bureau of Vital
+Records, a branch of the NYSDOH. *Secondary source*
+
+### Data Notes
+
+**Crude Rate versus Age-Adjusted Rate**: A crude rate is defined as the
+total number of cases or disease events divided by the total population.
+The age-adjusted rates are rates that would have existed if the
+population under study had the same age distribution as the "standard"
+population. Therefore, they are summary measures adjusted for
+differences in age distributions. Age-adjusted rates are used when
+available and are calculated using the US 2000 standard population.
+
+**International Classification of Diseases**: In 2015 the Department of
+Health and Human Services mandated those entities using ICD-9 codes
+transition to ICD-10 codes. Comparisons between data before and after
+2015 cannot be made due to the many differences in the updated ICD-10-CM
+code set.
+
+**New York State excluding New York City (NYS excl NYC)**: The
+population of NYC is not similar to that of the Mid-Hudson Region.
+Therefore, comparing rates/percentages of counties to NYS excluding NYC,
+rather than to the whole of NYS, provides a more accurate comparison.
+When possible, measures for both NYS and NYS excluding NYC are provided.
+When NYS excluding NYC data are not available comparisons should be made
+with caution.
+
+**Rate**: A rate is a measure of the frequency with which an event
+occurs in a defined population over a specified period of time.
+
+**Rate Denominators**: Population estimates used to calculate rates
+sourced from data requests are from the U.S. Census Bureau’s 2023
+American Community Survey (ACS) 5-Year Estimate, Table B01003. For all
+other rates, information on the denominator can be found at the original
+data source.
+
+**Suppressed and Unstable Data**: Some rates/percentages based on small
+numbers are suppressed because they do not meet the criteria for
+confidentiality (notated by “s”). Other rates/percentages based on small
+numbers are presented but are not considered reliable since they can
+fluctuate greatly over time. These measures are indicated as unstable
+due to a small numerator (notated by “\*”).
+
+**Three-Year Rate versus Single-Year Rate**: When possible, rates are
+based on a three-year average rather than a single-year estimate to
+provide a more reliable comparison. Using a three-year average smooths
+out the data over multiple years to recognize that rates fluctuate from
+year to year and is particularly useful when small amounts of data are
+an issue.
+
+## Methods and Limitations
+
+::: {.accordion}
+::: {.accordion-item}
+### Methods overview
+This section summarizes the data sources and approach used for the CHA. See the detailed list above and update as methods evolve. TODO: refine and de-duplicate sources during editorial review.
+:::
+
+::: {.accordion-item}
+### Limitations
+TODO: Add a brief limitations statement about data lag, survey response rates, and small-number suppression.
+:::
+:::
+
+## Area Being Assessed
+
+### The Mid-Hudson Region
+
+The Mid-Hudson (M-H) region is comprised of seven-counties in New York
+State (NYS) that is a mix of urban, suburban, and rural communities.
+Located north of New York City (NYC), it comprises 12.1% of the NYS
+population \[Table 1\]. The seven counties are Dutchess, Orange, Putnam,
+Rockland, Sullivan, Ulster, and Westchester counties. The population is
+becoming more ethnically diverse, with particular growth in Hispanic
+communities \[see Table 4 and 5\]. The M-H Region, like the nation, is
+aging with the fastest growing demographic, those being over 60 years
+old.
+
+The M-H region borders NYC and New Jersey to the south; New Jersey and
+Pennsylvania to the west; Greene and Columbia counties to the north; and
+Massachusetts and Connecticut to the east. See map in [Appendix
+A](#AppendixA_MidHudsonRegionMap). The Region is a topically diverse
+landscape with the rural Catskill Mountains, the Shawangunk Ridge, parts
+of the NYC watershed, and the Hudson River flowing through it.
+
+The Region benefits from its close proximity to NYC. Commuter rail lines
+and many highways make travel easy for commuters. Major industries
+include healthcare, education, retail, and government. Tourism is a
+major economic driver with extensive parklands, historic landmarks,
+arts, culture, shopping, and recreational activities. There are over 40
+colleges and universities leading to a highly educated workforce \[see
+Table 8\].
+
+#### Dutchess County
+
+Dutchess County is in the center of the M-H Region, midway between NYC
+and NYS’ capital, Albany. The western border includes 30 miles of Hudson
+River shoreline with Connecticut forming the eastern border. Dutchess
+County is 825 square miles, made up of 30 municipalities, consisting of
+two cities, 20 towns, and eight villages. Dutchess County has 13 public
+school districts and is also home to five colleges and universities. The
+southwestern region of Dutchess County is the most densely populated
+part of the county and includes the cities of Beacon and the county
+seat, Poughkeepsie. The rest of the county is predominantly suburban and
+rural. See map in [Appendix B](#section-1).
+
+#### Orange County
+
+Orange County is located approximately 40 miles north of NYC. The county
+is positioned between the Hudson River in the east and the Delaware
+River in the west, the only county in NYS to border both rivers. Ulster
+and Sullivan Counties border Orange County on the north, and Rockland
+County is located to the south. The states of New Jersey and
+Pennsylvania are located on the southwest borders of the county. Orange
+County is 812 square miles<sup>6</sup> and is a diverse mix of rural,
+farmland, suburban, and urban areas. Orange County communities include
+three cities, 21 towns, and 19 villages. Nearly 17% of the county’s
+total population resides in its three cities of Middletown, Newburgh,
+and Port Jervis.<sup>7</sup> Orange County has 19 public school
+districts and is also home to four colleges, universities, and medical
+schools. See map in [Appendix C](#section-2).
+
+#### Putnam County
+
+Approximately 60 miles north of New York City, Putnam County blends
+suburban neighborhoods, lake front communities, rural areas, farmlands,
+parklands, and reservoirs. It is bordered by Connecticut to the east,
+the Hudson River to the west, Dutchess County to the north and
+Westchester County to the south. Six towns and three villages comprise
+the 230-square-mile county. There are six public school districts and no
+colleges or universities. Open space dominates its landscape,
+highlighted by Clarence Fahnestock State Park, a preserve covering
+nearly 10% of the county’s total area. See map in [Appendix
+D](#section-3).
+
+#### Rockland County
+
+Rockland County is located approximately 30 miles north and west of NYC
+on the west side of the Hudson River. The county is a popular residence
+for people who commute to jobs in nearby Westchester and Bergen
+Counties, as well as NYC. Rockland County is bordered by Orange County
+to the north and New Jersey to the south and west. Home to eight public
+school districts and four colleges and universities, the 199-square mile
+area of Rockland County includes five towns and 18 villages. This county
+of 120,000 acres is designated a Preserve America Community, containing
+more than 35,000 acres of preserved open space and parkland, just under
+one third of the county by area. See map in [Appendix E](#section-4).
+
+#### Sullivan County
+
+Sullivan County is a rural community in the northwestern part of the M-H
+Region. It is located approximately 75 miles northwest of NYC in the
+Catskill Mountains. The county is bordered by Delaware County to the
+north, Ulster County to the east, Orange County to the south, and
+Pennsylvania to the west. Home to seven public school districts and one
+two-year college, the 997-square mile area includes 15 towns and seven
+villages. See map in [Appendix F](#section-5).
+
+#### Ulster County
+
+Ulster County is located in the southeast part of NYS, south of Albany
+and immediately west of the Hudson River. Bordered by Greene County to
+the north, Delaware County to the northwest, Sullivan County to the
+southwest, Orange County to the south, and Dutchess County across the
+Hudson River to the east, much of Ulster County can be characterized as
+suburban and semi-rural. The county has only one major urban area, the
+city of Kingston, located in the eastern central portion of the county,
+and encompassing just 7.4 square miles of the county’s total area. The
+rest of the county is comprised of 20 towns and three villages. Ulster
+County is home to nine school districts and two colleges and
+universities within its 1,161-square mile area. See map in [Appendix
+G](#section-6).
+
+#### Westchester County
+
+Westchester County is located just north of NYC, with an area of about
+450 square miles. It is bordered on the west by the Hudson River, on the
+north by Putnam County, and on the east by the Long Island Sound and
+Connecticut’s Fairfield County. Within its 48 municipalities,
+Westchester County can be described as predominately a mix of urban and
+suburban communities. Comprised of six cities, 19 towns, and 23
+villages, the county is home to 43 public school districts and 24
+colleges and universities. See map in [Appendix H](#section-7).
