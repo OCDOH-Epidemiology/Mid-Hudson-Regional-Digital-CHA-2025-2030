@@ -19,25 +19,7 @@ TODO: Add NYS and NYS-excl-NYC benchmarks where available.
 :::
 
 ## Interactive Table Example
-The table below is a searchable/sortable example using `itables`. Replace with published demographic tables once source data is loaded.
-
-```{python}
-import pandas as pd
-from itables import init_notebook_mode, show
-
-init_notebook_mode(all_interactive=True)
-df = pd.read_csv("data/processed/cha_table.csv")
-show(df)
-```
-
-## Publication Table Example (Great Tables)
-Use this pattern for polished tables in final reports.
-
-```{python}
-from great_tables import GT
-
-GT(df.head(4))
-```
+Tables will be manually added by sourcing from the Word document.
 
 ## Demographic Summary
 

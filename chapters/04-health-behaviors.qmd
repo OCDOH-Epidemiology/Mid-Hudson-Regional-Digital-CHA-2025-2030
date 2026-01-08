@@ -7,36 +7,8 @@ execute:
 
 This chapter highlights behaviors that influence health outcomes, including physical activity and nutrition patterns. Interactive examples below show how charts will be rendered from processed datasets.
 
-## Interactive Chart Example (Bokeh)
-
-```{python}
-import pandas as pd
-from bokeh.io import output_notebook
-from bokeh.models import ColumnDataSource, HoverTool
-from bokeh.plotting import figure, show
-
-metrics = pd.read_csv("data/processed/cha_metrics.csv")
-chart_data = metrics[metrics["metric"] == "Physical Activity"].copy()
-chart_data["year"] = chart_data["year"].astype(str)
-
-source = ColumnDataSource(chart_data)
-output_notebook()
-
-p = figure(
-    x_range=chart_data["year"].tolist(),
-    height=350,
-    title="Adults Meeting Physical Activity Guidelines",
-    toolbar_location="above",
-)
-
-p.vbar(x="year", top="value", width=0.55, source=source, color="#2c7fb8")
-p.add_tools(HoverTool(tooltips=[("Year", "@year"), ("Percent", "@value%")]))
-
-p.yaxis.axis_label = "Percent"
-p.xgrid.grid_line_color = None
-
-show(p)
-```
+## Interactive Chart Example
+Charts and tables will be manually added by sourcing from the Word document.
 
 ## Health Behaviors Indicators
 

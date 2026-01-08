@@ -9,15 +9,11 @@ This repository contains a Quarto Book site for the Orange County Community Heal
    source .venv/bin/activate
    pip install -r requirements.txt
    ```
-2. Build or refresh data outputs:
-   ```bash
-   python scripts/build_data.py
-   ```
-3. Render the book:
+2. Render the book:
    ```bash
    quarto render
    ```
-4. Open `docs/index.html` in a browser.
+3. Open `docs/index.html` in a browser.
 
 ## Updating the Word Draft
 Convert the source Word document to Markdown (and extract images):
@@ -27,9 +23,8 @@ scripts/convert_docx_to_md.sh
 Then move narrative into the appropriate `chapters/*.qmd` files. See TODO markers for cleanup.
 
 ## Data Workflow
-- Place raw Excel files in `data/raw/`.
-- Run `python scripts/build_data.py` to generate `data/processed/` outputs.
-- Charts and tables read exclusively from `data/processed/` to keep builds reproducible.
+- Tables and charts are manually added by sourcing from the Word document (`source/2025 Regional CHA Document Orange County 12.17.2025.docx`).
+- The `data/processed/` directory is no longer used for automatic data loading.
 
 ## Publishing to GitHub Pages
 The book outputs to `docs/` for GitHub Pages.

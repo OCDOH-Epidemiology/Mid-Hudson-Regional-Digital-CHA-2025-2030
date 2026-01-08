@@ -8,6 +8,8 @@ book:
   author: "Orange County Department of Health"
   chapters:
     - index.qmd
+    - chapters/00-contact-information.qmd
+    - chapters/00-acknowledgements.qmd
     - chapters/01-introduction.qmd
     - chapters/02-demographics.qmd
     - chapters/03-sdoh.qmd
@@ -35,4 +37,5 @@ format:
 
 execute:
   freeze: auto
+  working-dir: project
 
