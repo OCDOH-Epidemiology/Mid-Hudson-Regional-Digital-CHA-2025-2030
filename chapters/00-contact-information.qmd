@@ -1,5 +1,5 @@
 ---
-title: "[1]{.chapter-number} [Contact Information]{.chapter-title}"
+title: Contact Information
 jupyter: python3
 execute:
   freeze: auto
@@ -7,20 +7,20 @@ execute:
 
 # Population Focus for The Mid-Hudson Region Community Health Assessment
 
-- Dutchess County
-- Orange County
-- Putnam County
-- Rockland County
-- Sullivan County
-- Ulster County
-- Westchester County
+-   Dutchess County
+-   Orange County
+-   Putnam County
+-   Rockland County
+-   Sullivan County
+-   Ulster County
+-   Westchester County
 
 # Questions or Comments regarding the assessment
 
 For questions pertaining to Orange County, please contact:
 
-- **Jackie Lawler, MPH, CPH**  
-  Director of Epidemiology and Public Health Planning  
-  JLawler@orangecountygov.com  
-  845-291-2330
+**Jackie Lawler, MPH, CPH**
 
+> Director of Epidemiology and Public Health Planning\
+> JLawler\@orangecountygov.com\
+> 845-291-2330

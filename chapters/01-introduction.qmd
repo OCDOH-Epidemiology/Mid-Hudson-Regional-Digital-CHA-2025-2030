@@ -5,83 +5,12 @@ execute:
   freeze: auto
 ---
 
-This chapter summarizes the regional purpose, methods, and scope of the 2025 Orange County Community Health Assessment within the Mid-Hudson Region. Narrative below is drafted from the converted Word document and still needs light editorial cleanup where noted.
+## Prevention Agenda
 
-::: {.callout-note}
-Draft content from `draft/draft.md` is included verbatim where possible. TODO markers highlight areas needing refinement.
-:::
-
-## Executive Summary
-
-The 2025 Mid-Hudson Valley Regional Community Health Assessment (CHA)
-provides a comprehensive overview of the health status, needs, and
-priorities across the seven Mid-Hudson counties—Dutchess, Orange,
-Putnam, Rockland, Sullivan, Ulster, and Westchester. This systematic
-process was a joint effort across the seven counties to collect,
-analyze, and interpret data on health outcomes, behaviors, and social
-determinants of health. It serves as a foundation for coordinated public
-health action by identifying key challenges and guiding local health
-departments, hospitals, and community partners in planning
-evidence-based strategies.
-
-The assessment reveals that despite the Mid-Hudson Region’s geographic,
-economic, and demographic diversity, the seven counties share several
-core health challenges that have been identified as joint regional
-priorities. Mental health and substance use consistently emerged as the
-top concerns across every county. Rates of anxiety, depression, and
-suicide have continued to rise, particularly among youth and working-age
-adults, while substance use, especially related to opioids, alcohol, and
-emerging synthetic drugs, remains a major public health threat. Limited
-access to behavioral health services, provider shortages, and stigma
-around seeking care further exacerbate these issues.
-
-Chronic disease prevention and management represent another shared
-regional priority. Conditions such as cardiovascular disease, obesity,
-diabetes, and cancer contribute significantly to morbidity and mortality
-in all seven counties. Contributing factors include limited access to
-affordable, healthy foods, physical inactivity, and poor nutrition.
-Preventive care and early screening rates vary across the region, with
-rural areas and low-income populations facing additional barriers to
-care.
-
-Access to healthcare and social services remains a foundational concern
-throughout the Mid-Hudson Region. Residents report difficulty obtaining
-timely appointments, navigating complex insurance systems, or affording
-medical care. Shortages of primary care, dental, and mental health
-providers, especially in rural counties such as Sullivan and Ulster,
-limit the availability of preventive and specialty services.
-Transportation barriers and limited health literacy also contribute to
-disparities in access and outcomes.
-
-The CHA also highlights the widespread influence of social determinants
-of health, including housing instability, economic insecurity, food
-access, and transportation. These factors directly affect residents’
-ability to maintain good health. High housing costs and limited
-affordable options are major challenges in Dutchess, Orange, and
-Westchester Counties, while poverty and underemployment are more
-prevalent in Sullivan and Ulster Counties. Across the region, food
-insecurity remains a persistent concern, especially for families with
-children and older adults.
-
-Collectively, these findings illustrate that the seven Mid-Hudson
-counties face interrelated challenges rooted in both medical and social
-factors. By focusing on shared priorities such as mental health and
-substance use, chronic disease prevention, access to healthcare, and the
-social determinants of health, the region can align efforts, share
-resources, and strengthen partnerships to create sustainable
-improvements. The 2025 CHA provides the evidence base for coordinated
-regional action through the Community Health Improvement Plan (CHIP),
-ensuring that public health interventions are data-driven, equitable,
-and responsive to the needs of all Mid-Hudson residents.
-
-## Introduction
-
-### Prevention Agenda
-
-The Prevention Agenda 2025-2030 is New York State’s Health Improvement
+The Prevention Agenda 2025-2030 is New York State's Health Improvement
 Plan, a six-year strategic initiative designed to improve public health
 and serve as a blueprint for state and local health departments to
-enhance the health of all residents. The main strategy of the
+enhance the health of all residents<a href="#cite-1" title="New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/, accessed May 2025"><sup>1</sup></a>. The main strategy of the
 Prevention Agenda is to promote health equity for populations who
 experience health disparities through prevention of chronic disease and
 barriers to health care access. Achieving well-being and good quality of
@@ -91,7 +20,7 @@ promoting long-term health outcomes.
 
 The Prevention Agenda has five domains with specific action plans
 developed for each area. The five domains, based on Healthy People
-2030's Social Determinants of Health, are Economic Stability, Social
+2030's Social Determinants of Health<a href="#cite-2" title="Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, https://health.gov/healthypeople/objectives-and-data/social-determinants-health, accessed June 2025"><sup>2</sup></a>, are Economic Stability, Social
 and Community Context, Neighborhood and Built Environment, Health Care
 Access and Quality, and Education Access and Quality.
 
@@ -100,7 +29,7 @@ required LHDs to collaboratively work with their local hospitals and
 community partners in the development of the Community Health Assessment
 (CHA) and Community Health Improvement Plan (CHIP).
 
-### Community Health Assessment
+## Community Health Assessment
 
 The CHA serves as the foundation of essential services provided by local
 public health departments, enabling the assessment and monitoring of
@@ -118,12 +47,12 @@ ways to collaboratively leverage community assets. Once completed, the
 information is shared with community members and stakeholders to
 initiate health improvement planning and development.
 
-### Community Health Needs Assessment and Community Service Plan
+## Community Health Needs Assessment and Community Service Plan
 
 For hospitals classified as charitable organizations, they must meet
-general requirements for tax exemption under Section 501(c)(3) and
-Revenue Ruling 69-545. They must also meet the requirements imposed
-by Section 501(r) on a facility-by-facility basis in order to be
+general requirements for tax exemption under Section 501(c)(3)<a href="#cite-3" title="IRS, &quot;Exemption Requirements - 501(c)(3) Organizations.&quot; U.S. Department of the Treasury, 2025, https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations, accessed June 2025"><sup>3</sup></a> and
+Revenue Ruling 69-545<a href="#cite-4" title="IRS, &quot;Revenue Ruling 69-545.&quot; U.S. Department of the Treasury, 1969, https://www.irs.gov/pub/irs-tege/rr69-545.pdf, accessed June 2025"><sup>4</sup></a>. They must also meet the requirements imposed
+by Section 501(r)<a href="#cite-5" title="IRS, &quot;Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).&quot;, 2025, https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3, accessed June 2025"><sup>5</sup></a> on a facility-by-facility basis in order to be
 treated as an organization described in Section 501(c)(3). This involves
 completing a Community Health Needs Assessment (CHNA) and a Community
 Service Plan (CSP) every three years.
@@ -145,7 +74,7 @@ their hospital service areas. For those hospitals that partner with
 LHDs, these areas are of concern to the greater county or regional
 efforts.
 
-### Community Health Improvement Plan
+## Community Health Improvement Plan
 
 The CHIP is a strategic plan for developing targeted interventions for
 issues identified in the CHA. The purpose of a CHIP is to describe how
@@ -155,7 +84,7 @@ priorities, identifies programs and policies for implementation,
 outlines partner responsibilities, directs use of assets, and sets
 measurable strategic goals, all within a community driven process.
 
-### Partnership
+## Partnership
 
 The seven Mid-Hudson Region (M-H Region) LHDs have vast experience with
 assessing health and developing partnerships to advance the health of
@@ -169,7 +98,7 @@ is happening to residents. Engaging the community is key to
 understanding, supporting, and implementing strategies and ensuring
 successful outcomes.
 
-### Data Sources and Indicator Selection
+## Data Sources and Indicator Selection
 
 To create this document, the following data sources were utilized. In
 certain instances, data were obtained by request and is not readily
@@ -356,9 +285,6 @@ Wadsworth Center’s Griffin Laboratory, provides monthly reports of the
 number of animals tested for rabies, as well as the number that tested
 positive for rabies in every NYS county. *Secondary source*
 
-**  
-**
-
 **New York State Department of Health Wadsworth Center**: Wadsworth
 Center is a science-based community committed to protecting and
 improving the health of New Yorkers through laboratory analysis,
@@ -485,7 +411,7 @@ termination of pregnancy/abortions, and fetal deaths that have occurred
 in NYS outside of NYC. It is maintained by the NYS Bureau of Vital
 Records, a branch of the NYSDOH. *Secondary source*
 
-### Data Notes
+## Data Notes
 
 **Crude Rate versus Age-Adjusted Rate**: A crude rate is defined as the
 total number of cases or disease events divided by the total population.
@@ -532,136 +458,22 @@ out the data over multiple years to recognize that rates fluctuate from
 year to year and is particularly useful when small amounts of data are
 an issue.
 
-## Methods and Limitations
+## References
 
-::: {.accordion}
-::: {.accordion-item}
-### Methods overview
-This section summarizes the data sources and approach used for the CHA. See the detailed list above and update as methods evolve. TODO: refine and de-duplicate sources during editorial review.
-:::
+<details>
+<summary><strong>Click to view citations</strong></summary>
 
-::: {.accordion-item}
-### Limitations
-TODO: Add a brief limitations statement about data lag, survey response rates, and small-number suppression.
-:::
-:::
+<span id="cite-1">1. New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, <https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/>, accessed May 2025</span>
 
-## Area Being Assessed
+<span id="cite-2">2. Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/objectives-and-data/social-determinants-health>, accessed June 2025</span>
 
-### The Mid-Hudson Region
+<span id="cite-3">3. IRS, "Exemption Requirements - 501(c)(3) Organizations." U.S. Department of the Treasury, 2025, <https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations>, accessed June 2025</span>
 
-The Mid-Hudson (M-H) region is comprised of seven-counties in New York
-State (NYS) that is a mix of urban, suburban, and rural communities.
-Located north of New York City (NYC), it comprises 12.1% of the NYS
-population \[Table 1\]. The seven counties are Dutchess, Orange, Putnam,
-Rockland, Sullivan, Ulster, and Westchester counties. The population is
-becoming more ethnically diverse, with particular growth in Hispanic
-communities \[see Table 4 and 5\]. The M-H Region, like the nation, is
-aging with the fastest growing demographic, those being over 60 years
-old.
+<span id="cite-4">4. IRS, "Revenue Ruling 69-545." U.S. Department of the Treasury, 1969, <https://www.irs.gov/pub/irs-tege/rr69-545.pdf>, accessed June 2025</span>
 
-The M-H region borders NYC and New Jersey to the south; New Jersey and
-Pennsylvania to the west; Greene and Columbia counties to the north; and
-Massachusetts and Connecticut to the east. See map in [Appendix
-A](#AppendixA_MidHudsonRegionMap). The Region is a topically diverse
-landscape with the rural Catskill Mountains, the Shawangunk Ridge, parts
-of the NYC watershed, and the Hudson River flowing through it.
+<span id="cite-5">5. IRS, "Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).", 2025, <https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3>, accessed June 2025</span>
 
-The Region benefits from its close proximity to NYC. Commuter rail lines
-and many highways make travel easy for commuters. Major industries
-include healthcare, education, retail, and government. Tourism is a
-major economic driver with extensive parklands, historic landmarks,
-arts, culture, shopping, and recreational activities. There are over 40
-colleges and universities leading to a highly educated workforce \[see
-Table 8\].
+</details>
 
-#### Dutchess County
 
-Dutchess County is in the center of the M-H Region, midway between NYC
-and NYS’ capital, Albany. The western border includes 30 miles of Hudson
-River shoreline with Connecticut forming the eastern border. Dutchess
-County is 825 square miles, made up of 30 municipalities, consisting of
-two cities, 20 towns, and eight villages. Dutchess County has 13 public
-school districts and is also home to five colleges and universities. The
-southwestern region of Dutchess County is the most densely populated
-part of the county and includes the cities of Beacon and the county
-seat, Poughkeepsie. The rest of the county is predominantly suburban and
-rural. See map in [Appendix B](#section-1).
 
-#### Orange County
-
-Orange County is located approximately 40 miles north of NYC. The county
-is positioned between the Hudson River in the east and the Delaware
-River in the west, the only county in NYS to border both rivers. Ulster
-and Sullivan Counties border Orange County on the north, and Rockland
-County is located to the south. The states of New Jersey and
-Pennsylvania are located on the southwest borders of the county. Orange
-County is 812 square miles<sup>6</sup> and is a diverse mix of rural,
-farmland, suburban, and urban areas. Orange County communities include
-three cities, 21 towns, and 19 villages. Nearly 17% of the county’s
-total population resides in its three cities of Middletown, Newburgh,
-and Port Jervis.<sup>7</sup> Orange County has 19 public school
-districts and is also home to four colleges, universities, and medical
-schools. See map in [Appendix C](#section-2).
-
-#### Putnam County
-
-Approximately 60 miles north of New York City, Putnam County blends
-suburban neighborhoods, lake front communities, rural areas, farmlands,
-parklands, and reservoirs. It is bordered by Connecticut to the east,
-the Hudson River to the west, Dutchess County to the north and
-Westchester County to the south. Six towns and three villages comprise
-the 230-square-mile county. There are six public school districts and no
-colleges or universities. Open space dominates its landscape,
-highlighted by Clarence Fahnestock State Park, a preserve covering
-nearly 10% of the county’s total area. See map in [Appendix
-D](#section-3).
-
-#### Rockland County
-
-Rockland County is located approximately 30 miles north and west of NYC
-on the west side of the Hudson River. The county is a popular residence
-for people who commute to jobs in nearby Westchester and Bergen
-Counties, as well as NYC. Rockland County is bordered by Orange County
-to the north and New Jersey to the south and west. Home to eight public
-school districts and four colleges and universities, the 199-square mile
-area of Rockland County includes five towns and 18 villages. This county
-of 120,000 acres is designated a Preserve America Community, containing
-more than 35,000 acres of preserved open space and parkland, just under
-one third of the county by area. See map in [Appendix E](#section-4).
-
-#### Sullivan County
-
-Sullivan County is a rural community in the northwestern part of the M-H
-Region. It is located approximately 75 miles northwest of NYC in the
-Catskill Mountains. The county is bordered by Delaware County to the
-north, Ulster County to the east, Orange County to the south, and
-Pennsylvania to the west. Home to seven public school districts and one
-two-year college, the 997-square mile area includes 15 towns and seven
-villages. See map in [Appendix F](#section-5).
-
-#### Ulster County
-
-Ulster County is located in the southeast part of NYS, south of Albany
-and immediately west of the Hudson River. Bordered by Greene County to
-the north, Delaware County to the northwest, Sullivan County to the
-southwest, Orange County to the south, and Dutchess County across the
-Hudson River to the east, much of Ulster County can be characterized as
-suburban and semi-rural. The county has only one major urban area, the
-city of Kingston, located in the eastern central portion of the county,
-and encompassing just 7.4 square miles of the county’s total area. The
-rest of the county is comprised of 20 towns and three villages. Ulster
-County is home to nine school districts and two colleges and
-universities within its 1,161-square mile area. See map in [Appendix
-G](#section-6).
-
-#### Westchester County
-
-Westchester County is located just north of NYC, with an area of about
-450 square miles. It is bordered on the west by the Hudson River, on the
-north by Putnam County, and on the east by the Long Island Sound and
-Connecticut’s Fairfield County. Within its 48 municipalities,
-Westchester County can be described as predominately a mix of urban and
-suburban communities. Comprised of six cities, 19 towns, and 23
-villages, the county is home to 43 public school districts and 24
-colleges and universities. See map in [Appendix H](#section-7).

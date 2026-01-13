@@ -8,15 +8,17 @@ book:
   author: "Orange County Department of Health"
   chapters:
     - index.qmd
-    - chapters/00-contact-information.qmd
     - chapters/00-acknowledgements.qmd
+    - chapters/00-contact-information.qmd
+    - chapters/01-excutive_summary.qmd
     - chapters/01-introduction.qmd
-    - chapters/02-demographics.qmd
-    - chapters/03-sdoh.qmd
-    - chapters/04-health-behaviors.qmd
-    - chapters/05-clinical-care.qmd
-    - chapters/06-physical-environment.qmd
-    - chapters/07-appendix.qmd
+    - chapters/02-area-being-assessed.qmd
+    - chapters/03-demographics.qmd
+    - chapters/04-Social and Physical Determinants of Health.qmd
+    - chapters/05-health-behaviors.qmd
+    - chapters/06-clinical-care.qmd
+    - chapters/07-physical-environment.qmd
+    - chapters/08-appendix.qmd
   sidebar:
     style: docked
     search: true
@@ -27,6 +29,7 @@ format:
     theme:
       - flatly
       - theme.scss
+    css: custom-citation-styles.css
     toc: true
     toc-depth: 3
     page-layout: full

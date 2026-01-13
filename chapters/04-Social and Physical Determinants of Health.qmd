@@ -1,17 +1,9 @@
 ---
-title: "Social Determinants of Health"
+title: "Social and Physical Determinants of Health"
 jupyter: python3
 execute:
   freeze: auto
 ---
-
-This chapter covers the social, economic, and community conditions that shape health outcomes across Orange County and the broader Mid-Hudson Region.
-
-::: {.callout-tip}
-TODO: Refine narrative flow and add county-specific graphics once data tables are confirmed.
-:::
-
-## Social and Physical Determinants of Health
 
 ### Economic Stability
 
@@ -40,25 +32,66 @@ style="width:7.5in;height:4.14236in" />
 <figcaption><p>Figure 1</p></figcaption>
 </figure>
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** | **US** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021** | 63.0 | 63.9 | 65.2 | 63.9 | 56.1 | 60.1 | 65.5 | 63.1 | 63.6 |
-| **2022** | 62.8 | 63.4 | 64.7 | 63.2 | 58.1 | 58.9 | 65.2 | 62.9 | 63.5 |
-| **2023** | 63.3 | 63.5 | 64.7 | 63.2 | 59.1 | 58.7 | 65.4 | 63.0 | 63.5 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-labor-force
+#| tbl-cap: "Percentage of the Labor Force, Population 16 Years and Older, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Y-axis does not begin at zero in order to clearly display trend
-lines. The American Community Survey asks respondents if they have
-worked in the past week. If the answer is no, they are asked why they
-are not working. For those who are not working, they are asked whether
-they plan to return to work, and when they last worked. Labor Force
-refers to the total number of people who are either employed or
-unemployed and actively seeking work, plus members of the US Armed
-Forces.
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023"],
+    "Dutchess": [63.0, 62.8, 63.3],
+    "Orange": [63.9, 63.4, 63.5],
+    "Putnam": [65.2, 64.7, 64.7],
+    "Rockland": [63.9, 63.2, 63.2],
+    "Sullivan": [56.1, 58.1, 59.1],
+    "Ulster": [60.1, 58.9, 58.7],
+    "Westchester": [65.5, 65.2, 65.4],
+    "NYS": [63.1, 62.9, 63.0],
+    "US": [63.6, 63.5, 63.5]
+}
 
-Source: US Census Bureau; American Community Survey, 2023 American
-Community Survey 5-year estimates, Table DP03, April 2025
+df = pd.DataFrame(data)
 
-<https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US>
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Y-axis does not begin at zero in order to clearly display trend lines. The American Community Survey asks respondents if they have worked in the past week. If the answer is no, they are asked why they are not working. For those who are not working, they are asked whether they plan to return to work, and when they last worked. Labor Force refers to the total number of people who are either employed or unemployed and actively seeking work, plus members of the US Armed Forces.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP03](https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US), April 2025
+:::
 
 <figure>
 <img src="media/media/image4.emf"
@@ -66,21 +99,66 @@ style="width:7.5in;height:3.96389in" />
 <figcaption><p>Figure 2</p></figcaption>
 </figure>
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** | **US** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021** | 5.2 | 5.4 | 4.8 | 6.0 | 8.0 | 5.1 | 6.1 | 6.2 | 5.5 |
-| **2022** | 5.0 | 5.3 | 4.4 | 6.2 | 7.2 | 5.1 | 6.0 | 6.2 | 5.3 |
-| **2023** | 4.8 | 5.4 | 4.1 | 5.9 | 6.1 | 5.1 | 6.0 | 6.2 | 5.2 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-unemployment
+#| tbl-cap: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The American Community Survey asks respondents if they have worked
-in the past week. If the answer is no, they are asked why they are not
-working. For those who are not working, they are asked whether they plan
-to return to work, and when they last worked.
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023"],
+    "Dutchess": [5.2, 5.0, 4.8],
+    "Orange": [5.4, 5.3, 5.4],
+    "Putnam": [4.8, 4.4, 4.1],
+    "Rockland": [6.0, 6.2, 5.9],
+    "Sullivan": [8.0, 7.2, 6.1],
+    "Ulster": [5.1, 5.1, 5.1],
+    "Westchester": [6.1, 6.0, 6.0],
+    "NYS": [6.2, 6.2, 6.2],
+    "US": [5.5, 5.3, 5.2]
+}
 
-Source: US Census Bureau; American Community Survey, 2023 American
-Community Survey 5-year estimates, Table DP03, April 2025
+df = pd.DataFrame(data)
 
-https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The American Community Survey asks respondents if they have worked in the past week. If the answer is no, they are asked why they are not working. For those who are not working, they are asked whether they plan to return to work, and when they last worked.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP03](https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US), April 2025
+:::
 
 #### Food Insecurity
 
@@ -131,26 +209,67 @@ style="width:7.5in;height:4.00069in" />
 <figcaption><p>Figure 3</p></figcaption>
 </figure>
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2020** | 8.7 | 9.4 | 6.3 | 9.7 | 11.5 | 11.3 | 7.9 | 9.6 |
-| **2021** | 7.2 | 7.8 | 5.3 | 8.2 | 9.9 | 9.5 | 6.6 | 11.4 |
-| **2022** | 10.0 | 11.3 | 8.4 | 11.0 | 13.1 | 12.8 | 9.4 | 13.4 |
-| **2023** | 10.8 | 12.1 | 8.9 | 12.0 | 14.0 | 13.2 | 10.7 | 14.5 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-food-insecurity
+#| tbl-cap: "Food Insecurity Rate, 2020-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Feeding America takes the Current Population Survey (a monthly
-household survey conducted by the US Census Bureau) data and analyzes
-the relationships between food insecurity and its determinants (i.e.,
-unemployment, poverty, disability, homeownership, and median income), as
-well as the percentage of the population that is Black and the
-percentage of the population that is Hispanic. Coefficient estimates
-from this analysis, combined with information on the same variables
-defined at the county and congressional district levels, are generated
-to estimate food insecurity.
+# Create the data
+data = {
+    " ": ["2020", "2021", "2022", "2023"],
+    "Dutchess": [8.7, 7.2, 10.0, 10.8],
+    "Orange": [9.4, 7.8, 11.3, 12.1],
+    "Putnam": [6.3, 5.3, 8.4, 8.9],
+    "Rockland": [9.7, 8.2, 11.0, 12.0],
+    "Sullivan": [11.5, 9.9, 13.1, 14.0],
+    "Ulster": [11.3, 9.5, 12.8, 13.2],
+    "Westchester": [7.9, 6.6, 9.4, 10.7],
+    "NYS": [9.6, 11.4, 13.4, 14.5]
+}
 
-Source: Feeding America, June 2025
+df = pd.DataFrame(data)
 
-https://map.feedingamerica.org/district/2023/overall/new-york
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Feeding America takes the Current Population Survey (a monthly household survey conducted by the US Census Bureau) data and analyzes the relationships between food insecurity and its determinants (i.e., unemployment, poverty, disability, homeownership, and median income), as well as the percentage of the population that is Black and the percentage of the population that is Hispanic. Coefficient estimates from this analysis, combined with information on the same variables defined at the county and congressional district levels, are generated to estimate food insecurity.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+Feeding America, June 2025
+
+[Food Insecurity Map](https://map.feedingamerica.org/district/2023/overall/new-york)
+:::
 
 <figure>
 <img src="media/media/image6.emf"
@@ -158,23 +277,67 @@ style="width:7.5in;height:3.99722in" />
 <figcaption><p>Figure 4</p></figcaption>
 </figure>
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2020** | 12.0 | 14.8 | 7.3 | 15.8 | 18.3 | 15.1 | 11.4 | 14.6 |
-| **2021** | 8.2 | 10.4 | 3.6 | 11.3 | 15.0 | 10.6 | 7.2 | 15.4 |
-| **2022** | 12.0 | 15.4 | 6.7 | 15.5 | 19.9 | 14.5 | 10.5 | 18.8 |
-| **2023** | 11.9 | 15.6 | 6.6 | 16.3 | 19.9 | 14.6 | 10.6 | 19.0 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-childhood-food-insecurity
+#| tbl-cap: "Childhood Food Insecurity Rate, 2020-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Feeding America takes the CPS data and analyzes the relationships
-between food insecurity and its determinants (i.e., unemployment,
-poverty, disability, homeownership, and median income), as well as the
-percentage of the population that is Black and the percentage of the
-population that is Hispanic. Coefficient estimates from this analysis,
-combined with information on the same variables defined at the county
-and congressional district levels, are generated to estimate food
-insecurity.  
-Source: Feeding America, June 2025  
-<https://map.feedingamerica.org/county/2023/child/new-york>
+# Create the data
+data = {
+    " ": ["2020", "2021", "2022", "2023"],
+    "Dutchess": [12.0, 8.2, 12.0, 11.9],
+    "Orange": [14.8, 10.4, 15.4, 15.6],
+    "Putnam": [7.3, 3.6, 6.7, 6.6],
+    "Rockland": [15.8, 11.3, 15.5, 16.3],
+    "Sullivan": [18.3, 15.0, 19.9, 19.9],
+    "Ulster": [15.1, 10.6, 14.5, 14.6],
+    "Westchester": [11.4, 7.2, 10.5, 10.6],
+    "NYS": [14.6, 15.4, 18.8, 19.0]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Feeding America takes the CPS data and analyzes the relationships between food insecurity and its determinants (i.e., unemployment, poverty, disability, homeownership, and median income), as well as the percentage of the population that is Black and the percentage of the population that is Hispanic. Coefficient estimates from this analysis, combined with information on the same variables defined at the county and congressional district levels, are generated to estimate food insecurity.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+Feeding America, June 2025
+
+[Childhood Food Insecurity Map](https://map.feedingamerica.org/county/2023/child/new-york)
+:::
 
 #### Housing Instability
 
@@ -215,41 +378,132 @@ Figure 5
 <img src="media/media/image7.emf"
 style="width:7.5in;height:4.09514in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021** | 52.3 | 56.5 | 52.7 | 58.3 | 48.0 | 55.3 | 53.2 | 51.6 |
-| **2022** | 52.4 | 56.1 | 53.2 | 58.9 | 48.4 | 55.3 | 53.5 | 51.7 |
-| **2023** | 52.0 | 56.2 | 56.5 | 59.6 | 48.7 | 56.6 | 53.0 | 51.5 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-cost-burdened-renters
+#| tbl-cap: "Cost Burdened Renter Occupied Units, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The American Community Survey asks respondents if they own or rent
-the house, apartment, or mobile home they live in. If rented, they ask
-for the monthly rent. Cost burdened is defined as the percentage of
-renter occupied units in which gross rent is 30% or more of household
-income.  
-Source: US Census Bureau; American Community Survey, 2023 American
-Community Survey 5-year estimates, Table DP04, April 2025  
-https://data.census.gov/table/ACSDP5Y2023.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023"],
+    "Dutchess": [52.3, 52.4, 52.0],
+    "Orange": [56.5, 56.1, 56.2],
+    "Putnam": [52.7, 53.2, 56.5],
+    "Rockland": [58.3, 58.9, 59.6],
+    "Sullivan": [48.0, 48.4, 48.7],
+    "Ulster": [55.3, 55.3, 56.6],
+    "Westchester": [53.2, 53.5, 53.0],
+    "NYS": [51.6, 51.7, 51.5]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The American Community Survey asks respondents if they own or rent the house, apartment, or mobile home they live in. If rented, they ask for the monthly rent. Cost burdened is defined as the percentage of renter occupied units in which gross rent is 30% or more of household income.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP04](https://data.census.gov/table/ACSDP5Y2023.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36), April 2025
+:::
 
 Figure 6
 
 <img src="media/media/image8.emf"
 style="width:7.5in;height:4.11875in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2016–2020** | 16.0 | 19.0 | 16.0 | 22.0 | 14.0 | 18.0 | 20.0 | 19.0 |
-| **2017–2021** | 16.0 | 19.0 | 16.0 | 22.0 | 15.0 | 18.0 | 19.0 | 19.0 |
-| **2018–2022** | 16.0 | 20.0 | 16.0 | 22.0 | 15.0 | 18.0 | 20.0 | 19.0 |
-| **2019–2023** | 16.0 | 20.0 | 17.0 | 22.0 | 15.0 | 18.0 | 19.0 | 19.0 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-severely-cost-burdened
+#| tbl-cap: "Severely Cost Burdened Households, 2016-2020 to 2019-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Severely cost burdened is defined as the percentage of households
-that spend 50% or more of their household income on housing.
+# Create the data
+data = {
+    " ": ["2016–2020", "2017–2021", "2018–2022", "2019–2023"],
+    "Dutchess": [16.0, 16.0, 16.0, 16.0],
+    "Orange": [19.0, 19.0, 20.0, 20.0],
+    "Putnam": [16.0, 16.0, 16.0, 17.0],
+    "Rockland": [22.0, 22.0, 22.0, 22.0],
+    "Sullivan": [14.0, 15.0, 15.0, 15.0],
+    "Ulster": [18.0, 18.0, 18.0, 18.0],
+    "Westchester": [20.0, 19.0, 20.0, 19.0],
+    "NYS": [19.0, 19.0, 19.0, 19.0]
+}
 
-Source: University of Wisconsin Population Health Institute. County
-Health Rankings & Roadmaps, June 2025 sourced from US Census Bureau,
-American Community Survey, five-year estimates
+df = pd.DataFrame(data)
 
-<https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Severe+Housing+Cost+Burden*>
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Severely cost burdened is defined as the percentage of households that spend 50% or more of their household income on housing.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from US Census Bureau, American Community Survey, five-year estimates
+
+[Severe Housing Cost Burden](https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Severe+Housing+Cost+Burden*)
+:::
 
 The number of individuals living in HUD-subsidized housing in the
 Mid-Hudson Region remained relatively stable from 2021 to 2024. Rockland
@@ -262,24 +516,67 @@ decline, dropping from 5,018 in 2021 to 4,445 in 2024 \[see Table 13\].
 
 Table 13
 
-| **Number of people living in Housing and Urban Development (HUD)-subsidized housing in the past 12 months, 2021–2024** |  |  |  |  |  |  |  |  |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-| **2021** | 7,442 | 18,258 | 945 | 21,732 | 5,018 | 5,484 | 40,230 | 1,025,652 |
-| **2022** | 7,641 | 18,745 | 929 | 22,170 | 5,228 | 5,479 | 40,412 | 985,104 |
-| **2023** | 7,630 | 19,000 | 992 | 23,411 | 4,846 | 5,418 | 40,415 | 987,957 |
-| **2024** | 7,484 | 19,129 | 1,012 | 23,735 | 4,445 | 4,980 | 40,137 | 1,000,730 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hud-housing
+#| tbl-cap: "Number of People Living in Housing and Urban Development (HUD)-subsidized Housing in the Past 12 Months, 2021–2024"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Includes all federal housing assistance programs administered by
-the US Department of HUD, including: Public Housing, Housing Choice
-Vouchers, Moderate Rehabilitation, Project-Based Section 8, Rent
-Supplement/Rent Assistance Program, S236/Below Market Interest Rate,
-202/Project Rental Assistance Contract, and 811/Project Rental
-Assistance Contract.
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023", "2024"],
+    "Dutchess": [7442, 7641, 7630, 7484],
+    "Orange": [18258, 18745, 19000, 19129],
+    "Putnam": [945, 929, 992, 1012],
+    "Rockland": [21732, 22170, 23411, 23735],
+    "Sullivan": [5018, 5228, 4846, 4445],
+    "Ulster": [5484, 5479, 5418, 4980],
+    "Westchester": [40230, 40412, 40415, 40137],
+    "NYS": [1025652, 985104, 987957, 1000730]
+}
 
-Source: US Department of Housing and Urban Development, July 2025
+df = pd.DataFrame(data)
 
-<https://www.huduser.gov/portal/datasets/assthsg.html#codebook_2009-2024>
+# Format the data - all are numbers with commas
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:,}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Includes all federal housing assistance programs administered by the US Department of HUD, including: Public Housing, Housing Choice Vouchers, Moderate Rehabilitation, Project-Based Section 8, Rent Supplement/Rent Assistance Program, S236/Below Market Interest Rate, 202/Project Rental Assistance Contract, and 811/Project Rental Assistance Contract.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Department of Housing and Urban Development, July 2025
+
+[HUD Assisted Housing Data](https://www.huduser.gov/portal/datasets/assthsg.html#codebook_2009-2024)
+:::
 
 #### Poverty 
 
@@ -527,23 +824,65 @@ Figure 7
 <img src="media/media/image9.emf"
 style="width:7.5in;height:3.99722in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021** | 8.8 | 11.7 | 6.0 | 14.9 | 14.1 | 13.2 | 8.2 | 13.5 |
-| **2022** | 8.6 | 13.0 | 6.3 | 15.1 | 14.8 | 14.7 | 8.5 | 13.6 |
-| **2023** | 8.3 | 13.0 | 6.5 | 15.6 | 15.2 | 14.3 | 8.9 | 13.7 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-poverty-rate
+#| tbl-cap: "Poverty Rate, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The American Community Survey asks respondents their income in the
-past 12 months including joint income. This is for income that is
-received on a regular basis before payments for taxes, social security,
-etc. If a family’s total income is less than the official poverty
-threshold for a family of that size and composition, they are considered
-to be in poverty.
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023"],
+    "Dutchess": [8.8, 8.6, 8.3],
+    "Orange": [11.7, 13.0, 13.0],
+    "Putnam": [6.0, 6.3, 6.5],
+    "Rockland": [14.9, 15.1, 15.6],
+    "Sullivan": [14.1, 14.8, 15.2],
+    "Ulster": [13.2, 14.7, 14.3],
+    "Westchester": [8.2, 8.5, 8.9],
+    "NYS": [13.5, 13.6, 13.7]
+}
 
-Source: US Census Bureau; American Community Survey, 2023 American
-Community Survey 5-year estimates, Table S1701, April 2025
+df = pd.DataFrame(data)
 
-<https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36>
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The American Community Survey asks respondents their income in the past 12 months including joint income. This is for income that is received on a regular basis before payments for taxes, social security, etc. If a family's total income is less than the official poverty threshold for a family of that size and composition, they are considered to be in poverty.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table S1701](https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36), April 2025
+:::
 
 Poverty continues to vary significantly across racial and ethnic groups
 in the Mid-Hudson Region. Hispanic families had the highest poverty
@@ -559,28 +898,67 @@ Figure 8
 <img src="media/media/image10.emf"
 style="width:7.5in;height:4.00069in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **White (non-Hispanic)** | 3.3 | 7.9 | 2.8 | 11.1 | 8.2 | 4.9 | 2.6 | 5.7 |
-| **Black (including Hispanic)** | 14.2 | 12.5 | 0.0 | 8.6 | 30.5 | 14.1 | 10.8 | 16.5 |
-| **Asian (including Hispanic, excluding PI)** | 7.5\* | 10.3\* | 23.4\* | 1.8\* | 13.3\* | 4.8\* | 5.4 | 11.1 |
-| **Hispanic (any race)** | 11.2 | 11.3 | 6.6 | 12.8 | 14.3 | 24.4 | 10.4 | 17.1 |
-| **Total** | 5.3 | 9.2 | 3.8 | 10.3 | 10.5 | 7.1 | 5.7 | 9.7 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-poverty-by-race
+#| tbl-cap: "Poverty Rate by Race and Ethnicity, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The Census Bureau collects racial and ethnic data in accordance
-with guidelines provided by the US Office of Management and Budget (OMB)
-and these data are based on self-identification. For ethnicity, the OMB
-standards classify individuals in one of two categories: “Hispanic or
-Latino” or “Not Hispanic or Latino.” The Census Bureau uses the term
-“Hispanic or Latino” interchangeably with the term “Hispanic,” and also
-refer to this concept as “ethnicity.” People who identify with more than
-one race may choose to provide multiple races in response to the race
-question.
+# Create the data
+data = {
+    " ": ["White (non-Hispanic)", "Black (including Hispanic)", "Asian (including Hispanic, excluding PI)", "Hispanic (any race)", "Total"],
+    "Dutchess": [3.3, 14.2, 7.5, 11.2, 5.3],
+    "Orange": [7.9, 12.5, 10.3, 11.3, 9.2],
+    "Putnam": [2.8, 0.0, 23.4, 6.6, 3.8],
+    "Rockland": [11.1, 8.6, 1.8, 12.8, 10.3],
+    "Sullivan": [8.2, 30.5, 13.3, 14.3, 10.5],
+    "Ulster": [4.9, 14.1, 4.8, 24.4, 7.1],
+    "Westchester": [2.6, 10.8, 5.4, 10.4, 5.7],
+    "NYS": [5.7, 16.5, 11.1, 17.1, 9.7]
+}
 
-Source: NYS County Health Indicators by Race and Ethnicity Dashboard,
-June 2025 sourced from US Census Bureau, Small Area Income and Poverty
-Estimates
-<https://www.health.ny.gov/community/health_equity/reports/county/>
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The Census Bureau collects racial and ethnic data in accordance with guidelines provided by the US Office of Management and Budget (OMB) and these data are based on self-identification. For ethnicity, the OMB standards classify individuals in one of two categories: "Hispanic or Latino" or "Not Hispanic or Latino." The Census Bureau uses the term "Hispanic or Latino" interchangeably with the term "Hispanic," and also refer to this concept as "ethnicity." People who identify with more than one race may choose to provide multiple races in response to the race question.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from US Census Bureau, Small Area Income and Poverty Estimates
+
+[NYS County Health Indicators](https://www.health.ny.gov/community/health_equity/reports/county/)
+:::
 
 ##### Economically Disadvantaged
 
@@ -606,25 +984,67 @@ Figure 9
 <img src="media/media/image11.emf"
 style="width:7.5in;height:4.00069in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021-2022** | 39.2 | 47.0 | 28.5 | 43.9 | 60.4 | 48.6 | 38.9 | 56.2 |
-| **2022-2023** | 43.1 | 49.0 | 32.1 | 48.1 | 62.7 | 52.5 | 39.6 | 59.1 |
-| **2023-2024** | 43.3 | 49.5 | 32.5 | 51.0 | 61.4 | 48.8 | 39.7 | 59.2 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-economically-disadvantaged
+#| tbl-cap: "Economically Disadvantaged Students, 2021-2022 to 2023-2024"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Students who participate in, or whose family participates in,
-economic assistance programs, such as the Free or Reduced-Price Lunch
-Programs; Social Security Insurance; Supplemental Nutrition Assistance
-Program; Foster Care; Refugee Assistance (cash or medical assistance);
-Earned Income Tax Credit; Home Energy Assistance Program; Safety Net
-Assistance; Bureau of Indian Affairs; or Family Assistance: Temporary
-Assistance for Needy Families. If one student in a family is identified
-as low income, all students from that household (economic unit) may be
-identified as low income.
+# Create the data
+data = {
+    " ": ["2021-2022", "2022-2023", "2023-2024"],
+    "Dutchess": [39.2, 43.1, 43.3],
+    "Orange": [47.0, 49.0, 49.5],
+    "Putnam": [28.5, 32.1, 32.5],
+    "Rockland": [43.9, 48.1, 51.0],
+    "Sullivan": [60.4, 62.7, 61.4],
+    "Ulster": [48.6, 52.5, 48.8],
+    "Westchester": [38.9, 39.6, 39.7],
+    "NYS": [56.2, 59.1, 59.2]
+}
 
-*Source: NYS Education Department, June 2025*
-*<u><https://data.nysed.gov/enrollment.php?year=2024&county=13>  
-</u>*
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Students who participate in, or whose family participates in, economic assistance programs, such as the Free or Reduced-Price Lunch Programs; Social Security Insurance; Supplemental Nutrition Assistance Program; Foster Care; Refugee Assistance (cash or medical assistance); Earned Income Tax Credit; Home Energy Assistance Program; Safety Net Assistance; Bureau of Indian Affairs; or Family Assistance: Temporary Assistance for Needy Families. If one student in a family is identified as low income, all students from that household (economic unit) may be identified as low income.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Education Department, June 2025
+
+[NYS Education Data](https://data.nysed.gov/enrollment.php?year=2024&county=13)
+:::
 
 #### Asset Limited, Income Constrained, Employed (ALICE)
 
@@ -649,28 +1069,71 @@ Table 15\]
 
 Table 15
 
-| **ALICE Household Survival Budget, New York State, 2023** |  |  |  |  |  |  |  |  |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Monthly Costs** | **Single Adult** | **One Adult, One Child** | **One Adult, One in Child Care** | **Two Adults** | **Two Adults, Two Children** | **Two Adults, Two in Child Care** | **Single Adult 65+** | **Two Adults 65+** |
-| **Housing** | \$1,103 | \$1,189 | \$1,189 | \$1,189 | \$1,437 | \$1,437 | \$1,103 | \$1,189 |
-| **Child Care** | \$0 | \$423 | \$1,126 | \$0 | \$844 | \$2,345 | \$0 | \$0 |
-| **Food** | \$516 | \$873 | \$783 | \$946 | \$1,587 | \$1,400 | \$475 | \$870 |
-| **Transportation** | \$401 | \$535 | \$506 | \$617 | \$957 | \$899 | \$346 | \$508 |
-| **Health Care** | \$196 | \$452 | \$452 | \$452 | \$775 | \$775 | \$543 | \$1,086 |
-| **Technology** | \$86 | \$86 | \$86 | \$116 | \$116 | \$116 | \$86 | \$116 |
-| **Miscellaneous** | \$230 | \$356 | \$414 | \$332 | \$572 | \$697 | \$255 | \$377 |
-| **Taxes** | \$439 | \$461 | \$625 | \$529 | \$684 | \$1,037 | \$510 | \$861 |
-| **Monthly Total** | \$2,971 | \$4,375 | \$5,181 | \$4,181 | \$6,972 | \$8,706 | \$3,318 | \$5,007 |
-| **ANNUAL TOTAL** | \$35,652 | \$52,500 | \$62,172 | \$50,172 | \$83,664 | \$104,472 | \$39,816 | \$60,084 |
-| **Hourly Wage** | \$17.83 | \$26.25 | \$31.09 | \$25.09 | \$41.83 | \$52.24 | \$19.91 | \$30.04 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-alice-budget
+#| tbl-cap: "ALICE Household Survival Budget, New York State, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The ALICE (Asset Limited, Income Constrained, Employed) household
-survival budget estimates the minimum cost of household necessities
-(housing, childcare, food, transportation, health care, and technology)
-plus taxes, and a contingency fund (miscellaneous) equal to 10% of the
-budget.  
-Source: United for ALICE, June 2025
-<https://www.unitedforalice.org/the-cost-of-basics/new-york>
+# Create the data
+data = {
+    " ": ["Housing", "Child Care", "Food", "Transportation", "Health Care", "Technology", "Miscellaneous", "Taxes", "Monthly Total", "ANNUAL TOTAL", "Hourly Wage"],
+    "Single Adult": [1103, 0, 516, 401, 196, 86, 230, 439, 2971, 35652, 17.83],
+    "One Adult, One Child": [1189, 423, 873, 535, 452, 86, 356, 461, 4375, 52500, 26.25],
+    "One Adult, One in Child Care": [1189, 1126, 783, 506, 452, 86, 414, 625, 5181, 62172, 31.09],
+    "Two Adults": [1189, 0, 946, 617, 452, 116, 332, 529, 4181, 50172, 25.09],
+    "Two Adults, Two Children": [1437, 844, 1587, 957, 775, 116, 572, 684, 6972, 83664, 41.83],
+    "Two Adults, Two in Child Care": [1437, 2345, 1400, 899, 775, 116, 697, 1037, 8706, 104472, 52.24],
+    "Single Adult 65+": [1103, 0, 475, 346, 543, 86, 255, 510, 3318, 39816, 19.91],
+    "Two Adults 65+": [1189, 0, 870, 508, 1086, 116, 377, 861, 5007, 60084, 30.04]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - currency for most columns, percentages for hourly wage
+for col in df.columns:
+    if col != " ":
+        if col == "Hourly Wage":
+            df[col] = df[col].apply(lambda x: f"${x:.2f}")
+        else:
+            # Check if it's a dollar amount (all rows except Hourly Wage)
+            df[col] = df[col].apply(lambda x: f"${x:,.0f}" if isinstance(x, (int, float)) and x >= 100 else f"${x:.0f}" if isinstance(x, (int, float)) else x)
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The ALICE (Asset Limited, Income Constrained, Employed) household survival budget estimates the minimum cost of household necessities (housing, childcare, food, transportation, health care, and technology) plus taxes, and a contingency fund (miscellaneous) equal to 10% of the budget.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+United for ALICE, June 2025
+
+[ALICE Cost of Basics](https://www.unitedforalice.org/the-cost-of-basics/new-york)
+:::
 
 Across the M-H Region, the share of households below the ALICE Threshold
 ranges from 37% in Dutchess (lowest) to 50% in Rockland (highest).
@@ -689,22 +1152,67 @@ Figure 10
 <img src="media/media/image12.emf"
 style="width:7.5in;height:4.15903in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **ALICE** | 31.0 | 33.0 | 32.0 | 38.0 | 30.0 | 32.0 | 28.0 | 33.0 |
-| **Poverty** | 6.0 | 10.0 | 6.0 | 12.0 | 15.0 | 10.0 | 10.0 | 14.0 |
-| **Above ALICE Threshold** | 62.0 | 57.0 | 63.0 | 50.0 | 54.0 | 58.0 | 61.0 | 52.0 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-alice-threshold
+#| tbl-cap: "Households Below ALICE Threshold, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: The ALICE (Asset Limited, Income Constrained, Employed) threshold
-represents the percentage of households in the United States that are
-struggling financially, falling below a threshold that includes those in
-poverty and those who are asset limited, income constrained, and
-employed. ALICE households earn above the Federal Poverty Level, but not
-enough to afford the basic necessities in their communities. Nationally,
-over 40% of households fall below the ALICE threshold.
+# Create the data
+data = {
+    " ": ["ALICE", "Poverty", "Above ALICE Threshold"],
+    "Dutchess": [31.0, 6.0, 62.0],
+    "Orange": [33.0, 10.0, 57.0],
+    "Putnam": [32.0, 6.0, 63.0],
+    "Rockland": [38.0, 12.0, 50.0],
+    "Sullivan": [30.0, 15.0, 54.0],
+    "Ulster": [32.0, 10.0, 58.0],
+    "Westchester": [28.0, 10.0, 61.0],
+    "NYS": [33.0, 14.0, 52.0]
+}
 
-Source: United for ALICE, June 2025
-https://www.unitedforalice.org/county-reports/new-york#10/41.1237/-73.7330
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+The ALICE (Asset Limited, Income Constrained, Employed) threshold represents the percentage of households in the United States that are struggling financially, falling below a threshold that includes those in poverty and those who are asset limited, income constrained, and employed. ALICE households earn above the Federal Poverty Level, but not enough to afford the basic necessities in their communities. Nationally, over 40% of households fall below the ALICE threshold.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+United for ALICE, June 2025
+
+[ALICE County Reports](https://www.unitedforalice.org/county-reports/new-york#10/41.1237/-73.7330)
+:::
 
 ### Education
 
@@ -733,19 +1241,67 @@ Figure 11
 <img src="media/media/image13.emf"
 style="width:7.5in;height:4.12917in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **2021** | 87.0 | 89.0 | 94.0 | 90.0 | 82.0 | 87.0 | 91.0 | 86.0 |
-| **2022** | 86.0 | 89.0 | 94.0 | 88.0 | 78.0 | 87.0 | 92.0 | 87.0 |
-| **2023** | 87.0 | 89.0 | 91.0 | 86.0 | 76.0 | 87.0 | 91.0 | 86.0 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-graduation-rate
+#| tbl-cap: "High School Graduation Rate, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-Note: Graduation rate data are reported for a 9th grade cohort, as of
-the 4th year of high school - August. Graduates include students who
-received a local diploma or a local diploma with Regents endorsement
-(Regents diploma).
+# Create the data
+data = {
+    " ": ["2021", "2022", "2023"],
+    "Dutchess": [87.0, 86.0, 87.0],
+    "Orange": [89.0, 89.0, 89.0],
+    "Putnam": [94.0, 94.0, 91.0],
+    "Rockland": [90.0, 88.0, 86.0],
+    "Sullivan": [82.0, 78.0, 76.0],
+    "Ulster": [87.0, 87.0, 87.0],
+    "Westchester": [91.0, 92.0, 91.0],
+    "NYS": [86.0, 87.0, 86.0]
+}
 
-Source: NYS Education Department, June 2025
-https://data.nysed.gov/lists.php?type=county
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+Graduation rate data are reported for a 9th grade cohort, as of the 4th year of high school - August. Graduates include students who received a local diploma or a local diploma with Regents endorsement (Regents diploma).
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Education Department, June 2025
+
+[NYS Education Data](https://data.nysed.gov/lists.php?type=county)
+:::
 
 In accordance with federal regulation, there is a two-part requirement
 regarding racial and ethnic designation. First, all students must be
@@ -774,19 +1330,67 @@ Figure 12
 <img src="media/media/image14.emf"
 style="width:7.5in;height:3.98403in" />
 
-| ** ** | **Dutchess** | **Orange** | **Putnam** | **Rockland** | **Sullivan** | **Ulster** | **Westchester** | **NYS** |
-|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Asian or Native Hawaiian/Other PI** | 91.0 | 96.0 | 100.0 | 97.0 | s | s | 97.0 | 93.0 |
-| **Black or African American** | 78.0 | 85.0 | 97.0 | 86.0 | 66.0 | 84.0 | 83.0 | 81.0 |
-| **White** | 92.0 | 93.0 | 95.0 | 94.0 | 84.0 | 90.0 | 96.0 | 91.0 |
-| **Multiracial** | 80.0 | 88.0 | s | s | 68.0 | 74.0 | 94.0 | 84.0 |
-| **Hispanic** | 79.0 | 83.0 | 80.0 | 74.0 | 63.0 | 80.0 | 85.0 | 81.0 |
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-graduation-by-race
+#| tbl-cap: "High School Graduation Rate by Race and Ethnicity, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
 
-*s: Data are suppressed due to not meeting reporting criteria.  
-Note: Race or races with which the student primarily identifies are
-indicated by the student or the parent/guardian.  
-*Source: NYS Education Department, June 2025
-*<u>https://data.nysed.gov/gradrate.php?year=2023&state=yes</u>*
+# Create the data - use np.nan for suppressed data
+data = {
+    " ": ["Asian or Native Hawaiian/Other PI", "Black or African American", "White", "Multiracial", "Hispanic"],
+    "Dutchess": [91.0, 78.0, 92.0, 80.0, 79.0],
+    "Orange": [96.0, 85.0, 93.0, 88.0, 83.0],
+    "Putnam": [100.0, 97.0, 95.0, np.nan, 80.0],
+    "Rockland": [97.0, 86.0, 94.0, np.nan, 74.0],
+    "Sullivan": [np.nan, 66.0, 84.0, 68.0, 63.0],
+    "Ulster": [np.nan, 84.0, 90.0, 74.0, 80.0],
+    "Westchester": [97.0, 83.0, 96.0, 94.0, 85.0],
+    "NYS": [93.0, 81.0, 91.0, 84.0, 81.0]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages, handle suppressed data
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: "s" if pd.isna(x) else f"{x:.1f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: {.callout-note}
+## Note
+
+s: Data are suppressed due to not meeting reporting criteria. Race or races with which the student primarily identifies are indicated by the student or the parent/guardian.
+:::
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Education Department, June 2025
+
+[NYS Graduation Rate Data](https://data.nysed.gov/gradrate.php?year=2023&state=yes)
+:::
 
 #### Early Childhood Education and Development
 

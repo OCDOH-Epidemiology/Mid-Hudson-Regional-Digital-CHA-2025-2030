@@ -92,11 +92,106 @@ section.footnotes {
   font-size: 9pt;
 }
 
-section.footnotes a,
-sup a {
+section.footnotes a {
   color: var(--cha-link);
   font-style: italic;
   text-decoration: underline;
+}
+
+/* Citation links styling - no underline on superscripts */
+/* Comprehensive override for all citation links - must come after Bootstrap */
+a[href^="#cite-"],
+a[href^="#cite-"]:link,
+a[href^="#cite-"]:visited,
+a[href^="#cite-"]:hover,
+a[href^="#cite-"]:active,
+a[href^="#cite-"]:focus,
+a[href^="#cite-"]:any-link {
+  color: var(--cha-link) !important;
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease;
+}
+
+a[href^="#cite-"]:hover,
+a[href^="#cite-"]:hover:link,
+a[href^="#cite-"]:hover:visited {
+  color: $link-hover-color !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Target sup inside citation links - comprehensive override */
+a[href^="#cite-"] sup,
+a[href^="#cite-"]:link sup,
+a[href^="#cite-"]:visited sup,
+a[href^="#cite-"]:hover sup,
+a[href^="#cite-"]:active sup,
+a[href^="#cite-"]:focus sup,
+a[href^="#cite-"]:any-link sup {
+  font-size: 0.75em !important;
+  vertical-align: super !important;
+  line-height: 0 !important;
+  color: var(--cha-link) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+a[href^="#cite-"]:hover sup,
+a[href^="#cite-"]:hover:link sup,
+a[href^="#cite-"]:hover:visited sup {
+  color: $link-hover-color !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Override any sup a rules for citation links */
+sup a[href^="#cite-"],
+sup a[href^="#cite-"]:link,
+sup a[href^="#cite-"]:visited,
+sup a[href^="#cite-"]:hover,
+sup a[href^="#cite-"]:active,
+sup a[href^="#cite-"]:focus,
+sup a[href^="#cite-"]:any-link {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Smooth scroll for citation links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight target citation when linked to */
+span[id^="cite-"]:target {
+  background-color: var(--cha-primary-light);
+  padding: 0.2em 0.4em;
+  border-left: 3px solid var(--cha-primary);
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .hero {

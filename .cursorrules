@@ -1,0 +1,59 @@
+# Cursor AI Rules for CHA Project
+
+## Table Creation Standard
+
+When creating tables for the CHA project, ALWAYS use the standardized table template:
+
+1. **Import the styling module:**
+   ```python
+   from scripts.cha_table_styling import style_cha_table
+   ```
+
+2. **Use this structure:**
+   ```python
+   ```{python}
+   #| echo: false
+   #| warning: false
+   #| message: false
+   #| label: tbl-table-label
+   #| tbl-cap: "Table X: Table Title"
+   import pandas as pd
+   import numpy as np
+   from scripts.cha_table_styling import style_cha_table
+   
+   # Create the data
+   data = {...}
+   df = pd.DataFrame(data)
+   
+   # Format data as needed
+   # Apply styling
+   styled_table = style_cha_table(df)
+   styled_table
+   ```
+   ```
+
+3. **Always include a collapsible source citation in STANDARD format:**
+   ```markdown
+   ::: {.callout-note collapse="true"}
+   ## Source
+   
+   US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, [Table S0101](https://data.census.gov/table/...), April 2025
+   :::
+   ```
+   
+   **This is the STANDARD format - use it for ALL tables.**
+   
+   **IMPORTANT**: Source information (table ID, year, URL) varies by table. Always check the source document `2025 Regional CHA Document Orange County 12.17.2025.docx` for the correct citation information for each specific table. The helper function `create_source_callout()` can handle different years, table IDs, and even custom sources.
+
+4. **Table styling specifications:**
+   - Header: White background, bold, centered
+   - Row 1: #EAF5DB (light green)
+   - Row 2: White
+   - Alternates: white, #EAF5DB, white, #EAF5DB...
+   - First column: Bold, left-aligned
+   - Other columns: Center-aligned
+
+5. **Cross-references:** Use `[see @tbl-label]` format
+
+See `scripts/TABLE_TEMPLATE.md` for complete documentation.
+
