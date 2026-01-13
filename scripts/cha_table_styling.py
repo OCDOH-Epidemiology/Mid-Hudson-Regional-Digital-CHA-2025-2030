@@ -94,32 +94,34 @@ def style_cha_table(df, has_multilevel_headers=False):
     # Add MultiIndex header styling if needed
     if has_multilevel_headers and isinstance(df.columns, pd.MultiIndex):
         # Style for top-level headers (merged appearance)
+        # Target all top-level header cells
         styles.append({
-            'selector': 'thead tr:first-child th.level0', 
+            'selector': 'thead tr:first-child th', 
             'props': [
                 ('border-bottom', '2px solid #333'),
                 ('font-weight', 'bold'),
                 ('background-color', '#FFFFFF'),
                 ('text-align', 'center'),
-                ('vertical-align', 'middle')
+                ('vertical-align', 'middle'),
+                ('padding', '10px')
             ]
         })
         # Style for second-level headers
         styles.append({
-            'selector': 'thead tr:last-child th.level1', 
+            'selector': 'thead tr:last-child th', 
             'props': [
                 ('font-weight', 'normal'),
                 ('font-size', '0.9em'),
                 ('text-align', 'center'),
-                ('background-color', '#FFFFFF')
+                ('background-color', '#FFFFFF'),
+                ('padding', '10px')
             ]
         })
-        # Hide duplicate top-level headers by making them invisible
-        # This creates the merged cell appearance
+        # For MultiIndex, we need to handle the first column header separately
         styles.append({
-            'selector': 'thead tr:first-child th.level0:not(:first-of-type)', 
+            'selector': 'thead tr:first-child th:first-child', 
             'props': [
-                ('border-left', 'none'),
+                ('text-align', 'left'),
             ]
         })
     
