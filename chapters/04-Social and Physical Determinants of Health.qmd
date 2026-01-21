@@ -23,15 +23,65 @@ force (58.7%), which is lower than both the New York State (NYS) and
 United States (US) rate \[see Figure 1\]. Putnam County continues to
 have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the
 Mid-Hudson Region (M-H Region). All of the counties in the M-H Region
-have a lower unemployment rate than NYS’ rate of 6.2%. Sullivan County
-has the highest unemployment rate in the region at 6.1% \[see Figure
-2\].
+have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County
+has the highest unemployment rate in the region at 6.1% [@fig-labor-force].
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-labor-force
+#| fig-cap: "Percentage of the Labor Force, Population 16 Years and Older, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<figure>
-<img src="media/media/image3.emf"
-style="width:7.5in;height:4.14236in" />
-<figcaption><p>Figure 1</p></figcaption>
-</figure>
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [63.0, 62.8, 63.3],
+    "Orange": [63.9, 63.4, 63.5],
+    "Putnam": [65.2, 64.7, 64.7],
+    "Rockland": [63.9, 63.2, 63.2],
+    "Sullivan": [56.1, 58.1, 59.1],
+    "Ulster": [60.1, 58.9, 58.7],
+    "Westchester": [65.5, 65.2, 65.4],
+    "NYS": [63.1, 62.9, 63.0],
+    "US": [63.6, 63.5, 63.5]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="Percentage of Labor Force (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -94,11 +144,63 @@ Y-axis does not begin at zero in order to clearly display trend lines. The Ameri
 US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP03](https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US), April 2025
 :::
 
-<figure>
-<img src="media/media/image4.emf"
-style="width:7.5in;height:3.96389in" />
-<figcaption><p>Figure 2</p></figcaption>
-</figure>
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-unemployment
+#| fig-cap: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
+
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [5.2, 5.0, 4.8],
+    "Orange": [5.4, 5.3, 5.4],
+    "Putnam": [4.8, 4.4, 4.1],
+    "Rockland": [6.0, 6.2, 5.9],
+    "Sullivan": [8.0, 7.2, 6.1],
+    "Ulster": [5.1, 5.1, 5.1],
+    "Westchester": [6.1, 6.0, 6.0],
+    "NYS": [6.2, 6.2, 6.2],
+    "US": [5.5, 5.3, 5.2]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive clustered bar Plotly figure using cha_figure_builder
+fig = build_clustered_bar_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="Percentage Unemployed (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -204,11 +306,62 @@ county with the highest rate of food insecurity was Sullivan County at
 counties with Sullivan having the highest rate at 19.9% and Putnam
 having the lowest at 6.6% \[see Figure 4\].
 
-<figure>
-<img src="media/media/image5.emf"
-style="width:7.5in;height:4.00069in" />
-<figcaption><p>Figure 3</p></figcaption>
-</figure>
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-food-insecurity
+#| fig-cap: "Food Insecurity Rate, 2020-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
+
+# Create the data
+data = {
+    "Year": [2020, 2021, 2022, 2023],
+    "Dutchess": [8.7, 7.2, 10.0, 10.8],
+    "Orange": [9.4, 7.8, 11.3, 12.1],
+    "Putnam": [6.3, 5.3, 8.4, 8.9],
+    "Rockland": [9.7, 8.2, 11.0, 12.0],
+    "Sullivan": [11.5, 9.9, 13.1, 14.0],
+    "Ulster": [11.3, 9.5, 12.8, 13.2],
+    "Westchester": [7.9, 6.6, 9.4, 10.7],
+    "NYS": [9.6, 11.4, 13.4, 14.5]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="Food Insecurity Rate (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2020, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -272,11 +425,62 @@ Feeding America, June 2025
 [Food Insecurity Map](https://map.feedingamerica.org/district/2023/overall/new-york)
 :::
 
-<figure>
-<img src="media/media/image6.emf"
-style="width:7.5in;height:3.99722in" />
-<figcaption><p>Figure 4</p></figcaption>
-</figure>
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-childhood-food-insecurity
+#| fig-cap: "Childhood Food Insecurity Rate, 2020-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
+
+# Create the data
+data = {
+    "Year": [2020, 2021, 2022, 2023],
+    "Dutchess": [12.0, 8.2, 12.0, 11.9],
+    "Orange": [14.8, 10.4, 15.4, 15.6],
+    "Putnam": [7.3, 3.6, 6.7, 6.6],
+    "Rockland": [15.8, 11.3, 15.5, 16.3],
+    "Sullivan": [18.3, 15.0, 19.9, 19.9],
+    "Ulster": [15.1, 10.6, 14.5, 14.6],
+    "Westchester": [11.4, 7.2, 10.5, 10.6],
+    "NYS": [14.6, 15.4, 18.8, 19.0]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="Childhood Food Insecurity Rate (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2020, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -673,10 +877,62 @@ reported poverty rates above the New York State average of 13.7%. In
 contrast, Putnam, Dutchess, Westchester, and Orange counties remained
 below the state average \[see Figure 7\].
 
-Figure 7
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-poverty-rate
+#| fig-cap: "Poverty Rate, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
 
-<img src="media/media/image9.emf"
-style="width:7.5in;height:3.99722in" />
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [8.8, 8.6, 8.3],
+    "Orange": [11.7, 13.0, 13.0],
+    "Putnam": [6.0, 6.3, 6.5],
+    "Rockland": [14.9, 15.1, 15.6],
+    "Sullivan": [14.1, 14.8, 15.2],
+    "Ulster": [13.2, 14.7, 14.3],
+    "Westchester": [8.2, 8.5, 8.9],
+    "NYS": [13.5, 13.6, 13.7]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="Poverty Rate (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -833,10 +1089,59 @@ Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs.
 49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5%
 and 51.0%).
 
-Figure 9
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-economically-disadvantaged
+#| fig-cap: "Economically Disadvantaged Students, 2021-2022 to 2023-2024"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
 
-<img src="media/media/image11.emf"
-style="width:7.5in;height:4.00069in" />
+# Create the data
+data = {
+    "School Year": ["2021-2022", "2022-2023", "2023-2024"],
+    "Dutchess": [39.2, 43.1, 43.3],
+    "Orange": [47.0, 49.0, 49.5],
+    "Putnam": [28.5, 32.1, 32.5],
+    "Rockland": [43.9, 48.1, 51.0],
+    "Sullivan": [60.4, 62.7, 61.4],
+    "Ulster": [48.6, 52.5, 48.8],
+    "Westchester": [38.9, 39.6, 39.7],
+    "NYS": [56.2, 59.1, 59.2]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="School Year",
+    x_axis_title="School Year",
+    y_axis_title="Economically Disadvantaged Students (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1090,10 +1395,62 @@ generally stable or edged down slightly, with the largest declines in
 Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%).
 \[see Figure 11\]
 
-Figure 11
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-graduation-rate
+#| fig-cap: "High School Graduation Rate, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_line_figure
 
-<img src="media/media/image13.emf"
-style="width:7.5in;height:4.12917in" />
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [87.0, 86.0, 87.0],
+    "Orange": [89.0, 89.0, 89.0],
+    "Putnam": [94.0, 94.0, 91.0],
+    "Rockland": [90.0, 88.0, 86.0],
+    "Sullivan": [82.0, 78.0, 76.0],
+    "Ulster": [87.0, 87.0, 87.0],
+    "Westchester": [91.0, 92.0, 91.0],
+    "NYS": [86.0, 87.0, 86.0]
+}
+
+df = pd.DataFrame(data)
+
+# Create interactive Plotly figure using cha_figure_builder
+fig = build_line_figure(
+    df=df,
+    x_col="Year",
+    x_axis_title="Year",
+    y_axis_title="High School Graduation Rate (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Set x-axis tick settings for year display
+fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
