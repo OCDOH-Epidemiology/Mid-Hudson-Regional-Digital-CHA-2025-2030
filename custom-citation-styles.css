@@ -57,3 +57,20 @@ sup a[href^="#cite-"]:any-link {
   -moz-text-decoration: none !important;
 }
 
+/* Move figure caption above the figure for #fig-labor-force */
+.quarto-float[id^="fig-labor-force"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.quarto-float[id^="fig-labor-force"] .quarto-float-caption-bottom {
+  order: -1;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.quarto-float[id^="fig-labor-force"] figcaption.quarto-float-caption-bottom {
+  order: -1;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}

@@ -37,8 +37,9 @@ format:
     code-tools: true
     number-sections: true
     smooth-scroll: true
+    fig-cap-location: top
+    tbl-cap-location: top
 
 execute:
   freeze: auto
   working-dir: project
-

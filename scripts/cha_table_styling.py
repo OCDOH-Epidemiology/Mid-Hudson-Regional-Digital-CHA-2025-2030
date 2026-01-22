@@ -15,6 +15,90 @@ Usage:
 import pandas as pd
 
 
+CHA_REGION_ORDER = [
+    "Dutchess",
+    "Orange",
+    "Putnam",
+    "Rockland",
+    "Sullivan",
+    "Ulster",
+    "Westchester",
+    "Mid-Hudson",
+    "NYS excl NYC",
+    "NYS",
+    "US",
+]
+
+CHA_REGION_ALIASES = {
+    "Mid Hudson": "Mid-Hudson",
+    "Mid-Hudson Region": "Mid-Hudson",
+    "NYS excl. NYC": "NYS excl NYC",
+    "NYS exc NYC": "NYS excl NYC",
+    "NYS excluding NYC": "NYS excl NYC",
+    "NYS excel NYC": "NYS excl NYC",
+}
+
+
+def _normalize_region_label(label):
+    if label is None or pd.isna(label):
+        return ""
+    normalized = str(label).strip()
+    return CHA_REGION_ALIASES.get(normalized, normalized)
+
+
+def _reorder_columns_by_region(df):
+    if isinstance(df.columns, pd.MultiIndex):
+        return df
+
+    columns = list(df.columns)
+    normalized = {col: _normalize_region_label(col) for col in columns}
+    region_cols = [col for col in columns if normalized[col] in CHA_REGION_ORDER]
+    if len(region_cols) < 2:
+        return df
+
+    ordered_region_cols = sorted(
+        region_cols,
+        key=lambda col: CHA_REGION_ORDER.index(normalized[col]),
+    )
+    region_iter = iter(ordered_region_cols)
+    new_columns = []
+    for col in columns:
+        if col in region_cols:
+            new_columns.append(next(region_iter))
+        else:
+            new_columns.append(col)
+    return df[new_columns]
+
+
+def _reorder_rows_by_region(df):
+    first_col = df.columns[0]
+    normalized_values = df[first_col].map(_normalize_region_label)
+    if normalized_values.empty:
+        return df
+    if (normalized_values == "").any():
+        return df
+    if not normalized_values.isin(CHA_REGION_ORDER).all():
+        return df
+    if normalized_values.nunique() < 2:
+        return df
+
+    order_index = df[first_col].map(
+        lambda value: CHA_REGION_ORDER.index(_normalize_region_label(value))
+    )
+    return (
+        df.assign(_cha_region_order=order_index)
+        .sort_values("_cha_region_order", kind="stable")
+        .drop(columns=["_cha_region_order"])
+    )
+
+
+def apply_cha_region_order(df):
+    df = df.copy()
+    df = _reorder_columns_by_region(df)
+    df = _reorder_rows_by_region(df)
+    return df
+
+
 def style_cha_table(df, has_multilevel_headers=False):
     """
     Apply consistent CHA table styling to a pandas DataFrame.
@@ -52,6 +136,8 @@ def style_cha_table(df, has_multilevel_headers=False):
     >>> styled = style_cha_table(df)
     >>> styled  # Display in Quarto
     """
+    df = apply_cha_region_order(df)
+
     styles = [
         # Header styling - white background
         {'selector': 'th', 'props': [
@@ -314,4 +400,3 @@ styled_table
 
 {source_callout}
 '''
-
