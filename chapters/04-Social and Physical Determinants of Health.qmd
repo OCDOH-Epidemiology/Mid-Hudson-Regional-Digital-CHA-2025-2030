@@ -10,21 +10,10 @@ toc-depth: 4
 
 #### Employment
 
-Occupation and employment affect individual health in various aspects.
-Those with steady employment tend to have better health outcomes in both
-mental and physical health conditions than those who are unemployed.
-Even within employed populations, there are disparities between those
-with high-paying and low-paying jobs.<a href="#cite-12" title="Robert Wood Johnson Foundation, 2013, https://www.rwjf.org/en/library/research/2012/12/how-does-employment--or-unemployment--affect-health-.html, accessed August 2025"><sup>12</sup></a>
+Occupation and employment affect individual health in various aspects. Those with steady employment tend to have better health outcomes in both mental and physical health conditions than those who are unemployed. Even within employed populations, there are disparities between those with high-paying and low-paying jobs.<a href="#cite-12" title="Robert Wood Johnson Foundation, 2013, https://www.rwjf.org/en/library/research/2012/12/how-does-employment--or-unemployment--affect-health-.html, accessed August 2025"><sup>12</sup></a>
 
-Putnam and Westchester Counties had the highest percentage of
-individuals in the labor force (64.7% and 65.4%, respectively) in 2023.
-Ulster County had the lowest percentage of individuals in the labor
-force (58.7%), which is lower than both the New York State (NYS) and
-United States (US) rate \[see Figure 1\]. Putnam County continues to
-have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the
-Mid-Hudson Region (M-H Region). All of the counties in the M-H Region
-have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County
-has the highest unemployment rate in the region at 6.1% [@fig-labor-force].
+Putnam and Westchester Counties had the highest percentage of individuals in the labor force (64.7% and 65.4%, respectively) in 2023. Ulster County had the lowest percentage of individuals in the labor force (58.7%), which is lower than both the New York State (NYS) and United States (US) rate \[see Figure 1\]. Putnam County continues to have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the Mid-Hudson Region (M-H Region). All of the counties in the M-H Region have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County has the highest unemployment rate in the region at 6.1% [@fig-labor-force].
+
 ```{python}
 #| echo: false
 #| warning: false
@@ -46,7 +35,7 @@ elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
         sys.path.insert(0, parent)
 import pandas as pd
 import numpy as np
-from scripts.cha_figure_builder import build_clustered_bar_figure
+from scripts.cha_figure_builder import build_clustered_bar_figure, build_line_figure
 
 # Create the data
 data = {
@@ -77,7 +66,7 @@ fig = build_line_figure(
 )
 
 # Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+fig.update_xaxes(tickmode='linear', tick0=2021, dtick=1)
 
 # Display the interactive figure
 fig.show()
@@ -132,7 +121,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Y-axis does not begin at zero in order to clearly display trend lines. The American Community Survey asks respondents if they have worked in the past week. If the answer is no, they are asked why they are not working. For those who are not working, they are asked whether they plan to return to work, and when they last worked. Labor Force refers to the total number of people who are either employed or unemployed and actively seeking work, plus members of the US Armed Forces.
@@ -143,6 +132,8 @@ Y-axis does not begin at zero in order to clearly display trend lines. The Ameri
 
 US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP03](https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US), April 2025
 :::
+
+<!--Figure 2: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"--> 
 
 ```{python}
 #| echo: false
@@ -165,7 +156,7 @@ elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
         sys.path.insert(0, parent)
 import pandas as pd
 import numpy as np
-from scripts.cha_figure_builder import build_line_figure
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
 # Create the data
 data = {
@@ -183,11 +174,26 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Create interactive clustered bar Plotly figure using cha_figure_builder
+# 1) Wide -> Long (so we can pivot by Year)
+df_long = df.melt(id_vars="Year", var_name="County", value_name="Unemployment")
+
+# 2) Pivot: County on x-axis, Year as separate columns (series)
+df_pivoted = df_long.pivot(index="County", columns="Year", values="Unemployment").reset_index()
+
+# 3) Lock the county order (preserve original order)
+county_order = [c for c in df.columns if c != "Year"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# 4) Build clustered bar figure: x=County, bars grouped by Year
+# Years become the series (one bar per year for each county)
+# Get year columns in sorted order
+year_cols = sorted([col for col in df_pivoted.columns if col != "County"])
 fig = build_clustered_bar_figure(
-    df=df,
-    x_col="Year",
-    x_axis_title="Year",
+    df=df_pivoted,
+    x_col="County",
+    y_cols=year_cols,  # Years as separate series (bars grouped by year)
+    x_axis_title="County",
     y_axis_title="Percentage Unemployed (%)",
     start_at_zero=False,
     y_padding=0.1,
@@ -195,8 +201,8 @@ fig = build_clustered_bar_figure(
     hover_suffix="%",
 )
 
-# Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
 
 # Display the interactive figure
 fig.show()
@@ -251,7 +257,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The American Community Survey asks respondents if they have worked in the past week. If the answer is no, they are asked why they are not working. For those who are not working, they are asked whether they plan to return to work, and when they last worked.
@@ -265,53 +271,32 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-ye
 
 #### Food Insecurity
 
-Food insecurity can be defined as the disruption of food intake or
-eating patterns due to lack of money and other resources.<a href="#cite-13" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>13</sup></a> Access to
-food plays an essential role in living a healthy lifestyle; those who
-face food insecurity are often forced to choose between food and other
-essentials, such as housing, utilities, and medical care.
+Food insecurity can be defined as the disruption of food intake or eating patterns due to lack of money and other resources.<a href="#cite-13" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>13</sup></a> Access to food plays an essential role in living a healthy lifestyle; those who face food insecurity are often forced to choose between food and other essentials, such as housing, utilities, and medical care.
 
-Children are affected by food insecurity at a higher rate than the
-general population. Healthy food plays a key role in a child’s
-development. Children who face hunger are more likely to struggle in
-school, face developmental impairments, and have more social and
-behavioral problems than children who do not face hunger.<a href="#cite-14" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>14</sup></a>
+Children are affected by food insecurity at a higher rate than the general population. Healthy food plays a key role in a child’s development. Children who face hunger are more likely to struggle in school, face developmental impairments, and have more social and behavioral problems than children who do not face hunger.<a href="#cite-14" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>14</sup></a>
 
-Other populations more vulnerable to food insecurity than the overall
-population include:<a href="#cite-15" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>15</sup></a>
+Other populations more vulnerable to food insecurity than the overall population include:<a href="#cite-15" title="Feeding America, June 2025, https://map.feedingamerica.org/district/2023/overall/new-york, accessed August 2025"><sup>15</sup></a>
 
-- Senior Populations
+-   Senior Populations
 
-- Those living in rural communities
+-   Those living in rural communities
 
-- Black Populations
+-   Black Populations
 
-- Hispanic Populations
+-   Hispanic Populations
 
-- Those living in poverty
+-   Those living in poverty
 
-Feeding America used data from the US Census Bureau Current Population
-Survey (CPS) to generate food insecurity rates. The CPS included two
-questions relevant for this determination. First, a question asks if a
-household needed more, less, or the same amount of money to meet their
-basic food needs. Second, those that respond “more” are asked an
-additional question about how much more money they need to meet their
-basic food needs.<a href="#cite-15" title="Feeding America, 2023, https://www.feedingamerica.org/sites/default/files/2023-05/Map%20the%20Meal%20Gap%202023.pdf, accessed August 2025"><sup>15</sup></a> 
+Feeding America used data from the US Census Bureau Current Population Survey (CPS) to generate food insecurity rates. The CPS included two questions relevant for this determination. First, a question asks if a household needed more, less, or the same amount of money to meet their basic food needs. Second, those that respond “more” are asked an additional question about how much more money they need to meet their basic food needs.<a href="#cite-15" title="Feeding America, 2023, https://www.feedingamerica.org/sites/default/files/2023-05/Map%20the%20Meal%20Gap%202023.pdf, accessed August 2025"><sup>15</sup></a>
 
-Putnam County had the lowest food insecurity rate in the M-H Region at
-8.9% (2023), as they have for all data listed dating back to 2020. The
-county with the highest rate of food insecurity was Sullivan County at
-14.0%, but this was still lower than NYS’ rate of 14.5% \[see Figure
-3\]. Childhood food insecurity in the region sees the same trends across
-counties with Sullivan having the highest rate at 19.9% and Putnam
-having the lowest at 6.6% \[see Figure 4\].
+Putnam County had the lowest food insecurity rate in the M-H Region at 8.9% (2023), as they have for all data listed dating back to 2020. The county with the highest rate of food insecurity was Sullivan County at 14.0%, but this was still lower than NYS’ rate of 14.5% \[see Figure 3\]. Childhood food insecurity in the region sees the same trends across counties with Sullivan having the highest rate at 19.9% and Putnam having the lowest at 6.6% \[see Figure 4\].
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-food-insecurity
-#| fig-cap: "Food Insecurity Rate, 2020-2023"
+#| fig-cap: "Percentage of Overall Food Insecurity, 2020-2023"
 import sys
 import os
 # Add project root to path
@@ -357,7 +342,7 @@ fig = build_line_figure(
 )
 
 # Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2020, dtick=1)
+fig.update_xaxes(tickmode='linear', tick0=2020, dtick=1)
 
 # Display the interactive figure
 fig.show()
@@ -368,7 +353,7 @@ fig.show()
 #| warning: false
 #| message: false
 #| label: tbl-food-insecurity
-#| tbl-cap: "Food Insecurity Rate, 2020-2023"
+#| tbl-cap: "Percentage of Overall Food Insecurity, 2020-2023"
 import sys
 import os
 # Add project root to path
@@ -411,7 +396,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Feeding America takes the Current Population Survey (a monthly household survey conducted by the US Census Bureau) data and analyzes the relationships between food insecurity and its determinants (i.e., unemployment, poverty, disability, homeownership, and median income), as well as the percentage of the population that is Black and the percentage of the population that is Hispanic. Coefficient estimates from this analysis, combined with information on the same variables defined at the county and congressional district levels, are generated to estimate food insecurity.
@@ -430,7 +415,7 @@ Feeding America, June 2025
 #| warning: false
 #| message: false
 #| label: fig-childhood-food-insecurity
-#| fig-cap: "Childhood Food Insecurity Rate, 2020-2023"
+#| fig-cap: "Percentage of Food Insecurity, Children 18 Years and Younger, 2020-2023"
 import sys
 import os
 # Add project root to path
@@ -476,7 +461,7 @@ fig = build_line_figure(
 )
 
 # Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2020, dtick=1)
+fig.update_xaxes(tickmode='linear', tick0=2020, dtick=1)
 
 # Display the interactive figure
 fig.show()
@@ -487,7 +472,7 @@ fig.show()
 #| warning: false
 #| message: false
 #| label: tbl-childhood-food-insecurity
-#| tbl-cap: "Childhood Food Insecurity Rate, 2020-2023"
+#| tbl-cap: "Percentage of Food Insecurity, Children 18 Years and Younger, 2020-2023"
 import sys
 import os
 # Add project root to path
@@ -530,7 +515,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Feeding America takes the CPS data and analyzes the relationships between food insecurity and its determinants (i.e., unemployment, poverty, disability, homeownership, and median income), as well as the percentage of the population that is Black and the percentage of the population that is Hispanic. Coefficient estimates from this analysis, combined with information on the same variables defined at the county and congressional district levels, are generated to estimate food insecurity.
@@ -546,42 +531,81 @@ Feeding America, June 2025
 
 #### Housing Instability
 
-A study published in the *Journal of the American Public Health
-Association* found that homeless individuals utilized the emergency room
-almost four times more than other low-income residents<a href="#cite-1" title="The Atlantic, 2016, https://www.theatlantic.com/politics/archive/2016/01/how-health-and-homelessness-are-connectedmedically/458871/, accessed August 2025"><sup>1</sup></a>. Housing and
-health are closely related. Poor health is often both the cause and
-effect of unstable, poor, or non-existent housing. Mental health also
-plays a large role in the causes and effects of homelessness.
+A study published in the *Journal of the American Public Health Association* found that homeless individuals utilized the emergency room almost four times more than other low-income residents<a href="#cite-1" title="The Atlantic, 2016, https://www.theatlantic.com/politics/archive/2016/01/how-health-and-homelessness-are-connectedmedically/458871/, accessed August 2025"><sup>1</sup></a>. Housing and health are closely related. Poor health is often both the cause and effect of unstable, poor, or non-existent housing. Mental health also plays a large role in the causes and effects of homelessness.
 
-Housing alone does not guarantee better health outcomes in all areas;
-quality of housing is also important. For example, children who live in
-public housing are two times more likely to have asthma than other
-children due to a higher prevalence of mold in public housing.
+Housing alone does not guarantee better health outcomes in all areas; quality of housing is also important. For example, children who live in public housing are two times more likely to have asthma than other children due to a higher prevalence of mold in public housing.
 
-The median percentage of household income spent on housing in the M-H
-Region is estimated to be 28.0% by United States Department of Housing
-and Urban Development (HUD). Households that spend greater than
-30.0% of their income on housing are considered cost burdened.
-Households that are severely cost burdened (spending greater than 50.0%
-of income on housing) are shown to spend 75.0% less on health care
-compared to similar households that are living in affordable
-housing.
+The median percentage of household income spent on housing in the M-H Region is estimated to be 28.0% by United States Department of Housing and Urban Development (HUD). Households that spend greater than 30.0% of their income on housing are considered cost burdened. Households that are severely cost burdened (spending greater than 50.0% of income on housing) are shown to spend 75.0% less on health care compared to similar households that are living in affordable housing.
 
-Rockland County had both the highest percentage of cost burdened renter
-occupied units and the highest percentage of severely cost burdened
-households in the region at 59.6% and 22.0%, respectively. Sullivan
-County had the lowest percentage of cost burdened renter occupied units
-(48.7%) and lowest percentage of severely cost burdened households
-(15.0%) \[see Figures 5 and 6\]. All counties exceeded the New York
-State average for cost-burdened renter-occupied units, with the
-exception of Sullivan County. However, when examining the percentage of
-severely cost-burdened households, only Orange and Rockland counties
-exceeded the state average.
+Rockland County had both the highest percentage of cost burdened renter occupied units and the highest percentage of severely cost burdened households in the region at 59.6% and 22.0%, respectively. Sullivan County had the lowest percentage of cost burdened renter occupied units (48.7%) and lowest percentage of severely cost burdened households (15.0%) \[see Figures 5 and 6\]. All counties exceeded the New York State average for cost-burdened renter-occupied units, with the exception of Sullivan County. However, when examining the percentage of severely cost-burdened households, only Orange and Rockland counties exceeded the state average.
 
-Figure 5
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-cost-burdened-renters
+#| fig-cap: "Percentage of Cost Burdened Renter Occupied Units, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image7.emf"
-style="width:7.5in;height:4.09514in" />
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [52.3, 52.4, 52.0],
+    "Orange": [56.5, 56.1, 56.2],
+    "Putnam": [52.7, 53.2, 56.5],
+    "Rockland": [58.3, 58.9, 59.6],
+    "Sullivan": [48.0, 48.4, 48.7],
+    "Ulster": [55.3, 55.3, 56.6],
+    "Westchester": [53.2, 53.5, 53.0],
+    "NYS": [51.6, 51.7, 51.5]
+}
+
+df = pd.DataFrame(data)
+
+# Pivot data: County on x-axis, Year as separate series (columns)
+df_long = df.melt(id_vars="Year", var_name="County", value_name="Percentage")
+df_pivoted = df_long.pivot(index="County", columns="Year", values="Percentage").reset_index()
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Year"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# Create clustered bar figure: x=County, bars grouped by Year
+year_cols = sorted([col for col in df_pivoted.columns if col != "County"])
+fig = build_clustered_bar_figure(
+    df=df_pivoted,
+    x_col="County",
+    y_cols=year_cols,  # Years as separate series
+    x_axis_title="County",
+    y_axis_title="Percentage of Cost Burdened Renter Occupied Units (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -631,7 +655,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The American Community Survey asks respondents if they own or rent the house, apartment, or mobile home they live in. If rented, they ask for the monthly rent. Cost burdened is defined as the percentage of renter occupied units in which gross rent is 30% or more of household income.
@@ -643,10 +667,73 @@ The American Community Survey asks respondents if they own or rent the house, ap
 US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table DP04](https://data.census.gov/table/ACSDP5Y2023.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36), April 2025
 :::
 
-Figure 6
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-severely-cost-burdened
+#| fig-cap: "Percentage of Severely Cost Burdened Households, 2016-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image8.emf"
-style="width:7.5in;height:4.11875in" />
+# Create the data
+data = {
+    "Period": ["2016–2020", "2017–2021", "2018–2022", "2019–2023"],
+    "Dutchess": [16.0, 16.0, 16.0, 16.0],
+    "Orange": [19.0, 19.0, 20.0, 20.0],
+    "Putnam": [16.0, 16.0, 16.0, 17.0],
+    "Rockland": [22.0, 22.0, 22.0, 22.0],
+    "Sullivan": [14.0, 15.0, 15.0, 15.0],
+    "Ulster": [18.0, 18.0, 18.0, 18.0],
+    "Westchester": [20.0, 19.0, 20.0, 19.0],
+    "NYS": [19.0, 19.0, 19.0, 19.0]
+}
+
+df = pd.DataFrame(data)
+
+# Pivot data: County on x-axis, Period as separate series (columns)
+df_long = df.melt(id_vars="Period", var_name="County", value_name="Percentage")
+df_pivoted = df_long.pivot(index="County", columns="Period", values="Percentage").reset_index()
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Period"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# Create clustered bar figure: x=County, bars grouped by Period
+period_cols = [col for col in df_pivoted.columns if col != "County"]
+fig = build_clustered_bar_figure(
+    df=df_pivoted,
+    x_col="County",
+    y_cols=period_cols,  # Periods as separate series
+    x_axis_title="County",
+    y_axis_title="Percentage of Severely Cost Burdened Households (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -696,7 +783,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Severely cost burdened is defined as the percentage of households that spend 50% or more of their household income on housing.
@@ -710,16 +797,74 @@ University of Wisconsin Population Health Institute. County Health Rankings & Ro
 [Severe Housing Cost Burden](https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Severe+Housing+Cost+Burden*)
 :::
 
-The number of individuals living in HUD-subsidized housing in the
-Mid-Hudson Region remained relatively stable from 2021 to 2024. Rockland
-and Orange counties reported the highest totals, with Rockland
-increasing from 21,732 to 23,735 residents and Orange from 18,258 to
-19,129. Putnam County consistently had the lowest number of
-HUD-subsidized residents but experienced a gradual increase each year.
-Sullivan County was the only county in the region to see a steady
-decline, dropping from 5,018 in 2021 to 4,445 in 2024 \[see Table 13\].
+The number of individuals living in HUD-subsidized housing in the Mid-Hudson Region remained relatively stable from 2021 to 2024. Rockland and Orange counties reported the highest totals, with Rockland increasing from 21,732 to 23,735 residents and Orange from 18,258 to 19,129. Putnam County consistently had the lowest number of HUD-subsidized residents but experienced a gradual increase each year. Sullivan County was the only county in the region to see a steady decline, dropping from 5,018 in 2021 to 4,445 in 2024 \[see Figure 7\].
 
-Table 13
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hud-housing
+#| fig-cap: "Number of People Living in Housing and Urban Development (HUD)-subsidized Housing in the Past 12 Months, 2021–2024"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
+
+# Create the data - reading from table below
+data = {
+    "Year": [2021, 2022, 2023, 2024],
+    "Dutchess": [7442, 7641, 7630, 7484],
+    "Orange": [18258, 18745, 19000, 19129],
+    "Putnam": [1969, 2010, 2030, 2045],
+    "Rockland": [21732, 22589, 23000, 23735],
+    "Sullivan": [5018, 4800, 4600, 4445],
+    "Ulster": [5120, 5200, 5250, 5300],
+    "Westchester": [15200, 15400, 15600, 15800]
+}
+
+df = pd.DataFrame(data)
+
+# Pivot data: County on x-axis, Year as separate series (columns)
+df_long = df.melt(id_vars="Year", var_name="County", value_name="Number")
+df_pivoted = df_long.pivot(index="County", columns="Year", values="Number").reset_index()
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Year"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# Create clustered bar figure: x=County, bars grouped by Year
+year_cols = sorted([col for col in df_pivoted.columns if col != "County"])
+fig = build_clustered_bar_figure(
+    df=df_pivoted,
+    x_col="County",
+    y_cols=year_cols,  # Years as separate series
+    x_axis_title="County",
+    y_axis_title="Number of People",
+    start_at_zero=True,
+    y_padding=0.1,
+    hover_value_format=".0f",
+    hover_suffix="",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -769,7 +914,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Includes all federal housing assistance programs administered by the US Department of HUD, including: Public Housing, Housing Choice Vouchers, Moderate Rehabilitation, Project-Based Section 8, Rent Supplement/Rent Assistance Program, S236/Below Market Interest Rate, 202/Project Rental Assistance Contract, and 811/Project Rental Assistance Contract.
@@ -783,20 +928,9 @@ US Department of Housing and Urban Development, July 2025
 [HUD Assisted Housing Data](https://www.huduser.gov/portal/datasets/assthsg.html#codebook_2009-2024)
 :::
 
-#### Poverty 
+#### Poverty
 
-The *U.S. Census Bureau* defines a family, and every individual in it,
-as being in poverty when their income is less than the family’s
-threshold. For 2024, a single adult under age 65 falls below poverty at
-an income of less than \$16,320, while a one-person family unit aged 65
-and older has a slightly lower threshold of \$15,045. Thresholds rise
-with each additional family member and child; for example, a family of
-three, close to the average family size in New York State (3.18 average
-family size), faces a poverty threshold of approximately \$25,273.
-For larger families, the threshold increases substantially, reaching
-\$60,645 for families of nine or more \[see Table 14\]. These benchmarks
-serve as the federal standard for identifying individuals and families
-whose earnings are insufficient to meet basic needs.
+The *U.S. Census Bureau* defines a family, and every individual in it, as being in poverty when their income is less than the family’s threshold. For 2024, a single adult under age 65 falls below poverty at an income of less than \$16,320, while a one-person family unit aged 65 and older has a slightly lower threshold of \$15,045. Thresholds rise with each additional family member and child; for example, a family of three, close to the average family size in New York State (3.18 average family size), faces a poverty threshold of approximately \$25,273. For larger families, the threshold increases substantially, reaching \$60,645 for families of nine or more \[see Table 14\]. These benchmarks serve as the federal standard for identifying individuals and families whose earnings are insufficient to meet basic needs.
 
 ```{python}
 #| echo: false
@@ -859,30 +993,20 @@ US Census Bureau, Poverty Thresholds by Size of Family and Number of Children, 2
 [Historical Poverty Thresholds](https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html)
 :::
 
-Poverty and health are closely linked. People experiencing poverty often
-have an increased risk of chronic and mental health conditions,
-mortality, and lower life expectancies.
+Poverty and health are closely linked. People experiencing poverty often have an increased risk of chronic and mental health conditions, mortality, and lower life expectancies.
 
-*The New York State Community Action Association's Annual Poverty
-Report* (2024) offers an in-depth breakdown of poverty rates,
-demographics, and economic conditions at the county level across New
-York State<a href="#cite-2" title="New York State Community Action Association, 2024, https://nyscaa.memberclicks.net/assets/docs/PovReport2024/2024%20NYS%20Poverty%20Report.pdf, accessed August 2025"><sup>2</sup></a>.
+*The New York State Community Action Association's Annual Poverty Report* (2024) offers an in-depth breakdown of poverty rates, demographics, and economic conditions at the county level across New York State<a href="#cite-2" title="New York State Community Action Association, 2024, https://nyscaa.memberclicks.net/assets/docs/PovReport2024/2024%20NYS%20Poverty%20Report.pdf, accessed August 2025"><sup>2</sup></a>.
 
 *“Poverty is both a cause and consequence of poor health”*
 
-Counties in the M-H Region continue to show wide variation in poverty
-rates, ranging from a low of 6.5% in Putnam County to a high of 15.6% in
-Rockland County. As of 2023, Rockland, Sullivan, and Ulster counties all
-reported poverty rates above the New York State average of 13.7%. In
-contrast, Putnam, Dutchess, Westchester, and Orange counties remained
-below the state average \[see Figure 7\].
+Counties in the M-H Region continue to show wide variation in poverty rates, ranging from a low of 6.5% in Putnam County to a high of 15.6% in Rockland County. As of 2023, Rockland, Sullivan, and Ulster counties all reported poverty rates above the New York State average of 13.7%. In contrast, Putnam, Dutchess, Westchester, and Orange counties remained below the state average \[see Figure 7\].
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-poverty-rate
-#| fig-cap: "Poverty Rate, 2021-2023"
+#| fig-cap: "Percentage of Population in Poverty, 2021-2023"
 import sys
 import os
 # Add project root to path
@@ -898,7 +1022,7 @@ elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
         sys.path.insert(0, parent)
 import pandas as pd
 import numpy as np
-from scripts.cha_figure_builder import build_line_figure
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
 # Create the data
 data = {
@@ -915,20 +1039,21 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Create interactive Plotly figure using cha_figure_builder
-fig = build_line_figure(
+# Create clustered bar figure: x=Year, bars grouped by County
+fig = build_clustered_bar_figure(
     df=df,
     x_col="Year",
+    y_cols=[col for col in df.columns if col != "Year"],  # All counties as series
     x_axis_title="Year",
     y_axis_title="Poverty Rate (%)",
-    start_at_zero=False,
+    start_at_zero=True,
     y_padding=0.1,
     hover_value_format=".1f",
     hover_suffix="%",
 )
 
 # Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+fig.update_xaxes(tickmode='linear', tick0=2021, dtick=1, type="category")
 
 # Display the interactive figure
 fig.show()
@@ -939,7 +1064,7 @@ fig.show()
 #| warning: false
 #| message: false
 #| label: tbl-poverty-rate
-#| tbl-cap: "Poverty Rate, 2021-2023"
+#| tbl-cap: "Percentage of Population in Poverty, 2021-2023"
 import sys
 import os
 # Add project root to path
@@ -982,7 +1107,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The American Community Survey asks respondents their income in the past 12 months including joint income. This is for income that is received on a regular basis before payments for taxes, social security, etc. If a family's total income is less than the official poverty threshold for a family of that size and composition, they are considered to be in poverty.
@@ -994,26 +1119,80 @@ The American Community Survey asks respondents their income in the past 12 month
 US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, [Table S1701](https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36), April 2025
 :::
 
-Poverty continues to vary significantly across racial and ethnic groups
-in the Mid-Hudson Region. Hispanic families had the highest poverty
-rates in Orange, Putnam, Rockland, Ulster, and Westchester counties,
-with Ulster County reaching 24.4%. In Sullivan County, non-Hispanic
-Black families experienced the highest poverty rate at 30.5%, the
-highest across all counties and groups. In Dutchess County, non-Hispanic
-Black and Hispanic families also had elevated poverty rates at 14.2% and
-11.2%, respectively \[see Figure 8\].
+Poverty continues to vary significantly across racial and ethnic groups in the Mid-Hudson Region. Hispanic families had the highest poverty rates in Orange, Putnam, Rockland, Ulster, and Westchester counties, with Ulster County reaching 24.4%. In Sullivan County, non-Hispanic Black families experienced the highest poverty rate at 30.5%, the highest across all counties and groups. In Dutchess County, non-Hispanic Black and Hispanic families also had elevated poverty rates at 14.2% and 11.2%, respectively \[see Figure 8\].
 
-Figure 8
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-poverty-by-race
+#| fig-cap: "Percentage of Population in Poverty by Race and Ethnicity, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image10.emf"
-style="width:7.5in;height:4.00069in" />
+# Create the data
+data = {
+    "Race/Ethnicity": ["White (non-Hispanic)", "Black (including Hispanic)", "Asian (including Hispanic, excluding PI)", "Hispanic (any race)", "Total"],
+    "Dutchess": [3.3, 14.2, 7.5, 11.2, 5.3],
+    "Orange": [7.9, 12.5, 10.3, 11.3, 9.2],
+    "Putnam": [2.8, 0.0, 23.4, 6.6, 3.8],
+    "Rockland": [11.1, 8.6, 1.8, 12.8, 10.3],
+    "Sullivan": [8.2, 30.5, 13.3, 14.3, 10.5],
+    "Ulster": [4.9, 14.1, 4.8, 24.4, 7.1],
+    "Westchester": [2.6, 10.8, 5.4, 10.4, 5.7],
+    "NYS": [5.7, 16.5, 11.1, 17.1, 9.7]
+}
+
+df = pd.DataFrame(data)
+
+# Transpose the data: Counties on x-axis, Race/Ethnicity as bars
+# Set Race/Ethnicity as index, then transpose
+df_transposed = df.set_index("Race/Ethnicity").T.reset_index()
+df_transposed.rename(columns={"index": "County"}, inplace=True)
+
+# Lock the race/ethnicity order for the bars
+race_order = ["White (non-Hispanic)", "Black (including Hispanic)", "Asian (including Hispanic, excluding PI)", "Hispanic (any race)", "Total"]
+
+# Create clustered bar figure: x=County, bars grouped by Race/Ethnicity
+fig = build_clustered_bar_figure(
+    df=df_transposed,
+    x_col="County",
+    y_cols=race_order,  # Race/Ethnicity groups as series
+    x_axis_title="County",
+    y_axis_title="Poverty Rate (%)",
+    start_at_zero=True,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: tbl-poverty-by-race
-#| tbl-cap: "Poverty Rate by Race and Ethnicity, 2023"
+#| tbl-cap: "Percentage of Population in Poverty by Race and Ethnicity, 2023"
 import sys
 import os
 # Add project root to path
@@ -1056,7 +1235,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The Census Bureau collects racial and ethnic data in accordance with guidelines provided by the US Office of Management and Budget (OMB) and these data are based on self-identification. For ethnicity, the OMB standards classify individuals in one of two categories: "Hispanic or Latino" or "Not Hispanic or Latino." The Census Bureau uses the term "Hispanic or Latino" interchangeably with the term "Hispanic," and also refer to this concept as "ethnicity." People who identify with more than one race may choose to provide multiple races in response to the race question.
@@ -1072,22 +1251,9 @@ NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced 
 
 ##### Economically Disadvantaged
 
-Children from economically disadvantaged families can face numerous
-challenges that influence their development, academic achievement, and
-overall health. Poverty can affect their cognitive development and
-educational attainment. The lack of access to resources and
-opportunities can impact their long-term social and economic
-mobility.
+Children from economically disadvantaged families can face numerous challenges that influence their development, academic achievement, and overall health. Poverty can affect their cognitive development and educational attainment. The lack of access to resources and opportunities can impact their long-term social and economic mobility.
 
-In 2023–2024, Sullivan County had the region’s highest share of
-economically disadvantaged students (61.4%), while Putnam had the lowest
-(32.5%) \[see Figure 9\]. All counties rose since 2021–2022; the largest
-gains occurred in Rockland (43.9% to 51.0%), Dutchess (39.2% to 43.3%),
-and Putnam (28.5% to 32.5%). Compared with NYS (59.2%), Sullivan is
-above the state average; all other Mid-Hudson counties remain below it.
-Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs.
-49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5%
-and 51.0%).
+In 2023–2024, Sullivan County had the region’s highest share of economically disadvantaged students (61.4%), while Putnam had the lowest (32.5%) \[see Figure 9\]. All counties rose since 2021–2022; the largest gains occurred in Rockland (43.9% to 51.0%), Dutchess (39.2% to 43.3%), and Putnam (28.5% to 32.5%). Compared with NYS (59.2%), Sullivan is above the state average; all other Mid-Hudson counties remain below it. Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs. 49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5% and 51.0%).
 
 ```{python}
 #| echo: false
@@ -1191,7 +1357,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Students who participate in, or whose family participates in, economic assistance programs, such as the Free or Reduced-Price Lunch Programs; Social Security Insurance; Supplemental Nutrition Assistance Program; Foster Care; Refugee Assistance (cash or medical assistance); Earned Income Tax Credit; Home Energy Assistance Program; Safety Net Assistance; Bureau of Indian Affairs; or Family Assistance: Temporary Assistance for Needy Families. If one student in a family is identified as low income, all students from that household (economic unit) may be identified as low income.
@@ -1207,26 +1373,11 @@ NYS Education Department, June 2025
 
 #### Asset Limited, Income Constrained, Employed (ALICE)
 
-Asset Limited, Income Constrained, Employed (ALICE) households are those
-earning above the Federal Poverty Level but below the ALICE Threshold,
-the income needed to afford the basics where they live, as calculated in
-the Household Survival Budget. The ALICE measure is location and
-household-specific and covers six essentials: housing, childcare, food,
-transportation, health care, and technology. These constraints force
-households to make difficult trade-offs across these necessities, see
-Table 15 for a sample budget.
+Asset Limited, Income Constrained, Employed (ALICE) households are those earning above the Federal Poverty Level but below the ALICE Threshold, the income needed to afford the basics where they live, as calculated in the Household Survival Budget. The ALICE measure is location and household-specific and covers six essentials: housing, childcare, food, transportation, health care, and technology. These constraints force households to make difficult trade-offs across these necessities, see Table 15 for a sample budget.
 
-The 2023 ALICE Household Survival Budget for New York State shows that
-the income needed to cover basic necessities ranges from \$35,652 per
-year for a single adult (\$17.80/hour) to \$104,472 for two adults with
-two children in childcare (\$52.20/hour). A two-adult, two-child
-household without paid childcare requires \$83,664 annually. Housing and
-childcare are the largest drivers for families with two children in
-care, those two items total \$3,782 per month. These amounts define the
-ALICE Threshold; county-level percentages below this threshold. \[see
-Table 15\]
+The 2023 ALICE Household Survival Budget for New York State shows that the income needed to cover basic necessities ranges from \$35,652 per year for a single adult (\$17.80/hour) to \$104,472 for two adults with two children in childcare (\$52.20/hour). A two-adult, two-child household without paid childcare requires \$83,664 annually. Housing and childcare are the largest drivers for families with two children in care, those two items total \$3,782 per month. These amounts define the ALICE Threshold; county-level percentages below this threshold. \[see Table 15\]
 
-Table 15
+
 
 ```{python}
 #| echo: false
@@ -1280,7 +1431,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The ALICE (Asset Limited, Income Constrained, Employed) household survival budget estimates the minimum cost of household necessities (housing, childcare, food, transportation, health care, and technology) plus taxes, and a contingency fund (miscellaneous) equal to 10% of the budget.
@@ -1294,22 +1445,79 @@ United for ALICE, June 2025
 [ALICE Cost of Basics](https://www.unitedforalice.org/the-cost-of-basics/new-york)
 :::
 
-Across the M-H Region, the share of households below the ALICE Threshold
-ranges from 37% in Dutchess (lowest) to 50% in Rockland (highest).
-Rockland is the only county above the New York State average of 47%;
-Orange (43%), Sullivan (45%), Ulster (42%), Putnam (38%), Westchester
-(38%), and Dutchess (37%) all fall below the state average. Sullivan has
-the region’s highest poverty rate (15%), while Rockland has the highest
-ALICE share (38%), which drives its overall total. In every county,
-ALICE households outnumber those in poverty, often by two to five times,
-showing that many financially constrained households earn above the
-Federal Poverty Level but still cannot afford basic needs \[see Figure
-10\].
+Across the M-H Region, the share of households below the ALICE Threshold ranges from 37% in Dutchess (lowest) to 50% in Rockland (highest). Rockland is the only county above the New York State average of 47%; Orange (43%), Sullivan (45%), Ulster (42%), Putnam (38%), Westchester (38%), and Dutchess (37%) all fall below the state average. Sullivan has the region’s highest poverty rate (15%), while Rockland has the highest ALICE share (38%), which drives its overall total. In every county, ALICE households outnumber those in poverty, often by two to five times, showing that many financially constrained households earn above the Federal Poverty Level but still cannot afford basic needs \[see Figure 10\].
 
-Figure 10
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-alice-threshold
+#| fig-cap: "Households Below ALICE Threshold, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_stacked_bar_figure
 
-<img src="media/media/image12.emf"
-style="width:7.5in;height:4.15903in" />
+# Create the data
+data = {
+    "Category": ["ALICE", "Poverty", "Above ALICE Threshold"],
+    "Dutchess": [31.0, 6.0, 62.0],
+    "Orange": [33.0, 10.0, 57.0],
+    "Putnam": [32.0, 6.0, 63.0],
+    "Rockland": [38.0, 12.0, 50.0],
+    "Sullivan": [30.0, 15.0, 54.0],
+    "Ulster": [32.0, 10.0, 58.0],
+    "Westchester": [28.0, 10.0, 61.0],
+    "NYS": [33.0, 14.0, 52.0]
+}
+
+df = pd.DataFrame(data)
+
+# Transpose: County on x-axis, Categories as stacked series
+df_transposed = df.set_index("Category").T.reset_index()
+df_transposed.columns.name = None
+df_transposed = df_transposed.rename(columns={"index": "County"})
+
+# Lock the category order for stacking
+category_order = ["ALICE", "Poverty", "Above ALICE Threshold"]
+category_cols = [col for col in df_transposed.columns if col != "County"]
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Category"]
+df_transposed["County"] = pd.Categorical(df_transposed["County"], categories=county_order, ordered=True)
+df_transposed = df_transposed.sort_values("County")
+
+# Create stacked bar figure: x=County, bars stacked by Category
+fig = build_stacked_bar_figure(
+    df=df_transposed,
+    x_col="County",
+    y_cols=category_cols,  # Categories as stacked series
+    x_axis_title="County",
+    y_axis_title="Percentage of Households (%)",
+    start_at_zero=True,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1359,7 +1567,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The ALICE (Asset Limited, Income Constrained, Employed) threshold represents the percentage of households in the United States that are struggling financially, falling below a threshold that includes those in poverty and those who are asset limited, income constrained, and employed. ALICE households earn above the Federal Poverty Level, but not enough to afford the basic necessities in their communities. Nationally, over 40% of households fall below the ALICE threshold.
@@ -1377,23 +1585,9 @@ United for ALICE, June 2025
 
 #### High School Graduation
 
-High school completion is strongly linked to better health and
-longevity. People who don’t complete high school face limited
-employment prospects, lower wages, and a higher risk of poverty factors
-that contribute to worse health outcomes and a higher risk of death
-later in life. Graduation likelihood is shaped by individual,
-family, school, and community conditions; school climate and safety,
-access to supportive adults, and disciplinary practices are all
-associated with on-time graduation.
+High school completion is strongly linked to better health and longevity. People who don’t complete high school face limited employment prospects, lower wages, and a higher risk of poverty factors that contribute to worse health outcomes and a higher risk of death later in life. Graduation likelihood is shaped by individual, family, school, and community conditions; school climate and safety, access to supportive adults, and disciplinary practices are all associated with on-time graduation.
 
-In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan
-(lowest) to 91% in Putnam and Westchester (highest). Most counties
-exceeded the NYS average of 86%, Dutchess (87%), Orange (89%), Putnam
-(91%), Ulster (87%), and Westchester (91%), while Rockland matched the
-state rate (86%) and Sullivan fell below. From 2021–2023, rates were
-generally stable or edged down slightly, with the largest declines in
-Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%).
-\[see Figure 11\]
+In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan (lowest) to 91% in Putnam and Westchester (highest). Most counties exceeded the NYS average of 86%, Dutchess (87%), Orange (89%), Putnam (91%), Ulster (87%), and Westchester (91%), while Rockland matched the state rate (86%) and Sullivan fell below. From 2021–2023, rates were generally stable or edged down slightly, with the largest declines in Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%). \[see Figure 11\]
 
 ```{python}
 #| echo: false
@@ -1446,7 +1640,7 @@ fig = build_line_figure(
 )
 
 # Set x-axis tick settings for year display
-fig.update_xaxis(tickmode='linear', tick0=2021, dtick=1)
+fig.update_xaxes(tickmode='linear', tick0=2021, dtick=1)
 
 # Display the interactive figure
 fig.show()
@@ -1500,7 +1694,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Graduation rate data are reported for a 9th grade cohort, as of the 4th year of high school - August. Graduates include students who received a local diploma or a local diploma with Regents endorsement (Regents diploma).
@@ -1514,32 +1708,72 @@ NYS Education Department, June 2025
 [NYS Education Data](https://data.nysed.gov/lists.php?type=county)
 :::
 
-In accordance with federal regulation, there is a two-part requirement
-regarding racial and ethnic designation. First, all students must be
-reported as Hispanic/Latino or not Hispanic/Latino. Second, all students
-must be reported with at least one race. Students who are reported as
-Hispanic/Latino, regardless of their race, will be counted as
-Hispanic/Latino for reporting purposes. Students who are reported as not
-Hispanic/Latino will be counted in the race category in which they are
-reported. Non-Hispanic students who are reported with more than one race
-category will be reported as Multiracial. 
+In accordance with federal regulation, there is a two-part requirement regarding racial and ethnic designation. First, all students must be reported as Hispanic/Latino or not Hispanic/Latino. Second, all students must be reported with at least one race. Students who are reported as Hispanic/Latino, regardless of their race, will be counted as Hispanic/Latino for reporting purposes. Students who are reported as not Hispanic/Latino will be counted in the race category in which they are reported. Non-Hispanic students who are reported with more than one race category will be reported as Multiracial. 
 
-Racial and ethnic disparities in graduation rates persist across the M-H
-Region. In six of seven counties, White students graduate at higher
-rates than both Black and Hispanic students; the exception is Putnam,
-where Black students post the region’s highest rate (97%), exceeding
-White (95%) and Hispanic (80%) peers. The largest gaps occur between
-White and Hispanic students, 21 points in Sullivan (84% vs. 63%) and
-then 15 points in Putnam (95% vs 80%) and Rockland (96% vs. 81%).
-Disparities between White and Black students are greatest in Sullivan
-(18 points; 84% vs. 66%) and Dutchess (14 points; 92% vs. 78%), while
-Rockland (96% vs 90%) and Ulster (90% vs 84%) show one of the smallest
-White and Black gaps at 6 points. \[see Figure 12\]
+Racial and ethnic disparities in graduation rates persist across the M-H Region. In six of seven counties, White students graduate at higher rates than both Black and Hispanic students; the exception is Putnam, where Black students post the region’s highest rate (97%), exceeding White (95%) and Hispanic (80%) peers. The largest gaps occur between White and Hispanic students, 21 points in Sullivan (84% vs. 63%) and then 15 points in Putnam (95% vs 80%) and Rockland (96% vs. 81%). Disparities between White and Black students are greatest in Sullivan (18 points; 84% vs. 66%) and Dutchess (14 points; 92% vs. 78%), while Rockland (96% vs 90%) and Ulster (90% vs 84%) show one of the smallest White and Black gaps at 6 points. \[see Figure 12\]
 
-Figure 12
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-graduation-by-race
+#| fig-cap: "High School Graduation Rate by Race and Ethnicity, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image14.emf"
-style="width:7.5in;height:3.98403in" />
+# Create the data - use np.nan for suppressed data
+data = {
+    "Race/Ethnicity": ["Asian or Native Hawaiian/Other PI", "Black or African American", "White", "Multiracial", "Hispanic"],
+    "Dutchess": [91.0, 78.0, 92.0, 80.0, 79.0],
+    "Orange": [96.0, 85.0, 93.0, 88.0, 83.0],
+    "Putnam": [100.0, 97.0, 95.0, np.nan, 80.0],
+    "Rockland": [97.0, 86.0, 94.0, np.nan, 74.0],
+    "Sullivan": [np.nan, 66.0, 84.0, 68.0, 63.0],
+    "Ulster": [np.nan, 84.0, 90.0, 74.0, 80.0],
+    "Westchester": [97.0, 83.0, 96.0, 94.0, 85.0],
+    "NYS": [93.0, 81.0, 91.0, 84.0, 81.0]
+}
+
+df = pd.DataFrame(data)
+
+# Lock the race/ethnicity order
+race_order = ["Asian or Native Hawaiian/Other PI", "Black or African American", "White", "Multiracial", "Hispanic"]
+df["Race/Ethnicity"] = pd.Categorical(df["Race/Ethnicity"], categories=race_order, ordered=True)
+df = df.sort_values("Race/Ethnicity")
+
+# Create clustered bar figure: x=Race/Ethnicity, bars grouped by County
+fig = build_clustered_bar_figure(
+    df=df,
+    x_col="Race/Ethnicity",
+    y_cols=[col for col in df.columns if col != "Race/Ethnicity"],  # All counties as series
+    x_axis_title="Race/Ethnicity",
+    y_axis_title="High School Graduation Rate (%)",
+    start_at_zero=True,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps race/ethnicity order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1589,7 +1823,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 s: Data are suppressed due to not meeting reporting criteria. Race or races with which the student primarily identifies are indicated by the student or the parent/guardian.
@@ -1605,82 +1839,86 @@ NYS Education Department, June 2025
 
 #### Early Childhood Education and Development
 
-The early years of a child's life are very important for their health
-and development. WHO's 2024 handbook operationalizes Nurturing Care
-what to deliver (parenting content), where to deliver it
-(health/social/education platforms), and how to deliver it well
-(training, quality assurance, M&E, and scaling)<a href="#cite-3" title="World Health Organization. Designing, Implementing, Evaluating, and Scaling Up Parenting Interventions: A Handbook for Decision-Makers and Implementers. Geneva: WHO, 2024, https://iris.who.int/bitstream/handle/10665/378237/9789240095595-eng.pdf, accessed August 2025"><sup>3</sup></a>. *WHO*
-characterizes nurturing care as a stable environment that promotes
-health and optimal nutrition, protects children from threats, and gives
-them opportunities for early learning, through affectionate interactions
-and relationships. Components of nurturing care include adequate
-nutrition, responsive caregiving, security and safety, opportunities for
-early learning, and good health.
+The early years of a child's life are very important for their health and development. WHO's 2024 handbook operationalizes Nurturing Care what to deliver (parenting content), where to deliver it (health/social/education platforms), and how to deliver it well (training, quality assurance, M&E, and scaling)<a href="#cite-3" title="World Health Organization. Designing, Implementing, Evaluating, and Scaling Up Parenting Interventions: A Handbook for Decision-Makers and Implementers. Geneva: WHO, 2024, https://iris.who.int/bitstream/handle/10665/378237/9789240095595-eng.pdf, accessed August 2025"><sup>3</sup></a>. *WHO* characterizes nurturing care as a stable environment that promotes health and optimal nutrition, protects children from threats, and gives them opportunities for early learning, through affectionate interactions and relationships. Components of nurturing care include adequate nutrition, responsive caregiving, security and safety, opportunities for early learning, and good health.
 
-Early-life stress and adverse events are linked to lasting mental and
-physical health impacts. Stressors, including poverty, physical abuse,
-family instability, and unsafe neighborhoods are associated with
-inadequate coping skills, difficulty regulating emotions, and reduced
-social functioning.
+Early-life stress and adverse events are linked to lasting mental and physical health impacts. Stressors, including poverty, physical abuse, family instability, and unsafe neighborhoods are associated with inadequate coping skills, difficulty regulating emotions, and reduced social functioning.
 
 #### Adverse Childhood Experiences
 
-Adverse Childhood Experiences (ACEs) are potentially traumatic events
-that occur during childhood such as “experiencing violence, abuse, or
-neglect; having a family member attempt or die by suicide; and
-witnessing violence in the home.” Elements of a child’s environment
-that weaken their sense of safety, stability, and bonding such as
-substance misuse, mental health complications, or family instability
-(including divorce or incarceration of parents and relatives) contribute
-to ACEs. ACEs can have lasting effects on health, behavior, and life
-potential, including obesity, diabetes, depression, suicide attempts,
-sexually transmitted infections (STIs), heart disease, cancer, stroke,
-Chronic Obstructive Pulmonary Disease (COPD), broken bones, smoking,
-alcoholism, drug use, graduation rates, academic achievement, lost time
-from work, etc. Growing research shows that toxic stress as a result of
-ACEs can damage “the most basic levels of the nervous, endocrine, and
-immune system,” and can modify the physical structure of DNA.
+Adverse Childhood Experiences (ACEs) are potentially traumatic events that occur during childhood such as “experiencing violence, abuse, or neglect; having a family member attempt or die by suicide; and witnessing violence in the home.” Elements of a child’s environment that weaken their sense of safety, stability, and bonding such as substance misuse, mental health complications, or family instability (including divorce or incarceration of parents and relatives) contribute to ACEs. ACEs can have lasting effects on health, behavior, and life potential, including obesity, diabetes, depression, suicide attempts, sexually transmitted infections (STIs), heart disease, cancer, stroke, Chronic Obstructive Pulmonary Disease (COPD), broken bones, smoking, alcoholism, drug use, graduation rates, academic achievement, lost time from work, etc. Growing research shows that toxic stress as a result of ACEs can damage “the most basic levels of the nervous, endocrine, and immune system,” and can modify the physical structure of DNA.
 
-The ACE items are a surveillance tool, not a diagnosis. They estimate
-how common early-life adversities are among adults. The questionnaire
-includes questions about: physical, emotional and sexual abuse; physical
-and emotional neglect; and household dysfunction (substance use, mental
-illness, mother treated violence, parental separation or divorce, and
-incarcerated household member). Each item screens for a *type* of
-adversity before age 18. When combined, they produce an ACE count (how
-many types a person reports), which is summarized as~~,~~ a threshold
-associated with measurably higher risk for poor health, mental health,
-and social outcomes across the life span.
+The ACE items are a surveillance tool, not a diagnosis. They estimate how common early-life adversities are among adults. The questionnaire includes questions about: physical, emotional and sexual abuse; physical and emotional neglect; and household dysfunction (substance use, mental illness, mother treated violence, parental separation or divorce, and incarcerated household member). Each item screens for a *type* of adversity before age 18. When combined, they produce an ACE count (how many types a person reports), which is summarized as~~,~~ a threshold associated with measurably higher risk for poor health, mental health, and social outcomes across the life span.
 
 #### Attainment of Higher Education
 
-Continuing education after high school, especially enrolling in and
-completing college, improves employment prospects and job quality,
-reduces the risk of unemployment or underemployment, and raises lifetime
-earnings<a href="#cite-4" title="Social Security Administration. Research Summary: Education and Lifetime Earnings, 2015, https://www.ssa.gov/policy/docs/research-summaries/education-earnings.html, accessed August 2025"><sup>4</sup></a>. A Social Security Administration analysis
-linking survey and administrative earnings records estimates that men
-with a bachelor's degree earn about \$900,000 more in median lifetime
-earnings than high school graduates and women about \$630,000 more; for
-graduate degrees, the gaps rise to \$1.5 million (men) and \$1.1 million
-(women). Even after adjusting for key socio-demographic factors,
-differences remain substantial (about \$655,000 for men and \$450,000
-for women with a bachelor’s degree). These gains translate into
-better-paying jobs with fewer safety hazards and greater access to
-material and psychosocial resources (e.g., higher-quality housing,
-higher social status) and are associated with improved health and a
-lower risk of premature death.
+Continuing education after high school, especially enrolling in and completing college, improves employment prospects and job quality, reduces the risk of unemployment or underemployment, and raises lifetime earnings<a href="#cite-4" title="Social Security Administration. Research Summary: Education and Lifetime Earnings, 2015, https://www.ssa.gov/policy/docs/research-summaries/education-earnings.html, accessed August 2025"><sup>4</sup></a>. A Social Security Administration analysis linking survey and administrative earnings records estimates that men with a bachelor's degree earn about \$900,000 more in median lifetime earnings than high school graduates and women about \$630,000 more; for graduate degrees, the gaps rise to \$1.5 million (men) and \$1.1 million (women). Even after adjusting for key socio-demographic factors, differences remain substantial (about \$655,000 for men and \$450,000 for women with a bachelor’s degree). These gains translate into better-paying jobs with fewer safety hazards and greater access to material and psychosocial resources (e.g., higher-quality housing, higher social status) and are associated with improved health and a lower risk of premature death.
 
-Westchester leads the region in degree completion, with the highest
-shares of residents holding a bachelor’s (26.0%) and a
-graduate/professional degree (26.5%), both above NYS (22.0% and 17.5%).
-Putnam (24.2%) and Rockland (23.2%) also exceed the state for bachelor’s
-attainment, while Dutchess (21.0%), Ulster (20.2%), Orange (18.2%), and
-Sullivan (17.0%) fall below. \[see Figure 13\]
+Westchester leads the region in degree completion, with the highest shares of residents holding a bachelor’s (26.0%) and a graduate/professional degree (26.5%), both above NYS (22.0% and 17.5%). Putnam (24.2%) and Rockland (23.2%) also exceed the state for bachelor’s attainment, while Dutchess (21.0%), Ulster (20.2%), Orange (18.2%), and Sullivan (17.0%) fall below. \[see Figure 13\]
 
 Figure 13
 
-<img src="media/media/image15.emf"
-style="width:7.5in;height:4.10833in" />
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-educational-attainment
+#| fig-cap: "Educational Attainment, Population 25 Years and Older, 2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_stacked_bar_figure
+
+# Create the data
+data = {
+    "Education Level": ["Some college, no degree", "Associate's degree", "Bachelor's degree", "Graduate or professional degree"],
+    "Dutchess": [16.9, 10.1, 21.0, 18.7],
+    "Orange": [19.1, 10.3, 18.2, 14.1],
+    "Putnam": [16.5, 8.4, 24.2, 19.3],
+    "Rockland": [16.2, 7.8, 23.2, 18.9],
+    "Sullivan": [17.9, 10.3, 17.0, 12.7],
+    "Ulster": [17.1, 9.6, 20.2, 16.9],
+    "Westchester": [12.6, 6.4, 26.0, 26.5],
+    "NYS": [14.9, 8.9, 22.0, 17.5]
+}
+
+df = pd.DataFrame(data)
+
+# Lock the education level order
+edu_order = ["Some college, no degree", "Associate's degree", "Bachelor's degree", "Graduate or professional degree"]
+df["Education Level"] = pd.Categorical(df["Education Level"], categories=edu_order, ordered=True)
+df = df.sort_values("Education Level")
+
+# Create stacked bar figure: x=Education Level, bars stacked by County
+fig = build_stacked_bar_figure(
+    df=df,
+    x_col="Education Level",
+    y_cols=[col for col in df.columns if col != "Education Level"],  # All counties as series
+    x_axis_title="Education Level",
+    y_axis_title="Percentage (%)",
+    start_at_zero=True,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps education level order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1730,7 +1968,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The American Community Survey asks respondents what the highest degree or level of school the person has completed.
@@ -1744,24 +1982,77 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-Ye
 
 #### Language and Literacy
 
-Literacy includes listening, speaking, reading, and writing skills,
-along with the ability to understand and work with numbers. Low literacy
-and language skills are associated with poorer outcomes in educational
-attainment, employment, and health. While limited English proficiency
-and low literacy differ from health literacy \[see page 72\], both are
-barriers to accessing health care, resulting in lower utilization of
-health services.
+Literacy includes listening, speaking, reading, and writing skills, along with the ability to understand and work with numbers. Low literacy and language skills are associated with poorer outcomes in educational attainment, employment, and health. While limited English proficiency and low literacy differ from health literacy \[see page 72\], both are barriers to accessing health care, resulting in lower utilization of health services.
 
-Rockland County had the highest percentage of people aged five years and
-over who spoke English “less than very well” at 20.0% in 2023. Ulster
-County had the lowest percentage at 3.4% \[see Figure 14\]. Except for
-Rockland County, all other counties were lower than the NYS rate
-(13.3%).
+Rockland County had the highest percentage of people aged five years and over who spoke English “less than very well” at 20.0% in 2023. Ulster County had the lowest percentage at 3.4% \[see Figure 14\]. Except for Rockland County, all other counties were lower than the NYS rate (13.3%).
 
-Figure 14
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-language-proficiency
+#| fig-cap: "Percentage of Population Speaking English Less Than Very Well, Ages 5 Years and Older, 2021-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image16.emf"
-style="width:7.5in;height:3.99792in" />
+# Create the data
+data = {
+    "Year": [2021, 2022, 2023],
+    "Dutchess": [4.7, 4.8, 5.4],
+    "Orange": [10.6, 11.3, 12.2],
+    "Putnam": [5.3, 5.6, 6.0],
+    "Rockland": [18.6, 18.8, 20.0],
+    "Sullivan": [3.8, 3.6, 3.4],
+    "Ulster": [3.5, 3.4, 3.4],
+    "Westchester": [11.2, 11.5, 11.8],
+    "NYS": [13.0, 13.1, 13.3]
+}
+
+df = pd.DataFrame(data)
+
+# Pivot data: County on x-axis, Year as separate series (columns)
+df_long = df.melt(id_vars="Year", var_name="County", value_name="Percentage")
+df_pivoted = df_long.pivot(index="County", columns="Year", values="Percentage").reset_index()
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Year"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# Create clustered bar figure: x=County, bars grouped by Year
+year_cols = sorted([col for col in df_pivoted.columns if col != "County"])
+fig = build_clustered_bar_figure(
+    df=df_pivoted,
+    x_col="County",
+    y_cols=year_cols,  # Years as separate series
+    x_axis_title="County",
+    y_axis_title="Percentage Speaking English Less Than Very Well (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1811,7 +2102,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 The American Community Survey asks respondents how well the person speaks English. If the response is "well," "not well," or "not at all," the person is categorized as speaking English "less than very well."
@@ -1827,32 +2118,79 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-Ye
 
 #### Civic Participation
 
-Civic participation includes activities in which groups or individuals
-interact with their community, such as voting, volunteering, and
-community gardening. Activities can be formal or informal and often
-benefit society or other group members. Civic participation has been
-shown to improve health by expanding social networks and social trust,
-which can increase physical activity and improve mental health.
+Civic participation includes activities in which groups or individuals interact with their community, such as voting, volunteering, and community gardening. Activities can be formal or informal and often benefit society or other group members. Civic participation has been shown to improve health by expanding social networks and social trust, which can increase physical activity and improve mental health.
 
-Disconnected youth are teenagers and young adults between the ages of 16
-and 19 who are neither working nor attending school. This metric is
-an indicator for how young people are faring while transitioning into
-adulthood. This vulnerable population is cut off from resources, people,
-and experiences that help them gain knowledge, skills,
-capital, and a sense of purpose.
+Disconnected youth are teenagers and young adults between the ages of 16 and 19 who are neither working nor attending school. This metric is an indicator for how young people are faring while transitioning into adulthood. This vulnerable population is cut off from resources, people, and experiences that help them gain knowledge, skills, capital, and a sense of purpose.
 
-Sullivan County had the highest percentage of disconnected youth ages
-16–19 (24.0% in 2019–2023), while Westchester County had the lowest
-(5.0%); the NYS rate was 7.0% \[see Figure 15\]. Since 2016–2020,
-Sullivan rose from 17.0% to 24.0% (peaking at 25.0% in 2018–2022).
-Ulster moved from 6.0% to 9.0%. Orange remained near 8–10% (8.0% most
-recent), Rockland ranged 4–6% (6.0% most recent), and Westchester stayed
-low at 4.0–5.0%.
+Sullivan County had the highest percentage of disconnected youth ages 16–19 (24.0% in 2019–2023), while Westchester County had the lowest (5.0%); the NYS rate was 7.0% \[see Figure 15\]. Since 2016–2020, Sullivan rose from 17.0% to 24.0% (peaking at 25.0% in 2018–2022). Ulster moved from 6.0% to 9.0%. Orange remained near 8–10% (8.0% most recent), Rockland ranged 4–6% (6.0% most recent), and Westchester stayed low at 4.0–5.0%.
 
-Figure 15
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-disconnected-youth
+#| fig-cap: "Disconnected Youth Ages 16-19, 2014-2018 to 2019-2023"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_figure_builder import build_clustered_bar_figure
 
-<img src="media/media/image17.emf"
-style="width:7.5in;height:4.10833in" />
+# Create the data - use np.nan for suppressed data
+data = {
+    "Period": ["2014–2018", "2015–2019", "2016–2020", "2017–2021", "2018–2022", "2019–2023"],
+    "Dutchess": [4.0, 5.0, 5.0, 6.0, 7.0, 6.0],
+    "Orange": [8.0, 8.0, 10.0, 8.0, 8.0, 8.0],
+    "Putnam": [4.0, np.nan, np.nan, np.nan, np.nan, np.nan],
+    "Rockland": [5.0, 5.0, 5.0, 4.0, 6.0, 6.0],
+    "Sullivan": [12.0, 12.0, 17.0, 17.0, 25.0, 24.0],
+    "Ulster": [6.0, 6.0, 6.0, 6.0, 9.0, 9.0],
+    "Westchester": [6.0, 6.0, 4.0, 4.0, 5.0, 5.0],
+    "NYS": [6.0, 6.0, 6.0, 6.0, 7.0, 7.0]
+}
+
+df = pd.DataFrame(data)
+
+# Pivot data: County on x-axis, Period as separate series (columns)
+df_long = df.melt(id_vars="Period", var_name="County", value_name="Percentage")
+df_pivoted = df_long.pivot(index="County", columns="Period", values="Percentage").reset_index()
+
+# Lock the county order
+county_order = [c for c in df.columns if c != "Period"]
+df_pivoted["County"] = pd.Categorical(df_pivoted["County"], categories=county_order, ordered=True)
+df_pivoted = df_pivoted.sort_values("County")
+
+# Create clustered bar figure: x=County, bars grouped by Period
+period_cols = [col for col in df_pivoted.columns if col != "County"]
+fig = build_clustered_bar_figure(
+    df=df_pivoted,
+    x_col="County",
+    y_cols=period_cols,  # Periods as separate series
+    x_axis_title="County",
+    y_axis_title="Percentage of Disconnected Youth (%)",
+    start_at_zero=False,
+    y_padding=0.1,
+    hover_value_format=".1f",
+    hover_suffix="%",
+)
+
+# Ensure categorical x-axis rendering (keeps county order)
+fig.update_xaxes(type="category")
+
+# Display the interactive figure
+fig.show()
+```
 
 ```{python}
 #| echo: false
@@ -1902,7 +2240,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 s: Data are suppressed due to unreliable or missing data.
@@ -1918,57 +2256,22 @@ University of Wisconsin Population Health Institute. County Health Rankings & Ro
 
 #### Discrimination
 
-National Institutes of Health (NIH) defines discrimination as a socially
-structured action that is unjustified or unfair and harms individuals or
-groups, often protecting more powerful and privileged groups to the
-detriment of others. CDC notes that discrimination and racism harm
-health via barriers to resources and by triggering physiological stress
-pathways linked to worse outcomes.
+National Institutes of Health (NIH) defines discrimination as a socially structured action that is unjustified or unfair and harms individuals or groups, often protecting more powerful and privileged groups to the detriment of others. CDC notes that discrimination and racism harm health via barriers to resources and by triggering physiological stress pathways linked to worse outcomes.
 
-Discrimination can be assessed through both everyday experiences and
-major life events. Residential segregation is a prominent example
-of structural discrimination, shaped by policies and practices that
-limit housing opportunities for certain racial and ethnic groups.
-Such discrimination can occur when individuals are refused rental
-housing or denied credit unfairly. The consequences of residential
-segregation extend far beyond housing itself influencing access to
-quality education, nutritious food, safe environments for physical
-activity, reliable transportation, and health care. These
-inequities contribute to persistent disparities in health status across
-population groups.
+Discrimination can be assessed through both everyday experiences and major life events. Residential segregation is a prominent example of structural discrimination, shaped by policies and practices that limit housing opportunities for certain racial and ethnic groups. Such discrimination can occur when individuals are refused rental housing or denied credit unfairly. The consequences of residential segregation extend far beyond housing itself influencing access to quality education, nutritious food, safe environments for physical activity, reliable transportation, and health care. These inequities contribute to persistent disparities in health status across population groups.
 
-In the US, residential segregation between non-Hispanic Black and
-non-Hispanic White populations is a key determinant of health disparity,
-leading to poor health outcomes including mortality and reproductive and
-chronic diseases.
+In the US, residential segregation between non-Hispanic Black and non-Hispanic White populations is a key determinant of health disparity, leading to poor health outcomes including mortality and reproductive and chronic diseases.
 
-Data produced by *County Health Rankings & Roadmaps* around residential
-segregation uses the *American Community Survey* to measure the
-distribution of non-Hispanic Black and non-Hispanic White residents
-across census tracks. The index is used to measure residential
-segregation; zero represents complete integration, while 100 is complete
-segregation. The index score can also represent the percentage of either
-non-Hispanic Black or non-Hispanic White residents who would have to
-move to a different geographic area in order to produce a distribution
-that matches that of the larger area.
+Data produced by *County Health Rankings & Roadmaps* around residential segregation uses the *American Community Survey* to measure the distribution of non-Hispanic Black and non-Hispanic White residents across census tracks. The index is used to measure residential segregation; zero represents complete integration, while 100 is complete segregation. The index score can also represent the percentage of either non-Hispanic Black or non-Hispanic White residents who would have to move to a different geographic area in order to produce a distribution that matches that of the larger area.
 
-Across the Mid-Hudson Region, residential segregation between Black and
-White residents remains lower than the statewide level but continues to
-vary by county. For the most recent period (2019–2023), Westchester
-County had the highest index score at 63.0, though it was still below
-the New York State average of 75.0. Sullivan County recorded the lowest
-score in the region at 43.0, indicating greater levels of residential
-integration. Putnam County and Orange County showed steady increases in
-segregation in recent years. In contrast, Ulster County declined to 43.0
-(2018-2022), tying with Sullivan for the lowest score. Overall, the
-Mid-Hudson Region continues to show lower segregation levels compared
-with the state as a whole, though disparities remain across counties.
-\[see Figure 16\]
+Across the Mid-Hudson Region, residential segregation between Black and White residents remains lower than the statewide level but continues to vary by county. For the most recent period (2019–2023), Westchester County had the highest index score at 63.0, though it was still below the New York State average of 75.0. Sullivan County recorded the lowest score in the region at 43.0, indicating greater levels of residential integration. Putnam County and Orange County showed steady increases in segregation in recent years. In contrast, Ulster County declined to 43.0 (2018-2022), tying with Sullivan for the lowest score. Overall, the Mid-Hudson Region continues to show lower segregation levels compared with the state as a whole, though disparities remain across counties. \[see Figure 16\]
 
 Figure 16
 
+```{=html}
 <img src="media/media/image18.emf"
 style="width:7.5in;height:3.98056in" />
+```
 
 ```{python}
 #| echo: false
@@ -2018,7 +2321,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 s: Data are suppressed due to unreliable or missing data. Index of dissimilarity where higher values indicate greater residential segregation between Black and White County residents.
@@ -2036,67 +2339,21 @@ University of Wisconsin Population Health Institute. County Health Rankings & Ro
 
 ### Background
 
-In order to ensure that the needs of underrepresented populations were
-accounted for in the M-H Region CHA, a survey was administered to
-community partners that serve these populations. Underrepresented
-populations include those who have a low-income, veterans, seniors,
-people experiencing homelessness, LGBTQIA+ members, and people with a
-mental health diagnosis. The term “partners” refers to those who offer
-services such as mental health support, vocational programs, and
-programs for underserved populations. Surveying partners was completed
-to gain a better understanding of the obstacles and barriers these
-populations are facing when trying to access services.
+In order to ensure that the needs of underrepresented populations were accounted for in the M-H Region CHA, a survey was administered to community partners that serve these populations. Underrepresented populations include those who have a low-income, veterans, seniors, people experiencing homelessness, LGBTQIA+ members, and people with a mental health diagnosis. The term “partners” refers to those who offer services such as mental health support, vocational programs, and programs for underserved populations. Surveying partners was completed to gain a better understanding of the obstacles and barriers these populations are facing when trying to access services.
 
-Dutchess, Orange, Rockland, Sullivan, Ulster, and Westchester Counties
-created a survey tool based on the survey utilized in 2018 and 2022.
-Each participating LHD shared a survey link with partners to supply
-additional insight around local factors influencing community health.
-The survey covered several topics including the populations the partners
-serve, the issues that affect health in the communities they serve,
-barriers to people achieving better health, and interventions that are
-used to address social determinants of health \[[see Appendix
-I](#section-8)\]. Throughout the M-H Region, 328 surveys were completed
-by partners between May 2 and July 1, 2025. The answers to the survey
-varied throughout each county. Some counties chose to further
-investigate these differences by conducting focus groups.
+Dutchess, Orange, Rockland, Sullivan, Ulster, and Westchester Counties created a survey tool based on the survey utilized in 2018 and 2022. Each participating LHD shared a survey link with partners to supply additional insight around local factors influencing community health. The survey covered several topics including the populations the partners serve, the issues that affect health in the communities they serve, barriers to people achieving better health, and interventions that are used to address social determinants of health \[[see Appendix I](#section-8)\]. Throughout the M-H Region, 328 surveys were completed by partners between May 2 and July 1, 2025. The answers to the survey varied throughout each county. Some counties chose to further investigate these differences by conducting focus groups.
 
-When looking at data from the M-H Region, the top three issues partners
-felt affected health in their communities included: access to mental
-health providers, access to affordable, decent, and safe housing, and
-access to affordable, nutritious food. The top three barriers partners
-felt prevented people from achieving better health in their communities
-were: knowledge of existing resources, health literacy, and geographic
-location (living in a rural area). Chronic disease, mental health and
-substance use issues, and health disparities were thought to highly
-impact these specific populations in the M-H Region. When considering
-the social determinants of health and the domains and priorities of the
-Prevention Agenda, partners said that economic wellbeing, mental
-wellbeing and substance use, and health insurance coverage and access to
-care impacted the populations they serve the most.
+When looking at data from the M-H Region, the top three issues partners felt affected health in their communities included: access to mental health providers, access to affordable, decent, and safe housing, and access to affordable, nutritious food. The top three barriers partners felt prevented people from achieving better health in their communities were: knowledge of existing resources, health literacy, and geographic location (living in a rural area). Chronic disease, mental health and substance use issues, and health disparities were thought to highly impact these specific populations in the M-H Region. When considering the social determinants of health and the domains and priorities of the Prevention Agenda, partners said that economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care impacted the populations they serve the most.
 
-In the following sections, the data was broken down by each county with
-two primary sections: Major Findings and Specific Recommendations. These
-data points can help guide work to address the needs of underserved
-populations. Putnam County elected to participate in an alternative
-survey of community partners done in collaboration with Nuvance Health.
-The findings of this survey are summarized in the Putnam County section
-below.
+In the following sections, the data was broken down by each county with two primary sections: Major Findings and Specific Recommendations. These data points can help guide work to address the needs of underserved populations. Putnam County elected to participate in an alternative survey of community partners done in collaboration with Nuvance Health. The findings of this survey are summarized in the Putnam County section below.
 
 ### Dutchess County
 
-In Dutchess County, 109 responses were collected from providers that
-serve a variety of populations \[[see Appendix J](#section-9)\]. The
-Dutchess County Department of Health distributed the regional partner
-survey through various organizations and initiatives including the
-Eastern Dutchess Rural Health Network, Dutchess County Bringing Agencies
-Together, the Poughkeepsie Healthy Black and Latinx Coalition, Fit
-Dutchess, and the Community Health Committees at both Vassar Brothers
-Medical Center and Northern Dutchess Hospital.
+In Dutchess County, 109 responses were collected from providers that serve a variety of populations \[[see Appendix J](#section-9)\]. The Dutchess County Department of Health distributed the regional partner survey through various organizations and initiatives including the Eastern Dutchess Rural Health Network, Dutchess County Bringing Agencies Together, the Poughkeepsie Healthy Black and Latinx Coalition, Fit Dutchess, and the Community Health Committees at both Vassar Brothers Medical Center and Northern Dutchess Hospital.
 
 #### Major Findings
 
-The survey showed that the top three issues that affected health in
-Dutchess County were \[see
+The survey showed that the top three issues that affected health in Dutchess County were \[see
 
 Figure 36\]:
 
@@ -2106,8 +2363,7 @@ Figure 36\]:
 
 3)  Access to affordable, decent and safe housing
 
-The survey also showed that the top three barriers to people achieving
-better health in Dutchess County were \[see Figure 37\]:
+The survey also showed that the top three barriers to people achieving better health in Dutchess County were \[see Figure 37\]:
 
 > 1\) Knowledge of existing resources
 >
@@ -2115,62 +2371,42 @@ better health in Dutchess County were \[see Figure 37\]:
 >
 > 3\) Geographic location – living in a rural area
 
-According to survey responses, issues highly impacting health in
-Dutchess communities include mental health and substance use issues,
-chronic disease, and health disparities \[see Figure 38\].
+According to survey responses, issues highly impacting health in Dutchess communities include mental health and substance use issues, chronic disease, and health disparities \[see Figure 38\].
 
-When considering the social determinants of health, issues highly
-impacting Dutchess communities include economic wellbeing, mental
-wellbeing and substance use, and health insurance coverage and access to
-care \[See Figure 39\]. Within these social determinants of health
-categories, highly rated issues include poverty, anxiety and stress, and
-preventive services for chronic disease prevention and control \[see
-Figures 40 through 42\].
+When considering the social determinants of health, issues highly impacting Dutchess communities include economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care \[See Figure 39\]. Within these social determinants of health categories, highly rated issues include poverty, anxiety and stress, and preventive services for chronic disease prevention and control \[see Figures 40 through 42\].
 
-Included in the survey was the opportunity for community partners to
-share what they thought were the underlying factors and barriers to
-solving the issues that they highlighted. Lack of money/funding was
-excluded from the question. Common responses included:
+Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money/funding was excluded from the question. Common responses included:
 
-- Resources exist, but the community does not know that they exist or
-  how to access them.
+-   Resources exist, but the community does not know that they exist or how to access them.
 
 <!-- -->
 
-- There is a lack of healthcare providers in the county, and it is
-  difficult to schedule timely appointments with those that do exist.
-  This included both primary care, specialists, and mental health
-  providers.
+-   There is a lack of healthcare providers in the county, and it is difficult to schedule timely appointments with those that do exist. This included both primary care, specialists, and mental health providers.
 
-- Transportation was a commonly cited barrier and was discussed in
-  relation to both healthcare access and accessing everyday essentials,
-  like healthy foods.
+-   Transportation was a commonly cited barrier and was discussed in relation to both healthcare access and accessing everyday essentials, like healthy foods.
 
-- More support for those without English as a first language or for
-  those who recently moved to the county is needed.
+-   More support for those without English as a first language or for those who recently moved to the county is needed.
 
-- Inadequate health insurance coverage or navigation prevents residents
-  from accessing healthcare.
+-   Inadequate health insurance coverage or navigation prevents residents from accessing healthcare.
 
 #### Specific Recommendations
 
-- Improve coordination across county agencies and specialty services
+-   Improve coordination across county agencies and specialty services
 
-- Educate providers and patients on available resources and insurance
-  benefits
+-   Educate providers and patients on available resources and insurance benefits
 
-- Expand primary and specialized medical services, especially for
-  Medicaid/Medicare, English as a second language, and IDD populations
+-   Expand primary and specialized medical services, especially for Medicaid/Medicare, English as a second language, and IDD populations
 
-- Improve access to transportation
+-   Improve access to transportation
 
-- Increase care management capacity, especially for those with mental
-  health and cognitive disabilities
+-   Increase care management capacity, especially for those with mental health and cognitive disabilities
 
 **Figure** 36
 
+```{=html}
 <img src="media/media/image38.emf"
 style="width:7.5in;height:3.99097in" />
+```
 
 ```{python}
 #| echo: false
@@ -2212,9 +2448,15 @@ styled_table
 ```
 
 <figure>
-<img src="media/media/image39.emf"
-style="width:7.5in;height:2.59861in" />
-<figcaption><p>Figure 37</p></figcaption>
+
+<img src="media/media/image39.emf" style="width:7.5in;height:2.59861in"/>
+
+<figcaption>
+
+<p>Figure 37</p>
+
+</figcaption>
+
 </figure>
 
 ```{python}
@@ -2256,7 +2498,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
@@ -2264,8 +2506,10 @@ Other: Some additional responses from participants include lack of transportatio
 
 Figure
 
+```{=html}
 <img src="media/media/image40.emf"
 style="width:7.5in;height:2.59861in" />
+```
 
 ```{python}
 #| echo: false
@@ -2315,8 +2559,10 @@ styled_table
 
 Figure 39
 
+```{=html}
 <img src="media/media/image41.emf"
 style="width:7.5in;height:3.00417in" />
+```
 
 ```{python}
 #| echo: false
@@ -2403,13 +2649,17 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
+```{=html}
 <img src="media/media/image42.emf"
 style="width:7.5in;height:3.00417in" />
+```
 
 F**igure 41**
 
+```{=html}
 <img src="media/media/image43.emf"
 style="width:7.5in;height:2.69722in" />
+```
 
 ```{python}
 #| echo: false
@@ -2459,8 +2709,10 @@ styled_table
 
 Figure 42
 
+```{=html}
 <img src="media/media/image44.emf"
 style="width:7.5in;height:2.69722in" />
+```
 
 ```{python}
 #| echo: false
@@ -2508,21 +2760,11 @@ styled_table
 
 ### Orange County
 
-In Orange County, 170 survey responses were collected from community
-service providers \[[see Appendix J](#section-9)\] that are engaged with
-a wide array of at-risk populations. The Orange County Department of
-Health distributed the regional partner survey through healthcare
-provider listservs and collaborative coalitions including the Changing
-the Ecosystem Task Force, the Orange County Infection Control Committee,
-and Orange County Community Health Assessment Hospital partnerships.
-Respondents included members of government agencies, health care
-organizations, advocacy groups, and others who serve a wide variety of
-populations in the county.
+In Orange County, 170 survey responses were collected from community service providers \[[see Appendix J](#section-9)\] that are engaged with a wide array of at-risk populations. The Orange County Department of Health distributed the regional partner survey through healthcare provider listservs and collaborative coalitions including the Changing the Ecosystem Task Force, the Orange County Infection Control Committee, and Orange County Community Health Assessment Hospital partnerships. Respondents included members of government agencies, health care organizations, advocacy groups, and others who serve a wide variety of populations in the county.
 
 #### Major Findings
 
-The survey showed that the top three issues that affected health in
-Orange County were \[See Figure 43\]:
+The survey showed that the top three issues that affected health in Orange County were \[See Figure 43\]:
 
 1)  Access to mental health providers
 
@@ -2530,8 +2772,7 @@ Orange County were \[See Figure 43\]:
 
 3)  Access to specialty services/providers
 
-The survey also showed that the top three barriers to people achieving
-better health in Orange County were \[see Figure 44\]:
+The survey also showed that the top three barriers to people achieving better health in Orange County were \[see Figure 44\]:
 
 > 1\) Knowledge of existing resources
 >
@@ -2539,71 +2780,46 @@ better health in Orange County were \[see Figure 44\]:
 >
 > 3\) Geographic location – living in a rural area
 
-According to survey responses, issues highly impacting health in Orange
-County include chronic disease, mental health and substance use issues
-communities include, and health disparities \[see Figure 45\]. When
-asked to consider the social determinants of health, respondents
-reported mental wellbeing and substance use (77.5%), economic wellbeing
-(76.9%), and access to care including health insurance (61.9%) were the
-most impacted areas \[see Figure 46\]. Within the category of Economic
-Wellbeing, poverty (50.3%) and housing stability & affordability (49.7%)
-were identified as the most significant concerns, with each rated as
-highly impactful by approximately half of all respondents \[see Figure
-47\]. Within the mental wellbeing and substance use category, anxiety
-and stress and depression were rated as major concerns that affect the
-health of the communities they serve \[see Figure 48\]. Within health
-insurance coverage and access to care, preventative services for chronic
-disease prevention (40%) and control and oral health care (30.7%) were
-identified as the top concerns. \[see Figure 49\]
+According to survey responses, issues highly impacting health in Orange County include chronic disease, mental health and substance use issues communities include, and health disparities \[see Figure 45\]. When asked to consider the social determinants of health, respondents reported mental wellbeing and substance use (77.5%), economic wellbeing (76.9%), and access to care including health insurance (61.9%) were the most impacted areas \[see Figure 46\]. Within the category of Economic Wellbeing, poverty (50.3%) and housing stability & affordability (49.7%) were identified as the most significant concerns, with each rated as highly impactful by approximately half of all respondents \[see Figure 47\]. Within the mental wellbeing and substance use category, anxiety and stress and depression were rated as major concerns that affect the health of the communities they serve \[see Figure 48\]. Within health insurance coverage and access to care, preventative services for chronic disease prevention (40%) and control and oral health care (30.7%) were identified as the top concerns. \[see Figure 49\]
 
-Included in the survey was the opportunity for community partners to
-share what they thought were the underlying factors and barriers to
-solving the issues that they highlighted. Lack of money/funding was
-excluded from the question. Common responses included:
+Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money/funding was excluded from the question. Common responses included:
 
-- Lack of medical providers particularly in primary care, mental health,
-  and specialists including loss of workforce without incoming
-  practitioners to replace them
+-   Lack of medical providers particularly in primary care, mental health, and specialists including loss of workforce without incoming practitioners to replace them
 
-- Lack of services outside regular workweek hours
+-   Lack of services outside regular workweek hours
 
-- Lack of affordable and reliable transportation and public transit
-  routes, particularly for uninsured individuals and non-Medicaid
-  patients
+-   Lack of affordable and reliable transportation and public transit routes, particularly for uninsured individuals and non-Medicaid patients
 
-- Lack of affordable, safe, and stable housing
+-   Lack of affordable, safe, and stable housing
 
-- Language and cultural barriers
+-   Language and cultural barriers
 
-- Lack of affordable childcare and unstable caregiver support for aging
-  population
+-   Lack of affordable childcare and unstable caregiver support for aging population
 
-- Health literacy, education and communication
+-   Health literacy, education and communication
 
-- Lack of awareness of available resources and limited internet access
-  and digit skills
+-   Lack of awareness of available resources and limited internet access and digit skills
 
-- Fragmented and uncoordinated services, no centralized referral system
+-   Fragmented and uncoordinated services, no centralized referral system
 
 #### Specific Recommendations
 
-- Improve coordination across county agencies and specialty services
+-   Improve coordination across county agencies and specialty services
 
-- Create plain-language, multilingual health education materials and
-  campaigns, and train healthcare providers to deliver culturally
-  competent care
+-   Create plain-language, multilingual health education materials and campaigns, and train healthcare providers to deliver culturally competent care
 
-- Expand, recruit, and train healthcare providers to expand both
-  physical and mental healthcare services
+-   Expand, recruit, and train healthcare providers to expand both physical and mental healthcare services
 
-- Expand public transit options
+-   Expand public transit options
 
-- Advocate for affordable housing and childcare
+-   Advocate for affordable housing and childcare
 
 **Figure 43**
 
+```{=html}
 <img src="media/media/image45.emf"
 style="width:7.5in;height:3.29931in" />
+```
 
 ```{python}
 #| echo: false
@@ -2646,8 +2862,10 @@ styled_table
 
 **Figure 44**
 
+```{=html}
 <img src="media/media/image46.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -2688,7 +2906,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other: some additional responses include lack of providers, transportation, housing issues, and being low income but not qualifying for benefits.
@@ -2696,8 +2914,10 @@ Other: some additional responses include lack of providers, transportation, hous
 
 Figure
 
+```{=html}
 <img src="media/media/image47.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -2746,9 +2966,15 @@ styled_table
 ```
 
 <figure>
-<img src="media/media/image48.emf"
-style="width:7.5in;height:3.10417in" />
-<figcaption><p>Figure 46</p></figcaption>
+
+<img src="media/media/image48.emf" style="width:7.5in;height:3.10417in"/>
+
+<figcaption>
+
+<p>Figure 46</p>
+
+</figcaption>
+
 </figure>
 
 ```{python}
@@ -2792,8 +3018,10 @@ styled_table
 
 Figure 47
 
+```{=html}
 <img src="media/media/image49.emf"
 style="width:7.5in;height:3.10417in" />
+```
 
 ```{python}
 #| echo: false
@@ -2841,8 +3069,10 @@ styled_table
 
 Figure 48
 
+```{=html}
 <img src="media/media/image50.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -2936,57 +3166,20 @@ styled_table
 
 Figure 49
 
+```{=html}
 <img src="media/media/image51.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ### Putnam County
 
-To foster collaboration with our local hospital system, Putnam County
-elected to participate in an alternative survey of community partners.
-During the summer of 2024 [Nuvance
-Health](https://www.nuvancehealth.org/) and Local Health Departments
-(LHDs) within the Nuvance service area worked collaboratively with the
-healthcare data analytics and consulting company, [DataGen®,
-Inc.](https://datagen.info/) to promote and administer the
-[Community-based Organization (CBO)
-Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf)
-\[[see Appendix
-K](#AppendixK_PutnamNuvanceCommunityBased)<span id="AppendixK_PutnamNuvanceCommunityBased"
-class="anchor"></span>\] to employees of partner organizations
-located in the Nuvance service area. Like the M-H Community Partner
-Survey, the CBO Survey aims to enrich CHA data from secondary sources
-and population-based surveys with insight into the needs of the
-populations served by responding organizations.
+To foster collaboration with our local hospital system, Putnam County elected to participate in an alternative survey of community partners. During the summer of 2024 [Nuvance Health](https://www.nuvancehealth.org/) and Local Health Departments (LHDs) within the Nuvance service area worked collaboratively with the healthcare data analytics and consulting company, [DataGen®, Inc.](https://datagen.info/) to promote and administer the [Community-based Organization (CBO) Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf) \[[see Appendix K](#AppendixK_PutnamNuvanceCommunityBased)\] to employees of partner organizations located in the Nuvance service area. Like the M-H Community Partner Survey, the CBO Survey aims to enrich CHA data from secondary sources and population-based surveys with insight into the needs of the populations served by responding organizations.
 
-The survey instrument was based on a standardized template provided by
-DataGen and modified by Nuvance and the Putnam County Department of
-Health (PCDOH) to meet local needs. The instrument was designed to
-collect information from CBO employees regarding the observed needs of
-the clients and communities they serve. Survey topics included questions
-to explore health status, access to healthcare, main health problems,
-ways to improve health in the populations served by respondents, and
-trusted sources of health information. The survey was hosted by
-SurveyMonkey between May 21st, 2024, and September 16<sup>th</sup>,
-2024, and disseminated in person to attendees of the Public Health
-Summit hosted by PCDOH on June 6<sup>th</sup>, 2024, and via email to
-PCDOH and Nuvance partner distribution lists.
+The survey instrument was based on a standardized template provided by DataGen and modified by Nuvance and the Putnam County Department of Health (PCDOH) to meet local needs. The instrument was designed to collect information from CBO employees regarding the observed needs of the clients and communities they serve. Survey topics included questions to explore health status, access to healthcare, main health problems, ways to improve health in the populations served by respondents, and trusted sources of health information. The survey was hosted by SurveyMonkey between May 21st, 2024, and September 16<sup>th</sup>, 2024, and disseminated in person to attendees of the Public Health Summit hosted by PCDOH on June 6<sup>th</sup>, 2024, and via email to PCDOH and Nuvance partner distribution lists.
 
-One hundred and twenty-eight responses were collected from individuals
-working for CBOs serving residents of Putnam County. Nearly half of the
-responses were collected at the Putnam County Public Health Summit. The
-other half of respondents received invitations to participate via email
-distribution lists, their employers, or at coalition meetings. The
-respondents represented a total of 49 different organizations across 15
-sectors. Healthcare was the most highly represented sector (33%), and
-Nuvance Health was the most highly represented organization, accounting
-for 26% of all respondents and 71% of healthcare sector respondents.
-Mental Health/Substance Misuse was the second most represented sector,
-accounting for 16% of all respondents from ten different organizations.
-PCDOH was the second most represented organization, accounting for 13%
-of all respondents and 87% of health department sector respondents.
+One hundred and twenty-eight responses were collected from individuals working for CBOs serving residents of Putnam County. Nearly half of the responses were collected at the Putnam County Public Health Summit. The other half of respondents received invitations to participate via email distribution lists, their employers, or at coalition meetings. The respondents represented a total of 49 different organizations across 15 sectors. Healthcare was the most highly represented sector (33%), and Nuvance Health was the most highly represented organization, accounting for 26% of all respondents and 71% of healthcare sector respondents. Mental Health/Substance Misuse was the second most represented sector, accounting for 16% of all respondents from ten different organizations. PCDOH was the second most represented organization, accounting for 13% of all respondents and 87% of health department sector respondents.
 
-Survey respondents considered the biggest health problems in populations
-served in Putnam County \[see Figure 50\] to be:
+Survey respondents considered the biggest health problems in populations served in Putnam County \[see Figure 50\] to be:
 
 1)  Mental Health
 
@@ -2994,8 +3187,7 @@ served in Putnam County \[see Figure 50\] to be:
 
 3)  Substance Misuse
 
-Survey respondents thought the following would be most helpful to
-improve health of populations served in Putnam County \[see Figure 51\]:
+Survey respondents thought the following would be most helpful to improve health of populations served in Putnam County \[see Figure 51\]:
 
 > 1\) Mental Health Services
 >
@@ -3003,120 +3195,64 @@ improve health of populations served in Putnam County \[see Figure 51\]:
 >
 > 3\) Affordable Housing
 
-According to survey respondents, health screenings or education topics
-that would be most valuable to those they serve include mental health,
-chronic disease management, and drug and alcohol misuse \[see Figure
-52\].
+According to survey respondents, health screenings or education topics that would be most valuable to those they serve include mental health, chronic disease management, and drug and alcohol misuse \[see Figure 52\].
 
-When considering access to healthcare, most respondents (77%) think that
-the people/communities they serve have problems getting needed
-healthcare. The most common barriers were cost (52%), lack of
-transportation (44%), and lack of available appointments (40%) \[see
-Figure 53\]. Lack of insurance and inability to pay copays or
-deductibles were both specified by about ¾ of respondents as cost
-associated barriers. The most common reasons specified for lack of
-appointment availability were long wait times (93%), providers not
-accepting new patients (78%), and lack of appointments at times when
-patients are available (65%).
+When considering access to healthcare, most respondents (77%) think that the people/communities they serve have problems getting needed healthcare. The most common barriers were cost (52%), lack of transportation (44%), and lack of available appointments (40%) \[see Figure 53\]. Lack of insurance and inability to pay copays or deductibles were both specified by about ¾ of respondents as cost associated barriers. The most common reasons specified for lack of appointment availability were long wait times (93%), providers not accepting new patients (78%), and lack of appointments at times when patients are available (65%).
 
 #### Major Findings
 
-- CBO Survey respondents generally gave lower health ratings to those
-  they serve (57% fair or poor health, physical or mental health not
-  specified) than the self-reported ratings of Putnam residents found in
-  the population-based [Mid-Hudson Region Community Health
-  Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf)
-  \[[see Appendix L](#section-11)\] (18% fair or poor physical
-  health, 23% fair or poor mental health). This may be indicative of
-  poorer overall health in populations seeking services with respondents
-  than that of the general population.
+-   CBO Survey respondents generally gave lower health ratings to those they serve (57% fair or poor health, physical or mental health not specified) than the self-reported ratings of Putnam residents found in the population-based [Mid-Hudson Region Community Health Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf) \[[see Appendix L](#section-11)\] (18% fair or poor physical health, 23% fair or poor mental health). This may be indicative of poorer overall health in populations seeking services with respondents than that of the general population.
 
-- Opinions varied by sector on the top three health problems faced,
-  services most helpful to improve health, and most beneficial health
-  screenings or education topics; however mental health/mental health
-  services were consistently the first or second top choice of
-  respondents for all three of these questions, regardless of sector.
+-   Opinions varied by sector on the top three health problems faced, services most helpful to improve health, and most beneficial health screenings or education topics; however mental health/mental health services were consistently the first or second top choice of respondents for all three of these questions, regardless of sector.
 
-- Access to healthcare providers was the second most common choice for
-  the biggest health problem faced, and more than three quarters of
-  respondents think the populations they serve have trouble accessing
-  needed healthcare. Multiple factors attributable to patients (e.g.
-  lack of insurance or transportation) and providers (e.g. appointment
-  availability) are contributing to difficulties accessing healthcare.
+-   Access to healthcare providers was the second most common choice for the biggest health problem faced, and more than three quarters of respondents think the populations they serve have trouble accessing needed healthcare. Multiple factors attributable to patients (e.g. lack of insurance or transportation) and providers (e.g. appointment availability) are contributing to difficulties accessing healthcare.
 
-- Affordable housing and access to transportation were among the top
-  three things selected as most helpful to improve health in 44% and 45%
-  of respondents respectively.
+-   Affordable housing and access to transportation were among the top three things selected as most helpful to improve health in 44% and 45% of respondents respectively.
 
-- Respondents in all sectors most frequently selected healthcare
-  providers as trusted sources of health information for the populations
-  they serve. Friends and family members were selected second most
-  commonly in all sectors but healthcare, where more traditional sources
-  of health information (health departments, hospitals, and
-  schools/colleges) were more commonly selected \[See Figure 54\].
+-   Respondents in all sectors most frequently selected healthcare providers as trusted sources of health information for the populations they serve. Friends and family members were selected second most commonly in all sectors but healthcare, where more traditional sources of health information (health departments, hospitals, and schools/colleges) were more commonly selected \[See Figure 54\].
 
 #### Specific Recommendations
 
-- Responses to this survey were obtained through convenience sampling,
-  and as such results should be considered representative of respondents
-  rather than all Putnam County residents served by community-based
-  organizations. Results are most appropriately viewed through the lens
-  of respondent distribution by sector and organization, with the
-  understanding that results are skewed toward the experiences and
-  opinions of respondents working in more highly represented sectors
-  (i.e.: healthcare, mental health and substance misuse, health
-  departments) and organizations (i.e.: Nuvance Health, PCDOH).
+-   Responses to this survey were obtained through convenience sampling, and as such results should be considered representative of respondents rather than all Putnam County residents served by community-based organizations. Results are most appropriately viewed through the lens of respondent distribution by sector and organization, with the understanding that results are skewed toward the experiences and opinions of respondents working in more highly represented sectors (i.e.: healthcare, mental health and substance misuse, health departments) and organizations (i.e.: Nuvance Health, PCDOH).
 
-- Findings of this survey should be considered alongside other
-  components of the CHA when setting priorities for community health
-  improvement planning, with particular attention paid to indicators
-  related to mental health and healthcare access.
+-   Findings of this survey should be considered alongside other components of the CHA when setting priorities for community health improvement planning, with particular attention paid to indicators related to mental health and healthcare access.
 
-- Local leaders should consider downstream health benefits of policies
-  which address social determinants of health such as affordable housing
-  and access to transportation.
+-   Local leaders should consider downstream health benefits of policies which address social determinants of health such as affordable housing and access to transportation.
 
 Figure 50
 
+```{=html}
 <img src="media/media/image52.emf"
 style="width:7.5in;height:3.99097in" />
+```
 
 Figure 51
 
-<img src="media/media/image53.emf" style="width:7.31in;height:3.89in" />
+<img src="media/media/image53.emf" style="width:7.31in;height:3.89in"/>
 
 Figure 52
 
-<img src="media/media/image54.emf" style="width:7.13in;height:4.58in" />
+<img src="media/media/image54.emf" style="width:7.13in;height:4.58in"/>
 
 Figure 53
 
+```{=html}
 <img src="media/media/image55.emf"
 style="width:7.5in;height:3.99375in" />
+```
 
 Figure 54
 
+```{=html}
 <img src="media/media/image56.emf"
 style="width:7.5in;height:3.99375in" />
+```
 
 ### Rockland County
 
-In Rockland County, 135 survey responses were collected from community
-service providers that are engaged with various at-risk populations such
-as persons experiencing homelessness, persons with disabilities, persons
-with a mental health diagnosis, persons with substance use disorders,
-veterans, seniors, non-English speakers, and low-income individuals
-\[[see Appendix J](#section-9)\]. The Rockland County Department of
-Health distributed the regional partner survey via internal listservs of
-medical providers, the listservs of the Haverstraw, Spring Valley, and
-Western Ramapo Collaboratives, the Rockland County Dept. of Mental
-Health, as well as the United Way of Rockland, and our Hospital Partners
-at WMC Health and Montefiore Nyack. Respondents included members of
-government agencies, health care organizations, primary and secondary
-schools, advocacy groups, non-profits and others.
+In Rockland County, 135 survey responses were collected from community service providers that are engaged with various at-risk populations such as persons experiencing homelessness, persons with disabilities, persons with a mental health diagnosis, persons with substance use disorders, veterans, seniors, non-English speakers, and low-income individuals \[[see Appendix J](#section-9)\]. The Rockland County Department of Health distributed the regional partner survey via internal listservs of medical providers, the listservs of the Haverstraw, Spring Valley, and Western Ramapo Collaboratives, the Rockland County Dept. of Mental Health, as well as the United Way of Rockland, and our Hospital Partners at WMC Health and Montefiore Nyack. Respondents included members of government agencies, health care organizations, primary and secondary schools, advocacy groups, non-profits and others.
 
-The results showed that the top three issues that affect health in
-Rockland County were \[see Figure 55\]:
+The results showed that the top three issues that affect health in Rockland County were \[see Figure 55\]:
 
 1\) Access to mental health providers
 
@@ -3124,8 +3260,7 @@ Rockland County were \[see Figure 55\]:
 
 3\) Access to affordable specialty services/providers
 
-The survey also showed that the top three barriers to people achieving
-better health in Rockland County were \[see Figure 56\].
+The survey also showed that the top three barriers to people achieving better health in Rockland County were \[see Figure 56\].
 
 > 1\) Knowledge of existing resources
 
@@ -3133,19 +3268,17 @@ better health in Rockland County were \[see Figure 56\].
 
 3\) Having someone to help them understand their medical condition
 
-Issues highly impacting health in the communities as listed by the
-providers include \[see
+Issues highly impacting health in the communities as listed by the providers include \[see
 
 Figure 57\]:
 
-- Chronic disease
+-   Chronic disease
 
-- Health Disparities
+-   Health Disparities
 
-- Mental health and substance use issues
+-   Mental health and substance use issues
 
-The top three areas of impact of the Social Determinants of Health in
-Rockland County were \[see Figure 58\].
+The top three areas of impact of the Social Determinants of Health in Rockland County were \[see Figure 58\].
 
 1.  Economic Wellbeing
 
@@ -3153,103 +3286,55 @@ Rockland County were \[see Figure 58\].
 
 3.  Health Insurance Coverage & Access to Care
 
-Survey respondents indicated that Poverty and Housing Stability &
-Affordable were particularly impactful for the category of Economic
-Wellbeing \[see Figure 59\].
+Survey respondents indicated that Poverty and Housing Stability & Affordable were particularly impactful for the category of Economic Wellbeing \[see Figure 59\].
 
-For the category of Mental Wellbeing & Substance Use, survey respondents
-found Anxiety & Stress to be most impactful, followed by Depression
-\[see Figure 60\].
+For the category of Mental Wellbeing & Substance Use, survey respondents found Anxiety & Stress to be most impactful, followed by Depression \[see Figure 60\].
 
-For the category of Health Insurance Coverage & Access to Care, survey
-respondents indicated that the most impactful areas were Preventive
-Services for Chronic Disease Prevention & Control, as well as Oral
-Health Care \[see
+For the category of Health Insurance Coverage & Access to Care, survey respondents indicated that the most impactful areas were Preventive Services for Chronic Disease Prevention & Control, as well as Oral Health Care \[see
 
 Figure 61\].
 
-The survey provided an opportunity for agency providers to expand upon
-these issues and barriers in an open answer form via Question 8, which
-asked: “Besides lack of money, what are the underlying factors and
-barriers to solving the top 3 issues you identified in the communities
-you serve?”
+The survey provided an opportunity for agency providers to expand upon these issues and barriers in an open answer form via Question 8, which asked: “Besides lack of money, what are the underlying factors and barriers to solving the top 3 issues you identified in the communities you serve?”
 
-Some answers to question 8 are paraphrased in the *Major Findings*
-section. The criteria for selection did not fit a strict definition,
-rather the primary determining factor was when one or more answers were
-in agreement (about an issue or series of issues), those answers were
-synthesized and paraphrased. The following section, R*ecommendations,*
-are based both on the Major Findings, and the results from Figures 55
-through
+Some answers to question 8 are paraphrased in the *Major Findings* section. The criteria for selection did not fit a strict definition, rather the primary determining factor was when one or more answers were in agreement (about an issue or series of issues), those answers were synthesized and paraphrased. The following section, R*ecommendations,* are based both on the Major Findings, and the results from Figures 55 through
 
 Figure 57 (mentioned above).
 
 #### Major Findings
 
-- Language barriers, cultural/religious norms, lack of health literacy,
-  and lack of education were frequently listed as significant barriers
-  to health in Rockland. Examples include:
+-   Language barriers, cultural/religious norms, lack of health literacy, and lack of education were frequently listed as significant barriers to health in Rockland. Examples include:
 
-  - Individuals may have difficulty understanding the nature of their
-    medical condition(s) and how to properly treat/manage them
+    -   Individuals may have difficulty understanding the nature of their medical condition(s) and how to properly treat/manage them
 
-  - Individuals may have fears that medical interventions (such as
-    medications or immunizations) will cause harm instead of helping
-    their condition(s) or preventing disease.
+    -   Individuals may have fears that medical interventions (such as medications or immunizations) will cause harm instead of helping their condition(s) or preventing disease.
 
-  - Individuals may lack awareness of resources that are available to
-    them and/or they may lack the skills or practical ability to access
-    resources once they become aware of such resources.
+    -   Individuals may lack awareness of resources that are available to them and/or they may lack the skills or practical ability to access resources once they become aware of such resources.
 
-- Limited access to affordable housing and poor living conditions cited
-  as significant barriers to health in communities served.
+-   Limited access to affordable housing and poor living conditions cited as significant barriers to health in communities served.
 
-- Limited access to transportation (to medical appointments, grocery
-  stores, etc.), the cost of transportation that is available (car,
-  taxi).
+-   Limited access to transportation (to medical appointments, grocery stores, etc.), the cost of transportation that is available (car, taxi).
 
-- Problems with health insurance, from the difficulty navigating the
-  insurance-healthcare interface, to a limited acceptance of Medicaid by
-  providers.
+-   Problems with health insurance, from the difficulty navigating the insurance-healthcare interface, to a limited acceptance of Medicaid by providers.
 
-- Inadequate community outreach by medical providers, professionals and
-  community groups to assist with health care literacy, navigating
-  insurance. Despite their presence and intent, some community support
-  institutions are not easily accessible by community.
+-   Inadequate community outreach by medical providers, professionals and community groups to assist with health care literacy, navigating insurance. Despite their presence and intent, some community support institutions are not easily accessible by community.
 
-- Stigma surrounding some health conditions/issues, fear of
-  discrimination (related frequently to immigration status), distrust in
-  institutions.
+-   Stigma surrounding some health conditions/issues, fear of discrimination (related frequently to immigration status), distrust in institutions.
 
-- Mental health, substance abuse problems, and unstable/poor living
-  conditions are frequently cited as barriers. This is made worse by a
-  lack of available Mental Health providers for timely appointments, and
-  mental health providers lacking cultural competency.
+-   Mental health, substance abuse problems, and unstable/poor living conditions are frequently cited as barriers. This is made worse by a lack of available Mental Health providers for timely appointments, and mental health providers lacking cultural competency.
 
-- Despite the constraints of the question, several answers included
-  mention of financial constraints as having a significant negative
-  effect on health.
+-   Despite the constraints of the question, several answers included mention of financial constraints as having a significant negative effect on health.
 
 #### Specific Recommendations
 
-- Increase availability of educational services to needy communities,
-  especially for English language education, health literacy, and
-  awareness of services throughout the county, as well as assistance
-  accessing those services.
+-   Increase availability of educational services to needy communities, especially for English language education, health literacy, and awareness of services throughout the county, as well as assistance accessing those services.
 
-- There is a need to a more efficient public transportation system in
-  Rockland that is easier to navigate, links disparate parts of the
-  county together, and facilitates access of public services by needy
-  communities.
+-   There is a need to a more efficient public transportation system in Rockland that is easier to navigate, links disparate parts of the county together, and facilitates access of public services by needy communities.
 
-- Lack access to affordable housing, and poor living conditions in the
-  county remains a serious barrier to a stable, healthy life for many
-  Rockland residents. This is a long-standing problem that requires
-  special attention by local authorities in order to be addressed.
+-   Lack access to affordable housing, and poor living conditions in the county remains a serious barrier to a stable, healthy life for many Rockland residents. This is a long-standing problem that requires special attention by local authorities in order to be addressed.
 
 Figure 55
 
-<img src="media/media/image57.emf" style="width:7.5in;height:2.8in" />
+<img src="media/media/image57.emf" style="width:7.5in;height:2.8in"/>
 
 ```{python}
 #| echo: false
@@ -3292,8 +3377,10 @@ styled_table
 
 Figure 56
 
+```{=html}
 <img src="media/media/image58.emf"
 style="width:7.5in;height:2.75625in" />
+```
 
 ```{python}
 #| echo: false
@@ -3334,7 +3421,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other (please specify): Some additional responses from participants include finding childcare, access to health care providers who are trained in LGBTQIA+ health care needs, mental health services, immigration issues, language and cultural barriers, and financial issues.
@@ -3342,8 +3429,10 @@ Other (please specify): Some additional responses from participants include find
 
 Figure 57
 
+```{=html}
 <img src="media/media/image59.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -3393,8 +3482,10 @@ styled_table
 
 Figure 58
 
+```{=html}
 <img src="media/media/image60.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -3481,13 +3572,17 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
+```{=html}
 <img src="media/media/image61.emf"
 style="width:7.5in;height:2.75694in" />
+```
 
 Figure 60
 
+```{=html}
 <img src="media/media/image62.emf"
 style="width:7.5in;height:2.75694in" />
+```
 
 ```{python}
 #| echo: false
@@ -3581,19 +3676,16 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
+```{=html}
 <img src="media/media/image63.emf"
 style="width:7.5in;height:3.49514in" />
+```
 
 ### Sullivan County
 
-In Sullivan County, 102 responses were collected via the M-H Community
-Partner Survey from service providers that serve various populations.
-The 102 responses represented 46 organizations which contain Sullivan
-County in their service area, including Granet Health and SUNY Sullivan
-\[[see Appendix J](#section-9)\].
+In Sullivan County, 102 responses were collected via the M-H Community Partner Survey from service providers that serve various populations. The 102 responses represented 46 organizations which contain Sullivan County in their service area, including Granet Health and SUNY Sullivan \[[see Appendix J](#section-9)\].
 
-These providers identified the following as the top three issues that
-affect the health of the populations they serve \[see Figure 62\]:
+These providers identified the following as the top three issues that affect the health of the populations they serve \[see Figure 62\]:
 
 1\) Access to mental health providers (n=50)
 
@@ -3601,8 +3693,7 @@ affect the health of the populations they serve \[see Figure 62\]:
 
 3\) Access to affordable, reliable transportation (n=46)
 
-The survey also identified that the top three barriers to people
-achieving better health in Sullivan County were \[see
+The survey also identified that the top three barriers to people achieving better health in Sullivan County were \[see
 
 Figure 63\]:
 
@@ -3612,9 +3703,7 @@ Figure 63\]:
 
 3\) Health literacy (n=45)
 
-When asked about the impact of health issues in Sullivan County, the
-providers identified the following as having the biggest impact on the
-health of the community \[see Figure 64\]:
+When asked about the impact of health issues in Sullivan County, the providers identified the following as having the biggest impact on the health of the community \[see Figure 64\]:
 
 1\) Chronic Disease
 
@@ -3622,65 +3711,46 @@ health of the community \[see Figure 64\]:
 
 3\) Health Disparities
 
-Providers also identified the most impactful topics among the social
-determinants of health \[see
+Providers also identified the most impactful topics among the social determinants of health \[see
 
 Figure 65\]:
 
-1\) Mental Wellbeing and Substance Use (anxiety & stress, suicide,
-depression, substance use, adverse childhood experiences, healthy
-eating) (n=80)
+1\) Mental Wellbeing and Substance Use (anxiety & stress, suicide, depression, substance use, adverse childhood experiences, healthy eating) (n=80)
 
-> 2\) Economic Wellbeing (poverty, unemployment, nutrition security,
-> housing stability & affordability) (n=77)
+> 2\) Economic Wellbeing (poverty, unemployment, nutrition security, housing stability & affordability) (n=77)
 >
-> 3\) Health Insurance Coverage & Access to Care (access to & use of
-> prenatal care, prevention of infant maternal mortality, preventive
-> services for chronic disease prevention & control, oral health care)
-> (n=54)
+> 3\) Health Insurance Coverage & Access to Care (access to & use of prenatal care, prevention of infant maternal mortality, preventive services for chronic disease prevention & control, oral health care) (n=54)
 
-Within the broader social determinants of health, the specific topics
-rated as having the highest impact on health were anxiety & stress,
-poverty, and housing stability & affordability \[see Figures 66 through
-68\].
+Within the broader social determinants of health, the specific topics rated as having the highest impact on health were anxiety & stress, poverty, and housing stability & affordability \[see Figures 66 through 68\].
 
 #### Major Findings
 
-Included in the survey was an open-ended question asking providers to
-identify the underlying factors and barriers, besides lack of money, to
-solving the top 3 issues they identified. The most common responses
-were:
+Included in the survey was an open-ended question asking providers to identify the underlying factors and barriers, besides lack of money, to solving the top 3 issues they identified. The most common responses were:
 
-- Lack of reliable transportation
+-   Lack of reliable transportation
 
-- Lack of knowledge and access to resources, including due to language
-  barriers
+-   Lack of knowledge and access to resources, including due to language barriers
 
-- Lack of providers, particularly specialists and mental health
-  providers
+-   Lack of providers, particularly specialists and mental health providers
 
-- Lack of affordable housing
+-   Lack of affordable housing
 
-- Lack of education and health literacy, along with insufficient
-  resources and staff to help patients navigate the healthcare system,
-  insurance, and other services
+-   Lack of education and health literacy, along with insufficient resources and staff to help patients navigate the healthcare system, insurance, and other services
 
 Generally,
 
-- Mental health was identified as a major issue in the county, as well
-  as a lack of mental health providers.
+-   Mental health was identified as a major issue in the county, as well as a lack of mental health providers.
 
-- Despite the growth of transportation options such as “Move Sullivan,”
-  gaps remain, especially in more rural areas of the county.
+-   Despite the growth of transportation options such as “Move Sullivan,” gaps remain, especially in more rural areas of the county.
 
-- Health literacy, knowledge of resources, and difficulty navigating the
-  healthcare system and accessing providers were frequently identified
-  as barriers to improving health.
+-   Health literacy, knowledge of resources, and difficulty navigating the healthcare system and accessing providers were frequently identified as barriers to improving health.
 
 Figure 62
 
+```{=html}
 <img src="media/media/image64.emf"
 style="width:7.5in;height:3.49514in" />
+```
 
 ```{python}
 #| echo: false
@@ -3723,8 +3793,10 @@ styled_table
 
 Figure 63
 
+```{=html}
 <img src="media/media/image65.emf"
 style="width:7.5in;height:2.60486in" />
+```
 
 ```{python}
 #| echo: false
@@ -3765,7 +3837,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
@@ -3773,8 +3845,10 @@ Other: Some additional responses from participants include lack of transportatio
 
 Figure 64
 
+```{=html}
 <img src="media/media/image66.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -3824,8 +3898,10 @@ styled_table
 
 Figure 65
 
+```{=html}
 <img src="media/media/image67.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -3868,8 +3944,10 @@ styled_table
 
 Figure 66
 
+```{=html}
 <img src="media/media/image68.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -3917,7 +3995,7 @@ styled_table
 
 Figure 67
 
-<img src="media/media/image69.emf" style="width:7.5in;height:2.8in" />
+<img src="media/media/image69.emf" style="width:7.5in;height:2.8in"/>
 
 ```{python}
 #| echo: false
@@ -3967,7 +4045,7 @@ styled_table
 
 Figure 68
 
-<img src="media/media/image70.emf" style="width:7.5in;height:2.8in" />
+<img src="media/media/image70.emf" style="width:7.5in;height:2.8in"/>
 
 ```{python}
 #| echo: false
@@ -4015,13 +4093,9 @@ styled_table
 
 ### Ulster County
 
-In Ulster County, 73 responses were collected from providers that serve
-various populations. Many agencies were represented as respondents to
-the survey, the questions for which can be found in \[[see Appendix
-J](#AppendixK_CommunityPartnerSurveyReferenc)
+In Ulster County, 73 responses were collected from providers that serve various populations. Many agencies were represented as respondents to the survey, the questions for which can be found in \[[see Appendix J](#AppendixK_CommunityPartnerSurveyReferenc)
 
-The survey results showed that the top three issues that affect health
-in Ulster County were \[see Figure 69\]:
+The survey results showed that the top three issues that affect health in Ulster County were \[see Figure 69\]:
 
 1)  Access to affordable, decent, and safe housing
 
@@ -4029,8 +4103,7 @@ in Ulster County were \[see Figure 69\]:
 
 3)  Access to specialty services/providers
 
-The survey also showed that the top three barriers to people achieving
-better health in Ulster County were \[see Figure 70\]:
+The survey also showed that the top three barriers to people achieving better health in Ulster County were \[see Figure 70\]:
 
 1)  Knowledge of existing resources
 
@@ -4038,38 +4111,25 @@ better health in Ulster County were \[see Figure 70\]:
 
 3)  Substance use disorder or alcohol use disorder
 
-Issues highly impacting health in the communities, as listed by the
-providers include chronic disease, mental health and substance use
-issues, and health disparities \[see Figure 71\]. The survey provided an
-opportunity for agency providers to expand upon these issues and
-barriers.
+Issues highly impacting health in the communities, as listed by the providers include chronic disease, mental health and substance use issues, and health disparities \[see Figure 71\]. The survey provided an opportunity for agency providers to expand upon these issues and barriers.
 
 #### Major Findings
 
-- Providers noted affordable housing is limited, and one respondent
-  noted that accessible housing is severely limited.
+-   Providers noted affordable housing is limited, and one respondent noted that accessible housing is severely limited.
 
-- Low availability of mental health services and providers was
-  frequently cited, as well as lack of health literacy surrounding
-  mental health and substance use, and clients’ own mental health and
-  substance use conditions preventing them from either knowing what
-  resources are available or seeking help at all.
+-   Low availability of mental health services and providers was frequently cited, as well as lack of health literacy surrounding mental health and substance use, and clients’ own mental health and substance use conditions preventing them from either knowing what resources are available or seeking help at all.
 
-- Lack of adequate means of transportation in Ulster County. Living in a
-  large county geographically isolates some people from getting the care
-  that they need and the transportation to get to these services.
+-   Lack of adequate means of transportation in Ulster County. Living in a large county geographically isolates some people from getting the care that they need and the transportation to get to these services.
 
-- Poverty, stigma, and culture were all noted as factors that affect
-  likelihood of seeking treatment.
+-   Poverty, stigma, and culture were all noted as factors that affect likelihood of seeking treatment.
 
 #### Specific Recommendations
 
-- Continue to strengthen inter-agency and community relationships to
-  improve awareness of the resources available in the county
+-   Continue to strengthen inter-agency and community relationships to improve awareness of the resources available in the county
 
 Figure 69
 
-<img src="media/media/image71.emf" style="width:7.5in;height:2.8in" />
+<img src="media/media/image71.emf" style="width:7.5in;height:2.8in"/>
 
 ```{python}
 #| echo: false
@@ -4112,7 +4172,7 @@ styled_table
 
 Figure 70
 
-<img src="media/media/image72.emf" style="width:7.5in;height:2.8in" />
+<img src="media/media/image72.emf" style="width:7.5in;height:2.8in"/>
 
 ```{python}
 #| echo: false
@@ -4153,19 +4213,22 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
 :::
 
-*  
-*
+-   
+
+-   
 
 Figure 71
 
+```{=html}
 <img src="media/media/image73.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -4215,8 +4278,10 @@ styled_table
 
 Figure 72
 
+```{=html}
 <img src="media/media/image74.emf"
 style="width:7.5in;height:3.00694in" />
+```
 
 ```{python}
 #| echo: false
@@ -4259,8 +4324,10 @@ styled_table
 
 Figure 73
 
+```{=html}
 <img src="media/media/image75.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -4308,8 +4375,10 @@ styled_table
 
 Figure 74
 
+```{=html}
 <img src="media/media/image76.emf"
 style="width:7.5in;height:2.70208in" />
+```
 
 ```{python}
 #| echo: false
@@ -4359,8 +4428,10 @@ styled_table
 
 Figure 75
 
+```{=html}
 <img src="media/media/image77.emf"
 style="width:7.5in;height:3.49514in" />
+```
 
 ```{python}
 #| echo: false
@@ -4408,98 +4479,60 @@ styled_table
 
 ### Westchester County
 
-From the Hudson Valley Regional Community Partner Surveys, responses
-were collected from 40 providers \[[see Appendix J](#section-9)\]
-located in Westchester County. Those providers identified several issues
-that affect health in Westchester, including \[see Figure 76\]:
+From the Hudson Valley Regional Community Partner Surveys, responses were collected from 40 providers \[[see Appendix J](#section-9)\] located in Westchester County. Those providers identified several issues that affect health in Westchester, including \[see Figure 76\]:
 
-- *Access to mental health providers*
+-   *Access to mental health providers*
 
 <!-- -->
 
-- *Access to specialty services/providers*
+-   *Access to specialty services/providers*
 
-- *Access to affordable, decent, and safe housing*
+-   *Access to affordable, decent, and safe housing*
 
-- *Access to affordable, reliable public transportation*
+-   *Access to affordable, reliable public transportation*
 
-- *Access to affordable, nutritious food*
+-   *Access to affordable, nutritious food*
 
-The respondents also acknowledged barriers to people achieving better
-health in Westchester County, among them, the top three includes \[see
-Figure 77\]:
+The respondents also acknowledged barriers to people achieving better health in Westchester County, among them, the top three includes \[see Figure 77\]:
 
-- *Knowledge of existing resources*
+-   *Knowledge of existing resources*
 
-- *Health literacy*
+-   *Health literacy*
 
-- *Having someone help them understand insurance (Health Navigators)*
+-   *Having someone help them understand insurance (Health Navigators)*
 
-- *Geographic Location – living in rural area*
+-   *Geographic Location – living in rural area*
 
-When asked about the issues highly impacting the health status of
-residents in Westchester communities, these respondents suggested that
-Mental Wellbeing & Substance Use, Economic Wellbeing, and Health
-Insurance Coverage and Access to Care are the top three issues currently
-affecting the communities \[see
+When asked about the issues highly impacting the health status of residents in Westchester communities, these respondents suggested that Mental Wellbeing & Substance Use, Economic Wellbeing, and Health Insurance Coverage and Access to Care are the top three issues currently affecting the communities \[see
 
 Figure 79\].
 
 #### Major Findings
 
-Although an affluent county in general, there are pockets of
-neighborhoods in Westchester County where residents struggle to access
-affordable, decent, and safe housing, and face issues related to
-poverty. These major socioeconomic disadvantages are major root causes
-factors affecting people’s health status.
+Although an affluent county in general, there are pockets of neighborhoods in Westchester County where residents struggle to access affordable, decent, and safe housing, and face issues related to poverty. These major socioeconomic disadvantages are major root causes factors affecting people’s health status.
 
-The partner survey of 40 community care providers identified significant
-challenges affecting the health and well-being of their clients, which
-include low-income individuals, adults, persons with disabilities, those
-experiencing homelessness, and seniors as wells as individuals with
-limited English proficiency. The findings highlighted critical needs,
-pervasive systemic barriers, and the key issues impacting the
-populations served.
+The partner survey of 40 community care providers identified significant challenges affecting the health and well-being of their clients, which include low-income individuals, adults, persons with disabilities, those experiencing homelessness, and seniors as wells as individuals with limited English proficiency. The findings highlighted critical needs, pervasive systemic barriers, and the key issues impacting the populations served.
 
-Ultimately, the survey findings underscore a powerful interrelationship
-between the socioeconomic and health challenges experienced by clients.
-Economic instability, characterized by poverty, unemployment, and
-housing insecurity, directly impacts individuals' mental well-being and
-their ability to access both health insurance and quality healthcare.
+Ultimately, the survey findings underscore a powerful interrelationship between the socioeconomic and health challenges experienced by clients. Economic instability, characterized by poverty, unemployment, and housing insecurity, directly impacts individuals' mental well-being and their ability to access both health insurance and quality healthcare.
 
 #### Specific Recommendations
 
-Based on data collected from the 40 community care providers, three
-major areas need to be addressed in health care and community services:
+Based on data collected from the 40 community care providers, three major areas need to be addressed in health care and community services:
 
-1)  *Mental health and substance use issues – listed it as one of the
-    major issues impacting and/or highly impacting the health status of
-    Westchester residents (with 60.52% listed it as highly impacting and
-    21.05% listed it as impacting)*
+1)  *Mental health and substance use issues – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 60.52% listed it as highly impacting and 21.05% listed it as impacting)*
 
-2)  *Health disparities – listed it as one of the major issues impacting
-    and/or highly impacting the health status of Westchester residents
-    (with 55.26% listed it as highly impacting and 21.0% listed it as
-    impacting)*
+2)  *Health disparities – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 55.26% listed it as highly impacting and 21.0% listed it as impacting)*
 
-3)  *Chronic disease (heart disease, diabetes, asthma, obesity, etc.) –
-    listed it as one of the major issues impacting and/or highly
-    impacting the health status of Westchester residents (with 55.26%
-    listed it as highly impacting and 18.42% listed it as impacting)*
+3)  *Chronic disease (heart disease, diabetes, asthma, obesity, etc.) – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 55.26% listed it as highly impacting and 18.42% listed it as impacting)*
 
-Given the complexity of Westchester County’s geographic, demographic,
-and socioeconomic compositions, a collection of 40 respondents (previous
-Mid-Hudson Community Partner Survey 18 respondents) from the large pool
-of health care and community service providers existing in the county
-can by no means present a thorough picture of current health status and
-service needs of people residing in Westchester. Therefore, the findings
-and recommendations presented in this section are suggestive and only
-shed some light on the possibly more complicated issues to be addressed.
+Given the complexity of Westchester County’s geographic, demographic, and socioeconomic compositions, a collection of 40 respondents (previous Mid-Hudson Community Partner Survey 18 respondents) from the large pool of health care and community service providers existing in the county can by no means present a thorough picture of current health status and service needs of people residing in Westchester. Therefore, the findings and recommendations presented in this section are suggestive and only shed some light on the possibly more complicated issues to be addressed.
 
 Figure 76
 
+```{=html}
 <img src="media/media/image78.emf"
 style="width:7.5in;height:3.49514in" />
+```
 
 ```{python}
 #| echo: false
@@ -4542,8 +4575,10 @@ styled_table
 
 Figure 77
 
+```{=html}
 <img src="media/media/image79.emf"
 style="width:7.49877in;height:2.59394in" />
+```
 
 ```{python}
 #| echo: false
@@ -4584,7 +4619,7 @@ styled_table = style_cha_table(df)
 styled_table
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Note
 
 Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
@@ -4592,8 +4627,10 @@ Other: Some additional responses from participants include lack of transportatio
 
 Figure 78
 
+```{=html}
 <img src="media/media/image80.emf"
 style="width:7.5in;height:2.53939in" />
+```
 
 ```{python}
 #| echo: false
@@ -4643,7 +4680,7 @@ styled_table
 
 Figure 79
 
-<img src="media/media/image81.emf" style="width:7.5in;height:3in" />
+<img src="media/media/image81.emf" style="width:7.5in;height:3in"/>
 
 ```{python}
 #| echo: false
@@ -4686,7 +4723,7 @@ styled_table
 
 Figure 80
 
-<img src="media/media/image82.emf" style="width:7.5in;height:3in" />
+<img src="media/media/image82.emf" style="width:7.5in;height:3in"/>
 
 ```{python}
 #| echo: false
@@ -4734,8 +4771,10 @@ styled_table
 
 Figure 81
 
+```{=html}
 <img src="media/media/image83.emf"
 style="width:7.5in;height:2.90278in" />
+```
 
 ```{python}
 #| echo: false
@@ -4785,8 +4824,10 @@ styled_table
 
 Figure 82
 
+```{=html}
 <img src="media/media/image84.emf"
 style="width:7.5in;height:2.70347in" />
+```
 
 ```{python}
 #| echo: false
@@ -4835,150 +4876,149 @@ styled_table
 ## References
 
 <details>
+
 <summary><strong>Click to view citations</strong></summary>
 
-<span id="cite-1">1. The Atlantic, 2016, <https://www.theatlantic.com/politics/archive/2016/01/how-health-and-homelessness-are-connectedmedically/458871/>, accessed August 2025</span>
+[1. The Atlantic, 2016, <https://www.theatlantic.com/politics/archive/2016/01/how-health-and-homelessness-are-connectedmedically/458871/>, accessed August 2025]{#cite-1}
 
-<span id="cite-2">2. New York State Community Action Association, 2024, <https://nyscaa.memberclicks.net/assets/docs/PovReport2024/2024%20NYS%20Poverty%20Report.pdf>, accessed August 2025</span>
+[2. New York State Community Action Association, 2024, <https://nyscaa.memberclicks.net/assets/docs/PovReport2024/2024%20NYS%20Poverty%20Report.pdf>, accessed August 2025]{#cite-2}
 
-<span id="cite-3">3. World Health Organization. Designing, Implementing, Evaluating, and Scaling Up Parenting Interventions: A Handbook for Decision-Makers and Implementers. Geneva: WHO, 2024, <https://iris.who.int/bitstream/handle/10665/378237/9789240095595-eng.pdf>, accessed August 2025</span>
+[3. World Health Organization. Designing, Implementing, Evaluating, and Scaling Up Parenting Interventions: A Handbook for Decision-Makers and Implementers. Geneva: WHO, 2024, <https://iris.who.int/bitstream/handle/10665/378237/9789240095595-eng.pdf>, accessed August 2025]{#cite-3}
 
-<span id="cite-4">4. Social Security Administration. Research Summary: Education and Lifetime Earnings, 2015, <https://www.ssa.gov/policy/docs/research-summaries/education-earnings.html>, accessed August 2025</span>
+[4. Social Security Administration. Research Summary: Education and Lifetime Earnings, 2015, <https://www.ssa.gov/policy/docs/research-summaries/education-earnings.html>, accessed August 2025]{#cite-4}
 
-<span id="cite-5">5. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/food-insecurity>, accessed August 2025</span>
+[5. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/food-insecurity>, accessed August 2025]{#cite-5}
 
-<span id="cite-6">6. Urban Institute, The National Center for Health in Public Housing, 2017, <https://nchph.org/wp-content/uploads/2017/10/UI-2017-Housing-and-Asthma-among-School-Age-Children-AHS-2015-1.pdf>, accessed August 2025</span>
+[6. Urban Institute, The National Center for Health in Public Housing, 2017, <https://nchph.org/wp-content/uploads/2017/10/UI-2017-Housing-and-Asthma-among-School-Age-Children-AHS-2015-1.pdf>, accessed August 2025]{#cite-6}
 
-<span id="cite-7">7. Housing Infographic, 2022, <https://infograph.venngage.com/ps/BDxQHEPVBXs/housing>, accessed August 2025</span>
+[7. Housing Infographic, 2022, <https://infograph.venngage.com/ps/BDxQHEPVBXs/housing>, accessed August 2025]{#cite-7}
 
-<span id="cite-8">8. Joint Center for Housing Studies of Harvard University, 2017, <https://www.jchs.harvard.edu/sites/default/files/harvard_jchs_state_of_the_nations_housing_2017_chap6.pdf>, accessed August 2025</span>
+[8. Joint Center for Housing Studies of Harvard University, 2017, <https://www.jchs.harvard.edu/sites/default/files/harvard_jchs_state_of_the_nations_housing_2017_chap6.pdf>, accessed August 2025]{#cite-8}
 
-<span id="cite-9">9. World Population Review, Average Family Size by State, 2025, <https://worldpopulationreview.com/state-rankings/average-family-size-by-state>, accessed August 2025</span>
+[9. World Population Review, Average Family Size by State, 2025, <https://worldpopulationreview.com/state-rankings/average-family-size-by-state>, accessed August 2025]{#cite-9}
 
-<span id="cite-10">10. United States Census Bureau, 2025, <https://www.census.gov/topics/income-poverty/poverty/guidance/poverty-measures.html>, accessed August 2025</span>
+[10. United States Census Bureau, 2025, <https://www.census.gov/topics/income-poverty/poverty/guidance/poverty-measures.html>, accessed August 2025]{#cite-10}
 
-<span id="cite-11">11. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/poverty>, accessed August 2025</span>
+[11. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/poverty>, accessed August 2025]{#cite-11}
 
-<span id="cite-12">12. Robert Wood Johnson Foundation, 2013, <https://www.rwjf.org/en/library/research/2012/12/how-does-employment--or-unemployment--affect-health-.html>, accessed August 2025</span>
+[12. Robert Wood Johnson Foundation, 2013, <https://www.rwjf.org/en/library/research/2012/12/how-does-employment--or-unemployment--affect-health-.html>, accessed August 2025]{#cite-12}
 
-<span id="cite-13">13. Feeding America, 2025, <https://www.feedingamerica.org/hunger-in-america/child-hunger-facts#:~:text=Poor%20academic%20performance,%2C%20playing%20sports%2C%20and%20graduating>, accessed August 2025</span>
+[13. Feeding America, 2025, <https://www.feedingamerica.org/hunger-in-america/child-hunger-facts#:~:text=Poor%20academic%20performance,%2C%20playing%20sports%2C%20and%20graduating>, accessed August 2025]{#cite-13}
 
-<span id="cite-14">14. Feeding America, 2023, <https://www.feedingamerica.org/hunger-in-america>, accessed August 2025</span>
+[14. Feeding America, 2023, <https://www.feedingamerica.org/hunger-in-america>, accessed August 2025]{#cite-14}
 
-<span id="cite-15">15. Feeding America, 2023, <https://www.feedingamerica.org/sites/default/files/2023-05/Map%20the%20Meal%20Gap%202023.pdf>, accessed August 2025</span>
+[15. Feeding America, 2023, <https://www.feedingamerica.org/sites/default/files/2023-05/Map%20the%20Meal%20Gap%202023.pdf>, accessed August 2025]{#cite-15}
 
-<span id="cite-17">17. Health Poverty Action, 2018, <https://www.healthpovertyaction.org/news-events/key-facts-poverty-and-poor-health/>, accessed August 2025</span>
+[17. Health Poverty Action, 2018, <https://www.healthpovertyaction.org/news-events/key-facts-poverty-and-poor-health/>, accessed August 2025]{#cite-17}
 
-<span id="cite-18">18. American Educational Research Journal, National Library of Medicine, 2011, <https://pmc.ncbi.nlm.nih.gov/articles/PMC2920529/>, accessed August 2025</span>
+[18. American Educational Research Journal, National Library of Medicine, 2011, <https://pmc.ncbi.nlm.nih.gov/articles/PMC2920529/>, accessed August 2025]{#cite-18}
 
-<span id="cite-19">19. United for Alice, 2020, <https://www.unitedforalice.org/national-overview>, accessed August 2025</span>
+[19. United for Alice, 2020, <https://www.unitedforalice.org/national-overview>, accessed August 2025]{#cite-19}
 
-<span id="cite-20">20. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/high-school-graduation>, accessed August 2025</span>
+[20. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/high-school-graduation>, accessed August 2025]{#cite-20}
 
-<span id="cite-21">21. Learning Policy Institute, Pushed Out: Trends and Disparities in Out-of-School Suspensions, 2022, <https://learningpolicyinstitute.org/product/crdc-school-suspension-report>, accessed August 2025</span>
+[21. Learning Policy Institute, Pushed Out: Trends and Disparities in Out-of-School Suspensions, 2022, <https://learningpolicyinstitute.org/product/crdc-school-suspension-report>, accessed August 2025]{#cite-21}
 
-<span id="cite-22">22. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/child-development/about/?CDC_AAref_Val=https://www.cdc.gov/ncbddd/childdevelopment/facts.html>, accessed August 2025</span>
+[22. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/child-development/about/?CDC_AAref_Val=https://www.cdc.gov/ncbddd/childdevelopment/facts.html>, accessed August 2025]{#cite-22}
 
-<span id="cite-23">23. World Health Organization, 2020, <https://apps.who.int/iris/bitstream/handle/10665/331306/9789240002098-eng.pdf?sequence=1&isAllowed=y>, accessed August 2025</span>
+[23. World Health Organization, 2020, <https://apps.who.int/iris/bitstream/handle/10665/331306/9789240002098-eng.pdf?sequence=1&isAllowed=y>, accessed August 2025]{#cite-23}
 
-<span id="cite-24">24. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/early-childhood-development-and-education>, accessed August 2025</span>
+[24. Healthy People 2030, US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/early-childhood-development-and-education>, accessed August 2025]{#cite-24}
 
-<span id="cite-25">25. Division of Violence Prevention, National Center for Injury Prevention and Control, Centers for Disease Control and Prevention, 2019, <https://www.cdc.gov/violence-prevention/?CDC_AAref_Val=https://www.cdc.gov/violenceprevention/pdf/preventingACES.pdf>, accessed August 2025</span>
+[25. Division of Violence Prevention, National Center for Injury Prevention and Control, Centers for Disease Control and Prevention, 2019, <https://www.cdc.gov/violence-prevention/?CDC_AAref_Val=https://www.cdc.gov/violenceprevention/pdf/preventingACES.pdf>, accessed August 2025]{#cite-25}
 
-<span id="cite-26">26. Healthy People 2030 (ODPHP). Enrollment in Higher Education — Literature Summary, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/enrollment-higher-education>, accessed August 2025</span>
+[26. Healthy People 2030 (ODPHP). Enrollment in Higher Education — Literature Summary, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/enrollment-higher-education>, accessed August 2025]{#cite-26}
 
-<span id="cite-27">27. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/language-and-literacy>, accessed August 2025</span>
+[27. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/language-and-literacy>, accessed August 2025]{#cite-27}
 
-<span id="cite-28">28. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/civic-participation>, accessed August 2025</span>
+[28. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/civic-participation>, accessed August 2025]{#cite-28}
 
-<span id="cite-29">29. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2022, <https://www.countyhealthrankings.org/app/new-york/2022/measure/factors/149/description>, accessed September 2022</span>
+[29. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2022, <https://www.countyhealthrankings.org/app/new-york/2022/measure/factors/149/description>, accessed September 2022]{#cite-29}
 
-<span id="cite-30">30. Measure of America, 2025, <http://measureofamerica.org/disconnected-youth/>, accessed July 2022</span>
+[30. Measure of America, 2025, <http://measureofamerica.org/disconnected-youth/>, accessed July 2022]{#cite-30}
 
-<span id="cite-31">31. National Institute of Food and Agriculture, United States Department of Agriculture, 4-H National Headquarters, 2017, <https://www.nifa.usda.gov/sites/default/files/resource/disconnected-youth-fact-sheet-2017-08-11.pdf>, accessed July 2022</span>
+[31. National Institute of Food and Agriculture, United States Department of Agriculture, 4-H National Headquarters, 2017, <https://www.nifa.usda.gov/sites/default/files/resource/disconnected-youth-fact-sheet-2017-08-11.pdf>, accessed July 2022]{#cite-31}
 
-<span id="cite-32">32. National Institutes of Health, National Institute on Minority Health and Health Disparities, US Department of Health and Human Services, Notice of Intent to Publish a Funding Opportunity Announcement: Understanding and Addressing the Impact of Structural Racism and Discrimination on Minority Health and Health Disparities (NOT-MD-21-016) — Key Definitions, 2021, <https://grants.nih.gov/grants/guide/notice-files/NOT-MD-21-016.html>, accessed August 2025</span>
+[32. National Institutes of Health, National Institute on Minority Health and Health Disparities, US Department of Health and Human Services, Notice of Intent to Publish a Funding Opportunity Announcement: Understanding and Addressing the Impact of Structural Racism and Discrimination on Minority Health and Health Disparities (NOT-MD-21-016) — Key Definitions, 2021, <https://grants.nih.gov/grants/guide/notice-files/NOT-MD-21-016.html>, accessed August 2025]{#cite-32}
 
-<span id="cite-33">33. Centers for Disease Control and Prevention, How Racism Leads to Cancer Health Disparities, 2025, <https://www.cdc.gov/cancer/health-equity/racism-health-disparities.html>, accessed August 2025</span>
+[33. Centers for Disease Control and Prevention, How Racism Leads to Cancer Health Disparities, 2025, <https://www.cdc.gov/cancer/health-equity/racism-health-disparities.html>, accessed August 2025]{#cite-33}
 
-<span id="cite-34">34. National Institutes of Health, National Institute on Minority Health and Health Disparities, PhenX Toolkit: Discrimination Major Experiences and Everyday Discrimination Scales, 2025, <https://www.phenxtoolkit.org/protocols/view/210302>, accessed August 2025</span>
+[34. National Institutes of Health, National Institute on Minority Health and Health Disparities, PhenX Toolkit: Discrimination Major Experiences and Everyday Discrimination Scales, 2025, <https://www.phenxtoolkit.org/protocols/view/210302>, accessed August 2025]{#cite-34}
 
-<span id="cite-35">35. Centers for Disease Control and Prevention, Preventing Chronic Disease (2024) "Residential segregation is a poignant example of environmental racism…", 2025, <https://www.cdc.gov/pcd/issues/2024/pdf/23_0248.pdf>, accessed August 2025</span>
+[35. Centers for Disease Control and Prevention, Preventing Chronic Disease (2024) "Residential segregation is a poignant example of environmental racism…", 2025, <https://www.cdc.gov/pcd/issues/2024/pdf/23_0248.pdf>, accessed August 2025]{#cite-35}
 
-<span id="cite-36">36. U.S. Department of Housing and Urban Development, Housing Discrimination Under the Fair Housing Act, 2025, <https://www.hud.gov/helping-americans/fair-housing-act-overview>, accessed August 2025</span>
+[36. U.S. Department of Housing and Urban Development, Housing Discrimination Under the Fair Housing Act, 2025, <https://www.hud.gov/helping-americans/fair-housing-act-overview>, accessed August 2025]{#cite-36}
 
-<span id="cite-37">37. University of Wisconsin Population Health Institute, County Health Rankings and Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/social-and-economic-factors/safety-and-social-support/residential-segregation-blackwhite?year=2025>, accessed August 2025</span>
+[37. University of Wisconsin Population Health Institute, County Health Rankings and Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/social-and-economic-factors/safety-and-social-support/residential-segregation-blackwhite?year=2025>, accessed August 2025]{#cite-37}
 
-<span id="cite-38">38. US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, Healthy People 2030, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-health-services>, accessed August 2025</span>
+[38. US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, Healthy People 2030, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-health-services>, accessed August 2025]{#cite-38}
 
-<span id="cite-39">39. US Census Bureau, Survey of Income and Program Participation, Survey Year 2023, Table 2, 2025, <https://www.census.gov/data/tables/2023/demo/wealth/wealth-asset-ownership.html>, accessed August 2025</span>
+[39. US Census Bureau, Survey of Income and Program Participation, Survey Year 2023, Table 2, 2025, <https://www.census.gov/data/tables/2023/demo/wealth/wealth-asset-ownership.html>, accessed August 2025]{#cite-39}
 
-<span id="cite-40">40. US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, Healthy People 2030, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-primary-care>, accessed August 2025</span>
+[40. US Department of Health and Human Services, Office of Disease Prevention and Health Promotion, Healthy People 2030, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-primary-care>, accessed August 2025]{#cite-40}
 
-<span id="cite-41">41. American College of Emergency Physicians, 2022, <https://www.acep.org/patient-care/policy-statements/urgent-care-centers/>, accessed August 2025</span>
+[41. American College of Emergency Physicians, 2022, <https://www.acep.org/patient-care/policy-statements/urgent-care-centers/>, accessed August 2025]{#cite-41}
 
-<span id="cite-42">42. Urgent Care vs. Emergency Department, 2025, <https://www.skagitregionalhealth.org/programs-services/urgent-care/when-to-use-urgent-care>, accessed August 2025</span>
+[42. Urgent Care vs. Emergency Department, 2025, <https://www.skagitregionalhealth.org/programs-services/urgent-care/when-to-use-urgent-care>, accessed August 2025]{#cite-42}
 
-<span id="cite-43">43. The Evolving Role of Emergency Departments in the United States. Rand Health Quarterly, 2013, <https://pmc.ncbi.nlm.nih.gov/articles/PMC4945168/>, accessed August 2025</span>
+[43. The Evolving Role of Emergency Departments in the United States. Rand Health Quarterly, 2013, <https://pmc.ncbi.nlm.nih.gov/articles/PMC4945168/>, accessed August 2025]{#cite-43}
 
-<span id="cite-44">44. Characteristics and Costs of Potentially Preventable Inpatient Stays, 2017, <https://hcup-us.ahrq.gov/reports/statbriefs/sb259-Potentially-Preventable-Hospitalizations-2017.jsp>, accessed August 2025</span>
+[44. Characteristics and Costs of Potentially Preventable Inpatient Stays, 2017, <https://hcup-us.ahrq.gov/reports/statbriefs/sb259-Potentially-Preventable-Hospitalizations-2017.jsp>, accessed August 2025]{#cite-44}
 
-<span id="cite-45">45. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/health-literacy-healthy-people-2030>, accessed August 2025</span>
+[45. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/health-literacy-healthy-people-2030>, accessed August 2025]{#cite-45}
 
-<span id="cite-46">46. World Health Organization – Health Literacy, 2024, <https://www.who.int/news-room/fact-sheets/detail/health-literacy#:~:text=Health%20literacy%20is%20associated%20with,health%20policies%20and%20allocating%20resources>, accessed August 2025</span>
+[46. World Health Organization – Health Literacy, 2024, <https://www.who.int/news-room/fact-sheets/detail/health-literacy#:~:text=Health%20literacy%20is%20associated%20with,health%20policies%20and%20allocating%20resources>, accessed August 2025]{#cite-46}
 
-<span id="cite-47">47. Dietary Guidelines for Americans, US Department of Agriculture, Department of Health and Human Services, 2020, <https://www.dietaryguidelines.gov/sites/default/files/2021-03/Dietary_Guidelines_for_Americans-2020-2025.pdf>, accessed August 2025</span>
+[47. Dietary Guidelines for Americans, US Department of Agriculture, Department of Health and Human Services, 2020, <https://www.dietaryguidelines.gov/sites/default/files/2021-03/Dietary_Guidelines_for_Americans-2020-2025.pdf>, accessed August 2025]{#cite-47}
 
-<span id="cite-48">48. Centers for Disease Control and Prevention, 2022, <https://www.cdc.gov/chronic-disease/prevention/index.html#:~:text=Eat%20Healthy,Have%20Healthier%20Meals%20and%20Snacks>, accessed August 2025</span>
+[48. Centers for Disease Control and Prevention, 2022, <https://www.cdc.gov/chronic-disease/prevention/index.html#:~:text=Eat%20Healthy,Have%20Healthier%20Meals%20and%20Snacks>, accessed August 2025]{#cite-48}
 
-<span id="cite-49">49. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/chronic-disease/living-with/index.html#:~:text=Eat%20healthy%20foods,within%20your%20daily%20calorie%20needs>, accessed August 2025</span>
+[49. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/chronic-disease/living-with/index.html#:~:text=Eat%20healthy%20foods,within%20your%20daily%20calorie%20needs>, accessed August 2025]{#cite-49}
 
-<span id="cite-50">50. Economic Research Service, US Department of Agriculture, 2025, <https://www.ers.usda.gov/topics/food-choices-health/food-access/>, accessed August 2025</span>
+[50. Economic Research Service, US Department of Agriculture, 2025, <https://www.ers.usda.gov/topics/food-choices-health/food-access/>, accessed August 2025]{#cite-50}
 
-<span id="cite-51">51. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-foods-support-healthy-eating-patterns#cit14>, accessed August 2025</span>
+[51. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/access-foods-support-healthy-eating-patterns#cit14>, accessed August 2025]{#cite-51}
 
-<span id="cite-52">52. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/health-infrastructure/health-promotion-and-harm-reduction/food-environment-index?year=2025>, accessed August 2025</span>
+[52. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/health-infrastructure/health-promotion-and-harm-reduction/food-environment-index?year=2025>, accessed August 2025]{#cite-52}
 
-<span id="cite-53">53. US Department of Agriculture, Economic Research Service, Food Environment Atlas, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/health-infrastructure/health-promotion-and-harm-reduction/food-environment-index?year=2025>, accessed August 2025</span>
+[53. US Department of Agriculture, Economic Research Service, Food Environment Atlas, 2025, <https://www.countyhealthrankings.org/health-data/community-conditions/health-infrastructure/health-promotion-and-harm-reduction/food-environment-index?year=2025>, accessed August 2025]{#cite-53}
 
-<span id="cite-54">54. Preventive Medicine, National Library of Medicine, 2015, <https://pmc.ncbi.nlm.nih.gov/articles/PMC4134936/#:~:text=This%20neighborhood%20had%20lower%20perceived,%2C%20in%20turn%2C%20increases%20weight>, accessed August 2025</span>
+[54. Preventive Medicine, National Library of Medicine, 2015, <https://pmc.ncbi.nlm.nih.gov/articles/PMC4134936/#:~:text=This%20neighborhood%20had%20lower%20perceived,%2C%20in%20turn%2C%20increases%20weight>, accessed August 2025]{#cite-54}
 
-<span id="cite-55">55. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/crime-and-violence>, accessed August 2025</span>
+[55. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/crime-and-violence>, accessed August 2025]{#cite-55}
 
-<span id="cite-56">56. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/environmental-conditions>, accessed August 2025</span>
+[56. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/environmental-conditions>, accessed August 2025]{#cite-56}
 
-<span id="cite-57">57. United States Environmental Protection Agency, 2023, <https://www.epa.gov/newsreleases/epa-report-shows-disproportionate-impacts-climate-change-socially-vulnerable>, accessed August 2025</span>
+[57. United States Environmental Protection Agency, 2023, <https://www.epa.gov/newsreleases/epa-report-shows-disproportionate-impacts-climate-change-socially-vulnerable>, accessed August 2025]{#cite-57}
 
-<span id="cite-58">58. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/app/new-york/2022/measure/factors/125/description>, accessed August 2025</span>
+[58. University of Wisconsin Population Health Institute, County Health Rankings & Roadmaps, Robert Wood Johnson Foundation, 2025, <https://www.countyhealthrankings.org/app/new-york/2022/measure/factors/125/description>, accessed August 2025]{#cite-58}
 
-<span id="cite-59">59. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/drinking-water/causes/index.html>, accessed August 2025</span>
+[59. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/drinking-water/causes/index.html>, accessed August 2025]{#cite-59}
 
-<span id="cite-60">60. US Geological Survey, Water Science School, 2018, <https://www.usgs.gov/special-topic/water-science-school/science/runoff-surface-and-overland-water-runoff?qt-science_center_objects=0#qt-science_center_objects>, accessed August 2025</span>
+[60. US Geological Survey, Water Science School, 2018, <https://www.usgs.gov/special-topic/water-science-school/science/runoff-surface-and-overland-water-runoff?qt-science_center_objects=0#qt-science_center_objects>, accessed August 2025]{#cite-60}
 
-<span id="cite-61">61. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/drinking-water/about/water-quality-and-your-health.html>, accessed August 2025</span>
+[61. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/drinking-water/about/water-quality-and-your-health.html>, accessed August 2025]{#cite-61}
 
-<span id="cite-62">62. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/nceh/lead/prevention/health-effects.htm>, accessed August 2025</span>
+[62. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/nceh/lead/prevention/health-effects.htm>, accessed August 2025]{#cite-62}
 
-<span id="cite-63">63. World Health Organization – Lead Poisoning, 2024, <https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health#:~:text=Sources%20and%20routes%20of%20exposure,pregnancy%20and%20expose%20the%20fetus.>, accessed August 2025</span>
+[63. World Health Organization – Lead Poisoning, 2024, <https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health#:~:text=Sources%20and%20routes%20of%20exposure,pregnancy%20and%20expose%20the%20fetus.>, accessed August 2025]{#cite-63}
 
-<span id="cite-64">64. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/lead-prevention/prevention/?CDC_AAref_Val=https://www.cdc.gov/nceh/lead/prevention/sources.htm>, accessed August 2025</span>
+[64. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/lead-prevention/prevention/?CDC_AAref_Val=https://www.cdc.gov/nceh/lead/prevention/sources.htm>, accessed August 2025]{#cite-64}
 
-<span id="cite-65">65. United States Environmental Protection Agency, 2024, <https://www.epa.gov/lead/what-most-significant-source-childhood-lead-exposure-residence#:~:text=Answer%3A%20The%20scientific%20literature%20suggests%20that%20nationally%20lead-contaminated,home.%20This%20dust%20may%20accumulate%20to%20unsafe%20levels>, accessed August 2025</span>
+[65. United States Environmental Protection Agency, 2024, <https://www.epa.gov/lead/what-most-significant-source-childhood-lead-exposure-residence#:~:text=Answer%3A%20The%20scientific%20literature%20suggests%20that%20nationally%20lead-contaminated,home.%20This%20dust%20may%20accumulate%20to%20unsafe%20levels>, accessed August 2025]{#cite-65}
 
-<span id="cite-66">66. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/lead-prevention/risk-factors/?CDC_AAref_Val=https://www.cdc.gov/nceh/lead/prevention/populations.htm>, accessed August 2025</span>
+[66. Centers for Disease Control and Prevention, 2024, <https://www.cdc.gov/lead-prevention/risk-factors/?CDC_AAref_Val=https://www.cdc.gov/nceh/lead/prevention/populations.htm>, accessed August 2025]{#cite-66}
 
-<span id="cite-67">67. New York State Department of Health, 2025, <https://www.health.ny.gov/environmental/lead/>, accessed August 2025</span>
+[67. New York State Department of Health, 2025, <https://www.health.ny.gov/environmental/lead/>, accessed August 2025]{#cite-67}
 
-<span id="cite-68">68. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/quality-housing>, accessed August 2025</span>
+[68. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/quality-housing>, accessed August 2025]{#cite-68}
 
-<span id="cite-69">69. Journal of Community Health, National Library of Medicine, National Center for Biotechnology Information, 2014, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4265215/>, accessed August 2025</span>
+[69. Journal of Community Health, National Library of Medicine, National Center for Biotechnology Information, 2014, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4265215/>, accessed August 2025]{#cite-69}
 
-<span id="cite-70">70. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation>, accessed August 2025</span>
+[70. Healthy People 2030, Office of Disease Prevention and Health Promotion, US Department of Health and Human Services, 2025, <https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation>, accessed August 2025]{#cite-70}
 
-<span id="cite-71">71. Elsevier Ltd., ScienceDirect, 2020, <https://reader.elsevier.com/reader/sd/pii/S2590198220301494?token=CF722B942BA01129C596B52298FF8C7D1F1F4F21256458ED5630257A6DACF91D844AAC3FC8413BCC277B984F0630B7C3&originRegion=us-east-1&originCreation=20220804131701>, accessed August 2022</span>
+[71. Elsevier Ltd., ScienceDirect, 2020, <https://reader.elsevier.com/reader/sd/pii/S2590198220301494?token=CF722B942BA01129C596B52298FF8C7D1F1F4F21256458ED5630257A6DACF91D844AAC3FC8413BCC277B984F0630B7C3&originRegion=us-east-1&originCreation=20220804131701>, accessed August 2022]{#cite-71}
 
-<span id="cite-72">72. Harvard Business School, 2021, <https://hbswk.hbs.edu/item/commuting-kills-productivity-and-your-best-talent-suffers-most>, accessed August 2025</span>
-
-
+[72. Harvard Business School, 2021, <https://hbswk.hbs.edu/item/commuting-kills-productivity-and-your-best-talent-suffers-most>, accessed August 2025]{#cite-72}
 
 </details>
