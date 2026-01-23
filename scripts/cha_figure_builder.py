@@ -78,16 +78,7 @@ def _y_range(values: pd.Series, start_at_zero: bool, padding: float, is_bar_grap
     y_min = float(values.min())
     y_max = float(values.max())
     
-    if is_bar_graph:
-        # For bar graphs: always start at 0, end at 100 if max <= 100, otherwise round up
-        y_min = 0.0
-        if y_max <= 100:
-            y_max = 100.0
-        else:
-            y_max = _round_up_to_nice_number(y_max)
-        return [y_min, y_max]
-    
-    # Original logic for non-bar graphs
+    # Use original logic for all graph types (bar graphs and line graphs)
     if start_at_zero:
         y_min = 0.0
     y_span = y_max - y_min
