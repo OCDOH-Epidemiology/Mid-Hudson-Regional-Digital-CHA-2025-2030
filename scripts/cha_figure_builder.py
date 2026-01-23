@@ -60,9 +60,34 @@ def _series_dashes(series: list[str], overrides: dict[str, str] | None = None) -
     return dashes
 
 
-def _y_range(values: pd.Series, start_at_zero: bool, padding: float) -> list[float]:
+def _round_up_to_nice_number(value: float) -> float:
+    """
+    Round up to the next nice round number.
+    Examples: 92 -> 100, 150 -> 200, 250 -> 300, 850 -> 900, 950 -> 1000
+    """
+    if value <= 0:
+        return 100.0
+    if value <= 100:
+        return 100.0
+    
+    # For values > 100, round up to the next 100
+    return ((int(value) // 100) + 1) * 100
+
+
+def _y_range(values: pd.Series, start_at_zero: bool, padding: float, is_bar_graph: bool = False) -> list[float]:
     y_min = float(values.min())
     y_max = float(values.max())
+    
+    if is_bar_graph:
+        # For bar graphs: always start at 0, end at 100 if max <= 100, otherwise round up
+        y_min = 0.0
+        if y_max <= 100:
+            y_max = 100.0
+        else:
+            y_max = _round_up_to_nice_number(y_max)
+        return [y_min, y_max]
+    
+    # Original logic for non-bar graphs
     if start_at_zero:
         y_min = 0.0
     y_span = y_max - y_min
@@ -79,7 +104,21 @@ def _apply_layout(
     width: int,
     height: int,
     font_family: str,
+    is_bar_graph: bool = False,
 ) -> None:
+    yaxis_dict = dict(
+        title=dict(text=y_axis_title, font=dict(size=14, family=font_family)),
+        showgrid=True,
+        gridcolor="rgba(128, 128, 128, 0.2)",
+        gridwidth=1,
+    )
+    
+    if y_range:
+        yaxis_dict["range"] = y_range
+        if is_bar_graph:
+            # For bar graphs, disable autorange to ensure the range stays fixed
+            yaxis_dict["autorange"] = False
+    
     fig.update_layout(
         xaxis=dict(
             title=dict(text=x_axis_title, font=dict(size=14, family=font_family)),
@@ -87,13 +126,7 @@ def _apply_layout(
             gridcolor="rgba(128, 128, 128, 0.2)",
             gridwidth=1,
         ),
-        yaxis=dict(
-            title=dict(text=y_axis_title, font=dict(size=14, family=font_family)),
-            range=y_range,
-            showgrid=True,
-            gridcolor="rgba(128, 128, 128, 0.2)",
-            gridwidth=1,
-        ),
+        yaxis=yaxis_dict,
         hovermode="x unified",
         legend=dict(
             x=1.02,
@@ -211,7 +244,7 @@ def build_clustered_bar_figure(
         )
 
     y_values = df[ordered].to_numpy().flatten()
-    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding)
+    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding, is_bar_graph=True)
     _apply_layout(
         fig=fig,
         x_axis_title=x_axis_title,
@@ -220,6 +253,7 @@ def build_clustered_bar_figure(
         width=width,
         height=height,
         font_family=font_family,
+        is_bar_graph=True,
     )
     fig.update_layout(barmode="group")
     return fig
@@ -264,7 +298,7 @@ def build_stacked_bar_figure(
         )
 
     totals = df[ordered].sum(axis=1)
-    y_range = _y_range(pd.Series(totals), start_at_zero, y_padding)
+    y_range = _y_range(pd.Series(totals), start_at_zero, y_padding, is_bar_graph=True)
     _apply_layout(
         fig=fig,
         x_axis_title=x_axis_title,
@@ -273,6 +307,7 @@ def build_stacked_bar_figure(
         width=width,
         height=height,
         font_family=font_family,
+        is_bar_graph=True,
     )
     fig.update_layout(barmode="stack")
     return fig

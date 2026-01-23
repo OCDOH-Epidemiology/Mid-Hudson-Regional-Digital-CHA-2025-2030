@@ -1,0 +1,2546 @@
+---
+title: "Mid-Hudson Community Partner Survey"
+jupyter: python3
+execute:
+  freeze: auto
+toc-depth: 4
+---
+
+## Mid-Hudson Community Partner Survey
+
+### Background
+
+In order to ensure that the needs of underrepresented populations were accounted for in the M-H Region CHA, a survey was administered to community partners that serve these populations. Underrepresented populations include those who have a low-income, veterans, seniors, people experiencing homelessness, LGBTQIA+ members, and people with a mental health diagnosis. The term “partners” refers to those who offer services such as mental health support, vocational programs, and programs for underserved populations. Surveying partners was completed to gain a better understanding of the obstacles and barriers these populations are facing when trying to access services.
+
+Dutchess, Orange, Rockland, Sullivan, Ulster, and Westchester Counties created a survey tool based on the survey utilized in 2018 and 2022. Each participating LHD shared a survey link with partners to supply additional insight around local factors influencing community health. The survey covered several topics including the populations the partners serve, the issues that affect health in the communities they serve, barriers to people achieving better health, and interventions that are used to address social determinants of health \[[see Appendix I](#section-8)\]. Throughout the M-H Region, 328 surveys were completed by partners between May 2 and July 1, 2025. The answers to the survey varied throughout each county. Some counties chose to further investigate these differences by conducting focus groups.
+
+When looking at data from the M-H Region, the top three issues partners felt affected health in their communities included: access to mental health providers, access to affordable, decent, and safe housing, and access to affordable, nutritious food. The top three barriers partners felt prevented people from achieving better health in their communities were: knowledge of existing resources, health literacy, and geographic location (living in a rural area). Chronic disease, mental health and substance use issues, and health disparities were thought to highly impact these specific populations in the M-H Region. When considering the social determinants of health and the domains and priorities of the Prevention Agenda, partners said that economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care impacted the populations they serve the most.
+
+In the following sections, the data was broken down by each county with two primary sections: Major Findings and Specific Recommendations. These data points can help guide work to address the needs of underserved populations. Putnam County elected to participate in an alternative survey of community partners done in collaboration with Nuvance Health. The findings of this survey are summarized in the Putnam County section below.
+
+### Dutchess County
+
+In Dutchess County, 109 responses were collected from providers that serve a variety of populations \[[see Appendix J](#section-9)\]. The Dutchess County Department of Health distributed the regional partner survey through various organizations and initiatives including the Eastern Dutchess Rural Health Network, Dutchess County Bringing Agencies Together, the Poughkeepsie Healthy Black and Latinx Coalition, Fit Dutchess, and the Community Health Committees at both Vassar Brothers Medical Center and Northern Dutchess Hospital.
+
+#### Major Findings
+
+The survey showed that the top three issues that affected health in Dutchess County were \[see
+
+Figure 36\]:
+
+1)  Access to affordable, nutritious food
+
+2)  Access to mental health providers
+
+3)  Access to affordable, decent and safe housing
+
+The survey also showed that the top three barriers to people achieving better health in Dutchess County were \[see Figure 37\]:
+
+> 1\) Knowledge of existing resources
+>
+> 2\) Health literacy
+>
+> 3\) Geographic location – living in a rural area
+
+According to survey responses, issues highly impacting health in Dutchess communities include mental health and substance use issues, chronic disease, and health disparities \[see Figure 38\].
+
+When considering the social determinants of health, issues highly impacting Dutchess communities include economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care \[See Figure 39\]. Within these social determinants of health categories, highly rated issues include poverty, anxiety and stress, and preventive services for chronic disease prevention and control \[see Figures 40 through 42\].
+
+Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money/funding was excluded from the question. Common responses included:
+
+-   Resources exist, but the community does not know that they exist or how to access them.
+
+<!-- -->
+
+-   There is a lack of healthcare providers in the county, and it is difficult to schedule timely appointments with those that do exist. This included both primary care, specialists, and mental health providers.
+
+-   Transportation was a commonly cited barrier and was discussed in relation to both healthcare access and accessing everyday essentials, like healthy foods.
+
+-   More support for those without English as a first language or for those who recently moved to the county is needed.
+
+-   Inadequate health insurance coverage or navigation prevents residents from accessing healthcare.
+
+#### Specific Recommendations
+
+-   Improve coordination across county agencies and specialty services
+
+-   Educate providers and patients on available resources and insurance benefits
+
+-   Expand primary and specialized medical services, especially for Medicaid/Medicare, English as a second language, and IDD populations
+
+-   Improve access to transportation
+
+-   Increase care management capacity, especially for those with mental health and cognitive disabilities
+
+**Figure** 36
+
+```{=html}
+<img src="media/media/image38.emf"
+style="width:7.5in;height:3.99097in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-issues
+#| tbl-cap: "Top Issues Affecting Health in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data - transpose for better display
+data = {
+    " ": ["Access to affordable, nutritious food", "Access to mental health providers", "Access to affordable, decent and safe housing", "Access to specialty services/providers", "Access to affordable, reliable transportation", "Access to affordable health insurance", "Access to medical providers", "Access to culturally sensitive health care providers", "Access to high quality education", "Access to clean water and non-polluted air"],
+    "Percentage": [48.62, 47.71, 46.79, 42.20, 40.37, 34.86, 18.35, 11.93, 8.26, 0.92]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+<figure>
+
+<img src="media/media/image39.emf" style="width:7.5in;height:2.59861in"/>
+
+<figcaption>
+
+<p>Figure 37</p>
+
+</figcaption>
+
+</figure>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Health literacy", "Geographic location- living in a rural area", "Having someone to help them understand their medical condition", "Having someone help them understand insurance", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Other", "Geographic location- living in an urban area", "Attainment of education", "Having a safe place to play and/or exercise", "Quality of education", "Cultural customs"],
+    "Percentage": [77.06, 51.38, 34.86, 32.11, 25.69, 25.69, 17.43, 9.17, 7.34, 6.42, 6.42, 6.42]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
+:::
+
+Figure
+
+```{=html}
+<img src="media/media/image40.emf"
+style="width:7.5in;height:2.59861in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-health-issues
+#| tbl-cap: "Impact of Health Issues in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [6.67, 3.81, 20.95, 16.19, 52.38],
+    "Health Disparities": [3.88, 8.74, 18.50, 25.24, 43.69],
+    "Mental Health and Substance Use Issues": [4.90, 6.86, 13.70, 22.60, 51.96],
+    "Maternal and Child Health Issues": [22.30, 12.60, 26.20, 14.60, 24.30],
+    "Environmental Factors": [17.60, 17.70, 24.50, 19.60, 19.60],
+    "Communicable Diseases": [21.20, 19.20, 28.90, 14.40, 14.40]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 39
+
+```{=html}
+<img src="media/media/image41.emf"
+style="width:7.5in;height:3.00417in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Economic Wellbeing", "Mental Wellbeing & Substance Use", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [77.67, 73.79, 49.51, 48.54, 28.16, 25.24]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 40
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-economic
+#| tbl-cap: "Economic Wellbeing Impact in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [3.88, 5.83, 24.27, 12.62, 53.40],
+    "Unemployment": [6.91, 10.20, 26.32, 28.95, 27.63],
+    "Nutrition Security": [5.00, 7.00, 28.00, 23.00, 37.00],
+    "Housing Stability & Affordability": [3.57, 8.77, 19.48, 21.10, 47.08]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+```{=html}
+<img src="media/media/image42.emf"
+style="width:7.5in;height:3.00417in" />
+```
+
+F**igure 41**
+
+```{=html}
+<img src="media/media/image43.emf"
+style="width:7.5in;height:2.69722in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.00, 2.61, 12.38, 23.78, 60.91],
+    "Suicide": [20.41, 17.35, 27.55, 19.39, 15.31],
+    "Depression": [2.00, 12.00, 17.00, 28.00, 41.00],
+    "Substance Use": [11.11, 11.11, 23.23, 15.15, 39.39],
+    "Adverse Childhood Experiences": [4.04, 10.10, 24.24, 28.28, 33.33],
+    "Healthy Eating": [4.95, 5.94, 23.76, 27.72, 37.62]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 42
+
+```{=html}
+<img src="media/media/image44.emf"
+style="width:7.5in;height:2.69722in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dutchess-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Dutchess County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [27.55, 14.29, 24.49, 13.27, 20.41],
+    "Prevention of Infant & Maternal Mortality": [29.59, 14.29, 26.53, 11.22, 18.37],
+    "Preventive Services for Chronic Disease Prevention & Control": [3.03, 11.11, 18.18, 22.22, 45.45],
+    "Oral Health Care": [7.00, 12.00, 19.00, 23.00, 39.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+### Orange County
+
+In Orange County, 170 survey responses were collected from community service providers \[[see Appendix J](#section-9)\] that are engaged with a wide array of at-risk populations. The Orange County Department of Health distributed the regional partner survey through healthcare provider listservs and collaborative coalitions including the Changing the Ecosystem Task Force, the Orange County Infection Control Committee, and Orange County Community Health Assessment Hospital partnerships. Respondents included members of government agencies, health care organizations, advocacy groups, and others who serve a wide variety of populations in the county.
+
+#### Major Findings
+
+The survey showed that the top three issues that affected health in Orange County were \[See Figure 43\]:
+
+1)  Access to mental health providers
+
+2)  Access to affordable, decent and safe housing
+
+3)  Access to specialty services/providers
+
+The survey also showed that the top three barriers to people achieving better health in Orange County were \[see Figure 44\]:
+
+> 1\) Knowledge of existing resources
+>
+> 2\) Health literacy
+>
+> 3\) Geographic location – living in a rural area
+
+According to survey responses, issues highly impacting health in Orange County include chronic disease, mental health and substance use issues communities include, and health disparities \[see Figure 45\]. When asked to consider the social determinants of health, respondents reported mental wellbeing and substance use (77.5%), economic wellbeing (76.9%), and access to care including health insurance (61.9%) were the most impacted areas \[see Figure 46\]. Within the category of Economic Wellbeing, poverty (50.3%) and housing stability & affordability (49.7%) were identified as the most significant concerns, with each rated as highly impactful by approximately half of all respondents \[see Figure 47\]. Within the mental wellbeing and substance use category, anxiety and stress and depression were rated as major concerns that affect the health of the communities they serve \[see Figure 48\]. Within health insurance coverage and access to care, preventative services for chronic disease prevention (40%) and control and oral health care (30.7%) were identified as the top concerns. \[see Figure 49\]
+
+Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money/funding was excluded from the question. Common responses included:
+
+-   Lack of medical providers particularly in primary care, mental health, and specialists including loss of workforce without incoming practitioners to replace them
+
+-   Lack of services outside regular workweek hours
+
+-   Lack of affordable and reliable transportation and public transit routes, particularly for uninsured individuals and non-Medicaid patients
+
+-   Lack of affordable, safe, and stable housing
+
+-   Language and cultural barriers
+
+-   Lack of affordable childcare and unstable caregiver support for aging population
+
+-   Health literacy, education and communication
+
+-   Lack of awareness of available resources and limited internet access and digit skills
+
+-   Fragmented and uncoordinated services, no centralized referral system
+
+#### Specific Recommendations
+
+-   Improve coordination across county agencies and specialty services
+
+-   Create plain-language, multilingual health education materials and campaigns, and train healthcare providers to deliver culturally competent care
+
+-   Expand, recruit, and train healthcare providers to expand both physical and mental healthcare services
+
+-   Expand public transit options
+
+-   Advocate for affordable housing and childcare
+
+**Figure 43**
+
+```{=html}
+<img src="media/media/image45.emf"
+style="width:7.5in;height:3.29931in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-issues
+#| tbl-cap: "Top Issues Affecting Health in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Access to mental health providers", "Access to affordable, decent and safe housing", "Access to specialty services/providers", "Access to affordable, reliable transportation", "Access to affordable health insurance", "Access to affordable, nutritious food", "Access to medical providers", "Access to culturally sensitive health care providers", "Access to high quality education", "Access to clean water and non-polluted air"],
+    "Percentage": [58.24, 42.35, 40.59, 37.65, 36.47, 34.12, 30.00, 10.59, 10.00, 0.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+**Figure 44**
+
+```{=html}
+<img src="media/media/image46.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Health literacy", "Geographic location- living in a rural area", "Having someone to help them understand their medical condition", "Having someone help them understand insurance", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Other", "Cultural customs", "Having a safe place to play and/or exercise", "Quality of education", "Geographic location- living in an urban area", "Attainment of education"],
+    "Percentage": [67.06, 50.59, 32.35, 31.18, 28.82, 27.65, 21.18, 9.41, 8.24, 8.24, 7.65, 7.65]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other: some additional responses include lack of providers, transportation, housing issues, and being low income but not qualifying for benefits.
+:::
+
+Figure
+
+```{=html}
+<img src="media/media/image47.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-health-issues
+#| tbl-cap: "Impact of Health Issues in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [3.11, 5.59, 12.42, 15.53, 63.35],
+    "Health Disparities": [4.40, 5.03, 18.87, 28.30, 43.40],
+    "Mental Health and Substance Use Issues": [3.73, 4.97, 15.53, 19.88, 55.90],
+    "Maternal and Child Health Issues": [16.88, 10.00, 31.25, 18.75, 23.13],
+    "Environmental Factors": [16.05, 15.43, 33.95, 17.90, 16.67],
+    "Communicable Diseases": [19.02, 14.72, 32.52, 15.95, 17.79]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+<figure>
+
+<img src="media/media/image48.emf" style="width:7.5in;height:3.10417in"/>
+
+<figcaption>
+
+<p>Figure 46</p>
+
+</figcaption>
+
+</figure>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Mental Wellbeing & Substance Use", "Economic Wellbeing", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [77.50, 76.88, 61.88, 48.75, 18.75, 16.25]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 47
+
+```{=html}
+<img src="media/media/image49.emf"
+style="width:7.5in;height:3.10417in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-economic
+#| tbl-cap: "Economic Wellbeing Impact in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [1.89, 5.66, 20.75, 21.38, 50.31],
+    "Unemployment": [5.70, 8.86, 28.48, 31.01, 25.95],
+    "Nutrition Security": [3.85, 8.33, 25.64, 27.56, 34.62],
+    "Housing Stability & Affordability": [2.52, 5.66, 23.27, 18.87, 49.69]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 48
+
+```{=html}
+<img src="media/media/image50.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.00, 1.91, 8.28, 26.11, 63.69],
+    "Suicide": [14.29, 20.78, 25.97, 23.38, 15.58],
+    "Depression": [1.27, 5.73, 13.38, 31.21, 48.41],
+    "Substance Use": [7.74, 8.39, 21.29, 24.52, 38.06],
+    "Adverse Childhood Experiences": [9.68, 11.61, 22.58, 28.39, 27.74],
+    "Healthy Eating": [3.82, 9.55, 21.66, 27.39, 37.58]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-orange-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Orange County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [18.83, 14.29, 29.87, 16.88, 20.13],
+    "Prevention of Infant & Maternal Mortality": [21.43, 18.83, 28.57, 15.58, 15.58],
+    "Preventive Services for Chronic Disease Prevention & Control": [3.23, 8.39, 20.65, 27.74, 40.00],
+    "Oral Health Care": [8.33, 7.05, 23.08, 30.77, 30.77]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 49
+
+```{=html}
+<img src="media/media/image51.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+### Putnam County
+
+To foster collaboration with our local hospital system, Putnam County elected to participate in an alternative survey of community partners. During the summer of 2024 [Nuvance Health](https://www.nuvancehealth.org/) and Local Health Departments (LHDs) within the Nuvance service area worked collaboratively with the healthcare data analytics and consulting company, [DataGen®, Inc.](https://datagen.info/) to promote and administer the [Community-based Organization (CBO) Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf) \[[see Appendix K](#AppendixK_PutnamNuvanceCommunityBased)\] to employees of partner organizations located in the Nuvance service area. Like the M-H Community Partner Survey, the CBO Survey aims to enrich CHA data from secondary sources and population-based surveys with insight into the needs of the populations served by responding organizations.
+
+The survey instrument was based on a standardized template provided by DataGen and modified by Nuvance and the Putnam County Department of Health (PCDOH) to meet local needs. The instrument was designed to collect information from CBO employees regarding the observed needs of the clients and communities they serve. Survey topics included questions to explore health status, access to healthcare, main health problems, ways to improve health in the populations served by respondents, and trusted sources of health information. The survey was hosted by SurveyMonkey between May 21st, 2024, and September 16<sup>th</sup>, 2024, and disseminated in person to attendees of the Public Health Summit hosted by PCDOH on June 6<sup>th</sup>, 2024, and via email to PCDOH and Nuvance partner distribution lists.
+
+One hundred and twenty-eight responses were collected from individuals working for CBOs serving residents of Putnam County. Nearly half of the responses were collected at the Putnam County Public Health Summit. The other half of respondents received invitations to participate via email distribution lists, their employers, or at coalition meetings. The respondents represented a total of 49 different organizations across 15 sectors. Healthcare was the most highly represented sector (33%), and Nuvance Health was the most highly represented organization, accounting for 26% of all respondents and 71% of healthcare sector respondents. Mental Health/Substance Misuse was the second most represented sector, accounting for 16% of all respondents from ten different organizations. PCDOH was the second most represented organization, accounting for 13% of all respondents and 87% of health department sector respondents.
+
+Survey respondents considered the biggest health problems in populations served in Putnam County \[see Figure 50\] to be:
+
+1)  Mental Health
+
+2)  Access to healthcare providers
+
+3)  Substance Misuse
+
+Survey respondents thought the following would be most helpful to improve health of populations served in Putnam County \[see Figure 51\]:
+
+> 1\) Mental Health Services
+>
+> 2\) Transportation
+>
+> 3\) Affordable Housing
+
+According to survey respondents, health screenings or education topics that would be most valuable to those they serve include mental health, chronic disease management, and drug and alcohol misuse \[see Figure 52\].
+
+When considering access to healthcare, most respondents (77%) think that the people/communities they serve have problems getting needed healthcare. The most common barriers were cost (52%), lack of transportation (44%), and lack of available appointments (40%) \[see Figure 53\]. Lack of insurance and inability to pay copays or deductibles were both specified by about ¾ of respondents as cost associated barriers. The most common reasons specified for lack of appointment availability were long wait times (93%), providers not accepting new patients (78%), and lack of appointments at times when patients are available (65%).
+
+#### Major Findings
+
+-   CBO Survey respondents generally gave lower health ratings to those they serve (57% fair or poor health, physical or mental health not specified) than the self-reported ratings of Putnam residents found in the population-based [Mid-Hudson Region Community Health Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf) \[[see Appendix L](#section-11)\] (18% fair or poor physical health, 23% fair or poor mental health). This may be indicative of poorer overall health in populations seeking services with respondents than that of the general population.
+
+-   Opinions varied by sector on the top three health problems faced, services most helpful to improve health, and most beneficial health screenings or education topics; however mental health/mental health services were consistently the first or second top choice of respondents for all three of these questions, regardless of sector.
+
+-   Access to healthcare providers was the second most common choice for the biggest health problem faced, and more than three quarters of respondents think the populations they serve have trouble accessing needed healthcare. Multiple factors attributable to patients (e.g. lack of insurance or transportation) and providers (e.g. appointment availability) are contributing to difficulties accessing healthcare.
+
+-   Affordable housing and access to transportation were among the top three things selected as most helpful to improve health in 44% and 45% of respondents respectively.
+
+-   Respondents in all sectors most frequently selected healthcare providers as trusted sources of health information for the populations they serve. Friends and family members were selected second most commonly in all sectors but healthcare, where more traditional sources of health information (health departments, hospitals, and schools/colleges) were more commonly selected \[See Figure 54\].
+
+#### Specific Recommendations
+
+-   Responses to this survey were obtained through convenience sampling, and as such results should be considered representative of respondents rather than all Putnam County residents served by community-based organizations. Results are most appropriately viewed through the lens of respondent distribution by sector and organization, with the understanding that results are skewed toward the experiences and opinions of respondents working in more highly represented sectors (i.e.: healthcare, mental health and substance misuse, health departments) and organizations (i.e.: Nuvance Health, PCDOH).
+
+-   Findings of this survey should be considered alongside other components of the CHA when setting priorities for community health improvement planning, with particular attention paid to indicators related to mental health and healthcare access.
+
+-   Local leaders should consider downstream health benefits of policies which address social determinants of health such as affordable housing and access to transportation.
+
+Figure 50
+
+```{=html}
+<img src="media/media/image52.emf"
+style="width:7.5in;height:3.99097in" />
+```
+
+Figure 51
+
+<img src="media/media/image53.emf" style="width:7.31in;height:3.89in"/>
+
+Figure 52
+
+<img src="media/media/image54.emf" style="width:7.13in;height:4.58in"/>
+
+Figure 53
+
+```{=html}
+<img src="media/media/image55.emf"
+style="width:7.5in;height:3.99375in" />
+```
+
+Figure 54
+
+```{=html}
+<img src="media/media/image56.emf"
+style="width:7.5in;height:3.99375in" />
+```
+
+### Rockland County
+
+In Rockland County, 135 survey responses were collected from community service providers that are engaged with various at-risk populations such as persons experiencing homelessness, persons with disabilities, persons with a mental health diagnosis, persons with substance use disorders, veterans, seniors, non-English speakers, and low-income individuals \[[see Appendix J](#section-9)\]. The Rockland County Department of Health distributed the regional partner survey via internal listservs of medical providers, the listservs of the Haverstraw, Spring Valley, and Western Ramapo Collaboratives, the Rockland County Dept. of Mental Health, as well as the United Way of Rockland, and our Hospital Partners at WMC Health and Montefiore Nyack. Respondents included members of government agencies, health care organizations, primary and secondary schools, advocacy groups, non-profits and others.
+
+The results showed that the top three issues that affect health in Rockland County were \[see Figure 55\]:
+
+1\) Access to mental health providers
+
+2\) Access to affordable, decent, and safe housing
+
+3\) Access to affordable specialty services/providers
+
+The survey also showed that the top three barriers to people achieving better health in Rockland County were \[see Figure 56\].
+
+> 1\) Knowledge of existing resources
+
+2\) Health Literacy
+
+3\) Having someone to help them understand their medical condition
+
+Issues highly impacting health in the communities as listed by the providers include \[see
+
+Figure 57\]:
+
+-   Chronic disease
+
+-   Health Disparities
+
+-   Mental health and substance use issues
+
+The top three areas of impact of the Social Determinants of Health in Rockland County were \[see Figure 58\].
+
+1.  Economic Wellbeing
+
+2.  Mental Wellbeing & Substance Use
+
+3.  Health Insurance Coverage & Access to Care
+
+Survey respondents indicated that Poverty and Housing Stability & Affordable were particularly impactful for the category of Economic Wellbeing \[see Figure 59\].
+
+For the category of Mental Wellbeing & Substance Use, survey respondents found Anxiety & Stress to be most impactful, followed by Depression \[see Figure 60\].
+
+For the category of Health Insurance Coverage & Access to Care, survey respondents indicated that the most impactful areas were Preventive Services for Chronic Disease Prevention & Control, as well as Oral Health Care \[see
+
+Figure 61\].
+
+The survey provided an opportunity for agency providers to expand upon these issues and barriers in an open answer form via Question 8, which asked: “Besides lack of money, what are the underlying factors and barriers to solving the top 3 issues you identified in the communities you serve?”
+
+Some answers to question 8 are paraphrased in the *Major Findings* section. The criteria for selection did not fit a strict definition, rather the primary determining factor was when one or more answers were in agreement (about an issue or series of issues), those answers were synthesized and paraphrased. The following section, R*ecommendations,* are based both on the Major Findings, and the results from Figures 55 through
+
+Figure 57 (mentioned above).
+
+#### Major Findings
+
+-   Language barriers, cultural/religious norms, lack of health literacy, and lack of education were frequently listed as significant barriers to health in Rockland. Examples include:
+
+    -   Individuals may have difficulty understanding the nature of their medical condition(s) and how to properly treat/manage them
+
+    -   Individuals may have fears that medical interventions (such as medications or immunizations) will cause harm instead of helping their condition(s) or preventing disease.
+
+    -   Individuals may lack awareness of resources that are available to them and/or they may lack the skills or practical ability to access resources once they become aware of such resources.
+
+-   Limited access to affordable housing and poor living conditions cited as significant barriers to health in communities served.
+
+-   Limited access to transportation (to medical appointments, grocery stores, etc.), the cost of transportation that is available (car, taxi).
+
+-   Problems with health insurance, from the difficulty navigating the insurance-healthcare interface, to a limited acceptance of Medicaid by providers.
+
+-   Inadequate community outreach by medical providers, professionals and community groups to assist with health care literacy, navigating insurance. Despite their presence and intent, some community support institutions are not easily accessible by community.
+
+-   Stigma surrounding some health conditions/issues, fear of discrimination (related frequently to immigration status), distrust in institutions.
+
+-   Mental health, substance abuse problems, and unstable/poor living conditions are frequently cited as barriers. This is made worse by a lack of available Mental Health providers for timely appointments, and mental health providers lacking cultural competency.
+
+-   Despite the constraints of the question, several answers included mention of financial constraints as having a significant negative effect on health.
+
+#### Specific Recommendations
+
+-   Increase availability of educational services to needy communities, especially for English language education, health literacy, and awareness of services throughout the county, as well as assistance accessing those services.
+
+-   There is a need to a more efficient public transportation system in Rockland that is easier to navigate, links disparate parts of the county together, and facilitates access of public services by needy communities.
+
+-   Lack access to affordable housing, and poor living conditions in the county remains a serious barrier to a stable, healthy life for many Rockland residents. This is a long-standing problem that requires special attention by local authorities in order to be addressed.
+
+Figure 55
+
+<img src="media/media/image57.emf" style="width:7.5in;height:2.8in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-issues
+#| tbl-cap: "Top Issues Affecting Health in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Access to mental health providers", "Access to affordable, decent and safe housing", "Access to specialty services/providers", "Access to affordable health insurance", "Access to affordable, reliable transportation", "Access to affordable, nutritious food", "Access to medical providers", "Access to culturally sensitive health care providers", "Access to high quality education", "Access to clean water and non-polluted air"],
+    "Percentage": [50.37, 46.67, 42.96, 38.52, 31.85, 29.63, 27.41, 17.04, 14.07, 1.48]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 56
+
+```{=html}
+<img src="media/media/image58.emf"
+style="width:7.5in;height:2.75625in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Health literacy", "Having someone to help them understand their medical condition", "Having someone help them understand insurance", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Other", "Cultural customs", "Geographic location- living in a rural area", "Having a safe place to play and/or exercise", "Quality of education", "Attainment of education", "Geographic location- living in an urban area"],
+    "Percentage": [65.93, 59.26, 34.07, 26.67, 23.70, 21.48, 19.26, 18.52, 9.63, 9.63, 6.67, 5.19]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other (please specify): Some additional responses from participants include finding childcare, access to health care providers who are trained in LGBTQIA+ health care needs, mental health services, immigration issues, language and cultural barriers, and financial issues.
+:::
+
+Figure 57
+
+```{=html}
+<img src="media/media/image59.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-health-issues
+#| tbl-cap: "Impact of Health Issues in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [5.43, 2.33, 16.28, 21.71, 54.26],
+    "Health Disparities": [4.65, 6.20, 22.48, 27.13, 39.53],
+    "Mental Health and Substance Use Issues": [3.13, 6.25, 17.97, 24.22, 48.44],
+    "Maternal and Child Health Issues": [14.62, 16.15, 28.46, 20.00, 20.77],
+    "Environmental Factors": [16.03, 19.85, 28.24, 17.56, 18.32],
+    "Communicable Diseases": [21.37, 16.03, 30.53, 18.32, 13.74]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 58
+
+```{=html}
+<img src="media/media/image60.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Economic Wellbeing", "Mental Wellbeing & Substance Use", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [79.69, 70.31, 68.75, 46.88, 17.19, 17.19]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 59
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-economic
+#| tbl-cap: "Economic Wellbeing Impact in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [2.36, 6.30, 22.05, 21.26, 48.03],
+    "Unemployment": [3.25, 12.20, 26.83, 30.89, 26.83],
+    "Nutrition Security": [6.40, 14.40, 23.20, 28.00, 28.00],
+    "Housing Stability & Affordability": [2.38, 9.52, 19.84, 23.81, 44.44]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+```{=html}
+<img src="media/media/image61.emf"
+style="width:7.5in;height:2.75694in" />
+```
+
+Figure 60
+
+```{=html}
+<img src="media/media/image62.emf"
+style="width:7.5in;height:2.75694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.80, 2.40, 15.20, 20.00, 61.60],
+    "Suicide": [18.70, 17.89, 30.89, 19.51, 13.01],
+    "Depression": [1.63, 5.69, 24.39, 28.46, 39.84],
+    "Substance Use": [11.38, 11.38, 24.39, 21.95, 30.89],
+    "Adverse Childhood Experiences": [12.20, 10.57, 23.58, 28.46, 25.20],
+    "Healthy Eating": [3.23, 12.10, 21.77, 29.03, 33.87]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 61
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rockland-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Rockland County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [23.58, 15.45, 26.83, 16.26, 17.89],
+    "Prevention of Infant & Maternal Mortality": [27.64, 17.89, 28.46, 11.38, 14.63],
+    "Preventive Services for Chronic Disease Prevention & Control": [8.13, 7.32, 23.58, 25.20, 35.77],
+    "Oral Health Care": [9.84, 7.38, 28.69, 22.13, 31.97]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+```{=html}
+<img src="media/media/image63.emf"
+style="width:7.5in;height:3.49514in" />
+```
+
+### Sullivan County
+
+In Sullivan County, 102 responses were collected via the M-H Community Partner Survey from service providers that serve various populations. The 102 responses represented 46 organizations which contain Sullivan County in their service area, including Granet Health and SUNY Sullivan \[[see Appendix J](#section-9)\].
+
+These providers identified the following as the top three issues that affect the health of the populations they serve \[see Figure 62\]:
+
+1\) Access to mental health providers (n=50)
+
+2\) Access to affordable, decent, and safe housing (n=49)
+
+3\) Access to affordable, reliable transportation (n=46)
+
+The survey also identified that the top three barriers to people achieving better health in Sullivan County were \[see
+
+Figure 63\]:
+
+1\) Knowledge of existing resources (n=64)
+
+2\) Geographic location living in a rural area (n=49)
+
+3\) Health literacy (n=45)
+
+When asked about the impact of health issues in Sullivan County, the providers identified the following as having the biggest impact on the health of the community \[see Figure 64\]:
+
+1\) Chronic Disease
+
+2\) Mental Health and Substance Use Issues
+
+3\) Health Disparities
+
+Providers also identified the most impactful topics among the social determinants of health \[see
+
+Figure 65\]:
+
+1\) Mental Wellbeing and Substance Use (anxiety & stress, suicide, depression, substance use, adverse childhood experiences, healthy eating) (n=80)
+
+> 2\) Economic Wellbeing (poverty, unemployment, nutrition security, housing stability & affordability) (n=77)
+>
+> 3\) Health Insurance Coverage & Access to Care (access to & use of prenatal care, prevention of infant maternal mortality, preventive services for chronic disease prevention & control, oral health care) (n=54)
+
+Within the broader social determinants of health, the specific topics rated as having the highest impact on health were anxiety & stress, poverty, and housing stability & affordability \[see Figures 66 through 68\].
+
+#### Major Findings
+
+Included in the survey was an open-ended question asking providers to identify the underlying factors and barriers, besides lack of money, to solving the top 3 issues they identified. The most common responses were:
+
+-   Lack of reliable transportation
+
+-   Lack of knowledge and access to resources, including due to language barriers
+
+-   Lack of providers, particularly specialists and mental health providers
+
+-   Lack of affordable housing
+
+-   Lack of education and health literacy, along with insufficient resources and staff to help patients navigate the healthcare system, insurance, and other services
+
+Generally,
+
+-   Mental health was identified as a major issue in the county, as well as a lack of mental health providers.
+
+-   Despite the growth of transportation options such as “Move Sullivan,” gaps remain, especially in more rural areas of the county.
+
+-   Health literacy, knowledge of resources, and difficulty navigating the healthcare system and accessing providers were frequently identified as barriers to improving health.
+
+Figure 62
+
+```{=html}
+<img src="media/media/image64.emf"
+style="width:7.5in;height:3.49514in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-issues
+#| tbl-cap: "Top Issues Affecting Health in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Access to mental health providers", "Access to affordable, decent and safe housing", "Access to affordable, reliable transportation", "Access to affordable, nutritious food", "Access to specialty services/providers", "Access to affordable health insurance", "Access to medical providers", "Access to high quality education", "Access to culturally sensitive health care providers", "Access to clean water and non-polluted air"],
+    "Percentage": [49.02, 48.04, 45.10, 40.20, 38.24, 32.35, 23.53, 14.71, 8.82, 0.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 63
+
+```{=html}
+<img src="media/media/image65.emf"
+style="width:7.5in;height:2.60486in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Geographic location- living in a rural area", "Health literacy", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Having someone to help them understand their medical condition", "Having someone help them understand insurance", "Other", "Quality of education", "Having a safe place to play and/or exercise", "Attainment of education", "Cultural customs", "Geographic location- living in an urban area"],
+    "Percentage": [62.75, 48.04, 44.12, 36.27, 29.41, 22.55, 21.57, 10.78, 8.82, 5.88, 4.90, 4.90]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
+:::
+
+Figure 64
+
+```{=html}
+<img src="media/media/image66.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-health-issues
+#| tbl-cap: "Impact of Health Issues in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [5.15, 4.12, 14.43, 19.59, 56.70],
+    "Health Disparities": [3.13, 5.21, 19.79, 27.08, 44.79],
+    "Mental Health and Substance Use Issues": [4.12, 6.19, 13.40, 19.59, 56.70],
+    "Maternal and Child Health Issues": [9.28, 10.31, 35.05, 16.49, 28.87],
+    "Environmental Factors": [12.37, 19.59, 31.96, 14.43, 21.65],
+    "Communicable Diseases": [17.35, 14.29, 29.59, 21.43, 17.35]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 65
+
+```{=html}
+<img src="media/media/image67.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Mental Wellbeing & Substance Use", "Economic Wellbeing", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [83.33, 80.21, 56.25, 44.79, 20.83, 14.58]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 66
+
+```{=html}
+<img src="media/media/image68.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-economic
+#| tbl-cap: "Economic Wellbeing Impact in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [1.05, 5.26, 20.00, 16.84, 56.84],
+    "Unemployment": [4.21, 7.37, 24.21, 34.74, 29.47],
+    "Nutrition Security": [2.13, 5.32, 31.91, 24.47, 36.17],
+    "Housing Stability & Affordability": [2.11, 6.32, 24.21, 16.84, 50.53]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 67
+
+<img src="media/media/image69.emf" style="width:7.5in;height:2.8in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.00, 1.08, 10.75, 20.43, 67.74],
+    "Suicide": [10.87, 14.13, 32.61, 27.17, 15.22],
+    "Depression": [0.00, 6.45, 17.20, 31.18, 45.16],
+    "Substance Use": [5.49, 8.79, 21.98, 24.18, 39.56],
+    "Adverse Childhood Experiences": [7.61, 13.04, 21.74, 23.91, 33.70],
+    "Healthy Eating": [3.23, 7.53, 18.28, 33.33, 37.63]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 68
+
+<img src="media/media/image70.emf" style="width:7.5in;height:2.8in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sullivan-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Sullivan County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [9.78, 13.04, 35.87, 25.00, 16.30],
+    "Prevention of Infant & Maternal Mortality": [11.96, 19.57, 31.52, 22.83, 14.13],
+    "Preventive Services for Chronic Disease Prevention & Control": [1.09, 8.70, 20.65, 31.52, 38.04],
+    "Oral Health Care": [5.43, 7.61, 23.91, 34.78, 28.26]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+### Ulster County
+
+In Ulster County, 73 responses were collected from providers that serve various populations. Many agencies were represented as respondents to the survey, the questions for which can be found in \[[see Appendix J](#AppendixK_CommunityPartnerSurveyReferenc)
+
+The survey results showed that the top three issues that affect health in Ulster County were \[see Figure 69\]:
+
+1)  Access to affordable, decent, and safe housing
+
+2)  Access to mental health providers
+
+3)  Access to specialty services/providers
+
+The survey also showed that the top three barriers to people achieving better health in Ulster County were \[see Figure 70\]:
+
+1)  Knowledge of existing resources
+
+2)  Health literacy
+
+3)  Substance use disorder or alcohol use disorder
+
+Issues highly impacting health in the communities, as listed by the providers include chronic disease, mental health and substance use issues, and health disparities \[see Figure 71\]. The survey provided an opportunity for agency providers to expand upon these issues and barriers.
+
+#### Major Findings
+
+-   Providers noted affordable housing is limited, and one respondent noted that accessible housing is severely limited.
+
+-   Low availability of mental health services and providers was frequently cited, as well as lack of health literacy surrounding mental health and substance use, and clients’ own mental health and substance use conditions preventing them from either knowing what resources are available or seeking help at all.
+
+-   Lack of adequate means of transportation in Ulster County. Living in a large county geographically isolates some people from getting the care that they need and the transportation to get to these services.
+
+-   Poverty, stigma, and culture were all noted as factors that affect likelihood of seeking treatment.
+
+#### Specific Recommendations
+
+-   Continue to strengthen inter-agency and community relationships to improve awareness of the resources available in the county
+
+Figure 69
+
+<img src="media/media/image71.emf" style="width:7.5in;height:2.8in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-issues
+#| tbl-cap: "Top Issues Affecting Health in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Access to affordable, decent and safe housing", "Access to mental health providers", "Access to specialty services/providers", "Access to affordable, nutritious food", "Access to affordable, reliable transportation", "Access to affordable health insurance", "Access to medical providers", "Access to high quality education", "Access to culturally sensitive health care providers", "Access to clean water and non-polluted air"],
+    "Percentage": [52.05, 50.68, 43.84, 39.73, 36.99, 30.14, 24.66, 10.96, 10.96, 0.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 70
+
+<img src="media/media/image72.emf" style="width:7.5in;height:2.8in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Health literacy", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Having someone to help them understand their medical condition", "Geographic location- living in a rural area", "Having someone help them understand insurance", "Other", "Quality of education", "Having a safe place to play and/or exercise", "Geographic location- living in an urban area", "Cultural customs", "Attainment of education"],
+    "Percentage": [65.75, 46.58, 38.36, 36.99, 35.62, 27.40, 20.55, 9.59, 6.85, 5.48, 4.11, 2.74]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
+:::
+
+-   
+
+-   
+
+Figure 71
+
+```{=html}
+<img src="media/media/image73.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-health-issues
+#| tbl-cap: "Impact of Health Issues in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [2.86, 4.29, 14.29, 18.57, 60.00],
+    "Health Disparities": [2.86, 5.71, 10.00, 31.43, 50.00],
+    "Mental Health and Substance Use Issues": [2.86, 5.71, 14.29, 20.00, 57.14],
+    "Maternal and Child Health Issues": [13.04, 8.70, 34.78, 14.49, 28.99],
+    "Environmental Factors": [15.71, 15.71, 30.00, 18.57, 20.00],
+    "Communicable Diseases": [16.90, 19.72, 30.99, 14.08, 18.31]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 72
+
+```{=html}
+<img src="media/media/image74.emf"
+style="width:7.5in;height:3.00694in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Economic Wellbeing", "Mental Wellbeing & Substance Use", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [84.29, 78.57, 60.00, 47.14, 18.57, 11.43]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 73
+
+```{=html}
+<img src="media/media/image75.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-economic
+#| tbl-cap: "Economic Wellbeing Impact in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [1.45, 1.45, 20.29, 20.29, 56.52],
+    "Unemployment": [1.47, 7.35, 22.06, 38.24, 30.88],
+    "Nutrition Security": [2.99, 5.97, 23.88, 29.85, 37.31],
+    "Housing Stability & Affordability": [2.90, 2.90, 20.29, 20.29, 53.62]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 74
+
+```{=html}
+<img src="media/media/image76.emf"
+style="width:7.5in;height:2.70208in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.00, 1.49, 5.97, 31.34, 61.19],
+    "Suicide": [12.31, 13.85, 29.23, 30.77, 13.85],
+    "Depression": [0.00, 4.48, 14.93, 32.84, 47.76],
+    "Substance Use": [3.08, 6.15, 26.15, 23.08, 41.54],
+    "Adverse Childhood Experiences": [4.62, 9.23, 27.69, 27.69, 30.77],
+    "Healthy Eating": [5.97, 8.96, 22.39, 29.85, 32.84]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 75
+
+```{=html}
+<img src="media/media/image77.emf"
+style="width:7.5in;height:3.49514in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ulster-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Ulster County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [16.92, 13.85, 30.77, 20.00, 18.46],
+    "Prevention of Infant & Maternal Mortality": [20.00, 13.85, 30.77, 20.00, 15.38],
+    "Preventive Services for Chronic Disease Prevention & Control": [3.03, 12.12, 13.64, 31.82, 39.39],
+    "Oral Health Care": [10.61, 6.06, 19.70, 31.82, 31.82]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+### Westchester County
+
+From the Hudson Valley Regional Community Partner Surveys, responses were collected from 40 providers \[[see Appendix J](#section-9)\] located in Westchester County. Those providers identified several issues that affect health in Westchester, including \[see Figure 76\]:
+
+-   *Access to mental health providers*
+
+<!-- -->
+
+-   *Access to specialty services/providers*
+
+-   *Access to affordable, decent, and safe housing*
+
+-   *Access to affordable, reliable public transportation*
+
+-   *Access to affordable, nutritious food*
+
+The respondents also acknowledged barriers to people achieving better health in Westchester County, among them, the top three includes \[see Figure 77\]:
+
+-   *Knowledge of existing resources*
+
+-   *Health literacy*
+
+-   *Having someone help them understand insurance (Health Navigators)*
+
+-   *Geographic Location – living in rural area*
+
+When asked about the issues highly impacting the health status of residents in Westchester communities, these respondents suggested that Mental Wellbeing & Substance Use, Economic Wellbeing, and Health Insurance Coverage and Access to Care are the top three issues currently affecting the communities \[see
+
+Figure 79\].
+
+#### Major Findings
+
+Although an affluent county in general, there are pockets of neighborhoods in Westchester County where residents struggle to access affordable, decent, and safe housing, and face issues related to poverty. These major socioeconomic disadvantages are major root causes factors affecting people’s health status.
+
+The partner survey of 40 community care providers identified significant challenges affecting the health and well-being of their clients, which include low-income individuals, adults, persons with disabilities, those experiencing homelessness, and seniors as wells as individuals with limited English proficiency. The findings highlighted critical needs, pervasive systemic barriers, and the key issues impacting the populations served.
+
+Ultimately, the survey findings underscore a powerful interrelationship between the socioeconomic and health challenges experienced by clients. Economic instability, characterized by poverty, unemployment, and housing insecurity, directly impacts individuals' mental well-being and their ability to access both health insurance and quality healthcare.
+
+#### Specific Recommendations
+
+Based on data collected from the 40 community care providers, three major areas need to be addressed in health care and community services:
+
+1)  *Mental health and substance use issues – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 60.52% listed it as highly impacting and 21.05% listed it as impacting)*
+
+2)  *Health disparities – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 55.26% listed it as highly impacting and 21.0% listed it as impacting)*
+
+3)  *Chronic disease (heart disease, diabetes, asthma, obesity, etc.) – listed it as one of the major issues impacting and/or highly impacting the health status of Westchester residents (with 55.26% listed it as highly impacting and 18.42% listed it as impacting)*
+
+Given the complexity of Westchester County’s geographic, demographic, and socioeconomic compositions, a collection of 40 respondents (previous Mid-Hudson Community Partner Survey 18 respondents) from the large pool of health care and community service providers existing in the county can by no means present a thorough picture of current health status and service needs of people residing in Westchester. Therefore, the findings and recommendations presented in this section are suggestive and only shed some light on the possibly more complicated issues to be addressed.
+
+Figure 76
+
+```{=html}
+<img src="media/media/image78.emf"
+style="width:7.5in;height:3.49514in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-issues
+#| tbl-cap: "Top Issues Affecting Health in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Access to mental health providers", "Access to specialty services/providers", "Access to affordable, decent and safe housing", "Access to affordable, reliable transportation", "Access to affordable, nutritious food", "Access to medical providers", "Access to affordable health insurance", "Access to culturally sensitive health care providers", "Access to high quality education", "Access to clean water and non-polluted air"],
+    "Percentage": [57.50, 50.00, 42.50, 35.00, 32.50, 27.50, 22.50, 17.50, 15.00, 0.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 77
+
+```{=html}
+<img src="media/media/image79.emf"
+style="width:7.49877in;height:2.59394in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-barriers
+#| tbl-cap: "Top Barriers to Achieving Better Health in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Knowledge of existing resources", "Health literacy", "Having someone help them understand insurance", "Having someone to help them understand their medical condition", "Geographic location- living in a rural area", "Substance Use Disorder (SUD) or Alcohol Use Disorder (AUD)", "Other", "Quality of education", "Cultural customs", "Having a safe place to play and/or exercise", "Geographic location- living in an urban area", "Attainment of education"],
+    "Percentage": [62.50, 50.00, 35.00, 32.50, 30.00, 27.50, 25.00, 15.00, 10.00, 7.50, 5.00, 0.00]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+::: callout-note
+## Note
+
+Other: Some additional responses from participants include lack of transportation, poverty, safe and affordable housing, availability of health insurance, and having access to healthy foods.
+:::
+
+Figure 78
+
+```{=html}
+<img src="media/media/image80.emf"
+style="width:7.5in;height:2.53939in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-health-issues
+#| tbl-cap: "Impact of Health Issues in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Chronic Disease": [5.26, 2.63, 18.42, 18.42, 55.26],
+    "Health Disparities": [2.63, 2.63, 18.42, 21.05, 55.26],
+    "Mental Health and Substance Use Issues": [2.63, 7.89, 7.89, 21.05, 60.53],
+    "Maternal and Child Health Issues": [10.26, 10.26, 38.46, 12.82, 28.21],
+    "Environmental Factors": [15.79, 13.16, 34.21, 23.68, 13.16],
+    "Communicable Diseases": [15.38, 17.95, 38.46, 7.69, 20.51]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 79
+
+<img src="media/media/image81.emf" style="width:7.5in;height:3in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-sdoh
+#| tbl-cap: "Social Determinants of Health Impact in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["Mental Wellbeing & Substance Use", "Economic Wellbeing", "Health Insurance Coverage & Access to Care", "Safe & Healthy Communities", "Healthy Children", "Pre K - Grade 12 Student Success & Educational Attainment"],
+    "Percentage": [81.58, 78.95, 68.42, 36.84, 18.42, 15.79]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+df["Percentage"] = df["Percentage"].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 80
+
+<img src="media/media/image82.emf" style="width:7.5in;height:3in"/>
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-economic
+#| tbl-cap: "Economic Wellbeing Impact in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Poverty": [0.00, 5.41, 21.62, 16.22, 56.76],
+    "Unemployment": [2.78, 2.78, 22.22, 50.00, 22.22],
+    "Nutrition Security": [0.00, 11.11, 27.78, 36.11, 25.00],
+    "Housing Stability & Affordability": [0.00, 2.70, 24.32, 13.51, 59.46]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 81
+
+```{=html}
+<img src="media/media/image83.emf"
+style="width:7.5in;height:2.90278in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-mental-wellbeing
+#| tbl-cap: "Mental Wellbeing & Substance Use Impact in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Anxiety & Stress": [0.00, 2.86, 2.86, 28.57, 65.71],
+    "Suicide": [14.29, 20.00, 25.71, 22.86, 17.14],
+    "Depression": [0.00, 5.71, 11.43, 37.14, 45.71],
+    "Substance Use": [11.76, 5.88, 17.65, 32.35, 32.35],
+    "Adverse Childhood Experiences": [8.57, 11.43, 17.14, 31.43, 31.43],
+    "Healthy Eating": [2.86, 11.43, 22.86, 25.71, 37.14]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
+Figure 82
+
+```{=html}
+<img src="media/media/image84.emf"
+style="width:7.5in;height:2.70347in" />
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-westchester-health-access
+#| tbl-cap: "Health Insurance Coverage & Access to Care Impact in Westchester County (Percentage of Respondents)"
+import sys
+import os
+# Add project root to path
+cwd = os.getcwd()
+# Try current directory first
+if os.path.exists(os.path.join(cwd, 'scripts', 'cha_table_styling.py')):
+    if cwd not in sys.path:
+        sys.path.insert(0, cwd)
+# Try parent directory (if running from chapters/)
+elif os.path.exists(os.path.join(cwd, '..', 'scripts', 'cha_table_styling.py')):
+    parent = os.path.abspath(os.path.join(cwd, '..'))
+    if parent not in sys.path:
+        sys.path.insert(0, parent)
+import pandas as pd
+import numpy as np
+from scripts.cha_table_styling import style_cha_table
+
+# Create the data
+data = {
+    " ": ["1 (Very Little)", "2", "3", "4", "5 (Highly Impacted)"],
+    "Access To & Use of Prenatal Care": [11.43, 20.00, 28.57, 17.14, 22.86],
+    "Prevention of Infant & Maternal Mortality": [17.14, 20.00, 28.57, 14.29, 20.00],
+    "Preventive Services for Chronic Disease Prevention & Control": [5.88, 8.82, 14.71, 29.41, 41.18],
+    "Oral Health Care": [8.57, 5.71, 20.00, 34.29, 31.43]
+}
+
+df = pd.DataFrame(data)
+
+# Format the data - all are percentages
+for col in df.columns:
+    if col != " ":
+        df[col] = df[col].apply(lambda x: f"{x:.2f}")
+
+# Apply standard CHA styling
+styled_table = style_cha_table(df)
+styled_table
+```
+
