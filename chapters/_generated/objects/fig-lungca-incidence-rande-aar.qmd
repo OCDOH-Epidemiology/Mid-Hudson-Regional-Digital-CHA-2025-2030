@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-lungca-incidence-rande-aar
+#| fig-cap: 'Lungca Incidence Rande Aar'
+#| fig-alt: 'Data visualization of Lungca Incidence Rande Aar.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-lungca-incidence-rande-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

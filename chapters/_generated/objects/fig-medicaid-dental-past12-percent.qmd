@@ -1,0 +1,12 @@
+<!-- indicator: fig-medicaid-dental-past12-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-medicaid-dental-past12-percent
+#| fig-cap: 'Medicaid dental past12 percent'
+#| fig-alt: 'Data visualization of Medicaid dental past12 percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-medicaid-dental-past12-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-medicaid-1dental-visit-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-medicaid-1dental-visit-percent
+#| fig-cap: 'Medicaid 1 dental visit percent'
+#| fig-alt: 'Data visualization of Medicaid 1 dental visit percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-medicaid-1dental-visit-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```

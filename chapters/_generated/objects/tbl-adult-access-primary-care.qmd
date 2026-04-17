@@ -1,0 +1,20 @@
+<!-- indicator: tbl-adult-access-primary-care -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-adult-access-primary-care
+#| tbl-cap: 'Percentage of Adults Who Have a Regular Health Care Provider, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-adult-access-primary-care", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-adult-access-primary-care", CHA_WORKBOOK_PATH)))
+```

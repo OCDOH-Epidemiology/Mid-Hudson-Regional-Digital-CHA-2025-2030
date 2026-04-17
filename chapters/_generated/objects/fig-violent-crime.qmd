@@ -1,0 +1,12 @@
+<!-- indicator: fig-violent-crime -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-violent-crime
+#| fig-cap: 'Violent Crimes, Rate per 100,000 Population, 2018–2021'
+#| fig-alt: 'Data visualization showing Violent Crimes, Rate per 100,000 Population, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-violent-crime", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-brfss-fruit-veg -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-brfss-fruit-veg
+#| fig-cap: 'Percentage of Adults Who Report Consuming Less Than One Fruit and Less Than One Vegetable Daily, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults Who Report Consuming Less Than One Fruit and Less Than One Vegetable Daily, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-brfss-fruit-veg", workbook_path=CHA_WORKBOOK_PATH).show()
+```

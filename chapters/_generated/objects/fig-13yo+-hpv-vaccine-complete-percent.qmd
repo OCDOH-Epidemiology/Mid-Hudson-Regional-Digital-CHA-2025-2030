@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-13yo+-hpv-vaccine-complete-percent
+#| fig-cap: '13yo+ Hpv Vaccine Complete Percent'
+#| fig-alt: 'Data visualization of 13yo+ Hpv Vaccine Complete Percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-13yo+-hpv-vaccine-complete-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

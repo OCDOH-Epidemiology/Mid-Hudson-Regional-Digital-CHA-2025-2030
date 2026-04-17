@@ -2,7 +2,7 @@
 title: Acknowledgments
 jupyter: python3
 execute:
-  freeze: auto
+  freeze: false
 ---
 
 This Regional Community Health Assessment covers the seven-county Mid-Hudson Region consisting of Dutchess, Orange, Putnam, Rockland, Sullivan, Ulster, and Westchester Counties.

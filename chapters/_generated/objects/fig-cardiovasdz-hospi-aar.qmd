@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-cardiovasdz-hospi-aar
+#| fig-cap: 'Cardiovasdz Hospi Aar'
+#| fig-alt: 'Data visualization of Cardiovasdz Hospi Aar.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-cardiovasdz-hospi-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

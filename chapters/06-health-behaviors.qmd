@@ -1,0 +1,109 @@
+---
+title: "Health Behaviors Indicators"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+CHA_WORKBOOK_PATH = (
+    project_root / "data" / "raw" / "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+)
+if not CHA_WORKBOOK_PATH.exists():
+    CHA_WORKBOOK_PATH = Path(
+        "/Users/dq/Coding/Coding Projects/Mid-Hudson Regional CHA 2025/"
+        "Mid-HudsonRegionalCHA-2025/data/raw/"
+        "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+    )
+```
+
+## Physical Activity
+
+The Physical Activity Guidelines for Americans state that, to attain the most health benefits from physical activity, adults need at least 150 to 300 minutes each week of moderate-intensity aerobic activity, such as brisk walking or fast dancing. Adults also need muscle-strengthening activities on at least two days each week, such as lifting weights or doing push-ups [@hhs-physical-activity-guidelines-2018].
+
+Regular physical activity can improve both health and quality of life for people of all ages and abilities. Among adults and older adults, physical activity can lower the risk of early death, cardiovascular disease, high blood pressure, type 2 diabetes, falls, serious outcomes from infectious diseases, some cancers, and depression [@cdc-physical-activity-benefits-2024].
+
+Healthy People 2030 includes an objective to reduce the proportion of adults who engage in no leisure-time physical activity to 21.8% [@hp2030-physical-activity-2025]. New York State excluding New York City did not reach this target in 2021: 23.7% of adults reported no leisure-time physical activity in the past 30 days. Ulster County had the highest percentage of adults who participated in leisure-time physical activity in the past 30 days (82.6%), while Rockland County had the lowest (70.6%). The percentage of adults participating in leisure-time physical activity has increased since 2013 for most counties, for NYS excluding NYC, and for NYS overall, with the exception of Dutchess and Putnam Counties, which saw slight decreases see [@fig-brfss-leisure-pa].
+
+<!--Figure 83: "Percentage of Adults Who Participated in Leisure-Time Physical Activity in the Past 30 Days, 2016, 2018, and 2021"-->
+{{< include _generated/objects/fig-brfss-leisure-pa.qmd >}}
+
+{{< include _generated/objects/tbl-brfss-adult-leisure-pa.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYSDOH Behavioral Risk Factor Surveillance System, May 2025  
+<https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data>
+:::
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents
+“During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening,
+or walking for exercise?”
+:::
+
+
+
+## Nutrition
+### Fruit and Vegetable Consumption
+Nutrition has a significant impact on health, and diet is one of the most powerful tools utilized to prevent and reduce the burden of diseases, such as high blood pressure, heart disease, and type 2 diabetes.
+
+The Dietary Guidelines for Americans recommends following a healthy eating pattern across the lifespan, focusing on variety, nutrient density, and amount of food; limiting foods higher in added sugars, saturated fats, and sodium; shifting to healthier food and beverage choices; and supporting healthy eating patterns for all [@dietary-guidelines-2020-2025]. To meet these guidelines, it is important that fruits and vegetables are accessible and affordable.
+
+From 2016 to 2021, all counties in the M-H Region, as well as NYS excluding NYC and NYS, saw an increase in the percentage of adults who reported eating less than one fruit or vegetable a day. Dutchess County and Rockland County had the highest percentages of adults who reported consuming less than one fruit and less than one vegetable a day (39.2% and 35.1%, respectively) see [@fig-brfss-fruit-veg].
+
+<!--Figure 84: "Percentage of Adults Who Reported Eating Less Than One Fruit or Vegetable a Day, 2016, 2018, and 2021"-->
+{{< include _generated/objects/fig-brfss-fruit-veg.qmd >}}
+
+{{< include _generated/objects/tbl-brfss-adult-fruit-veg.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYSDOH Behavioral Risk Factor Surveillance System, May 2025  
+<https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data>
+:::
+
+::: {.callout-note}
+*: Percentage is unreliable due to large standard error.
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents “How often do you eat fruits, excluding juice?" and "How often do you eat vegetables or salad (excluding juices and potatoes)?”
+:::
+
+
+### Sugary Beverages
+
+Sugar-sweetened beverages are one of the main sources of added sugars in U.S. diets. Frequent consumption is linked to weight gain, cavities, type 2 diabetes, and heart disease in adults [@cdc-sugar-sweetened-beverages-2024]. Intake of sugar-sweetened beverages should be limited within a varied, healthy diet.
+
+The Dietary Guidelines for Americans recommend reducing added sugars by cutting back on sugar-sweetened beverages—for example, by choosing beverages with no added sugars, drinking smaller portions, drinking them less often, and selecting options lower in added sugars. Low-fat or fat-free milk or 100% fruit or vegetable juice can be consumed in place of sugar-sweetened beverages, within recommended amounts [@dietary-guidelines-2020-2025].
+
+In New York State excluding New York City, about one in five adults (20.2%) drank at least one sugar-sweetened beverage daily in 2021. In the M-H Region, Dutchess County had the highest percentage of adults who consumed one or more sugar-sweetened beverages daily (24.9%), while Westchester County had the lowest (11.4%). From 2013 to 2021, Dutchess and Rockland Counties saw slight increases in the percentage of adults who consumed one or more sugar-sweetened beverages daily, while Orange, Putnam, Sullivan, Ulster, and Westchester Counties saw decreases see [@fig-brfss-sug-bev].
+
+
+<!--Figure 85: "Percentage of Adults Who Consumed One or More Sugar-Sweetened Beverages Daily, 2016, 2018, and 2021"-->
+{{< include _generated/objects/fig-brfss-sug-bev.qmd >}}
+
+{{< include _generated/objects/tbl-brfss-adult-sug-bev.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYSDOH Behavioral Risk Factor Surveillance System, May 2025  
+<https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data>
+:::
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "During the past 30 days, how often did you drink regular soda or pop that contains sugar? Do not include diet soda or diet pop." and "During the past 30 days, how often did you drink sugar-sweetened fruit drinks (such as Kool-aid™ and lemonade), sweet tea, and sports or energy drinks (such as Gatorade™ and Red Bull™)? Do not include 100% fruit juice, diet drinks, or artificially sweetened drinks."
+:::

@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-colonrectca-incident-mortal-sex-aar
+#| fig-cap: 'Colonrectca Incident Mortal Sex Aar'
+#| fig-alt: 'Data visualization of Colonrectca Incident Mortal Sex Aar.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-colonrectca-incident-mortal-sex-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

@@ -1,0 +1,12 @@
+<!-- indicator: fig-premature-death-percent-diff-bnhvswnh -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-premature-death-percent-diff-bnhvswnh
+#| fig-cap: 'Premature Deaths, Percentage Difference Between Black Non-Hispanics and White Non-Hispanics, 2019–2022'
+#| fig-alt: 'Data visualization showing Premature Deaths, Percentage Difference Between Black Non-Hispanics and White Non-Hispanics, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-premature-death-percent-diff-bnhvswnh", workbook_path=CHA_WORKBOOK_PATH).show()
+```

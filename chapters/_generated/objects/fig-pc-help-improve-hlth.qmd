@@ -1,0 +1,12 @@
+<!-- indicator: fig-pc-help-improve-hlth -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pc-help-improve-hlth
+#| fig-cap: 'Most Helpful to Improve Health in Populations Served, Putnam County (n = 128)'
+#| fig-alt: 'Data visualization showing Most Helpful to Improve Health in Populations Served, Putnam County (n = 128).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pc-help-improve-hlth", workbook_path=CHA_WORKBOOK_PATH).show()
+```

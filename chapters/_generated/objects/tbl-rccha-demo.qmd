@@ -1,0 +1,20 @@
+<!-- indicator: tbl-rccha-demo -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rccha-demo
+#| tbl-cap: 'Rockland County Community Health Assessment Demographics'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-rccha-demo", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-rccha-demo", CHA_WORKBOOK_PATH)))
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-oc-eco-wellbeing -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-oc-eco-wellbeing
+#| fig-cap: 'The Impact of Economic Wellbeing in Orange County (n = 159)'
+#| fig-alt: 'Data visualization showing The Impact of Economic Wellbeing in Orange County (n = 159).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-oc-eco-wellbeing", workbook_path=CHA_WORKBOOK_PATH).show()
+```

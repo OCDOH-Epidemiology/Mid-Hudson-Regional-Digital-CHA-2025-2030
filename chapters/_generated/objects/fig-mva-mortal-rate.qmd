@@ -1,0 +1,12 @@
+<!-- indicator: fig-mva-mortal-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-mva-mortal-rate
+#| fig-cap: 'Motor Vehicle Injury Mortality, Rate per 100,000 Population, 2018–2021'
+#| fig-alt: 'Data visualization showing Motor Vehicle Injury Mortality, Rate per 100,000 Population, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-mva-mortal-rate", workbook_path=CHA_WORKBOOK_PATH).show()
+```

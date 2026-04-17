@@ -1,0 +1,12 @@
+<!-- indicator: fig-labor-force -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-labor-force
+#| fig-cap: 'Percentage in Labor Force, Population 16 Years and Older, 2021–2023'
+#| fig-alt: 'Data visualization showing Percentage in Labor Force, Population 16 Years and Older, 2021–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-labor-force", workbook_path=CHA_WORKBOOK_PATH).show()
+```

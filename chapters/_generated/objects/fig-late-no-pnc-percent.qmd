@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-late-no-pnc-percent
+#| fig-cap: 'Late No Pnc Percent'
+#| fig-alt: 'Data visualization of Late No Pnc Percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-late-no-pnc-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

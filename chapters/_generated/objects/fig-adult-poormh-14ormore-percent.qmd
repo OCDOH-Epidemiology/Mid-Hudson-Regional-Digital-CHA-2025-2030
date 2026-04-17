@@ -1,0 +1,12 @@
+<!-- indicator: fig-adult-poormh-14ormore-percent -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-adult-poormh-14ormore-percent
+#| fig-cap: 'Percentage of Adults with Poor Mental Health for 14 or More Days in the Last Month, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults with Poor Mental Health for 14 or More Days in the Last Month, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-adult-poormh-14ormore-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```

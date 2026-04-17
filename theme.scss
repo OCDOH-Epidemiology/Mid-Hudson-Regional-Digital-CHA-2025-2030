@@ -13,8 +13,8 @@ $dark: #1f2a37;
 
 $body-color: #000000;
 $body-bg: #ffffff;
-$link-color: #00b050;
-$link-hover-color: #008a44;
+$link-color: #006d2c;
+$link-hover-color: #004e1f;
 
 $border-radius: 0;
 $card-border-radius: 0;
@@ -26,30 +26,23 @@ $card-border-color: rgba(154, 205, 76, 0.4);
   --cha-primary-light: #eaf5db;
   --cha-accent: #4e6e1e;
   --cha-figure: #75a42e;
-  --cha-link: #00b050;
+  --cha-link: #006d2c;
   --cha-muted: #3d3d3d;
   --cha-surface: #ffffff;
 }
 
 body {
-  font-size: 12pt;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4 {
   font-size: 1rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  line-height: 1.5;
 }
 
 h1 {
   background: var(--cha-primary);
   border: 2px solid var(--cha-primary);
-  color: #ffffff;
+  color: #1f2a37;
+  font-size: 2rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
   padding: 0.35rem 0.75rem;
 }
 
@@ -57,13 +50,16 @@ h2 {
   background: var(--cha-primary-light);
   border: 2px solid var(--cha-primary-light);
   color: #000000;
+  font-size: 1.6rem;
   font-weight: 400;
+  letter-spacing: 0.01em;
   padding: 0.25rem 0.75rem;
 }
 
 h3 {
   border-top: 1px solid var(--cha-primary);
   color: #000000;
+  font-size: 1.3rem;
   font-weight: 400;
   padding-top: 0.35rem;
 }
@@ -71,16 +67,17 @@ h3 {
 h4 {
   border-top: 1px dotted var(--cha-primary);
   color: var(--cha-accent);
+  font-size: 1.15rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
-  margin-left: 0.5in;
+  letter-spacing: 0.01em;
+  margin-left: 0;
   padding-top: 0.25rem;
 }
 
 figure figcaption,
 table caption {
-  color: var(--cha-figure);
-  font-size: 12pt;
+  color: #2f5d1d;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -89,7 +86,7 @@ figure figcaption p {
 }
 
 section.footnotes {
-  font-size: 9pt;
+  font-size: 0.875rem;
 }
 
 section.footnotes a {
@@ -180,9 +177,9 @@ sup a[href^="#cite-"]:any-link {
   box-shadow: none !important;
 }
 
-/* Smooth scroll for citation links */
+/* Use default scroll behavior for reduced-motion compatibility. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Highlight target citation when linked to */
@@ -201,6 +198,14 @@ span[id^="cite-"]:target {
   padding: 1.5rem 1.75rem;
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .kpi-card {
@@ -223,4 +228,82 @@ span[id^="cite-"]:target {
 
 .callout-note {
   border-left: 4px solid var(--cha-primary);
+}
+
+/* Provide a visible first-focus target for keyboard users. */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Ensure clear focus visibility on all common interactive controls. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid #1f2a37;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px #eaf5db;
+}
+
+/* Keep links distinguishable without relying on color alone. */
+a {
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.16em;
+}
+
+/* Improve touch and motor accessibility in key navigation areas. */
+.sidebar .sidebar-item .sidebar-link,
+.navbar a,
+.pagination .page-link,
+.quarto-navigation-tool {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.book-title .title,
+.quarto-title .title {
+  color: #1f2a37;
+}
+
+.breadcrumb-item > a {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

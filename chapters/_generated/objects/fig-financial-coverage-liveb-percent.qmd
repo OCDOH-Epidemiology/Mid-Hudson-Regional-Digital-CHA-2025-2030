@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-financial-coverage-liveb-percent
+#| fig-cap: 'Financial Coverage Liveb Percent'
+#| fig-alt: 'Data visualization of Financial Coverage Liveb Percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-financial-coverage-liveb-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

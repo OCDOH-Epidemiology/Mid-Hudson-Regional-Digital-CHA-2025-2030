@@ -1,0 +1,11 @@
+<!-- indicator: tbl-infant-mortal-rate (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-infant-mortal-rate
+#| tbl-cap: 'Table showing Infant mortal rate.'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-infant-mortal-rate", workbook_path=CHA_WORKBOOK_PATH)
+```

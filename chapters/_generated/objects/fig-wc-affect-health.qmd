@@ -1,0 +1,12 @@
+<!-- indicator: fig-wc-affect-health -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-wc-affect-health
+#| fig-cap: 'Top Rated Issues That Affect Health in Westchester County (n = 40)'
+#| fig-alt: 'Data visualization showing Top Rated Issues That Affect Health in Westchester County (n = 40).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-wc-affect-health", workbook_path=CHA_WORKBOOK_PATH).show()
+```

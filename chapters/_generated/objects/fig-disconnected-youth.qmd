@@ -1,0 +1,12 @@
+<!-- indicator: fig-disconnected-youth -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-disconnected-youth
+#| fig-cap: 'Percentage of Disconnected Youth, 16–19 Years Old, 2014–2023'
+#| fig-alt: 'Data visualization showing Percentage of Disconnected Youth, 16–19 Years Old, 2014–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-disconnected-youth", workbook_path=CHA_WORKBOOK_PATH).show()
+```

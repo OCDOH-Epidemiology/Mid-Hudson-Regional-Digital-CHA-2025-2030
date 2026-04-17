@@ -1,0 +1,12 @@
+<!-- indicator: fig-ed-visit-opioid-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-ed-visit-opioid-aar
+#| fig-cap: 'All Emergency Department Visits Involving Any Opioid Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022'
+#| fig-alt: 'Data visualization showing All Emergency Department Visits Involving Any Opioid Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-ed-visit-opioid-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

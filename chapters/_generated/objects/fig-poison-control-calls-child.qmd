@@ -1,0 +1,12 @@
+<!-- indicator: fig-poison-control-calls-child -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-poison-control-calls-child
+#| fig-cap: 'Poison Center Calls, Percentage Children 5 Years Old and Younger, 2020–2024'
+#| fig-alt: 'Data visualization showing Poison Center Calls, Percentage Children 5 Years Old and Younger, 2020–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-poison-control-calls-child", workbook_path=CHA_WORKBOOK_PATH).show()
+```

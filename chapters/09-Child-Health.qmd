@@ -1,0 +1,71 @@
+---
+title: "Child Health"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+CHA_WORKBOOK_PATH = (
+    project_root / "data" / "raw" / "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+)
+if not CHA_WORKBOOK_PATH.exists():
+    CHA_WORKBOOK_PATH = Path(
+        "/Users/dq/Coding/Coding Projects/Mid-Hudson Regional CHA 2025/"
+        "Mid-HudsonRegionalCHA-2025/data/raw/"
+        "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+    )
+```
+
+Preventive health care is important across all age groups. However, it is especially important for children and adolescents to help them avoid preventable diseases and maintain good health throughout their lives. According to the US Census Bureau, 5.8% of the population in the M-H Region is under five years old; Rockland County has the highest percentage of children in this cohort (8.5%) and Ulster County has the lowest (4.4%) [see Table 3].
+
+Children are at risk for developing certain diseases, including ambulatory care sensitive (ACS) conditions. These are conditions where ED use is thought to be avoidable by focusing on interventions in primary care [@journal-pediatrics-acs-conditions-2018]. Some ACS conditions include asthma, otitis media, gastroenteritis, and pneumonia.
+
+## Asthma
+
+Asthma is caused by airway restriction in the lungs, resulting in difficulty breathing, wheezing, chest tightness, and coughing. It is a condition commonly found among children, but it can be managed and treated with medical care [see page 144]. Looking at the 2020-2022 hospitalization rate for those aged 0-4 years, the M-H Region had a higher hospitalization rate than NYS excluding NYC [see Figure 183].
+
+## Gastroenteritis
+
+Gastroenteritis is an intestinal infection that can affect children starting at a young age. It is typically a viral infection that causes fever, watery diarrhea, nausea, vomiting, and abdominal pain [@mayo-viral-gastroenteritis-2022]. Viral infections are generally spread through contact with someone infected with the disease or by ingesting contaminated substances. Children are especially at risk at day care centers or schools, where they can encounter other infected classmates.
+
+The 2020-2022 hospitalization rate of gastroenteritis for children 0 to 4 years of age in the M-H Region was higher than the hospitalization rate for NYS excluding NYC but lower than NYS [@fig-agop-hosp-0-4].
+
+## Otitis Media
+
+Otitis media is an infection that occurs in the middle ear and is most often diagnosed in children. Even though antibiotics are typically used to clear the infection, some children are prone to chronic ear infections. This can lead to other consequences, such as antibiotic resistance, surgery, and hearing loss. Common symptoms of otitis media include ear pain, tugging or pulling at the ear, crying more than usual, trouble hearing, fever, and drainage from the ear [@mayo-ear-infections-2021].
+
+For the 2020-2022 hospitalization rate for those aged 0-4 years, the M-H Region had the same rate as NYS but was slightly higher than NYS excluding NYC [@fig-agop-hosp-0-4].
+
+## Pneumonia
+
+Pneumonia is an infection that causes inflammation in the air sacs in one or both lungs. Pneumonia can be caused by bacteria, viruses, or fungi. It can lead to serious consequences in young children, as well as people over age 65. Symptoms of pneumonia include fever, cough, chest pain, and shortness of breath [@mayo-pneumonia-2020].
+
+The 2020-2022 hospitalization rate for children aged 0-4 years was higher in the M-H Region (15.2) than NYS (13.4) and NYS excluding NYC (11.5) [@fig-agop-hosp-0-4].
+
+It is important that children be vaccinated to prevent pneumococcal infection. For more information about vaccination rates, please see page 270.
+
+<!--Figure 183 Asthma, Gastroenteritis, Otitis Media, and Pneumonia Hospitalizations,
+Rate per 10,000 Population Aged 0–4 Years, 2020–2022
+-->
+{{< include _generated/objects/fig-agop-hosp-0-4.qmd >}}
+
+{{< include _generated/objects/tbl-agop-hosp-0-4.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 codes for otitis media are: H65.0, H65.1, H65.2, H65.3, H66.0, H66.1, and H66.2.
+:::
+
+

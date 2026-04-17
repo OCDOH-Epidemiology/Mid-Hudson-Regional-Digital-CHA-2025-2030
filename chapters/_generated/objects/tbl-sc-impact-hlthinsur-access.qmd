@@ -1,0 +1,20 @@
+<!-- indicator: tbl-sc-impact-hlthinsur-access -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-sc-impact-hlthinsur-access
+#| tbl-cap: 'The Impact of Health Insurance Coverage & Access to Care in Sullivan County (n = 92)'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-sc-impact-hlthinsur-access", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-sc-impact-hlthinsur-access", CHA_WORKBOOK_PATH)))
+```

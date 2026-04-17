@@ -1,0 +1,20 @@
+<!-- indicator: tbl-18to64-heroin-od-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-18to64-heroin-od-crude
+#| tbl-cap: 'Overdose Deaths among Adults Involving Heroin, Crude Rate per 100,000 Population, 2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-18to64-heroin-od-crude", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-18to64-heroin-od-crude", CHA_WORKBOOK_PATH)))
+```

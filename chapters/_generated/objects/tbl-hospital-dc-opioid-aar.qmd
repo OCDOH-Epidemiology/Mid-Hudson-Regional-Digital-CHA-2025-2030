@@ -1,0 +1,20 @@
+<!-- indicator: tbl-hospital-dc-opioid-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hospital-dc-opioid-aar
+#| tbl-cap: 'Hospital Discharges Involving Any Opioid Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hospital-dc-opioid-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-hospital-dc-opioid-aar", CHA_WORKBOOK_PATH)))
+```

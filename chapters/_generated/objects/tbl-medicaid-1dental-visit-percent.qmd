@@ -1,0 +1,11 @@
+<!-- indicator: tbl-medicaid-1dental-visit-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-medicaid-1dental-visit-percent
+#| tbl-cap: 'Table showing Medicaid 1 dental visit percent.'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-medicaid-1dental-visit-percent", workbook_path=CHA_WORKBOOK_PATH)
+```

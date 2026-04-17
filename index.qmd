@@ -2,7 +2,7 @@
 title: "Mid-Hudson Regional Community Health Assessment 2025"
 jupyter: python3
 execute:
-  freeze: auto
+  freeze: false
 page-layout: full
 ---
 
@@ -12,61 +12,70 @@ A living, data-driven assessment of the Mid-Hudson Region's health status, prior
 
 ## Key Indicators (Sample)
 
-::: {.grid}
-::: {.g-col-12 g-col-md-4}
+::: {.kpi-grid}
+
 ::: {.card .kpi-card}
+
 ::: {.card-body}
+
 ### Population
 **392,000**
 
 Estimated Mid-Hudson Region population (placeholder).
-:::
-:::
+
 :::
 
-::: {.g-col-12 g-col-md-4}
+:::
+
 ::: {.card .kpi-card}
+
 ::: {.card-body}
+
 ### Top Priority
 **Mental Health**
 
 Region-wide priority from survey findings.
-:::
-:::
+
 :::
 
-::: {.g-col-12 g-col-md-4}
-::: {.card .kpi-card}
-::: {.card-body}
-### Data Refresh
-**Automated**
+:::
 
-Excel to charts/tables via `scripts/build_data.py`.
-:::
-:::
-:::
 :::
 
 ## How to Use This Book
 
 ::: {.grid}
-::: {.g-col-12 g-col-md-6}
+
+::: {.g-col-12 .g-col-md-6}
+
 ::: {.card}
+
 ::: {.card-body}
+
 ### Explore by Chapter
 Use the sidebar to navigate demographics, social determinants, clinical care, and environmental conditions.
-:::
-:::
+
 :::
 
-::: {.g-col-12 g-col-md-6}
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
 ::: {.card}
+
 ::: {.card-body}
+
 ### Compare Counties
 Tabsets highlight Orange County vs. Mid-Hudson Region vs. NYS benchmarks.
+
 :::
+
 :::
+
 :::
+
 :::
 
 ::: {.callout-important}

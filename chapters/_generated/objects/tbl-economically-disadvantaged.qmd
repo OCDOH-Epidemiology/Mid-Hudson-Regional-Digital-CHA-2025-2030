@@ -1,0 +1,20 @@
+<!-- indicator: tbl-economically-disadvantaged -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-economically-disadvantaged
+#| tbl-cap: 'Enrollment Rate of Economically Disadvantaged Students, 2021-2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-economically-disadvantaged", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-economically-disadvantaged", CHA_WORKBOOK_PATH)))
+```

@@ -1,0 +1,284 @@
+---
+title: "Environmental Indicators"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+CHA_WORKBOOK_PATH = (
+    project_root / "data" / "raw" / "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+)
+if not CHA_WORKBOOK_PATH.exists():
+    CHA_WORKBOOK_PATH = Path(
+        "/Users/dq/Coding/Coding Projects/Mid-Hudson Regional CHA 2025/"
+        "Mid-HudsonRegionalCHA-2025/data/raw/"
+        "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+    )
+```
+
+
+## Safety
+
+### Injury
+
+Injuries fall into two distinct categories: intentional acts (such as assaults or suicides) and unintentional incidents (such as falls, car accidents, or poisoning). Their predictable patterns and identifiable risk factors make injuries largely preventable [@nysdoh-injury-prevention-2025].
+
+Unintentional injury was the fourth leading cause of death in NYS in 2022, accounting for 10,920 fatalities statewide, which is equivalent to a rate of 50.6 deaths per 100,000 population [@nysdoh-leading-causes-dashboard-2025]. It is the number one cause of death for residents aged 1 to 44 years [@nysdoh-injury-prevention-2025]. Beyond mortality, injuries contribute to significant societal burdens, including financial costs, long-term disability, mental health challenges, and lost productivity [@nysdoh-injury-action-plan-2012-2021].
+
+In the M-H Region from 2020 to 2022, Sullivan County had the highest three-year average unintentional injury mortality rate (92 per 100,000 population), while Westchester County recorded the lowest rate (32 per 100,000 population). The unintentional injury mortality rate is trending up in all seven counties, alongside NYS excluding NYC and NYS overall [@fig-unint-injury-mortal-aar].
+
+<!--Figure 184: "Unintentional Injury Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-unint-injury-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-unint-injury-mortal-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Y-axis does not begin at zero in order to clearly display trend lines. The ICD-10 codes for unintentional injury are: V01-X59, Y85-Y86.
+:::
+
+## Poisonings
+
+In 2023, preventable poisonings resulted in 100,304 U.S. deaths, with a death rate of 29.9 per 100,000 population, nearly eight times higher than 1999 levels despite a modest 2.5% decline from 2022 [@nsc-poisoning-data-details-2025]. Poisonings disproportionately affected adults aged 19 and older, who accounted for 98.4% of fatal unintentional poisonings and 90% of non-fatal poisonings [@nsc-poisoning-brief-2025]. These poisoning trends were driven largely by drug overdoses, primarily involving opioids, which accounted for 93% of fatalities [@nsc-drug-overdoses-data-details-2025]. In contrast, based on call data from the American Association of Poison Control Centers, 40% of poison exposures in the United States in 2023 occurred in children under 5 years old and were largely attributable to ingestion of personal care and household cleaning products [@nsc-poisoning-brief-2025].
+
+In New York, poison control centers handled 96,197 calls statewide during 2023. Approximately 80% of calls in the state stemmed from unintentional exposure. Residential settings accounted for 93% of these cases. Children aged 5 years and younger were disproportionately affected, with 34,522 exposure cases reported, representing 36% of all New York poison exposure incidents that year. The leading causes for exposures in young children included ingestion of cleaning substances (10.1%), personal care products (10%), foreign bodies or toys (9.3%), and analgesics (9%) [@americas-poison-centers-npds-2025].
+
+The Upstate New York Poison Center handles poison exposure calls for all Mid-Hudson (M-H) Region counties except Westchester, which receives coverage from the NYC Poison Center. In 2024, call rates varied significantly: Putnam County reported 226 exposures per 100,000 residents, while Sullivan County saw the highest rate at 636 per 100,000 [@fig-poison-control-calls].
+
+<!--Figure 185: "Poison Center Calls, Rate per 100,000 Population, 2020–2024"-->
+{{< include _generated/objects/fig-poison-control-calls.qmd >}}
+
+{{< include _generated/objects/tbl-poison-control-calls.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: Data request from Upstate NY Poison Center and NYC Poison Center, May 2025
+:::
+
+::: {.callout-note}
+Note: Rates calculated using population estimates from U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate,
+Table B01003.
+:::
+
+Orange and Rockland County had the highest proportion of calls for poisoning exposures involving children under 5 (38.5% and 38.4%, respectively), while Putnam County reported the lowest (28.5%) [@fig-child-under5-poison-control].
+
+<!--Figure 186: "Percentage of Poison Center Calls Involving Children 5 Years Old and Younger, 2020–2024"-->
+{{< include _generated/objects/fig-child-under5-poison-control.qmd >}}
+
+{{< include _generated/objects/tbl-child-under5-poison-control.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: Data request from Upstate NY Poison Center and NYC Poison Center, May 2025 
+:::
+
+In NYS, cannabis has been legal for medical purposes since 2016 and for recreational use since 2021 [@nysdoh-cannabis-2024]. Increased availability could increase the risk for cannabis-related poisoning, but this trend is not consistently evident in call center data for M-H Region counties from 2020 to 2024. In 2024, Sullivan County saw the highest rate of cannabis-related calls at 8.8 per 100,000 people, whereas Rockland County recorded the lowest rate at 1.8 per 100,000 people [@fig-poison-control-cannabis].
+
+<!--Figure 187: "Poison Center Cannabis Calls, Rate per 100,000 Population, 2020–2024"-->
+{{< include _generated/objects/fig-poison-control-cannabis.qmd >}}
+
+{{< include _generated/objects/tbl-poison-control-cannabis.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: Data request from Upstate NY Poison Center and NYC Poison Center, May 2025
+:::
+
+::: {.callout-note}
+Note: Rates calculated using population estimates from U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate,
+Table B01003.
+::::
+
+## Motor Vehicle Accidents
+
+Motor vehicle accidents are a leading cause of injury and death in the United States for all age groups. According to the CDC, in 2022 there were over 2.6 million emergency department visits for injuries from motor vehicle accidents and more than 44,000 deaths due to motor vehicle accidents, equivalent to 120 people killed daily [@cdc-transportation-safety-about-2024]. Major risk factors include speeding, not wearing seat belts, and impaired driving [@iihs-fatality-facts-2023]. Proven strategies targeting these risk factors can prevent motor vehicle-related injuries and fatalities.
+
+Between 2020 and 2022, Sullivan County had the highest three-year average motor vehicle-related mortality rate in the M-H Region at 14.9 per 100,000 population, and alongside Ulster County it was above the Healthy People 2030 target of 10.1 per 100,000 population [@hp2030-reduce-motor-vehicle-crash-deaths-ivp-06-2025]. Westchester (4.5 per 100,000 population) and Rockland County (5.7 per 100,000 population) had the lowest rates. Rates are trending up in NYS and in all M-H counties except Orange, where rates are flat [@fig-mva-mortal-rate].
+
+<!--Figure 188: "Motor Vehicle Injury Mortality, Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-mva-mortal-rate.qmd >}}
+
+{{< include _generated/objects/tbl-mva-mortal-rate.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. The ICD-10 codes for motor vehicle related injuries are: V02-V04, V09.0, V09.2, V12-V14, V19.0-V19.2, V19.4-V19.6, V20-V79, V80.3-V80.5, V81.0-V81.1, V82.0-V82.1, V83-V86, V87.0-V87.8, V88.0-V88.8,V89.0,V89.2.
+:::
+
+
+According to the National Highway Traffic Safety Administration (NHTSA), there was a 7.6% decrease in fatalities related to alcohol-impaired motor vehicle driving in the U.S. from 2022 to 2023. In 2023, there were 12,429 fatalities, or about one fatality every 42 minutes [@nhtsa-alcohol-impaired-driving-2025].
+
+Among the M-H Region’s seven counties, Ulster (40.2 per 100,000 population), Orange (38.7 per 100,000 population), and Sullivan (36.6 per 100,000 population) had the highest three-year average incidence of injuries and fatalities due to alcohol-related driving accidents from 2020 to 2022, while Westchester had the lowest incidence rate at 22.5 per 100,000 population. From 2017 to 2022, there was an overall downward trend in the rate of alcohol-related injuries and fatalities in NYS and M-H Region counties [@fig-mva-alcohol-injury-death-crude].
+
+<!--Figure 189: "Alcohol Related Motor Vehicle Injuries and Deaths, Crude Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-mva-alcohol-injury-death-crude.qmd >}}
+
+{{< include _generated/objects/tbl-mva-alcohol-injury-death-crude.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Y-axis does not begin at zero in order to clearly display trend lines. Data include persons killed or injured in motor vehicle crashes where alcohol was considered to be a factor. It also includes pedestrians, bicyclists and all other non-vehicle involved persons as well as vehicle occupants. These data were gathered from police reports. Crashes are reported by the county where the event occurred.
+:::
+
+Motor vehicle mortality rates are known to vary by age and gender. In the US during 2023, males had a higher motor vehicle mortality rate than females in all age groups. The highest motor vehicle mortality rate was seen in persons 20 to 24 years of age [@iihs-fatality-facts-2023]. Determining motor vehicle-related fatalities by race and ethnicity allows counties to target prevention messaging further if disparities are detected. From 2020 to 2022, the highest vehicle-related mortality rates were seen in Hispanic or non-Hispanic Black populations in all seven M-H Region counties. In Ulster County, the Hispanic population had the highest rate at 13.4 per 100,000 population [@fig-mva-mortal-rande-aar].
+
+<!--Figure 190: "Motor Vehicle Related Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-mva-mortal-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-mva-mortal-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from Vital Statistics of NYS https://www.health.ny.gov/community/health_equity/reports/county
+:::
+
+::: {.callout-note} 
+*: The rate is unstable.
+Note: This indicator includes deaths with motor vehicle related as the primary cause of death. The ICD-10 codes for motor vehicle related injuries are: V02-V04, V09.0, V09.2, V12-V14, V19.0-V19.2, V19.4-V19.6, V20-V79, V80.3-V80.5, V81.0-V81.1, V82.0-V82.1, V83-V86, V87.0-V87.8, V88.0-V88.8,V89.0,V89.2.
+:::
+
+## Falls
+Falls pose a significant injury risk across all age groups, with adults aged 65 years and older facing the greatest risk. More than one in four older adults fall annually, yet less than half report these falls to their doctor. Key risk factors for falls include lower body weakness, difficulties with walking and balance, certain medications (including tranquilizers, sedatives, antidepressants, and some over-the-counter drugs), poor vision, vitamin D deficiency, foot pain or poor footwear, and environmental hazards such as broken steps, throw rugs, and clutter. Most falls result from a combination of these risk factors, and the risk rises with each additional factor present [@cdc-facts-about-falls-2024].
+
+Falls have multifaceted impacts, with key consequences including [@haddad-miller-kakara-falls-costs-2024]:
+- Acute injuries: 
+  - Most common cause of traumatic brain injury (TBI)
+  - Responsible for about 88% of hip fractures
+- Functional decline: 
+  - Cause serious injury requiring medical care/activity restriction in 37% of cases
+  - Trigger reduced activity due to fear of falling, worsening physical weakness, and doubling future fall risk
+- System burden: 
+  - Drive approximately 3 million emergency department visits and 1 million hospitalizations annually
+  - Incur $80 billion in health care costs for non-fatal injuries (2020), a 60% increase from 2015, with Medicare/Medicaid covering 70%
+
+
+In the M-H Region from 2020-2022, 3-year average fall related hospitalization rates in Orange, Sullivan and Ulster Counties were higher than the 2021 rate in New York State (excluding NYC). Conversely, Putnam and Rockland Counties consistently report the lowest fall rates in the region [@fig-falls-hospital-aar].
+
+<!--Figure 191: "Falls Hospitalization, Age-Adjusted Rate per 10,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-falls-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-falls-hospital-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Community Health Indicator Reports Dashboard, May 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Y-axis does not
+begin at zero in order to clearly display trend lines. The ICD-10 codes for falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,and Y01XXX.
+:::
+
+
+When analyzed by age group, individuals aged ≥85 years exhibited the highest rates of fall-related hospitalizations in NYS in 2022 [@nysdoh-chirs-dashboard-state-2025]. In the M-H Region from 2020-2022, Orange and Ulster Counties had the highest 3-year average falls hospitalization rate in persons ≥85 years of age, at 695 and 680 per 10,000 residents, respectively. Conversely, Rockland County recorded the lowest rate (520 per 10,000 population) in this age cohort. [@fig-85-falls-hospital]
+
+<!--Figure 192: "Falls Hospitalization, Rate per 10,000 Population 85 Years and Older, 2018–2021"-->
+{{< include _generated/objects/fig-85-falls-hospital.qmd >}}
+
+{{< include _generated/objects/tbl-85-falls-hospital.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Community Health Indicator Reports Dashboard, May 2025 sourced from NY Statewide Planning and Research Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Y-axis does not
+begin at zero in order to clearly display trend lines. The ICD-10 codes for falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,and Y01XXX.
+:::
+
+When examining hospitalizations due to falls among persons aged 65 years and older from 2020 to 2022 in the M-H Region, the highest rates were in Orange and Ulster Counties (213 and 211 per 10,000 population, respectively), and the lowest rate was in Putnam County (156 per 10,000 population). When stratified by race and ethnicity, non-Hispanic White individuals had the highest fall-related hospitalization rates across all M-H Region counties. Hispanic populations had the second-highest rates per 10,000 in Rockland and Dutchess Counties. Higher rates among non-Hispanic Black residents were observed in Orange, Sullivan, Westchester, and Ulster Counties [@fig-65-falls-hospital-rande-rate].
+
+
+<!--Figure 193: "Falls Hospitalization, Rate per 10,000 Population 65 Years and Older by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-65-falls-hospital-rande-rate.qmd >}}
+
+{{< include _generated/objects/tbl-65-falls-hospital-rande-rate.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from NY Statewide Planning and Research Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
+
+::: {.callout-note}
+*: The rate is unstable.
+s: Data are suppressed due to not meeting confidentiality criteria.
+Note: Three-year average is used for this indicator. This indicator includes deaths with falls as the primary cause of death. The ICD-10 codes
+for falls are:
+V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX.V00111,V00121,V00131,V00141,V00151,V00181,V00211,V00221,V00281,V00311,V00321,V00381,V00811,V00821,V00831,V00841,V00891,W000XX,W001XX,W002XX,W009XX,W010XX,W0110X,W01110,W01111,W01118,W01119,W01190,W01198,W03XXX,W04XXX,W050XX,W051XX,W052XX,W06XXX,W07XXX,W08XXX,W090XX,W091XX,W092XX,W098XX,W100XX,W101XX,W102XX,W108XX,W109XX,W11XXX,W12XXX,W130XX,W131XX,W132XX,W133XX,W134XX,W138XX,W139XX,W14XXX,W15XXX,W16012,W16022,W16032,W16112,W16122,W16132,W16212,W16222,W16312,W16322,W16332,W1642X,W16512,W16522,W16532,W16612,W16622,W16712,W16722,W16812,W16822,W16832,W1692X,W170XX,W171XX,W172XX,W173XX,W174XX,W1781X,W1782X,W1789X,W1811X,W1812X,W182XX,W1830X,W1831X,W1839X,W19XXX,and Y01XXX.
+:::
+
+## Domestic Violence / Intrapersonal Violence
+
+Violence is a critical public health issue affecting individuals, families, and communities. The World Health Organization’s *World Report on Violence and Health* defines violence as “the intentional use of physical force or power, threatened or actual, against oneself, another person, or against a group or community, that either results in or has a high likelihood of resulting in injury, death, psychological harm, maldevelopment, or deprivation,” and further subdivides violence into types including self-directed violence (self-harm), interpersonal violence, and collective violence (violence committed by large groups of individuals). Interpersonal violence refers to all violence between individuals, including that which takes place within a family or between intimate partners, and community violence, which may take place between acquaintances or strangers [@who-world-report-violence-health-2002].
+
+During 2019–2021, nationwide an average of 1.5 million people per year received emergency treatment for nonfatal assault-related injuries [@nchs-data-brief-481-assault-ed-2023]. In 2023, homicides claimed over 19,482 lives nationwide, marking an 11% decrease from 2022 levels [@fbi-ucr-data-discovery-tool-2025]. While this decline offers hope, crime statistics tend to be volatile. Despite improvements in recent data, more research is needed to better understand the root causes behind these fluctuations in rates [@ccj-crime-trends-midyear-2025].
+
+In 2022, New York recorded 853 homicides, which translates to a mortality rate of 4.5 deaths per 100,000 population and the 14th lowest homicide rate among states [@cdc-homicide-mortality-by-state-2022]. While annual homicide mortality rates climbed from 2018 to 2021 in both NYS as a whole and NYS excluding New York City, three-year average mortality rates in M-H Region counties remained relatively stable during this period. Sullivan County consistently reported the highest rate among the counties, with increasing three-year average rates. Putnam County stood out with the region’s lowest rate for 2020–2022 at 0.7 per 100,000 [@fig-mortal-homicide-aar].
+
+<!--Figure 194: "Homicide Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-mortal-homicide-aar.qmd >}}
+
+{{< include _generated/objects/tbl-mortal-homicide-aar.qmd >}}
+
+::: {.callout-note}
+*: Data are unstable due to fewer than 10 events in the numerator.
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. The ICD-10 codes for homicide are: X85-Y09, Y87.1.
+:::
+
+There was variation between M-H Region counties in three-year average age-adjusted assault-related hospitalization rates from 2017 to 2022, but county rates were almost all lower than one-year rates for NYS excluding NYC. Most counties experienced relatively stable rates during the period, with rates ranging between 0.9 and 2.6 per 10,000 population for 2020–2022. Among the region’s counties, Dutchess County recorded the highest rates, increasing from 2.2 per 10,000 population for 2017–2019 to 2.6 per 10,000 for 2020–2022. In contrast, Putnam County maintained consistently low rates throughout the period, ranging from 0.6 to 0.9 per 10,000 population, far below the statewide rate. Sullivan County saw the most pronounced decline, with rates dropping from 2.6 per 10,000 for 2017–2019 to 2.0 per 10,000 for 2020–2022 [@fig-assault-hospital-aar].
+
+<!--Figure 195: "Assault Hospitalization, Age-Adjusted Rate per 10,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-assault-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-assault-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. The ICD-10 codes for assault are: X92–Y09.
+:::
+
+Domestic violence, also known as intimate partner violence (IPV), is a pattern of abusive behavior in relationships designed to control or dominate an intimate partner through physical, sexual, emotional, economic, psychological, or technological means. These abusive behaviors include intimidation, manipulation, humiliation, isolation, threats, blame, injuries, or other coercive tactics that instill fear and compliance [@doj-ovw-domestic-violence-2025].
+
+IPV can lead to severe injury, chronic health conditions, and mental health struggles like depression or PTSD. Survivors may engage in risky behaviors such as smoking, binge drinking, or unsafe sexual practices. Marginalized communities, particularly youth, face disproportionate risks tied to systemic inequities, with higher rates of sexual or dating violence. Approximately 16 million women and 11 million men who reported experiencing IPV in their lifetimes first experienced it before age 18 [@cdc-intimate-partner-violence-about-2024].
+
+Reported domestic violence victimization rates trended up in both NYS and NYS excluding NYC from 2020 to 2023. Across the M-H Region, rates also generally trended upward. Orange County consistently had the highest rate among the counties and outpaced NYS excluding New York City, though there was a notable decline from a 2021 peak of 512 reported domestic violence victims per 100,000 population to 470 per 100,000 population in 2023. Putnam County, meanwhile, maintained the region’s lowest rates, ranging from 48 to 108 per 100,000 population during the four-year period from 2020 to 2023 [@fig-dv-victim-rate].
+
+<!--Figure 196: "Domestic Violence Victims Reported, Rate per 100,000 Population, 2020–2023"-->
+{{< include _generated/objects/fig-dv-victim-rate.qmd >}}
+
+{{< include _generated/objects/tbl-dv-victim-rate.qmd >}}
+
+::: {.callout-note}
+Note: Rates calculated using population estimates from the U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table B01003. Police agencies in New York State collect data on the number of individuals victimized during domestic incidents involving members of the same family, including but not limited to parents, children, and siblings, and intimate partners. These individuals may or may not live together at the time of the incident. Victim counts are reported for the following offenses: aggravated assault, simple assault, sex offenses, and violation of protective orders.
+:::
+

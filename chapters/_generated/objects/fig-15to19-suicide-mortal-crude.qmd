@@ -1,0 +1,12 @@
+<!-- indicator: fig-15to19-suicide-mortal-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-15to19-suicide-mortal-crude
+#| fig-cap: 'Suicide Mortality, Crude Rate per 100,000 Total Population Compared to Those 15–19 Years Old, 2020–2022'
+#| fig-alt: 'Data visualization showing Suicide Mortality, Crude Rate per 100,000 Total Population Compared to Those 15–19 Years Old, 2020–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-15to19-suicide-mortal-crude", workbook_path=CHA_WORKBOOK_PATH).show()
+```

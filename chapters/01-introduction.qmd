@@ -2,7 +2,7 @@
 title: "Introduction"
 jupyter: python3
 execute:
-  freeze: auto
+  freeze: false
 ---
 
 ## Prevention Agenda
@@ -10,7 +10,7 @@ execute:
 The Prevention Agenda 2025-2030 is New York State's Health Improvement
 Plan, a six-year strategic initiative designed to improve public health
 and serve as a blueprint for state and local health departments to
-enhance the health of all residents<a href="#cite-1" title="New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/, accessed May 2025"><sup>1</sup></a>. The main strategy of the
+enhance the health of all residents [@nysdoh-prevention-agenda-2025]. The main strategy of the
 Prevention Agenda is to promote health equity for populations who
 experience health disparities through prevention of chronic disease and
 barriers to health care access. Achieving well-being and good quality of
@@ -20,7 +20,7 @@ promoting long-term health outcomes.
 
 The Prevention Agenda has five domains with specific action plans
 developed for each area. The five domains, based on Healthy People
-2030's Social Determinants of Health<a href="#cite-2" title="Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, https://health.gov/healthypeople/objectives-and-data/social-determinants-health, accessed June 2025"><sup>2</sup></a>, are Economic Stability, Social
+2030's Social Determinants of Health [@hp2030-sdoh-overview-2025], are Economic Stability, Social
 and Community Context, Neighborhood and Built Environment, Health Care
 Access and Quality, and Education Access and Quality.
 
@@ -50,9 +50,9 @@ initiate health improvement planning and development.
 ## Community Health Needs Assessment and Community Service Plan
 
 For hospitals classified as charitable organizations, they must meet
-general requirements for tax exemption under Section 501(c)(3)<a href="#cite-3" title="IRS, &quot;Exemption Requirements - 501(c)(3) Organizations.&quot; U.S. Department of the Treasury, 2025, https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations, accessed June 2025"><sup>3</sup></a> and
-Revenue Ruling 69-545<a href="#cite-4" title="IRS, &quot;Revenue Ruling 69-545.&quot; U.S. Department of the Treasury, 1969, https://www.irs.gov/pub/irs-tege/rr69-545.pdf, accessed June 2025"><sup>4</sup></a>. They must also meet the requirements imposed
-by Section 501(r)<a href="#cite-5" title="IRS, &quot;Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).&quot;, 2025, https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3, accessed June 2025"><sup>5</sup></a> on a facility-by-facility basis in order to be
+general requirements for tax exemption under Section 501(c)(3) [@irs-501c3-exemption-2025] and
+Revenue Ruling 69-545 [@irs-revenue-ruling-69-545-1969]. They must also meet the requirements imposed
+by Section 501(r) [@irs-501r3-chna-2025] on a facility-by-facility basis in order to be
 treated as an organization described in Section 501(c)(3). This involves
 completing a Community Health Needs Assessment (CHNA) and a Community
 Service Plan (CSP) every three years.
@@ -223,9 +223,6 @@ source*
 **New York State Communicable Disease Annual Reports**: Documents are
 released annually from NYSDOH containing mandated reports of suspected
 or confirmed communicable diseases. *Secondary source*
-
-**  
-**
 
 **New York State Communicable Disease Electronic Surveillance System
 (CDESS)**: Reporting of suspected or confirmed communicable diseases is
@@ -457,23 +454,4 @@ provide a more reliable comparison. Using a three-year average smooths
 out the data over multiple years to recognize that rates fluctuate from
 year to year and is particularly useful when small amounts of data are
 an issue.
-
-## References
-
-<details>
-<summary><strong>Click to view citations</strong></summary>
-
-<span id="cite-1">1. New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, <https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/>, accessed May 2025</span>
-
-<span id="cite-2">2. Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <https://health.gov/healthypeople/objectives-and-data/social-determinants-health>, accessed June 2025</span>
-
-<span id="cite-3">3. IRS, "Exemption Requirements - 501(c)(3) Organizations." U.S. Department of the Treasury, 2025, <https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations>, accessed June 2025</span>
-
-<span id="cite-4">4. IRS, "Revenue Ruling 69-545." U.S. Department of the Treasury, 1969, <https://www.irs.gov/pub/irs-tege/rr69-545.pdf>, accessed June 2025</span>
-
-<span id="cite-5">5. IRS, "Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).", 2025, <https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3>, accessed June 2025</span>
-
-</details>
-
-
 

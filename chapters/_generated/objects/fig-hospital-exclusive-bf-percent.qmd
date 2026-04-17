@@ -1,0 +1,12 @@
+<!-- indicator: fig-hospital-exclusive-bf-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hospital-exclusive-bf-percent
+#| fig-cap: 'Hospital exclusive bf percent'
+#| fig-alt: 'Data visualization of Hospital exclusive bf percent.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hospital-exclusive-bf-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```

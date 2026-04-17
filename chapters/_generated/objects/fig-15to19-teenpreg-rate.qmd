@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-15to19-teenpreg-rate
+#| fig-cap: '15To19 Teenpreg Rate'
+#| fig-alt: 'Data visualization of 15To19 Teenpreg Rate.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-15to19-teenpreg-rate", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

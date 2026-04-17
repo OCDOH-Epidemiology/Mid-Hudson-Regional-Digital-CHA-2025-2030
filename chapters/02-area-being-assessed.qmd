@@ -7,10 +7,10 @@ title: Area Being Assessed
 The Mid-Hudson (M-H) region is comprised of seven-counties in New York
 State (NYS) that is a mix of urban, suburban, and rural communities.
 Located north of New York City (NYC), it comprises 12.1% of the NYS
-population \[Table 1\]. The seven counties are Dutchess, Orange, Putnam,
+population [@tbl-population-demographics]. The seven counties are Dutchess, Orange, Putnam,
 Rockland, Sullivan, Ulster, and Westchester counties. The population is
 becoming more ethnically diverse, with particular growth in Hispanic
-communities \[see Table 4 and 5\]. The M-H Region, like the nation, is
+communities [@tbl-ethnicity and @tbl-race]. The M-H Region, like the nation, is
 aging with the fastest growing demographic, those being over 60 years
 old.
 
@@ -26,8 +26,7 @@ and many highways make travel easy for commuters. Major industries
 include healthcare, education, retail, and government. Tourism is a
 major economic driver with extensive parklands, historic landmarks,
 arts, culture, shopping, and recreational activities. There are over 40
-colleges and universities leading to a highly educated workforce \[see
-Table 8\].
+colleges and universities leading to a highly educated workforce [@tbl-education].
 
 ### Dutchess County
 
@@ -50,7 +49,7 @@ River in the west, the only county in NYS to border both rivers. Ulster
 and Sullivan Counties border Orange County on the north, and Rockland
 County is located to the south. The states of New Jersey and
 Pennsylvania are located on the southwest borders of the county. Orange
-County is 812 square miles<sup>6</sup> and is a diverse mix of rural,
+County is 812 square miles [@tbl-area-and-population] and is a diverse mix of rural,
 farmland, suburban, and urban areas. Orange County communities include
 three cities, 21 towns, and 19 villages. Nearly 17% of the county’s
 total population resides in its three cities of Middletown, Newburgh,

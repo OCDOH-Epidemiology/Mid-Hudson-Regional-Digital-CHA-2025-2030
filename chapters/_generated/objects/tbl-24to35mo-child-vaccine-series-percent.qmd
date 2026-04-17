@@ -1,0 +1,21 @@
+<!-- stub: add matching Object ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-24to35mo-child-vaccine-series-percent
+#| tbl-cap: 'Table showing 24To35Mo Child Vaccine Series Percent.'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-24to35mo-child-vaccine-series-percent", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-24to35mo-child-vaccine-series-percent", CHA_WORKBOOK_PATH)))
+```
+

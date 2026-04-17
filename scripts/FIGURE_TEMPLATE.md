@@ -130,9 +130,72 @@ fig.show()
 ```
 ```
 
+## Simple Bar Figure (Single Series)
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-simple-bar-example
+#| fig-cap: "Simple Bar Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_simple_bar_figure
+
+data = {
+    "County": ["Dutchess", "Orange", "Putnam"],
+    "Rate": [8.3, 13.0, 6.5],
+}
+df = pd.DataFrame(data)
+fig = build_simple_bar_figure(
+    df,
+    x_col="County",
+    y_cols=["Rate"],
+    y_axis_title="Rate (%)",
+    hover_suffix="%",
+)
+fig.show()
+```
+```
+
+## Horizontal Bar Figure (Single Series)
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-horizontal-bar-example
+#| fig-cap: "Horizontal Bar Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_horizontal_bar_figure
+
+data = {
+    "Health Issue": ["Mental Health", "Access to Healthcare Providers", "Substance Misuse"],
+    "Percent": [68, 39, 31],
+}
+df = pd.DataFrame(data)
+fig = build_horizontal_bar_figure(
+    df,
+    x_col="Health Issue",
+    y_cols=["Percent"],
+    y_axis_title="Percent (%)",
+    hover_suffix="%",
+)
+fig.show()
+```
+```
+
 ## Notes
 
 - If you need separate `fig-` and `tbl-` references, keep the figure and
   table in separate chunks (figure chunk above the table chunk).
 - The builder orders county series by the standard CHA region order and
   uses the official color palette.
+- For indicators that represent **currency**, keep the underlying data
+  numeric but adjust display settings:
+  - Use a y-axis title that mentions dollars (for example, `"Dollars ($)"`).
+  - Set `hover_value_format` to `",.0f"` for whole-dollar values or `",.1f"`
+    if you need one decimal place.
+  - Optionally set `hover_suffix` to `" $"` or leave it blank if the axis
+    title already makes the unit clear.

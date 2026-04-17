@@ -1,12 +1,15 @@
 """
 CHA Figure Builder
 
-Utilities for creating CHA figures (lines, clustered bars, stacked bars)
+Utilities for creating CHA figures (lines, clustered bars, stacked bars, simple bars)
 with consistent styling and ordering. Includes a helper to display a
 figure above its table output in Quarto/Jupyter.
 """
 
 from __future__ import annotations
+
+import warnings
+import textwrap
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -32,6 +35,8 @@ CHA_COLOR_PALETTE = [
 ]
 
 DEFAULT_DASHED_SERIES = {"NYS": "dash", "US": "dash"}
+BAR_PATTERN_SEQUENCE = ["", "/", "\\", "x", ".", "+"]
+LINE_SYMBOL_SEQUENCE = ["circle", "square", "diamond", "triangle-up", "triangle-down", "cross"]
 
 
 def _normalize_label(label: str) -> str:
@@ -60,6 +65,14 @@ def _series_dashes(series: list[str], overrides: dict[str, str] | None = None) -
     return dashes
 
 
+def _series_patterns(series: list[str]) -> dict[str, str]:
+    return {name: BAR_PATTERN_SEQUENCE[idx % len(BAR_PATTERN_SEQUENCE)] for idx, name in enumerate(series)}
+
+
+def _series_symbols(series: list[str]) -> dict[str, str]:
+    return {name: LINE_SYMBOL_SEQUENCE[idx % len(LINE_SYMBOL_SEQUENCE)] for idx, name in enumerate(series)}
+
+
 def _round_up_to_nice_number(value: float) -> float:
     """
     Round up to the next nice round number.
@@ -84,7 +97,105 @@ def _y_range(values: pd.Series, start_at_zero: bool, padding: float, is_bar_grap
     y_span = y_max - y_min
     if y_span == 0:
         y_span = 1.0
-    return [y_min - y_span * padding, y_max + y_span * padding]
+    lower = y_min - y_span * padding
+    upper = y_max + y_span * padding
+
+    # Clustered/stacked bars should not dip below zero when zero-baselined.
+    if is_bar_graph and start_at_zero:
+        lower = 0.0
+
+    return [lower, upper]
+
+
+def _coerce_year_axis(values: pd.Series | pd.DataFrame) -> tuple[pd.Series, dict[str, object]]:
+    """
+    Detect year-like X values and return numeric years + integer tick settings.
+    """
+    # Duplicate column labels can make df[x_col] return a DataFrame.
+    # In that case, use the first matching column as the X-axis values.
+    if isinstance(values, pd.DataFrame):
+        if values.shape[1] == 0:
+            return pd.Series(dtype="object"), {}
+        if values.shape[1] > 1:
+            warnings.warn(
+                "Duplicate x-axis column labels detected; using the first matching column.",
+                stacklevel=2,
+            )
+        values = values.iloc[:, 0]
+
+    numeric = pd.to_numeric(values, errors="coerce")
+    if numeric.isna().any():
+        return values, {}
+
+    # Treat as a year axis only when all values are whole-number years.
+    is_integer_like = (numeric.sub(numeric.round()).abs() < 1e-9).all()
+    is_year_range = ((numeric >= 1000) & (numeric <= 3000)).all()
+    if not (is_integer_like and is_year_range):
+        return values, {}
+
+    coerced = numeric.round().astype(int)
+    # Show only years present in the source data (e.g., 2016, 2018, 2021)
+    # rather than every intermediate year on the axis.
+    axis_options = dict(
+        type="linear",
+        tickmode="array",
+        tickvals=coerced.drop_duplicates().tolist(),
+        ticktext=coerced.drop_duplicates().astype(str).tolist(),
+        tickformat="d",
+    )
+    return coerced, axis_options
+
+
+def _wrap_tick_label(label: str, width: int) -> str:
+    text = str(label).strip()
+    if not text:
+        return text
+    if len(text) <= width:
+        return text
+    lines = textwrap.wrap(
+        text,
+        width=width,
+        break_long_words=False,
+        break_on_hyphens=False,
+    )
+    return "<br>".join(lines) if lines else text
+
+
+def _format_categorical_tick_labels(labels: list[str], figure_width: int) -> tuple[list[str], int, int]:
+    if not labels:
+        return labels, 11, 120
+
+    category_count = max(len(labels), 1)
+    max_label_len = max(len(str(label)) for label in labels)
+
+    # Approximate readable chars/line from figure width and category count.
+    # Clamp to avoid overly narrow or overly wide wrapping behavior.
+    chars_per_line = max(8, min(24, int(figure_width / (category_count * 9))))
+    wrapped = [_wrap_tick_label(label, chars_per_line) for label in labels]
+    max_lines = max(str(label).count("<br>") + 1 for label in wrapped)
+
+    if category_count >= 12 or max_label_len >= 40:
+        tick_font_size = 9
+    elif category_count >= 9 or max_label_len >= 28:
+        tick_font_size = 10
+    else:
+        tick_font_size = 11
+
+    bottom_margin = 90 + ((max_lines - 1) * 18) + ((11 - tick_font_size) * 8)
+    bottom_margin = max(120, min(280, bottom_margin))
+    return wrapped, tick_font_size, bottom_margin
+
+
+def _prepare_categorical_x_axis(
+    x_values: pd.Series,
+    figure_width: int,
+) -> tuple[list[str], list[str], int, int]:
+    raw_labels = x_values.astype(str).tolist()
+    wrapped_labels, tick_font_size, bottom_margin = _format_categorical_tick_labels(
+        raw_labels,
+        figure_width,
+    )
+    return raw_labels, wrapped_labels, tick_font_size, bottom_margin
 
 
 def _apply_layout(
@@ -112,7 +223,11 @@ def _apply_layout(
     
     fig.update_layout(
         xaxis=dict(
-            title=dict(text=x_axis_title, font=dict(size=14, family=font_family)),
+            title=dict(
+                text=x_axis_title,
+                font=dict(size=14, family=font_family),
+                standoff=22,
+            ),
             showgrid=True,
             gridcolor="rgba(128, 128, 128, 0.2)",
             gridwidth=1,
@@ -153,47 +268,23 @@ def build_line_figure(
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
-    series = y_cols or [col for col in df.columns if col != x_col]
-    ordered = _ordered_series(series)
-    colors = _series_colors(ordered, palette)
-    dashes = _series_dashes(ordered, dash_overrides)
-    x_axis_title = x_axis_title or x_col
-    value_label = y_axis_title or "Value"
-
-    fig = go.Figure()
-    for col in ordered:
-        fig.add_trace(
-            go.Scatter(
-                x=df[x_col],
-                y=df[col],
-                mode="lines+markers",
-                name=col,
-                line=dict(
-                    color=colors[col],
-                    width=3 if col in ["NYS", "US"] else 2.5,
-                    dash=dashes[col],
-                ),
-                marker=dict(size=8, color=colors[col], line=dict(width=1.5, color="white")),
-                hovertemplate=(
-                    f"<b>{col}</b><br>{x_axis_title}: %{{x}}<br>"
-                    f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
-                    "<extra></extra>"
-                ),
-            )
-        )
-
-    y_values = df[ordered].to_numpy().flatten()
-    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding)
-    _apply_layout(
-        fig=fig,
+    """Build a static time series line figure with years on the X-axis and counties as grouped lines."""
+    return build_interactive_line_figure(
+        df,
+        x_col,
+        y_cols=y_cols,
         x_axis_title=x_axis_title,
         y_axis_title=y_axis_title,
-        y_range=y_range,
+        start_at_zero=start_at_zero,
+        y_padding=y_padding,
+        palette=palette,
+        dash_overrides=dash_overrides,
         width=width,
         height=height,
         font_family=font_family,
+        hover_value_format=hover_value_format,
+        hover_suffix=hover_suffix,
     )
-    return fig
 
 
 def build_clustered_bar_figure(
@@ -215,19 +306,28 @@ def build_clustered_bar_figure(
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
     colors = _series_colors(ordered, palette)
+    patterns = _series_patterns(ordered)
     x_axis_title = x_axis_title or x_col
     value_label = y_axis_title or "Value"
+    x_values_raw, x_values_wrapped, tick_font_size, bottom_margin = _prepare_categorical_x_axis(
+        df[x_col],
+        width,
+    )
 
     fig = go.Figure()
     for col in ordered:
         fig.add_trace(
             go.Bar(
-                x=df[x_col],
+                x=x_values_wrapped,
                 y=df[col],
                 name=col,
-                marker=dict(color=colors[col]),
+                marker=dict(
+                    color=colors[col],
+                    pattern=dict(shape=patterns[col], solidity=0.22),
+                ),
+                customdata=x_values_raw,
                 hovertemplate=(
-                    f"<b>{col}</b><br>{x_axis_title}: %{{x}}<br>"
+                    f"<b>{col}</b><br>{x_axis_title}: %{{customdata}}<br>"
                     f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                     "<extra></extra>"
                 ),
@@ -235,10 +335,17 @@ def build_clustered_bar_figure(
         )
 
     y_values = df[ordered].to_numpy().flatten()
-    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding, is_bar_graph=True)
+    y_series = pd.Series(y_values)
+    y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
+    y_max = float(y_series.max()) if not y_series.empty else 0.0
+
+    # Match CHA clustered-bar visual style used in report templates.
+    # Small-range percent charts read best with integer ticks.
+    dtick = 1 if y_max <= 20 else None
+    x_title_text = "" if str(x_axis_title).strip().lower() == "county" else x_axis_title
     _apply_layout(
         fig=fig,
-        x_axis_title=x_axis_title,
+        x_axis_title=x_title_text,
         y_axis_title=y_axis_title,
         y_range=y_range,
         width=width,
@@ -246,7 +353,36 @@ def build_clustered_bar_figure(
         font_family=font_family,
         is_bar_graph=True,
     )
-    fig.update_layout(barmode="group")
+    fig.update_layout(
+        barmode="group",
+        bargap=0.30,
+        bargroupgap=0.10,
+        paper_bgcolor="#f2f2f2",
+        plot_bgcolor="#f2f2f2",
+        legend=dict(
+            orientation="h",
+            x=0.5,
+            y=-0.22,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=11),
+            bgcolor="rgba(0,0,0,0)",
+            borderwidth=0,
+        ),
+        # Reserve dedicated room for horizontal legend + x-axis title.
+        margin=dict(l=80, r=40, t=40, b=min(360, bottom_margin + 85)),
+    )
+    fig.update_yaxes(
+        dtick=dtick,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+    )
+    fig.update_xaxes(
+        tickangle=0,
+        automargin=True,
+        tickfont=dict(size=tick_font_size),
+        gridcolor="rgba(0, 0, 0, 0)",
+    )
     return fig
 
 
@@ -269,19 +405,28 @@ def build_stacked_bar_figure(
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
     colors = _series_colors(ordered, palette)
+    patterns = _series_patterns(ordered)
     x_axis_title = x_axis_title or x_col
     value_label = y_axis_title or "Value"
+    x_values_raw, x_values_wrapped, tick_font_size, bottom_margin = _prepare_categorical_x_axis(
+        df[x_col],
+        width,
+    )
 
     fig = go.Figure()
     for col in ordered:
         fig.add_trace(
             go.Bar(
-                x=df[x_col],
+                x=x_values_wrapped,
                 y=df[col],
                 name=col,
-                marker=dict(color=colors[col]),
+                marker=dict(
+                    color=colors[col],
+                    pattern=dict(shape=patterns[col], solidity=0.22),
+                ),
+                customdata=x_values_raw,
                 hovertemplate=(
-                    f"<b>{col}</b><br>{x_axis_title}: %{{x}}<br>"
+                    f"<b>{col}</b><br>{x_axis_title}: %{{customdata}}<br>"
                     f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                     "<extra></extra>"
                 ),
@@ -300,7 +445,227 @@ def build_stacked_bar_figure(
         font_family=font_family,
         is_bar_graph=True,
     )
-    fig.update_layout(barmode="stack")
+    fig.update_layout(
+        barmode="stack",
+        margin=dict(l=80, r=200, t=40, b=min(320, bottom_margin + 20)),
+    )
+    fig.update_xaxes(
+        tickangle=0,
+        automargin=True,
+        tickfont=dict(size=tick_font_size),
+    )
+    return fig
+
+
+def build_simple_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int = 600,
+    font_family: str = "Arial, sans-serif",
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+) -> go.Figure:
+    series = y_cols or [col for col in df.columns if col != x_col]
+    if not series:
+        raise ValueError("simple_bar requires at least one y-series column.")
+    y_col = series[0]
+    x_axis_title = x_axis_title or x_col
+    value_label = y_axis_title or "Value"
+    palette = palette or CHA_COLOR_PALETTE
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x=df[x_col],
+            y=df[y_col],
+            name=y_col,
+            marker=dict(color=palette[0]),
+            hovertemplate=(
+                f"{x_axis_title}: %{{x}}<br>"
+                f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
+                "<extra></extra>"
+            ),
+        )
+    )
+
+    y_series = pd.to_numeric(df[y_col], errors="coerce")
+    y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
+    _apply_layout(
+        fig=fig,
+        x_axis_title=x_axis_title,
+        y_axis_title=y_axis_title,
+        y_range=y_range,
+        width=width,
+        height=height,
+        font_family=font_family,
+        is_bar_graph=True,
+    )
+    fig.update_layout(
+        showlegend=False,
+        bargap=0.30,
+        paper_bgcolor="#f2f2f2",
+        plot_bgcolor="#f2f2f2",
+        margin=dict(l=80, r=40, t=40, b=95),
+    )
+    fig.update_yaxes(
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+    )
+    fig.update_xaxes(gridcolor="rgba(0, 0, 0, 0)")
+    return fig
+
+
+def build_simple_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int = 600,
+    font_family: str = "Arial, sans-serif",
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+) -> go.Figure:
+    """
+    Build a single-series bar chart.
+    """
+    series = y_cols or [col for col in df.columns if col != x_col]
+    if not series:
+        raise ValueError("No y-axis series found for simple bar chart.")
+    y_col = series[0]
+    x_axis_title = x_axis_title or x_col
+    value_label = y_axis_title or "Value"
+    color = (palette or CHA_COLOR_PALETTE)[0]
+
+    x_values_raw, x_values_wrapped, tick_font_size, bottom_margin = _prepare_categorical_x_axis(
+        df[x_col],
+        width,
+    )
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x=x_values_wrapped,
+            y=df[y_col],
+            name=y_col,
+            marker=dict(color=color),
+            customdata=x_values_raw,
+            hovertemplate=(
+                f"<b>{y_col}</b><br>{x_axis_title}: %{{customdata}}<br>"
+                f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
+                "<extra></extra>"
+            ),
+        )
+    )
+
+    y_values = pd.to_numeric(df[y_col], errors="coerce")
+    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding, is_bar_graph=True)
+    _apply_layout(
+        fig=fig,
+        x_axis_title=x_axis_title,
+        y_axis_title=y_axis_title,
+        y_range=y_range,
+        width=width,
+        height=height,
+        font_family=font_family,
+        is_bar_graph=True,
+    )
+    fig.update_layout(
+        barmode="group",
+        margin=dict(l=80, r=40, t=40, b=min(300, bottom_margin + 20)),
+    )
+    fig.update_xaxes(
+        tickangle=0,
+        automargin=True,
+        tickfont=dict(size=tick_font_size),
+        gridcolor="rgba(0, 0, 0, 0)",
+    )
+    return fig
+
+
+def build_horizontal_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int = 600,
+    font_family: str = "Arial, sans-serif",
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+) -> go.Figure:
+    """
+    Build a single-series horizontal bar chart.
+    """
+    series = y_cols or [col for col in df.columns if col != x_col]
+    if not series:
+        raise ValueError("No y-axis series found for horizontal bar chart.")
+    value_col = series[0]
+    category_axis_title = x_axis_title or x_col
+    value_axis_title = y_axis_title or "Value"
+    color = (palette or CHA_COLOR_PALETTE)[0]
+
+    plot_df = df[[x_col, value_col]].copy()
+    plot_df[value_col] = pd.to_numeric(plot_df[value_col], errors="coerce")
+    plot_df = plot_df.dropna(subset=[value_col, x_col])
+    plot_df = plot_df.sort_values(value_col, ascending=True)
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x=plot_df[value_col],
+            y=plot_df[x_col].astype(str),
+            orientation="h",
+            marker=dict(color=color),
+            customdata=plot_df[x_col].astype(str),
+            hovertemplate=(
+                f"{category_axis_title}: %{{customdata}}<br>"
+                f"{value_axis_title}: %{{x:{hover_value_format}}}{hover_suffix}"
+                "<extra></extra>"
+            ),
+        )
+    )
+
+    x_range = _y_range(plot_df[value_col], start_at_zero, y_padding, is_bar_graph=True)
+    fig.update_layout(
+        showlegend=False,
+        paper_bgcolor="#f2f2f2",
+        plot_bgcolor="#f2f2f2",
+        width=width,
+        height=height,
+        margin=dict(l=250, r=40, t=40, b=70),
+        font=dict(family=font_family),
+    )
+    fig.update_xaxes(
+        title=dict(text=value_axis_title, font=dict(size=14, family=font_family)),
+        range=x_range,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+    )
+    fig.update_yaxes(
+        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        showgrid=False,
+        ticklabelstandoff=10,
+        automargin=True,
+    )
     return fig
 
 
@@ -322,159 +687,66 @@ def build_interactive_line_figure(
     hover_suffix: str = "",
 ) -> go.Figure:
     """
-    Build an interactive line figure with dropdown controls to:
-    - Filter counties to compare specific ones
-    - Switch between time series view (all years) and single year comparison (bar chart)
-    
-    This creates a Plotly figure with updatemenus that works directly in Quarto.
+    Build a static time series line figure.
+
+    Years appear on the X-axis; each county/region is a separate colored line.
     """
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
     colors = _series_colors(ordered, palette)
     dashes = _series_dashes(ordered, dash_overrides)
+    symbols = _series_symbols(ordered)
     x_axis_title = x_axis_title or x_col
     value_label = y_axis_title or "Value"
-    
-    # Get unique years for single-year comparison
-    years = sorted(df[x_col].unique().tolist())
-    
-    # Create base figure with all data (time series view)
+    x_values, x_axis_options = _coerce_year_axis(df[x_col])
+    is_categorical_x = not bool(x_axis_options)
+
+    x_values_raw: list[str] | None = None
+    tick_font_size = 11
+    bottom_margin = 60
+    plotted_x_values = x_values
+    hover_x_template = "%{x}"
+    if is_categorical_x:
+        x_values_raw, x_values_wrapped, tick_font_size, bottom_margin = _prepare_categorical_x_axis(
+            pd.Series(x_values),
+            width,
+        )
+        plotted_x_values = x_values_wrapped
+        hover_x_template = "%{customdata}"
+
     fig = go.Figure()
-    
-    # Add all traces for time series view
+
     for col in ordered:
+        customdata = x_values_raw if is_categorical_x else None
         fig.add_trace(
             go.Scatter(
-                x=df[x_col],
+                x=plotted_x_values,
                 y=df[col],
                 mode="lines+markers",
                 name=col,
-                visible=True,  # All visible by default
+                customdata=customdata,
                 line=dict(
                     color=colors[col],
                     width=3 if col in ["NYS", "US"] else 2.5,
                     dash=dashes[col],
                 ),
-                marker=dict(size=8, color=colors[col], line=dict(width=1.5, color="white")),
+                marker=dict(
+                    size=8,
+                    symbol=symbols[col],
+                    color=colors[col],
+                    line=dict(width=1.5, color="white"),
+                ),
                 hovertemplate=(
-                    f"<b>{col}</b><br>{x_axis_title}: %{{x}}<br>"
+                    f"<b>{col}</b><br>{x_axis_title}: {hover_x_template}<br>"
                     f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                     "<extra></extra>"
                 ),
             )
         )
-    
-    # Add bar chart traces for each year (initially hidden)
-    # For each year, create one trace per county - each trace represents one county's bar
-    for year in years:
-        year_data = df[df[x_col] == year]
-        for idx, col in enumerate(ordered):
-            value = year_data[col].iloc[0] if len(year_data) > 0 and col in year_data.columns else 0
-            # Create a trace with x=[col] so bars group by county name when all are visible
-            fig.add_trace(
-                go.Bar(
-                    x=[col],  # County name on x-axis
-                    y=[value],
-                    name=col,
-                    visible=False,  # Hidden by default
-                    marker=dict(color=colors[col]),
-                    hovertemplate=(
-                        f"<b>{col}</b><br>{x_axis_title}: {year}<br>"
-                        f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
-                        "<extra></extra>"
-                    ),
-                    showlegend=True,  # Show legend for bar charts
-                    legendgroup=f"{col}_{year}",  # Unique group per year
-                )
-            )
-    
-    # Calculate y range
+
     y_values = df[ordered].to_numpy().flatten()
     y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding)
-    
-    # Create updatemenus for view switching
-    buttons = []
-    
-    # Time series view button (all counties, all years)
-    buttons.append(
-        dict(
-            label="Time Series (All Years)",
-            method="update",
-            args=[
-                {
-                    "visible": [True] * len(ordered) + [False] * (len(ordered) * len(years)),
-                },
-                {
-                    "xaxis": {"title": x_axis_title},
-                    "barmode": None,
-                },
-            ],
-        )
-    )
-    
-    # Single year comparison buttons (bar charts)
-    for year in years:
-        year_idx = years.index(year)
-        # Show bar traces for this year, hide line traces
-        visibility = [False] * len(ordered) + [False] * (len(ordered) * len(years))
-        for i, col in enumerate(ordered):
-            trace_idx = len(ordered) + (year_idx * len(ordered)) + i
-            visibility[trace_idx] = True
-        
-        buttons.append(
-            dict(
-                label=f"Compare by Year ({year})",
-                method="update",
-                args=[
-                    {"visible": visibility},
-                    {
-                        "xaxis": {"title": "County"},
-                        "barmode": "group",
-                    },
-                ],
-            )
-        )
-    
-    # Create dropdown for county filtering (only applies to time series view)
-    county_buttons = []
-    county_buttons.append(
-        dict(
-            label="All Counties",
-            method="restyle",
-            args=[{"visible": [True] * len(ordered)}],
-        )
-    )
-    
-    # Add buttons for individual counties
-    for col in ordered:
-        visibility = [False] * len(ordered)
-        visibility[ordered.index(col)] = True
-        county_buttons.append(
-            dict(
-                label=col,
-                method="restyle",
-                args=[{"visible": visibility}],
-            )
-        )
-    
-    # Add buttons for county groups
-    county_groups = {
-        "Mid-Hudson Counties": [c for c in ordered if c not in ["NYS", "US"]],
-        "Counties Only": [c for c in ordered if c not in ["NYS", "US"]],
-        "With Benchmarks": ordered,
-    }
-    
-    for group_name, group_counties in county_groups.items():
-        visibility = [c in group_counties for c in ordered]
-        county_buttons.append(
-            dict(
-                label=group_name,
-                method="restyle",
-                args=[{"visible": visibility}],
-            )
-        )
-    
-    # Apply layout
+
     _apply_layout(
         fig=fig,
         x_axis_title=x_axis_title,
@@ -484,63 +756,16 @@ def build_interactive_line_figure(
         height=height,
         font_family=font_family,
     )
-    
-    # Add updatemenus
-    fig.update_layout(
-        updatemenus=[
-            dict(
-                type="dropdown",
-                direction="down",
-                showactive=True,
-                x=0.02,
-                xanchor="left",
-                y=1.02,
-                yanchor="top",
-                buttons=buttons,
-                pad={"r": 10, "t": 10},
-                bgcolor="rgba(255, 255, 255, 0.9)",
-                bordercolor="rgba(0, 0, 0, 0.2)",
-                borderwidth=1,
-            ),
-            dict(
-                type="dropdown",
-                direction="down",
-                showactive=True,
-                x=0.25,
-                xanchor="left",
-                y=1.02,
-                yanchor="top",
-                buttons=county_buttons,
-                pad={"r": 10, "t": 10},
-                bgcolor="rgba(255, 255, 255, 0.9)",
-                bordercolor="rgba(0, 0, 0, 0.2)",
-                borderwidth=1,
-            ),
-        ],
-        annotations=[
-            dict(
-                text="View:",
-                x=0.02,
-                xref="paper",
-                y=1.08,
-                yref="paper",
-                align="left",
-                showarrow=False,
-                font=dict(size=12),
-            ),
-            dict(
-                text="Filter Counties:",
-                x=0.25,
-                xref="paper",
-                y=1.08,
-                yref="paper",
-                align="left",
-                showarrow=False,
-                font=dict(size=12),
-            ),
-        ],
-    )
-    
+    if x_axis_options:
+        fig.update_xaxes(**x_axis_options)
+    elif is_categorical_x:
+        fig.update_layout(margin=dict(l=80, r=200, t=40, b=bottom_margin))
+        fig.update_xaxes(
+            tickangle=0,
+            automargin=True,
+            tickfont=dict(size=tick_font_size),
+        )
+
     return fig
 
 
@@ -549,13 +774,35 @@ def render_figure_and_table(
     df: pd.DataFrame,
     *,
     has_multilevel_headers: bool = False,
+    data_type: str | None = None,
+    row_label_col: str | None = None,
 ) -> None:
     """
     Display a figure above its table in Quarto/Jupyter output.
     Use chunk options for figure and table captions/labels.
+
+    Parameters
+    ----------
+    fig : go.Figure
+        The Plotly figure to display.
+    df : pd.DataFrame
+        The table data.
+    has_multilevel_headers : bool, optional
+        Passed through to ``style_cha_table``.
+    data_type : str, optional
+        Plain-English data type label (e.g. ``"Percent"``, ``"Rate per 100,000"``).
+        Controls number formatting in the table.  See ``style_cha_table`` for
+        accepted values.
+    row_label_col : str, optional
+        Name of the row-label column (first column).  Not formatted as a number.
     """
     from IPython.display import display
 
     fig.show()
-    styled_table = style_cha_table(df, has_multilevel_headers=has_multilevel_headers)
+    styled_table = style_cha_table(
+        df,
+        has_multilevel_headers=has_multilevel_headers,
+        data_type=data_type,
+        row_label_col=row_label_col,
+    )
     display(styled_table)

@@ -1,0 +1,12 @@
+<!-- indicator: fig-poison-control-cannabis -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-poison-control-cannabis
+#| fig-cap: 'Poison Center Cannabis Calls, Rate per 100,000 Population, 2020–2024'
+#| fig-alt: 'Data visualization showing Poison Center Cannabis Calls, Rate per 100,000 Population, 2020–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-poison-control-cannabis", workbook_path=CHA_WORKBOOK_PATH).show()
+```

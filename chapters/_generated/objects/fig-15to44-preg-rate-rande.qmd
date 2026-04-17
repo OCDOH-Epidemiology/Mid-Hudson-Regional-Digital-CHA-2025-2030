@@ -1,0 +1,13 @@
+<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-15to44-preg-rate-rande
+#| fig-cap: '15To44 Preg Rate Rande'
+#| fig-alt: 'Data visualization of 15To44 Preg Rate Rande.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-15to44-preg-rate-rande", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+

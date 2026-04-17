@@ -2,10 +2,10 @@
 title: Contact Information
 jupyter: python3
 execute:
-  freeze: auto
+  freeze: false
 ---
 
-# Population Focus for The Mid-Hudson Region Community Health Assessment
+## Population Focus for The Mid-Hudson Region Community Health Assessment
 
 -   Dutchess County
 -   Orange County
@@ -15,7 +15,7 @@ execute:
 -   Ulster County
 -   Westchester County
 
-# Questions or Comments regarding the assessment
+## Questions or Comments regarding the assessment
 
 For questions pertaining to Orange County, please contact:
 

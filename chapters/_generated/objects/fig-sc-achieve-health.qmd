@@ -1,0 +1,12 @@
+<!-- indicator: fig-sc-achieve-health -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-sc-achieve-health
+#| fig-cap: 'Top Rated Barriers to Achieving Better Health in Sullivan County (n = 102)'
+#| fig-alt: 'Data visualization showing Top Rated Barriers to Achieving Better Health in Sullivan County (n = 102).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-sc-achieve-health", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,11 @@
+<!-- indicator: tbl-hospital-exclusive-bf-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hospital-exclusive-bf-percent
+#| tbl-cap: 'Table showing Hospital exclusive bf percent.'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hospital-exclusive-bf-percent", workbook_path=CHA_WORKBOOK_PATH)
+```

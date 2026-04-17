@@ -1,0 +1,12 @@
+<!-- indicator: fig-uc-impact-mhsu -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-uc-impact-mhsu
+#| fig-cap: 'The Impact of Mental Wellbeing & Substance Use in Ulster County (n = 67)'
+#| fig-alt: 'Data visualization showing The Impact of Mental Wellbeing & Substance Use in Ulster County (n = 67).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-uc-impact-mhsu", workbook_path=CHA_WORKBOOK_PATH).show()
+```

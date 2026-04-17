@@ -72,7 +72,11 @@ def _reorder_columns_by_region(df):
 
 def _reorder_rows_by_region(df):
     first_col = df.columns[0]
-    normalized_values = df[first_col].map(_normalize_region_label)
+    row_labels = df[first_col]
+    # If duplicate first-column headers exist, use the first actual column.
+    if isinstance(row_labels, pd.DataFrame):
+        row_labels = row_labels.iloc[:, 0]
+    normalized_values = row_labels.map(_normalize_region_label)
     if normalized_values.empty:
         return df
     if (normalized_values == "").any():
@@ -82,14 +86,18 @@ def _reorder_rows_by_region(df):
     if normalized_values.nunique() < 2:
         return df
 
-    order_index = df[first_col].map(
+    order_index = row_labels.map(
         lambda value: CHA_REGION_ORDER.index(_normalize_region_label(value))
     )
-    return (
-        df.assign(_cha_region_order=order_index)
+    orig_columns = df.columns
+    sorted_df = (
+        df.set_axis(range(len(df.columns)), axis=1)
+        .assign(_cha_region_order=order_index.values)
         .sort_values("_cha_region_order", kind="stable")
         .drop(columns=["_cha_region_order"])
+        .set_axis(orig_columns, axis=1)
     )
+    return sorted_df
 
 
 def apply_cha_region_order(df):
@@ -99,7 +107,80 @@ def apply_cha_region_order(df):
     return df
 
 
-def style_cha_table(df, has_multilevel_headers=False):
+# ---------------------------------------------------------------------------
+# Number formatting by data type
+# ---------------------------------------------------------------------------
+
+# Maps the plain-English "Data Type" label (from the Template.xlsx Test sheet
+# and the Dropdowns sheet Y-labels column) to a pandas Styler format string.
+# The format string is applied to every data column (all columns except the
+# row-label column, which is always the first column).
+DATA_TYPE_FORMATS: dict[str, str] = {
+    # Percentages — one decimal place + % sign
+    "percent":              "{:.1f}%",
+    # Same label as used in the Dropdowns sheet
+    "Percent":              "{:.1f}%",
+
+    # Rates — one decimal place, no suffix
+    "rate per 1,000":       "{:.1f}",
+    "Rate per 1,000":       "{:.1f}",
+    "rate per 10,000":      "{:.1f}",
+    "Rate per 10,000":      "{:.1f}",
+    "rate per 100,000":     "{:.1f}",
+    "Rate per 100,000":     "{:.1f}",
+    "case rate":            "{:.1f}",
+    "Case Rate":            "{:.1f}",
+
+    # Counts — whole number with thousands separator
+    "number of cases":      "{:,.0f}",
+    "Number of Cases":      "{:,.0f}",
+    "count":                "{:,.0f}",
+    "Count":                "{:,.0f}",
+
+    # Ratio — whole number (e.g. 1:1,250 residents per provider)
+    "ratio":                "{:,.0f}",
+    "Ratio":                "{:,.0f}",
+
+    # Index scores — two decimal places
+    "index":                "{:.2f}",
+    "Index":                "{:.2f}",
+
+    # Currency — dollar sign + thousands separator, no decimals
+    "currency":             "${:,.0f}",
+    "Currency":             "${:,.0f}",
+}
+
+
+def get_format_string(data_type: str | None) -> str | None:
+    """
+    Return the pandas Styler format string for a plain-English data type label.
+
+    Parameters
+    ----------
+    data_type : str or None
+        Plain-English label such as ``"Percent"``, ``"Rate per 100,000"``, etc.
+        Case-insensitive lookup is attempted if an exact match is not found.
+
+    Returns
+    -------
+    str or None
+        A Python format string (e.g. ``"{:.1f}%"``), or ``None`` if the data
+        type is unrecognised (in which case numbers are left as-is).
+    """
+    if not data_type:
+        return None
+    # Exact match first
+    if data_type in DATA_TYPE_FORMATS:
+        return DATA_TYPE_FORMATS[data_type]
+    # Case-insensitive fallback
+    lower = data_type.strip().lower()
+    for key, fmt in DATA_TYPE_FORMATS.items():
+        if key.lower() == lower:
+            return fmt
+    return None
+
+
+def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_col=None):
     """
     Apply consistent CHA table styling to a pandas DataFrame.
     
@@ -109,7 +190,7 @@ def style_cha_table(df, has_multilevel_headers=False):
     - Row 2: White
     - Row 3: #EAF5DB (light green)
     - Alternates: white, #EAF5DB, white, #EAF5DB...
-    - First column: Bold, left-aligned
+    - First column: Bold, center-aligned
     - Other columns: Center-aligned
     - Dark green separator line after "Westchester" row to separate county data from grouped areas
     
@@ -120,23 +201,56 @@ def style_cha_table(df, has_multilevel_headers=False):
     has_multilevel_headers : bool, optional
         If True, applies special styling for MultiIndex column headers
         to create merged cell appearance (default: False)
-        
+    data_type : str, optional
+        Plain-English data type label that controls how numbers are formatted
+        in the table cells.  Accepted values match the Y-labels dropdown in
+        Template.xlsx:
+
+        * ``"Percent"``          → ``63.3%``
+        * ``"Rate per 1,000"``   → ``12.4``
+        * ``"Rate per 10,000"``  → ``45.2``
+        * ``"Rate per 100,000"`` → ``234.5``
+        * ``"Case Rate"``        → ``234.5``
+        * ``"Number of Cases"``  → ``1,234``
+        * ``"Ratio"``            → ``1,250``
+        * ``"Index"``            → ``0.45``
+        * ``"Currency"``         → ``$2,000``
+
+        If ``None`` (default), numbers are left as-is.
+    row_label_col : str, optional
+        Name of the column that contains row labels (e.g. years).  This column
+        is never formatted as a number.  Defaults to the first column.
+
     Returns
     -------
     pandas.io.formats.style.Styler
         A styled DataFrame ready for display in Quarto
-        
+
     Example
     -------
     >>> import pandas as pd
     >>> from scripts.cha_table_styling import style_cha_table
-    >>> 
+    >>>
     >>> data = {'Region': ['A', 'B'], 'Value': [100, 200]}
     >>> df = pd.DataFrame(data)
-    >>> styled = style_cha_table(df)
+    >>> styled = style_cha_table(df, data_type="Percent")
     >>> styled  # Display in Quarto
     """
     df = apply_cha_region_order(df)
+
+    # ── Number formatting ────────────────────────────────────────────────────
+    # Determine the row-label column (first column) – never formatted as a number
+    _row_label_col = row_label_col if row_label_col is not None else (
+        df.columns[0] if len(df.columns) > 0 else None
+    )
+    # Build a per-column format dict for pandas Styler.format()
+    _fmt_str = get_format_string(data_type)
+    _format_dict: dict = {}
+    if _fmt_str:
+        for col in df.columns:
+            if col != _row_label_col:
+                _format_dict[col] = _fmt_str
+    # ─────────────────────────────────────────────────────────────────────────
 
     styles = [
         # Header styling - white background
@@ -147,10 +261,10 @@ def style_cha_table(df, has_multilevel_headers=False):
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
-        # First column - bold, left-aligned
+        # First column - bold, center-aligned
         {'selector': 'td:first-child', 'props': [
             ('font-weight', 'bold'), 
-            ('text-align', 'left'), 
+            ('text-align', 'center'), 
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
@@ -160,13 +274,13 @@ def style_cha_table(df, has_multilevel_headers=False):
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
-        # Odd rows (1st, 3rd, 5th...) - light green
-        {'selector': 'tbody tr:nth-child(odd)', 'props': [
-            ('background-color', '#EAF5DB')
+        # Ensure row striping starts with row 1 (green), then white, then alternate.
+        # Target td cells directly with !important to win against framework defaults.
+        {'selector': 'tbody tr:nth-child(odd) td', 'props': [
+            ('background-color', '#EAF5DB !important')
         ]},
-        # Even rows (2nd, 4th, 6th...) - white
-        {'selector': 'tbody tr:nth-child(even)', 'props': [
-            ('background-color', '#FFFFFF')
+        {'selector': 'tbody tr:nth-child(even) td', 'props': [
+            ('background-color', '#FFFFFF !important')
         ]},
         # Table container
         {'selector': 'table', 'props': [
@@ -217,22 +331,40 @@ def style_cha_table(df, has_multilevel_headers=False):
     
     # Create the styled table
     styled = df.style.set_table_styles(styles).hide(axis="index")
+    # Apply number formatting if a data_type was provided
+    if _format_dict:
+        styled = styled.format(_format_dict, na_rep="")
     
     # Add dark green border-bottom to the Westchester row if found
     # Dark green color: using a dark green shade
     dark_green = '#2d5016'  # Dark green color
     
-    # Create a function to apply border-bottom to the Westchester row
-    def add_border_bottom(row):
-        # Check if this row contains "Westchester" in the first column
-        # When axis=1, row is a Series with column names as index
+    # Create a function that enforces zebra striping and (optionally)
+    # applies a dark green border below the Westchester row.
+    row_position_lookup = {idx: pos for pos, idx in enumerate(df.index)}
+
+    def style_row(row):
+        # Row 1 should be green, then white, then alternate.
+        row_pos = row_position_lookup.get(row.name, 0)
+        base_bg = '#EAF5DB' if row_pos % 2 == 0 else '#FFFFFF'
+        base_css = f'background-color: {base_bg} !important'
+
+        # Check if this row contains "Westchester" in the first column.
         first_val = row[first_col] if first_col in row.index else None
-        if pd.notna(first_val) and str(first_val).strip().lower() == 'westchester':
-            return ['border-bottom: 3px solid ' + dark_green] * len(row)
-        return [''] * len(row)
+        if isinstance(first_val, (pd.Series, pd.DataFrame)):
+            if isinstance(first_val, pd.DataFrame):
+                first_val = first_val.iloc[0, 0] if not first_val.empty else None
+            else:
+                first_val = first_val.iloc[0] if not first_val.empty else None
+
+        if first_val is not None and pd.notna(first_val) and str(first_val).strip().lower() == 'westchester':
+            return [f'{base_css}; border-bottom: 3px solid {dark_green}'] * len(row)
+        return [base_css] * len(row)
     
-    # Apply the function to all rows
-    styled = styled.apply(add_border_bottom, axis=1)
+    # Apply row-level styling only when index/columns are unique;
+    # pandas Styler does not support .apply with non-unique labels.
+    if df.index.is_unique and df.columns.is_unique:
+        styled = styled.apply(style_row, axis=1)
     
     return styled
 

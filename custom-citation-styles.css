@@ -57,6 +57,18 @@ sup a[href^="#cite-"]:any-link {
   -moz-text-decoration: none !important;
 }
 
+/* Quarto/Pandoc citation links */
+a[role="doc-biblioref"],
+a[role="doc-biblioref"]:link,
+a[role="doc-biblioref"]:visited,
+a[role="doc-biblioref"]:hover,
+a[role="doc-biblioref"]:active,
+a[role="doc-biblioref"]:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 /* Move figure caption above the figure for #fig-labor-force */
 .quarto-float[id^="fig-labor-force"] {
   display: flex;

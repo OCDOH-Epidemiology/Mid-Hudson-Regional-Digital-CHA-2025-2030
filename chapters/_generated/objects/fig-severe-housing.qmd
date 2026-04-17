@@ -1,0 +1,12 @@
+<!-- indicator: fig-severe-housing -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-severe-housing
+#| fig-cap: 'Percentage of Households with Severe Housing Problems, 2017–2021'
+#| fig-alt: 'Data visualization showing Percentage of Households with Severe Housing Problems, 2017–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-severe-housing", workbook_path=CHA_WORKBOOK_PATH).show()
+```

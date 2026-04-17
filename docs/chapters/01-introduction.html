@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Introduction – Orange County Community Health Assessment 2025</title>
+<title>5&nbsp; Introduction – Mid-Hudson Regional Community Health Assessment 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -77,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cb932b374caf5afc846bb1c361b2ad91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-45794ef1ef3cec9a01503f2b8b624b37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +124,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".skip-link")) return;
+  var targetId = "quarto-document-content";
+  var link = document.createElement("a");
+  link.className = "skip-link";
+  link.href = "#" + targetId;
+  link.textContent = "Skip to main content";
+  if (document.body.firstChild) {
+    document.body.insertBefore(link, document.body.firstChild);
+  } else {
+    document.body.appendChild(link);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var toggles = document.querySelectorAll(
+    'div[data-bs-toggle="collapse"][data-bs-target]'
+  );
+  toggles.forEach(function (el) {
+    if (!el.hasAttribute("role")) {
+      el.setAttribute("role", "button");
+    }
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+    el.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  var sidebarGlass = document.getElementById("quarto-sidebar-glass");
+  if (sidebarGlass && !sidebarGlass.getAttribute("aria-label")) {
+    sidebarGlass.setAttribute("aria-label", "Close sidebar overlay");
+  }
+
+  var scrollableOutputs = document.querySelectorAll(
+    ".cell-output.cell-output-display:not(.cell-output-markdown)"
+  );
+  scrollableOutputs.forEach(function (el) {
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+  });
+});
+</script>
 
 
 <link rel="stylesheet" href="../custom-citation-styles.css">
@@ -135,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Orange County Community Health Assessment 2025</a> 
+      <a href="../">Mid-Hudson Regional Community Health Assessment 2025</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -201,26 +269,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-health-behaviors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Health Behaviors</span></span></a>
+  <a href="../chapters/06-health-behaviors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Health Behaviors Indicators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-clinical-care.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Clinical Care</span></span></a>
+  <a href="../chapters/07-health-indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Health Indicators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-physical-environment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Physical Environment</span></span></a>
+  <a href="../chapters/08-Behavioral-Health.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Behavioral Health</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  <a href="../chapters/09-Child-Health.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Child Health</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-Environmental Indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Environmental Indicators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-County-Health-Summaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">County Health Summaries</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-Appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">List of Appendices</span></span></a>
   </div>
 </li>
     </ul>
@@ -240,12 +326,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#partnership" id="toc-partnership" class="nav-link" data-scroll-target="#partnership"><span class="header-section-number">5.5</span> Partnership</a></li>
   <li><a href="#data-sources-and-indicator-selection" id="toc-data-sources-and-indicator-selection" class="nav-link" data-scroll-target="#data-sources-and-indicator-selection"><span class="header-section-number">5.6</span> Data Sources and Indicator Selection</a></li>
   <li><a href="#data-notes" id="toc-data-notes" class="nav-link" data-scroll-target="#data-notes"><span class="header-section-number">5.7</span> Data Notes</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.8</span> References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
+<a class="skip-link" href="#quarto-document-content">Skip to main content</a>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -268,8 +354,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="prevention-agenda" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="prevention-agenda"><span class="header-section-number">5.1</span> Prevention Agenda</h2>
-<p>The Prevention Agenda 2025-2030 is New York State’s Health Improvement Plan, a six-year strategic initiative designed to improve public health and serve as a blueprint for state and local health departments to enhance the health of all residents<a href="#cite-1" title="New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/, accessed May 2025"><sup>1</sup></a>. The main strategy of the Prevention Agenda is to promote health equity for populations who experience health disparities through prevention of chronic disease and barriers to health care access. Achieving well-being and good quality of life requires a strong focus on prevention, with health behaviors, access to care, and social determinants of health playing key roles in promoting long-term health outcomes.</p>
-<p>The Prevention Agenda has five domains with specific action plans developed for each area. The five domains, based on Healthy People 2030’s Social Determinants of Health<a href="#cite-2" title="Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, https://health.gov/healthypeople/objectives-and-data/social-determinants-health, accessed June 2025"><sup>2</sup></a>, are Economic Stability, Social and Community Context, Neighborhood and Built Environment, Health Care Access and Quality, and Education Access and Quality.</p>
+<p>The Prevention Agenda 2025-2030 is New York State’s Health Improvement Plan, a six-year strategic initiative designed to improve public health and serve as a blueprint for state and local health departments to enhance the health of all residents <span class="citation" data-cites="nysdoh-prevention-agenda-2025">(<a href="#ref-nysdoh-prevention-agenda-2025" role="doc-biblioref">1</a>)</span>. The main strategy of the Prevention Agenda is to promote health equity for populations who experience health disparities through prevention of chronic disease and barriers to health care access. Achieving well-being and good quality of life requires a strong focus on prevention, with health behaviors, access to care, and social determinants of health playing key roles in promoting long-term health outcomes.</p>
+<p>The Prevention Agenda has five domains with specific action plans developed for each area. The five domains, based on Healthy People 2030’s Social Determinants of Health <span class="citation" data-cites="hp2030-sdoh-overview-2025">(<a href="#ref-hp2030-sdoh-overview-2025" role="doc-biblioref">2</a>)</span>, are Economic Stability, Social and Community Context, Neighborhood and Built Environment, Health Care Access and Quality, and Education Access and Quality.</p>
 <p>Since 2012, the New York State Department of Health (NYSDOH) has required LHDs to collaboratively work with their local hospitals and community partners in the development of the Community Health Assessment (CHA) and Community Health Improvement Plan (CHIP).</p>
 </section>
 <section id="community-health-assessment" class="level2" data-number="5.2">
@@ -279,7 +365,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="community-health-needs-assessment-and-community-service-plan" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="community-health-needs-assessment-and-community-service-plan"><span class="header-section-number">5.3</span> Community Health Needs Assessment and Community Service Plan</h2>
-<p>For hospitals classified as charitable organizations, they must meet general requirements for tax exemption under Section 501(c)(3)<a href="#cite-3" title="IRS, &quot;Exemption Requirements - 501(c)(3) Organizations.&quot; U.S. Department of the Treasury, 2025, https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations, accessed June 2025"><sup>3</sup></a> and Revenue Ruling 69-545<a href="#cite-4" title="IRS, &quot;Revenue Ruling 69-545.&quot; U.S. Department of the Treasury, 1969, https://www.irs.gov/pub/irs-tege/rr69-545.pdf, accessed June 2025"><sup>4</sup></a>. They must also meet the requirements imposed by Section 501(r)<a href="#cite-5" title="IRS, &quot;Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).&quot;, 2025, https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3, accessed June 2025"><sup>5</sup></a> on a facility-by-facility basis in order to be treated as an organization described in Section 501(c)(3). This involves completing a Community Health Needs Assessment (CHNA) and a Community Service Plan (CSP) every three years.</p>
+<p>For hospitals classified as charitable organizations, they must meet general requirements for tax exemption under Section 501(c)(3) <span class="citation" data-cites="irs-501c3-exemption-2025">(<a href="#ref-irs-501c3-exemption-2025" role="doc-biblioref">3</a>)</span> and Revenue Ruling 69-545 <span class="citation" data-cites="irs-revenue-ruling-69-545-1969">(<a href="#ref-irs-revenue-ruling-69-545-1969" role="doc-biblioref">4</a>)</span>. They must also meet the requirements imposed by Section 501(r) <span class="citation" data-cites="irs-501r3-chna-2025">(<a href="#ref-irs-501r3-chna-2025" role="doc-biblioref">5</a>)</span> on a facility-by-facility basis in order to be treated as an organization described in Section 501(c)(3). This involves completing a Community Health Needs Assessment (CHNA) and a Community Service Plan (CSP) every three years.</p>
 <p>The CHNA must define the community that it serves including the geographic area, target populations, and any focus on specialty areas or targeted diseases. It must also assess the health needs of the defined community including social determinants of health. As part of this process, they should include input from partners, stakeholders, and those with knowledge of the community’s health needs. As with the CHA, the CHNA should be shared widely.</p>
 <p>Through the CHNA, CHA, and partnership with the LHDs, the hospitals develop a CSP. The CSP, like the CHIP, develops and implements effective approaches to health promotion and disease prevention at the community level. The plan involves the use of evidence-based programs that target health areas identified in the CHNA that are of particular concern to their hospital service areas. For those hospitals that partner with LHDs, these areas are of concern to the greater county or regional efforts.</p>
 </section>
@@ -315,8 +401,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>New York State Cancer Registry</strong>: A registry which collects, processes, and reports information about New Yorkers diagnosed with cancer from all physicians, dentists, laboratories, and other health care providers who are required to report all cancers to the NYS Department of Health (DOH). <em>Secondary source</em></p>
 <p><strong>New York State Childhood Lead Poisoning Prevention Program (CLPPP)</strong>: The CLPPP is the largest in the country working to make homes safe from lead. It funds NYS local health departments (LHD) to approach high-risk housing to educate, inspect and control lead hazards. It looks for properties with lead paint hazards, then it takes action to make them lead safe, protecting children from lead poisoning. Blood lead testing data and blood lead levels are monitored through CLPPP. <em>Secondary source</em></p>
 <p><strong>New York State Communicable Disease Annual Reports</strong>: Documents are released annually from NYSDOH containing mandated reports of suspected or confirmed communicable diseases. <em>Secondary source</em></p>
-<p>**<br>
-**</p>
 <p><strong>New York State Communicable Disease Electronic Surveillance System (CDESS)</strong>: Reporting of suspected or confirmed communicable diseases is mandated under the NYS Sanitary Code (10NYCRR 2.10). Although physicians have primary responsibility for reporting, school nurses, laboratory directors, infection control practitioners, daycare center directors, health care facilities, state institutions, and any other individuals/locations providing health care services are also required to report communicable diseases. All reportable communicable disease data coming through the Electronic Clinical Laboratory Reporting System Introduction are reported to CDESS in a timely and complete manner. LHDs review each lab report for proper initiation of a case investigation. Once the investigation is created, the LHD may create a reportable case or may dismiss it if evidence does not support the case definition. <em>Primary source</em></p>
 <p><strong>New York State Department of Health Bureau of Communicable Disease Control:</strong> This Bureau is responsible for preventing and controlling the spread of disease by conducting disease surveillance, epidemiological investigations, and disseminating public health information. <em>Secondary source</em></p>
 <p><strong>New York State Department of Health Community Health Indicator Reports (CHIRS)</strong>: The CHIRS Dashboard tracks about 350 indicators organized by 15 health topics and is updated regularly to include the most recent year of data available for these indicators. Each NYS County has their own dashboard allowing for comparison of each county’s data to regional and NYS totals. Visualizations include tables, maps, charts, and graphs at state and county levels. <em>Secondary source</em></p>
@@ -353,26 +437,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Rate Denominators</strong>: Population estimates used to calculate rates sourced from data requests are from the U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table B01003. For all other rates, information on the denominator can be found at the original data source.</p>
 <p><strong>Suppressed and Unstable Data</strong>: Some rates/percentages based on small numbers are suppressed because they do not meet the criteria for confidentiality (notated by “s”). Other rates/percentages based on small numbers are presented but are not considered reliable since they can fluctuate greatly over time. These measures are indicated as unstable due to a small numerator (notated by “*”).</p>
 <p><strong>Three-Year Rate versus Single-Year Rate</strong>: When possible, rates are based on a three-year average rather than a single-year estimate to provide a more reliable comparison. Using a three-year average smooths out the data over multiple years to recognize that rates fluctuate from year to year and is particularly useful when small amounts of data are an issue.</p>
-</section>
-<section id="references" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="references"><span class="header-section-number">5.8</span> References</h2>
-<details>
-<summary>
-<strong>Click to view citations</strong>
-</summary>
-<p><span id="cite-1">1. New York State Department of Health. Prevention Agenda 2025-2030: New York State’s Health Improvement Plan, 2025, <a href="https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/" class="uri">https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/</a>, accessed May 2025</span></p>
-<p><span id="cite-2">2. Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <a href="https://health.gov/healthypeople/objectives-and-data/social-determinants-health" class="uri">https://health.gov/healthypeople/objectives-and-data/social-determinants-health</a>, accessed June 2025</span></p>
-<p><span id="cite-3">3. IRS, “Exemption Requirements - 501(c)(3) Organizations.” U.S. Department of the Treasury, 2025, <a href="https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations" class="uri">https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations</a>, accessed June 2025</span></p>
-<p><span id="cite-4">4. IRS, “Revenue Ruling 69-545.” U.S. Department of the Treasury, 1969, <a href="https://www.irs.gov/pub/irs-tege/rr69-545.pdf" class="uri">https://www.irs.gov/pub/irs-tege/rr69-545.pdf</a>, accessed June 2025</span></p>
-<p><span id="cite-5">5. IRS, “Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).”, 2025, <a href="https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3" class="uri">https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3</a>, accessed June 2025</span></p>
-</details>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-nysdoh-prevention-agenda-2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">New York State Department of Health. Prevention agenda 2025-2030: New york state’s health improvement plan [Internet]. 2025 [cited 2025 May]. Available from: <a href="https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/">https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/</a></div>
+</div>
+<div id="ref-hp2030-sdoh-overview-2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy people 2030: Social determinants of health [Internet]. 2025 [cited 2025 Jun]. Available from: <a href="https://health.gov/healthypeople/objectives-and-data/social-determinants-health">https://health.gov/healthypeople/objectives-and-data/social-determinants-health</a></div>
+</div>
+<div id="ref-irs-501c3-exemption-2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Internal Revenue Service. Exemption requirements - 501(c)(3) organizations [Internet]. 2025 [cited 2025 Jun]. Available from: <a href="https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations">https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations</a></div>
+</div>
+<div id="ref-irs-revenue-ruling-69-545-1969" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Internal Revenue Service. Revenue ruling 69-545 [Internet]. 1969 [cited 2025 Jun]. Available from: <a href="https://www.irs.gov/pub/irs-tege/rr69-545.pdf">https://www.irs.gov/pub/irs-tege/rr69-545.pdf</a></div>
+</div>
+<div id="ref-irs-501r3-chna-2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Internal Revenue Service. Community health needs assessment for charitable hospital organizations - section 501(r)(3) [Internet]. 2025 [cited 2025 Jun]. Available from: <a href="https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3">https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3</a></div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Find the page-level bibliography container generated by Quarto/Pandoc
+  var refs = document.getElementById("refs");
+  if (!refs) {
+    return;
+  }
+
+  // Avoid double-wrapping if script runs more than once
+  if (refs.closest(".cha-references-callout")) {
+    return;
+  }
+
+  // Create outer callout wrapper to match existing Source dropdown cards
+  var callout = document.createElement("div");
+  callout.className = "callout callout-style-default callout-note callout-titled cha-references-callout";
+
+  // Header with Bootstrap collapse toggle attributes
+  var header = document.createElement("button");
+  header.type = "button";
+  header.className = "callout-header d-flex align-content-center collapsed w-100 text-start border-0 bg-transparent";
+  header.setAttribute("data-bs-toggle", "collapse");
+  header.setAttribute("data-bs-target", ".cha-references-contents");
+  header.setAttribute("aria-expanded", "false");
+  header.setAttribute("aria-controls", "cha-references");
+  header.setAttribute("aria-label", "Toggle references");
+
+  var iconContainer = document.createElement("div");
+  iconContainer.className = "callout-icon-container";
+  var icon = document.createElement("i");
+  icon.className = "callout-icon";
+  iconContainer.appendChild(icon);
+
+  var titleContainer = document.createElement("div");
+  titleContainer.className = "callout-title-container flex-fill";
+
+  var srOnly = document.createElement("span");
+  srOnly.className = "screen-reader-only";
+  srOnly.textContent = "Note";
+
+  var titleText = document.createTextNode("References");
+
+  titleContainer.appendChild(srOnly);
+  titleContainer.appendChild(titleText);
+
+  var toggleBtn = document.createElement("div");
+  toggleBtn.className = "callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end";
+  var toggleIcon = document.createElement("i");
+  toggleIcon.className = "callout-toggle";
+  toggleBtn.appendChild(toggleIcon);
+
+  header.appendChild(iconContainer);
+  header.appendChild(titleContainer);
+  header.appendChild(toggleBtn);
+
+  // Collapsible body container
+  var bodyContainerOuter = document.createElement("div");
+  bodyContainerOuter.id = "cha-references";
+  bodyContainerOuter.className = "cha-references-contents callout-collapse collapse";
+
+  var bodyInner = document.createElement("div");
+  bodyInner.className = "callout-body-container callout-body";
+
+  // Move the existing refs list inside the body
+  bodyInner.appendChild(refs);
+  bodyContainerOuter.appendChild(bodyInner);
+
+  callout.appendChild(header);
+  callout.appendChild(bodyContainerOuter);
+
+  // Insert the callout near the bottom of the content, before page navigation if present
+  var pageNav = document.querySelector("nav.page-navigation");
+  if (pageNav && pageNav.parentNode) {
+    pageNav.parentNode.insertBefore(callout, pageNav);
+  } else if (refs.parentNode) {
+    refs.parentNode.insertBefore(callout, refs);
+  } else {
+    document.body.appendChild(callout);
+  }
+});
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -840,7 +1010,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  freeze: auto</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  freeze: false</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prevention Agenda</span></span>
@@ -848,7 +1018,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>The Prevention Agenda 2025-2030 is New York State's Health Improvement</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Plan, a six-year strategic initiative designed to improve public health</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>and serve as a blueprint for state and local health departments to</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>enhance the health of all residents<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#cite-1"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/, accessed May 2025"</span><span class="dt">&gt;&lt;</span><span class="kw">sup</span><span class="dt">&gt;</span>1<span class="dt">&lt;/</span><span class="kw">sup</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>. The main strategy of the</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>enhance the health of all residents <span class="co">[</span><span class="ot">@nysdoh-prevention-agenda-2025</span><span class="co">]</span>. The main strategy of the</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Prevention Agenda is to promote health equity for populations who</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>experience health disparities through prevention of chronic disease and</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>barriers to health care access. Achieving well-being and good quality of</span>
@@ -858,7 +1028,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The Prevention Agenda has five domains with specific action plans</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>developed for each area. The five domains, based on Healthy People</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>2030's Social Determinants of Health<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#cite-2"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, https://health.gov/healthypeople/objectives-and-data/social-determinants-health, accessed June 2025"</span><span class="dt">&gt;&lt;</span><span class="kw">sup</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">sup</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>, are Economic Stability, Social</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>2030's Social Determinants of Health <span class="co">[</span><span class="ot">@hp2030-sdoh-overview-2025</span><span class="co">]</span>, are Economic Stability, Social</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>and Community Context, Neighborhood and Built Environment, Health Care</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Access and Quality, and Education Access and Quality.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
@@ -888,9 +1058,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Community Health Needs Assessment and Community Service Plan</span></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>For hospitals classified as charitable organizations, they must meet</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>general requirements for tax exemption under Section 501(c)(3)<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#cite-3"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"IRS, </span><span class="dv">&amp;quot;</span><span class="st">Exemption Requirements - 501(c)(3) Organizations.</span><span class="dv">&amp;quot;</span><span class="st"> U.S. Department of the Treasury, 2025, https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations, accessed June 2025"</span><span class="dt">&gt;&lt;</span><span class="kw">sup</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">sup</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> and</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>Revenue Ruling 69-545<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#cite-4"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"IRS, </span><span class="dv">&amp;quot;</span><span class="st">Revenue Ruling 69-545.</span><span class="dv">&amp;quot;</span><span class="st"> U.S. Department of the Treasury, 1969, https://www.irs.gov/pub/irs-tege/rr69-545.pdf, accessed June 2025"</span><span class="dt">&gt;&lt;</span><span class="kw">sup</span><span class="dt">&gt;</span>4<span class="dt">&lt;/</span><span class="kw">sup</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>. They must also meet the requirements imposed</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>by Section 501(r)<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#cite-5"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"IRS, </span><span class="dv">&amp;quot;</span><span class="st">Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).</span><span class="dv">&amp;quot;</span><span class="st">, 2025, https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3, accessed June 2025"</span><span class="dt">&gt;&lt;</span><span class="kw">sup</span><span class="dt">&gt;</span>5<span class="dt">&lt;/</span><span class="kw">sup</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> on a facility-by-facility basis in order to be</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>general requirements for tax exemption under Section 501(c)(3) <span class="co">[</span><span class="ot">@irs-501c3-exemption-2025</span><span class="co">]</span> and</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>Revenue Ruling 69-545 <span class="co">[</span><span class="ot">@irs-revenue-ruling-69-545-1969</span><span class="co">]</span>. They must also meet the requirements imposed</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>by Section 501(r) <span class="co">[</span><span class="ot">@irs-501r3-chna-2025</span><span class="co">]</span> on a facility-by-facility basis in order to be</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>treated as an organization described in Section 501(c)(3). This involves</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>completing a Community Health Needs Assessment (CHNA) and a Community</span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Service Plan (CSP) every three years.</span>
@@ -1062,263 +1232,240 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>released annually from NYSDOH containing mandated reports of suspected</span>
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>or confirmed communicable diseases. *Secondary source*</span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**  </span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>**</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**New York State Communicable Disease Electronic Surveillance System</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>(CDESS)**: Reporting of suspected or confirmed communicable diseases is</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>mandated under the NYS Sanitary Code (10NYCRR 2.10). Although physicians</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>have primary responsibility for reporting, school nurses, laboratory</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>directors, infection control practitioners, daycare center directors,</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>health care facilities, state institutions, and any other</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>individuals/locations providing health care services are also required</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>to report communicable diseases. All reportable communicable disease</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>data coming through the Electronic Clinical Laboratory Reporting System</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>Introduction are reported to CDESS in a timely and complete manner. LHDs</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>review each lab report for proper initiation of a case investigation.</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>Once the investigation is created, the LHD may create a reportable case</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>or may dismiss it if evidence does not support the case definition.</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>*Primary source*</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Bureau of Communicable Disease</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>Control:** This Bureau is responsible for preventing and controlling the</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>spread of disease by conducting disease surveillance, epidemiological</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>investigations, and disseminating public health information. *Secondary</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Community Health Indicator Reports</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>(CHIRS)**: The CHIRS Dashboard tracks about 350 indicators organized by</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>15 health topics and is updated regularly to include the most recent</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>year of data available for these indicators. Each NYS County has their</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>own dashboard allowing for comparison of each county's data to regional</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>and NYS totals. Visualizations include tables, maps, charts, and graphs</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>at state and county levels. *Secondary source*</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health County Health Indicators by</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>Race/Ethnicity (CHIRE)**: The CHIRE is a map-based tool that allows</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>users to view health indicators by race and ethnicity in NYS and by</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>county. It includes a variety of health indicators by race and ethnicity</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>including mortality, vital statistics, injuries, chronic diseases, and</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>substance abuse. *Secondary source*</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Electronic Clinical Laboratory</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>Reporting System (ECLRS)**: ECLRS provides laboratories that serve NYS</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>with a single electronic system for secure and rapid transmission of</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>reportable disease information to the NYSDOH, county health departments,</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>and the NYC Department of Health and Mental Hygiene. ECLRS provides</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>timely reporting, improving completeness and accuracy of reports, and</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>generally facilitating the identification of emergent public health</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>problems by monitoring communicable diseases, lead poisoning, HIV/AIDS,</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>and cancer. *Secondary source*</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Office of Sexual Health and</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>Epidemiology**: A special projects unit responsible for conducting</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>Sexually Transmitted Infection (STI) surveillance activities related to</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>screening, disease morbidity, and HIV/STI Partner Services disease</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>intervention activities. Oversees surveillance activities for chlamydia,</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>gonorrhea, and syphilis for NYS (excluding NYC). *Secondary source*</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Rabies Laboratory**: Located at</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>Wadsworth Center’s Griffin Laboratory, provides monthly reports of the</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>number of animals tested for rabies, as well as the number that tested</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>positive for rabies in every NYS county. *Secondary source*</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Wadsworth Center**: Wadsworth</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>Center is a science-based community committed to protecting and</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>improving the health of New Yorkers through laboratory analysis,</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>investigations, and research, as well as laboratory certification and</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>educational programs. As the state's public health reference laboratory,</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>Wadsworth responds to urgent public health threats as they arise,</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>develops advanced methods to detect microbial agents and genetic</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>disorders, and measures and analyzes environmental chemicals. *Secondary</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**New York State Division of Criminal Justice**: A criminal justice</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>support agency which provides resources and services that inform</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>decision-making and improve the quality of the criminal justice system.</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>It maintains, analyzes, and publishes criminal and youth justice system</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>data, including incidents of crimes and arrests and dispositions, as</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>reported by police departments, sheriffs’ offices, probation</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>departments, and the state Office of Court Administration. *Secondary</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>**New York State Education Department**: Website publicly reports</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>educational data submitted by educational institutions. *Secondary</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>**New York State HIV Surveillance System**: An HIV surveillance system</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>conducted by the AIDS Institute Bureau of HIV/AIDS Epidemiology that</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>facilitates and monitors HIV-related laboratories and clinician</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>reporting in NYS. *Secondary source*</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**New York State Immunization Information System**: A web-based registry</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>that provides immunization records that are easily accessible and</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>promotes public health by documenting all individuals of appropriate age</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>and risk. All health care providers are required to report all</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>immunizations administered to persons less than 19 years of age, along</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>with the person’s immunization histories, to the NYS Department of</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>Health. *Secondary source*</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**New York State Medicaid Program**: NYS’s Medicaid program provides</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>comprehensive health coverage to more than 7.5 million lower-income New</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>Yorkers (as of December 2023). Medicaid pays for a wide range of</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>services, depending on a resident’s age, financial circumstances, family</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>situation, or living arrangements. These services are provided through a</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>large network of health care providers that can be accessed directly</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>using Medicaid or through a managed care plan. *Secondary source*</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**New York State Office of Addiction Services and Supports (OASAS)**:</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>The OASAS Office of Data Management, Research and Planning closely</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>monitors substance use disorder data and trends to better anticipate and</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>meet the needs of New Yorkers living with addiction. Data is made</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>available to partners, providers, and localities to inform the</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>collective efforts to understand and address addiction in NYS.</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>*Secondary source*</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**New York State Opioid Data Dashboard**: This is an interactive visual</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>presentation of indicators tracking opioid data at state and county</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>levels. It is a key resource for monitoring fatal and nonfatal opioid</span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>overdoses, opioid prescribing, opioid use disorder treatment, and the</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>overall opioid overdose burden. It displays a view of current and</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>historical data for 98 opioid-related indicators. *Secondary source*</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**New York State Prescription Monitoring Program Registry**: This</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>resource provides practitioners with direct, secure access to view</span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>dispensed controlled substance prescription histories for their</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>patients. Patient reports include all controlled substances that were</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>dispensed in NYS and reported by the pharmacy/dispenser for the past</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>year. This information will allow practitioners to better evaluate their</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>patients' treatment with controlled substances and determine whether</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>there may be abuse or non-medical use. *Secondary source*</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>**New York State Prevention Agenda Tracking Dashboard:** This is an</span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>interactive visual presentation of the most current tracking indicator</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>data to track progress of the New York State’s Health Improvement Plan</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>at state and county levels. It serves as a key source for monitoring</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>progress that communities around the state have made regarding meeting</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>the Prevention Agenda objectives. *Secondary source*</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>**New York State Student Weight Status Category Reporting System**: A</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>system that collects weight status category data on children and</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>adolescents attending public schools in NYS outside of NYC. *Secondary</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**New York Statewide Planning and Research Cooperative System</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>(SPARCS)**: SPARCS is a comprehensive all-payer data reporting system</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>established from cooperation between the health care industry and</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>government. The system currently collects patient level data on</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>characteristics, diagnoses and treatments, services, and charges for</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>each hospital inpatient and outpatient visit. *Secondary source*</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>**Data Small Area Health Insurance Estimates (SAHIE)**: SAHIE is a</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>program of the US Census Bureau which estimates health insurance</span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>coverage for all states and counties nationally. *Secondary source*</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>**United for ALICE**: ALICE is an acronym that stands for Asset,</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>Limited, Income Constrained, Employed. ALICE reports use a standardized</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>methodology that assesses cost of living and financial hardship on a</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>county level calculated by United Way of Northern New Jersey. *Secondary</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**Upstate New York Poison Center**: A call center and research</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>organization which provides poison emergency telephone management,</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>poison information resources, public education, professional education,</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>research and data collection, and toxicosurveillance in real time. Its</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>coverage area includes all NYS counties except Westchester, NYC, and</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>Long Island. *Secondary source*</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>**US Census Bureau**: The Census Bureau publishes population estimates</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>and demographic components of change, such as births, deaths, and</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>migration. This data can be sorted by characteristics such as age, sex,</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>and race, as well as by national, state, and county location. *Secondary</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>source*</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>**US Department of Agriculture (USDA) Food Environment Atlas**: An atlas</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>from the USDA which assembles data regarding food environment factors,</span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>such as food choices, health and well-being, and community</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>characteristics. *Secondary source*</span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>**US Department of Housing and Urban Development (HUD):** HUD provides</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>reports on programs provided by HUD or predecessor agencies that provide</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>subsidized housing. These reports provide information to get a picture</span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>of subsidized households in the US. *Secondary source*</span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>**Vital Statistics of New York State**: A registry of all births,</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>marriages, divorces/dissolutions of marriage, deaths, induced</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>termination of pregnancy/abortions, and fetal deaths that have occurred</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>in NYS outside of NYC. It is maintained by the NYS Bureau of Vital</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>Records, a branch of the NYSDOH. *Secondary source*</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Notes</span></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>**Crude Rate versus Age-Adjusted Rate**: A crude rate is defined as the</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>total number of cases or disease events divided by the total population.</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>The age-adjusted rates are rates that would have existed if the</span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>population under study had the same age distribution as the "standard"</span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>population. Therefore, they are summary measures adjusted for</span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>differences in age distributions. Age-adjusted rates are used when</span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>available and are calculated using the US 2000 standard population.</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>**International Classification of Diseases**: In 2015 the Department of</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>Health and Human Services mandated those entities using ICD-9 codes</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>transition to ICD-10 codes. Comparisons between data before and after</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>2015 cannot be made due to the many differences in the updated ICD-10-CM</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>code set.</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>**New York State excluding New York City (NYS excl NYC)**: The</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>population of NYC is not similar to that of the Mid-Hudson Region.</span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>Therefore, comparing rates/percentages of counties to NYS excluding NYC,</span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>rather than to the whole of NYS, provides a more accurate comparison.</span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>When possible, measures for both NYS and NYS excluding NYC are provided.</span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>When NYS excluding NYC data are not available comparisons should be made</span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>with caution.</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**New York State Communicable Disease Electronic Surveillance System</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>(CDESS)**: Reporting of suspected or confirmed communicable diseases is</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>mandated under the NYS Sanitary Code (10NYCRR 2.10). Although physicians</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>have primary responsibility for reporting, school nurses, laboratory</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>directors, infection control practitioners, daycare center directors,</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>health care facilities, state institutions, and any other</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>individuals/locations providing health care services are also required</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>to report communicable diseases. All reportable communicable disease</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>data coming through the Electronic Clinical Laboratory Reporting System</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>Introduction are reported to CDESS in a timely and complete manner. LHDs</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>review each lab report for proper initiation of a case investigation.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>Once the investigation is created, the LHD may create a reportable case</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>or may dismiss it if evidence does not support the case definition.</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>*Primary source*</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Bureau of Communicable Disease</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>Control:** This Bureau is responsible for preventing and controlling the</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>spread of disease by conducting disease surveillance, epidemiological</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>investigations, and disseminating public health information. *Secondary</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Community Health Indicator Reports</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>(CHIRS)**: The CHIRS Dashboard tracks about 350 indicators organized by</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>15 health topics and is updated regularly to include the most recent</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>year of data available for these indicators. Each NYS County has their</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>own dashboard allowing for comparison of each county's data to regional</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>and NYS totals. Visualizations include tables, maps, charts, and graphs</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>at state and county levels. *Secondary source*</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health County Health Indicators by</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>Race/Ethnicity (CHIRE)**: The CHIRE is a map-based tool that allows</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>users to view health indicators by race and ethnicity in NYS and by</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>county. It includes a variety of health indicators by race and ethnicity</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>including mortality, vital statistics, injuries, chronic diseases, and</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>substance abuse. *Secondary source*</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Electronic Clinical Laboratory</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>Reporting System (ECLRS)**: ECLRS provides laboratories that serve NYS</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>with a single electronic system for secure and rapid transmission of</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>reportable disease information to the NYSDOH, county health departments,</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>and the NYC Department of Health and Mental Hygiene. ECLRS provides</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>timely reporting, improving completeness and accuracy of reports, and</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>generally facilitating the identification of emergent public health</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>problems by monitoring communicable diseases, lead poisoning, HIV/AIDS,</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>and cancer. *Secondary source*</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Office of Sexual Health and</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>Epidemiology**: A special projects unit responsible for conducting</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>Sexually Transmitted Infection (STI) surveillance activities related to</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>screening, disease morbidity, and HIV/STI Partner Services disease</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>intervention activities. Oversees surveillance activities for chlamydia,</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>gonorrhea, and syphilis for NYS (excluding NYC). *Secondary source*</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Rabies Laboratory**: Located at</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>Wadsworth Center’s Griffin Laboratory, provides monthly reports of the</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>number of animals tested for rabies, as well as the number that tested</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>positive for rabies in every NYS county. *Secondary source*</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>**New York State Department of Health Wadsworth Center**: Wadsworth</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>Center is a science-based community committed to protecting and</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>improving the health of New Yorkers through laboratory analysis,</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>investigations, and research, as well as laboratory certification and</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>educational programs. As the state's public health reference laboratory,</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>Wadsworth responds to urgent public health threats as they arise,</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>develops advanced methods to detect microbial agents and genetic</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>disorders, and measures and analyzes environmental chemicals. *Secondary</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**New York State Division of Criminal Justice**: A criminal justice</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>support agency which provides resources and services that inform</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>decision-making and improve the quality of the criminal justice system.</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>It maintains, analyzes, and publishes criminal and youth justice system</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>data, including incidents of crimes and arrests and dispositions, as</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>reported by police departments, sheriffs’ offices, probation</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>departments, and the state Office of Court Administration. *Secondary</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>**New York State Education Department**: Website publicly reports</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>educational data submitted by educational institutions. *Secondary</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>**New York State HIV Surveillance System**: An HIV surveillance system</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>conducted by the AIDS Institute Bureau of HIV/AIDS Epidemiology that</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>facilitates and monitors HIV-related laboratories and clinician</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>reporting in NYS. *Secondary source*</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>**New York State Immunization Information System**: A web-based registry</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>that provides immunization records that are easily accessible and</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>promotes public health by documenting all individuals of appropriate age</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>and risk. All health care providers are required to report all</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>immunizations administered to persons less than 19 years of age, along</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>with the person’s immunization histories, to the NYS Department of</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>Health. *Secondary source*</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**New York State Medicaid Program**: NYS’s Medicaid program provides</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>comprehensive health coverage to more than 7.5 million lower-income New</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>Yorkers (as of December 2023). Medicaid pays for a wide range of</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>services, depending on a resident’s age, financial circumstances, family</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>situation, or living arrangements. These services are provided through a</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>large network of health care providers that can be accessed directly</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>using Medicaid or through a managed care plan. *Secondary source*</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**New York State Office of Addiction Services and Supports (OASAS)**:</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>The OASAS Office of Data Management, Research and Planning closely</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>monitors substance use disorder data and trends to better anticipate and</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>meet the needs of New Yorkers living with addiction. Data is made</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>available to partners, providers, and localities to inform the</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>collective efforts to understand and address addiction in NYS.</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>*Secondary source*</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>**New York State Opioid Data Dashboard**: This is an interactive visual</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>presentation of indicators tracking opioid data at state and county</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>levels. It is a key resource for monitoring fatal and nonfatal opioid</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>overdoses, opioid prescribing, opioid use disorder treatment, and the</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>overall opioid overdose burden. It displays a view of current and</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>historical data for 98 opioid-related indicators. *Secondary source*</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>**New York State Prescription Monitoring Program Registry**: This</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>resource provides practitioners with direct, secure access to view</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>dispensed controlled substance prescription histories for their</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>patients. Patient reports include all controlled substances that were</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>dispensed in NYS and reported by the pharmacy/dispenser for the past</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>year. This information will allow practitioners to better evaluate their</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>patients' treatment with controlled substances and determine whether</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>there may be abuse or non-medical use. *Secondary source*</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**New York State Prevention Agenda Tracking Dashboard:** This is an</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>interactive visual presentation of the most current tracking indicator</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>data to track progress of the New York State’s Health Improvement Plan</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>at state and county levels. It serves as a key source for monitoring</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>progress that communities around the state have made regarding meeting</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>the Prevention Agenda objectives. *Secondary source*</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**New York State Student Weight Status Category Reporting System**: A</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>system that collects weight status category data on children and</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>adolescents attending public schools in NYS outside of NYC. *Secondary</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>**New York Statewide Planning and Research Cooperative System</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>(SPARCS)**: SPARCS is a comprehensive all-payer data reporting system</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>established from cooperation between the health care industry and</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>government. The system currently collects patient level data on</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>characteristics, diagnoses and treatments, services, and charges for</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>each hospital inpatient and outpatient visit. *Secondary source*</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**Data Small Area Health Insurance Estimates (SAHIE)**: SAHIE is a</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>program of the US Census Bureau which estimates health insurance</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>coverage for all states and counties nationally. *Secondary source*</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>**United for ALICE**: ALICE is an acronym that stands for Asset,</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>Limited, Income Constrained, Employed. ALICE reports use a standardized</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>methodology that assesses cost of living and financial hardship on a</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>county level calculated by United Way of Northern New Jersey. *Secondary</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>**Upstate New York Poison Center**: A call center and research</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>organization which provides poison emergency telephone management,</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>poison information resources, public education, professional education,</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>research and data collection, and toxicosurveillance in real time. Its</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>coverage area includes all NYS counties except Westchester, NYC, and</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>Long Island. *Secondary source*</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>**US Census Bureau**: The Census Bureau publishes population estimates</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>and demographic components of change, such as births, deaths, and</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>migration. This data can be sorted by characteristics such as age, sex,</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>and race, as well as by national, state, and county location. *Secondary</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>source*</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>**US Department of Agriculture (USDA) Food Environment Atlas**: An atlas</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>from the USDA which assembles data regarding food environment factors,</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>such as food choices, health and well-being, and community</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>characteristics. *Secondary source*</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**US Department of Housing and Urban Development (HUD):** HUD provides</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>reports on programs provided by HUD or predecessor agencies that provide</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>subsidized housing. These reports provide information to get a picture</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>of subsidized households in the US. *Secondary source*</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>**Vital Statistics of New York State**: A registry of all births,</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>marriages, divorces/dissolutions of marriage, deaths, induced</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>termination of pregnancy/abortions, and fetal deaths that have occurred</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>in NYS outside of NYC. It is maintained by the NYS Bureau of Vital</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>Records, a branch of the NYSDOH. *Secondary source*</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Notes</span></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**Crude Rate versus Age-Adjusted Rate**: A crude rate is defined as the</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>total number of cases or disease events divided by the total population.</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>The age-adjusted rates are rates that would have existed if the</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>population under study had the same age distribution as the "standard"</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>population. Therefore, they are summary measures adjusted for</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>differences in age distributions. Age-adjusted rates are used when</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>available and are calculated using the US 2000 standard population.</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>**International Classification of Diseases**: In 2015 the Department of</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>Health and Human Services mandated those entities using ICD-9 codes</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>transition to ICD-10 codes. Comparisons between data before and after</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>2015 cannot be made due to the many differences in the updated ICD-10-CM</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>code set.</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>**New York State excluding New York City (NYS excl NYC)**: The</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>population of NYC is not similar to that of the Mid-Hudson Region.</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>Therefore, comparing rates/percentages of counties to NYS excluding NYC,</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>rather than to the whole of NYS, provides a more accurate comparison.</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>When possible, measures for both NYS and NYS excluding NYC are provided.</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>When NYS excluding NYC data are not available comparisons should be made</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>with caution.</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>**Rate**: A rate is a measure of the frequency with which an event</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>occurs in a defined population over a specified period of time.</span>
 <span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>**Rate**: A rate is a measure of the frequency with which an event</span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>occurs in a defined population over a specified period of time.</span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>**Rate Denominators**: Population estimates used to calculate rates</span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>sourced from data requests are from the U.S. Census Bureau’s 2023</span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>American Community Survey (ACS) 5-Year Estimate, Table B01003. For all</span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>other rates, information on the denominator can be found at the original</span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>data source.</span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>**Suppressed and Unstable Data**: Some rates/percentages based on small</span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>numbers are suppressed because they do not meet the criteria for</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>confidentiality (notated by “s”). Other rates/percentages based on small</span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>numbers are presented but are not considered reliable since they can</span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>fluctuate greatly over time. These measures are indicated as unstable</span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>due to a small numerator (notated by “<span class="sc">\*</span>”).</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>**Three-Year Rate versus Single-Year Rate**: When possible, rates are</span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>based on a three-year average rather than a single-year estimate to</span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>provide a more reliable comparison. Using a three-year average smooths</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>out the data over multiple years to recognize that rates fluctuate from</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>year to year and is particularly useful when small amounts of data are</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>an issue.</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>Click to view citations<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"cite-1"</span><span class="dt">&gt;</span>1. New York State Department of Health. Prevention Agenda 2025-2030: New York State's Health Improvement Plan, 2025, <span class="ot">&lt;https://www.health.ny.gov/prevention/prevention_agenda/2025-2030/&gt;</span>, accessed May 2025<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"cite-2"</span><span class="dt">&gt;</span>2. Healthy People 2030, U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion, 2025, <span class="ot">&lt;https://health.gov/healthypeople/objectives-and-data/social-determinants-health&gt;</span>, accessed June 2025<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"cite-3"</span><span class="dt">&gt;</span>3. IRS, "Exemption Requirements - 501(c)(3) Organizations." U.S. Department of the Treasury, 2025, <span class="ot">&lt;https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations&gt;</span>, accessed June 2025<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"cite-4"</span><span class="dt">&gt;</span>4. IRS, "Revenue Ruling 69-545." U.S. Department of the Treasury, 1969, <span class="ot">&lt;https://www.irs.gov/pub/irs-tege/rr69-545.pdf&gt;</span>, accessed June 2025<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"cite-5"</span><span class="dt">&gt;</span>5. IRS, "Community Health Needs Assessment for Charitable Hospital Organizations - Section 501(r)(3).", 2025, <span class="ot">&lt;https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3&gt;</span>, accessed June 2025<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>**Rate Denominators**: Population estimates used to calculate rates</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>sourced from data requests are from the U.S. Census Bureau’s 2023</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>American Community Survey (ACS) 5-Year Estimate, Table B01003. For all</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>other rates, information on the denominator can be found at the original</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>data source.</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>**Suppressed and Unstable Data**: Some rates/percentages based on small</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>numbers are suppressed because they do not meet the criteria for</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>confidentiality (notated by “s”). Other rates/percentages based on small</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>numbers are presented but are not considered reliable since they can</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>fluctuate greatly over time. These measures are indicated as unstable</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>due to a small numerator (notated by “<span class="sc">\*</span>”).</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>**Three-Year Rate versus Single-Year Rate**: When possible, rates are</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>based on a three-year average rather than a single-year estimate to</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>provide a more reliable comparison. Using a three-year average smooths</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>out the data over multiple years to recognize that rates fluctuate from</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>year to year and is particularly useful when small amounts of data are</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>an issue.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

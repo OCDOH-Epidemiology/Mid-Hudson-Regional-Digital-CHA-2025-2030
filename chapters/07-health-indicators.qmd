@@ -1,0 +1,1206 @@
+---
+title: "Health Indicators"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+CHA_WORKBOOK_PATH = (
+    project_root / "data" / "raw" / "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+)
+if not CHA_WORKBOOK_PATH.exists():
+    CHA_WORKBOOK_PATH = Path(
+        "/Users/dq/Coding/Coding Projects/Mid-Hudson Regional CHA 2025/"
+        "Mid-HudsonRegionalCHA-2025/data/raw/"
+        "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
+    )
+```
+
+Health indicators are specific and measurable data points used to describe the health of a community, its major health concerns, and the factors that can influence health outcomes. The indicators included in this assessment cover several broad categories that reflect the health of the M-H Region. By looking at health status and outcomes, social determinants of health, and health care access, the assessment provides a more complete picture of health. These data can be used to create actionable and effective strategies to improve the health and well-being of the entire M-H Region.
+
+The following subsections under Health Indicators provide more specific details about diseases affecting the population in the M-H Region. For some county-level indicators, three-year averages were used for greater stability. If a single year is posted for a three-year average, the years averaged include the year preceding and the year following. For example, if the single year shown is 2020, the three-year average is from 2019–2022.
+
+## Mortality
+
+Before discussing health indicators in the M-H Region, it is useful to understand the overall burden of disease facing residents in these seven counties. Morbidity measures illness and is defined in terms of incidence or prevalence. Incidence is the number of new cases of a disease divided by the number of people at risk over a particular period. Prevalence is the total number of cases of disease in a population during a specific period or at a particular point in time. Mortality is another term for death. A mortality rate is the number of deaths due to a disease during a particular period divided by the total population.
+
+Table 17 lists the top five causes of mortality in the M-H Region counties, as well as NYS and NYS excluding New York City (NYC).
+
+In 2022, Sullivan County had the highest total mortality rate out of all seven counties in the M-H Region, as well as NYS, at 908.5 per 100,000 population. In 2022, the leading cause of death in all M-H Region counties and in NYS was heart disease. The causes of death across the counties included heart disease, cancer, unintentional injury, chronic lower respiratory diseases (CLRD), cerebrovascular disease (stroke), and COVID-19.
+
+<!--Table 17: "Top Five Causes of Death, by Count and Age-Adjusted Rate per 100,000 Population, 2022"-->
+{{< include _generated/objects/tbl-five-lead-death-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Vital Statistics of NYS, April 2025 https://apps.health.ny.gov/public/tabvis/PHIG_Public/lcd/
+:::
+
+## Premature Death
+
+Premature death, or deaths occurring before age 65, is a measure of early mortality and a key indicator of population health, because it can be reduced through public health interventions and quality health care. Key factors contributing to premature death include behavioral risks such as poor diet, tobacco use, and physical inactivity; unintentional injuries such as drug overdoses and motor vehicle accidents; and health system and socioeconomic factors.
+
+In 2022, the percentage of deaths that were premature in the M-H Region (21%) was lower than in NYS (22%) and NYS excluding NYC (23.6%). Sullivan County had the highest percentage of premature deaths (28.8%), and Westchester County and Rockland County had the lowest (18.4% and 18.5%, respectively). Four counties in the region (Putnam, Rockland, Ulster, and Westchester) met the objective in the Prevention Agenda 2025–2030 of falling below 22.4% by 2030 see [@fig-premature-death-percent].
+
+<!--Figure 86: "Percentage of Deaths That are Premature, 2019–2022"-->
+{{< include _generated/objects/fig-premature-death-percent.qmd >}}
+
+{{< include _generated/objects/tbl-premature-death-percent.qmd >}}
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines. Premature death includes deaths occurring before the age of 65
+:::
+
+There are significant disparities in premature death rates, with Black and Hispanic populations experiencing higher rates than other racial and ethnic groups. Figure 87 shows premature death as a percent difference between Black non-Hispanic and White non-Hispanic residents. Across the M-H Region, Black non-Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest difference was in Ulster County (25.3%) and the smallest was in Sullivan County (8.0%). The Prevention Agenda 2025–2030 sets an objective of 18.4% for this measure.
+
+<!--Figure 87: "Premature Death as a Percent Difference Between Black Non-Hispanic and White Non-Hispanic Residents, 2019–2022"-->
+{{< include _generated/objects/fig-premature-death-percent-diff-bnhvswnh.qmd >}}
+
+{{< include _generated/objects/tbl-premature-death-percent-diff-bnhvswnh.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: Premature death includes deaths occurring before the age of 65. The percentage of premature deaths is calculated for both Black non-Hispanics and White non-Hispanics. Then, the difference is the Black non-Hispanic rate minus the White non-Hispanic rate. 
+:::
+
+[@fig-premature-death-percent-diff-hvswnh] shows premature death as a percent difference between Hispanic and White non-Hispanic residents. Across the M-H Region, Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest differences were in Sullivan and Putnam Counties (29.6% and 28.9%, respectively), and the smallest difference was in Orange County (17.2%). The Prevention Agenda 2025–2030 sets an objective of 17% for this measure.
+
+<!--Figure 88: "Premature Death as a Percent Difference Between Hispanic and White Non-Hispanic Residents, 2019–2022"-->
+{{< include _generated/objects/fig-premature-death-percent-diff-hvswnh.qmd >}}
+
+{{< include _generated/objects/tbl-premature-death-percent-diff-hvswnh.qmd >}}
+
+::: {.callout-note}
+Note: Premature death includes deaths occurring before the age of 65. The percentage of premature deaths is calculated for Hispanics and White non-Hispanics. Then, the difference is the Hispanic rate minus the White non-Hispanic rate
+:::
+
+## Physical Health
+
+### Chronic Diseases
+
+#### Chronic Lower Respiratory Diseases
+
+Chronic Lower Respiratory Disease (CLRD) is a classification of diseases that affect the lungs and respiratory tract. These diseases include asthma, emphysema, chronic bronchitis, and chronic obstructive pulmonary disease (COPD) [@jama-clrd-definitions-2021]. CLRD was the fifth leading cause of death in the U.S. in 2023 [@cdc-data-brief-leading-causes-2024]. In 2020–2022, the CLRD hospitalization rate in the M-H Region was lower than that of NYS and NYS excluding NYC. Orange County had the highest rate of CLRD hospitalizations (13.8 per 10,000), followed by Dutchess and Sullivan Counties (12.0 and 11.8 per 10,000, respectively). Putnam County had the lowest CLRD hospitalization rate (8.1 per 10,000) [see Figure 89].
+
+<!--Figure 89: "Chronic Lower Respiratory Disease Hospitalization, Age-Adjusted Rate per 10,000 Population, 2020–2022"-->
+{{< include _generated/objects/fig-clrd-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-clrd-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes for CLRD are: J40-J47.
+:::
+
+In 2020–2022, CLRD mortality rates varied across the region’s seven counties. Of the seven counties, Sullivan County had the highest CLRD mortality rate at 43.5 per 100,000 population, and Westchester County had the lowest rate at 17.3 per 100,000 population. The rate in the M-H Region was similar to the rate in NYS (22.8 vs 23.7 per 100,000 population, respectively) see [@fig-clrd-mortal-aar].
+
+<!--Figure 90: "Chronic Lower Respiratory Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2020–2022"-->
+{{< include _generated/objects/fig-clrd-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-clrd-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. This indicator includes deaths with chronic lower respiratory disease as the primary cause of death. The ICD-10 codes for CLRD are: J40-J47.
+:::
+
+When stratifying CLRD by race and ethnicity, disparities were not consistent between hospitalization and mortality rates. According to Figure 91, non-Hispanic Black adults had higher CLRD hospitalization rates across NYS and NYS excluding NYC. This pattern was also true for most counties in the M-H Region, with the exception of Dutchess County. However, non-Hispanic White adults had the highest CLRD mortality rates in most M-H Region counties, with the exception of Ulster County and Westchester County, which was also consistent with both NYS and NYS excluding NYC rates [see Figure 92]. Rates were unstable or suppressed for non-Hispanic Asian/Pacific Islander adults for both CLRD hospitalizations and mortality across much of the region, but they were overall lower than other racial/ethnic groups.
+
+<!--Figure 91: "Chronic Lower Respiratory Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-clrd-hospital-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-clrd-hospital-rande-aar.qmd >}}
+
+::: {.callout-note}
+s: Data are suppressed due to not meeting confidentiality criteria.
+Note: The ICD-10 codes for CLRD are: J40-J47.
+:::
+
+<!--Figure 92: "Chronic Lower Respiratory Disease Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-clrd-mortal-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-clrd-mortal-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+s: Data are suppressed due to not meeting confidentiality criteria.
+Note: This indicator includes deaths with chronic lower respiratory disease as the primary cause of death. The ICD-10-CM codes for CLRD are: J40-J47.
+:::
+
+### Asthma
+
+Asthma is caused by airway restriction in the lungs resulting in difficulty breathing, wheezing, chest tightness, and coughing. While the causes of asthma are not fully known, it is linked to a variety of factors that may be genetic, environmental, or viral. Other factors associated with higher asthma risk include allergies, obesity, occupation, and race. African Americans and Puerto Ricans are at a higher risk of developing asthma than other races and ethnicities [@nhlbi-asthma-causes-2024].
+
+There is no way to cure asthma, but it can be managed with medication and by avoiding triggers [@who-asthma-fact-sheet-2025]. Triggers can include environmental factors such as secondhand smoke, air pollution, and mold; infections; physical activity; and emotional stress [@cdc-asthma-control-2024]. Asthma is a serious burden on the health care system, accounting for over 900,000 emergency department visits and 94,000 inpatient hospital stays nationally [@cdc-asthma-most-recent-national-data-2023].
+
+In the U.S., 8.0% of adults have asthma [@cdc-asthma-most-recent-national-data-2023]. In 2021, this percentage varied across the seven counties in the M-H Region. According to Figure 93, Sullivan County had the highest percentage of adults with asthma (12.3%), while Rockland County had the lowest percentage (7.4%). Since 2016, Dutchess, Orange, Rockland, and Ulster Counties have had overall increases in the percentage of adults with asthma, while Putnam and Westchester Counties have had overall decreases. The percentages in Sullivan County, NYS, and NYS excluding NYC have stayed relatively stable.
+
+<!--Figure 93: "Percentage of Adults with Asthma, 2016, 2018, and 2021"-->
+{{< include _generated/objects/fig-brfss-adult-asthma.qmd >}}
+
+{{< include _generated/objects/tbl-brfss-adult-asthma.qmd >}}
+
+The rates of asthma hospitalization vary across the M-H Region and NYS. When looking at the recent three-year average from 2020–2022 in Figure 94, Westchester County had the highest asthma hospitalization rate at 5.9 per 10,000 population, while Rockland County had the lowest rate at 3.2 per 10,000 population. The rate across the whole M-H Region was similar to the rate across NYS excluding NYC (4.9 vs 4.2 per 10,000, respectively).
+
+<!--Figure 94: "Asthma Hospitalization, Age-Adjusted Rate per 10,000, 2020–2022"-->
+{{< include _generated/objects/fig-asthma-hopsital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-asthma-hopsital-aar.qmd >}}
+
+::: {.callout-note}
+NNote: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 code for asthma is: J45.
+:::
+
+When stratifying the data by race and ethnicity, as shown in Figure 95, non-Hispanic Black adults had higher rates of asthma hospitalization than non-Hispanic White and Hispanic adults. This pattern was consistent throughout the M-H Region counties, as well as in NYS and NYS excluding NYC. Lowest rates were generally seen among non-Hispanic White adults. Rates for non-Hispanic Asian/Pacific Islander adults were unstable or suppressed across most of the M-H Region counties.
+
+
+<!--Figure 95: "Asthma Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-asthma-hopsital-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-asthma-hopsital-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+s: Data are suppressed due to not meeting confidentiality criteria.
+Note: The ICD-10-CM code used for asthma is: J45.
+:::
+
+The Emergency Department (ED) is commonly used to treat asthma-related complications. When looking at those aged 0–17 years in the M-H Region [see Figure 96], in 2022 Sullivan County had the highest ED visit rate (104.1 per 10,000), while Rockland County and Putnam County had the lowest rates in the region (32.0 and 39.9 per 10,000, respectively). According to Figure 93, rates across all M-H Region counties, NYS, and NYS excluding NYC saw a sharp decrease from 2019 to 2020 and then steadily increased through 2022. In most cases, rates increased to near where they were before the COVID-19 pandemic, with the exception of Sullivan County, which has surpassed its pre-COVID-19 rate. All counties in the M-H Region met the objective outlined in the Prevention Agenda 2019–2024 of falling below 131.1 asthma ED visits per 10,000 among those aged 0–17 years by 2024.
+
+<!--Figure 96: "Asthma Emergency Department Visits, Age-Adjusted Rate per 10,000, 2019–2022"-->
+{{< include _generated/objects/fig-0to17-asthma-ed-rate.qmd >}}
+
+{{< include _generated/objects/tbl-0to17-asthma-ed-rate.qmd >}}
+
+::: {.callout-note}
+† 2023 data not available for Mid-Hudson
+Note: The 2018 population estimates are used to calculate rates for 2019 and 2020. Population estimates for 2021 and later are from the U.S. Census Bureau’s most recently published estimates. Changes seen in 2020 and subsequent data years are possibly due to impacts of the COVID-19 pandemic. The ICD-10 code for asthma is: J45.
+:::
+
+### Cardiovascular Disease
+
+Cardiovascular disease refers to several conditions that affect the heart and other components of the circulatory system, including congestive heart failure, cerebrovascular disease or stroke, coronary artery disease, and heart attack [@aha-cardiovascular-disease-2024]. Heart disease is a subset of cardiovascular disease and is the leading cause of death in the U.S. In 2022, heart disease was responsible for 1 in every five deaths in the U.S. The management, treatment, and lost productivity due to cardiovascular disease cost the U.S. approximately $252 billion each year from 2019 to 2020 [@cdc-heart-disease-factsstats-2024].
+
+Key risk factors for cardiovascular disease include high blood pressure, high cholesterol, and smoking. Other risk factors include diabetes, obesity, unhealthy diet, physical inactivity, and excessive alcohol use [@cdc-heart-disease-risk-factors-2024]. Research also shows an association between mental health disorders, such as mood disorders, anxiety disorders, chronic stress, and Post-Traumatic Stress Disorder (PTSD), and heart disease through both behavioral and physiological pathways [@cdc-heart-disease-mental-health-2024].
+
+According to Figure 97, in 2021, Sullivan County had the highest percentage of adults with cardiovascular disease (limited to heart attack, coronary artery disease, and stroke) in the M-H Region at 7.4%, a decrease from the region-wide peak of 8.6% in 2018. In 2021, Rockland County had the lowest percentage of adults with cardiovascular disease in the M-H Region at 5.7%, and the largest decrease from 2018 to 2021 (from 8.0% to 5.7%, respectively). This was followed by Orange County, which decreased from 7.8% in 2018 to 6.6% in 2021. Putnam County saw the largest increase of any county in the M-H Region, rising from 4.5% in 2018 to 6.8% in 2021, followed closely by Ulster County, which increased from 4.5% in 2018 to 6.7% in 2021.
+
+<!--Figure 97: "Percentage of Adults with Cardiovascular Disease, 2016, 2018, and 2021"-->
+{{< include _generated/objects/fig-adult-cardiovasdz-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-cardiovasdz-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "Has a doctor, nurse, or other health professional ever told you that you had any of the following:” and “Ever told you that you had a heart attack also called a myocardial infarction?” and “Ever told you that you had angina or coronary heart disease?” Based on responses to these questions, a person has Cardiovascular Disease if they responded yes to either of these questions.
+:::
+
+Recent data from 2019–2021 show that Sullivan County had the highest cardiovascular hospitalization rate at 129.9 per 10,000 population. This rate was higher than the M-H Region (99.3 per 10,000 population) and NYS (111.2 per 10,000 population). Putnam County had the lowest cardiovascular hospitalization rate at 76.9 per 10,000 population [see Figure 98].
+
+<!--Figure 98: "Cardiovascular Hospitalization, Age-Adjusted Rate per 10,000, 2019–2021"-->
+{{< include _generated/objects/fig-cardiovasdz-hospi-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cardiovasdz-hospi-aar.qmd >}}
+
+::: {.callout-note}
+Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes used for cardiovascular disease are: I00-I99.
+:::
+
+From 2014–2021, the rates of cardiovascular mortality generally trended downward for most of the M-H Region counties. The exceptions were Dutchess County, which experienced an increase from 2020–2021 (213.6 to 220.2 per 100,000 population), as well as an overall increase from 2014 to 2021 (from 209.8 to 220.2 per 10,000 population), and Ulster County, which experienced an increase from 2020–2021 (from 218.6 to 224.5 per 10,000 population) but an overall decrease from 2014 to 2021 (from 228.8 to 224.5 per 10,000 population). By contrast, both NYS and NYS excluding NYC experienced overall decreases from 2014–2021 and from 2020–2021 [see Figure 99].
+
+<!--Figure 99: "Cardiovascular Mortality, Age-Adjusted Rate per 100,000 Population, 2014–2021"-->
+
+{{< include _generated/objects/fig-cardiovasdz-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cardiovasdz-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes deaths with cardiovascular disease as the primary cause of death. The ICD-10 codes for cardiovascular disease are: I00-I99.
+:::
+
+### Hypertension
+As mentioned previously, hypertension is one of several risk factors for cardiovascular disease. Hypertension, or high blood pressure, occurs when the force of blood against the arteries becomes high enough to cause diseases such as cardiovascular disease. It is calculated based on the pressure in the arteries when the heart beats (systolic pressure) and the pressure in the arteries between heart beats (diastolic pressure) [@mayoclinic-high-blood-pressure-symptoms-causes-2024]. Hypertension is defined as having a systolic blood pressure greater than 130 mmHg and a diastolic blood pressure greater than 80 mmHg (or being on medication for hypertension). Almost half of adults in the U.S. (48.1%) have hypertension, and less than a quarter of those (22.5%) have their hypertension under control [@cdc-high-blood-pressure-factsstats-2024].
+
+Steps to controlling high blood pressure include measuring blood pressure on a regular basis, maintaining a healthy weight, managing other health-related conditions such as diabetes, creating a care plan with your health care team, and taking blood pressure medications as prescribed by a physician [@cdc-high-blood-pressure-living-with-2024].
+
+From 2016 to 2021, the age-adjusted percentage of adults with physician-diagnosed hypertension decreased for most counties in the M-H Region, as well as across NYS as a whole and NYS excluding NYC. Exceptions include Putnam County, which increased from 21.1% in 2016 (the lowest in the region that year) to 27.9% in 2021 (the third highest in the region that year). Dutchess County experienced a more modest increase, from 27.5% in 2016 to 28.2% in 2021. Sullivan County experienced the greatest decrease from 2016 to 2021, changing from the county with the highest age-adjusted percentage of adults with physician-diagnosed high blood pressure in 2016 (31.7%) to the lowest in the region in 2021 (22.3%) see[@fig-adult-highbp-mddx-percent].
+
+<!--Figure 100: "Age-Adjusted Percentage of Adults with Physician Diagnosed High Blood Pressure, 2016 and 2021"-->
+{{< include _generated/objects/fig-adult-highbp-mddx-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-highbp-mddx-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "Have you ever been told by a doctor, nurse, or other health professional that you have high blood pressure?” Based on the responses to this question, a person has High Blood Pressure if they answered yes, and this excludes females who were told this only while they were pregnant.
+:::
+
+### Cerebrovascular Disease
+Cerebrovascular disease is a term for a series of conditions (such as stroke, brain aneurysm, brain bleed, and carotid artery disease) that affect the blood vessels of the brain. Stroke is the most common type of cerebrovascular disease, and it occurs when blood supply to the brain is blocked, which can lead to extensive damage to the brain and even death. There are three main types of stroke: ischemic stroke, hemorrhagic stroke, and transient ischemic attack (TIA) [@clevelandclinic-cerebrovascular-disease-2022]. Ischemic strokes are the most common type of strokes; they occur when blood clots or plaques block the blood vessels to the brain, causing the brain to receive decreased oxygen. A hemorrhagic stroke occurs when a blood vessel bursts inside the brain, resulting in blood build-up in the tissues and causing severe damage. A TIA, also called a mini-stroke, occurs when blood flow is blocked to the brain for a short period of time, usually five minutes or less. More than a third of people who have a TIA and do not receive treatment have a major stroke within one year of the TIA [@cdc-stroke-about-2024].
+
+It is important to recognize the signs and symptoms of a stroke so action can be taken quickly. Signs of a stroke include numbness in the face or extremities, often on one side of the body; confusion or difficulty speaking; vision problems; loss of balance or lack of coordination; or a severe headache [@mayo-clinic-stroke-symptoms-causes-2024]. Some risk factors for a stroke include lifestyle behaviors such as a fatty diet, decreased physical activity, use of illicit drugs, drinking too much alcohol, and cigarette smoking, as well as medical conditions including high blood pressure, high cholesterol, and diabetes, other types of cardiovascular disease, and other factors such as family history and being aged 55 years and older [@cdc-stroke-risk-factors-2024].
+
+Recent data from 2019–2021 show that Sullivan County had the highest stroke hospitalization rate among the seven counties in the M-H Region, while Putnam had the lowest rate (23.6 and 14.7 per 10,000 population, respectively) see[@fig-cerbrovasdz-hospital-aar].
+
+<!--Figure 101: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000, 2019–2021"-->
+{{< include _generated/objects/fig-cerbrovasdz-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cerbrovasdz-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
+:::
+
+When stratified by race and ethnicity, the age-adjusted cerebrovascular disease hospitalization rate per 10,000 from 2020–2022 shows that non-Hispanic Black adults had higher rates of stroke hospitalization compared to other racial and ethnic groups in the majority of the counties in the M-H Region, as well as in NYS and NYS excluding NYC. This excludes Putnam and Dutchess Counties, where non-Hispanic White adults had higher stroke hospitalization rates than Hispanics and non-Hispanic Blacks [see Figure 102].
+
+<!--Figure 102: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-cerbrovasdz-hospital-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cerbrovasdz-hospital-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: Cerebrovascular disease is also known as stroke. The ICD-10 codes for cerebrovascular disease are: I60-I69.
+:::
+
+From 2018 to 2021, age-adjusted cerebrovascular disease mortality rates per 100,000 population remained relatively stable in counties in the M-H Region. Some counties experienced modest increases during this time. Orange County increased from 25.0 per 100,000 in 2018 to 26.0 per 100,000 in 2021, Westchester County increased from 21.6 per 100,000 in 2018 to 22.2 in 2021, and Putnam County increased from 20.1 per 100,000 in 2018 to 21.4 per 100,000 in 2021. Other counties experienced modest decreases during this time. Dutchess County decreased from 22.8 per 100,000 in 2018 to 21.8 per 100,000 in 2021, Rockland County decreased from 24.3 per 100,000 in 2018 to 23.1 per 100,000 in 2021, and Ulster County decreased from 26.1 per 100,000 in 2018 to 25.3 per 100,000 in 2021. The county that experienced the most significant decrease during this time was Sullivan County, which decreased from 26.2 per 100,000 in 2018 to 23.5 per 100,000 in 2021. Compared to the M-H Region, NYS and NYS excluding NYC both experienced larger increases in age-adjusted cerebrovascular disease mortality rates per 100,000 population from 2018–2021. NYS increased from 24.1 per 100,000 to 25.7 per 100,000 during the time period, and NYS excluding NYC increased from 27.3 per 100,000 to 28.7 per 100,000 during the time period see[@fig-cerbrovasdz-mortal-aar].
+
+
+<!--Figure 103: "Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-cerbrovasdz-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cerbrovasdz-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
+:::
+
+When stratified by race and ethnicity, the age-adjusted cerebrovascular disease mortality rates per 100,000 population from 2020–2022 differ from county to county. However, the majority of counties in the M-H Region (as well as NYS and NYS excluding NYC) had higher rates of non-Hispanic Black adults who died from a stroke relative to non-Hispanic Whites and Hispanics. Ulster County is the lone exception, with the Hispanic adult population (31.2 per 100,000) having a higher rate of stroke mortality than non-Hispanic Whites (25.1 per 100,000) and non-Hispanic Blacks (23.1 per 100,000). It must be noted that the rate for non-Hispanic Blacks during this period is statistically unstable [see Figure 104].
+
+<!-- Figure 104: "Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-cerbrovasdz-mortal-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cerbrovasdz-mortal-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. ICD-10 codes are: I60-I69.
+:::
+
+### Coronary Heart Disease
+In the U.S., Coronary Heart Disease (CHD), also known as coronary artery disease, is the most common type of cardiovascular disease [@cdc-coronary-heart-disease-2021]. The buildup of plaque, deposits of fat, cholesterol, and other substances in the arteries that supply the heart cause CHD. This can lead to chest pain or discomfort (angina) or even a heart attack if the arteries become completely blocked. The good news is that you can do a lot to decrease your risk and prevent and manage CHD through healthy habits like eating well, being active, avoiding tobacco, and managing stress [@mayo-coronary-artery-disease-symptoms-causes-2024].
+
+Data from 2021 show that Sullivan County had the highest CHD hospitalization rate of the seven counties in the M-H Region, and Rockland had the lowest rate (28.9 and 14.6 per 10,000 population, respectively). However, the rate in the M-H Region as a whole was still lower than the rates in NYS and NYS excluding NYC (18.0 vs 20.2 and 20.1 per 10,000 population, respectively) see [@fig-coronary-heart-disease-hospital-aar].
+
+<!--Figure 105: "Coronary Heart Disease Hospitalization, Age-Adjusted Rate per 10,000, 2021"-->
+{{< include _generated/objects/fig-coronary-heart-disease-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-coronary-heart-disease-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
+:::
+
+When stratifying this data by race and ethnicity, trends are not consistent through each county. For example, non-Hispanic White adults had higher CHD hospitalization rates compared to the other racial/ethnic groups in Dutchess, Putnam, and Ulster Counties. In Rockland Asian and Pacific Islander adults had higher CHD hospitalization rates compart to other racial and ethnic groups. However, in the remaining counties, NYS excluding NYC, and NYS, non-Hispanic Black adults had higher CHD hospitalization rates except that Hispanics for the state had higher rates. see[@fig-coronary-heart-disease-hospital-rande-aar].
+
+<!--Figure 106: "Coronary Heart Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2021"-->
+{{< include _generated/objects/fig-coronary-heart-disease-hospital-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-coronary-heart-disease-hospital-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+s: Data are suppressed due to not meeting confidentiality criteria. Note: Three-year age-adjusted rates.
+:::
+
+When looking at recent data from 2021, the heart attack hospitalization rate was highest in Sullivan County (20 per 10,000 population). This rate was higher than rates in the M-H Region, NYS excluding NYC, and NYS (10.4, 12.0, and 10.9 per 10,000 population, respectively) see[@fig-heartattack-hospital-aar].
+
+<!--Figure 107: "Heart Attack Hospitalization, Age-Adjusted Rate per 10,000, 2021"-->
+{{< include _generated/objects/fig-heartattack-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-heartattack-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
+:::
+
+CHD mortality rates have overall increased from 2018 to 2021 in most M-H Region counties, with the exception of Putnam County. The rate in NYS excluding NYC stayed relatively constant, with an increase in 2020, before decreasing in 2021. Similarly, the rate in NYS overall saw an increase from 2019 to 2020, before decreasing in 2021. see[@fig-congheartfail-mortal-aar].
+
+<!--Figure 108: "Coronary Heart Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-congheartfail-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-congheartfail-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year age-adjusted rates for counties and single-year age-adjusted rates for NYS and NYS excluding NYC are used in both the
+table and graph above.
+:::
+
+As mentioned previously, complete blockage of arteries can lead to a heart attack, otherwise known as a
+myocardial infarction. During a heart attack, part of the heart muscle does not receive enough blood flow and
+the more time that passes, the greater the damage to the heart muscle [@cdc-heart-attack-about-2024]. Heart attacks may also be caused by
+coronary artery disease that may be induced by poor lifestyle choices such as illicit drug use or smoking
+cigarette and lack of exercise. In the US, 805,000 Americans have a heart attack ever year and one in five of
+these heart attacks were silent [@cdc-heart-disease-facts-stats-2024]. Men aged 45 years and older and women aged 55 years and older are
+more likely to have heart attacks compared to other age groups [@mayoclinic-heart-attack-symptoms-causes-2023]. The major symptoms of a heart attack
+include Chest pain or discomfort, light-headedness, cold sweat, pain or discomfort in the jaw neck or back, both
+arms or shoulders [@cdc-heart-attack-about-2024].
+
+
+Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black adults had higher CHD mortality rates in Dutchess, Westchester, and Rockland counties, as well as NYS and NYS excluding NYC. In contrast, nonHispanic White adults had higher CHD mortality rates in Ulster and Sullivan Counties see[@fig-congheartfail-mortal-rande].
+
+<!--Figure 109: "Heart Attack Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2021"-->
+{{< include _generated/objects/fig-congheartfail-mortal-rande.qmd >}}
+
+{{< include _generated/objects/tbl-congheartfail-mortal-rande.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+:::
+
+
+From 2018-2021, heart attack mortality rates have been highest in Sullivan County and lowest in Westchester County. Dutchess County shows a steady increase, from 21.1 in 2018 to 28.7 in 2021 see[@fig-heartattack-mortal-aar].
+
+<!--Figure 110: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-heartattack-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-heartattack-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties, and single-year estimates are used for NYS excluding NYC, and NYS.
+:::
+
+When looking at congestive heart failure (CHF) mortality rates from 2018-2021, apart from some slight fluctuations, NYS excluding NYC has trended down from the two data points, while NYS slightly decrease in 2019 and 2020 and increase back in 2021. In the M-H Region, trends varied by county. Sullivan County experiences a slight increase in rate of 3.4 per 100,000, marking the county to be the highest in Congestive Heart Failure Mortality amongst the counties. Counties such as Orange, Putnam, and Westchester experienced decreases over the years, while the remaining counties experienced slight increase. see[@fig-congheartfail-mortal-aar-2].
+
+<!--Figure 111: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-congheartfail-mortal-aar-2.qmd >}}
+
+{{< include _generated/objects/tbl-congheartfail-mortal-aar-2.qmd >}}
+
+::: {.callout-note}     
+Note: The ICD-10 code for congestive heart failure is: I50.
+:::
+
+### Diabetes
+In the U.S., diabetes is the seventh leading cause of death. Diabetes is a chronic condition that changes how your body uses sugar (glucose) for energy. Normally, insulin helps sugar from food enter your cells, but with diabetes, this process does not work properly.
+
+There are two main types:
+
+- Type 1 Diabetes: The body’s immune system attacks the cells that make insulin, so the body produces little or no insulin. People with Type 1 diabetes need to take insulin as daily maintenance [@cdc-type-1-diabetes-2024].
+- Type 2 Diabetes: The body either does not make enough insulin or does not use it well. This is the most common type, affecting about 90% of people with diabetes [@cdc-type-2-diabetes-2024].
+
+Before full diabetes, some people have prediabetes, meaning their blood sugar runs higher than normal. The good news is that people can often reduce their risk of, or delay, type 2 diabetes. Staying active, losing weight, eating a healthy diet, and having regular checkups with a doctor are all important.
+
+[@fig-mddx-predm-dm-percent] shows that, in 2021, 10.6% of adults in the M-H Region were diagnosed with prediabetes by a physician, which is lower than NYS (11.4%) and higher than NYS excluding NYC (10.1%). Sullivan County had the highest percentage diagnosed with prediabetes (13.3%), and Ulster County had the lowest (6.0%). According to the U.S. Diabetes Surveillance System (USDSS), 11.6% of the U.S. population aged 18 years and older was diagnosed with diabetes in 2021 [@ada-about-diabetes-statistics-2022].
+
+Diabetes is also the 8th leading cause of death in the U.S. [@nysdoh-diabetes-2025]. The M-H Region percentage diagnosed with diabetes (9.0%) is lower than both NYS excluding NYC (9.4%) and NYS (10.2%). In the M-H Region, Rockland County had the highest percentage diagnosed with diabetes at 9.4%.
+
+Some risk factors for diabetes include family history (genetics), age, and polycystic ovary syndrome. Modifiable risk factors include weight and diet. Unhealthy behaviors to avoid include tobacco use, alcohol use, and a sugary diet. Healthy behaviors to adopt include a balanced diet and increased physical activity, such as daily walks. Uncontrolled diabetes can result in serious morbidities over time, including heart disease, limb loss, vision loss (retinopathy), and kidney disease. According to the American Diabetes Association (ADA), the health care industry spent $306.6 billion in direct medical costs in 2022 to manage the effects of diabetes [@ada-diabetes-basics-statistics-2022].
+
+Figure 112: "Diabetes, Age-Adjusted Percentage of Adults with Prediabetes and Diabetes, 2021"-->
+{{< include _generated/objects/fig-mddx-predm-dm-percent.qmd >}}
+
+{{< include _generated/objects/tbl-mddx-predm-dm-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Have you ever been told by a doctor or other health professional that you have prediabetes or borderline diabetes?" This excludes females who were told this only while they were pregnant.
+:::
+
+In 2021, diabetes hospitalization rates varied across the seven counties in the M-H Region. According to [@fig-dm-hospital-rande-aar], Sullivan County had the highest hospitalization rate at 213.3 per 10,000 population and Putnam County had the lowest rate at 115.1 per 10,000 population. These rates are compared to the NYS at 196.6 per 10,000 population.
+
+::: {.callout-note}
+Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
+:::
+
+When stratifying this data by race and ethnicity, diabetes hospitalization rates were highest among the nonHispanic Black population in NYS and NYS excluding NYC, along with five out of seven counties in the M-H Region. However, in Sullivan County, non-Hispanic White adults had the highest hospitalization rate (188.1 per 10,000 population). Dutchess and Putnam Non-Hispanic White adults had the highest hospitalization rates see [@fig-dm-hospital-rande-aar].
+
+<!--Figure 114: "Diabetes Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2021"-->
+{{< include _generated/objects/fig-dm-hospital-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-dm-hospital-rande-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
+:::
+
+To avoid the consequences of uncontrolled diabetes, many adults get their blood sugar tested by their medical provider. In 2021, the percentage of adults who had a test for high blood sugar or diabetes within the past three years was very similar across the M-H Region, with Rockland County the lowest at 45.4% and Putnam County the highest at 57.7%, as well as NYS and NYS excluding NYC. From 2013 to 2018, all seven counties, as well as NYS excluding NYC and NYS, had decreases in the percentage of adults who got their blood sugar tested, but by 2021, Orange, Putnam, Ulster, and Westchester had increases in adults testing for high blood sugar or diabetes [see @fig-highbs-dm-percent].
+
+<!--Figure 115: "Diabetes Tested for High Blood Sugar or Diabetes, Age-Adjusted Percentage of Adults, 2013–2021"-->
+{{< include _generated/objects/fig-highbs-dm-percent.qmd >}}
+
+{{< include _generated/objects/tbl-highbs-dm-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, " Have you had a test for high blood sugar or diabetes within the past three years?" This excludes females who were told this only while they were pregnant.
+:::
+
+From 2018 to 2021, diabetes mortality rates varied across the seven counties in the M-H Region. Sullivan County consistently experienced the highest rate in the M-H Region and was the only county to exceed both the NYS and NYS excluding NYC rates each year. Five out of the seven counties saw increases in the diabetes mortality rate
+from 2018 to 2021 see[@fig-dm-mortal-aar].
+
+<!--Figure 116: "Diabetes Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
+{{< include _generated/objects/fig-dm-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-dm-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes deaths with diabetes as the primary cause of death. The ICD-10 codes for diabetes are: E10-E14.
+:::
+
+When stratifying data by race and ethnicity, diabetes mortality rates were highest among the non-Hispanic Black population in NYS, NYS excluding NYC, and majority of counties in the M-H Region except Putnam and Ulster. The highest diabetes mortality rate among Non-Hispanic White in the M-H Region was Sullivan and lowest was Westchester [see @fig-dm-mortal-rande-aar].
+
+<!--Figure 117: "Diabetes Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2021"-->
+
+{{< include _generated/objects/fig-dm-mortal-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-dm-mortal-rande-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: This indicator includes deaths with diabetes as the primary cause of death. The ICD-10 codes for diabetes are: E10-E14.
+:::
+
+
+### Obesity
+Obesity is a chronic and serious disease in which an individual’s weight is higher than what is considered healthy for their height. It poses substantial health risks across the population. For example, people with obesity are at greater risk of developing other conditions, including diabetes, heart disease, hypertension, cancer, and renal failure [@cdc-obesity-overview-2025]. At the same time, many factors that influence obesity are beyond individual control, including environmental and emotional factors such as stress. This disease is preventable and manageable through a moderate caloric deficit, regular physical activity, and ongoing consultation with a medical provider.
+
+In 2021, among the seven counties in the M-H Region, Orange County had the highest percentage of adults who were overweight or obese (75.1%), and Westchester County had the lowest (59.4%). The prevalence in NYS and NYS excluding NYC was 66.7% in both groups. Since 2013, Putnam County, NYS, and NYS excluding NYC had increases in the percentage of adults who were overweight or obese. Sullivan, Ulster, and Westchester Counties had decreases in the percentage of adults who were overweight or obese [see @fig-adult-oando-percent].
+
+<!--Figure 118: "Adult Obesity, Age-Adjusted Percentage of Adults, 2013–2021"-->
+{{< include _generated/objects/fig-adult-oando-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-oando-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "About how much do you weigh without shoes?" and "About how tall are you without shoes?" Based on the responses to these questions, Body Mass Index is calculated using the formula: weight in kilograms divided by height in meters squared (kg/m2). Respondents are classified as obese based on BMI 30.00 or higher. Respondents are classified as overweight based on BMI between 25.00 and 29.9.
+:::
+
+Obesity poses substantial health risks in the U.S. population because of its association with higher mortality, reduced life expectancy, and many chronic diseases. People with obesity are at greater risk of developing other conditions, including diabetes, heart disease, hypertension, cancer, and renal failure. Obesity is also costly: as of 2019, annual medical costs were $1,861 higher per person compared with people with normal weight [@cdc-adult-obesity-facts-2025]. Eating calorie-dense food without a corresponding increase in physical activity increases the risk of obesity. Many factors contribute to obesity, including stress, environmental conditions, and behavioral factors. Everyday stress can indirectly affect obesity by contributing to overconsumption of food, increased alcohol intake, and a less active lifestyle, which can result in weight gain [@sinha-jastreboff-stress-obesity-2013].
+
+
+Recent data show that more than 40% of adults aged 20 years and older in the U.S. are obese [@cdc-adult-obesity-facts-2025]. Comparing data from 2018 to 2021, there were changes in the percentage of the population with obesity in each M-H Region county [see @fig-adult-obese-percent]. Most counties experienced an increase, while one county experienced a decrease: Rockland (27.0% to 23.1%). In 2021, Orange County had the highest obesity rate across the seven counties at 38.5%, which was above both NYS and NYS excluding NYC (32.1% and 29.8%, respectively).
+
+<!--Figure 119: "Adult Obesity, Age-Adjusted Percentage of Adults, 2018–2021"-->
+{{< include _generated/objects/fig-adult-obese-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-obese-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "About how much do you weigh without shoes?" and "About how tall are you without shoes?" Based on the responses to these questions, Body Mass Index is calculated using the formula: weight in kilograms divided by height in meters squared (kg/m2). Respondents are classified as obese based on BMI 30.00 or higher. Respondents are classified as overweight based on BMI between 25.00 and 29.9.
+:::
+
+In 2007, the Student Weight Status Category Reporting System (SWSCRS) was established through amendments to NYS Education Law to help the state and counties address increasing rates of obesity among school-aged children. Looking at the combined prevalence of overweight and obesity among school-aged children from 2014 to 2023, trends were similar across counties. Westchester County had a slight decrease, while Sullivan and Ulster Counties had the highest percentages of students who were overweight or obese compared with the other M-H Region counties and NYS excluding NYC see[@fig-child-oando-percent].
+
+<!--Figure 120: "Child Obesity, Age-Adjusted Percentage of Children, 2014–2023"-->
+{{< include _generated/objects/fig-child-oando-percent.qmd >}}
+
+{{< include _generated/objects/tbl-child-oando-percent.qmd >}}
+
+::: {.callout-note}
+Note: Overweight is defined as a body mass index (BMI) at or above the 85th percentile and below the 95th percentile. Obesity is defined as BMI greater than or equal to the 95th percentile. Counties outside NYC: grades pre-K, K, 2nd, 4th, 7th, and 10th prior to the 2019-2020 school year; grades pre-K, K, 1st, 3rd, 5th, 7th, 9th, and 11th starting with the 2019-2020 school year; data collected over two school years. Due to changes in Student Weight Status Category Reporting System data collection during the 2019-2020 school year, estimates from the 2019-2021 school years may not be directly comparable to previous school years.
+:::
+
+### Cirrhosis of the Liver
+Cirrhosis occurs when scarring permanently damages the liver and hinders it from functioning normally. It can eventually lead to liver failure and other complications, such as liver cancer and an increased risk of infections [@niddk-cirrhosis-definition-facts-2023; see @fig-cirrhosis-hospital-aar]. Common causes of cirrhosis include alcohol-associated liver disease, nonalcoholic fatty liver disease, and chronic hepatitis C or hepatitis B infection. Early symptoms can vary widely. In some cases, there may be no symptoms until the liver is badly damaged. However, early symptoms can include itching of the skin, poor appetite, nausea, vomiting, and mild pain in the upper-right side of the abdomen. Later-stage symptoms can include bruising easily, edema, and jaundice [@niddk-cirrhosis-symptoms-causes-2023; see @fig-cirrhosis-mortal-aar].
+
+
+<!--Figure 121: "Cirrhosis Hospitalization, Age-Adjusted Rate per 10,000 Population, 2020–2022"-->
+{{< include _generated/objects/fig-cirrhosis-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cirrhosis-hospital-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 code for cirrhosis is: K70, K73-K74.
+:::
+
+Between 2014 and 2021, cirrhosis mortality rates fluctuated across M-H Region counties. Of note, Dutchess and Putnam Counties saw sharp increases in cirrhosis mortality rates between 2018 and 2021 see[@fig-cirrhosis-mortal-aar].
+
+<!--Figure 122: "Cirrhosis Mortality, Age-Adjusted Rate per 100,000 Population, 2014–2021"-->
+{{< include _generated/objects/fig-cirrhosis-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cirrhosis-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS. The ICD-10 code for cirrhosis is: K70, K73-K74.
+:::
+
+
+### Cancer
+Cancer is a disease in which cells in the body grow out of control and invade surrounding tissues. Cancer can metastasize, or spread, from one part of the body to another [@nci-what-is-cancer-2021]. Though the causes of cancer are complex, certain risk factors are associated with a higher chance of developing cancer, such as environmental exposures, health behaviors, and age. Examples include sunlight, radiation, infectious agents, obesity, alcohol, and tobacco [@nci-cancer-risk-factors-2015].
+
+Cancer is one of the leading causes of death across all seven counties in the M-H Region [@nysdoh-leading-causes-dashboard-2025]. From 2019 to 2021, incidence rates were relatively similar across the seven counties in the M-H Region, as well as NYS [see @fig-allca-incident-mortal-aar]. Putnam County had the highest incidence rate of the seven M-H Region counties at 483.6 cases per 100,000. Orange County had the highest mortality rate, with 156.4 deaths per 100,000 [see @fig-allca-incident-mortal-aar].
+
+<!--Figure 123: "All Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2019–2021"-->
+{{< include _generated/objects/fig-allca-incident-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-allca-incident-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: Incidence rates of cancers are based on reports from hospitals and other health facilities that diagnose and treat cancer patients. These data include only invasive malignant tumors. For breast and prostate cancers, late-stage incidence rates are presented. "Late stage" is defined as all cancers that have spread beyond the organ of origin at the time of diagnosis.
+:::
+
+When all cancer incidence and mortality rates were stratified by sex, males had higher incidence and mortality rates than females in all seven counties, as well as NYS and NYS excluding NYC see[@fig-allca-incident-mortal-sex-aar].
+
+<!--Figure 124: "All Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2019–2021"-->
+{{< include _generated/objects/fig-allca-incident-mortal-sex-aar.qmd >}}
+
+{{< include _generated/objects/tbl-allca-incident-mortal-sex-aar.qmd >}}
+
+::: {.callout-note}
+Note: Cancer statistics are for invasive cancers only.
+:::
+
+### Colorectal Cancer
+Colorectal cancer (sometimes called colon cancer) is a cancer that starts in the colon or rectum. Symptoms can include blood in the stool, changes in bowel habits, abdominal pain or aches, and unintentional weight loss [@cdc-colorectal-cancer-overview-2022]. However, colorectal cancer does not always cause symptoms. Most colorectal cancers begin as polyps. Polyps are abnormal growths that can form in the colon or rectum and may turn into cancer over time if they are not removed. Colorectal cancer screening can detect polyps so they can be removed, which can prevent colorectal cancer from developing [@cdc-colorectal-cancer-prevention-2025].
+
+Of the seven counties in the M-H Region, Sullivan County had the highest colorectal cancer incidence rate, closely followed by Ulster County (37.3 and 37.2 per 100,000 population, respectively). Orange County had the highest mortality rate in the region, followed by Sullivan County (13.6 and 13.4 per 100,000 population) [see @fig-colonrectca-incident-mortal-aar].
+
+<!--Figure 125: "Colorectal Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2019–2021"-->
+{{< include _generated/objects/fig-colonrectca-incident-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-colonrectca-incident-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
+:::
+
+When stratifying by sex, males had higher colorectal cancer incidence rates across all seven counties in the M-H Region, with the exception of Putnam County, where females had a slightly higher incidence rate than males. Mortality rates were higher in males across all M-H Region counties, as well as in NYS and NYS excluding NYC [see @fig-colonrectca-incident-mortal-sex-aar].
+
+<!--Figure 126: "Colorectal Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2019–2021"-->
+{{< include _generated/objects/fig-colonrectca-incident-mortal-sex-aar.qmd >}}
+
+{{< include _generated/objects/tbl-colonrectca-incident-mortal-sex-aar.qmd >}}
+::: {.callout-note}
+Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
+:::
+
+When stratifying available data by race and ethnicity, rates differed in most counties. Non-Hispanic White populations had the highest rates of colorectal cancer in the seven counties in the M-H Region. This differed from NYS, where non-Hispanic Black populations had a slightly higher incidence than non-Hispanic White populations (36.5 and 36.4 cases per 100,000 population, respectively) [see @fig-colorectalca-incidence-rande-aar].
+
+<!--Figure 127: "Colorectal Cancer Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2019–2021"-->
+{{< include _generated/objects/fig-colorectalca-incidence-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-colorectalca-incidence-rande-aar.qmd >}}
+
+::: {.callout-note}
+s: Data are suppressed due to not meeting confidentiality criteria.
+Note: The ICD-10 codes for colorectal cancer are: C18-C21, C26.0.
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from NYS Cancer Registry and Statistics
+https://www.health.ny.gov/statistics/community/minority/county/
+:::
+
+The US Preventive Services Task Force recommends that adults aged 45 to 75 years receive regular screening for colorectal cancer [@uspstf-colorectal-cancer-screening-2021]. A colonoscopy, which uses a long, thin, flexible tube to check for polyps or cancer inside the entire colon, is one recommended screening method. Doctors can remove most polyps and some cancers during the procedure. Other screening tests include the guaiac-based fecal occult blood test (gFOBT), which uses a chemical called guaiac to detect blood in the stool, and the fecal immunochemical test (FIT), which uses antibodies to detect blood in the stool [@cdc-colorectal-cancer-screening-2025].
+
+The Healthy People 2030 target for the proportion of adults who get screened for colorectal cancer was 72.8% of adults aged 45 to 75. In 2018, Putnam County had the highest percentage of adults between 50 and 64 years who received colorectal cancer screening (86.3%). Sullivan County had the lowest percentage, with 58.8% of adults between 50 and 64 years receiving screening [see @fig-adult-50to64-colorectalca-screening-percent].
+
+<!--Figure 128: "Adult Colorectal Cancer Screening, Age-Adjusted Percentage of Adults, 2018"-->
+{{< include _generated/objects/fig-adult-50to64-colorectalca-screening-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-50to64-colorectalca-screening-percent.qmd >}}
+
+::: {.callout-note}
+Note: For colonoscopy and sigmoidoscopy, the Behavioral Risk Factor Surveillance System asks respondents, “Colonoscopy and sigmoidoscopy are exams to check for colon cancer. Have you ever had either of these exams?” and “Have you had a colonoscopy, a sigmoidoscopy, or both?” and “How long has it been since your most recent colonoscopy?” A general question asks respondents, “Have you ever had any other kind of test for colorectal cancer, such as virtual colonoscopy, CT colonography, blood stool test, FIT DNA, or Cologuard test?” For CT colonography, respondents are asked, “A virtual colonoscopy uses a series of X-rays to take pictures of inside the colon. Have you ever had a virtual colonoscopy?” and “When was your most recent CT colonography or virtual colonoscopy?” For fecal immunochemical tests, respondents are asked, “One stool test uses a special kit to obtain a small amount of stool at home and returns the kit to the doctor or the lab. Have you ever had this test?” and “How long has it been since you had this test?” Based on responses to these questions, a person meets current United States Preventive Services Task Force guidance if they had a fecal occult blood test within the past year, a sigmoidoscopy within the past five years, or a colonoscopy within the past 10 years.
+:::
+
+### Lung Cancer
+Lung cancer is the leading cause of cancer deaths among both males and females in the M-H Region and NYS. Some symptoms of lung cancer include chest pain, coughing (sometimes with blood), shortness of breath, and wheezing. The leading risk factor for lung cancer is tobacco use. According to the NYSDOH, smoking is responsible for over 80% of lung cancers [@nysdoh-lung-cancer-about-2025]. Another risk factor for lung cancer is radon exposure. Radon is a colorless, radioactive gas that comes from the decay of elements such as uranium, which is found in soil and rock [@acs-radon-exposure-2022]. Radon is present in surrounding air, but preventive measures can be taken, such as using radon detection kits. For smoking, preventive measures include abstaining, quitting, and avoiding exposure to secondhand smoke.
+
+From 2018 to 2022, the highest rates of lung cancer incidence were in Orange, Putnam, and Sullivan Counties (59.9, 57.6, and 62.9 per 100,000 population, respectively), which were higher than NYS but consistent with NYS excluding NYC (52.4 and 59.9 per 100,000 population, respectively) [see @fig-lungbronchca-incident-mortal-aar]. The Healthy People 2030 goal was to reduce lung cancer mortality to 25.1 deaths per 100,000 population. Only Westchester and Rockland Counties in the M-H Region met this target, and NYS and NYS excluding NYC are close to meeting it [see @fig-lungbronchca-incident-mortal-aar].
+
+<!--Figure 129: "Lung Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2022"-->
+{{< include _generated/objects/fig-lungbronchca-incident-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-lungbronchca-incident-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 code for lung and bronchus cancer is: C34.
+:::
+
+
+When stratifying these data by sex, males had higher lung cancer incidence and mortality rates than females in all seven counties, as well as in NYS and NYS excluding NYC, with the largest disparity seen in Ulster County [@fig-lungbronchca-incident-mortal-sex-aar]. 
+
+<!--Figure 130: "Lung Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2018–2022"-->
+{{< include _generated/objects/fig-lungbronchca-incident-mortal-sex-aar.qmd >}}
+
+{{< include _generated/objects/tbl-lungbronchca-incident-mortal-sex-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 code for lung and bronchus cancer is: C34.
+:::
+
+When stratifying these data by race and ethnicity, non-Hispanic White adults had the highest lung cancer incidence rates in most M-H Region counties and at the state level, with the exception of Ulster and Dutchess Counties, where non-Hispanic Black adults had higher lung cancer incidence rates [@fig-lungca-incidence-rande-aar].
+
+<!--Figure 131: "Lung Cancer Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-lungca-incidence-rande-aar.qmd >}}
+
+{{< include _generated/objects/tbl-lungca-incidence-rande-aar.qmd >}}
+
+::: {.callout-note}
+Note: Lung Cancer Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022
+:::
+
+
+### Prostate Cancer
+Out of every 100 American men, about 13 will get prostate cancer during their lifetime [@cdc-prostate-cancer-2022]. Some common symptoms of prostate cancer include difficulty urinating, frequent urination, blood in the urine or semen, and painful ejaculation. Prostate cancer has a better prognosis than many other cancers when people receive treatment early. The prostate-specific antigen (PSA) test measures the level of PSA in the blood, which is a substance created in the prostate. When PSA levels are high, this often means there is a problem with the prostate. It is important for men to begin testing at a younger age to help prevent future complications. Preventive measures can include lifestyle changes such as increased daily exercise, maintaining a healthy weight, improving diet, reducing alcohol use, and abstaining from smoking.
+
+When looking at Figure 132, the highest prostate cancer incidence rate was seen in Westchester County and the lowest incidence rate was seen in Sullivan County (141.3 and 93.4 per 100,000 males, respectively). The Healthy People 2030 goal is to reduce prostate cancer mortality to 16.9 deaths per 100,000 males. According to Figure 132, Putnam, Rockland, Sullivan, Ulster, and Westchester Counties in the M-H Region, as well as NYS and NYS excluding NYC, met this target. Orange County had the highest prostate cancer mortality rate in the M-H Region and was above the goal (18.2 per 100,000 males).
+
+<!--Figure 132: "Prostate Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2020–2022"-->
+{{< include _generated/objects/fig-male-prostateca-incidence-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-male-prostateca-incidence-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 code for prostate cancer is: C61.
+:::
+
+### Female Breast Cancer
+
+Breast cancer is one of the most prevalent cancers in American women. The most common symptom of breast cancer is a lump or mass found in the breast. The average lifetime risk of a woman in the U.S. developing breast cancer is about 13% [@acs-how-common-breast-cancer-2022]. Many factors influence female breast cancer risk, and prevention can include maintaining a healthy weight, being physically active, and avoiding harmful habits such as alcohol use and cigarette smoking.
+
+In the U.S., the age-adjusted rate of breast cancer incidence from 2015 to 2019 was 130.8 per 100,000 females. In the M-H Region, as well as NYS and NYS excluding NYC, the highest breast cancer incidence rate from 2018 to 2022 was in Putnam County, and the lowest rate was in Sullivan County (160.7 and 114.3 per 100,000 females, respectively). For mortality rates, the highest rate was in Orange County at 23.5 per 100,000 females [@fig-female-breastca-incidence-mortal-aar].
+
+<!--Figure 133: "Female Breast Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2022"-->
+{{< include _generated/objects/fig-female-breastca-incidence-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-female-breastca-incidence-mortal-aar.qmd >}}
+
+::: {.callout-note}
+Note: The ICD-10 code for breast cancer is: C50.
+:::
+
+The decrease in breast cancer mortality rates over time can be attributed to public awareness, increased screening, and advancements in treatment options. One of the most important and common screening tests for breast cancer is a mammogram, which is an X-ray image of the breast that should be routinely administered to women aged 40 years and older. Advancements in technology have also led to newer and experimental imaging tests [@acs-newer-experimental-breast-imaging-2025]. The Healthy People 2030 goal was for at least 80.3% of the female population to receive breast cancer screening based on the most recent guidelines. However, as seen in Figure 134, in 2021 all counties except Orange in the M-H Region, as well as NYS excluding NYC, failed to meet this target. NYS was the only location to meet this target at 80.3%. The percentage of women aged 50 to 74 years receiving breast cancer screening based on the most recent guidelines has generally remained stable since 2013 [@fig-female-breastca-screening-percent].
+
+<!--Figure 134: "Female Breast Cancer Screening, Age-Adjusted Percentage of Females, 2021"-->
+{{< include _generated/objects/fig-female-breastca-screening-percent.qmd >}}
+
+{{< include _generated/objects/tbl-female-breastca-screening-percent.qmd >}}
+
+::: {.callout-note}
+Note: The Behavioral Risk Factor Surveillance System asks respondents, "Have you ever had a mammogram?" and "How long has it been since you had your last mammogram?" Based on responses to these questions, women aged 50 to 74 years who had a mammogram in the past two years meet the current United States Preventive Services Task Force guidance.
+:::
+
+### Cervix Uteri Cancer
+Cervical cancer is a cancer that starts in the cells of the cervix. It often develops slowly and usually does not have any accompanying symptoms until after the cancer has spread [@nci-cervical-cancer-overview-2023]. Early-stage symptoms can include vaginal bleeding after sex or between periods, pelvic pain, or pain during sex. Advanced-stage symptoms (when the cancer has spread beyond the cervix to other body parts) can include difficult or painful bowel movements, difficult or painful urination, blood in the urine, bleeding from the rectum, dull backache, or pain in the abdomen [@nci-cervical-cancer-symptoms-2022]. HPV causes almost all cervical cancers. Though most HPV infections go away on their own, high-risk HPV infections that last for years can lead to changes in cervical cells, causing precancerous lesions. These lesions can eventually develop into cervical cancer if they are not found and removed. Nearly all cervical cancers could be prevented with HPV vaccination and cervical cancer screening. Cervical cancer can be screened for with a Pap test or an HPV test [@nci-cervical-cancer-causes-risk-prevention-2024].
+
+Other gynecological cancers include ovarian, uterine, vaginal, and vulvar cancers [@cdc-gynecologic-cancer-about-2024]. Each type of gynecologic cancer can vary across individuals. Those experiencing abnormal vaginal bleeding, including bleeding after menopause, should consult a doctor. Other symptoms include feeling full too quickly, bloating, back pain, pelvic pain, urgent need to urinate, constipation, and changes in vulva color or skin [@cdc-gynecologic-cancer-symptoms-2024].
+
+When looking at the incidence and mortality rates of cervical cancer in Figure 135, the highest incidence rate was in Sullivan County at 14.0 per 100,000 females and the lowest was in Westchester County at 5.9 per 100,000 females. The highest mortality rate was seen in Orange County at 2.7 per 100,000 females [@fig-cervutca-incident-mortal-aar].
+
+<!--Figure 135: "Cervical Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2022"-->
+{{< include _generated/objects/fig-cervutca-incident-mortal-aar.qmd >}}
+
+{{< include _generated/objects/tbl-cervutca-incident-mortal-aar.qmd >}}
+
+::: {.callout-note}
+s: Rates are not displayed if fewer than 16 cases or deaths are reported in a specific category during those 5 years.
+Note: Cancer statistics are for invasive cancers only. Rates are age-adjusted to the US Census Bureau's 2000 US standard population, Table P25-1130. Five-year age-adjusted rates. This indicator includes deaths with cervix uteri cancer as the primary cause of death. The ICD-10 code for cervix uteri cancer is: C53.
+:::
+
+
+Healthy People 2030 aims for 79.2% of women aged 21 to 65 to receive cervical cancer screenings in accordance with the latest clinical guidelines. The M-H Region exceeded this target, with 86.5% of females aged 21 to 65 having received a cervical cancer screening in 2018. Putnam County had the highest percentage among counties in the region at 96.2%, and Rockland County had the lowest rate at 80.6% [@fig-cervutca-screening-percent].
+
+<!--Figure 136: "Cervical Cancer Screening, Age-Adjusted Percentage of Females, 2018"-->
+{{< include _generated/objects/fig-cervutca-screening-percent.qmd >}}
+
+{{< include _generated/objects/tbl-cervutca-screening-percent.qmd >}}
+
+::: {.callout-note}
+Note: The U.S. Preventive Services Task Force recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). The Behavioral Risk Factor Surveillance System asks respondents, “Have you ever had a Pap test?”, “How long has it been since you had your last Pap test?”, and “How long has it been since you had your last HPV test?”
+:::
+
+### Infectious Diseases
+
+#### Vaccine-Preventable Diseases
+
+Infectious diseases are illnesses caused by disease-causing organisms that often spread from person to person. Vaccination is a well-established method of preventing numerous infectious diseases. Diseases that can be prevented by vaccination are referred to as vaccine-preventable diseases. A critical period for vaccination is during childhood. It is estimated that childhood vaccination prevents as many as 4 million deaths per year globally [@cdc-global-immunization-fast-facts-2025].
+
+#### Childhood Immunization
+The Advisory Committee on Immunization Practices (ACIP) recommends that children receive several routine childhood vaccinations by two years of age [@cdc-acip-vaccine-recommendations-2025]. The combined 4:3:1:3:3:1:4 vaccine series consists of four doses of diphtheria, tetanus, and acellular pertussis (DTaP); three doses of polio; one dose of measles, mumps, and rubella (MMR); three doses of Haemophilus influenzae type b (Hib); three doses of hepatitis B (HepB); one dose of varicella; and four doses of pneumococcal conjugate vaccine (PCV). Appropriate vaccination coverage is linked to improved health outcomes and cost savings. Complying with age-appropriate receipt of vaccines is critical to providing maximum effectiveness against vaccine-preventable diseases.
+
+NYSPA 2025-2030 set an objective for 62.3% of the 24- to 35-month-old population to complete the series. This objective is lower than the objective for the previous PA (70.5%). The change in objective reflects a change in the denominator source for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025-2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025-2030 PA indicator relative to the 2019-2024 PA.
+
+Rates for most counties in the M-H Region, as well as for NYS and NYS excluding NYC, continued to stay below the 62.3% objective from 2019 through 2024. Exceptions include Putnam County, which exceeded the objective for 2022-2024 (with the highest percentages in the M-H Region overall), as well as Dutchess and Ulster Counties, which exceeded the objective in 2024.
+
+Most counties in the M-H Region, as well as NYS and NYS excluding NYC, displayed an overall upward trend from 2019 to 2024. Rockland and Sullivan Counties were exceptions to this trend, with Rockland County experiencing a decrease from 37.4% in 2019 to 36.8% in 2024, and Sullivan County experiencing a decrease from 48.6% in 2019 to 48.1% in 2024. Rockland County had the lowest percentages in the region throughout the entire time period, reaching its lowest percentage in 2023 (32.2%). By contrast, Putnam County experienced the largest increase in the region during this time period, from 59.2% in 2019 to 66.2% in 2024 [@fig-24to35mo-child-vaccine-series-percent].
+
+<!--Figure 137: "Childhood Immunization, Age-Adjusted Percentage of 24- to 35-Month-Olds, 2019–2024"-->
+{{< include _generated/objects/fig-24to35mo-child-vaccine-series-percent.qmd >}}
+
+{{< include _generated/objects/tbl-24to35mo-child-vaccine-series-percent.qmd >}}
+
+::: {.callout-note}
+Note: Refers to the standard series of vaccinations recommended for children by age two. This series includes: 4 doses of DTaP (diphtheria, tetanus, and acellular pertussis), 3 doses of polio, 1 dose of MMR (measles, mumps, and rubella), 3 doses of Hib (Haemophilus influenzae type b), 3 doses of HepB (hepatitis B), 1 dose of varicella (chickenpox), and 4 doses of PCV (pneumococcal conjugate vaccine).
+:::
+
+### COVID-19
+COVID-19 is a contagious respiratory disease caused by the SARS-CoV-2 virus, which spreads readily from person to person through respiratory droplets. The development and administration of COVID-19 vaccines has played a part in preventing severe illness, hospitalization, and death. With the shift away from the pandemic emergency phase, COVID-19 surveillance and public health messaging are increasingly integrated with other common respiratory illnesses, such as influenza and RSV, to create a more unified seasonal approach. The pandemic highlighted persistent health vulnerabilities and inequities within communities that require ongoing assessment.
+
+COVID-19 mortality significantly declined from the beginning of the pandemic in 2020 to the most recent data in 2022 for the M-H Region, NYS excluding NYC, and NYS [@fig-covid-mort-aar]. This general decline was also seen in each M-H county. There was a consistent decline over the three-year period except in Dutchess, Sullivan, and Ulster Counties. These counties had an increase in mortality rates between 2020 and 2021 before a decline in 2022.
+
+
+<!--Figure 138: "COVID-19 Mortality, Age-Adjusted Rate per 100,000 Population, 2020–2022"-->
+{{< include _generated/objects/fig-covid-mort-aar.qmd >}}
+
+{{< include _generated/objects/tbl-covid-mort-aar.qmd >}}
+
+::: {.callout-note}
+Note: This indicator includes deaths with coronavirus disease recorded as the underlying cause of death. The ICD-10 code for coronavirus
+disease is: U07.1.
+:::
+
+### Human Papillomavirus Immunization
+In the U.S., HPV is the most common sexually transmitted infection (STI). More than 42 million Americans are living with HPV infections. Each year, approximately 13 million more Americans become infected with the virus, including adolescents [@cdc-hpv-about-2021]. HPV is spread through vaginal, anal, or oral sex with someone who has the virus, even if they have no symptoms. Anyone who is sexually active is at risk for HPV, and symptoms may not develop until years after exposure.
+
+While HPV can often go away on its own without causing health problems, it can lead to conditions such as genital warts and cervical cancer. There is no way to know which people with HPV will develop cancer or other health problems. The Centers for Disease Control and Prevention (CDC) recommends adolescents aged 11 to 12 years get two doses of HPV vaccine to protect against cancers caused by HPV. Other actions individuals can take to lower their risk of HPV include screening for cervical cancer, using latex condoms during sex, and limiting the number of sexual partners.
+
+The NYSPA 2019-2024 target aimed to increase the percentage of 13-year-old adolescents completing the HPV vaccine series by 10%, which translates to 37.4% statewide [@nysdoh-prevention-agenda-2019-2024-comm-2021]. In 2024, Westchester County had the highest percentage of adolescents aged 13 years with a complete HPV vaccine series (22.4%), while Ulster County and Putnam County had the lowest percentage (14.5%) [see Figure 136]. The NYSPA objective was not met.
+
+The NYSPA 2025-2030 set an objective of 13-year-old adolescents with a complete HPV vaccine series at 28.7%. This objective is lower than the objective for the previous PA (37.4%). The change in objective reflects the change in the source of the denominator for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025-2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025-2030 PA indicator relative to the 2019-2024 PA.
+
+From 2019 to 2024, all counties in the M-H Region, as well as NYS and NYS excluding NYC, failed to meet the 28.7% objective. However, both NYS and NYS excluding NYC outperformed the M-H Region throughout the time period. Within the M-H Region, Westchester and Rockland Counties were the only counties to experience overall increases during the period; Westchester County increased from 19.6% in 2019 to 22.4% in 2024 (the highest rate in the region during the time period), and Rockland County increased from 15.1% in 2019 to 16.1% in 2024. The county that experienced the largest overall decrease during the period was Putnam County, with a decrease from 20.1% in 2019 to 14.5% in 2024 [@fig-13yo+-hpv-vaccine-complete-percent].
+
+<!--Figure 139: "Human Papillomavirus Immunization, Age-Adjusted Percentage of 13-Year-Olds, 2019–2024"-->
+{{< include _generated/objects/fig-13yo+-hpv-vaccine-complete-percent.qmd >}}
+
+{{< include _generated/objects/tbl-13yo+-hpv-vaccine-complete-percent.qmd >}}
+
+::: {.callout-note}
+Note: Refers to human papillomavirus vaccines. Two doses are required for those starting the series between the ages of 9 and 14 years old.
+Three doses are required for those starting the series at 15 years or older, or those with a weakened immune system.
+:::
+
+### Flu Immunization
+Influenza (flu) is a contagious respiratory virus that can cause mild to severe illness. Severe illness from flu can result in hospitalization or even death. Certain populations are at higher risk of complications from the flu virus, such as older adults, young children, and people with certain health conditions. An annual flu vaccine is the best way to help protect against flu. Vaccination has been shown to reduce the risk of flu, hospitalization, and flu-related death [@cdc-flu-about-2024].
+
+ACIP recommends that everyone six months of age and older receive a flu vaccine every flu season [@cdc-flu-acip-2024]. Healthy People 2030 set a target to increase the percentage of noninstitutionalized adults aged 18 years and older who are vaccinated annually against seasonal influenza to 70% [@hp2030-flu-vaccine-iid09-2025]. In 2021, 44.5% of adults aged 18 years and older received a flu vaccine in NYS. Westchester County had the highest percentage of adults vaccinated (44.5%), while Sullivan County had the lowest coverage (28.2%) in the M-H Region. From 2018 to 2021, the percentage of adults aged 18 years and older who received a flu vaccine increased in all seven counties, as well as in NYS excluding NYC and NYS [@fig-adult-flu-immi-lastyear-percent].
+
+<!--Figure 140: "Flu Immunization, Age-Adjusted Percentage of Adults Aged 18 Years and Older, 2018–2021"-->
+{{< include _generated/objects/fig-adult-flu-immi-lastyear-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-flu-immi-lastyear-percent.qmd >}}
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "During the past 12 months, have you had either a flu vaccine that was sprayed in your nose or a flu shot injected into your arm?"
+:::
+
+In NYS, 66.8% of those aged 65 years and older received a flu immunization in 2021 [see Figure 141]. Dutchess County had the highest percentage of individuals aged 65 years and older who received a flu vaccine (76.0%), while Sullivan County had the lowest flu vaccine coverage (48.3%). From 2018 to 2021, the percentage of adults aged 65 years and older who received a flu vaccine increased in all seven counties in the M-H Region, as well as in NYS excluding NYC and NYS.
+
+<!--Figure 141: "Flu Immunization, Age-Adjusted Percentage of Adults Aged 65 Years and Older, 2018–2021"-->
+{{< include _generated/objects/fig-65+-flu-immi-percent.qmd >}}
+
+{{< include _generated/objects/tbl-65+-flu-immi-percent.qmd >}}
+
+::: {.callout-note}
+*: Unreliable crude rate due to large standard error.
+Note: An adult is a person aged 65 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "During the past 12 months, have you had either a flu vaccine that was sprayed in your nose or a flu shot injected into your arm?" This only includes those who are 65 years and older.
+:::
+
+### Pneumonia Immunization
+Pneumococcal disease is caused by a type of bacteria that can lead to pneumonia, meningitis, and bacteremia. Pneumococcal bacteria are spread through droplets in the air from someone who coughs or sneezes. While pneumococcal disease is more common in children, it is more likely to cause serious complications in adults [@hhs-pneumonia-immunization-2022]. Healthy choices, such as quitting smoking and managing chronic illnesses, can also help prevent pneumonia. The CDC recommends two pneumococcal vaccines for adults aged 65 years and older. In 2021, Putnam County had the highest percentage of adults aged 65 years and older vaccinated (75.7%), while Sullivan County had the lowest percentage (44.6%). From 2018 to 2021, Orange, Putnam, Rockland, and Ulster Counties increased their percentages. However, in that same time period, Dutchess, Sullivan, and Westchester Counties saw decreases in their percentages [@fig-65+-pneumo-immi-percent].
+
+<!--Figure 142: "Pneumonia Immunization, Age-Adjusted Percentage of Adults Aged 65 Years and Older, 2018–2021"-->
+{{< include _generated/objects/fig-65+-pneumo-immi-percent.qmd >}}
+
+{{< include _generated/objects/tbl-65+-pneumo-immi-percent.qmd >}}
+
+::: {.callout-note}
+*: Crude rate is unreliable due to large standard error.
+Note: An adult is a person aged 65 years or older. The Behavioral Risk Factor Surveillance System asks respondents, " Have you ever had a
+pneumonia shot also known as a pneumococcal vaccine?” This only includes those who are 65 years and older.
+:::
+
+
+### Sexually Transmitted Infections
+
+#### HIV/AIDS
+The Human Immunodeficiency Virus (HIV) attacks the body’s immune system, weakening its ability to fight infections and illnesses. HIV is transmitted primarily through sexual contact and sharing of needles and other drug-injection equipment, but it can also be transmitted from mother to baby during pregnancy, childbirth, and breastfeeding [@cdc-how-hiv-spreads-2024]. Left untreated, HIV infection can lead to acquired immunodeficiency syndrome (AIDS). While most people experience brief flu-like symptoms during early infection, some have no symptoms at all. HIV screening is critical to identify HIV infections, facilitate treatment, and prevent spread. Although there is no cure for HIV, proper treatment can control the virus, preventing progression to AIDS in infected individuals and decreasing risk of transmission to others. Other HIV prevention strategies include consistent use of safer-sex practices such as condoms, never sharing drug-injection equipment, and using PrEP (pre-exposure prophylaxis) and PEP (post-exposure prophylaxis) [@cdc-about-hiv-2025].
+
+In 2023, 39,201 people over 13 years of age were diagnosed with HIV in the U.S. The highest rates were among males (22.5 per 100,000 population), those aged 25–34 (31.3 per 100,000 population), Black/African Americans (41.9 per 100,000 population), and residents of southern states (18.4 per 100,000 population). Male-to-male sexual contact (MMSC) accounted for 66% of cases, with 50% occurring in southern states. Females accounted for 19% of diagnoses, with Black/African American women representing 50% of female cases despite making up only 13% of the female population. Their diagnosis rate (19.6 per 100,000 population) was 3 times higher than Hispanic/Latino females and 11 times higher than White females [@cdc-hiv-diagnoses-deaths-prevalence-2025].
+
+The number of new HIV diagnoses in New York State decreased by 37% from 2011 to 2023, dropping from 4,007 to 2,517. However, in 2023, 19% of new HIV diagnoses were concurrently diagnosed with AIDS, indicating that many people are being diagnosed late in the course of infection. As of December 2023, 105,447 New Yorkers were living with diagnosed HIV. The burden of HIV was heaviest in New York City, which reported 1,799 HIV cases in 2023 (21.2 per 100,000 population), while the remainder of the state recorded 718 (7.1 per 100,000 population). Non-Hispanic Black and Hispanic individuals were disproportionately affected in both areas [@nysdoh-hiv-aids-annual-surveillance-2024].
+
+In the M-H Region, three-year average rates of newly diagnosed HIV cases remained stable or decreased for all counties from 2013 to 2022, underscoring local progress in HIV prevention and treatment initiatives. Among the seven counties, Westchester had the highest three-year average rate from 2020 to 2022 (6.8 per 100,000 population) and was the only county with a rate higher than the NYS excluding NYC 2021 one-year rate of 5.3 per 100,000 population. Sullivan County had the lowest rate at 2.1 per 100,000 population [@fig-hiv-incident-aar].
+
+<!--Figure 143: "HIV Incident Rate, Age-Adjusted Rate per 100,000 Population, 2013–2022"-->
+{{< include _generated/objects/fig-hiv-incident-aar.qmd >}}
+
+{{< include _generated/objects/tbl-hiv-incident-aar.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: Three-year age-adjusted rates for counties and single-year age-adjusted rates for NYS and NYS excluding NYC are used in both the table and graph above. This includes the number of people newly diagnosed with human immunodeficiency virus (HIV), regardless of concurrent or subsequent AIDS diagnosis.
+:::
+
+#### Gonorrhea
+
+Gonorrhea is the second most commonly reported sexually transmitted infection (STI) in the United States [@cdc-sti-statistics-summary-2024].Transmission occurs through unprotected vaginal, anal, or oral sexual contact and from mother to child during childbirth. Many infections are asymptomatic, particularly in women, which contributes to underdiagnosis and
+inadvertent spread. When symptoms occur, they may include painful urination, discharge, or genital
+discomfort [@cdc-gonorrhea-about-2025]. Untreated gonorrhea can increase risk for contracting HIV and progress to pelvic inflammatory
+disease (PID) in women, increasing future risk for infertility, miscarriage and ectopic pregnancy. Gonorrhea can
+be cured with antibiotics; however antimicrobial resistance is becoming more common in the bacteria that causes
+gonorrhea [@nysdoh-sti-surveillance-summary-2023].
+
+[@fig-gono-incident-aar] depicts an overall increasing trend in gonorrhea case rates across the M-H Region and NYS
+excluding NYC from 2017 to 2023. Among M-H Region counties in 2023, Putnam and Dutchess Counties are
+notable for reporting the lowest (41cases per 100,000 population) and highest rates (147 cases per 100,000
+population), respectively. Over this seven-year span, Dutchess County’s rate doubled, increasing from 74 to 147
+cases per 100,000 population. In contrast, Putnam County consistently maintained the region’s lowest rates, with
+rates ranging from a low of 25 cases per 100,000 in 2018, to a high of 41 cases per 100,000 in 2023.
+
+<!--Figure 144: "Gonorrhea Case Rate, Age-Adjusted Rate per 100,000 Population, 2017–2023"-->
+{{< include _generated/objects/fig-gono-incident-aar.qmd >}}
+
+{{< include _generated/objects/tbl-gono-incident-aar.qmd >}}
+
+#### Chlamydia
+Chlamydia is the most frequently reported bacterial sexually transmitted infection (STI) in the United States.
+According to the Centers for Disease Control and Prevention (CDC), over 1.6 million cases of chlamydia were
+reported in the U.S. in 2023 [@cdc-sti-statistics-summary-2024], though actual incidence is likely higher due to underdiagnosis. Often
+asymptomatic, it poses significant challenges for timely diagnosis and treatment, contributing to hidden
+transmission and long-term health complications. Left untreated in women, chlamydia can lead to pelvic
+inflammatory disease (PID), which increases future risk of miscarriage, ectopic pregnancy, and infertility.
+Chlamydia infection also increases the risk for contracting other STIs like gonorrhea and HIV. Routine screening,
+which is critical to preventing these consequences, decreased due to COVID-19 impacts on healthcare services,
+and this is reflected in decreased incidence rates in 2020 and 2021 [@nysdoh-sti-surveillance-summary-2023].
+
+In 2023, chlamydia incidence rates rose for every county in the M-H Region as compared to 2022. Putnam and
+Westchester Counties are notable for having the lowest (237 per 100,000 population) and highest rates (446
+per 100,000 population), respectively, with Westchester’s incidence far exceeding the regional rate (387 per
+100,000 population). Looking longitudinally from 2017-2023, chlamydia rates peaked in the region in 2019,
+dropped in 2020 due to pandemic impacts on screening, and then resumed an upward trend [@fig-chlamy-incident-aar].
+
+<!--Figure 145: "Chlamydia Incident Rate, Age-Adjusted Rate per 100,000 Population, 2017–2023"-->
+{{< include _generated/objects/fig-chlamy-incident-aar.qmd >}}
+
+{{< include _generated/objects/tbl-chlamy-incident-aar.qmd >}}
+
+::: {.callout-note}
+
+Note: Y-axis does not begin at zero in order to clearly display trend lines.
+:::
+
+#### Syphilis
+Syphilis is a sexually transmitted infection (STI) with four progressive stages which can lead to serious long-term
+health problems if left untreated. Syphilis can be cured with antibiotics, but any damage to the body that has
+already occurred cannot be undone. Having syphilis also increases the risk for HIV infection, and women with
+syphilis can pass it to their baby during pregnancy. Syphilis infection during pregnancy can result in poor birth
+outcomes such as pre-term birth, stillbirth, and severe health problems in infants. Safer sex practices such as
+consistent and correct use of condoms can reduce risk of contracting syphilis. Regular screening of pregnant
+women and those with certain risk factors (e.g. HIV infection, multiple sex partners) is critical to early diagnosis
+and prevention of severe outcomes [@cdc-syphilis-about-2025]. Syphilis rates are increasing in the US. In 2023, 209,253 cases of syphilis were reported, which was the highest number of cases reported since 1950.[@cdc-sti-statistics-summary-2024] In New York State, syphilis cases have been surging since the early 2000s, but decreases were seen in 2023 as compared to 2022 [@nysdoh-sti-surveillance-summary-2023].
+
+In the M-H Region early syphilis rates have followed those of NYS, excluding NYC with rates increasing from
+2017 to 2021, and then decreasing in 2022 and again in 2023. In 2023, Dutchess and Sullivan had the highest
+rates among the counties and Dutchess was the only county to see an increase from 2022 to 2023 [@fig-syph-early-aar].
+
+<!--Figure 146: "Syphilis Early Incident Rate, Age-Adjusted Rate per 100,000 Population, 2017–2023"-->
+{{< include _generated/objects/fig-syph-early-aar.qmd >}}
+
+{{< include _generated/objects/tbl-syph-early-aar.qmd >}}
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines. Early syphilis includes non-primary and non-secondary stages.
+:::
+
+### Tick-Borne Diseases
+#### Lyme Disease
+Lyme disease is caused by the bacterium Borrelia burgdorferi, which is transmitted through the bite of infected black-legged ticks. Symptoms of Lyme disease may include fever, headache, fatigue, and a rash known as erythema migrans. Most cases of Lyme disease can be treated with antibiotics. Left untreated, Lyme disease can cause more severe disease [@cdc-lyme-treatment-2022]. Lyme disease is diagnosed based on symptoms, physical findings, and exposure to infected ticks. Laboratory testing can also be helpful in diagnosis.
+
+According to the CDC, recent estimates suggest that as many as 476,000 people may be diagnosed and treated for Lyme disease every year [@cdc-lyme-facts-stats-2025]. Preventing Lyme disease starts with reducing the likelihood of tick bites. Tick-bite prevention methods include using EPA-approved insect repellent, avoiding dense woods and bushy areas, wearing enclosed shoes, long pants, and long-sleeve shirts when entering areas that might contain ticks, and performing a full-body check after being outdoors and removing ticks promptly [@nysdoh-lyme-disease-2025].
+
+From 2020 through 2023, all counties in the M-H Region, as well as NYS, experienced increases in Lyme disease case rates per 100,000 population. For all counties in the M-H Region, as well as NYS, the largest case-rate increases took place from 2021 to 2022, with the exception of Putnam County, whose largest case-rate increase took place from 281.5 per 100,000 population in 2020 to 351.9 per 100,000 population in 2021. It must be noted that the CDC enacted a change in the case definition [@cdc-lyme-case-definition-2022-2021] in 2022, which likely explains the large case-rate increases that the rest of the M-H Region and NYS experienced from 2021 to 2022 [@fig-lyme-disease].
+
+<!--Figure 147: "Lyme Disease, Case Rate per 100,000 Population, 2020–2023"-->
+{{< include _generated/objects/fig-lyme-disease.qmd >}}
+
+{{< include _generated/objects/tbl-lyme-disease.qmd >}}
+
+::: {.callout-note}
+Note: Lyme disease is tracked by the NYSDOH through surveillance systems. The number of Lyme disease cases is estimated using a combination of traditional surveillance and sampling methods. The case definition for Lyme disease changed in 2022. Data from before that time are not comparable.
+:::
+
+#### Anaplasmosis
+Anaplasmosis is caused by the bacterium Anaplasma phagocytophilum, which is transmitted to humans via the bite of infected black-legged ticks. Early symptoms of anaplasmosis may include fever, headache, chills, and muscle aches. If left untreated, or if other medical conditions are present, anaplasmosis can cause serious illness resulting in respiratory failure, bleeding problems, organ failure, and, in rare cases, death. Anaplasmosis is diagnosed based on symptoms and blood tests. People with weakened immune systems may be at increased risk of severe outcomes [@cdc-anaplasmosis-about-2024].
+
+The number of reported anaplasmosis cases in the U.S. has increased steadily since the disease became nationally notifiable. Cases increased in 2021 to 6,729, which was higher than pre-pandemic levels. Cases decreased in 2022 but still remained higher than pre-pandemic levels. Cases increased again to a high of 7,280 in 2023 [@cdc-anaplasmosis-statistics-2025]. The geographic range of anaplasmosis also appears to be increasing as black-legged ticks expand in range. Increasing ranges for the black-legged tick have been documented along the Hudson River Valley, Michigan, and Virginia. Ninety percent of all reported anaplasmosis cases came from eight states: Maine, Massachusetts, Minnesota, New Jersey, New York, Pennsylvania, Vermont, and Wisconsin. NYS incidence per million nearly doubled from 2022 to 2023 [@cdc-anaplasmosis-statistics-2025].
+
+In most counties, the case rate increased from 2020 to 2021, except for Rockland, which saw a decrease [@fig-anaplasmosis]. All counties experienced an increase from 2022 to 2023, except for Westchester, which had a large decrease. In 2023, Putnam County reported the highest rate of anaplasmosis cases (96.6 per 100,000 population), and Rockland had the lowest (2.1 per 100,000 population).
+
+<!--Figure 148: "Anaplasmosis Incident Rate, Age-Adjusted Rate per 100,000 Population, 2020–2023"-->
+{{< include _generated/objects/fig-anaplasmosis.qmd >}}
+
+{{< include _generated/objects/tbl-anaplasmosis.qmd >}}
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines.
+:::
+
+#### Babesiosis
+Babesiosis is caused by the parasite Babesia microti, which infects red blood cells and is spread by black-legged ticks. Tick-borne transmission is most common in the Northeast and upper Midwest of the U.S. and usually peaks during warmer months. Many individuals infected with babesiosis do not experience symptoms, but treatment is available for those who do. In symptomatic individuals, babesiosis is usually diagnosed by examining blood specimens for Babesia microti parasites in red blood cells [@cdc-babesiosis-about-2020].
+
+From 2020 through 2021, all counties in the region except Westchester experienced a net increase in case rate, with Putnam experiencing the most significant increase during this time. From 2021 through 2022, Dutchess, Orange, Putnam, and Westchester experienced a net decrease. As of 2023, all counties in the M-H Region experienced rates that were higher than NYS and had a net increase in case rates [@fig-babesiosis].
+
+<!--Figure 149: "Babesiosis, Case Rate per 100,000 Population, 2020–2023"-->
+{{< include _generated/objects/fig-babesiosis.qmd >}}
+
+{{< include _generated/objects/tbl-babesiosis.qmd >}}
+
+#### Rabies
+Rabies is a nearly 100% fatal viral disease that attacks the central nervous system, transmitted primarily through
+bites or scratches from infected animals. While human cases are rare in the U.S. due to widespread pet
+vaccination programs, the virus persists in wildlife populations, posing ongoing risks to pets, livestock, and people.
+In the U.S., over 90% of animal rabies cases occur in wildlife, including bats, raccoons, skunks, and foxes, with bats accounting for 70% of human deaths [@cdc-rabies-about-2024]. Globally, dogs remain the primary source of human infections, particularly in Africa, Asia, and parts of Central/South America where access to rabies post-exposure prophylaxis (RPEP) is limited, resulting in 70,000+ annual fatalities [@cdc-global-rabies-2025]. In the United States, prevention continues to be a public health priority due to the high case-fatality rate. Every year, more than 90 million cats and dogs get vaccinated by veterinarians, and more than 5 million oral vaccine baits are distributed to wildlife [@cdc-rabies-prevention-control-2025].
+In 2024, the M-H Region saw 5 confirmed rabies cases in domestic animals (2 in Orange County, 1 each in
+Dutchess, Rockland, and Westchester), constituting 2.1% of all domestic animal specimens tested. There were 44
+positive wildlife cases, constituting 7.3% of all wild animal specimens tested. Westchester County had the highest
+number of rabies positive wild animals (18), while Sullivan County reported the highest wildlife positivity rate
+(23.1%) [@tbl-rabies-test-domestic and @tbl-rabies-test-wild].
+
+<!--Table 18: "Animal Rabies Testing of Domestic Species†, 2024"-->
+{{< include _generated/objects/tbl-rabies-test-domestic.qmd >}}
+
+::: {.callout-note}
+Note: †Domestic species include dogs, cats, ferrets, horses, donkeys, mules, cattle, sheep, goats, and pigs.
+:::
+
+<!--Table 19: "Animal Rabies Testing of Wild Species†, 2024"-->
+{{< include _generated/objects/tbl-rabies-test-wild.qmd >}}
+
+::: {.callout-note}
+Note: †Wild species include bats, bears, bobcats, coyote, deer, fox, opossum, porcupine, rabbit, raccoon, rat, skunk, squirrel, weasel, and woodchuck.
+:::
+
+
+Prompt medical intervention is critical after suspected rabies exposure. Rabies post-exposure prophylaxis (RPEP), which typically consists of wound care, human rabies immune globulin (HRIG), and a series of rabies vaccines [@cdc-rabies-pep-guidance-2025], is highly effective if administered promptly after exposure. Approximately 100,000 Americans receive RPEP annually [@cdc-rabies-prevention-control-2025]. In NYS, local health departments prevent rabies in people by investigating reports of human and pet exposures to possibly rabid animals and assuring access to RPEP when indicated. In the Mid-Hudson Region over the last decade, 2 to 3 people per 10,000 population were authorized by local health departments to receive RPEP each year. In 2024, Sullivan County had the highest rate of RPEP authorization (4.6 per 10,000), while Ulster County had the lowest rate (0.8 per 10,000) [@fig-rabies-pep-rate].
+
+<!--Figure 150: "Persons Authorized to Receive Rabies Post-Exposure Prophylaxis, Rate per 10,000 Population, 2021–2024"-->
+{{< include _generated/objects/fig-rabies-pep-rate.qmd >}}
+
+{{< include _generated/objects/tbl-rabies-pep-rate.qmd >}}
+
+::: {.callout-note}
+Note: Rates are calculated using population estimates from the U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table B01003.
+:::
+
+### Maternal and Infant Health
+Maternal and infant health looks at the well-being of women during pregnancy, childbirth, and the postpartum
+period. It also includes the health of infants during the first year of life. Maternal and infant health are closely
+linked so are typically assessed together. Maternal and infant mortality are considered key indicators of a
+community overall health.
+
+#### Prenatal Care
+Prenatal care is health care received from medical providers during pregnancy, including checkups, physical exams, and prenatal testing. Getting early and regular prenatal care in the first trimester can help keep mothers and babies healthy by allowing medical providers to identify and treat health problems early. Babies born to mothers who do not get prenatal care are three times more likely to have a low birthweight and five times more likely to die [@owh-prenatal-care-2021]. During the first two trimesters, mothers should have prenatal visits every four to six weeks. After the first two trimesters, mothers should schedule prenatal visits every two to three weeks until week 36. After week 36, mothers should have a prenatal visit every week.
+
+One Healthy People 2030 objective is to increase the proportion of pregnant women who receive early and adequate prenatal care. The target is to increase the percentage of pregnant women who begin prenatal care in the first trimester to 80.5% [@hp2030-early-adequate-prenatal-mich-08-2025].
+
+From 2014 to 2021, there were no marked changes in the percentage of women who received early prenatal care in the M-H Region. In 2021, Sullivan County had the lowest percentage of women who received early prenatal care (61.3%), and Putnam County had the highest percentage (84.0%) [@fig-early-pnc-percent]. In all M-H counties except Rockland County, there was a slight increase in the percentage of women receiving late or no prenatal care from 2014 to 2021 [@fig-late-no-pnc-percent].
+
+<!--Figure 151: "Percentage of Births with Early Prenatal Care, 2014–2021"-->
+{{< include _generated/objects/fig-early-pnc-percent.qmd >}}
+
+{{< include _generated/objects/tbl-early-pnc-percent.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Early prenatal care is provided in the first trimester.
+:::
+
+<!--Figure 152: "Percentage of Births with Late or No Prenatal Care, 2014–2021"-->
+{{< include _generated/objects/fig-late-no-pnc-percent.qmd >}}
+
+{{< include _generated/objects/tbl-late-no-pnc-percent.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Late prenatal care is provided in the third trimester.
+:::
+
+
+There are racial and ethnic disparities in prenatal care in the M-H Region. Non-Hispanic White women had the highest percentage of early prenatal care in every county except Rockland and Sullivan. In Rockland and Sullivan, non-Hispanic Asian and Pacific Islander women had the highest percentage of early prenatal care. Non-Hispanic Black and Hispanic women had slightly lower percentages of early prenatal care than non-Hispanic White and non-Hispanic Asian and Pacific Islander women, except in Putnam County, where non-Hispanic Black women had the second-highest percentage of early prenatal care [@fig-epc-rande-percent].
+
+<!--Figure 153: "Percentage of Births with Early Prenatal Care by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-epc-rande-percent.qmd >}}
+
+{{< include _generated/objects/tbl-epc-rande-percent.qmd >}}
+
+::: {.callout-note}
+Note: Early prenatal care is provided in the first trimester.
+:::
+
+#### All Pregnancies by Age Group
+
+Among women aged 15 to 44 years, the 2021 pregnancy rate was highest in Rockland County (111.1 per 1,000 females), followed by Orange and Sullivan Counties (84.3 and 83.4 per 1,000 females, respectively). The lowest pregnancy rate was in Ulster County (55.3 per 1,000 females). From 2014 to 2021, the pregnancy rate decreased in all Mid-Hudson counties except Putnam and Rockland Counties [@fig-15to44-preg-rate].
+
+<!--Figure 154: "Pregnancy, Rate per 1,000 Female Population 15–44 Years Old, 2014–2021"-->
+{{< include _generated/objects/fig-15to44-preg-rate.qmd >}}
+
+{{< include _generated/objects/tbl-15to44-preg-rate.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC.
+:::
+
+Among women aged 15 to 44 years, the pregnancy rate varied by race and ethnicity in the M-H Region. Non-Hispanic White women had the highest pregnancy rates in Rockland, Orange, and Sullivan Counties, while having the lowest rates in Dutchess, Ulster, and Westchester Counties, as well as in NYS. Non-Hispanic Black women had the highest pregnancy rates in Dutchess County and NYS, while Hispanic women had the highest pregnancy rates in Putnam and Westchester Counties [@fig-15to44-preg-rate-rande].
+
+<!--Figure 155: "Pregnancy, Rate per 1,000 Female Population 15–44 Years Old by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-15to44-preg-rate-rande.qmd >}}
+
+{{< include _generated/objects/tbl-15to44-preg-rate-rande.qmd >}}
+
+::: {.callout-note}
+Note: Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths. Pregnancy rate is the total number of pregnancies to women of any age, per 1,000 female population aged 15 to 44 years.
+:::
+
+#### Adolescent Pregnancy
+Teen pregnancy has been decreasing since 1991. Evidence suggests that this decline may be due to teens abstaining from sexual activity and more sexually active teens using birth control. Despite this progress, the teen pregnancy rate in the U.S. is still higher than in many other high-income countries. Socioeconomic conditions, such as lower educational attainment, lower income, and experience in foster care, may contribute to higher teen pregnancy rates [@cdc-teen-pregnancy-2024]. Pregnant teens may face increased health risks and stressors, and teen pregnancy can also have lasting impacts on mothers and children. Teen pregnancy is a significant contributor to high school dropout rates. In the U.S., 50% of teen mothers graduate high school by age 22, while 90% of women who did not give birth during adolescence receive a high school diploma. The children of teenage mothers are more likely to drop out of high school, have more health problems, become incarcerated at some point during adolescence, give birth as a teenager, and experience unemployment as an adult [@crs-r45184-teen-mothers-2025].
+
+The pregnancy rate in teens aged 15 to 19 years decreased statewide and in each county in the M-H Region from 2014 to 2021. Sullivan County had the highest pregnancy rate among teens aged 15 to 19 years in the M-H Region (24.4 per 1,000) [@fig-15to19-teenpreg-rate]. These rates meet Healthy People 2030’s target of reducing pregnancies among adolescent females aged 15 to 17 years to 31.4 teen pregnancies per 1,000 adolescent females [@hp2030-reduce-adolescent-pregnancies-fp-03-2025].
+
+<!--Figure 156: "Teen Pregnancy, Rate per 1,000 Female Population 15–19 Years Old, 2011–2018"-->
+{{< include _generated/objects/fig-15to19-teenpreg-rate.qmd >}}
+
+{{< include _generated/objects/tbl-15to19-teenpreg-rate.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths.
+:::
+
+There are racial and ethnic disparities in teen pregnancy, with non-Hispanic Black teens experiencing the highest rates of teen pregnancy in Sullivan and Dutchess Counties, as well as in NYS. Hispanic teens had the highest teen pregnancy rates in Orange, Putnam, Rockland, and Ulster Counties. Non-Hispanic White teens experienced the lowest teen pregnancy rate in NYS and in each M-H Region county [@fig-17+-teenpreg-rande-rate].
+
+<!--Figure 157: "Teen Pregnancy, Rate per 1,000 Female Population 17 Years Old and Younger by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-17+-teenpreg-rande-rate.qmd >}}
+
+{{< include _generated/objects/tbl-17+-teenpreg-rande-rate.qmd >}}
+
+::: {.callout-note}
+*: Data are unstable due to fewer than 10 events in the numerator.
+Note: Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths.
+:::
+
+#### Self-Pay or Medicaid Births / Pregnancies
+Most births in the M-H Region were covered by private insurance or Medicaid, with only a small percentage of births as self-pay. In 2022, a majority of births in Dutchess, Putnam, Ulster, and Westchester Counties were covered by private insurance, while a majority of births in Orange, Rockland, and Sullivan Counties were covered by Medicaid [@fig-financial-coverage-liveb-percent].
+
+<!--Figure 158: "Percentage of Live Births by Financial Coverage, 2022"-->
+{{< include _generated/objects/fig-financial-coverage-liveb-percent.qmd >}}
+
+{{< include _generated/objects/tbl-financial-coverage-liveb-percent.qmd >}}
+
+::: {.callout-note}
+Note: Other forms of coverage not shown include Indian Health, CHAMPUS, Other, and Not Stated. Medicaid includes births with Medicaid listed as secondary payer.
+:::
+
+
+### Adverse Birth Outcomes
+
+#### Preterm Births
+
+Preterm birth is when a mother gives birth to a baby more than three weeks before its due date. Preterm babies, especially those born very early, often have medical complications. While these complications may vary, the more premature a baby is, the higher the risk for complications. Short-term complications of premature birth may include problems with breathing, metabolism, temperature control, blood, and the heart, brain, gastrointestinal system, and immune system. Long-term complications of premature birth may include problems with vision, hearing, dental health, behavioral and mental health, cerebral palsy, impaired learning, and other chronic health issues [@mayo-premature-birth-symptoms-causes-2024].
+
+Risk factors for premature birth include pregnancy with twins, triplets, or other multiples; conceiving through in vitro fertilization; smoking cigarettes or using illicit drugs; certain infections, especially those of the amniotic fluid and lower genital tract; certain chronic conditions, such as high blood pressure or diabetes; stressful life events; physical injury or trauma; and an interval of less than six months between pregnancies. While the preterm birth rate declined 1% nationwide in 2022, racial and ethnic differences in preterm birth rates remain. In 2022, the preterm birth rate among Black women in the U.S. was about 50% higher than the rate among White or Hispanic women [@cdc-preterm-birth-2024].
+
+Healthy People 2030 set an objective to reduce the total number of preterm births to 9.4% [@hp2030-reduce-preterm-births-mich-07-2025]. In 2021, NYS excluding NYC, as well as Dutchess, Sullivan, and Ulster Counties, did not reach this goal. In the M-H Region, Rockland County had the lowest rate of preterm births (6.5%), while Dutchess, Sullivan, and Ulster Counties had the highest rates (9.7%, 9.7%, and 10%, respectively). The percentage of preterm births generally remained stable from 2014 to 2021 [see Figure 159].
+
+<!--Figure 159: "Preterm Births, Percentage of Births, 2014–2021"-->
+{{< include _generated/objects/fig-preterm-births-percent.qmd >}}
+
+{{< include _generated/objects/tbl-preterm-births-percent.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC.
+:::
+
+#### Low Birthweight Births
+Low birthweight (LBW) describes babies born weighing less than 2.5 kilograms (5 pounds, 8 ounces). Over 8% of all births in the U.S. are LBW, and this percentage is increasing [@chop-low-birthweight-2025]. This is thought to result in part from an increased number of babies born in multiples, as these babies are more likely to be born prematurely. The primary cause of LBW is preterm birth, which means a baby has less time in a mother’s uterus to grow and gain weight. Another cause of LBW is intrauterine growth restriction (IUGR), which occurs when a baby does not grow adequately during pregnancy due to problems with the placenta, the mother’s health, or the baby’s condition. Babies with IUGR may be born at full term but still have LBW.
+
+Different risk factors can contribute to a baby being born with LBW. Non-Hispanic Black babies are twice as likely to have LBW as non-Hispanic White babies. Babies born to teen mothers also have a higher risk of LBW. Babies born in multiples are at increased risk because they are more likely to be born preterm. Maternal health can also contribute to LBW risk due to exposure to alcohol, cigarettes, and illicit drugs. Babies born to mothers of low socioeconomic status are also at higher risk of LBW due to poorer nutrition, inadequate prenatal care, and pregnancy complications [@chop-low-birthweight-2025].
+
+Babies with LBW have a higher risk of complications. They may have a harder time eating, gaining weight, controlling body temperature, and fighting infections. Because many babies with LBW are also premature, it can be difficult to determine which problems are due to prematurity and which are due to LBW [@chop-low-birthweight-2025]. Generally, the lower the birthweight, the greater the risk for complications.
+
+All M-H Region counties fell below the overall NYS excluding NYC percentage of low birthweight births (8.0%), except Sullivan County (8.1%). Orange and Rockland Counties had the lowest rates of low birthweight births (7.1% and 5.7%, respectively). From 2014 to 2021, the percentage of LBW births in the M-H Region remained similar [see Figure 160].
+
+<!--Figure 160: "Low Birthweight Births, Percentage of Births, 2014–2021"-->
+{{< include _generated/objects/fig-lbw-percent.qmd >}}
+
+{{< include _generated/objects/tbl-lbw-percent.qmd >}}
+
+::: {.callout-note}
+Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Low birth weight includes babies weighing less than 2.5 kg (5 pounds, 8 ounces) at time of birth.
+:::
+
+There are also racial and ethnic disparities in low birthweight births. In each county in the M-H Region, non-Hispanic Black women had higher percentages of pregnancies resulting in LBW births [see Figure 161].
+
+<!--Figure 161: "Percentage of Low Birthweight Infants by Race and Ethnicity, 2020–2022"-->
+{{< include _generated/objects/fig-lbw-rande-percent.qmd >}}
+
+{{< include _generated/objects/tbl-lbw-rande-percent.qmd >}}
+
+::: {.callout-note}
+*: Data are unstable due to fewer than 10 events in the numerator.
+Note: Low birth weight includes babies weighing less than 2.5 kg (5 pounds, 8 ounces) at the time of birth.
+:::
+
+#### Infant Mortality
+Infant mortality is the death of an infant before their first birthday. It is an important indicator of maternal and infant health, as well as the overall health of a society [@cdc-infant-mortality-2024]. The five leading causes of infant mortality in the U.S. in 2018 were birth defects, preterm birth and low birthweight, injuries, sudden infant death syndrome, and maternal pregnancy complications. The risk of infant mortality can be reduced by increasing access to high-quality care and community-based interventions.
+
+One Healthy People 2030 objective is to reduce the rate of all infant deaths to no more than 5 infant deaths per 1,000 live births [@hp2030-reduce-infant-deaths-mich-02-2025]. All counties in the M-H Region, as well as NYS overall and NYS excluding NYC, met or surpassed this goal in 2021, with infant mortality rates at or below 5.0 per 1,000 live births. Sullivan and Ulster Counties had the highest infant mortality rates (5.0 and 4.8 deaths per 1,000 live births, respectively), while Putnam and Rockland Counties had the lowest rates (2.6 and 2.9 deaths per 1,000, respectively). From 2014 to 2021, all M-H counties except Sullivan saw a decrease in infant mortality, though Ulster County’s infant mortality rate rose from 2019 to 2021 [@fig-infant-mortal-rate].
+
+<!--Figure 162: "Infant Mortality, Rate per 1,000 Live Births, 2014–2021"-->
+{{< include _generated/objects/fig-infant-mortal-rate.qmd >}}
+
+{{< include _generated/objects/tbl-infant-mortal-rate.qmd >}}
+
+::: {.callout-note}
+*: The rate is unstable.
+Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Infant mortality includes the death of a baby that occurs between the time it is born and 1 year of age.
+:::
+
+#### Breastfeeding
+The U.S. Dietary Guidelines for Americans, as well as the American Academy of Pediatrics and the World Health Organization, recommend that infants be exclusively breastfed for about the first 6 months. Breastfeeding provides multiple benefits for both the infant and the mother, including lower risk of certain diseases [@cdc-breastfeeding-2025].
+
+In 2022, Ulster County had the highest rate of infants who were exclusively breastfed in the hospital among all infants (61.3%), while Rockland County had the lowest rate (27.7%). From 2013 to 2022, there was a decrease in the percentage of infants who were exclusively breastfed in the hospital in all counties in the M-H Region except Ulster County [@fig-hospital-exclusive-bf-percent].
+
+<!--Figure 163: "Percentage of Infants Who Are Exclusively Breastfed in the Hospital among All Infants, 2013–2022"-->
+{{< include _generated/objects/fig-hospital-exclusive-bf-percent.qmd >}}
+
+
+{{< include _generated/objects/tbl-hospital-exclusive-bf-percent.qmd >}}
+
+::: {.callout-note}
+Note: This includes the number of newborn infants who were fed only breast milk since birth while in the hospital, based on NYS residence, among live-born infants not admitted to the Neonatal Intensive Care Unit and not transferred to another hospital.
+:::
+
+#### Oral Health
+Poor oral health has been linked to chronic diseases such as diabetes and heart disease. It has also been linked to lifestyle behaviors, including tobacco use and eating and drinking substances with high sugar content. In the U.S., one in five adults aged 20 to 64 years has at least one untreated cavity [@cdc-oral-health-fast-facts-cavities-2024]. According to the CDC, the U.S. spends more than $124 billion per year on dental care. On average, more than $45 billion in productivity and more than 34 million school hours are lost because of dental emergencies requiring unplanned care. Oral diseases include conditions such as caries (also known as cavities or tooth decay), gum disease, and oral cancers. Good oral health is achievable and is an important part of overall health. Visiting a dentist twice a year for cleanings, and increasing daily flossing and brushing in the morning and evening, are ways to prevent poor oral health.
+
+The most common barriers to good oral health include financial barriers, geographic location, lack of dental insurance, poor oral health literacy, and language, education, or cultural barriers [@asda-barriers-to-care-2025]. To combat poor oral health, people are encouraged to have a dental visit at least once a year for routine examination and cleaning. Dental care is harder to access for low-income populations who cannot afford comprehensive dental coverage. Between 2019 and 2020, the percentage of adults who had a dental visit within the past 12 months decreased across all family income levels, but rates were lowest in households below the Federal Poverty Level, with only 45.7% of adults in 2020 reporting a dental visit within the past 12 months [@cdc-data-brief-dental-visits-income-2022]. This includes people enrolled in Medicaid, where general health care coverage is limited compared to private or other forms of insurance.
+
+
+Compared to the overall population of Medicaid enrollees, those aged 2 to 20 years were more likely to visit a dentist within the last year. NYS excluding NYC had a higher percentage of all Medicaid enrollees who had a dental visit within the last year compared to NYS (30.2% and 29.5%, respectively). Of the seven counties in the M-H Region, Rockland had the highest percentage of all enrollees (45.5%) and those aged 2 to 20 years (64.4%) who had a dental visit within the past year. Six out of seven counties exceeded the NYS rate for all enrollees, as well as for enrollees aged 2 to 20 years having a dental visit within the past year [@fig-medicaid-1dental-visit-percent].
+
+
+<!--Figure 164: "Percentage of Medicaid Enrollees with at least One Dental Visit Within The Last Year, 2021-2023"-->
+{{< include _generated/objects/fig-medicaid-1dental-visit-percent.qmd >}}
+
+{{< include _generated/objects/tbl-medicaid-1dental-visit-percent.qmd >}}
+
+::: {.callout-note}
+Note: This includes the number of Medicaid enrollees who had a dental visit within the past 12 months.
+:::
+
+Across the M-H Region through 2022, each county saw a slight decrease. The 2019 data, a three-year average that includes data from 2020, could indicate a decrease in dental visits due to COVID-19-related concerns that prevented people from seeking medical and dental treatment [@cdc-data-brief-dental-visits-income-2022; @fig-medicaid-dental-past12-percent].
+
+<!--Figure 165: "Percentage of All Medicaid Enrollees with a Dental Visit
+in the Past 12 Months, 2019–2022"-->
+{{< include _generated/objects/fig-medicaid-dental-past12-percent.qmd >}}
+
+{{< include _generated/objects/tbl-medicaid-dental-past12-percent.qmd >}}
+
+To prevent long-term dental damage, it is essential to instill good hygiene habits during childhood. Compared to children who have good oral health, those with poor oral health are more likely to miss school and have lower grades in their classes [@cdc-childrens-oral-health-2022].
+

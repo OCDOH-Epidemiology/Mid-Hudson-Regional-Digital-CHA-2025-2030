@@ -1,0 +1,50 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".skip-link")) return;
+  var targetId = "quarto-document-content";
+  var link = document.createElement("a");
+  link.className = "skip-link";
+  link.href = "#" + targetId;
+  link.textContent = "Skip to main content";
+  if (document.body.firstChild) {
+    document.body.insertBefore(link, document.body.firstChild);
+  } else {
+    document.body.appendChild(link);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var toggles = document.querySelectorAll(
+    'div[data-bs-toggle="collapse"][data-bs-target]'
+  );
+  toggles.forEach(function (el) {
+    if (!el.hasAttribute("role")) {
+      el.setAttribute("role", "button");
+    }
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+    el.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  var sidebarGlass = document.getElementById("quarto-sidebar-glass");
+  if (sidebarGlass && !sidebarGlass.getAttribute("aria-label")) {
+    sidebarGlass.setAttribute("aria-label", "Close sidebar overlay");
+  }
+
+  var scrollableOutputs = document.querySelectorAll(
+    ".cell-output.cell-output-display:not(.cell-output-markdown)"
+  );
+  scrollableOutputs.forEach(function (el) {
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+  });
+});
+</script>

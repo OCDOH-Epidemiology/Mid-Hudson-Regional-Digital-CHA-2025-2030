@@ -1,0 +1,11 @@
+<!-- indicator: tbl-preterm-births-percent (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-preterm-births-percent
+#| tbl-cap: 'Table showing Preterm births percent.'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-preterm-births-percent", workbook_path=CHA_WORKBOOK_PATH)
+```

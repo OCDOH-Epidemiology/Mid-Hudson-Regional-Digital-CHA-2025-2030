@@ -1,0 +1,21 @@
+<!-- indicator: fig-access-to-primary-care -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-access-to-primary-care
+#| fig-cap: 'Percentage of Adults Who Have a Regular Health Care Provider, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults Who Have a Regular Health Care Provider, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-access-to-primary-care", workbook_path=CHA_WORKBOOK_PATH).show()
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("fig-access-to-primary-care", CHA_WORKBOOK_PATH)))
+```

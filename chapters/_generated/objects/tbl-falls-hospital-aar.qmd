@@ -1,0 +1,20 @@
+<!-- indicator: tbl-falls-hospital-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-falls-hospital-aar
+#| tbl-cap: 'Falls Hospitalization, Age-Adjusted Rate per 10,000 Population, 2018–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-falls-hospital-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-falls-hospital-aar", CHA_WORKBOOK_PATH)))
+```

@@ -1,11 +1,19 @@
 project:
   type: book
   output-dir: docs
+  execute-dir: project
+  resources:
+    - "pdfs/**"
+  pre-render:
+    - python3 scripts/generate_chapter_objects.py --chapter "chapters/04-Social and Physical Determinants of Health.qmd" --output-dir "chapters/_generated/objects" --strict-refs
+    - python3 scripts/generate_chapter_objects.py --chapter "chapters/07-health-indicators.qmd" --output-dir "chapters/_generated/objects" --strict-refs
+
+lang: en
 
 book:
-  title: "Orange County Community Health Assessment 2025"
+  title: "Mid-Hudson Regional Community Health Assessment 2025"
   subtitle: "Mid-Hudson Regional CHA"
-  author: "Orange County Department of Health"
+  author: "Mid-Hudson Regional CHA"
   chapters:
     - index.qmd
     - chapters/00-acknowledgements.qmd
@@ -16,31 +24,40 @@ book:
     - chapters/03-demographics.qmd
     - chapters/04-Social and Physical Determinants of Health.qmd
     - chapters/05-Mid-Hudson Community Partner Survey.qmd
-    - chapters/05-health-behaviors.qmd
-    - chapters/06-clinical-care.qmd
-    - chapters/07-physical-environment.qmd
-    - chapters/08-appendix.qmd
+    - chapters/06-health-behaviors.qmd
+    - chapters/07-health-indicators.qmd
+    - chapters/08-Behavioral-Health.qmd
+    - chapters/09-Child-Health.qmd
+    - chapters/10-Environmental Indicators.qmd
+    - chapters/11-County-Health-Summaries.qmd
+    - chapters/12-Appendices.qmd
   sidebar:
     style: docked
     search: true
     collapse-level: 2
 
+bibliography: references.bib
+csl: https://www.zotero.org/styles/vancouver
+reference-location: section
+
 format:
   html:
     theme:
-      - flatly
+      - default
       - theme.scss
     css: custom-citation-styles.css
+    include-in-header: includes/skip-link-head.html
+    include-before-body: includes/skip-to-main.html
+    include-after-body: references-dropdown.html
     toc: true
     toc-depth: 3
     page-layout: full
     code-fold: true
     code-tools: true
     number-sections: true
-    smooth-scroll: true
+    smooth-scroll: false
     fig-cap-location: top
     tbl-cap-location: top
 
 execute:
-  freeze: auto
-  working-dir: project
+  freeze: false
