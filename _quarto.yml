@@ -52,7 +52,7 @@ format:
     toc-depth: 3
     page-layout: full
     code-fold: true
-    code-tools: true
+    code-tools: false
     number-sections: true
     smooth-scroll: false
     fig-cap-location: top
