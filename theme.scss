@@ -271,7 +271,6 @@ a {
 }
 
 /* Improve touch and motor accessibility in key navigation areas. */
-.sidebar .sidebar-item .sidebar-link,
 .navbar a,
 .pagination .page-link,
 .quarto-navigation-tool {
@@ -279,6 +278,101 @@ a {
   min-width: 2.75rem;
   display: inline-flex;
   align-items: center;
+}
+
+/* ---------------------------------------------------------------
+   Sidebar — aesthetic + WCAG 2.2 AA / AAA compliant
+   - 44px min target height (AAA Target Size Enhanced)
+   - Full-width clickable area (larger, easier motor target)
+   - 4.5:1+ contrast for all text states
+   - Visible focus indicator inherited from global :focus-visible
+   - Hover/active treatments do not rely on color alone
+   --------------------------------------------------------------- */
+.sidebar .sidebar-menu-container {
+  padding: 0.5rem 0.25rem;
+}
+
+.sidebar .sidebar-item {
+  margin: 0.125rem 0;
+}
+
+.sidebar .sidebar-item .sidebar-item-container {
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar .sidebar-item .sidebar-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.75rem 0.55rem 0.9rem;
+  color: var(--cha-link);
+  line-height: 1.35;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    padding-left 0.15s ease;
+}
+
+.sidebar .sidebar-item .sidebar-link .menu-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.sidebar .sidebar-item .sidebar-link .chapter-number {
+  display: inline-block;
+  min-width: 1.75rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--cha-muted);
+}
+
+.sidebar .sidebar-item .sidebar-link .chapter-title {
+  font-weight: 500;
+}
+
+.sidebar .sidebar-item .sidebar-link:hover {
+  background-color: var(--cha-primary-light);
+  border-left-color: var(--cha-primary);
+  color: $link-hover-color;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.18em;
+}
+
+.sidebar .sidebar-item .sidebar-link:hover .chapter-number {
+  color: var(--cha-accent);
+}
+
+.sidebar .sidebar-item .sidebar-link.active {
+  background-color: var(--cha-primary-light);
+  border-left-color: var(--cha-accent);
+  color: #1f2a37;
+  font-weight: 700;
+}
+
+.sidebar .sidebar-item .sidebar-link.active .chapter-number,
+.sidebar .sidebar-item .sidebar-link.active .chapter-title {
+  color: #1f2a37;
+  font-weight: 700;
+}
+
+.sidebar .sidebar-item .sidebar-link:focus-visible {
+  background-color: var(--cha-primary-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar .sidebar-item .sidebar-link,
+  .sidebar .sidebar-item .sidebar-item-container {
+    transition: none;
+  }
 }
 
 .book-title .title,
