@@ -27,27 +27,27 @@ This document was created to support our partners in health across the Region th
 
 ## Local and Regional Hospitals
 
-Blythedale Children's Hospital
-
+> Blythedale Children's Hospital
+> 
 > Bon Secours Charity Health System, a member of the Westchester Medical Center Health Network
 >
-> Bon Secours Community Hospital
+>   Bon Secours Community Hospital
 >
-> Good Samaritan Hospital
+>   Good Samaritan Hospital
 >
-> St. Anthony Community Hospital
-
-Burke Rehabilitation Center, Montefiore Health System
-
+>   St. Anthony Community Hospital
+>
+> Burke Rehabilitation Center, Montefiore Health System
+>
 > Ellenville Regional Hospital
 >
 > Garnet Health – Mid-Hudson Healthcare System:
 >
-> Garnet Health Medical Center
+>   Garnet Health Medical Center
 >
-> Garnet Health Medical Center – Catskills
+>   Garnet Health Medical Center – Catskills
 >
-> Garnet Health Medical Center – Catskills, Grover M. Hermann Hospital
+>   Garnet Health Medical Center – Catskills, Grover M. Hermann Hospital
 >
 > HealthAlliance Hospital, a member of the Westchester Medical Center Health Network
 >
@@ -68,15 +68,15 @@ Burke Rehabilitation Center, Montefiore Health System
 > Northern Westchester Hospital, Northwell Health
 >
 > Phelps Hospital, Northwell Health
-
-Putnam Hospital, part of Northwell Health
-
+>
+> Putnam Hospital, part of Northwell Health
+>
 > Saint Joseph's Medical Center
 >
 > St. John's Riverside Hospital
->
+> 
 > Westchester Medical Center
->
+> 
 > White Plains Hospital
-
-Vassar Brothers Medical Center, part of Northwell Health
+>
+> Vassar Brothers Medical Center, part of Northwell Health
