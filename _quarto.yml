@@ -17,7 +17,6 @@ book:
   chapters:
     - index.qmd
     - chapters/00-acknowledgements.qmd
-    - chapters/00-contact-information.qmd
     - chapters/01-excutive_summary.qmd
     - chapters/01-introduction.qmd
     - chapters/02-area-being-assessed.qmd

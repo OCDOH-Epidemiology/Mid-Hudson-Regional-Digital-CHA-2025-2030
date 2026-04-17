@@ -10,74 +10,53 @@ page-layout: full
 A living, data-driven assessment of the Mid-Hudson Region's health status, priorities, and community conditions.
 :::
 
-## Key Indicators (Sample)
+## Population Focus for The Mid-Hudson Region Community Health Assessment
 
-::: {.kpi-grid}
+-   Dutchess County
+-   Orange County
+-   Putnam County
+-   Rockland County
+-   Sullivan County
+-   Ulster County
+-   Westchester County
 
-::: {.card .kpi-card}
+## Questions or Comments regarding the assessment
 
-::: {.card-body}
+For questions pertaining to Dutchess County, please contact:
 
-### Population
-**392,000**
+**Jennifer Conflitti, MPH**
 
-Estimated Mid-Hudson Region population (placeholder).
+> Epidemiologist
+> jconflitti@dutchessny.gov
 
-:::
+For questions pertaining to Orange County, please contact:
 
-:::
+**Jackie Lawler, MPH, CPH**
 
-::: {.card .kpi-card}
+> Director of Epidemiology and Public Health Planning\
+> JLawler\@orangecountygov.com\
 
-::: {.card-body}
+For questions pertaining to Putnam County, please contact:
 
-### Top Priority
-**Mental Health**
+**Alison Kaufman, DVM, MPH**
 
-Region-wide priority from survey findings.
+> Senior Epidemiologist
+> Alison.kaufman@putnamcountyny.gov
 
-:::
+For questions pertaining to Rockland County, please contact:
+**Peter Hornberger, MPH**
 
-:::
+> Director of Epidemiology and Public Health Planning
+> Hornberp@co.rockland.ny.us
 
-:::
+For questions pertaining to Sullivan County, please contact:
+**Jessie Moore, DrPH, MPH, CHES**
 
-## How to Use This Book
+> Public Health Director
+> Jessie.Moore@sullivanny.gov
 
-::: {.grid}
+For questions pertaining to Westchester County, please contact: 
+**Jiali Li, Ph.D., M.A.**
 
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
-
-::: {.card-body}
-
-### Explore by Chapter
-Use the sidebar to navigate demographics, social determinants, clinical care, and environmental conditions.
-
-:::
-
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
-
-::: {.card-body}
-
-### Compare Counties
-Tabsets highlight Orange County vs. Mid-Hudson Region vs. NYS benchmarks.
-
-:::
-
-:::
-
-:::
-
-:::
-
-::: {.callout-important}
-This site is an initial draft. Content was converted from a Word document and includes TODO markers for editorial cleanup.
-:::
+> Director of Research and Evaluation
+> JAL6@westchestercountyny.gov
