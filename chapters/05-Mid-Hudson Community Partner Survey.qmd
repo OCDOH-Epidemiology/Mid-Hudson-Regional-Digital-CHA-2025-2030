@@ -38,7 +38,7 @@ if not CHA_WORKBOOK_PATH.exists():
 
 In order to ensure that the needs of underrepresented populations were accounted for in the M-H Region CHA, a survey was administered to community partners that serve these populations. Underrepresented populations include those who have a low-income, veterans, seniors, people experiencing homelessness, LGBTQIA+ members, and people with a mental health diagnosis. The term “partners” refers to those who offer services such as mental health support, vocational programs, and programs for underserved populations. Surveying partners was completed to gain a better understanding of the obstacles and barriers these populations are facing when trying to access services.
 
-Dutchess, Orange, Rockland, Sullivan, Ulster, and Westchester Counties created a survey tool based on the survey utilized in 2018 and 2022. Each participating LHD shared a survey link with partners to supply additional insight around local factors influencing community health. The survey covered several topics including the populations the partners serve, the issues that affect health in the communities they serve, barriers to people achieving better health, and interventions that are used to address social determinants of health see \[Appendix I(#section-8)\]. Throughout the M-H Region, 328 surveys were completed by partners between May 2 and July 1, 2025. The answers to the survey varied throughout each county. Some counties chose to further investigate these differences by conducting focus groups.
+Dutchess, Orange, Rockland, Sullivan, Ulster, and Westchester Counties created a survey tool based on the survey utilized in 2018 and 2022. Each participating LHD shared a survey link with partners to supply additional insight around local factors influencing community health. The survey covered several topics including the populations the partners serve, the issues that affect health in the communities they serve, barriers to people achieving better health, and interventions that are used to address social determinants of health (see [Appendix I](12-Appendices.qmd#sec-appendix-i-community-partner-survey)). Throughout the M-H Region, 328 surveys were completed by partners between May 2 and July 1, 2025. The answers to the survey varied throughout each county. Some counties chose to further investigate these differences by conducting focus groups.
 
 When looking at data from the M-H Region, the top three issues partners felt affected health in their communities included: access to mental health providers, access to affordable, decent, and safe housing, and access to affordable, nutritious food. The top three barriers partners felt prevented people from achieving better health in their communities were: knowledge of existing resources, health literacy, and geographic location (living in a rural area). Chronic disease, mental health and substance use issues, and health disparities were thought to highly impact these specific populations in the M-H Region. When considering the social determinants of health and the domains and priorities of the Prevention Agenda, partners said that economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care impacted the populations they serve the most.
 
@@ -46,7 +46,7 @@ In the following sections, the data was broken down by each county with two prim
 
 ## Dutchess County
 
-In Dutchess County, 109 responses were collected from providers that serve a variety of populations \[[see Appendix J](#section-9)\]. The Dutchess County Department of Health distributed the regional partner survey through various organizations and initiatives including the Eastern Dutchess Rural Health Network, Dutchess County Bringing Agencies Together, the Poughkeepsie Healthy Black and Latinx Coalition, Fit Dutchess, and the Community Health Committees at both Vassar Brothers Medical Center and Northern Dutchess Hospital.
+In Dutchess County, 109 responses were collected from providers that serve a variety of populations ([see Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references)). The Dutchess County Department of Health distributed the regional partner survey through various organizations and initiatives including the Eastern Dutchess Rural Health Network, Dutchess County Bringing Agencies Together, the Poughkeepsie Healthy Black and Latinx Coalition, Fit Dutchess, and the Community Health Committees at both Vassar Brothers Medical Center and Northern Dutchess Hospital.
 
 ### Major Findings
 
@@ -153,7 +153,7 @@ Scores are based on a 1 to 5 scale, where 1 = very little impact and 5 = highly 
 
 ## Orange County
 
-In Orange County, 170 survey responses were collected from community service providers \[[see Appendix J](#section-9)\] that are engaged with a wide array of at-risk populations. The Orange County Department of Health distributed the regional partner survey through healthcare provider listservs and collaborative coalitions including the Changing the Ecosystem Task Force, the Orange County Infection Control Committee, and Orange County Community Health Assessment Hospital partnerships. Respondents included members of government agencies, health care organizations, advocacy groups, and others who serve a wide variety of populations in the county.
+In Orange County, 170 survey responses were collected from community service providers ([see Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references)) that are engaged with a wide array of at-risk populations. The Orange County Department of Health distributed the regional partner survey through healthcare provider listservs and collaborative coalitions including the Changing the Ecosystem Task Force, the Orange County Infection Control Committee, and Orange County Community Health Assessment Hospital partnerships. Respondents included members of government agencies, health care organizations, advocacy groups, and others who serve a wide variety of populations in the county.
 
 ### Major Findings
 
@@ -268,7 +268,7 @@ Scores are based on a 1 to 5 scale, where 1 = very little impact and 5 = highly 
 
 ## Putnam County
 
-To foster collaboration with our local hospital system, Putnam County elected to participate in an alternative survey of community partners. During the summer of 2024 [Nuvance Health](https://www.nuvancehealth.org/) and Local Health Departments (LHDs) within the Nuvance service area worked collaboratively with the healthcare data analytics and consulting company, [DataGen®, Inc.](https://datagen.info/) to promote and administer the [Community-based Organization (CBO) Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf) \[[see Appendix K](#AppendixK_PutnamNuvanceCommunityBased)\] to employees of partner organizations located in the Nuvance service area. Like the M-H Community Partner Survey, the CBO Survey aims to enrich CHA data from secondary sources and population-based surveys with insight into the needs of the populations served by responding organizations.
+To foster collaboration with our local hospital system, Putnam County elected to participate in an alternative survey of community partners. During the summer of 2024 [Nuvance Health](https://www.nuvancehealth.org/) and Local Health Departments (LHDs) within the Nuvance service area worked collaboratively with the healthcare data analytics and consulting company, [DataGen®, Inc.](https://datagen.info/) to promote and administer the [Community-based Organization (CBO) Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/CBO_survey_report_DataGen_Putnam.pdf) ([see Appendix K](12-Appendices.qmd#sec-appendix-k-putnam-nuvance-cbo-survey)) to employees of partner organizations located in the Nuvance service area. Like the M-H Community Partner Survey, the CBO Survey aims to enrich CHA data from secondary sources and population-based surveys with insight into the needs of the populations served by responding organizations.
 
 The survey instrument was based on a standardized template provided by DataGen and modified by Nuvance and the Putnam County Department of Health (PCDOH) to meet local needs. The instrument was designed to collect information from CBO employees regarding the observed needs of the clients and communities they serve. Survey topics included questions to explore health status, access to healthcare, main health problems, ways to improve health in the populations served by respondents, and trusted sources of health information. The survey was hosted by SurveyMonkey between May 21<sup>st</sup>, 2024, and September 16<sup>th</sup>, 2024, and disseminated in person to attendees of the Public Health Summit hosted by PCDOH on June 6<sup>th</sup>, 2024, and via email to PCDOH and Nuvance partner distribution lists.
 
@@ -296,7 +296,7 @@ When considering access to healthcare, most respondents (77%) think that the peo
 
 ### Major Findings
 
-> -   CBO Survey respondents generally gave lower health ratings to those they serve (57% fair or poor health, physical or mental health not specified) than the self-reported ratings of Putnam residents found in the population-based [Mid-Hudson Region Community Health Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf) [\@see](#section-11)[Appendix L](#AppendixL_PutnamNuvanceCommunityBased) (18% fair or poor physical health, 23% fair or poor mental health). This may be indicative of poorer overall health in populations seeking services with respondents than that of the general population.
+> -   CBO Survey respondents generally gave lower health ratings to those they serve (57% fair or poor health, physical or mental health not specified) than the self-reported ratings of Putnam residents found in the population-based [Mid-Hudson Region Community Health Survey](https://www.putnamcountyny.gov/images/Departments/Department_of_Health/PDF_Documents/MHRCHS-Putnam_2025_Approved.pdf) ([see Appendix L](12-Appendices.qmd#sec-appendix-l-mid-hudson-regional-community-health-survey)) (18% fair or poor physical health, 23% fair or poor mental health). This may be indicative of poorer overall health in populations seeking services with respondents than that of the general population.
 >
 > -   Opinions varied by sector on the top three health problems faced, services most helpful to improve health, and most beneficial health screenings or education topics; however mental health/mental health services were consistently the first or second top choice of respondents for all three of these questions, regardless of sector.
 >
@@ -337,7 +337,7 @@ When considering access to healthcare, most respondents (77%) think that the peo
 
 ## Rockland County
 
-In Rockland County, 135 survey responses were collected from community service providers that are engaged with various at-risk populations such as persons experiencing homelessness, persons with disabilities, persons with a mental health diagnosis, persons with substance use disorders, veterans, seniors, non-English speakers, and low-income individuals [\@seeAppendix J](#section-9). The Rockland County Department of Health distributed the regional partner survey via internal listservs of medical providers, the listservs of the Haverstraw, Spring Valley, and Western Ramapo Collaboratives, the Rockland County Dept. of Mental Health, as well as the United Way of Rockland, and our Hospital Partners at WMC Health and Montefiore Nyack. Respondents included members of government agencies, health care organizations, primary and secondary schools, advocacy groups, non-profits and others.
+In Rockland County, 135 survey responses were collected from community service providers that are engaged with various at-risk populations such as persons experiencing homelessness, persons with disabilities, persons with a mental health diagnosis, persons with substance use disorders, veterans, seniors, non-English speakers, and low-income individuals ([see Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references)). The Rockland County Department of Health distributed the regional partner survey via internal listservs of medical providers, the listservs of the Haverstraw, Spring Valley, and Western Ramapo Collaboratives, the Rockland County Dept. of Mental Health, as well as the United Way of Rockland, and our Hospital Partners at WMC Health and Montefiore Nyack. Respondents included members of government agencies, health care organizations, primary and secondary schools, advocacy groups, non-profits and others.
 
 The results showed that the top three issues that affect health in Rockland County were see [@fig-rc-affect-health]:
 
@@ -480,7 +480,7 @@ Scores are based on a 1 to 5 scale, where 1 = very little impact and 5 = highly 
 
 ## Sullivan County
 
-In Sullivan County, 102 responses were collected via the M-H Community Partner Survey from service providers that serve various populations. The 102 responses represented 46 organizations which contain Sullivan County in their service area, including Garnet Health and SUNY Sullivan see \[Appendix J(#section-9)\].
+In Sullivan County, 102 responses were collected via the M-H Community Partner Survey from service providers that serve various populations. The 102 responses represented 46 organizations which contain Sullivan County in their service area, including Garnet Health and SUNY Sullivan (see [Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references)).
 
 These providers identified the following as the top three issues that affect the health of the populations they serve see [@fig-sc-affect-health]:
 
@@ -598,7 +598,7 @@ Scores are based on a 1 to 5 scale, where 1 = very little impact and 5 = highly 
 
 ## Ulster County
 
-In Ulster County, 73 responses were collected from providers that serve various populations. Many agencies were represented as respondents to the survey, the questions for which can be found in \[[see Appendix J](#AppendixK_CommunityPartnerSurveyReferenc)]
+In Ulster County, 73 responses were collected from providers that serve various populations. Many agencies were represented as respondents to the survey, the questions for which can be found in [see Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references).
 
 The survey results showed that the top three issues that affect health in Ulster County were see [@fig-uc-affect-health]:
 
@@ -698,7 +698,7 @@ Scores are based on a 1 to 5 scale, where 1 = very little impact and 5 = highly 
 
 ## Westchester County
 
-From the Hudson Valley Regional Community Partner Surveys, responses were collected from 40 providers see \[Appendix J(#AppendixJ_HudsonValleyRegionalCommunityPartnerSurveys)\] located in Westchester County. Those providers identified several issues that affect health in Westchester, including see [@fig-wc-affect-health]:
+From the Hudson Valley Regional Community Partner Surveys, responses were collected from 40 providers (see [Appendix J](12-Appendices.qmd#sec-appendix-j-community-partner-survey-references)) located in Westchester County. Those providers identified several issues that affect health in Westchester, including see [@fig-wc-affect-health]:
 
 > -   Access to mental health providers
 >

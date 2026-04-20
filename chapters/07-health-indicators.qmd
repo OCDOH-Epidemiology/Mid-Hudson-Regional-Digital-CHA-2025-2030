@@ -116,7 +116,7 @@ In 2020–2022, CLRD mortality rates varied across the region’s seven counties
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. This indicator includes deaths with chronic lower respiratory disease as the primary cause of death. The ICD-10 codes for CLRD are: J40-J47.
 :::
 
-When stratifying CLRD by race and ethnicity, disparities were not consistent between hospitalization and mortality rates. According to Figure 91, non-Hispanic Black adults had higher CLRD hospitalization rates across NYS and NYS excluding NYC. This pattern was also true for most counties in the M-H Region, with the exception of Dutchess County. However, non-Hispanic White adults had the highest CLRD mortality rates in most M-H Region counties, with the exception of Ulster County and Westchester County, which was also consistent with both NYS and NYS excluding NYC rates [see Figure 92]. Rates were unstable or suppressed for non-Hispanic Asian/Pacific Islander adults for both CLRD hospitalizations and mortality across much of the region, but they were overall lower than other racial/ethnic groups.
+When stratifying CLRD by race and ethnicity, disparities were not consistent between hospitalization and mortality rates. According to Figure 91, non-Hispanic Black adults had higher CLRD hospitalization rates across NYS and NYS excluding NYC. This pattern was also true for most counties in the M-H Region, with the exception of Dutchess County. However, non-Hispanic White adults had the highest CLRD mortality rates in most M-H Region counties, with the exception of Ulster County and Westchester County, which was also consistent with both NYS and NYS excluding NYC rates [@fig-clrd-mortal-rande-aar]. Rates were unstable or suppressed for non-Hispanic Asian/Pacific Islander adults for both CLRD hospitalizations and mortality across much of the region, but they were overall lower than other racial/ethnic groups.
 
 <!--Figure 91: "Chronic Lower Respiratory Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
 {{< include _generated/objects/fig-clrd-hospital-rande-aar.qmd >}}
@@ -206,7 +206,7 @@ According to Figure 97, in 2021, Sullivan County had the highest percentage of a
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "Has a doctor, nurse, or other health professional ever told you that you had any of the following:” and “Ever told you that you had a heart attack also called a myocardial infarction?” and “Ever told you that you had angina or coronary heart disease?” Based on responses to these questions, a person has Cardiovascular Disease if they responded yes to either of these questions.
 :::
 
-Recent data from 2019–2021 show that Sullivan County had the highest cardiovascular hospitalization rate at 129.9 per 10,000 population. This rate was higher than the M-H Region (99.3 per 10,000 population) and NYS (111.2 per 10,000 population). Putnam County had the lowest cardiovascular hospitalization rate at 76.9 per 10,000 population [see Figure 98].
+Recent data from 2019–2021 show that Sullivan County had the highest cardiovascular hospitalization rate at 129.9 per 10,000 population. This rate was higher than the M-H Region (99.3 per 10,000 population) and NYS (111.2 per 10,000 population). Putnam County had the lowest cardiovascular hospitalization rate at 76.9 per 10,000 population [@fig-cardiovasdz-hospi-aar].
 
 <!--Figure 98: "Cardiovascular Hospitalization, Age-Adjusted Rate per 10,000, 2019–2021"-->
 {{< include _generated/objects/fig-cardiovasdz-hospi-aar.qmd >}}
@@ -217,7 +217,7 @@ Recent data from 2019–2021 show that Sullivan County had the highest cardiovas
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes used for cardiovascular disease are: I00-I99.
 :::
 
-From 2014–2021, the rates of cardiovascular mortality generally trended downward for most of the M-H Region counties. The exceptions were Dutchess County, which experienced an increase from 2020–2021 (213.6 to 220.2 per 100,000 population), as well as an overall increase from 2014 to 2021 (from 209.8 to 220.2 per 10,000 population), and Ulster County, which experienced an increase from 2020–2021 (from 218.6 to 224.5 per 10,000 population) but an overall decrease from 2014 to 2021 (from 228.8 to 224.5 per 10,000 population). By contrast, both NYS and NYS excluding NYC experienced overall decreases from 2014–2021 and from 2020–2021 [see Figure 99].
+From 2014–2021, the rates of cardiovascular mortality generally trended downward for most of the M-H Region counties. The exceptions were Dutchess County, which experienced an increase from 2020–2021 (213.6 to 220.2 per 100,000 population), as well as an overall increase from 2014 to 2021 (from 209.8 to 220.2 per 10,000 population), and Ulster County, which experienced an increase from 2020–2021 (from 218.6 to 224.5 per 10,000 population) but an overall decrease from 2014 to 2021 (from 228.8 to 224.5 per 10,000 population). By contrast, both NYS and NYS excluding NYC experienced overall decreases from 2014–2021 and from 2020–2021 [@fig-cardiovasdz-mortal-aar].
 
 <!--Figure 99: "Cardiovascular Mortality, Age-Adjusted Rate per 100,000 Population, 2014–2021"-->
 
@@ -261,7 +261,7 @@ Recent data from 2019–2021 show that Sullivan County had the highest stroke ho
 Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
 :::
 
-When stratified by race and ethnicity, the age-adjusted cerebrovascular disease hospitalization rate per 10,000 from 2020–2022 shows that non-Hispanic Black adults had higher rates of stroke hospitalization compared to other racial and ethnic groups in the majority of the counties in the M-H Region, as well as in NYS and NYS excluding NYC. This excludes Putnam and Dutchess Counties, where non-Hispanic White adults had higher stroke hospitalization rates than Hispanics and non-Hispanic Blacks [see Figure 102].
+When stratified by race and ethnicity, the age-adjusted cerebrovascular disease hospitalization rate per 10,000 from 2020–2022 shows that non-Hispanic Black adults had higher rates of stroke hospitalization compared to other racial and ethnic groups in the majority of the counties in the M-H Region, as well as in NYS and NYS excluding NYC. This excludes Putnam and Dutchess Counties, where non-Hispanic White adults had higher stroke hospitalization rates than Hispanics and non-Hispanic Blacks [@fig-cerbrovasdz-hospital-rande-aar].
 
 <!--Figure 102: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
 {{< include _generated/objects/fig-cerbrovasdz-hospital-rande-aar.qmd >}}
