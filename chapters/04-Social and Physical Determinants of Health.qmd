@@ -434,13 +434,13 @@ Note: This indicator includes children under 19 years old.
 :::
 
 
-Dutchess County (94.4%) and Putnam County (94.9%) have the highest rate of adults with health insurance, and Ulster County has the lowest rate (92.0%). Adults in Dutchess County, Putnam County, and Westchester County (93.6%) all have a greater percentage of residents with insurance than NYS (93.2%). [@fig-adults-insured].
+Dutchess County (94.4%) and Putnam County (94.9%) have the highest rate of adults with health insurance, and Ulster County has the lowest rate (92.0%). Adults in Dutchess County, Putnam County, and Westchester County (93.6%) all have a greater percentage of residents with insurance than NYS (93.2%). [@fig-adult-health-insured].
 
 
 <!--Table 19: Percentage of Adults with Health Insurance, 2020-2023-->
-{{< include _generated/objects/fig-adults-insured.qmd >}}
+{{< include _generated/objects/fig-adult-health-insured.qmd >}}
 
-{{< include _generated/objects/tbl-adults-insured.qmd >}}
+{{< include _generated/objects/tbl-adult-health-insured.qmd >}}
 
 
 ::: callout-note
