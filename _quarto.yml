@@ -14,6 +14,7 @@ book:
   title: "Mid-Hudson Regional Community Health Assessment 2025"
   subtitle: "Mid-Hudson Regional CHA"
   author: "Mid-Hudson Regional CHA"
+  google-analytics: "G-Z90XTHLT7L"
   chapters:
     - index.qmd
     - chapters/00-acknowledgements.qmd

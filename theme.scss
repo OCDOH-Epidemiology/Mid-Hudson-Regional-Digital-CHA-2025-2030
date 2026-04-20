@@ -281,19 +281,19 @@ a {
 }
 
 /* ---------------------------------------------------------------
-   Sidebar — aesthetic + WCAG 2.2 AA / AAA compliant
-   - 44px min target height (AAA Target Size Enhanced)
-   - Full-width clickable area (larger, easier motor target)
+   Sidebar — tight, TOC-like rhythm + WCAG 2.2 AA compliant
+   - ≥24×24px target size (WCAG 2.2 AA)
+   - Full-width clickable area (easier motor target)
    - 4.5:1+ contrast for all text states
    - Visible focus indicator inherited from global :focus-visible
    - Hover/active treatments do not rely on color alone
    --------------------------------------------------------------- */
 .sidebar .sidebar-menu-container {
-  padding: 0.5rem 0.25rem;
+  padding: 0.25rem 0.25rem;
 }
 
 .sidebar .sidebar-item {
-  margin: 0.125rem 0;
+  margin: 0;
 }
 
 .sidebar .sidebar-item .sidebar-item-container {
@@ -306,10 +306,9 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 2.75rem;
-  padding: 0.55rem 0.75rem 0.55rem 0.9rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.6rem;
   color: var(--cha-link);
-  line-height: 1.35;
+  line-height: 1.3;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition:
