@@ -37,12 +37,20 @@ The following subsections under Health Indicators provide more specific details 
 
 Before discussing health indicators in the M-H Region, it is useful to understand the overall burden of disease facing residents in these seven counties. Morbidity measures illness and is defined in terms of incidence or prevalence. Incidence is the number of new cases of a disease divided by the number of people at risk over a particular period. Prevalence is the total number of cases of disease in a population during a specific period or at a particular point in time. Mortality is another term for death. A mortality rate is the number of deaths due to a disease during a particular period divided by the total population.
 
-Table 17 lists the top five causes of mortality in the M-H Region counties, as well as NYS and NYS excluding New York City (NYC).
+[@tbl-five-lead-death-aar] lists the top five causes of mortality in the M-H Region counties, as well as NYS and NYS excluding New York City (NYC).
 
 In 2022, Sullivan County had the highest total mortality rate out of all seven counties in the M-H Region, as well as NYS, at 908.5 per 100,000 population. In 2022, the leading cause of death in all M-H Region counties and in NYS was heart disease. The causes of death across the counties included heart disease, cancer, unintentional injury, chronic lower respiratory diseases (CLRD), cerebrovascular disease (stroke), and COVID-19.
 
 <!--Table 17: "Top Five Causes of Death, by Count and Age-Adjusted Rate per 100,000 Population, 2022"-->
-{{< include _generated/objects/tbl-five-lead-death-aar.qmd >}}
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-five-lead-death-aar
+#| tbl-cap: 'Top Five Leading Causes of Death, by Count and Age-Adjusted Rate per 100,000 Population, 2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-five-lead-death-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
 
 ::: {.callout-note collapse="true"}
 ## Source
