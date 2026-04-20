@@ -17,7 +17,7 @@ old.
 The M-H region borders NYC and New Jersey to the south; New Jersey and
 Pennsylvania to the west; Greene and Columbia counties to the north; and
 Massachusetts and Connecticut to the east. See map in [Appendix
-A](#AppendixA_MidHudsonRegionMap). The Region is a topically diverse
+A](12-Appendices.qmd#sec-appendix-a-map). The Region is a topically diverse
 landscape with the rural Catskill Mountains, the Shawangunk Ridge, parts
 of the NYC watershed, and the Hudson River flowing through it.
 
@@ -39,7 +39,7 @@ school districts and is also home to five colleges and universities. The
 southwestern region of Dutchess County is the most densely populated
 part of the county and includes the cities of Beacon and the county
 seat, Poughkeepsie. The rest of the county is predominantly suburban and
-rural. See map in [Appendix B](#section-1).
+rural. See map in [Appendix B](12-Appendices.qmd#sec-appendix-b-map).
 
 ### Orange County
 
@@ -55,7 +55,7 @@ three cities, 21 towns, and 19 villages. Nearly 17% of the county’s
 total population resides in its three cities of Middletown, Newburgh,
 and Port Jervis.<sup>7</sup> Orange County has 19 public school
 districts and is also home to four colleges, universities, and medical
-schools. See map in [Appendix C](#section-2).
+schools. See map in [Appendix C](12-Appendices.qmd#sec-appendix-c-map).
 
 ### Putnam County
 
@@ -68,7 +68,7 @@ the 230-square-mile county. There are six public school districts and no
 colleges or universities. Open space dominates its landscape,
 highlighted by Clarence Fahnestock State Park, a preserve covering
 nearly 10% of the county’s total area. See map in [Appendix
-D](#section-3).
+D](12-Appendices.qmd#sec-appendix-d-map).
 
 ### Rockland County
 
@@ -81,7 +81,7 @@ school districts and four colleges and universities, the 199-square mile
 area of Rockland County includes five towns and 18 villages. This county
 of 120,000 acres is designated a Preserve America Community, containing
 more than 35,000 acres of preserved open space and parkland, just under
-one third of the county by area. See map in [Appendix E](#section-4).
+one third of the county by area. See map in [Appendix E](12-Appendices.qmd#sec-appendix-e-map).
 
 ### Sullivan County
 
@@ -91,7 +91,7 @@ Catskill Mountains. The county is bordered by Delaware County to the
 north, Ulster County to the east, Orange County to the south, and
 Pennsylvania to the west. Home to seven public school districts and one
 two-year college, the 997-square mile area includes 15 towns and seven
-villages. See map in [Appendix F](#section-5).
+villages. See map in [Appendix F](12-Appendices.qmd#sec-appendix-f-map).
 
 ### Ulster County
 
@@ -106,7 +106,7 @@ and encompassing just 7.4 square miles of the county’s total area. The
 rest of the county is comprised of 20 towns and three villages. Ulster
 County is home to nine school districts and two colleges and
 universities within its 1,161-square mile area. See map in [Appendix
-G](#section-6).
+G](12-Appendices.qmd#sec-appendix-g-map).
 
 ### Westchester County
 
@@ -117,4 +117,4 @@ Connecticut’s Fairfield County. Within its 48 municipalities,
 Westchester County can be described as predominately a mix of urban and
 suburban communities. Comprised of six cities, 19 towns, and 23
 villages, the county is home to 43 public school districts and 24
-colleges and universities. See map in [Appendix H](#section-7).
+colleges and universities. See map in [Appendix H](12-Appendices.qmd#sec-appendix-h-map).
