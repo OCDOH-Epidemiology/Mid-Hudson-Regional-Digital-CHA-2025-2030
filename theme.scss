@@ -293,6 +293,25 @@ a {
   padding: 0.5rem;
 }
 
+/* Keep chapter navigation transitions subtle and non-disorienting. */
+body {
+  animation: chapter-fade-in 220ms ease-out;
+}
+
+body.page-is-leaving {
+  opacity: 0;
+  transition: opacity 180ms ease-in;
+}
+
+@keyframes chapter-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;

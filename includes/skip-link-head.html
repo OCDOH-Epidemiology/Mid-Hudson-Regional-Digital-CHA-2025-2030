@@ -48,3 +48,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  if (prefersReducedMotion.matches) return;
+
+  var isModifiedClick = function (event) {
+    return (
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0
+    );
+  };
+
+  var shouldAnimateNavigation = function (anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.target && anchor.target.toLowerCase() === "_blank") return false;
+    if (anchor.hasAttribute("download")) return false;
+
+    var nextUrl = new URL(anchor.href, window.location.href);
+    if (nextUrl.origin !== window.location.origin) return false;
+    if (nextUrl.pathname === window.location.pathname && nextUrl.hash) return false;
+
+    return true;
+  };
+
+  document.addEventListener("click", function (event) {
+    if (isModifiedClick(event)) return;
+
+    var anchor = event.target.closest("a");
+    if (!shouldAnimateNavigation(anchor)) return;
+
+    event.preventDefault();
+    document.body.classList.add("page-is-leaving");
+    window.setTimeout(function () {
+      window.location.assign(anchor.href);
+    }, 180);
+  });
+});
+</script>

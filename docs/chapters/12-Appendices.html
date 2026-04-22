@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4e2e4a98e44bbc86cdf93c4605cc4e01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-59d722b0d079687c6600c5aa91245af3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -125,6 +125,45 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!el.hasAttribute("tabindex")) {
       el.setAttribute("tabindex", "0");
     }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  if (prefersReducedMotion.matches) return;
+
+  var isModifiedClick = function (event) {
+    return (
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0
+    );
+  };
+
+  var shouldAnimateNavigation = function (anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.target && anchor.target.toLowerCase() === "_blank") return false;
+    if (anchor.hasAttribute("download")) return false;
+
+    var nextUrl = new URL(anchor.href, window.location.href);
+    if (nextUrl.origin !== window.location.origin) return false;
+    if (nextUrl.pathname === window.location.pathname && nextUrl.hash) return false;
+
+    return true;
+  };
+
+  document.addEventListener("click", function (event) {
+    if (isModifiedClick(event)) return;
+
+    var anchor = event.target.closest("a");
+    if (!shouldAnimateNavigation(anchor)) return;
+
+    event.preventDefault();
+    document.body.classList.add("page-is-leaving");
+    window.setTimeout(function () {
+      window.location.assign(anchor.href);
+    }, 180);
   });
 });
 </script>

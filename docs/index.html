@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4e2e4a98e44bbc86cdf93c4605cc4e01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-59d722b0d079687c6600c5aa91245af3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -126,6 +126,45 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!el.hasAttribute("tabindex")) {
       el.setAttribute("tabindex", "0");
     }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  if (prefersReducedMotion.matches) return;
+
+  var isModifiedClick = function (event) {
+    return (
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0
+    );
+  };
+
+  var shouldAnimateNavigation = function (anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.target && anchor.target.toLowerCase() === "_blank") return false;
+    if (anchor.hasAttribute("download")) return false;
+
+    var nextUrl = new URL(anchor.href, window.location.href);
+    if (nextUrl.origin !== window.location.origin) return false;
+    if (nextUrl.pathname === window.location.pathname && nextUrl.hash) return false;
+
+    return true;
+  };
+
+  document.addEventListener("click", function (event) {
+    if (isModifiedClick(event)) return;
+
+    var anchor = event.target.closest("a");
+    if (!shouldAnimateNavigation(anchor)) return;
+
+    event.preventDefault();
+    document.body.classList.add("page-is-leaving");
+    window.setTimeout(function () {
+      window.location.assign(anchor.href);
+    }, 180);
   });
 });
 </script>
@@ -268,8 +307,8 @@ document.addEventListener("DOMContentLoaded", function () {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-indicators-sample" id="toc-key-indicators-sample" class="nav-link active" data-scroll-target="#key-indicators-sample"><span class="header-section-number">0.1</span> Key Indicators (Sample)</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book"><span class="header-section-number">0.2</span> How to Use This Book</a></li>
+  <li><a href="#population-focus-for-the-mid-hudson-region-community-health-assessment" id="toc-population-focus-for-the-mid-hudson-region-community-health-assessment" class="nav-link active" data-scroll-target="#population-focus-for-the-mid-hudson-region-community-health-assessment"><span class="header-section-number">0.1</span> Population Focus for The Mid-Hudson Region Community Health Assessment</a></li>
+  <li><a href="#questions-or-comments-regarding-the-assessment" id="toc-questions-or-comments-regarding-the-assessment" class="nav-link" data-scroll-target="#questions-or-comments-regarding-the-assessment"><span class="header-section-number">0.2</span> Questions or Comments regarding the assessment</a></li>
   </ul>
 </nav>
     </div>
@@ -306,58 +345,49 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="hero">
 <p>A living, data-driven assessment of the Mid-Hudson Region’s health status, priorities, and community conditions.</p>
 </div>
-<section id="key-indicators-sample" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="key-indicators-sample"><span class="header-section-number">0.1</span> Key Indicators (Sample)</h2>
-<div class="kpi-grid">
-<div class="card kpi-card">
-<section id="population" class="level3 card-body" data-number="0.1.1">
-<h3 data-number="0.1.1" class="anchored" data-anchor-id="population"><span class="header-section-number">0.1.1</span> Population</h3>
-<p><strong>392,000</strong></p>
-<p>Estimated Mid-Hudson Region population (placeholder).</p>
+<section id="population-focus-for-the-mid-hudson-region-community-health-assessment" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="population-focus-for-the-mid-hudson-region-community-health-assessment"><span class="header-section-number">0.1</span> Population Focus for The Mid-Hudson Region Community Health Assessment</h2>
+<ul>
+<li>Dutchess County</li>
+<li>Orange County</li>
+<li>Putnam County</li>
+<li>Rockland County</li>
+<li>Sullivan County</li>
+<li>Ulster County</li>
+<li>Westchester County</li>
+</ul>
 </section>
-</div>
-<div class="card kpi-card">
-<section id="top-priority" class="level3 card-body" data-number="0.1.2">
-<h3 data-number="0.1.2" class="anchored" data-anchor-id="top-priority"><span class="header-section-number">0.1.2</span> Top Priority</h3>
-<p><strong>Mental Health</strong></p>
-<p>Region-wide priority from survey findings.</p>
-</section>
-</div>
-</div>
-</section>
-<section id="how-to-use-this-book" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="how-to-use-this-book"><span class="header-section-number">0.2</span> How to Use This Book</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="card">
-<section id="explore-by-chapter" class="level3 card-body" data-number="0.2.1">
-<h3 data-number="0.2.1" class="anchored" data-anchor-id="explore-by-chapter"><span class="header-section-number">0.2.1</span> Explore by Chapter</h3>
-<p>Use the sidebar to navigate demographics, social determinants, clinical care, and environmental conditions.</p>
-</section>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="card">
-<section id="compare-counties" class="level3 card-body" data-number="0.2.2">
-<h3 data-number="0.2.2" class="anchored" data-anchor-id="compare-counties"><span class="header-section-number">0.2.2</span> Compare Counties</h3>
-<p>Tabsets highlight Orange County vs.&nbsp;Mid-Hudson Region vs.&nbsp;NYS benchmarks.</p>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This site is an initial draft. Content was converted from a Word document and includes TODO markers for editorial cleanup.</p>
-</div>
-</div>
+<section id="questions-or-comments-regarding-the-assessment" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="questions-or-comments-regarding-the-assessment"><span class="header-section-number">0.2</span> Questions or Comments regarding the assessment</h2>
+<p>For questions pertaining to Dutchess County, please contact:</p>
+<p><strong>Jennifer Conflitti, MPH</strong></p>
+<blockquote class="blockquote">
+<p>Epidemiologist jconflitti@dutchessny.gov</p>
+</blockquote>
+<p>For questions pertaining to Orange County, please contact:</p>
+<p><strong>Jackie Lawler, MPH, CPH</strong></p>
+<blockquote class="blockquote">
+<p>Director of Epidemiology and Public Health Planning<br>
+JLawler@orangecountygov.com<br>
+</p>
+</blockquote>
+<p>For questions pertaining to Putnam County, please contact:</p>
+<p><strong>Alison Kaufman, DVM, MPH</strong></p>
+<blockquote class="blockquote">
+<p>Senior Epidemiologist Alison.kaufman@putnamcountyny.gov</p>
+</blockquote>
+<p>For questions pertaining to Rockland County, please contact: <strong>Peter Hornberger, MPH</strong></p>
+<blockquote class="blockquote">
+<p>Director of Epidemiology and Public Health Planning Hornberp@co.rockland.ny.us</p>
+</blockquote>
+<p>For questions pertaining to Sullivan County, please contact: <strong>Jessie Moore, DrPH, MPH, CHES</strong></p>
+<blockquote class="blockquote">
+<p>Public Health Director Jessie.Moore@sullivanny.gov</p>
+</blockquote>
+<p>For questions pertaining to Westchester County, please contact: <strong>Jiali Li, Ph.D., M.A.</strong></p>
+<blockquote class="blockquote">
+<p>Director of Research and Evaluation JAL6@westchestercountyny.gov</p>
+</blockquote>
 
 
 </section>
