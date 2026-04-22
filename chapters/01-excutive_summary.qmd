@@ -2,7 +2,7 @@
 title: "Executive Summary"
 ---
 
-The 2025 Mid-Hudson Valley Regional Community Health Assessment (CHA)
+The 2025 Mid-Hudson Regional Community Health Assessment (CHA)
 provides a comprehensive overview of the health status, needs, and
 priorities across the seven Mid-Hudson counties—Dutchess, Orange,
 Putnam, Rockland, Sullivan, Ulster, and Westchester. This systematic
@@ -10,7 +10,7 @@ process was a joint effort across the seven counties to collect,
 analyze, and interpret data on health outcomes, behaviors, and social
 determinants of health. It serves as a foundation for coordinated public
 health action by identifying key challenges and guiding local health
-departments, hospitals, and community partners in planning
+departments (LHDs), hospitals, and community partners in planning
 evidence-based strategies.
 
 The assessment reveals that despite the Mid-Hudson Region’s geographic,
@@ -47,8 +47,8 @@ of health, including housing instability, economic insecurity, food
 access, and transportation. These factors directly affect residents’
 ability to maintain good health. High housing costs and limited
 affordable options are major challenges in Dutchess, Orange, and
-Westchester Counties, while poverty and underemployment are more
-prevalent in Sullivan and Ulster Counties. Across the region, food
+Westchester counties, while poverty and underemployment are more
+prevalent in Sullivan and Ulster counties. Across the region, food
 insecurity remains a persistent concern, especially for families with
 children and older adults.
 
