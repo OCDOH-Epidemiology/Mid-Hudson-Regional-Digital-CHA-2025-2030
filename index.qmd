@@ -7,10 +7,10 @@ page-layout: full
 ---
 
 ::: {.hero}
-A living, data-driven assessment of the Mid-Hudson Region's health status, priorities, and community conditions.
+A living, data-driven assessment of the Mid-Hudson Regional Community Health Assessment's health status, priorities, and community conditions.
 :::
 
-## Population Focus for The Mid-Hudson Region Community Health Assessment
+## Population Focus for The Mid-Hudson Regional Community Health Assessment
 
 -   Dutchess County
 -   Orange County
@@ -22,46 +22,40 @@ A living, data-driven assessment of the Mid-Hudson Region's health status, prior
 
 ## Questions or Comments About the Assessment
 
-For questions about the Mid-Hudson Region, please contact:
+For questions about the Mid-Hudson Regional, please contact:
 
 ### Dutchess County
 
-**Jennifer Conflitti, MPH**
-
+>**Jennifer Conflitti, MPH**
 > Epidemiologist
-> [jconflitti@dutchessny.gov](mailto:jconflitti@dutchessny.gov)
+> [JConflitti@dutchessny.gov](mailto:JConflitti@dutchessny.gov)
 
 ### Orange County
 
-**Jackie Lawler, MPH, CPH**
-
+>**Jackie Lawler, MPH, CPH**
 > Director of Epidemiology and Public Health Planning\
 > [JLawler@orangecountygov.com](mailto:JLawler@orangecountygov.com)\
 
 ### Putnam County
 
-**Alison Kaufman, DVM, MPH**
-
+>**Alison Kaufman, DVM, MPH**
 > Senior Epidemiologist
-> [Alison.kaufman@putnamcountyny.gov](mailto:Alison.kaufman@putnamcountyny.gov)
+> [Alison.Kaufman@putnamcountyny.gov](mailto:Alison.Kaufman@putnamcountyny.gov)
 
 ### Rockland County
 
-**Peter Hornberger, MPH**
-
+>**Peter Hornberger, MPH**
 > Director of Epidemiology and Public Health Planning
 > [Hornberp@co.rockland.ny.us](mailto:Hornberp@co.rockland.ny.us)
 
 ### Sullivan County
 
-**Jessie Moore, DrPH, MPH, CHES**
-
+>**Jessie Moore, DrPH, MPH, CHES**
 > Public Health Director
 > [Jessie.Moore@sullivanny.gov](mailto:Jessie.Moore@sullivanny.gov)
 
 ### Westchester County
 
-**Jiali Li, Ph.D., M.A.**
-
+>**Jiali Li, Ph.D., M.A.**
 > Director of Research and Evaluation
 > [JAL6@westchestercountyny.gov](mailto:JAL6@westchestercountyny.gov)
