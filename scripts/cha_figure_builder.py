@@ -37,6 +37,7 @@ CHA_COLOR_PALETTE = [
 DEFAULT_DASHED_SERIES = {"NYS": "dash", "US": "dash"}
 BAR_PATTERN_SEQUENCE = ["", "/", "\\", "x", ".", "+"]
 LINE_SYMBOL_SEQUENCE = ["circle", "square", "diamond", "triangle-up", "triangle-down", "cross"]
+CHA_FONT_FAMILY = '"Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif'
 
 
 def _normalize_label(label: str) -> str:
@@ -222,6 +223,7 @@ def _apply_layout(
             yaxis_dict["autorange"] = False
     
     fig.update_layout(
+        font=dict(family=font_family),
         xaxis=dict(
             title=dict(
                 text=x_axis_title,
@@ -264,7 +266,7 @@ def build_line_figure(
     dash_overrides: dict[str, str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -299,7 +301,7 @@ def build_clustered_bar_figure(
     palette: list[str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -398,7 +400,7 @@ def build_stacked_bar_figure(
     palette: list[str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -469,7 +471,7 @@ def build_simple_bar_figure(
     palette: list[str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -535,7 +537,7 @@ def build_simple_bar_figure(
     palette: list[str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -608,7 +610,7 @@ def build_horizontal_bar_figure(
     palette: list[str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:
@@ -682,7 +684,7 @@ def build_interactive_line_figure(
     dash_overrides: dict[str, str] | None = None,
     width: int = 1000,
     height: int = 600,
-    font_family: str = "Arial, sans-serif",
+    font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
 ) -> go.Figure:

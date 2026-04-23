@@ -4,7 +4,7 @@ title: Area Being Assessed
 
 ## The Mid-Hudson Region
 
-The Mid-Hudson (M-H) region is comprised of seven-counties in New York
+The Mid-Hudson (M-H) Region is comprised of seven-counties in New York
 State (NYS) that is a mix of urban, suburban, and rural communities.
 Located north of New York City (NYC), it comprises 12.1% of the NYS
 population [@tbl-population-demographics]. The seven counties are Dutchess, Orange, Putnam,
@@ -49,11 +49,11 @@ River in the west, the only county in NYS to border both rivers. Ulster
 and Sullivan Counties border Orange County on the north, and Rockland
 County is located to the south. The states of New Jersey and
 Pennsylvania are located on the southwest borders of the county. Orange
-County is 812 square miles [@tbl-area-and-population] and is a diverse mix of rural,
+County is 812 square miles  and is a diverse mix of rural,
 farmland, suburban, and urban areas. Orange County communities include
 three cities, 21 towns, and 19 villages. Nearly 17% of the county’s
 total population resides in its three cities of Middletown, Newburgh,
-and Port Jervis.<sup>7</sup> Orange County has 19 public school
+and Port Jervis.<sup>7 </sup> Orange County has 19 public school
 districts and is also home to four colleges, universities, and medical
 schools. See map in [Appendix C](12-Appendices.qmd#sec-appendix-c-map).
 

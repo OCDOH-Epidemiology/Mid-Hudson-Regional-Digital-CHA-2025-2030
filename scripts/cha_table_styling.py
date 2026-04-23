@@ -14,6 +14,8 @@ Usage:
 
 import pandas as pd
 
+CHA_FONT_FAMILY = '"Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif'
+
 
 CHA_REGION_ORDER = [
     "Dutchess",
@@ -258,6 +260,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('font-weight', 'bold'), 
             ('text-align', 'center'), 
             ('background-color', '#FFFFFF'), 
+            ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
@@ -265,12 +268,14 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
         {'selector': 'td:first-child', 'props': [
             ('font-weight', 'bold'), 
             ('text-align', 'center'), 
+            ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
         # Other columns - center-aligned
         {'selector': 'td:not(:first-child)', 'props': [
             ('text-align', 'center'), 
+            ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
@@ -287,6 +292,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('border-collapse', 'collapse'), 
             ('width', '100%'), 
             ('margin', '20px 0'),
+            ('font-family', CHA_FONT_FAMILY),
             ('font-size', '14px')
         ]}
     ]
