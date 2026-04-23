@@ -57,7 +57,7 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-Ye
 
 ### Sex
 
-When stratifying the population by sex in 2023, the M-H Region had a near-even distribution between males and females [see @tbl-sex]. Apart from Putnam and Sullivan Counties, the M-H Region had a slightly higher percentage of females than males. The same is true for NYS, as well as NYS excluding NYC.
+When stratifying the population by sex in 2023, the M-H Region had a near-even distribution between males and females [@tbl-sex]. Apart from Putnam and Sullivan Counties, the M-H Region had a slightly higher percentage of females than males. The same is true for NYS, as well as NYS excluding NYC.
 
 ```{python}
 #| echo: false
@@ -89,7 +89,7 @@ The American Community Survey includes a question that intends to capture curren
 
 ### Age
 
-Throughout the M-H Region, adults aged 50 to 59 years made up the largest portion of the population (13.8%) [see @tbl-age]. Children aged less than five years and five to nine years, as well as adults aged 40 to 49 years and 60 to 69 years, were similarly distributed throughout the M-H Region, with Ulster County having the greatest difference between adults aged 60 to 69 years and children less than five years old (14.4% vs 4.4%).
+Throughout the M-H Region, adults aged 50 to 59 years made up the largest portion of the population (13.8%) [@tbl-age]. Children aged less than five years and five to nine years, as well as adults aged 40 to 49 years and 60 to 69 years, were similarly distributed throughout the M-H Region, with Ulster County having the greatest difference between adults aged 60 to 69 years and children less than five years old (14.4% vs 4.4%).
 
 
 ::: {.callout-note collapse="true"}
@@ -100,7 +100,7 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-Ye
 
 ### Ethnicity and Race
 
-In 2023, the majority of the population in the M-H Region and NYS were non-Hispanic White (58.5% and 53.4%, respectively). The Hispanic population was the second most predominant racial and ethnic group, followed by the non-Hispanic Black population. Within the M-H Region, Westchester County had the highest Hispanic population (27.0%), the highest non-Hispanic Black population (12.9%), and the highest non-Hispanic Asian population (6.0%). Westchester County’s racial and ethnic profile is most like that of NYS’; however, the percentage of non-Hispanic Whites significantly increases when looking at NYS excluding NYC [see @tbl-ethnicity and @tbl-race].
+In 2023, the majority of the population in the M-H Region and NYS were non-Hispanic White (58.5% and 53.4%, respectively). The Hispanic population was the second most predominant racial and ethnic group, followed by the non-Hispanic Black population. Within the M-H Region, Westchester County had the highest Hispanic population (27.0%), the highest non-Hispanic Black population (12.9%), and the highest non-Hispanic Asian population (6.0%). Westchester County’s racial and ethnic profile is most like that of NYS’; however, the percentage of non-Hispanic Whites significantly increases when looking at NYS excluding NYC [@tbl-ethnicity] and [@tbl-race].
 
 ```{python}
 #| echo: false
@@ -136,7 +136,7 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-Ye
 
 ### Spoken Language
 
-According to the *American Community Survey*, the base population for the spoken language demographic category was people aged five years and older. Of this population, English was the most common spoken language in the M-H Region and NYS. A significant portion of the population spoke a language other than English at home, specifically in Rockland and Westchester Counties (43.6% and 34.3%, respectively). The Spanish speaking population was highest in Westchester County (21.0%) compared to the other counties in the M-H Region [see @tbl-language].
+According to the *American Community Survey*, the base population for the spoken language demographic category was people aged five years and older. Of this population, English was the most common spoken language in the M-H Region and NYS. A significant portion of the population spoke a language other than English at home, specifically in Rockland and Westchester Counties (43.6% and 34.3%, respectively). The Spanish speaking population was highest in Westchester County (21.0%) compared to the other counties in the M-H Region [@tbl-language].
 
 ```{python}
 #| echo: false
@@ -162,7 +162,7 @@ The American Community Survey asks respondents to report whether they sometimes 
 
 ### Educational Attainment
 
-According to the *American Community Survey*, the base population for the educational attainment demographic category were people aged 25 years and older [see @tbl-education-base]. Of this population, when looking at the M-H Region, NYS, and NYS excluding NYC, the largest portion of residents had a high school degree (22.4%, 24.6%, and 25.8%, respectively) [see @tbl-education-base].
+According to the *American Community Survey*, the base population for the educational attainment demographic category were people aged 25 years and older [@tbl-education-base]. Of this population, when looking at the M-H Region, NYS, and NYS excluding NYC, the largest portion of residents had a high school degree (22.4%, 24.6%, and 25.8%, respectively) [@tbl-education-base].
 
 
 ::: {.callout-note collapse="true"}
@@ -177,7 +177,7 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-ye
 The Census Bureau defines educational attainment as the highest level of education that an individual has completed. This is distinct from the level of schooling that an individual is attending.
 :::
 
-Within the seven counties of the M-H Region, Westchester, Putnam, and Rockland Counties had the highest percentage of people with bachelor’s degrees (26.0%, 24.2%, and 23.2%, respectively), while Sullivan had the lowest percentage (17.0 %). Sullivan, Orange, and Dutchess Counties had the highest percentage of people with associate degrees (10.3%, 10.3%, and 10.1%, respectively). A significant portion of the population in the M-H Region were high school graduates or held a bachelor's degree [see @tbl-education].
+Within the seven counties of the M-H Region, Westchester, Putnam, and Rockland Counties had the highest percentage of people with bachelor’s degrees (26.0%, 24.2%, and 23.2%, respectively), while Sullivan had the lowest percentage (17.0 %). Sullivan, Orange, and Dutchess Counties had the highest percentage of people with associate degrees (10.3%, 10.3%, and 10.1%, respectively). A significant portion of the population in the M-H Region were high school graduates or held a bachelor's degree [@tbl-education].
 
 ```{python}
 #| echo: false
@@ -205,7 +205,7 @@ The Census Bureau defines educational attainment as the highest level of educati
 
 Income can affect many aspects of life. This includes where people are able to live, the food and health care coverage available, and almost every other social determinant of health [@rwjf-employment-2013].
 
-According to the *American Community Survey*, the base population for the income demographic category were households (all the persons who occupy a housing unit as their usual place of residence) [see @tbl-households].
+According to the *American Community Survey*, the base population for the income demographic category were households (all the persons who occupy a housing unit as their usual place of residence) [@tbl-households].
 
 ```{python}
 #| echo: false
@@ -229,7 +229,7 @@ US Census Bureau; American Community Survey, 2023 American Community Survey 5-ye
 The American Community Survey defines a household as all the people who occupy a housing unit, such as a house or apartment, as their usual place of residence (the place where they live most of the time). This includes both related family members and any unrelated people living in the same unit.
 :::
 
-Of this population, the largest portion of households in the M-H Region had an income greater than \$100,000 in 2023. More than one fifth of the households in Putnam County were making between \$100,000 and \$149,999 in 2023 (20.9%). There were many households with an income between \$50,000 and \$74,999 in the M-H Region and NYS; 17.0% of households in Sullivan County had an income within this bracket [see @tbl-income].
+Of this population, the largest portion of households in the M-H Region had an income greater than \$100,000 in 2023. More than one fifth of the households in Putnam County were making between \$100,000 and \$149,999 in 2023 (20.9%). There were many households with an income between \$50,000 and \$74,999 in the M-H Region and NYS; 17.0% of households in Sullivan County had an income within this bracket [@tbl-income].
 
 ```{python}
 #| echo: false
@@ -255,7 +255,7 @@ The American Community Survey asks respondents their income in the past 12 month
 
 ### Veteran Status
 
-Veteran status includes men and women who served, but are not currently serving, on active duty in the United States (US) Army, Navy, Air Force, Marine Corps, or the Coast Guard, or who served in the US Merchant Marines during World War II. Some issues that veterans experience following their service include finding a new career path, reestablishing themselves in society and families, and seeking treatment for mental health issues [@blinded-veterans-transition-2019]. In the M-H Region, Sullivan County had the highest percentage of civilian veterans (6.0%), double the percentage of civilian veterans in Rockland and Westchester Counties (3.0% in each) [see @tbl-veteran]. Overall, there is a smaller percentage of civilian veterans in the M-H Region compared to NYS excluding NYC (3.9% vs 5.3%, respectively).
+Veteran status includes men and women who served, but are not currently serving, on active duty in the United States (US) Army, Navy, Air Force, Marine Corps, or the Coast Guard, or who served in the US Merchant Marines during World War II. Some issues that veterans experience following their service include finding a new career path, reestablishing themselves in society and families, and seeking treatment for mental health issues [@blinded-veterans-transition-2019]. In the M-H Region, Sullivan County had the highest percentage of civilian veterans (6.0%), double the percentage of civilian veterans in Rockland and Westchester Counties (3.0% in each) [@tbl-veteran]. Overall, there is a smaller percentage of civilian veterans in the M-H Region compared to NYS excluding NYC (3.9% vs 5.3%, respectively).
 
 ```{python}
 #| echo: false
@@ -297,7 +297,7 @@ Various types of disabilities can affect an individual’s quality of life. Type
 
 -   Vision disability – blindness or serious difficulty seeing, even when wearing glasses
 
-In the M-H Region, Sullivan County had the highest percentage of adults living with a disability (15.9%), as well as the highest percentage of adults living with each of the six types of disabilities; Rockland County had the lowest percentage of adults living with a disability (8.7%) [see @tbl-disability].
+In the M-H Region, Sullivan County had the highest percentage of adults living with a disability (15.9%), as well as the highest percentage of adults living with each of the six types of disabilities; Rockland County had the lowest percentage of adults living with a disability (8.7%) [@tbl-disability].
 
 ```{python}
 #| echo: false

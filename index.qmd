@@ -12,13 +12,13 @@ A living, data-driven assessment of the Mid-Hudson Regional Community Health Ass
 
 ## Population Focus for The Mid-Hudson Regional Community Health Assessment
 
--   Dutchess County
--   Orange County
--   Putnam County
--   Rockland County
--   Sullivan County
--   Ulster County
--   Westchester County
+>-   Dutchess County
+>-   Orange County
+>-   Putnam County
+>-   Rockland County
+>-   Sullivan County
+>-   Ulster County
+>-   Westchester County
 
 ## Questions or Comments About the Assessment
 
