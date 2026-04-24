@@ -72,12 +72,6 @@ render_table_object(object_id="tbl-sex", workbook_path=CHA_WORKBOOK_PATH)
 ::: {.callout-note collapse="true"}
 ## Source
 
-US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, [Table S0101](https://data.census.gov/table/ACSST5Y2023.S0101?q=s0101&g=050XX00US36105,36027,36071,36119,36087,36079,36111_160XX00US3651000_040XX00US36), April 2025
-:::
-
-::: {.callout-note collapse="true"}
-## Source
-
 US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, [Table B03002](https://data.census.gov/table/ACSDT5Y2023.B03002?q=b03002&g=050XX00US36105,36027,36071,36119,36087,36079,36111_160XX00US3651000_040XX00US36), April 2025
 :::
 
