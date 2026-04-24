@@ -44,6 +44,13 @@ Putnam and Westchester Counties had the highest percentage of individuals in the
 <!--Table 1: "Percentage in Labor Force, Population 16 Years and Older, 2021–2023"-->
 {{< include _generated/objects/tbl-labor-force.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, Table DP03, April 2025
+https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US
+:::
+
 ::: callout-note
 ## Note
 
@@ -55,6 +62,14 @@ Y-axis does not begin at zero in order to clearly display trend lines. The Ameri
 
 <!--Table 2: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"-->
 {{< include _generated/objects/tbl-unemployed.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, Table DP03, April 2025
+https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36_010XX00US 
+:::
 
 ::: callout-note
 ## Note
@@ -88,6 +103,12 @@ Putnam County had the lowest food insecurity rate in the M-H Region at 8.9% (202
 {{< include _generated/objects/tbl-food-insecurity.qmd >}}
 
 
+::: {.callout-note collapse="true"}
+## Source
+
+Feeding America, June 2025 https://map.feedingamerica.org/district/2023/overall/new-york
+:::
+
 ::: callout-note
 ## Note
 
@@ -100,6 +121,11 @@ Feeding America takes the Current Population Survey (a monthly household survey 
 <!--Table 4: "Percentage of Food Insecurty, Children 18 Years and Younger, 2020–2023"-->
 {{< include _generated/objects/tbl-childhood-food-insecurity.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Feeding America, June 2025 https://map.feedingamerica.org/district/2023/overall/new-york
+:::
 
 ::: callout-note
 ## Note
@@ -124,6 +150,12 @@ Rockland County had both the highest percentage of cost burdened renter occupied
 <!--Table 5: "Percentage of Cost Burdened Renter Occupied Units, 2021–2023"-->
 {{< include _generated/objects/tbl-cost-burdened-renters.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, Table DP04, April 2025
+https://data.census.gov/table/ACSDP5Y2023.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+:::
 
 ::: callout-note
 ## Note
@@ -137,6 +169,12 @@ The American Community Survey asks respondents if they own or rent the house, ap
 <!--Table 6: "Percentage of Severely Cost Burdened Households, 2016–2023"-->
 {{< include _generated/objects/tbl-severely-cost-burdened.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from US Census
+Bureau, American Community Survey, five-year estimates https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Severe+Housing+Cost+Burden*
+:::
 
 ::: callout-note
 ## Note
@@ -149,6 +187,12 @@ The number of individuals living in HUD-subsidized housing in the Mid-Hudson Reg
 
 {{< include _generated/objects/tbl-hud-housing.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+US Department of Housing and Urban Development, July 2025
+https://www.huduser.gov/portal/datasets/assthsg.html#codebook_2009-2024
+:::
 
 ::: callout-note
 ## Note
@@ -163,6 +207,12 @@ The *U.S. Census Bureau* defines a family, and every individual in it, as being 
 
 {{< include _generated/objects/tbl-poverty-threshold.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau, Poverty Thresholds by Size of Family and Number of Children, 2021, April 2025
+https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html
+:::
 
 Poverty and health are closely linked. People experiencing poverty often have an increased risk of chronic and mental health conditions, mortality, and lower life expectancies [@hp2030-poverty-2025].
 
@@ -178,6 +228,12 @@ Counties in the M-H Region continue to show wide variation in poverty rates, ran
 <!--Table 7: "Percentage of Population in Poverty, 2021–2023"-->
 {{< include _generated/objects/tbl-poverty-rate.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau; American Community Survey, 2023 American Community Survey 5-year estimates, Table S1701, April 2025
+https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+:::
 
 ::: callout-note
 ## Note
@@ -194,13 +250,17 @@ Poverty continues to vary significantly across racial and ethnic groups in the M
 <!--Table 8: "Percentage of Families below Poverty by Race and Ethnicity, 2018–2022"-->
 {{< include _generated/objects/tbl-poverty-by-race.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from US Census Bureau, Small Area Income and Poverty Estimates https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: callout-note
 ## Note
 
 The Census Bureau collects racial and ethnic data in accordance with guidelines provided by the US Office of Management and Budget (OMB) and these data are based on self-identification. For ethnicity, the OMB standards classify individuals in one of two categories: "Hispanic or Latino" or "Not Hispanic or Latino." The Census Bureau uses the term "Hispanic or Latino" interchangeably with the term "Hispanic," and also refer to this concept as "ethnicity." People who identify with more than one race may choose to provide multiple races in response to the race question.
 :::
-
 
 ### Economically Disadvantaged
 
@@ -213,6 +273,11 @@ In 2023–2024, Sullivan County had the region’s highest share of economically
 <!--Table 9: "Enrollment Rate of Economically Disadvantaged Students, 2021-2023"-->
 {{< include _generated/objects/tbl-economically-disadvantaged.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Education Department, June 2025 https://data.nysed.gov/enrollment.php?year=2024&county=13
+:::
 
 ::: callout-note
 ## Note
@@ -230,6 +295,13 @@ The 2023 ALICE Household Survival Budget for New York State shows that the incom
 
 {{< include _generated/objects/tbl-alice-budget.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+
+United for ALICE, June 2025 https://www.unitedforalice.org/the-cost-of-basics/new-york
+:::
+
 ::: callout-note
 ## Note
 
@@ -245,6 +317,11 @@ Across the M-H Region, the share of households below the ALICE Threshold ranges 
 <!--Table 10: "ALICE Threshold Percentage, 2023"-->
 {{< include _generated/objects/tbl-alice-threshold.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+United for ALICE, June 2025 https://www.unitedforalice.org/county-reports/new-york#10/41.1237/-73.7330
+:::
 
 ::: callout-note
 ## Note
@@ -266,6 +343,11 @@ In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan (lowest)
 <!--Table 11: "High School Graduation Rate, 2021-2023"-->
 {{< include _generated/objects/tbl-graduation-rate.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Education Department, June 2025 https://data.nysed.gov/lists.php?type=county
+:::
 
 ::: callout-note
 ## Note
@@ -283,6 +365,12 @@ Racial and ethnic disparities in graduation rates persist across the M-H Region.
 <!--Table 12: "High School Graduation Rate, by Race and Ethnicity, 2023"-->
 {{< include _generated/objects/tbl-graduation-by-race.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Education Department, June 2025 https://data.nysed.gov/gradrate.php?year=2023&state=yes
+:::
 
 ::: callout-note
 ## Note
@@ -317,6 +405,13 @@ Westchester leads the region in degree completion, with the highest shares of re
 {{< include _generated/objects/tbl-educational-attainment.qmd >}}
 
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2020 American Community Survey 5-Year Estimates, Table S1501, April 2025
+https://data.census.gov/table/ACSST5Y2023.S1501?q=s1501&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+:::
+
 ::: callout-note
 ## Note
 
@@ -335,6 +430,12 @@ Rockland County had the highest percentage of people aged five years and over wh
 <!--Table 14: "Percentage of Population that Speaks English "Less Than Very Well", 5 Years and Older, 2021–2023"-->
 {{< include _generated/objects/tbl-language-proficiency.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, Table S1601, April 2025
+https://data.census.gov/table/ACSST5Y2020.S1601?q=s1601&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36&tid=ACSST5Y2020.S1601
+:::
 
 ::: callout-note
 ## Note
@@ -358,6 +459,12 @@ Sullivan County had the highest percentage of disconnected youth ages 16–19 (2
 <!--Table 15: "Percentage of Disconnected Youth, 16–19 Years Old, 2014–2023"-->
 {{< include _generated/objects/tbl-disconnected-youth.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from US Census Bureau, American Community Survey, five-year estimates https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Disconnected+Youth*
+:::
 
 ::: callout-note
 ## Note
@@ -385,6 +492,14 @@ Across the Mid-Hudson Region, residential segregation between Black and White re
 <!--Table 16: "Index Score of Residential Segregation, 2013–2023"-->
 {{< include _generated/objects/tbl-residential-segregation.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from US Census
+Bureau, American Community Survey, five-year estimates
+https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Residential+Segregation+-+Black%2FWhite*&tab=1
+:::
 ::: callout-note
 ## Note
 
@@ -404,6 +519,14 @@ Within the M-H Region, the highest percentage of adults who did not receive medi
 {{< include _generated/objects/fig-medical-care-cost.qmd >}}
 
 {{< include _generated/objects/tbl-medical-care-cost.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance
+System https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#sdh
+:::
 
 ::: callout-note
 ## Note
@@ -427,6 +550,12 @@ Sullivan County has the highest rate of children without health insurance (3.5%)
 
 {{< include _generated/objects/tbl-children-uninsured.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau, Small Area Health Insurance Estimates, July 2025
+https://www.census.gov/datatools/demo/sahie/#/?AGECAT=1&state_county=36000,36027,36071,36079,36087,36105,36111,36119&s_searchtype=sc&tableYears=2022&map_yearSelector=2022
+:::
 
 ::: callout-note
 ## Note
@@ -442,6 +571,12 @@ Dutchess County (94.4%) and Putnam County (94.9%) have the highest rate of adult
 
 {{< include _generated/objects/tbl-adult-health-insured.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; Small Area Health Insurance Estimates, 2023, August 2025
+https://www.census.gov/datatools/demo/sahie/#/?state_county=36000,36027,36071,36079,36087,36105,36111,36119&s_searchtype=sc&s_measures=ic_snc&RACECAT=0&AGECAT=1&map_yearSelector=2018&tableYears=2018
+:::
 
 ::: callout-note
 ## Note
@@ -463,6 +598,12 @@ Westchester and Orange Counties have the highest number of MUAs and MUPs. Putnam
 <!--Table 16: Medically Underserved Areas and Medically Underserved Populations-->
 {{< include _generated/objects/tbl-medically-underserved.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: Health Resources and Services Administration Data Warehouse, June 2025
+https://data.hrsa.gov/tools/shortage-area/mua-find
+:::
 
 ::: callout-note
 ## Note
@@ -482,6 +623,12 @@ Sullivan County (3,070:1) had the highest ratio of residents to primary care pro
 <!--Table 20: Ratio of Residents to Primary Care Providers, 2019-2021-->
 {{< include _generated/objects/tbl-primary-care-providers.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from Area Health Resources Files 2022-2023, and the American Medical Association
+https://www.countyhealthrankings.org/health-data/new-york?year=2024&measure=Primary+Care+Physicians&tab=1
+:::
 
 ::: callout-note
 ## Note
@@ -496,6 +643,13 @@ Sullivan County had the highest ration of resisdents to dentists (2,410:1). West
 <!--Table 21: Ratio of Residents to Dentists, 2019-2022-->
 {{< include _generated/objects/tbl-dentists.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from Area Health
+Resources Files 2022-2023, and the National Provider Identifier Downloadable File
+https://www.countyhealthrankings.org/health-data/new-york?year=2022&measure=Dentists&tab=1
+:::
 
 ::: callout-note
 ## Note
@@ -511,6 +665,13 @@ Sullivan County had the highest ration of resisdents to mental health providers 
 <!--Table 22: Ratio of Residents to Mental Health Providers, 2019-2022-->
 {{< include _generated/objects/tbl-mental-health-providers.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from National
+Provider Identification Registry, Centers for Medicaid and Medicare Services
+https://www.countyhealthrankings.org/health-data/new-york?year=2022&measure=Mental+Health+Providers&tab=1
+:::
 
 ::: callout-note
 ## Note
@@ -531,6 +692,12 @@ Putnam County had the highest percentage of adults who reported having a regular
 <!--Table 23: Percentage of Adults with a Regular Primary Care Provider, 2016-2023-->
 {{< include _generated/objects/tbl-adult-access-primary-care.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Community Health Indicator Reports Dashboard, July 2025 sourced from NYSDOH Behavioral Health Risk Factor Surveillance Survey
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=/EBI/PHIG/apps/dashboard/pa_dashboard&p=it&ind_id=pa4_0
+:::
 
 ::: callout-note
 ## Note
@@ -554,13 +721,16 @@ In the M-H Region there is a significant variation among PPH rates. Putnam Count
 <!--Table 24: Potentially Preventable Hospitalizations, 2020-2022-->
 {{< include _generated/objects/tbl-pph.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, July 2025 sourced from NY Statewide Planning and Research Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: callout-note
 ## Note
 Note: The number of potentially preventable hospitalizations includes residents aged 18 years and older. The Prevention Quality Indicators (PQI) are a set of measures developed by the federal Agency for Healthcare Research and Quality to assess the quality of outpatient care for “ambulatory care–sensitive conditions.” This indicator is defined as the combination of the 10 PQIs that pertain to adults: Short-term Complication of Diabetes, Long-term Complication of Diabetes, Chronic Obstructive Pulmonary Disease (COPD) or Asthma in Older Adults, Hypertension, Heart Failure, Community-Acquired Pneumonia, Urinary Tract Infection, Uncontrolled Diabetes, Asthma in Younger Adults, and Lower-Extremity Amputation Among Patients with Diabetes. Because the PQIs estimate the number of potentially avoidable hospital admissions, a lower rate is desirable.
 :::
-
-
 
 Looking at potentially preventable hospitalizations (PPH) by race is an important step in identifying health disparities and targeting interventions to improve access to health care and, ultimately, outcomes.
 
@@ -573,6 +743,14 @@ Black Non-Hispanics and White Non-Hispanics, 2019–2022-->
 <!--Table 25: Potentially Preventable Hospitalizations, Rate Difference Between
 Black Non-Hispanics and White Non-Hispanics, 2019–2022-->
 {{< include _generated/objects/tbl-pph-black-white-nh.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Prevention Agenda Tracking Dashboard, August 2025 sourced from NY Statewide Planning and Research Cooperative
+System
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/reports/#county
+:::
 
 ::: callout-note
 ## Note
@@ -598,6 +776,12 @@ Hispanic and Non-Hispanic White, 2019–2022-->
 <!--Table 26: Potentially Preventable Hospitalizations, Rate Difference Between
 Hispanic and Non-Hispanic White, 2019–2022-->
 {{< include _generated/objects/tbl-pph-white-nh.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Prevention Agenda Tracking Dashboard, July 2025 sourced from NY Statewide Planning and Research Cooperative System https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/reports/#county
+:::
 
 ::: callout-note
 ## Note
@@ -629,6 +813,16 @@ The County Health Rankings and Roadmaps measure of the food environment accounts
 <!--Table 17: "Food Environment Index, 2025"-->
 {{< include _generated/objects/tbl-food-environment.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, July 2025 sourced from US
+Department of Agriculture - Food Environment Atlas and Feeding America - Map the Meal Gap
+https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Food+Environment+Index&tab=1
+:::
+
+
+
 ::: callout-note
 ## Note
 The County Health Rankings measure of the food environment accounts for proximity to healthy foods and income. The index is a scale that ranges from 0 (worst) to 10 (best). Limited access to healthy foods estimates the percentage of the population that is low income and does not live close to a grocery store. Food insecurity estimates the percentage of the population that did not have access to a reliable source of food during the past year.
@@ -646,6 +840,13 @@ Many M-H Counties experienced a decrease in the percentage of the population wit
 
 <!--Table 18: "Percentage of Population with Limited Access to Healthy Foods, 2025"-->
 {{< include _generated/objects/tbl-limited-healthy-foods.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Department of Agriculture - Food Environment Atlas, July 2025
+https://gisportal.ers.usda.gov/portal/apps/experiencebuilder/experience/?page=Full-FEA-Map
+:::
 
 ::: callout-note
 ## Note
@@ -669,6 +870,12 @@ The M-H Region saw fluctuations in violent crime rates between 2018 and 2021. In
 <!--Table 19: "Violent Crime Rate per 100,000 Population, 2018-2021"-->
 {{< include _generated/objects/tbl-violent-crime.qmd >}}   
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Division of Criminal Justice Services, Uniform Crime and Incident-Based Reporting System, July 2025 https://www.criminaljustice.ny.gov/crimnet/ojsa/countycrimestats.htm
+:::
+
 ::: callout-note
 ## Note
 Murder, rape, robbery, and aggravated assault are classified as violent crimes.
@@ -690,6 +897,13 @@ Across all M-H Region Counties and New York State, the average daily density of 
 <!--Table 20: "Average Daily Density of Fine Particulate Matter, 2014-2020"-->
 {{< include _generated/objects/tbl-density-matter.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, July 2025 sourced from US
+Environmental Protection Agency's Air Quality System - Environmental Public Health Tracking Network
+https://www.countyhealthrankings.org/health-data/new-york?year=2025&measure=Air+Pollution%3A+Particulate+Matter&tab=1
+:::
 
 ::: callout-note
 ## Note
@@ -724,6 +938,13 @@ New York State (NYS) requires health care providers to obtain a blood lead level
 <!--Table 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016-2019 Birth Cohorts"-->
 {{< include _generated/objects/tbl-lead-children.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: NYS Community Health Indicator Reports Dashboard, July 2025 sourced from NYS Child Health Lead Poisoning Prevention
+Program https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
 ::: callout-note
 ## Note
 
@@ -744,6 +965,14 @@ Rockland County had the highest percentage (26.0%) of households with severe hou
 <!--Table 22: "Percentage of Households with Severe Housing Problems, 2025"-->
 {{< include _generated/objects/tbl-severe-housing.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, July 2025 sourced from US Census Bureau, Comprehensive Housing Affordability Strategy data
+https://www.countyhealthrankings.org/health-data/newyork?year=2025&measure=Severe+Housing+Problems&tab=1https%3A%2F%2Fwebbi1.health.ny.gov%2FSASStoredProcess%2Fguest
+%3F_program%3D%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=it&ind_id=Cg27
+:::
+
 ::: callout-note
 ## Note
 
@@ -760,6 +989,13 @@ Westchester County had the highest percentage of households with no available ve
 {{< include _generated/objects/fig-no-vehicles.qmd >}}
 <!--Table 23: "Percentage of Households with No Available Vehicles, 2023"-->
 {{< include _generated/objects/tbl-no-vehicles.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, Table DP04, April 2025
+https://data.census.gov/table/ACSDP5Y2022.DP04?q=dp04&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+:::
 
 ::: callout-note
 ## Note
@@ -779,6 +1015,14 @@ The majority of residents in the M-H Region report driving alone to work as thei
 <!--Table 24: "Modes of Transportation to Work, 2023"-->
 {{< include _generated/objects/tbl-mode-to-work.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, Table B08141, April
+2025 https://data.census.gov/table/ACSDT5Y2023.B08141?q=b08141&g=050XX00US36105,36027,36071,36119,36087,36079,3611
+1_040XX00US36&tid=B08141
+:::
+
 ::: callout-note
 ## Note
 
@@ -796,6 +1040,13 @@ Putnam County consistently has the longest mean travel time to work (39 minutes)
 {{< include _generated/objects/fig-mean-time-work.qmd >}}
 <!--Table 25: "Average Commute Time to Work, 2023"-->
 {{< include _generated/objects/tbl-mean-time-work.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+Source: US Census Bureau; American Community Survey, 2023 American Community Survey 5-Year Estimates, Table DP03, April 2025
+https://data.census.gov/table/ACSDP5Y2023.DP03?q=DP03&g=050XX00US36105,36027,36071,36119,36087,36079,36111_040XX00US36
+:::
 
 ::: callout-note
 ## Note
