@@ -36,7 +36,7 @@ if not CHA_WORKBOOK_PATH.exists():
 
 Occupation and employment affect individual health in various aspects. Those with steady employment tend to have better health outcomes in both mental and physical health conditions than those who are unemployed. Even within employed populations, there are disparities between those with high-paying and low-paying jobs [@rwjf-employment-2013].
 
-Putnam and Westchester Counties had the highest percentage of individuals in the labor force (64.7% and 65.4%, respectively) in 2023. Ulster County had the lowest percentage of individuals in the labor force (58.7%), which is lower than both the New York State (NYS) and United States (US) rate [@fig-labor-force]. Putnam County continues to have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the Mid-Hudson Region (M-H Region). All of the counties in the M-H Region have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County has the highest unemployment rate in the region at 6.1% [@fig-unemployed].
+Putnam and Westchester Counties had the highest percentage of individuals in the labor force (64.7% and 65.4%, respectively) in 2023. Ulster County had the lowest percentage of individuals in the labor force (58.7%), which is lower than both the New York State (NYS) and United States (US) rate [@fig-labor-force] and [@tbl-labor-force]. Putnam County continues to have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the Mid-Hudson Region (M-H Region). All of the counties in the M-H Region have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County has the highest unemployment rate in the region at 6.1% [@fig-unemployed] and [@tbl-unemployed].
 
 <!--Figure 1: "Percentage in Labor Force, Population 16 Years and Older, 2021–2023"-->
 {{< include _generated/objects/fig-labor-force.qmd >}}
@@ -94,7 +94,7 @@ Other populations more vulnerable to food insecurity than the overall population
 
 Feeding America used data from the US Census Bureau Current Population Survey (CPS) to generate food insecurity rates. The CPS included two questions relevant for this determination. First, a question asks if a household needed more, less, or the same amount of money to meet their basic food needs. Second, those that respond “more” are asked an additional question about how much more money they need to meet their basic food needs [@feeding-america-meal-gap-2023].
 
-Putnam County had the lowest food insecurity rate in the M-H Region at 8.9% (2023), as they have for all data listed dating back to 2020. The county with the highest rate of food insecurity was Sullivan County at 14.0%, but this was still lower than NYS’ rate of 14.5% [@fig-food-insecurity]. Childhood food insecurity in the region sees the same trends across counties with Sullivan having the highest rate at 19.9% and Putnam having the lowest at 6.6% [@fig-childhood-food-insecurity].
+Putnam County had the lowest food insecurity rate in the M-H Region at 8.9% (2023), as they have for all data listed dating back to 2020. The county with the highest rate of food insecurity was Sullivan County at 14.0%, but this was still lower than NYS’ rate of 14.5% [@fig-food-insecurity] and [@tbl-food-insecurity]. Childhood food insecurity in the region sees the same trends across counties with Sullivan having the highest rate at 19.9% and Putnam having the lowest at 6.6% [@fig-childhood-food-insecurity] and [@tbl-childhood-food-insecurity].
 
 <!--Figure 3: "Percentage of Overall Food Insecurity, 2020–2023"-->
 {{< include _generated/objects/fig-food-insecurity.qmd >}}
@@ -142,7 +142,7 @@ Housing alone does not guarantee better health outcomes in all areas; quality of
 
 The median percentage of household income spent on housing in the M-H Region is estimated to be 28.0% by United States Department of Housing and Urban Development (HUD) [@housing-infographic-2022]. Households that spend greater than 30.0% of their income on housing are considered cost burdened. Households that are severely cost burdened (spending greater than 50.0% of income on housing) are shown to spend 75.0% less on health care compared to similar households that are living in affordable housing [@jchs-state-nations-housing-2017].
 
-Rockland County had both the highest percentage of cost burdened renter occupied units and the highest percentage of severely cost burdened households in the region at 59.6% and 22.0%, respectively. Sullivan County had the lowest percentage of cost burdened renter occupied units (48.7%) and lowest percentage of severely cost burdened households (15.0%) [@fig-cost-burdened-renters and @fig-severely-cost-burdened]. All counties exceeded the New York State average for cost-burdened renter-occupied units, with the exception of Sullivan County. However, when examining the percentage of severely cost-burdened households, only Orange and Rockland counties exceeded the state average.
+Rockland County had both the highest percentage of cost burdened renter occupied units and the highest percentage of severely cost burdened households in the region at 59.6% and 22.0%, respectively. Sullivan County had the lowest percentage of cost burdened renter occupied units (48.7%) and lowest percentage of severely cost burdened households (15.0%) [@fig-cost-burdened-renters and @tbl-cost-burdened-renters] and [@fig-severely-cost-burdened and @tbl-severely-cost-burdened]. All counties exceeded the New York State average for cost-burdened renter-occupied units, with the exception of Sullivan County. However, when examining the percentage of severely cost-burdened households, only Orange and Rockland counties exceeded the state average.
 
 <!--Figure 5: "Percentage of Cost Burdened Renter Occupied Units, 2021–2023"-->
 {{< include _generated/objects/fig-cost-burdened-renters.qmd >}}
@@ -220,7 +220,7 @@ Poverty and health are closely linked. People experiencing poverty often have an
 
 *“Poverty is both a cause and consequence of poor health”* [@health-poverty-action-2018]
 
-Counties in the M-H Region continue to show wide variation in poverty rates, ranging from a low of 6.5% in Putnam County to a high of 15.6% in Rockland County. As of 2023, Rockland, Sullivan, and Ulster counties all reported poverty rates above the New York State average of 13.7%. In contrast, Putnam, Dutchess, Westchester, and Orange counties remained below the state average [@fig-poverty-rate].
+Counties in the M-H Region continue to show wide variation in poverty rates, ranging from a low of 6.5% in Putnam County to a high of 15.6% in Rockland County. As of 2023, Rockland, Sullivan, and Ulster counties all reported poverty rates above the New York State average of 13.7%. In contrast, Putnam, Dutchess, Westchester, and Orange counties remained below the state average [@fig-poverty-rate] and [@tbl-poverty-rate].
 
 <!--Figure 7: "Percentage of Population in Poverty, 2021–2023"-->
 {{< include _generated/objects/fig-poverty-rate.qmd >}}
@@ -242,7 +242,7 @@ The American Community Survey asks respondents their income in the past 12 month
 :::
 
 
-Poverty continues to vary significantly across racial and ethnic groups in the Mid-Hudson Region. Hispanic families had the highest poverty rates in Orange, Putnam, Rockland, Ulster, and Westchester counties, with Ulster County reaching 24.4%. In Sullivan County, non-Hispanic Black families experienced the highest poverty rate at 30.5%, the highest across all counties and groups. In Dutchess County, non-Hispanic Black and Hispanic families also had elevated poverty rates at 14.2% and 11.2%, respectively [@fig-poverty-by-race].
+Poverty continues to vary significantly across racial and ethnic groups in the Mid-Hudson Region. Hispanic families had the highest poverty rates in Orange, Putnam, Rockland, Ulster, and Westchester counties, with Ulster County reaching 24.4%. In Sullivan County, non-Hispanic Black families experienced the highest poverty rate at 30.5%, the highest across all counties and groups. In Dutchess County, non-Hispanic Black and Hispanic families also had elevated poverty rates at 14.2% and 11.2%, respectively [@fig-poverty-by-race] and [@tbl-poverty-by-race].
 
 <!--Figure 8: "Percentage of Families below Poverty by Race and Ethnicity, 2018–2022"-->
 {{< include _generated/objects/fig-poverty-by-race.qmd >}}
@@ -266,7 +266,7 @@ The Census Bureau collects racial and ethnic data in accordance with guidelines 
 
 Children from economically disadvantaged families can face numerous challenges that influence their development, academic achievement, and overall health. Poverty can affect their cognitive development and educational attainment. The lack of access to resources and opportunities can impact their long-term social and economic mobility [@aerj-ses-child-development-2011].
 
-In 2023–2024, Sullivan County had the region’s highest share of economically disadvantaged students (61.4%), while Putnam had the lowest (32.5%) [@fig-economically-disadvantaged]. All counties rose since 2021–2022; the largest gains occurred in Rockland (43.9% to 51.0%), Dutchess (39.2% to 43.3%), and Putnam (28.5% to 32.5%). Compared with NYS (59.2%), Sullivan is above the state average; all other Mid-Hudson counties remain below it. Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs. 49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5% and 51.0%).
+In 2023–2024, Sullivan County had the region’s highest share of economically disadvantaged students (61.4%), while Putnam had the lowest (32.5%) [@fig-economically-disadvantaged] and [@tbl-economically-disadvantaged]. All counties rose since 2021–2022; the largest gains occurred in Rockland (43.9% to 51.0%), Dutchess (39.2% to 43.3%), and Putnam (28.5% to 32.5%). Compared with NYS (59.2%), Sullivan is above the state average; all other Mid-Hudson counties remain below it. Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs. 49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5% and 51.0%).
 <!--Figure 9: "Enrollment Rate of Economically Disadvantaged Students, 2021-2023"-->
 {{< include _generated/objects/fig-economically-disadvantaged.qmd >}}
 
@@ -309,7 +309,7 @@ The ALICE (Asset Limited, Income Constrained, Employed) household survival budge
 :::
 
 
-Across the M-H Region, the share of households below the ALICE Threshold ranges from 37% in Dutchess (lowest) to 50% in Rockland (highest). Rockland is the only county above the New York State average of 47%; Orange (43%), Sullivan (45%), Ulster (42%), Putnam (38%), Westchester (38%), and Dutchess (37%) all fall below the state average. Sullivan has the region’s highest poverty rate (15%), while Rockland has the highest ALICE share (38%), which drives its overall total. In every county, ALICE households outnumber those in poverty, often by two to five times, showing that many financially constrained households earn above the Federal Poverty Level but still cannot afford basic needs [@fig-alice-threshold].
+Across the M-H Region, the share of households below the ALICE Threshold ranges from 37% in Dutchess (lowest) to 50% in Rockland (highest). Rockland is the only county above the New York State average of 47%; Orange (43%), Sullivan (45%), Ulster (42%), Putnam (38%), Westchester (38%), and Dutchess (37%) all fall below the state average. Sullivan has the region’s highest poverty rate (15%), while Rockland has the highest ALICE share (38%), which drives its overall total. In every county, ALICE households outnumber those in poverty, often by two to five times, showing that many financially constrained households earn above the Federal Poverty Level but still cannot afford basic needs [@fig-alice-threshold] and [@tbl-alice-threshold].
 
 <!--Figure 10: "ALICE Threshold Percentage, 2023"-->
 {{< include _generated/objects/fig-alice-threshold.qmd >}}
@@ -421,7 +421,7 @@ The American Community Survey asks respondents what the highest degree or level 
 
 ### Language and Literacy
 
-Literacy includes listening, speaking, reading, and writing skills, along with the ability to understand and work with numbers. Low literacy and language skills are associated with poorer outcomes in educational attainment, employment, and health. While limited English proficiency and low literacy differ from health literacy \[see page 72\], both are barriers to accessing health care, resulting in lower utilization of health services [@hp2030-language-literacy-2025].
+Literacy includes listening, speaking, reading, and writing skills, along with the ability to understand and work with numbers. Low literacy and language skills are associated with poorer outcomes in educational attainment, employment, and health. While limited English proficiency and low literacy differ from health literacy, both are barriers to accessing health care, resulting in lower utilization of health services [@hp2030-language-literacy-2025].
 
 Rockland County had the highest percentage of people aged five years and over who spoke English “less than very well” at 20.0% in 2023. Ulster County had the lowest percentage at 3.4% [@fig-language-proficiency]. Except for Rockland County, all other counties were lower than the NYS rate (13.3%).
 <!--Figure 14: "Percentage of Population that Speaks English "Less Than Very Well", 5 Years and Older, 2021–2023"-->
@@ -453,6 +453,7 @@ Civic participation includes activities in which groups or individuals interact 
 Disconnected youth are teenagers and young adults between the ages of 16 and 19 who are neither working nor attending school [@uwphi-disconnected-youth-2022]. This metric is an indicator for how young people are faring while transitioning into adulthood. This vulnerable population is cut off from resources, people, and experiences that help them gain knowledge, skills [@measure-of-america-disconnected-youth-2025], capital [@usda-nifa-disconnected-youth-4h-2017], and a sense of purpose [@hp2030-civic-participation-2025].
 
 Sullivan County had the highest percentage of disconnected youth ages 16–19 (24.0% in 2019–2023), while Westchester County had the lowest (5.0%); the NYS rate was 7.0% [@fig-disconnected-youth]. Since 2016–2020, Sullivan rose from 17.0% to 24.0% (peaking at 25.0% in 2018–2022). Ulster moved from 6.0% to 9.0%. Orange remained near 8–10% (8.0% most recent), Rockland ranged 4–6% (6.0% most recent), and Westchester stayed low at 4.0–5.0%.
+
 <!--Figure 15: "Percentage of Disconnected Youth, 16–19 Years Old, 2014–2023"-->
 {{< include _generated/objects/fig-disconnected-youth.qmd >}}
 
@@ -1034,7 +1035,7 @@ The American Community Survey asks respondents how they usually got to work last
 
 Average commute time, whether long or short, can be attributed to several factors. Long commute times can indicate a lack of job opportunities in an area, slow transit options, and a higher transportation cost burden on households and individuals. It can also negatively impact the community as it contributes to pollution [@harvard-commuting-productivity-2021].
 
-Putnam County consistently has the longest mean travel time to work (39 minutes) among the M-H Region and exceeds NYS. Westchester County (35 minutes) and Orange County (34 minutes) also exceeded NYS (33 minutes). The remaining counties in the M-H Region had commute times lower than NYS. [@fig-mean-time-work]
+Putnam County consistently has the longest mean travel time to work (39 minutes) among the M-H Region and exceeds NYS. Westchester County (35 minutes) and Orange County (34 minutes) also exceeded NYS (33 minutes). The remaining counties in the M-H Region had commute times lower than NYS. [@fig-mean-time-work] and [@tbl-mean-time-work].
 
 <!--Figure 25: "Average Commute Time to Work, 2023"-->
 {{< include _generated/objects/fig-mean-time-work.qmd >}}
