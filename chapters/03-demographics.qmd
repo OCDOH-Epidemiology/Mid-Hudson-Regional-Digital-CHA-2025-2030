@@ -85,6 +85,8 @@ The American Community Survey includes a question that intends to capture curren
 
 Throughout the M-H Region, adults aged 50 to 59 years made up the largest portion of the population (13.8%) [@tbl-age]. Children aged less than five years and five to nine years, as well as adults aged 40 to 49 years and 60 to 69 years, were similarly distributed throughout the M-H Region, with Ulster County having the greatest difference between adults aged 60 to 69 years and children less than five years old (14.4% vs 4.4%).
 
+{{< include _generated/objects/tbl-age.qmd >}}
+
 
 ::: {.callout-note collapse="true"}
 ## Source
@@ -157,6 +159,8 @@ The American Community Survey asks respondents to report whether they sometimes 
 ### Educational Attainment
 
 According to the *American Community Survey*, the base population for the educational attainment demographic category were people aged 25 years and older [@tbl-education-base]. Of this population, when looking at the M-H Region, NYS, and NYS excluding NYC, the largest portion of residents had a high school degree (22.4%, 24.6%, and 25.8%, respectively) [@tbl-education-base].
+
+{{< include _generated/objects/tbl-education-base.qmd >}}
 
 
 ::: {.callout-note collapse="true"}
