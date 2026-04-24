@@ -519,7 +519,7 @@ Within the M-H Region, the highest percentage of adults who did not receive medi
 <!--Table 17: Percentage of Adults Who Did Not Receive Medical Care Due to Cost, 2016,2018,2021-->
 {{< include _generated/objects/fig-medical-care-cost.qmd >}}
 
-{{< include _generated/objects/tbl-medical-care-cost.qmd >}}
+{{< include _generated/objects/tbl-adult-medical-care-cost.qmd >}}
 
 
 ::: {.callout-note collapse="true"}
