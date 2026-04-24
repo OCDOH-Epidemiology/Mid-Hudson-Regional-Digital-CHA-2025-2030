@@ -281,7 +281,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--include-source",
         choices=["true", "false"],
-        default="true",
+        default="false",
         help="Whether generated include files should render source callouts",
     )
     parser.add_argument(
