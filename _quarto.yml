@@ -15,6 +15,7 @@ book:
   subtitle: ""
   author: "Hudson Valley Public Health Collaborative"
   google-analytics: "G-Z90XTHLT7L"
+  downloads: [pdf]
   chapters:
     - index.qmd
     - chapters/00-acknowledgements.qmd
@@ -58,6 +59,8 @@ format:
     smooth-scroll: false
     fig-cap-location: top
     tbl-cap-location: top
+  pdf:
+    documentclass: report
 
 execute:
   freeze: false
