@@ -258,23 +258,23 @@ Cerebrovascular disease is a term for a series of conditions (such as stroke, br
 
 It is important to recognize the signs and symptoms of a stroke so action can be taken quickly. Signs of a stroke include numbness in the face or extremities, often on one side of the body; confusion or difficulty speaking; vision problems; loss of balance or lack of coordination; or a severe headache [@mayo-clinic-stroke-symptoms-causes-2024]. Some risk factors for a stroke include lifestyle behaviors such as a fatty diet, decreased physical activity, use of illicit drugs, drinking too much alcohol, and cigarette smoking, as well as medical conditions including high blood pressure, high cholesterol, and diabetes, other types of cardiovascular disease, and other factors such as family history and being aged 55 years and older [@cdc-stroke-risk-factors-2024].
 
-Recent data from 2019–2021 show that Sullivan County had the highest stroke hospitalization rate among the seven counties in the M-H Region, while Putnam had the lowest rate (23.6 and 14.7 per 10,000 population, respectively) see  [@fig-cerbrovasdz-hospital-aar].
+Recent data from 2019–2021 show that Sullivan County had the highest stroke hospitalization rate among the seven counties in the M-H Region, while Putnam had the lowest rate (23.6 and 14.7 per 10,000 population, respectively) see  [@fig-cerebrovasdz-hospital-aar].
 
 <!--Figure 101: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000, 2019–2021"-->
-{{< include _generated/objects/fig-cerbrovasdz-hospital-aar.qmd >}}
+{{< include _generated/objects/fig-cerebrovasdz-hospital-aar.qmd >}}
 
-{{< include _generated/objects/tbl-cerbrovasdz-hospital-aar.qmd >}}
+{{< include _generated/objects/tbl-cerebrovasdz-hospital-aar.qmd >}}
 
 ::: {.callout-note}
 Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
 :::
 
-When stratified by race and ethnicity, the age-adjusted cerebrovascular disease hospitalization rate per 10,000 from 2020–2022 shows that non-Hispanic Black adults had higher rates of stroke hospitalization compared to other racial and ethnic groups in the majority of the counties in the M-H Region, as well as in NYS and NYS excluding NYC. This excludes Putnam and Dutchess Counties, where non-Hispanic White adults had higher stroke hospitalization rates than Hispanics and non-Hispanic Blacks [@fig-cerbrovasdz-hospital-rande-aar].
+When stratified by race and ethnicity, the age-adjusted cerebrovascular disease hospitalization rate per 10,000 from 2020–2022 shows that non-Hispanic Black adults had higher rates of stroke hospitalization compared to other racial and ethnic groups in the majority of the counties in the M-H Region, as well as in NYS and NYS excluding NYC. This excludes Putnam and Dutchess Counties, where non-Hispanic White adults had higher stroke hospitalization rates than Hispanics and non-Hispanic Blacks [@fig-cerebrovasdz-hospital-rande-aar].
 
 <!--Figure 102: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
-{{< include _generated/objects/fig-cerbrovasdz-hospital-rande-aar.qmd >}}
+{{< include _generated/objects/fig-cerebrovasdz-hospital-rande-aar.qmd >}}
 
-{{< include _generated/objects/tbl-cerbrovasdz-hospital-rande-aar.qmd >}}
+{{< include _generated/objects/tbl-cerebrovasdz-hospital-rande-aar.qmd >}}
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -285,9 +285,9 @@ From 2018 to 2021, age-adjusted cerebrovascular disease mortality rates per 100,
 
 
 <!--Figure 103: "Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
-{{< include _generated/objects/fig-cerbrovasdz-mortal-aar.qmd >}}
+{{< include _generated/objects/fig-cerebrovasdz-mortal-aar.qmd >}}
 
-{{< include _generated/objects/tbl-cerbrovasdz-mortal-aar.qmd >}}
+{{< include _generated/objects/tbl-cerebrovasdz-mortal-aar.qmd >}}
 
 ::: {.callout-note}
 Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
@@ -296,9 +296,9 @@ Note: This indicator includes deaths with cerebrovascular disease as the primary
 When stratified by race and ethnicity, the age-adjusted cerebrovascular disease mortality rates per 100,000 population from 2020–2022 differ from county to county. However, the majority of counties in the M-H Region (as well as NYS and NYS excluding NYC) had higher rates of non-Hispanic Black adults who died from a stroke relative to non-Hispanic Whites and Hispanics. Ulster County is the lone exception, with the Hispanic adult population (31.2 per 100,000) having a higher rate of stroke mortality than non-Hispanic Whites (25.1 per 100,000) and non-Hispanic Blacks (23.1 per 100,000). It must be noted that the rate for non-Hispanic Blacks during this period is statistically unstable [see Figure 104].
 
 <!-- Figure 104: "Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022"-->
-{{< include _generated/objects/fig-cerbrovasdz-mortal-rande-aar.qmd >}}
+{{< include _generated/objects/fig-cerebrovasdz-mortal-rande-aar.qmd >}}
 
-{{< include _generated/objects/tbl-cerbrovasdz-mortal-rande-aar.qmd >}}
+{{< include _generated/objects/tbl-cerebrovasdz-mortal-rande-aar.qmd >}}
 
 ::: {.callout-note}
 *: The rate is unstable.
