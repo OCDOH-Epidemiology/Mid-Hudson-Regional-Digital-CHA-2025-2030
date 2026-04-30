@@ -1,11 +1,11 @@
-<!-- indicator: tbl-medicaid-1dental-visit-percent (fallback) -->
+<!-- indicator: tbl-medicaid-1dental-visit-percent -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: tbl-medicaid-1dental-visit-percent
-#| tbl-cap: 'Table showing Medicaid 1 dental visit percent.'
+#| tbl-cap: 'Percentage of Medicaid Enrollees with at least One Dental Visit Within The Last Year, 2021–2023'
 from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-medicaid-1dental-visit-percent", workbook_path=CHA_WORKBOOK_PATH)
 ```

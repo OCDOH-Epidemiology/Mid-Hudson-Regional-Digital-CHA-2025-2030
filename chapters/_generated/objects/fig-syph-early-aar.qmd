@@ -1,13 +1,12 @@
-<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+<!-- indicator: fig-syph-early-aar -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-syph-early-aar
-#| fig-cap: 'Syph Early Aar'
-#| fig-alt: 'Data visualization of Syph Early Aar.'
+#| fig-cap: 'Early Syphilis Incidence, Age-Adjusted Rate per 100,000 Population, 2017–2023'
+#| fig-alt: 'Data visualization showing Early Syphilis Incidence, Age-Adjusted Rate per 100,000 Population, 2017–2023.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-syph-early-aar", workbook_path=CHA_WORKBOOK_PATH).show()
 ```
-

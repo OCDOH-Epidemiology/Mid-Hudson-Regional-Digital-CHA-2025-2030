@@ -62,7 +62,7 @@ Vital Statistics of NYS, April 2025 https://apps.health.ny.gov/public/tabvis/PHI
 
 Premature death, or deaths occurring before age 65, is a measure of early mortality and a key indicator of population health, because it can be reduced through public health interventions and quality health care. Key factors contributing to premature death include behavioral risks such as poor diet, tobacco use, and physical inactivity; unintentional injuries such as drug overdoses and motor vehicle accidents; and health system and socioeconomic factors.
 
-In 2022, the percentage of deaths that were premature in the M-H Region (21%) was lower than in NYS (22%) and NYS excluding NYC (23.6%). Sullivan County had the highest percentage of premature deaths (28.8%), and Westchester County and Rockland County had the lowest (18.4% and 18.5%, respectively). Four counties in the region (Putnam, Rockland, Ulster, and Westchester) met the objective in the Prevention Agenda 2025–2030 of falling below 22.4% by 2030 see [@fig-premature-death-percent].
+In 2022, the percentage of deaths that were premature in the M-H Region (21%) was lower than in NYS (22%) and NYS excluding NYC (23.6%). Sullivan County had the highest percentage of premature deaths (28.8%), and Westchester County and Rockland County had the lowest (18.4% and 18.5%, respectively). Four counties in the region (Putnam, Rockland, Ulster, and Westchester) met the objective in the Prevention Agenda 2025–2030 of falling below 22.4% by 2030 [@fig-premature-death-percent].
 
 <!--Figure 86: "Percentage of Deaths That are Premature, 2019–2022"-->
 {{< include _generated/objects/fig-premature-death-percent.qmd >}}
@@ -113,7 +113,7 @@ Chronic Lower Respiratory Disease (CLRD) is a classification of diseases that af
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes for CLRD are: J40-J47.
 :::
 
-In 2020–2022, CLRD mortality rates varied across the region’s seven counties. Of the seven counties, Sullivan County had the highest CLRD mortality rate at 43.5 per 100,000 population, and Westchester County had the lowest rate at 17.3 per 100,000 population. The rate in the M-H Region was similar to the rate in NYS (22.8 vs 23.7 per 100,000 population, respectively) see [@fig-clrd-mortal-aar].
+In 2020–2022, CLRD mortality rates varied across the region’s seven counties. Of the seven counties, Sullivan County had the highest CLRD mortality rate at 43.5 per 100,000 population, and Westchester County had the lowest rate at 17.3 per 100,000 population. The rate in the M-H Region was similar to the rate in NYS (22.8 vs 23.7 per 100,000 population, respectively) [@fig-clrd-mortal-aar].
 
 <!--Figure 90: "Chronic Lower Respiratory Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2020–2022"-->
 {{< include _generated/objects/fig-clrd-mortal-aar.qmd >}}
@@ -242,7 +242,7 @@ As mentioned previously, hypertension is one of several risk factors for cardiov
 
 Steps to controlling high blood pressure include measuring blood pressure on a regular basis, maintaining a healthy weight, managing other health-related conditions such as diabetes, creating a care plan with your health care team, and taking blood pressure medications as prescribed by a physician [@cdc-high-blood-pressure-living-with-2024].
 
-From 2016 to 2021, the age-adjusted percentage of adults with physician-diagnosed hypertension decreased for most counties in the M-H Region, as well as across NYS as a whole and NYS excluding NYC. Exceptions include Putnam County, which increased from 21.1% in 2016 (the lowest in the region that year) to 27.9% in 2021 (the third highest in the region that year). Dutchess County experienced a more modest increase, from 27.5% in 2016 to 28.2% in 2021. Sullivan County experienced the greatest decrease from 2016 to 2021, changing from the county with the highest age-adjusted percentage of adults with physician-diagnosed high blood pressure in 2016 (31.7%) to the lowest in the region in 2021 (22.3%) see [@fig-adult-highbp-mddx-percent].
+From 2016 to 2021, the age-adjusted percentage of adults with physician-diagnosed hypertension decreased for most counties in the M-H Region, as well as across NYS as a whole and NYS excluding NYC. Exceptions include Putnam County, which increased from 21.1% in 2016 (the lowest in the region that year) to 27.9% in 2021 (the third highest in the region that year). Dutchess County experienced a more modest increase, from 27.5% in 2016 to 28.2% in 2021. Sullivan County experienced the greatest decrease from 2016 to 2021, changing from the county with the highest age-adjusted percentage of adults with physician-diagnosed high blood pressure in 2016 (31.7%) to the lowest in the region in 2021 (22.3%) [@fig-adult-highbp-mddx-percent].
 
 <!--Figure 100: "Age-Adjusted Percentage of Adults with Physician Diagnosed High Blood Pressure, 2016 and 2021"-->
 {{< include _generated/objects/fig-adult-highbp-mddx-percent.qmd >}}
@@ -258,7 +258,7 @@ Cerebrovascular disease is a term for a series of conditions (such as stroke, br
 
 It is important to recognize the signs and symptoms of a stroke so action can be taken quickly. Signs of a stroke include numbness in the face or extremities, often on one side of the body; confusion or difficulty speaking; vision problems; loss of balance or lack of coordination; or a severe headache [@mayo-clinic-stroke-symptoms-causes-2024]. Some risk factors for a stroke include lifestyle behaviors such as a fatty diet, decreased physical activity, use of illicit drugs, drinking too much alcohol, and cigarette smoking, as well as medical conditions including high blood pressure, high cholesterol, and diabetes, other types of cardiovascular disease, and other factors such as family history and being aged 55 years and older [@cdc-stroke-risk-factors-2024].
 
-Recent data from 2019–2021 show that Sullivan County had the highest stroke hospitalization rate among the seven counties in the M-H Region, while Putnam had the lowest rate (23.6 and 14.7 per 10,000 population, respectively) see  [@fig-cerebrovasdz-hospital-aar].
+Recent data from 2019–2021 show that Sullivan County had the highest stroke hospitalization rate among the seven counties in the M-H Region, while Putnam had the lowest rate (23.6 and 14.7 per 10,000 population, respectively) [@fig-cerebrovasdz-hospital-aar].
 
 <!--Figure 101: "Cerebrovascular Disease Hospitalization, Age-Adjusted Rate per 10,000, 2019–2021"-->
 {{< include _generated/objects/fig-cerebrovasdz-hospital-aar.qmd >}}
@@ -281,7 +281,7 @@ When stratified by race and ethnicity, the age-adjusted cerebrovascular disease 
 Note: Cerebrovascular disease is also known as stroke. The ICD-10 codes for cerebrovascular disease are: I60-I69.
 :::
 
-From 2018 to 2021, age-adjusted cerebrovascular disease mortality rates per 100,000 population remained relatively stable in counties in the M-H Region. Some counties experienced modest increases during this time. Orange County increased from 25.0 per 100,000 in 2018 to 26.0 per 100,000 in 2021, Westchester County increased from 21.6 per 100,000 in 2018 to 22.2 in 2021, and Putnam County increased from 20.1 per 100,000 in 2018 to 21.4 per 100,000 in 2021. Other counties experienced modest decreases during this time. Dutchess County decreased from 22.8 per 100,000 in 2018 to 21.8 per 100,000 in 2021, Rockland County decreased from 24.3 per 100,000 in 2018 to 23.1 per 100,000 in 2021, and Ulster County decreased from 26.1 per 100,000 in 2018 to 25.3 per 100,000 in 2021. The county that experienced the most significant decrease during this time was Sullivan County, which decreased from 26.2 per 100,000 in 2018 to 23.5 per 100,000 in 2021. Compared to the M-H Region, NYS and NYS excluding NYC both experienced larger increases in age-adjusted cerebrovascular disease mortality rates per 100,000 population from 2018–2021. NYS increased from 24.1 per 100,000 to 25.7 per 100,000 during the time period, and NYS excluding NYC increased from 27.3 per 100,000 to 28.7 per 100,000 during the time period see[@fig-cerbrovasdz-mortal-aar].
+From 2018 to 2021, age-adjusted cerebrovascular disease mortality rates per 100,000 population remained relatively stable in counties in the M-H Region. Some counties experienced modest increases during this time. Orange County increased from 25.0 per 100,000 in 2018 to 26.0 per 100,000 in 2021, Westchester County increased from 21.6 per 100,000 in 2018 to 22.2 in 2021, and Putnam County increased from 20.1 per 100,000 in 2018 to 21.4 per 100,000 in 2021. Other counties experienced modest decreases during this time. Dutchess County decreased from 22.8 per 100,000 in 2018 to 21.8 per 100,000 in 2021, Rockland County decreased from 24.3 per 100,000 in 2018 to 23.1 per 100,000 in 2021, and Ulster County decreased from 26.1 per 100,000 in 2018 to 25.3 per 100,000 in 2021. The county that experienced the most significant decrease during this time was Sullivan County, which decreased from 26.2 per 100,000 in 2018 to 23.5 per 100,000 in 2021. Compared to the M-H Region, NYS and NYS excluding NYC both experienced larger increases in age-adjusted cerebrovascular disease mortality rates per 100,000 population from 2018–2021. NYS increased from 24.1 per 100,000 to 25.7 per 100,000 during the time period, and NYS excluding NYC increased from 27.3 per 100,000 to 28.7 per 100,000 during the time period [@fig-cerbrovasdz-mortal-aar].
 
 
 <!--Figure 103: "Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
@@ -308,7 +308,7 @@ Note: This indicator includes deaths with cerebrovascular disease as the primary
 ### Coronary Heart Disease
 In the U.S., Coronary Heart Disease (CHD), also known as coronary artery disease, is the most common type of cardiovascular disease [@cdc-coronary-heart-disease-2021]. The buildup of plaque, deposits of fat, cholesterol, and other substances in the arteries that supply the heart cause CHD. This can lead to chest pain or discomfort (angina) or even a heart attack if the arteries become completely blocked. The good news is that you can do a lot to decrease your risk and prevent and manage CHD through healthy habits like eating well, being active, avoiding tobacco, and managing stress [@mayo-coronary-artery-disease-symptoms-causes-2024].
 
-Data from 2021 show that Sullivan County had the highest CHD hospitalization rate of the seven counties in the M-H Region, and Rockland had the lowest rate (28.9 and 14.6 per 10,000 population, respectively). However, the rate in the M-H Region as a whole was still lower than the rates in NYS and NYS excluding NYC (18.0 vs 20.2 and 20.1 per 10,000 population, respectively) see [@fig-coronary-heart-disease-hospital-aar].
+Data from 2021 show that Sullivan County had the highest CHD hospitalization rate of the seven counties in the M-H Region, and Rockland had the lowest rate (28.9 and 14.6 per 10,000 population, respectively). However, the rate in the M-H Region as a whole was still lower than the rates in NYS and NYS excluding NYC (18.0 vs 20.2 and 20.1 per 10,000 population, respectively) [@fig-coronary-heart-disease-hospital-aar].
 
 <!--Figure 105: "Coronary Heart Disease Hospitalization, Age-Adjusted Rate per 10,000, 2021"-->
 {{< include _generated/objects/fig-coronary-heart-disease-hospital-aar.qmd >}}
@@ -319,7 +319,7 @@ Data from 2021 show that Sullivan County had the highest CHD hospitalization rat
 Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
 :::
 
-When stratifying this data by race and ethnicity, trends are not consistent through each county. For example, non-Hispanic White adults had higher CHD hospitalization rates compared to the other racial/ethnic groups in Dutchess, Putnam, and Ulster Counties. In Rockland Asian and Pacific Islander adults had higher CHD hospitalization rates compart to other racial and ethnic groups. However, in the remaining counties, NYS excluding NYC, and NYS, non-Hispanic Black adults had higher CHD hospitalization rates except that Hispanics for the state had higher rates. see[@fig-coronary-heart-disease-hospital-rande-aar].
+When stratifying this data by race and ethnicity, trends are not consistent through each county. For example, non-Hispanic White adults had higher CHD hospitalization rates compared to the other racial/ethnic groups in Dutchess, Putnam, and Ulster Counties. In Rockland Asian and Pacific Islander adults had higher CHD hospitalization rates compart to other racial and ethnic groups. However, in the remaining counties, NYS excluding NYC, and NYS, non-Hispanic Black adults had higher CHD hospitalization rates except that Hispanics for the state had higher rates. [@fig-coronary-heart-disease-hospital-rande-aar].
 
 <!--Figure 106: "Coronary Heart Disease Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2021"-->
 {{< include _generated/objects/fig-coronary-heart-disease-hospital-rande-aar.qmd >}}
@@ -331,7 +331,7 @@ When stratifying this data by race and ethnicity, trends are not consistent thro
 s: Data are suppressed due to not meeting confidentiality criteria. Note: Three-year age-adjusted rates.
 :::
 
-When looking at recent data from 2021, the heart attack hospitalization rate was highest in Sullivan County (20 per 10,000 population). This rate was higher than rates in the M-H Region, NYS excluding NYC, and NYS (10.4, 12.0, and 10.9 per 10,000 population, respectively) see[@fig-heartattack-hospital-aar].
+When looking at recent data from 2021, the heart attack hospitalization rate was highest in Sullivan County (20 per 10,000 population). This rate was higher than rates in the M-H Region, NYS excluding NYC, and NYS (10.4, 12.0, and 10.9 per 10,000 population, respectively) [@fig-heartattack-hospital-aar].
 
 <!--Figure 107: "Heart Attack Hospitalization, Age-Adjusted Rate per 10,000, 2021"-->
 {{< include _generated/objects/fig-heartattack-hospital-aar.qmd >}}
@@ -342,7 +342,7 @@ When looking at recent data from 2021, the heart attack hospitalization rate was
 Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
 :::
 
-CHD mortality rates have overall increased from 2018 to 2021 in most M-H Region counties, with the exception of Putnam County. The rate in NYS excluding NYC stayed relatively constant, with an increase in 2020, before decreasing in 2021. Similarly, the rate in NYS overall saw an increase from 2019 to 2020, before decreasing in 2021. see[@fig-congheartfail-mortal-aar].
+CHD mortality rates have overall increased from 2018 to 2021 in most M-H Region counties, with the exception of Putnam County. The rate in NYS excluding NYC stayed relatively constant, with an increase in 2020, before decreasing in 2021. Similarly, the rate in NYS overall saw an increase from 2019 to 2020, before decreasing in 2021[@fig-congheartfail-mortal-aar].
 
 <!--Figure 108: "Coronary Heart Disease Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-congheartfail-mortal-aar.qmd >}}
@@ -365,7 +365,7 @@ include Chest pain or discomfort, light-headedness, cold sweat, pain or discomfo
 arms or shoulders [@cdc-heart-attack-about-2024].
 
 
-Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black adults had higher CHD mortality rates in Dutchess, Westchester, and Rockland counties, as well as NYS and NYS excluding NYC. In contrast, nonHispanic White adults had higher CHD mortality rates in Ulster and Sullivan Counties see[@fig-congheartfail-mortal-rande].
+Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black adults had higher CHD mortality rates in Dutchess, Westchester, and Rockland counties, as well as NYS and NYS excluding NYC. In contrast, nonHispanic White adults had higher CHD mortality rates in Ulster and Sullivan Counties [@fig-congheartfail-mortal-rande].
 
 <!--Figure 109: "Heart Attack Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2021"-->
 {{< include _generated/objects/fig-congheartfail-mortal-rande.qmd >}}
@@ -377,7 +377,7 @@ Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black
 :::
 
 
-From 2018-2021, heart attack mortality rates have been highest in Sullivan County and lowest in Westchester County. Dutchess County shows a steady increase, from 21.1 in 2018 to 28.7 in 2021 see[@fig-heartattack-mortal-aar].
+From 2018-2021, heart attack mortality rates have been highest in Sullivan County and lowest in Westchester County. Dutchess County shows a steady increase, from 21.1 in 2018 to 28.7 in 2021 [@fig-heartattack-mortal-aar].
 
 <!--Figure 110: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-heartattack-mortal-aar.qmd >}}
@@ -388,7 +388,7 @@ From 2018-2021, heart attack mortality rates have been highest in Sullivan Count
 Note: Three-year averages are used for counties, and single-year estimates are used for NYS excluding NYC, and NYS.
 :::
 
-When looking at congestive heart failure (CHF) mortality rates from 2018-2021, apart from some slight fluctuations, NYS excluding NYC has trended down from the two data points, while NYS slightly decrease in 2019 and 2020 and increase back in 2021. In the M-H Region, trends varied by county. Sullivan County experiences a slight increase in rate of 3.4 per 100,000, marking the county to be the highest in Congestive Heart Failure Mortality amongst the counties. Counties such as Orange, Putnam, and Westchester experienced decreases over the years, while the remaining counties experienced slight increase. see[@fig-congheartfail-mortal-aar-2].
+When looking at congestive heart failure (CHF) mortality rates from 2018-2021, apart from some slight fluctuations, NYS excluding NYC has trended down from the two data points, while NYS slightly decrease in 2019 and 2020 and increase back in 2021. In the M-H Region, trends varied by county. Sullivan County experiences a slight increase in rate of 3.4 per 100,000, marking the county to be the highest in Congestive Heart Failure Mortality amongst the counties. Counties such as Orange, Putnam, and Westchester experienced decreases over the years, while the remaining counties experienced slight increase [@fig-congheartfail-mortal-aar-2].
 
 <!--Figure 111: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-congheartfail-mortal-aar-2.qmd >}}
@@ -430,7 +430,7 @@ In 2021, diabetes hospitalization rates varied across the seven counties in the 
 Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
 :::
 
-When stratifying this data by race and ethnicity, diabetes hospitalization rates were highest among the nonHispanic Black population in NYS and NYS excluding NYC, along with five out of seven counties in the M-H Region. However, in Sullivan County, non-Hispanic White adults had the highest hospitalization rate (188.1 per 10,000 population). Dutchess and Putnam Non-Hispanic White adults had the highest hospitalization rates see [@fig-dm-hospital-rande-aar].
+When stratifying this data by race and ethnicity, diabetes hospitalization rates were highest among the nonHispanic Black population in NYS and NYS excluding NYC, along with five out of seven counties in the M-H Region. However, in Sullivan County, non-Hispanic White adults had the highest hospitalization rate (188.1 per 10,000 population). Dutchess and Putnam Non-Hispanic White adults had the highest hospitalization rates [@fig-dm-hospital-rande-aar].
 
 <!--Figure 114: "Diabetes Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2021"-->
 {{< include _generated/objects/fig-dm-hospital-rande-aar.qmd >}}
@@ -441,7 +441,7 @@ When stratifying this data by race and ethnicity, diabetes hospitalization rates
 Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
 :::
 
-To avoid the consequences of uncontrolled diabetes, many adults get their blood sugar tested by their medical provider. In 2021, the percentage of adults who had a test for high blood sugar or diabetes within the past three years was very similar across the M-H Region, with Rockland County the lowest at 45.4% and Putnam County the highest at 57.7%, as well as NYS and NYS excluding NYC. From 2013 to 2018, all seven counties, as well as NYS excluding NYC and NYS, had decreases in the percentage of adults who got their blood sugar tested, but by 2021, Orange, Putnam, Ulster, and Westchester had increases in adults testing for high blood sugar or diabetes [see @fig-highbs-dm-percent].
+To avoid the consequences of uncontrolled diabetes, many adults get their blood sugar tested by their medical provider. In 2021, the percentage of adults who had a test for high blood sugar or diabetes within the past three years was very similar across the M-H Region, with Rockland County the lowest at 45.4% and Putnam County the highest at 57.7%, as well as NYS and NYS excluding NYC. From 2013 to 2018, all seven counties, as well as NYS excluding NYC and NYS, had decreases in the percentage of adults who got their blood sugar tested, but by 2021, Orange, Putnam, Ulster, and Westchester had increases in adults testing for high blood sugar or diabetes [@fig-highbs-dm-percent].
 
 <!--Figure 115: "Diabetes Tested for High Blood Sugar or Diabetes, Age-Adjusted Percentage of Adults, 2013–2021"-->
 {{< include _generated/objects/fig-highbs-dm-percent.qmd >}}
@@ -453,7 +453,7 @@ Note: The percentage is age-adjusted. An adult is a person aged 18 years or olde
 :::
 
 From 2018 to 2021, diabetes mortality rates varied across the seven counties in the M-H Region. Sullivan County consistently experienced the highest rate in the M-H Region and was the only county to exceed both the NYS and NYS excluding NYC rates each year. Five out of the seven counties saw increases in the diabetes mortality rate
-from 2018 to 2021 see[@fig-dm-mortal-aar].
+from 2018 to 2021 [@fig-dm-mortal-aar].
 
 <!--Figure 116: "Diabetes Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-dm-mortal-aar.qmd >}}
@@ -464,7 +464,7 @@ from 2018 to 2021 see[@fig-dm-mortal-aar].
 Note: This indicator includes deaths with diabetes as the primary cause of death. The ICD-10 codes for diabetes are: E10-E14.
 :::
 
-When stratifying data by race and ethnicity, diabetes mortality rates were highest among the non-Hispanic Black population in NYS, NYS excluding NYC, and majority of counties in the M-H Region except Putnam and Ulster. The highest diabetes mortality rate among Non-Hispanic White in the M-H Region was Sullivan and lowest was Westchester [see @fig-dm-mortal-rande-aar].
+When stratifying data by race and ethnicity, diabetes mortality rates were highest among the non-Hispanic Black population in NYS, NYS excluding NYC, and majority of counties in the M-H Region except Putnam and Ulster. The highest diabetes mortality rate among Non-Hispanic White in the M-H Region was Sullivan and lowest was Westchester [@fig-dm-mortal-rande-aar].
 
 <!--Figure 117: "Diabetes Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2021"-->
 
@@ -481,7 +481,7 @@ Note: This indicator includes deaths with diabetes as the primary cause of death
 ### Obesity
 Obesity is a chronic and serious disease in which an individual’s weight is higher than what is considered healthy for their height. It poses substantial health risks across the population. For example, people with obesity are at greater risk of developing other conditions, including diabetes, heart disease, hypertension, cancer, and renal failure [@cdc-obesity-overview-2025]. At the same time, many factors that influence obesity are beyond individual control, including environmental and emotional factors such as stress. This disease is preventable and manageable through a moderate caloric deficit, regular physical activity, and ongoing consultation with a medical provider.
 
-In 2021, among the seven counties in the M-H Region, Orange County had the highest percentage of adults who were overweight or obese (75.1%), and Westchester County had the lowest (59.4%). The prevalence in NYS and NYS excluding NYC was 66.7% in both groups. Since 2013, Putnam County, NYS, and NYS excluding NYC had increases in the percentage of adults who were overweight or obese. Sullivan, Ulster, and Westchester Counties had decreases in the percentage of adults who were overweight or obese [see @fig-adult-oando-percent].
+In 2021, among the seven counties in the M-H Region, Orange County had the highest percentage of adults who were overweight or obese (75.1%), and Westchester County had the lowest (59.4%). The prevalence in NYS and NYS excluding NYC was 66.7% in both groups. Since 2013, Putnam County, NYS, and NYS excluding NYC had increases in the percentage of adults who were overweight or obese. Sullivan, Ulster, and Westchester Counties had decreases in the percentage of adults who were overweight or obese [@fig-adult-oando-percent].
 
 <!--Figure 118: "Adult Obesity, Age-Adjusted Percentage of Adults, 2013–2021"-->
 {{< include _generated/objects/fig-adult-oando-percent.qmd >}}
@@ -495,7 +495,7 @@ Note: The percentage is age-adjusted. An adult is a person aged 18 years or olde
 Obesity poses substantial health risks in the U.S. population because of its association with higher mortality, reduced life expectancy, and many chronic diseases. People with obesity are at greater risk of developing other conditions, including diabetes, heart disease, hypertension, cancer, and renal failure. Obesity is also costly: as of 2019, annual medical costs were $1,861 higher per person compared with people with normal weight [@cdc-adult-obesity-facts-2025]. Eating calorie-dense food without a corresponding increase in physical activity increases the risk of obesity. Many factors contribute to obesity, including stress, environmental conditions, and behavioral factors. Everyday stress can indirectly affect obesity by contributing to overconsumption of food, increased alcohol intake, and a less active lifestyle, which can result in weight gain [@sinha-jastreboff-stress-obesity-2013].
 
 
-Recent data show that more than 40% of adults aged 20 years and older in the U.S. are obese [@cdc-adult-obesity-facts-2025]. Comparing data from 2018 to 2021, there were changes in the percentage of the population with obesity in each M-H Region county [see @fig-adult-obese-percent]. Most counties experienced an increase, while one county experienced a decrease: Rockland (27.0% to 23.1%). In 2021, Orange County had the highest obesity rate across the seven counties at 38.5%, which was above both NYS and NYS excluding NYC (32.1% and 29.8%, respectively).
+Recent data show that more than 40% of adults aged 20 years and older in the U.S. are obese [@cdc-adult-obesity-facts-2025]. Comparing data from 2018 to 2021, there were changes in the percentage of the population with obesity in each M-H Region county [@fig-adult-obese-percent]. Most counties experienced an increase, while one county experienced a decrease: Rockland (27.0% to 23.1%). In 2021, Orange County had the highest obesity rate across the seven counties at 38.5%, which was above both NYS and NYS excluding NYC (32.1% and 29.8%, respectively).
 
 <!--Figure 119: "Adult Obesity, Age-Adjusted Percentage of Adults, 2018–2021"-->
 {{< include _generated/objects/fig-adult-obese-percent.qmd >}}
@@ -506,7 +506,7 @@ Recent data show that more than 40% of adults aged 20 years and older in the U.S
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "About how much do you weigh without shoes?" and "About how tall are you without shoes?" Based on the responses to these questions, Body Mass Index is calculated using the formula: weight in kilograms divided by height in meters squared (kg/m2). Respondents are classified as obese based on BMI 30.00 or higher. Respondents are classified as overweight based on BMI between 25.00 and 29.9.
 :::
 
-In 2007, the Student Weight Status Category Reporting System (SWSCRS) was established through amendments to NYS Education Law to help the state and counties address increasing rates of obesity among school-aged children. Looking at the combined prevalence of overweight and obesity among school-aged children from 2014 to 2023, trends were similar across counties. Westchester County had a slight decrease, while Sullivan and Ulster Counties had the highest percentages of students who were overweight or obese compared with the other M-H Region counties and NYS excluding NYC see[@fig-child-oando-percent].
+In 2007, the Student Weight Status Category Reporting System (SWSCRS) was established through amendments to NYS Education Law to help the state and counties address increasing rates of obesity among school-aged children. Looking at the combined prevalence of overweight and obesity among school-aged children from 2014 to 2023, trends were similar across counties. Westchester County had a slight decrease, while Sullivan and Ulster Counties had the highest percentages of students who were overweight or obese compared with the other M-H Region counties and NYS excluding NYC [@fig-child-oando-percent].
 
 <!--Figure 120: "Child Obesity, Age-Adjusted Percentage of Children, 2014–2023"-->
 {{< include _generated/objects/fig-child-oando-percent.qmd >}}
@@ -518,7 +518,7 @@ Note: Overweight is defined as a body mass index (BMI) at or above the 85th perc
 :::
 
 ### Cirrhosis of the Liver
-Cirrhosis occurs when scarring permanently damages the liver and hinders it from functioning normally. It can eventually lead to liver failure and other complications, such as liver cancer and an increased risk of infections [@niddk-cirrhosis-definition-facts-2023; see @fig-cirrhosis-hospital-aar]. Common causes of cirrhosis include alcohol-associated liver disease, nonalcoholic fatty liver disease, and chronic hepatitis C or hepatitis B infection. Early symptoms can vary widely. In some cases, there may be no symptoms until the liver is badly damaged. However, early symptoms can include itching of the skin, poor appetite, nausea, vomiting, and mild pain in the upper-right side of the abdomen. Later-stage symptoms can include bruising easily, edema, and jaundice [@niddk-cirrhosis-symptoms-causes-2023; see @fig-cirrhosis-mortal-aar].
+Cirrhosis occurs when scarring permanently damages the liver and hinders it from functioning normally. It can eventually lead to liver failure and other complications, such as liver cancer and an increased risk of infections [@niddk-cirrhosis-definition-facts-2023; @fig-cirrhosis-hospital-aar]. Common causes of cirrhosis include alcohol-associated liver disease, nonalcoholic fatty liver disease, and chronic hepatitis C or hepatitis B infection. Early symptoms can vary widely. In some cases, there may be no symptoms until the liver is badly damaged. However, early symptoms can include itching of the skin, poor appetite, nausea, vomiting, and mild pain in the upper-right side of the abdomen. Later-stage symptoms can include bruising easily, edema, and jaundice [@niddk-cirrhosis-symptoms-causes-2023; @fig-cirrhosis-mortal-aar].
 
 
 <!--Figure 121: "Cirrhosis Hospitalization, Age-Adjusted Rate per 10,000 Population, 2020–2022"-->
@@ -530,7 +530,7 @@ Cirrhosis occurs when scarring permanently damages the liver and hinders it from
 Note: The ICD-10 code for cirrhosis is: K70, K73-K74.
 :::
 
-Between 2014 and 2021, cirrhosis mortality rates fluctuated across M-H Region counties. Of note, Dutchess and Putnam Counties saw sharp increases in cirrhosis mortality rates between 2018 and 2021 see[@fig-cirrhosis-mortal-aar].
+Between 2014 and 2021, cirrhosis mortality rates fluctuated across M-H Region counties. Of note, Dutchess and Putnam Counties saw sharp increases in cirrhosis mortality rates between 2018 and 2021 [@fig-cirrhosis-mortal-aar].
 
 <!--Figure 122: "Cirrhosis Mortality, Age-Adjusted Rate per 100,000 Population, 2014–2021"-->
 {{< include _generated/objects/fig-cirrhosis-mortal-aar.qmd >}}
@@ -545,7 +545,7 @@ Note: Three-year averages are used for counties and single-year rates are used f
 ### Cancer
 Cancer is a disease in which cells in the body grow out of control and invade surrounding tissues. Cancer can metastasize, or spread, from one part of the body to another [@nci-what-is-cancer-2021]. Though the causes of cancer are complex, certain risk factors are associated with a higher chance of developing cancer, such as environmental exposures, health behaviors, and age. Examples include sunlight, radiation, infectious agents, obesity, alcohol, and tobacco [@nci-cancer-risk-factors-2015].
 
-Cancer is one of the leading causes of death across all seven counties in the M-H Region [@nysdoh-leading-causes-dashboard-2025]. From 2019 to 2021, incidence rates were relatively similar across the seven counties in the M-H Region, as well as NYS [see @fig-allca-incident-mortal-aar]. Putnam County had the highest incidence rate of the seven M-H Region counties at 483.6 cases per 100,000. Orange County had the highest mortality rate, with 156.4 deaths per 100,000 [see @fig-allca-incident-mortal-aar].
+Cancer is one of the leading causes of death across all seven counties in the M-H Region [@nysdoh-leading-causes-dashboard-2025]. From 2019 to 2021, incidence rates were relatively similar across the seven counties in the M-H Region, as well as NYS [@fig-allca-incident-mortal-aar]. Putnam County had the highest incidence rate of the seven M-H Region counties at 483.6 cases per 100,000. Orange County had the highest mortality rate, with 156.4 deaths per 100,000 [@fig-allca-incident-mortal-aar].
 
 <!--Figure 123: "All Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2019–2021"-->
 {{< include _generated/objects/fig-allca-incident-mortal-aar.qmd >}}
@@ -556,7 +556,7 @@ Cancer is one of the leading causes of death across all seven counties in the M-
 Note: Incidence rates of cancers are based on reports from hospitals and other health facilities that diagnose and treat cancer patients. These data include only invasive malignant tumors. For breast and prostate cancers, late-stage incidence rates are presented. "Late stage" is defined as all cancers that have spread beyond the organ of origin at the time of diagnosis.
 :::
 
-When all cancer incidence and mortality rates were stratified by sex, males had higher incidence and mortality rates than females in all seven counties, as well as NYS and NYS excluding NYC see[@fig-allca-incident-mortal-sex-aar].
+When all cancer incidence and mortality rates were stratified by sex, males had higher incidence and mortality rates than females in all seven counties, as well as NYS and NYS excluding NYC [@fig-allca-incident-mortal-sex-aar].
 
 <!--Figure 124: "All Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2019–2021"-->
 {{< include _generated/objects/fig-allca-incident-mortal-sex-aar.qmd >}}
@@ -570,7 +570,7 @@ Note: Cancer statistics are for invasive cancers only.
 ### Colorectal Cancer
 Colorectal cancer (sometimes called colon cancer) is a cancer that starts in the colon or rectum. Symptoms can include blood in the stool, changes in bowel habits, abdominal pain or aches, and unintentional weight loss [@cdc-colorectal-cancer-overview-2022]. However, colorectal cancer does not always cause symptoms. Most colorectal cancers begin as polyps. Polyps are abnormal growths that can form in the colon or rectum and may turn into cancer over time if they are not removed. Colorectal cancer screening can detect polyps so they can be removed, which can prevent colorectal cancer from developing [@cdc-colorectal-cancer-prevention-2025].
 
-Of the seven counties in the M-H Region, Sullivan County had the highest colorectal cancer incidence rate, closely followed by Ulster County (37.3 and 37.2 per 100,000 population, respectively). Orange County had the highest mortality rate in the region, followed by Sullivan County (13.6 and 13.4 per 100,000 population) [see @fig-colonrectca-incident-mortal-aar].
+Of the seven counties in the M-H Region, Sullivan County had the highest colorectal cancer incidence rate, closely followed by Ulster County (37.3 and 37.2 per 100,000 population, respectively). Orange County had the highest mortality rate in the region, followed by Sullivan County (13.6 and 13.4 per 100,000 population) [@fig-colonrectca-incident-mortal-aar].
 
 <!--Figure 125: "Colorectal Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2019–2021"-->
 {{< include _generated/objects/fig-colonrectca-incident-mortal-aar.qmd >}}
@@ -581,7 +581,7 @@ Of the seven counties in the M-H Region, Sullivan County had the highest colorec
 Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
 :::
 
-When stratifying by sex, males had higher colorectal cancer incidence rates across all seven counties in the M-H Region, with the exception of Putnam County, where females had a slightly higher incidence rate than males. Mortality rates were higher in males across all M-H Region counties, as well as in NYS and NYS excluding NYC [see @fig-colonrectca-incident-mortal-sex-aar].
+When stratifying by sex, males had higher colorectal cancer incidence rates across all seven counties in the M-H Region, with the exception of Putnam County, where females had a slightly higher incidence rate than males. Mortality rates were higher in males across all M-H Region counties, as well as in NYS and NYS excluding NYC [@fig-colonrectca-incident-mortal-sex-aar].
 
 <!--Figure 126: "Colorectal Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2019–2021"-->
 {{< include _generated/objects/fig-colonrectca-incident-mortal-sex-aar.qmd >}}
@@ -591,7 +591,7 @@ When stratifying by sex, males had higher colorectal cancer incidence rates acro
 Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
 :::
 
-When stratifying available data by race and ethnicity, rates differed in most counties. Non-Hispanic White populations had the highest rates of colorectal cancer in the seven counties in the M-H Region. This differed from NYS, where non-Hispanic Black populations had a slightly higher incidence than non-Hispanic White populations (36.5 and 36.4 cases per 100,000 population, respectively) [see @fig-colorectalca-incidence-rande-aar].
+When stratifying available data by race and ethnicity, rates differed in most counties. Non-Hispanic White populations had the highest rates of colorectal cancer in the seven counties in the M-H Region. This differed from NYS, where non-Hispanic Black populations had a slightly higher incidence than non-Hispanic White populations (36.5 and 36.4 cases per 100,000 population, respectively) [@fig-colorectalca-incidence-rande-aar].
 
 <!--Figure 127: "Colorectal Cancer Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2019–2021"-->
 {{< include _generated/objects/fig-colorectalca-incidence-rande-aar.qmd >}}
@@ -607,7 +607,7 @@ https://www.health.ny.gov/statistics/community/minority/county/
 
 The US Preventive Services Task Force recommends that adults aged 45 to 75 years receive regular screening for colorectal cancer [@uspstf-colorectal-cancer-screening-2021]. A colonoscopy, which uses a long, thin, flexible tube to check for polyps or cancer inside the entire colon, is one recommended screening method. Doctors can remove most polyps and some cancers during the procedure. Other screening tests include the guaiac-based fecal occult blood test (gFOBT), which uses a chemical called guaiac to detect blood in the stool, and the fecal immunochemical test (FIT), which uses antibodies to detect blood in the stool [@cdc-colorectal-cancer-screening-2025].
 
-The Healthy People 2030 target for the proportion of adults who get screened for colorectal cancer was 72.8% of adults aged 45 to 75. In 2018, Putnam County had the highest percentage of adults between 50 and 64 years who received colorectal cancer screening (86.3%). Sullivan County had the lowest percentage, with 58.8% of adults between 50 and 64 years receiving screening [see @fig-adult-50to64-colorectalca-screening-percent].
+The Healthy People 2030 target for the proportion of adults who get screened for colorectal cancer was 72.8% of adults aged 45 to 75. In 2018, Putnam County had the highest percentage of adults between 50 and 64 years who received colorectal cancer screening (86.3%). Sullivan County had the lowest percentage, with 58.8% of adults between 50 and 64 years receiving screening [@fig-adult-50to64-colorectalca-screening-percent].
 
 <!--Figure 128: "Adult Colorectal Cancer Screening, Age-Adjusted Percentage of Adults, 2018"-->
 {{< include _generated/objects/fig-adult-50to64-colorectalca-screening-percent.qmd >}}
@@ -621,7 +621,7 @@ Note: For colonoscopy and sigmoidoscopy, the Behavioral Risk Factor Surveillance
 ### Lung Cancer
 Lung cancer is the leading cause of cancer deaths among both males and females in the M-H Region and NYS. Some symptoms of lung cancer include chest pain, coughing (sometimes with blood), shortness of breath, and wheezing. The leading risk factor for lung cancer is tobacco use. According to the NYSDOH, smoking is responsible for over 80% of lung cancers [@nysdoh-lung-cancer-about-2025]. Another risk factor for lung cancer is radon exposure. Radon is a colorless, radioactive gas that comes from the decay of elements such as uranium, which is found in soil and rock [@acs-radon-exposure-2022]. Radon is present in surrounding air, but preventive measures can be taken, such as using radon detection kits. For smoking, preventive measures include abstaining, quitting, and avoiding exposure to secondhand smoke.
 
-From 2018 to 2022, the highest rates of lung cancer incidence were in Orange, Putnam, and Sullivan Counties (59.9, 57.6, and 62.9 per 100,000 population, respectively), which were higher than NYS but consistent with NYS excluding NYC (52.4 and 59.9 per 100,000 population, respectively) [see @fig-lungbronchca-incident-mortal-aar]. The Healthy People 2030 goal was to reduce lung cancer mortality to 25.1 deaths per 100,000 population. Only Westchester and Rockland Counties in the M-H Region met this target, and NYS and NYS excluding NYC are close to meeting it [see @fig-lungbronchca-incident-mortal-aar].
+From 2018 to 2022, the highest rates of lung cancer incidence were in Orange, Putnam, and Sullivan Counties (59.9, 57.6, and 62.9 per 100,000 population, respectively), which were higher than NYS but consistent with NYS excluding NYC (52.4 and 59.9 per 100,000 population, respectively) [@fig-lungbronchca-incident-mortal-aar]. The Healthy People 2030 goal was to reduce lung cancer mortality to 25.1 deaths per 100,000 population. Only Westchester and Rockland Counties in the M-H Region met this target, and NYS and NYS excluding NYC are close to meeting it [@fig-lungbronchca-incident-mortal-aar].
 
 <!--Figure 129: "Lung Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2022"-->
 {{< include _generated/objects/fig-lungbronchca-incident-mortal-aar.qmd >}}

@@ -1,13 +1,12 @@
-<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+<!-- indicator: fig-babesiosis -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-babesiosis
-#| fig-cap: 'Babesiosis'
-#| fig-alt: 'Data visualization of Babesiosis.'
+#| fig-cap: 'Babesiosis, Case Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Babesiosis, Case Rate per 100,000 Population, 2020–2023.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-babesiosis", workbook_path=CHA_WORKBOOK_PATH).show()
 ```
-

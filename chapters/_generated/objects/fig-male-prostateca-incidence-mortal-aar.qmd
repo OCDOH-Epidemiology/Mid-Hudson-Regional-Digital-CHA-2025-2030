@@ -1,13 +1,12 @@
-<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+<!-- indicator: fig-male-prostateca-incidence-mortal-aar -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-male-prostateca-incidence-mortal-aar
-#| fig-cap: 'Male Prostateca Incidence Mortal Aar'
-#| fig-alt: 'Data visualization of Male Prostateca Incidence Mortal Aar.'
+#| fig-cap: 'Prostate Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population Males, 2018–2022'
+#| fig-alt: 'Data visualization showing Prostate Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population Males, 2018–2022.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-male-prostateca-incidence-mortal-aar", workbook_path=CHA_WORKBOOK_PATH).show()
 ```
-

@@ -1,12 +1,12 @@
-<!-- indicator: fig-infant-mortal-rate (fallback) -->
+<!-- indicator: fig-infant-mortal-rate -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-infant-mortal-rate
-#| fig-cap: 'Infant mortal rate'
-#| fig-alt: 'Data visualization of Infant mortal rate.'
+#| fig-cap: 'Infant Mortality, Rate per 1,000 Live Births, 2014–2021'
+#| fig-alt: 'Data visualization showing Infant Mortality, Rate per 1,000 Live Births, 2014–2021.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-infant-mortal-rate", workbook_path=CHA_WORKBOOK_PATH).show()
 ```

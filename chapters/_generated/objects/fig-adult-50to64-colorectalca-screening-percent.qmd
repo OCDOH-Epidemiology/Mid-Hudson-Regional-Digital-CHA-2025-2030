@@ -1,13 +1,12 @@
-<!-- stub: add matching Object ID / Figure ID to workbook when data is ready -->
+<!-- indicator: fig-adult-50to64-colorectalca-screening-percent -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-adult-50to64-colorectalca-screening-percent
-#| fig-cap: 'Adult 50To64 Colorectalca Screening Percent'
-#| fig-alt: 'Data visualization of Adult 50To64 Colorectalca Screening Percent.'
+#| fig-cap: 'Percentage of Adults 50–64 Years Old Who Received a Colorectal Cancer Screening Based on the Most Recent Guidelines, 2018'
+#| fig-alt: 'Data visualization showing Percentage of Adults 50–64 Years Old Who Received a Colorectal Cancer Screening Based on the Most Recent Guidelines, 2018.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-adult-50to64-colorectalca-screening-percent", workbook_path=CHA_WORKBOOK_PATH).show()
 ```
-
