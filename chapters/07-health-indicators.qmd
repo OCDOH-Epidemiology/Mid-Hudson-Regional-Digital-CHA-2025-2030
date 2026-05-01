@@ -633,7 +633,7 @@ Note: The ICD-10 code for lung and bronchus cancer is: C34.
 :::
 
 
-When stratifying these data by sex, males had higher lung cancer incidence and mortality rates than females in all seven counties, as well as in NYS and NYS excluding NYC, with the largest disparity seen in Ulster County [@fig-lungbronchca-incident-mortal-sex-aar]. 
+When stratifying by sex, lung cancer incidence was mixed across the seven counties males had higher incidence in Orange, Ulster, and Westchester as well as in NYS and NYS excluding NYC. Females had higher incidence in Dutchess, Putnam, and Sullivan, with Rockland essentially equal [@fig-lungbronchca-incident-mortal-sex-aar]. 
 
 <!--Figure 130: "Lung Cancer Incidence and Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2018–2022"-->
 {{< include _generated/objects/fig-lungbronchca-incident-mortal-sex-aar.qmd >}}
