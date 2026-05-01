@@ -1,0 +1,12 @@
+<!-- indicator: fig-sc-impact-mhsu -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-sc-impact-mhsu
+#| fig-cap: 'The Impact of Mental Wellbeing & Substance Use in Sullivan County (n = 93)'
+#| fig-alt: 'Data visualization showing The Impact of Mental Wellbeing & Substance Use in Sullivan County (n = 93).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-sc-impact-mhsu", workbook_path=CHA_WORKBOOK_PATH).show()
+```

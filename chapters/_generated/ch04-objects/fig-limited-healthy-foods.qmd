@@ -1,0 +1,12 @@
+<!-- indicator: fig-limited-healthy-foods -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-limited-healthy-foods
+#| fig-cap: 'Percentage of Population with Limited Access to Healthy Foods, 2015 and 2019'
+#| fig-alt: 'Data visualization showing Percentage of Population with Limited Access to Healthy Foods, 2015 and 2019.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-limited-healthy-foods", workbook_path=CHA_WORKBOOK_PATH).show()
+```

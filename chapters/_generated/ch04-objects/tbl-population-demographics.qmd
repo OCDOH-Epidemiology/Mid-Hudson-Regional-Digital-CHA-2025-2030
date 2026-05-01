@@ -1,0 +1,11 @@
+<!-- indicator: tbl-population-demographics -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-population-demographics
+#| tbl-cap: 'Population Demographic Characteristics, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-population-demographics", workbook_path=CHA_WORKBOOK_PATH)
+```

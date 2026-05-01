@@ -1,0 +1,12 @@
+<!-- indicator: fig-mean-time-work -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-mean-time-work
+#| fig-cap: 'Mean Travel Time to Work, 2021–2023'
+#| fig-alt: 'Data visualization showing Mean Travel Time to Work, 2021–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-mean-time-work", workbook_path=CHA_WORKBOOK_PATH).show()
+```

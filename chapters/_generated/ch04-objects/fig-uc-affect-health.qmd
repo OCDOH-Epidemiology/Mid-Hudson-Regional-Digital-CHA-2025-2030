@@ -1,0 +1,12 @@
+<!-- indicator: fig-uc-affect-health -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-uc-affect-health
+#| fig-cap: 'Top Rated Issues That Affect Health in Ulster County (n = 73)'
+#| fig-alt: 'Data visualization showing Top Rated Issues That Affect Health in Ulster County (n = 73).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-uc-affect-health", workbook_path=CHA_WORKBOOK_PATH).show()
+```

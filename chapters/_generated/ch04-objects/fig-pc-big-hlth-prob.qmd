@@ -1,0 +1,12 @@
+<!-- indicator: fig-pc-big-hlth-prob -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pc-big-hlth-prob
+#| fig-cap: 'Biggest Health Problems in Populations Served, Putnam County (n = 128)'
+#| fig-alt: 'Data visualization showing Biggest Health Problems in Populations Served, Putnam County (n = 128).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pc-big-hlth-prob", workbook_path=CHA_WORKBOOK_PATH).show()
+```

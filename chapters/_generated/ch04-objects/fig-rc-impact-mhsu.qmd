@@ -1,0 +1,12 @@
+<!-- indicator: fig-rc-impact-mhsu -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-rc-impact-mhsu
+#| fig-cap: 'The Impact of Mental Wellbeing & Substance Use in Rockland County (n = 125)'
+#| fig-alt: 'Data visualization showing The Impact of Mental Wellbeing & Substance Use in Rockland County (n = 125).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-rc-impact-mhsu", workbook_path=CHA_WORKBOOK_PATH).show()
+```

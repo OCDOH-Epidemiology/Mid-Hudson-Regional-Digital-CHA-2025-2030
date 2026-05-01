@@ -1,0 +1,12 @@
+<!-- indicator: fig-childhood-food-insecurity -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-childhood-food-insecurity
+#| fig-cap: 'Percentage of Food Insecurty, Children 18 Years and Younger, 2020–2023'
+#| fig-alt: 'Data visualization showing Percentage of Food Insecurty, Children 18 Years and Younger, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-childhood-food-insecurity", workbook_path=CHA_WORKBOOK_PATH).show()
+```

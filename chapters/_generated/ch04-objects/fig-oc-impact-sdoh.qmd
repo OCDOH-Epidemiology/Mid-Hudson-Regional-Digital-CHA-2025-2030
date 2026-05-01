@@ -1,0 +1,12 @@
+<!-- indicator: fig-oc-impact-sdoh -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-oc-impact-sdoh
+#| fig-cap: 'The Impact of the Social Determinants of Health in Orange County (n = 160)'
+#| fig-alt: 'Data visualization showing The Impact of the Social Determinants of Health in Orange County (n = 160).'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-oc-impact-sdoh", workbook_path=CHA_WORKBOOK_PATH).show()
+```

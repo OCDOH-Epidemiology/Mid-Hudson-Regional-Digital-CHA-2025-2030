@@ -1,0 +1,12 @@
+<!-- indicator: fig-dc-pav -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-dc-pav
+#| fig-cap: 'Dutchess County Resident Prevention Agenda Priority Area Voting, 2025'
+#| fig-alt: 'Data visualization showing Dutchess County Resident Prevention Agenda Priority Area Voting, 2025.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-dc-pav", workbook_path=CHA_WORKBOOK_PATH).show()
+```

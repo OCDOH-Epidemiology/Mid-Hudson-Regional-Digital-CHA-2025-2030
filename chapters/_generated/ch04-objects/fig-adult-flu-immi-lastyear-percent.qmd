@@ -1,0 +1,12 @@
+<!-- indicator: fig-adult-flu-immi-lastyear-percent -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-adult-flu-immi-lastyear-percent
+#| fig-cap: 'Percentage of Adults with Flu Immunization in the Past Year,  2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults with Flu Immunization in the Past Year,  2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-adult-flu-immi-lastyear-percent", workbook_path=CHA_WORKBOOK_PATH).show()
+```

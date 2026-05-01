@@ -1,0 +1,12 @@
+<!-- indicator: fig-mental-health-providers -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-mental-health-providers
+#| fig-cap: 'Ratio of Residents to Mental Health Providers, 2021–2024'
+#| fig-alt: 'Data visualization showing Ratio of Residents to Mental Health Providers, 2021–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-mental-health-providers", workbook_path=CHA_WORKBOOK_PATH).show()
+```
