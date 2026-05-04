@@ -61,6 +61,8 @@ format:
     tbl-cap-location: top
   pdf:
     documentclass: report
+    include-in-header:
+      - includes/pdf-table-packages.tex
 
 execute:
   freeze: false

@@ -26,6 +26,7 @@ from scripts.cha_table_styling import (
     create_source_callout,
     style_cha_table,
 )
+from scripts.cha_pdf_tables import is_pdf_render, render_pdf_table_latex
 from scripts.workbook_loader import WorkbookModel, load_cha_workbook, _VALID_FORMAT_CODES, _as_text
 
 
@@ -273,10 +274,14 @@ def _rebuild_multiindex(df: pd.DataFrame) -> pd.DataFrame:
 def render_table_object(
     object_id: str,
     workbook_path: str | Path | None = None,
-) -> pd.io.formats.style.Styler:
+) -> Any:
+    from IPython.display import Latex
+
     model = _load_model(workbook_path)
     if object_id not in model.registry:
         placeholder = pd.DataFrame({"": [f"Table '{object_id}' not found in workbook."]})
+        if is_pdf_render():
+            return Latex(render_pdf_table_latex(object_id, placeholder))
         return style_cha_table(placeholder, has_multilevel_headers=False)
 
     record = model.registry[object_id]
@@ -289,6 +294,8 @@ def render_table_object(
     source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
     if table_spec.has_multilevel_headers:
         source_df = _rebuild_multiindex(source_df)
+    if is_pdf_render():
+        return Latex(render_pdf_table_latex(object_id, source_df))
     return style_cha_table(source_df, has_multilevel_headers=table_spec.has_multilevel_headers)
 
 
