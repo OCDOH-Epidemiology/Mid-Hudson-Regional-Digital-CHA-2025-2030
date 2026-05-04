@@ -10,8 +10,9 @@ from typing import Literal
 import pandas as pd
 
 TablePolicy = Literal["fit", "split"]
+ResolvedTablePolicy = Literal["fit", "split"]
 
-DEFAULT_TABLE_POLICY: TablePolicy = "fit"
+DEFAULT_TABLE_POLICY: Literal["auto", "fit", "split"] = "auto"
 
 # Per-table behavior overrides. Keep this map small and explicit.
 TABLE_POLICY_OVERRIDES: dict[str, TablePolicy] = {
@@ -34,14 +35,18 @@ def is_pdf_render() -> bool:
     return False
 
 
-def resolve_table_policy(table_id: str) -> TablePolicy:
-    """Resolve policy from explicit overrides and known-wide naming."""
+def _looks_like_overflow(df: pd.DataFrame) -> bool:
+    """Width-first overflow check for right-edge page overflow."""
+    return _estimate_table_width_units(df) > 92
+
+
+def resolve_table_policy(table_id: str, df: pd.DataFrame) -> ResolvedTablePolicy:
+    """Resolve policy from explicit overrides, then overflow detection."""
     if table_id in TABLE_POLICY_OVERRIDES:
         return TABLE_POLICY_OVERRIDES[table_id]
-    # Most race/ethnicity breakdown tables are wide.
-    if "-rande-" in table_id or table_id.endswith("-rande"):
-        return "split"
-    return DEFAULT_TABLE_POLICY
+    if DEFAULT_TABLE_POLICY in {"fit", "split"}:
+        return DEFAULT_TABLE_POLICY
+    return "split" if _looks_like_overflow(df) else "fit"
 
 
 def _flatten_columns_for_pdf(df: pd.DataFrame) -> pd.DataFrame:
@@ -58,26 +63,42 @@ def _flatten_columns_for_pdf(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _df_to_longtable_latex(df: pd.DataFrame) -> str:
-    return df.to_latex(
+    col_format = _column_format(df)
+    body = df.to_latex(
         index=False,
         na_rep="",
         longtable=True,
         escape=True,
+        column_format=col_format,
+    )
+    return "\n".join(
+        [
+            r"\begingroup",
+            r"\small",
+            r"\setlength{\tabcolsep}{3pt}",
+            r"\setlength{\LTleft}{0pt}",
+            r"\setlength{\LTright}{0pt}",
+            body,
+            r"\endgroup",
+        ]
     )
 
 
 def _df_to_fit_latex(df: pd.DataFrame) -> str:
+    col_format = _column_format(df)
     tabular = df.to_latex(
         index=False,
         na_rep="",
         longtable=False,
         escape=True,
+        column_format=col_format,
     )
     return "\n".join(
         [
             r"\begingroup",
             r"\setlength{\tabcolsep}{4pt}",
             r"\renewcommand{\arraystretch}{1.1}",
+            r"\small",
             r"\resizebox{\linewidth}{!}{%",
             tabular,
             r"}",
@@ -86,22 +107,76 @@ def _df_to_fit_latex(df: pd.DataFrame) -> str:
     )
 
 
-def _split_wide_columns(df: pd.DataFrame, max_columns_per_part: int = 6) -> list[pd.DataFrame]:
-    if len(df.columns) <= max_columns_per_part:
+def _column_width_units(series: pd.Series, header: str) -> int:
+    sample = series.head(20)
+    max_cell_len = 0
+    if not sample.empty:
+        lengths = sample.map(lambda value: len(str(value).strip()))
+        max_cell_len = int(lengths.max() if not lengths.empty else 0)
+    header_len = len(str(header).strip())
+    effective = max(header_len, max_cell_len)
+    # Cap contribution so one extreme value does not dominate.
+    effective = min(effective, 44)
+    # Include padding/border pressure.
+    return effective + 4
+
+
+def _estimate_table_width_units(df: pd.DataFrame) -> int:
+    if df.empty and len(df.columns) == 0:
+        return 0
+    width = 0
+    for col in df.columns:
+        width += _column_width_units(df[col], str(col))
+    return width
+
+
+def _split_wide_columns(df: pd.DataFrame, max_columns_per_part: int = 4) -> list[pd.DataFrame]:
+    if len(df.columns) <= max_columns_per_part and not _looks_like_overflow(df):
         return [df]
+
     first_col = df.columns[0]
     trailing = list(df.columns[1:])
-    chunk_size = max(1, max_columns_per_part - 1)
+    first_col_units = _column_width_units(df[first_col], str(first_col))
+    part_budget_units = 76
     parts: list[pd.DataFrame] = []
-    for idx in range(0, len(trailing), chunk_size):
-        subset = [first_col] + trailing[idx : idx + chunk_size]
-        parts.append(df[subset].copy())
-    return parts
+
+    current_cols: list[str] = [first_col]
+    current_units = first_col_units
+    for col in trailing:
+        col_units = _column_width_units(df[col], str(col))
+        would_overflow = (current_units + col_units) > part_budget_units
+        reached_col_cap = len(current_cols) >= max_columns_per_part
+        if len(current_cols) > 1 and (would_overflow or reached_col_cap):
+            parts.append(df[current_cols].copy())
+            current_cols = [first_col, col]
+            current_units = first_col_units + col_units
+            continue
+        current_cols.append(col)
+        current_units += col_units
+
+    if len(current_cols) > 1:
+        parts.append(df[current_cols].copy())
+
+    return parts or [df]
+
+
+def _column_format(df: pd.DataFrame) -> str:
+    """Use wrapping paragraph columns so long headers/cells break lines."""
+    col_count = len(df.columns)
+    if col_count <= 1:
+        return "p{0.95\\linewidth}"
+    first_col_width = 0.28
+    other_col_width = (0.95 - first_col_width) / max(1, col_count - 1)
+    other_col_width = max(0.12, other_col_width)
+    return "p{%.2f\\linewidth}%s" % (
+        first_col_width,
+        "".join([f"p{{{other_col_width:.2f}\\linewidth}}" for _ in range(col_count - 1)]),
+    )
 
 
 def render_pdf_table_latex(table_id: str, df: pd.DataFrame) -> str:
     table_df = _flatten_columns_for_pdf(df)
-    policy = resolve_table_policy(table_id)
+    policy = resolve_table_policy(table_id, table_df)
 
     if policy == "split":
         parts = _split_wide_columns(table_df)
