@@ -774,12 +774,12 @@ The NYSPA 2019-2024 target aimed to increase the percentage of 13-year-old adole
 
 The NYSPA 2025-2030 set an objective of 13-year-old adolescents with a complete HPV vaccine series at 28.7%. This objective is lower than the objective for the previous PA (37.4%). The change in objective reflects the change in the source of the denominator for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025-2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025-2030 PA indicator relative to the 2019-2024 PA.
 
-From 2019 to 2024, all counties in the M-H Region, as well as NYS and NYS excluding NYC, failed to meet the 28.7% objective. However, both NYS and NYS excluding NYC outperformed the M-H Region throughout the time period. Within the M-H Region, Westchester and Rockland Counties were the only counties to experience overall increases during the period; Westchester County increased from 19.6% in 2019 to 22.4% in 2024 (the highest rate in the region during the time period), and Rockland County increased from 15.1% in 2019 to 16.1% in 2024. The county that experienced the largest overall decrease during the period was Putnam County, with a decrease from 20.1% in 2019 to 14.5% in 2024 [@fig-13yo+-hpv-vaccine-complete-percent].
+From 2019 to 2024, all counties in the M-H Region, as well as NYS and NYS excluding NYC, failed to meet the 28.7% objective. However, both NYS and NYS excluding NYC outperformed the M-H Region throughout the time period. Within the M-H Region, Westchester and Rockland Counties were the only counties to experience overall increases during the period; Westchester County increased from 19.6% in 2019 to 22.4% in 2024 (the highest rate in the region during the time period), and Rockland County increased from 15.1% in 2019 to 16.1% in 2024. The county that experienced the largest overall decrease during the period was Putnam County, with a decrease from 20.1% in 2019 to 14.5% in 2024 [@fig-13yo-hpv-vaccine-complete-percent].
 
 <!--Figure 139: "Human Papillomavirus Immunization, Age-Adjusted Percentage of 13-Year-Olds, 2019–2024"-->
-{{< include _generated/objects/fig-13yo+-hpv-vaccine-complete-percent.qmd >}}
+{{< include _generated/objects/fig-13yo-hpv-vaccine-complete-percent.qmd >}}
 
-{{< include _generated/objects/tbl-13yo+-hpv-vaccine-complete-percent.qmd >}}
+{{< include _generated/objects/tbl-13yo-hpv-vaccine-complete-percent.qmd >}}
 
 ::: {.callout-note}
 Note: Refers to human papillomavirus vaccines. Two doses are required for those starting the series between the ages of 9 and 14 years old.
@@ -803,9 +803,9 @@ Note: The percentage is age-adjusted. An adult is a person aged 18 years or olde
 In NYS, 66.8% of those aged 65 years and older received a flu immunization in 2021 [see Figure 141]. Dutchess County had the highest percentage of individuals aged 65 years and older who received a flu vaccine (76.0%), while Sullivan County had the lowest flu vaccine coverage (48.3%). From 2018 to 2021, the percentage of adults aged 65 years and older who received a flu vaccine increased in all seven counties in the M-H Region, as well as in NYS excluding NYC and NYS.
 
 <!--Figure 141: "Flu Immunization, Age-Adjusted Percentage of Adults Aged 65 Years and Older, 2018–2021"-->
-{{< include _generated/objects/fig-65+-flu-immi-percent.qmd >}}
+{{< include _generated/objects/fig-65-flu-immi-percent.qmd >}}
 
-{{< include _generated/objects/tbl-65+-flu-immi-percent.qmd >}}
+{{< include _generated/objects/tbl-65-flu-immi-percent.qmd >}}
 
 ::: {.callout-note}
 *: Unreliable crude rate due to large standard error.
@@ -813,12 +813,12 @@ Note: An adult is a person aged 65 years or older. The Behavioral Risk Factor Su
 :::
 
 ### Pneumonia Immunization
-Pneumococcal disease is caused by a type of bacteria that can lead to pneumonia, meningitis, and bacteremia. Pneumococcal bacteria are spread through droplets in the air from someone who coughs or sneezes. While pneumococcal disease is more common in children, it is more likely to cause serious complications in adults [@hhs-pneumonia-immunization-2022]. Healthy choices, such as quitting smoking and managing chronic illnesses, can also help prevent pneumonia. The CDC recommends two pneumococcal vaccines for adults aged 65 years and older. In 2021, Putnam County had the highest percentage of adults aged 65 years and older vaccinated (75.7%), while Sullivan County had the lowest percentage (44.6%). From 2018 to 2021, Orange, Putnam, Rockland, and Ulster Counties increased their percentages. However, in that same time period, Dutchess, Sullivan, and Westchester Counties saw decreases in their percentages [@fig-65+-pneumo-immi-percent].
+Pneumococcal disease is caused by a type of bacteria that can lead to pneumonia, meningitis, and bacteremia. Pneumococcal bacteria are spread through droplets in the air from someone who coughs or sneezes. While pneumococcal disease is more common in children, it is more likely to cause serious complications in adults [@hhs-pneumonia-immunization-2022]. Healthy choices, such as quitting smoking and managing chronic illnesses, can also help prevent pneumonia. The CDC recommends two pneumococcal vaccines for adults aged 65 years and older. In 2021, Putnam County had the highest percentage of adults aged 65 years and older vaccinated (75.7%), while Sullivan County had the lowest percentage (44.6%). From 2018 to 2021, Orange, Putnam, Rockland, and Ulster Counties increased their percentages. However, in that same time period, Dutchess, Sullivan, and Westchester Counties saw decreases in their percentages [@fig-65-pneumo-immi-percent].
 
 <!--Figure 142: "Pneumonia Immunization, Age-Adjusted Percentage of Adults Aged 65 Years and Older, 2018–2021"-->
-{{< include _generated/objects/fig-65+-pneumo-immi-percent.qmd >}}
+{{< include _generated/objects/fig-65-pneumo-immi-percent.qmd >}}
 
-{{< include _generated/objects/tbl-65+-pneumo-immi-percent.qmd >}}
+{{< include _generated/objects/tbl-65-pneumo-immi-percent.qmd >}}
 
 ::: {.callout-note}
 *: Crude rate is unreliable due to large standard error.
@@ -1080,12 +1080,12 @@ The pregnancy rate in teens aged 15 to 19 years decreased statewide and in each 
 Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths.
 :::
 
-There are racial and ethnic disparities in teen pregnancy, with non-Hispanic Black teens experiencing the highest rates of teen pregnancy in Sullivan and Dutchess Counties, as well as in NYS. Hispanic teens had the highest teen pregnancy rates in Orange, Putnam, Rockland, and Ulster Counties. Non-Hispanic White teens experienced the lowest teen pregnancy rate in NYS and in each M-H Region county [@fig-17+-teenpreg-rande-rate].
+There are racial and ethnic disparities in teen pregnancy, with non-Hispanic Black teens experiencing the highest rates of teen pregnancy in Sullivan and Dutchess Counties, as well as in NYS. Hispanic teens had the highest teen pregnancy rates in Orange, Putnam, Rockland, and Ulster Counties. Non-Hispanic White teens experienced the lowest teen pregnancy rate in NYS and in each M-H Region county [@fig-17-teenpreg-rande-rate].
 
 <!--Figure 157: "Teen Pregnancy, Rate per 1,000 Female Population 17 Years Old and Younger by Race and Ethnicity, 2020–2022"-->
-{{< include _generated/objects/fig-17+-teenpreg-rande-rate.qmd >}}
+{{< include _generated/objects/fig-17-teenpreg-rande-rate.qmd >}}
 
-{{< include _generated/objects/tbl-17+-teenpreg-rande-rate.qmd >}}
+{{< include _generated/objects/tbl-17-teenpreg-rande-rate.qmd >}}
 
 ::: {.callout-note}
 *: Data are unstable due to fewer than 10 events in the numerator.

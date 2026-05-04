@@ -181,7 +181,7 @@ This flattened trend is evident in the M-H Region, where in most counties the nu
 Note: This indicator includes people who were admitted to an OASAS-certified substance use disorder treatment program. A person is counted once if they were in treatment (received one or more services) during the calendar year. A unique person may receive multiple services or be in treatment for many years and, therefore, may be counted uniquely across one or more calendar years. Totals cannot be summed across years/rows because they are not mutually exclusive. The most recent data collected for the year of enrollment was used to determine the person's county of residence during the reported year. Any opioid use includes heroin use.
 :::
 
-From 2019 to 2022, the rate of overdose deaths involving any opioid steadily increased across most counties in the M-H Region, as well as in NYS and NYS excluding NYC. In 2022, the highest rate was in Sullivan County and the lowest rate was in Rockland County (61.5 and 12.9 per 100,000 population, respectively) [@fig-OD-anyopioid-crude].
+From 2019 to 2022, the rate of overdose deaths involving any opioid steadily increased across most counties in the M-H Region, as well as in NYS and NYS excluding NYC. In 2022, the highest rate was in Sullivan County and the lowest rate was in Rockland County (61.5 and 12.9 per 100,000 population, respectively) [@fig-od-anyopioid-crude].
 
 <!--Figure 174: "Overdose Deaths Involving Any Opioid, Crude Rate per 100,000 Population, 2019–2022 "-->
 {{< include _generated/objects/fig-OD-anyopioid-crude.qmd >}}
@@ -193,7 +193,7 @@ From 2019 to 2022, the rate of overdose deaths involving any opioid steadily inc
 Note: Includes poisoning deaths involving any opioid, all manners, using all causes of death.
 :::
 
-[@fig-OD-multiple-opioid-aar] shows the rate of overdose deaths in 2022 stratified by the type of opioid used. The highest rate of overdose deaths in all counties was caused by opioid pain relievers. Synthetic opioids other than methadone were a close second.
+[@fig-od-multiple-opioid-aar] shows the rate of overdose deaths in 2022 stratified by the type of opioid used. The highest rate of overdose deaths in all counties was caused by opioid pain relievers. Synthetic opioids other than methadone were a close second.
 
 <!--Figure 175: "Overdose Deaths Involving Opioid Pain Relievers, Heroin, and Synthetic
 Opioids Other than Methadone, Age-Adjusted Rate per 100,000 Population,

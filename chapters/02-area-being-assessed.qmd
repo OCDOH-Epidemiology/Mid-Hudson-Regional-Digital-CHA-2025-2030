@@ -26,7 +26,7 @@ and many highways make travel easy for commuters. Major industries
 include healthcare, education, retail, and government. Tourism is a
 major economic driver with extensive parklands, historic landmarks,
 arts, culture, shopping, and recreational activities. There are over 40
-colleges and universities leading to a highly educated workforce [@tbl-education].
+colleges and universities leading to a highly educated workforce [@tbl-educational-attainment].
 
 ### Dutchess County
 
