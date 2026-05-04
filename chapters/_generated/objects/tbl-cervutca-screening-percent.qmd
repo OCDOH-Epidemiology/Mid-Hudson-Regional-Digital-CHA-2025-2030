@@ -1,21 +1,11 @@
-<!-- stub: add matching Object ID to workbook when data is ready -->
+<!-- indicator: tbl-cervutca-screening-percent -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: tbl-cervutca-screening-percent
-#| tbl-cap: 'Table showing Cervutca Screening Percent.'
+#| tbl-cap: 'Percentage of Women 21–65 Years Old Receiving Cervical Cancer Screening Based on Most Recent Guidelines, 2018'
 from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-cervutca-screening-percent", workbook_path=CHA_WORKBOOK_PATH)
 ```
-
-```{python}
-#| echo: false
-#| warning: false
-#| message: false
-from IPython.display import Markdown, display
-from scripts.cha_registry_renderer import render_source_callout_for_object
-display(Markdown(render_source_callout_for_object("tbl-cervutca-screening-percent", CHA_WORKBOOK_PATH)))
-```
-
