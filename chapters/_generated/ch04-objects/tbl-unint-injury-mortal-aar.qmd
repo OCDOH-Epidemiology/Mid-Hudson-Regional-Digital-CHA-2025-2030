@@ -5,7 +5,7 @@
 #| warning: false
 #| message: false
 #| label: tbl-unint-injury-mortal-aar
-#| tbl-cap: 'Unintentional Injury Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021'
+#| tbl-cap: 'Unintentional Injury Mortality, Age–Adjusted Rate per 100,000 Population, 2018–2021'
 from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-unint-injury-mortal-aar", workbook_path=CHA_WORKBOOK_PATH)
 ```

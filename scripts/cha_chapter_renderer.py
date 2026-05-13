@@ -153,6 +153,13 @@ def _yaml_single_quoted(text: str) -> str:
     return "'" + text.replace("'", "''") + "'"
 
 
+def _normalize_caption_dashes(caption: str) -> str:
+    """
+    Normalize caption punctuation to use en dashes.
+    """
+    return caption.replace("-", "–")
+
+
 def _default_fig_alt(caption: str) -> str:
     """
     Derive a reasonable default alt text from the figure caption.
@@ -166,14 +173,15 @@ def _default_fig_alt(caption: str) -> str:
 
 
 def _render_figure_block(figure_id: str, caption: str, workbook_var: str) -> str:
+    normalized_caption = _normalize_caption_dashes(caption)
     return (
         "```{python}\n"
         "#| echo: false\n"
         "#| warning: false\n"
         "#| message: false\n"
         f"#| label: {figure_id}\n"
-        f"#| fig-cap: {_yaml_single_quoted(caption)}\n"
-        f"#| fig-alt: {_yaml_single_quoted(_default_fig_alt(caption))}\n"
+        f"#| fig-cap: {_yaml_single_quoted(normalized_caption)}\n"
+        f"#| fig-alt: {_yaml_single_quoted(_default_fig_alt(normalized_caption))}\n"
         "from scripts.cha_registry_renderer import render_figure_object\n"
         f"render_figure_object(figure_id=\"{figure_id}\", workbook_path={workbook_var}).show()\n"
         "```"
@@ -181,13 +189,14 @@ def _render_figure_block(figure_id: str, caption: str, workbook_var: str) -> str
 
 
 def _render_table_block(table_id: str, caption: str, workbook_var: str) -> str:
+    normalized_caption = _normalize_caption_dashes(caption)
     return (
         "```{python}\n"
         "#| echo: false\n"
         "#| warning: false\n"
         "#| message: false\n"
         f"#| label: {table_id}\n"
-        f"#| tbl-cap: {_yaml_single_quoted(caption)}\n"
+        f"#| tbl-cap: {_yaml_single_quoted(normalized_caption)}\n"
         "from scripts.cha_registry_renderer import render_table_object\n"
         f"render_table_object(object_id=\"{table_id}\", workbook_path={workbook_var})\n"
         "```"
