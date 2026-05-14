@@ -26,6 +26,42 @@ function replaceOnce(contents, before, after, label) {
 function patchSearchRuntime(contents) {
   let updated = contents;
 
+  const highlightBefore = `  // highlight matches on the page
+  if (query && mainEl) {
+    // perform any highlighting
+    highlight(escapeRegExp(query), mainEl);
+
+    // fix up the URL to remove the q query param
+    const replacementUrl = new URL(window.location);
+    replacementUrl.searchParams.delete(kQueryArg);
+    window.history.replaceState({}, "", replacementUrl);
+  }`;
+
+  const highlightAfter = `  // highlight matches on the page
+  if (query && mainEl) {
+    // perform any highlighting
+    highlight(escapeRegExp(query), mainEl);
+
+    // CHA PATCH: jump directly to first highlighted hit in the loaded page.
+    // This ensures search clicks land on the actual matching text.
+    const firstMatch = mainEl.querySelector("mark");
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ block: "center", inline: "nearest" });
+    }
+
+    // fix up the URL to remove the q query param
+    const replacementUrl = new URL(window.location);
+    replacementUrl.searchParams.delete(kQueryArg);
+    window.history.replaceState({}, "", replacementUrl);
+  }`;
+
+  updated = replaceOnce(
+    updated,
+    highlightBefore,
+    highlightAfter,
+    "scroll to first highlighted match"
+  );
+
   const reshapeBefore = `          const firstItem = value[0];
             reshapedItems.push({
               ...firstItem,

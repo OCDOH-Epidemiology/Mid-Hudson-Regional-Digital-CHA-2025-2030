@@ -47,6 +47,13 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
     // perform any highlighting
     highlight(escapeRegExp(query), mainEl);
 
+    // CHA PATCH: jump directly to first highlighted hit in the loaded page.
+    // This ensures search clicks land on the actual matching text.
+    const firstMatch = mainEl.querySelector("mark");
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ block: "center", inline: "nearest" });
+    }
+
     // fix up the URL to remove the q query param
     const replacementUrl = new URL(window.location);
     replacementUrl.searchParams.delete(kQueryArg);
