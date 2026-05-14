@@ -35,7 +35,7 @@ if not CHA_WORKBOOK_PATH.exists():
 
 ### Population
 
-In 2023, New York State’s (NYS) population was nearly 20 million. When excluding New York City (NYC), the population was 11,356,117. The Mid-Hudson Region (M-H) Region made up 12.1% of NYS’ population and includes the seven counties of Dutchess, Orange, Putnam, Rockland, Sullivan, Ulster, and Westchester. Westchester County comprised the largest portion of the M-H Region’s population at 41.6%, while Sullivan County made up only 3.3% of the M-H Region’s population [@tbl-population-demographics].
+In 2023, New York State’s (NYS) population was nearly 20 million. When excluding New York City (NYC), the population was 11,356,117. The Mid-Hudson (M-H) Region made up 12.1% of NYS’ population and includes the seven counties of Dutchess, Orange, Putnam, Rockland, Sullivan, Ulster, and Westchester. Westchester County comprised the largest portion of the M-H Region’s population at 41.6%, while Sullivan County made up only 3.3% of the M-H Region’s population [@tbl-population-demographics].
 
 The population of the M-H Region grew 4.7% from 2010 to 2020. In those 10 years, growth increased most rapidly in Rockland (7.9%) and Orange (7.1%). Putnam (-2.1%), and Ulster (-0.4%) had negative growth [@us-census-decennial-population-2025].
 

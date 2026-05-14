@@ -7,6 +7,8 @@ project:
   pre-render:
     - python3 scripts/generate_chapter_objects.py --chapter "chapters/04-Social and Physical Determinants of Health.qmd" --output-dir "chapters/_generated/objects" --strict-refs
     - python3 scripts/generate_chapter_objects.py --chapter "chapters/07-health-indicators.qmd" --output-dir "chapters/_generated/objects" --strict-refs
+  post-render:
+    - node scripts/patch_quarto_search.js
 
 lang: en
 

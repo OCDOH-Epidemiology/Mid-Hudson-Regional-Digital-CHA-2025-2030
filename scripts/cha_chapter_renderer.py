@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+import re
 from typing import Iterable
 
 from scripts.workbook_loader import WorkbookModel, load_cha_workbook
@@ -155,9 +156,13 @@ def _yaml_single_quoted(text: str) -> str:
 
 def _normalize_caption_dashes(caption: str) -> str:
     """
-    Normalize caption punctuation to use en dashes.
+    Normalize caption punctuation to use en dashes only for numeric ranges.
     """
-    return caption.replace("-", "–")
+    return re.sub(
+        r"(?<![A-Za-z0-9_/-])(\d{1,4})\s*-\s*(\d{1,4})(?![-A-Za-z0-9_/])",
+        r"\1–\2",
+        caption,
+    )
 
 
 def _default_fig_alt(caption: str) -> str:

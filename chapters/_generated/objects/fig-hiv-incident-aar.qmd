@@ -5,8 +5,8 @@
 #| warning: false
 #| message: false
 #| label: fig-hiv-incident-aar
-#| fig-cap: 'Newly Diagnosed HIV, Age–Adjusted Case Rate per 100,000 Population, 2014–2021'
-#| fig-alt: 'Data visualization showing Newly Diagnosed HIV, Age–Adjusted Case Rate per 100,000 Population, 2014–2021.'
+#| fig-cap: 'Newly Diagnosed HIV, Age-Adjusted Case Rate per 100,000 Population, 2014–2021'
+#| fig-alt: 'Data visualization showing Newly Diagnosed HIV, Age-Adjusted Case Rate per 100,000 Population, 2014–2021.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-hiv-incident-aar", workbook_path=CHA_WORKBOOK_PATH).show()
 ```

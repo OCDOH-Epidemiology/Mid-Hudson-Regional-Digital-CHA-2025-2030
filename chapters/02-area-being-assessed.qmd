@@ -14,7 +14,7 @@ communities [@tbl-ethnicity and @tbl-race]. The M-H Region, like the nation, is
 aging with the fastest growing demographic, those being over 60 years
 old.
 
-The M-H region borders NYC and New Jersey to the south; New Jersey and
+The M-H Region borders NYC and New Jersey to the south; New Jersey and
 Pennsylvania to the west; Greene and Columbia counties to the north; and
 Massachusetts and Connecticut to the east. See map in [Appendix
 A](12-Appendices.qmd#sec-appendix-a-map). The Region is a topically diverse

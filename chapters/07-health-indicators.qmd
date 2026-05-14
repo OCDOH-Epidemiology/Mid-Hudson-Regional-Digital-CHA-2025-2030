@@ -29,13 +29,13 @@ if not CHA_WORKBOOK_PATH.exists():
     )
 ```
 
-Health indicators are specific and measurable data points used to describe the health of a community, its major health concerns, and the factors that can influence health outcomes. The indicators included in this assessment cover several broad categories that reflect the health of the M-H Region. By looking at health status and outcomes, social determinants of health, and health care access, the assessment provides a more complete picture of health. These data can be used to create actionable and effective strategies to improve the health and well-being of the entire M-H Region.
+Health indicators are specific and measurable data points used to describe the health of a community, its major health concerns, and the factors that can influence health outcomes. The indicators included in this assessment cover several broad categories that reflect the health of the M-H Region. By looking at health status and outcomes, social determinants of health, and health care access, the assessment provides a more complete picture of health. These data can be used to create actionable and effective strategies to improve the health and well-being of the entire Mid-Hudson (M-H) Region.
 
 The following subsections under Health Indicators provide more specific details about diseases affecting the population in the M-H Region. For some county-level indicators, three-year averages were used for greater stability. If a single year is posted for a three-year average, the years averaged include the year preceding and the year following. For example, if the single year shown is 2020, the three-year average is from 2019–2022.
 
 ## Mortality
 
-Before discussing health indicators in the M-H Region, it is useful to understand the overall burden of disease facing residents in these seven counties. Morbidity measures illness and is defined in terms of incidence or prevalence. Incidence is the number of new cases of a disease divided by the number of people at risk over a particular period. Prevalence is the total number of cases of disease in a population during a specific period or at a particular point in time. Mortality is another term for death. A mortality rate is the number of deaths due to a disease during a particular period divided by the total population.
+Before discussing health indicators in the Mid-Hudson (M-H) Region, it is useful to understand the overall burden of disease facing residents in these seven counties. Morbidity measures illness and is defined in terms of incidence or prevalence. Incidence is the number of new cases of a disease divided by the number of people at risk over a particular period. Prevalence is the total number of cases of disease in a population during a specific period or at a particular point in time. Mortality is another term for death. A mortality rate is the number of deaths due to a disease during a particular period divided by the total population.
 
 [@tbl-five-lead-death-aar] lists the top five causes of mortality in the M-H Region counties, as well as NYS and NYS excluding New York City (NYC).
 
@@ -377,7 +377,7 @@ Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black
 :::
 
 
-From 2018-2021, heart attack mortality rates have been highest in Sullivan County and lowest in Westchester County. Dutchess County shows a steady increase, from 21.1 in 2018 to 28.7 in 2021 [@fig-heartattack-mortal-aar].
+From 2018–2021, heart attack mortality rates have been highest in Sullivan County and lowest in Westchester County. Dutchess County shows a steady increase, from 21.1 in 2018 to 28.7 in 2021 [@fig-heartattack-mortal-aar].
 
 <!--Figure 110: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-heartattack-mortal-aar.qmd >}}
@@ -388,7 +388,7 @@ From 2018-2021, heart attack mortality rates have been highest in Sullivan Count
 Note: Three-year averages are used for counties, and single-year estimates are used for NYS excluding NYC, and NYS.
 :::
 
-When looking at congestive heart failure (CHF) mortality rates from 2018-2021, apart from some slight fluctuations, NYS excluding NYC has trended down from the two data points, while NYS slightly decrease in 2019 and 2020 and increase back in 2021. In the M-H Region, trends varied by county. Sullivan County experiences a slight increase in rate of 3.4 per 100,000, marking the county to be the highest in Congestive Heart Failure Mortality amongst the counties. Counties such as Orange, Putnam, and Westchester experienced decreases over the years, while the remaining counties experienced slight increase [@fig-congheartfail-mortal-aar-2].
+When looking at congestive heart failure (CHF) mortality rates from 2018–2021, apart from some slight fluctuations, NYS excluding NYC has trended down from the two data points, while NYS slightly decrease in 2019 and 2020 and increase back in 2021. In the M-H Region, trends varied by county. Sullivan County experiences a slight increase in rate of 3.4 per 100,000, marking the county to be the highest in Congestive Heart Failure Mortality amongst the counties. Counties such as Orange, Putnam, and Westchester experienced decreases over the years, while the remaining counties experienced slight increase [@fig-congheartfail-mortal-aar-2].
 
 <!--Figure 111: "Congestive Heart Failure Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-congheartfail-mortal-aar-2.qmd >}}
@@ -514,7 +514,7 @@ In 2007, the Student Weight Status Category Reporting System (SWSCRS) was establ
 {{< include _generated/objects/tbl-child-oando-percent.qmd >}}
 
 ::: {.callout-note}
-Note: Overweight is defined as a body mass index (BMI) at or above the 85th percentile and below the 95th percentile. Obesity is defined as BMI greater than or equal to the 95th percentile. Counties outside NYC: grades pre-K, K, 2nd, 4th, 7th, and 10th prior to the 2019-2020 school year; grades pre-K, K, 1st, 3rd, 5th, 7th, 9th, and 11th starting with the 2019-2020 school year; data collected over two school years. Due to changes in Student Weight Status Category Reporting System data collection during the 2019-2020 school year, estimates from the 2019-2021 school years may not be directly comparable to previous school years.
+Note: Overweight is defined as a body mass index (BMI) at or above the 85th percentile and below the 95th percentile. Obesity is defined as BMI greater than or equal to the 95th percentile. Counties outside NYC: grades pre-K, K, 2nd, 4th, 7th, and 10th prior to the 2019–2020 school year; grades pre-K, K, 1st, 3rd, 5th, 7th, 9th, and 11th starting with the 2019–2020 school year; data collected over two school years. Due to changes in Student Weight Status Category Reporting System data collection during the 2019–2020 school year, estimates from the 2019–2021 school years may not be directly comparable to previous school years.
 :::
 
 ### Cirrhosis of the Liver
@@ -734,9 +734,9 @@ Infectious diseases are illnesses caused by disease-causing organisms that often
 #### Childhood Immunization
 The Advisory Committee on Immunization Practices (ACIP) recommends that children receive several routine childhood vaccinations by two years of age [@cdc-acip-vaccine-recommendations-2025]. The combined 4:3:1:3:3:1:4 vaccine series consists of four doses of diphtheria, tetanus, and acellular pertussis (DTaP); three doses of polio; one dose of measles, mumps, and rubella (MMR); three doses of Haemophilus influenzae type b (Hib); three doses of hepatitis B (HepB); one dose of varicella; and four doses of pneumococcal conjugate vaccine (PCV). Appropriate vaccination coverage is linked to improved health outcomes and cost savings. Complying with age-appropriate receipt of vaccines is critical to providing maximum effectiveness against vaccine-preventable diseases.
 
-NYSPA 2025-2030 set an objective for 62.3% of the 24- to 35-month-old population to complete the series. This objective is lower than the objective for the previous PA (70.5%). The change in objective reflects a change in the denominator source for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025-2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025-2030 PA indicator relative to the 2019-2024 PA.
+NYSPA 2025–2030 set an objective for 62.3% of the 24- to 35-month-old population to complete the series. This objective is lower than the objective for the previous PA (70.5%). The change in objective reflects a change in the denominator source for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025–2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025–2030 PA indicator relative to the 2019–2024 PA.
 
-Rates for most counties in the M-H Region, as well as for NYS and NYS excluding NYC, continued to stay below the 62.3% objective from 2019 through 2024. Exceptions include Putnam County, which exceeded the objective for 2022-2024 (with the highest percentages in the M-H Region overall), as well as Dutchess and Ulster Counties, which exceeded the objective in 2024.
+Rates for most counties in the M-H Region, as well as for NYS and NYS excluding NYC, continued to stay below the 62.3% objective from 2019 through 2024. Exceptions include Putnam County, which exceeded the objective for 2022–2024 (with the highest percentages in the M-H Region overall), as well as Dutchess and Ulster Counties, which exceeded the objective in 2024.
 
 Most counties in the M-H Region, as well as NYS and NYS excluding NYC, displayed an overall upward trend from 2019 to 2024. Rockland and Sullivan Counties were exceptions to this trend, with Rockland County experiencing a decrease from 37.4% in 2019 to 36.8% in 2024, and Sullivan County experiencing a decrease from 48.6% in 2019 to 48.1% in 2024. Rockland County had the lowest percentages in the region throughout the entire time period, reaching its lowest percentage in 2023 (32.2%). By contrast, Putnam County experienced the largest increase in the region during this time period, from 59.2% in 2019 to 66.2% in 2024 [@fig-24to35mo-child-vaccine-series-percent].
 
@@ -752,7 +752,7 @@ Note: Refers to the standard series of vaccinations recommended for children by 
 ### COVID-19
 COVID-19 is a contagious respiratory disease caused by the SARS-CoV-2 virus, which spreads readily from person to person through respiratory droplets. The development and administration of COVID-19 vaccines has played a part in preventing severe illness, hospitalization, and death. With the shift away from the pandemic emergency phase, COVID-19 surveillance and public health messaging are increasingly integrated with other common respiratory illnesses, such as influenza and RSV, to create a more unified seasonal approach. The pandemic highlighted persistent health vulnerabilities and inequities within communities that require ongoing assessment.
 
-COVID-19 mortality significantly declined from the beginning of the pandemic in 2020 to the most recent data in 2022 for the M-H Region, NYS excluding NYC, and NYS [@fig-covid-mort-aar]. This general decline was also seen in each M-H county. There was a consistent decline over the three-year period except in Dutchess, Sullivan, and Ulster Counties. These counties had an increase in mortality rates between 2020 and 2021 before a decline in 2022.
+COVID-19 mortality significantly declined from the beginning of the pandemic in 2020 to the most recent data in 2022 for the Mid-Hudson (M-H) Region, NYS excluding NYC, and NYS [@fig-covid-mort-aar]. This general decline was also seen in each M-H County. There was a consistent decline over the three-year period except in Dutchess, Sullivan, and Ulster Counties. These counties had an increase in mortality rates between 2020 and 2021 before a decline in 2022.
 
 
 <!--Figure 138: "COVID-19 Mortality, Age-Adjusted Rate per 100,000 Population, 2020–2022"-->
@@ -770,9 +770,9 @@ In the U.S., HPV is the most common sexually transmitted infection (STI). More t
 
 While HPV can often go away on its own without causing health problems, it can lead to conditions such as genital warts and cervical cancer. There is no way to know which people with HPV will develop cancer or other health problems. The Centers for Disease Control and Prevention (CDC) recommends adolescents aged 11 to 12 years get two doses of HPV vaccine to protect against cancers caused by HPV. Other actions individuals can take to lower their risk of HPV include screening for cervical cancer, using latex condoms during sex, and limiting the number of sexual partners.
 
-The NYSPA 2019-2024 target aimed to increase the percentage of 13-year-old adolescents completing the HPV vaccine series by 10%, which translates to 37.4% statewide [@nysdoh-prevention-agenda-2019-2024-comm-2021]. In 2024, Westchester County had the highest percentage of adolescents aged 13 years with a complete HPV vaccine series (22.4%), while Ulster County and Putnam County had the lowest percentage (14.5%) [@fig-cervutca-screening-percent]. The NYSPA objective was not met.
+The NYSPA 2019–2024 target aimed to increase the percentage of 13-year-old adolescents completing the HPV vaccine series by 10%, which translates to 37.4% statewide [@nysdoh-prevention-agenda-2019-2024-comm-2021]. In 2024, Westchester County had the highest percentage of adolescents aged 13 years with a complete HPV vaccine series (22.4%), while Ulster County and Putnam County had the lowest percentage (14.5%) [@fig-cervutca-screening-percent]. The NYSPA objective was not met.
 
-The NYSPA 2025-2030 set an objective of 13-year-old adolescents with a complete HPV vaccine series at 28.7%. This objective is lower than the objective for the previous PA (37.4%). The change in objective reflects the change in the source of the denominator for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025-2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025-2030 PA indicator relative to the 2019-2024 PA.
+The NYSPA 2025–2030 set an objective of 13-year-old adolescents with a complete HPV vaccine series at 28.7%. This objective is lower than the objective for the previous PA (37.4%). The change in objective reflects the change in the source of the denominator for this indicator. In the previous PA, the denominator for this indicator was based on census data; in the 2025–2030 indicator, the denominator is based on NYSIIS data. The use of the NYSIIS denominator caused all rates to decrease for the 2025–2030 PA indicator relative to the 2019–2024 PA.
 
 From 2019 to 2024, all counties in the M-H Region, as well as NYS and NYS excluding NYC, failed to meet the 28.7% objective. However, both NYS and NYS excluding NYC outperformed the M-H Region throughout the time period. Within the M-H Region, Westchester and Rockland Counties were the only counties to experience overall increases during the period; Westchester County increased from 19.6% in 2019 to 22.4% in 2024 (the highest rate in the region during the time period), and Rockland County increased from 15.1% in 2019 to 16.1% in 2024. The county that experienced the largest overall decrease during the period was Putnam County, with a decrease from 20.1% in 2019 to 14.5% in 2024 [@fig-13yo-hpv-vaccine-complete-percent].
 
@@ -883,7 +883,7 @@ and this is reflected in decreased incidence rates in 2020 and 2021 [@nysdoh-sti
 In 2023, chlamydia incidence rates rose for every county in the M-H Region as compared to 2022. Putnam and
 Westchester Counties are notable for having the lowest (237 per 100,000 population) and highest rates (446
 per 100,000 population), respectively, with Westchester’s incidence far exceeding the regional rate (387 per
-100,000 population). Looking longitudinally from 2017-2023, chlamydia rates peaked in the region in 2019,
+100,000 population). Looking longitudinally from 2017–2023, chlamydia rates peaked in the region in 2019,
 dropped in 2020 due to pandemic impacts on screening, and then resumed an upward trend [@fig-chlamy-incident-aar].
 
 <!--Figure 145: "Chlamydia Incident Rate, Age-Adjusted Rate per 100,000 Population, 2017–2023"-->
@@ -1010,7 +1010,7 @@ Prenatal care is health care received from medical providers during pregnancy, i
 
 One Healthy People 2030 objective is to increase the proportion of pregnant women who receive early and adequate prenatal care. The target is to increase the percentage of pregnant women who begin prenatal care in the first trimester to 80.5% [@hp2030-early-adequate-prenatal-mich-08-2025].
 
-From 2014 to 2021, there were no marked changes in the percentage of women who received early prenatal care in the M-H Region. In 2021, Sullivan County had the lowest percentage of women who received early prenatal care (61.3%), and Putnam County had the highest percentage (84.0%) [@fig-early-pnc-percent]. In all M-H counties except Rockland County, there was a slight increase in the percentage of women receiving late or no prenatal care from 2014 to 2021 [@fig-late-no-pnc-percent].
+From 2014 to 2021, there were no marked changes in the percentage of women who received early prenatal care in the M-H Region. In 2021, Sullivan County had the lowest percentage of women who received early prenatal care (61.3%), and Putnam County had the highest percentage (84.0%) [@fig-early-pnc-percent]. In all M-H Counties except Rockland County, there was a slight increase in the percentage of women receiving late or no prenatal care from 2014 to 2021 [@fig-late-no-pnc-percent].
 
 <!--Figure 151: "Percentage of Births with Early Prenatal Care, 2014–2021"-->
 {{< include _generated/objects/fig-early-pnc-percent.qmd >}}
@@ -1157,7 +1157,7 @@ Note: Low birth weight includes babies weighing less than 2.5 kg (5 pounds, 8 ou
 #### Infant Mortality
 Infant mortality is the death of an infant before their first birthday. It is an important indicator of maternal and infant health, as well as the overall health of a society [@cdc-infant-mortality-2024]. The five leading causes of infant mortality in the U.S. in 2018 were birth defects, preterm birth and low birthweight, injuries, sudden infant death syndrome, and maternal pregnancy complications. The risk of infant mortality can be reduced by increasing access to high-quality care and community-based interventions.
 
-One Healthy People 2030 objective is to reduce the rate of all infant deaths to no more than 5 infant deaths per 1,000 live births [@hp2030-reduce-infant-deaths-mich-02-2025]. All counties in the M-H Region, as well as NYS overall and NYS excluding NYC, met or surpassed this goal in 2021, with infant mortality rates at or below 5.0 per 1,000 live births. Sullivan and Ulster Counties had the highest infant mortality rates (5.0 and 4.8 deaths per 1,000 live births, respectively), while Putnam and Rockland Counties had the lowest rates (2.6 and 2.9 deaths per 1,000, respectively). From 2014 to 2021, all M-H counties except Sullivan saw a decrease in infant mortality, though Ulster County’s infant mortality rate rose from 2019 to 2021 [@fig-infant-mortal-rate].
+One Healthy People 2030 objective is to reduce the rate of all infant deaths to no more than 5 infant deaths per 1,000 live births [@hp2030-reduce-infant-deaths-mich-02-2025]. All counties in the M-H Region, as well as NYS overall and NYS excluding NYC, met or surpassed this goal in 2021, with infant mortality rates at or below 5.0 per 1,000 live births. Sullivan and Ulster Counties had the highest infant mortality rates (5.0 and 4.8 deaths per 1,000 live births, respectively), while Putnam and Rockland Counties had the lowest rates (2.6 and 2.9 deaths per 1,000, respectively). From 2014 to 2021, all M-H Counties except Sullivan saw a decrease in infant mortality, though Ulster County’s infant mortality rate rose from 2019 to 2021 [@fig-infant-mortal-rate].
 
 <!--Figure 162: "Infant Mortality, Rate per 1,000 Live Births, 2014–2021"-->
 {{< include _generated/objects/fig-infant-mortal-rate.qmd >}}
@@ -1193,7 +1193,7 @@ The most common barriers to good oral health include financial barriers, geograp
 Compared to the overall population of Medicaid enrollees, those aged 2 to 20 years were more likely to visit a dentist within the last year. NYS excluding NYC had a higher percentage of all Medicaid enrollees who had a dental visit within the last year compared to NYS (30.2% and 29.5%, respectively). Of the seven counties in the M-H Region, Rockland had the highest percentage of all enrollees (45.5%) and those aged 2 to 20 years (64.4%) who had a dental visit within the past year. Six out of seven counties exceeded the NYS rate for all enrollees, as well as for enrollees aged 2 to 20 years having a dental visit within the past year [@fig-medicaid-1dental-visit-percent].
 
 
-<!--Figure 164: "Percentage of Medicaid Enrollees with at least One Dental Visit Within The Last Year, 2021-2023"-->
+<!--Figure 164: "Percentage of Medicaid Enrollees with at least One Dental Visit Within The Last Year, 2021–2023"-->
 {{< include _generated/objects/fig-medicaid-1dental-visit-percent.qmd >}}
 
 {{< include _generated/objects/tbl-medicaid-1dental-visit-percent.qmd >}}

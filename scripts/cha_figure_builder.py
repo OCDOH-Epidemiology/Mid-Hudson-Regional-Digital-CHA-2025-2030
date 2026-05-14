@@ -108,6 +108,32 @@ def _y_range(values: pd.Series, start_at_zero: bool, padding: float, is_bar_grap
     return [lower, upper]
 
 
+def _y_axis_tick_settings(values: pd.Series) -> dict[str, object]:
+    """
+    Prefer whole-number y-axis ticks unless decimals are needed to show
+    tight-range variation.
+    """
+    numeric = pd.to_numeric(values, errors="coerce").dropna()
+    if numeric.empty:
+        return {}
+
+    integer_like = (numeric.sub(numeric.round()).abs() < 1e-9).all()
+    if integer_like:
+        return {"dtick": 1, "tickformat": ",.0f"}
+
+    span = float(numeric.max() - numeric.min())
+    # For broader ranges, keep whole-number ticks even if values include decimals.
+    if span >= 4:
+        return {"dtick": 1, "tickformat": ",.0f"}
+
+    half_step_like = (numeric.mul(2).sub(numeric.mul(2).round()).abs() < 1e-9).all()
+    if half_step_like:
+        return {"dtick": 0.5, "tickformat": ",.1f"}
+
+    # Fallback for tight ranges with non-half-step decimals.
+    return {"tickformat": ",.1f"}
+
+
 def _coerce_year_axis(values: pd.Series | pd.DataFrame) -> tuple[pd.Series, dict[str, object]]:
     """
     Detect year-like X values and return numeric years + integer tick settings.
@@ -339,11 +365,8 @@ def build_clustered_bar_figure(
     y_values = df[ordered].to_numpy().flatten()
     y_series = pd.Series(y_values)
     y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
-    y_max = float(y_series.max()) if not y_series.empty else 0.0
 
     # Match CHA clustered-bar visual style used in report templates.
-    # Small-range percent charts read best with integer ticks.
-    dtick = 1 if y_max <= 20 else None
     x_title_text = "" if str(x_axis_title).strip().lower() == "county" else x_axis_title
     _apply_layout(
         fig=fig,
@@ -355,6 +378,7 @@ def build_clustered_bar_figure(
         font_family=font_family,
         is_bar_graph=True,
     )
+    y_tick_settings = _y_axis_tick_settings(y_series)
     fig.update_layout(
         barmode="group",
         bargap=0.30,
@@ -375,9 +399,9 @@ def build_clustered_bar_figure(
         margin=dict(l=80, r=40, t=40, b=min(360, bottom_margin + 85)),
     )
     fig.update_yaxes(
-        dtick=dtick,
         gridcolor="rgba(0, 0, 0, 0.15)",
         zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **y_tick_settings,
     )
     fig.update_xaxes(
         tickangle=0,
@@ -436,7 +460,8 @@ def build_stacked_bar_figure(
         )
 
     totals = df[ordered].sum(axis=1)
-    y_range = _y_range(pd.Series(totals), start_at_zero, y_padding, is_bar_graph=True)
+    y_series = pd.Series(totals)
+    y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
     _apply_layout(
         fig=fig,
         x_axis_title=x_axis_title,
@@ -451,6 +476,7 @@ def build_stacked_bar_figure(
         barmode="stack",
         margin=dict(l=80, r=200, t=40, b=min(320, bottom_margin + 20)),
     )
+    fig.update_yaxes(**_y_axis_tick_settings(y_series))
     fig.update_xaxes(
         tickangle=0,
         automargin=True,
@@ -574,7 +600,8 @@ def build_simple_bar_figure(
     )
 
     y_values = pd.to_numeric(df[y_col], errors="coerce")
-    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding, is_bar_graph=True)
+    y_series = pd.Series(y_values)
+    y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
     _apply_layout(
         fig=fig,
         x_axis_title=x_axis_title,
@@ -589,6 +616,7 @@ def build_simple_bar_figure(
         barmode="group",
         margin=dict(l=80, r=40, t=40, b=min(300, bottom_margin + 20)),
     )
+    fig.update_yaxes(**_y_axis_tick_settings(y_series))
     fig.update_xaxes(
         tickangle=0,
         automargin=True,
@@ -661,6 +689,7 @@ def build_horizontal_bar_figure(
         range=x_range,
         gridcolor="rgba(0, 0, 0, 0.15)",
         zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **_y_axis_tick_settings(plot_df[value_col]),
     )
     fig.update_yaxes(
         title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
@@ -747,7 +776,8 @@ def build_interactive_line_figure(
         )
 
     y_values = df[ordered].to_numpy().flatten()
-    y_range = _y_range(pd.Series(y_values), start_at_zero, y_padding)
+    y_series = pd.Series(y_values)
+    y_range = _y_range(y_series, start_at_zero, y_padding)
 
     _apply_layout(
         fig=fig,
@@ -758,6 +788,7 @@ def build_interactive_line_figure(
         height=height,
         font_family=font_family,
     )
+    fig.update_yaxes(**_y_axis_tick_settings(y_series))
     if x_axis_options:
         fig.update_xaxes(**x_axis_options)
     elif is_categorical_x:

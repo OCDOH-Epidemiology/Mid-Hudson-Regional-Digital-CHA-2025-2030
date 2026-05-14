@@ -63,7 +63,7 @@ Nutrition has a significant impact on health, and diet is one of the most powerf
 
 The Dietary Guidelines for Americans recommends following a healthy eating pattern across the lifespan, focusing on variety, nutrient density, and amount of food; limiting foods higher in added sugars, saturated fats, and sodium; shifting to healthier food and beverage choices; and supporting healthy eating patterns for all [@dietary-guidelines-2020-2025]. To meet these guidelines, it is important that fruits and vegetables are accessible and affordable.
 
-From 2016 to 2021, all counties in the M-H Region, as well as NYS excluding NYC and NYS, saw an increase in the percentage of adults who reported eating less than one fruit or vegetable a day. Dutchess County and Rockland County had the highest percentages of adults who reported consuming less than one fruit and less than one vegetable a day (39.2% and 35.1%, respectively) see [@fig-brfss-fruit-veg].
+From 2016 to 2021, all counties in the Mid-Hudson (M-H) Region, as well as NYS excluding NYC and NYS, saw an increase in the percentage of adults who reported eating less than one fruit or vegetable a day. Dutchess County and Rockland County had the highest percentages of adults who reported consuming less than one fruit and less than one vegetable a day (39.2% and 35.1%, respectively) see [@fig-brfss-fruit-veg].
 
 <!--Figure 84: "Percentage of Adults Who Reported Eating Less Than One Fruit or Vegetable a Day, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-brfss-fruit-veg.qmd >}}

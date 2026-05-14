@@ -36,7 +36,7 @@ if not CHA_WORKBOOK_PATH.exists():
 
 Occupation and employment affect individual health in various aspects. Those with steady employment tend to have better health outcomes in both mental and physical health conditions than those who are unemployed. Even within employed populations, there are disparities between those with high-paying and low-paying jobs [@rwjf-employment-2013].
 
-Putnam and Westchester Counties had the highest percentage of individuals in the labor force (64.7% and 65.4%, respectively) in 2023. Ulster County had the lowest percentage of individuals in the labor force (58.7%), which is lower than both the New York State (NYS) and United States (US) rate [@fig-labor-force] and [@tbl-labor-force]. Putnam County continues to have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the Mid-Hudson Region (M-H Region). All of the counties in the M-H Region have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County has the highest unemployment rate in the region at 6.1% [@fig-unemployed] and [@tbl-unemployed].
+Putnam and Westchester Counties had the highest percentage of individuals in the labor force (64.7% and 65.4%, respectively) in 2023. Ulster County had the lowest percentage of individuals in the labor force (58.7%), which is lower than both the New York State (NYS) and United States (US) rate [@fig-labor-force] and [@tbl-labor-force]. Putnam County continues to have the lowest unemployment rate (4.8% in 2021 and 4.1% in 2023) in the Mid-Hudson (M-H) Region. All of the counties in the M-H Region have a lower unemployment rate than NYS' rate of 6.2%. Sullivan County has the highest unemployment rate in the region at 6.1% [@fig-unemployed] and [@tbl-unemployed].
 
 <!--Figure 1: "Percentage in Labor Force, Population 16 Years and Older, 2021–2023"-->
 {{< include _generated/objects/fig-labor-force.qmd >}}
@@ -57,10 +57,10 @@ https://data.census.gov/table/ACSDP5Y2023.DP03?q=dp03&g=050XX00US36105,36027,360
 Y-axis does not begin at zero in order to clearly display trend lines. The American Community Survey asks respondents if they have worked in the past week. If the answer is no, they are asked why they are not working. For those who are not working, they are asked whether they plan to return to work, and when they last worked. Labor Force refers to the total number of people who are either employed or unemployed and actively seeking work, plus members of the US Armed Forces.
 :::
 
-<!--Figure 2: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"-->
+<!--Figure 2: "Percentage of Population Unemployed, 16 Years and Older, 2021–2023"-->
 {{< include _generated/objects/fig-unemployed.qmd >}}
 
-<!--Table 2: "Percentage of Population Unemployed, 16 Years and Older, 2021-2023"-->
+<!--Table 2: "Percentage of Population Unemployed, 16 Years and Older, 2021–2023"-->
 {{< include _generated/objects/tbl-unemployed.qmd >}}
 
 
@@ -267,10 +267,10 @@ The Census Bureau collects racial and ethnic data in accordance with guidelines 
 Children from economically disadvantaged families can face numerous challenges that influence their development, academic achievement, and overall health. Poverty can affect their cognitive development and educational attainment. The lack of access to resources and opportunities can impact their long-term social and economic mobility [@aerj-ses-child-development-2011].
 
 In 2023–2024, Sullivan County had the region’s highest share of economically disadvantaged students (61.4%), while Putnam had the lowest (32.5%) [@fig-economically-disadvantaged] and [@tbl-economically-disadvantaged]. All counties rose since 2021–2022; the largest gains occurred in Rockland (43.9% to 51.0%), Dutchess (39.2% to 43.3%), and Putnam (28.5% to 32.5%). Compared with NYS (59.2%), Sullivan is above the state average; all other Mid-Hudson counties remain below it. Ulster was higher than Orange and Rockland through 2022–2023 (52.5% vs. 49.0% and 48.1%) but dropped below both in 2023–2024 (48.8% vs. 49.5% and 51.0%).
-<!--Figure 9: "Enrollment Rate of Economically Disadvantaged Students, 2021-2023"-->
+<!--Figure 9: "Enrollment Rate of Economically Disadvantaged Students, 2021–2023"-->
 {{< include _generated/objects/fig-economically-disadvantaged.qmd >}}
 
-<!--Table 9: "Enrollment Rate of Economically Disadvantaged Students, 2021-2023"-->
+<!--Table 9: "Enrollment Rate of Economically Disadvantaged Students, 2021–2023"-->
 {{< include _generated/objects/tbl-economically-disadvantaged.qmd >}}
 
 ::: {.callout-note collapse="true"}
@@ -337,10 +337,10 @@ The ALICE (Asset Limited, Income Constrained, Employed) threshold represents the
 High school completion is strongly linked to better health and longevity [@hp2030-high-school-graduation-2025]. People who don’t complete high school face limited employment prospects, lower wages, and a higher risk of poverty factors that contribute to worse health outcomes and a higher risk of death later in life [@hp2030-high-school-graduation-2025]. Graduation likelihood is shaped by individual, family, school, and community conditions; school climate and safety, access to supportive adults, and disciplinary practices are all associated with on-time graduation [@learning-policy-institute-suspensions-2022].
 
 In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan (lowest) to 91% in Putnam and Westchester (highest). Most counties exceeded the NYS average of 86%, Dutchess (87%), Orange (89%), Putnam (91%), Ulster (87%), and Westchester (91%), while Rockland matched the state rate (86%) and Sullivan fell below. From 2021–2023, rates were generally stable or edged down slightly, with the largest declines in Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%). [@fig-graduation-rate].
-<!--Figure 11: "High School Graduation Rate, 2021-2023"-->
+<!--Figure 11: "High School Graduation Rate, 2021–2023"-->
 {{< include _generated/objects/fig-graduation-rate.qmd >}}
 
-<!--Table 11: "High School Graduation Rate, 2021-2023"-->
+<!--Table 11: "High School Graduation Rate, 2021–2023"-->
 {{< include _generated/objects/tbl-graduation-rate.qmd >}}
 
 ::: {.callout-note collapse="true"}
@@ -484,7 +484,7 @@ In the US, residential segregation between non-Hispanic Black and non-Hispanic W
 
 Data produced by *County Health Rankings & Roadmaps* around residential segregation uses the *American Community Survey* to measure the distribution of non-Hispanic Black and non-Hispanic White residents across census tracks. The index is used to measure residential segregation; zero represents complete integration, while 100 is complete segregation. The index score can also represent the percentage of either non-Hispanic Black or non-Hispanic White residents who would have to move to a different geographic area in order to produce a distribution that matches that of the larger area [@uwphi-residential-segregation-bw-2025].
 
-Across the Mid-Hudson Region, residential segregation between Black and White residents remains lower than the statewide level but continues to vary by county. For the most recent period (2019–2023), Westchester County had the highest index score at 63.0, though it was still below the New York State average of 75.0. Sullivan County recorded the lowest score in the region at 43.0, indicating greater levels of residential integration. Putnam County and Orange County showed steady increases in segregation in recent years. In contrast, Ulster County declined to 43.0 (2018-2022), tying with Sullivan for the lowest score. Overall, the Mid-Hudson Region continues to show lower segregation levels compared with the state as a whole, though disparities remain across counties. [@fig-residential-segregation].
+Across the Mid-Hudson Region, residential segregation between Black and White residents remains lower than the statewide level but continues to vary by county. For the most recent period (2019–2023), Westchester County had the highest index score at 63.0, though it was still below the New York State average of 75.0. Sullivan County recorded the lowest score in the region at 43.0, indicating greater levels of residential integration. Putnam County and Orange County showed steady increases in segregation in recent years. In contrast, Ulster County declined to 43.0 (2018–2022), tying with Sullivan for the lowest score. Overall, the Mid-Hudson Region continues to show lower segregation levels compared with the state as a whole, though disparities remain across counties. [@fig-residential-segregation].
 
 
 <!--Figure 16: "Index Score of Residential Segregation, 2013–2023"-->
@@ -627,7 +627,7 @@ Sullivan County (3,070:1) had the highest ratio of residents to primary care pro
 ::: {.callout-note collapse="true"}
 ## Source
 
-Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from Area Health Resources Files 2022-2023, and the American Medical Association
+Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from Area Health Resources Files 2022–2023, and the American Medical Association
 https://www.countyhealthrankings.org/health-data/new-york?year=2024&measure=Primary+Care+Physicians&tab=1
 :::
 
@@ -648,7 +648,7 @@ Sullivan County had the highest ration of resisdents to dentists (2,410:1). West
 ## Source
 
 Source: University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps, June 2025 sourced from Area Health
-Resources Files 2022-2023, and the National Provider Identifier Downloadable File
+Resources Files 2022–2023, and the National Provider Identifier Downloadable File
 https://www.countyhealthrankings.org/health-data/new-york?year=2022&measure=Dentists&tab=1
 :::
 
@@ -866,9 +866,9 @@ The NYS Division of Criminal Justice Services collects crime reports from police
 
 The M-H Region saw fluctuations in violent crime rates between 2018 and 2021. In 2021 all M-H Counties remained below the NYS without NYC rate and the NYS rate. Putnam County consistently had the lowest violent crime rate in the M-H Region from 2018 through 2021. Orange County has the highest rate (192.4 per 100,000). Sullivan County had the highest rates in 2018 and 2019 but has shown a consistent decrease over the four years. [@fig-violent-crime]
 
-<!--Figure 19: "Violent Crime Rate per 100,000 Population, 2018-2021"-->
+<!--Figure 19: "Violent Crime Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-violent-crime.qmd >}}
-<!--Table 19: "Violent Crime Rate per 100,000 Population, 2018-2021"-->
+<!--Table 19: "Violent Crime Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/tbl-violent-crime.qmd >}}   
 
 ::: {.callout-note collapse="true"}
@@ -893,9 +893,9 @@ Air pollution has been linked to several poor health outcomes, particularly thos
 
 Across all M-H Region Counties and New York State, the average daily density of fine particulate matter generally declined between 2014 and 2020. Westchester County consistently has the highest levels, it also experienced a decline since 2014. Sullivan County and Orange County fluctuate between having the lowest levels. Only Sullivan County and Orange County have periodically had levels lower than NYS. [@fig-density-matter]
 
-<!--Figure 20: "Average Daily Density of Fine Particulate Matter, 2014-2020"-->
+<!--Figure 20: "Average Daily Density of Fine Particulate Matter, 2014–2020"-->
 {{< include _generated/objects/fig-density-matter.qmd >}}
-<!--Table 20: "Average Daily Density of Fine Particulate Matter, 2014-2020"-->
+<!--Table 20: "Average Daily Density of Fine Particulate Matter, 2014–2020"-->
 {{< include _generated/objects/tbl-density-matter.qmd >}}
 
 ::: {.callout-note collapse="true"}
@@ -934,9 +934,9 @@ Sources of lead can include lead-based paints in homes built before 1978, consum
 
 New York State (NYS) requires health care providers to obtain a blood lead level for all children at age one and again at age two [@nysdoh-lead-2025]. Westchester County had the highest testing rate in the M-H Region, with 60.2% of children born in 2019 tested. Sullivan County had the lowest testing rate at 36.6%. Only Westchester County exceeded NYS' testing rate in all four years [@fig-lead-children].
 
-<!--Figure 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016-2019 Birth Cohorts"-->
+<!--Figure 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016–2019 Birth Cohorts"-->
 {{< include _generated/objects/fig-lead-children.qmd >}}
-<!--Table 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016-2019 Birth Cohorts"-->
+<!--Table 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016–2019 Birth Cohorts"-->
 {{< include _generated/objects/tbl-lead-children.qmd >}}
 
 ::: {.callout-note collapse="true"}

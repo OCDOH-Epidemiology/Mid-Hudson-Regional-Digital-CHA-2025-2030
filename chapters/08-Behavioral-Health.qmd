@@ -63,7 +63,7 @@ https://www.health.ny.gov/statistics/brfss/expanded/
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Based on responses to this question, BRFSS defines "poor mental health" as an adult over the age of 18 reporting 14 or more days to this question.
 :::
 
-One major disorder that can lead to poor mental health is depression. Depression is a mood disorder that causes a constant feeling of sadness or lack of interest in usual life activities. In 2021, the highest percentage of people reporting a depressive disorder was in Ulster County (24.1%), and the lowest was in Westchester County (12.4%) [see Figure 167]. From 2016 to 2021, the percentage of people reporting a depressive disorder increased in all counties, the M-H Region, and NYS.
+One major disorder that can lead to poor mental health is depression. Depression is a mood disorder that causes a constant feeling of sadness or lack of interest in usual life activities. In 2021, the highest percentage of people reporting a depressive disorder was in Ulster County (24.1%), and the lowest was in Westchester County (12.4%) [see Figure 167]. From 2016 to 2021, the percentage of people reporting a depressive disorder increased in all counties, the Mid-Hudson (M-H) Region, and NYS.
 
 <!--Figure 167: "Percentage of Adults Reporting a Depressive Disorder, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-adult-depressive-do-percent.qmd >}}

@@ -7,7 +7,7 @@ execute:
 
 ## Prevention Agenda
 
-The Prevention Agenda 2025-2030 is New York State's Health Improvement
+The Prevention Agenda 2025–2030 is New York State's Health Improvement
 Plan, a six-year strategic initiative designed to improve public health
 and serve as a blueprint for state and local health departments to
 enhance the health of all residents [@nysdoh-prevention-agenda-2025]. The main strategy of the
@@ -51,7 +51,7 @@ initiate health improvement planning and development.
 
 For hospitals classified as charitable organizations, they must meet
 general requirements for tax exemption under Section 501(c)(3) [@irs-501c3-exemption-2025] and
-Revenue Ruling 69-545 [@irs-revenue-ruling-69-545-1969]. They must also meet the requirements imposed
+Revenue Ruling 69–545 [@irs-revenue-ruling-69-545-1969]. They must also meet the requirements imposed
 by Section 501(r) [@irs-501r3-chna-2025] on a facility-by-facility basis in order to be
 treated as an organization described in Section 501(c)(3). This involves
 completing a Community Health Needs Assessment (CHNA) and a Community
@@ -86,7 +86,7 @@ measurable strategic goals, all within a community driven process.
 
 ## Partnership
 
-The seven Mid-Hudson Region (M-H Region) LHDs have vast experience with
+The seven Mid-Hudson (M-H) Region LHDs have vast experience with
 assessing health and developing partnerships to advance the health of
 their communities. The LHDs lead the CHA and CHIP process via
 partnerships and follow the requirements of the NYSDOH.
@@ -101,7 +101,7 @@ successful outcomes.
 ## Data Sources and Indicator Selection
 
 To create this document, the following data sources were utilized. In
-certain instances, data were obtained by request and are readily
+certain instances, data were obtained by request and are not readily
 available to the public.
 
 **American Community Survey (ACS)**: A nationwide survey conducted by

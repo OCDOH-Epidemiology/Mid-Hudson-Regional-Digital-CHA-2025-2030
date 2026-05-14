@@ -164,9 +164,13 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
           const reshapedItems = [];
           let count = 1;
           for (const [_key, value] of groupedItems) {
-            const firstItem = value[0];
+            // CHA PATCH: prefer section anchors for top-level document links.
+          const firstItem = value[0];
+            const anchorItem = value.find((item) => item.href.includes("#"));
+            const preferredHref = anchorItem ? anchorItem.href : firstItem.href;
             reshapedItems.push({
               ...firstItem,
+              href: preferredHref,
               type: kItemTypeDoc,
             });
 
@@ -1232,6 +1236,18 @@ let subSearchTerm = undefined;
 let subSearchFuse = undefined;
 const kFuseMaxWait = 125;
 
+function chapterOrderFromCrumbs(crumbs) {
+  if (!crumbs || crumbs.length === 0) {
+    return Number.POSITIVE_INFINITY;
+  }
+  const chapterMatch = crumbs[0].match(/chapter-number[^>]*>(\d+)/);
+  if (!chapterMatch) {
+    return Number.POSITIVE_INFINITY;
+  }
+  const order = Number(chapterMatch[1]);
+  return Number.isFinite(order) ? order : Number.POSITIVE_INFINITY;
+}
+
 async function fuseSearch(query, fuse, fuseOptions) {
   let index = fuse;
   // Fuse.js using the Bitap algorithm for text matching which runs in
@@ -1255,7 +1271,22 @@ async function fuseSearch(query, fuse, fuseOptions) {
   const resultsRaw = await index.search(query, fuseOptions);
   const now = performance.now();
 
-  const results = resultsRaw.map((result) => {
+  // CHA PATCH: force chronological chapter ordering while preserving
+  // Fuse relevance order inside each chapter.
+  const sortedResultsRaw = resultsRaw
+    .map((result, originalIndex) => ({ result, originalIndex }))
+    .sort((a, b) => {
+      const chapterDelta =
+        chapterOrderFromCrumbs(a.result.item.crumbs) -
+        chapterOrderFromCrumbs(b.result.item.crumbs);
+      if (chapterDelta !== 0) {
+        return chapterDelta;
+      }
+      return a.originalIndex - b.originalIndex;
+    })
+    .map((entry) => entry.result);
+
+  const results = sortedResultsRaw.map((result) => {
     const addParam = (url, name, value) => {
       const anchorParts = url.split("#");
       const baseUrl = anchorParts[0];
