@@ -5,13 +5,16 @@ const fs = require("fs");
 const path = require("path");
 
 const repoRoot = path.resolve(__dirname, "..");
-const targetPath = path.join(
-  repoRoot,
-  "docs",
-  "site_libs",
-  "quarto-search",
-  "quarto-search.js"
-);
+const candidateTargetPaths = [
+  path.join(repoRoot, "site_libs", "quarto-search", "quarto-search.js"),
+  path.join(
+    repoRoot,
+    "docs",
+    "site_libs",
+    "quarto-search",
+    "quarto-search.js"
+  ),
+];
 
 function replaceOnce(contents, before, after, label) {
   if (contents.includes(after)) {
@@ -102,6 +105,45 @@ function patchSearchRuntime(contents) {
     [highlightBeforeOriginal, highlightBeforePatchedV1],
     highlightAfter,
     "scroll to first highlighted match"
+  );
+
+  const resetBefore = `  // Clear search highlighting when the user scrolls sufficiently
+  const resetFn = () => {
+    resetHighlighting("");
+    window.removeEventListener("quarto-hrChanged", resetFn);
+    window.removeEventListener("quarto-sectionChanged", resetFn);
+  };
+
+  // Register this event after the initial scrolling and settling of events
+  // on the page
+  window.addEventListener("quarto-hrChanged", resetFn);
+  window.addEventListener("quarto-sectionChanged", resetFn);`;
+
+  const resetAfter = `  // CHA PATCH: keep highlight visible after landing from search.
+  // Do not clear on initial section change; clear on first user interaction.
+  const resetFn = () => {
+    window.removeEventListener("quarto-hrChanged", resetFn);
+    window.removeEventListener("quarto-sectionChanged", resetFn);
+  };
+
+  // Register this event after the initial scrolling and settling of events
+  // on the page
+  window.addEventListener("quarto-hrChanged", resetFn);
+  window.addEventListener("quarto-sectionChanged", resetFn);
+
+  const clearOnInteraction = () => {
+    resetHighlighting("");
+    window.removeEventListener("pointerdown", clearOnInteraction, true);
+    window.removeEventListener("keydown", clearOnInteraction, true);
+  };
+  window.addEventListener("pointerdown", clearOnInteraction, true);
+  window.addEventListener("keydown", clearOnInteraction, true);`;
+
+  updated = replaceOnce(
+    updated,
+    resetBefore,
+    resetAfter,
+    "persist highlight until interaction"
   );
 
   const reshapeBefore = `          const firstItem = value[0];
@@ -198,16 +240,35 @@ async function fuseSearch(query, fuse, fuseOptions) {`;
 }
 
 function main() {
-  if (!fs.existsSync(targetPath)) {
-    throw new Error(`Generated search runtime not found: ${targetPath}`);
+  const existingTargets = candidateTargetPaths.filter((targetPath) =>
+    fs.existsSync(targetPath)
+  );
+  if (existingTargets.length === 0) {
+    throw new Error(
+      "Generated search runtime not found in expected locations: " +
+        candidateTargetPaths.join(", ")
+    );
   }
-  const original = fs.readFileSync(targetPath, "utf8");
-  const patched = patchSearchRuntime(original);
-  if (patched !== original) {
-    fs.writeFileSync(targetPath, patched, "utf8");
-    console.log("Patched docs/site_libs/quarto-search/quarto-search.js");
-  } else {
-    console.log("No patch changes needed (already applied).");
+
+  let changedCount = 0;
+  for (const targetPath of existingTargets) {
+    const original = fs.readFileSync(targetPath, "utf8");
+    const patched = patchSearchRuntime(original);
+    if (patched !== original) {
+      fs.writeFileSync(targetPath, patched, "utf8");
+      changedCount += 1;
+      console.log(`Patched ${path.relative(repoRoot, targetPath)}`);
+    } else {
+      console.log(
+        `No patch changes needed (already applied): ${path.relative(
+          repoRoot,
+          targetPath
+        )}`
+      );
+    }
+  }
+  if (changedCount === 0) {
+    console.log("Patch run complete: no files changed.");
   }
 }
 

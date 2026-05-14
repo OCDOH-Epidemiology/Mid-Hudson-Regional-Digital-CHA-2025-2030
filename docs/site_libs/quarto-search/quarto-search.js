@@ -82,9 +82,9 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
     }
   };
 
-  // Clear search highlighting when the user scrolls sufficiently
+  // CHA PATCH: keep highlight visible after landing from search.
+  // Do not clear on initial section change; clear on first user interaction.
   const resetFn = () => {
-    resetHighlighting("");
     window.removeEventListener("quarto-hrChanged", resetFn);
     window.removeEventListener("quarto-sectionChanged", resetFn);
   };
@@ -93,6 +93,14 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
   // on the page
   window.addEventListener("quarto-hrChanged", resetFn);
   window.addEventListener("quarto-sectionChanged", resetFn);
+
+  const clearOnInteraction = () => {
+    resetHighlighting("");
+    window.removeEventListener("pointerdown", clearOnInteraction, true);
+    window.removeEventListener("keydown", clearOnInteraction, true);
+  };
+  window.addEventListener("pointerdown", clearOnInteraction, true);
+  window.addEventListener("keydown", clearOnInteraction, true);
 
   // Responsively switch to overlay mode if the search is present on the navbar
   // Note that switching the sidebar to overlay mode requires more coordinate (not just
