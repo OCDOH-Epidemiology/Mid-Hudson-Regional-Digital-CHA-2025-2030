@@ -44,11 +44,23 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
 
   // highlight matches on the page
   if (query && mainEl) {
-    // perform any highlighting
+    // perform exact phrase highlighting first
+    const marksBefore = mainEl.querySelectorAll("mark").length;
     highlight(escapeRegExp(query), mainEl);
+    const marksAfter = mainEl.querySelectorAll("mark").length;
+
+    // CHA PATCH: if exact phrase doesn't produce a visible hit, fallback
+    // to highlighting significant individual terms from the query.
+    if (marksAfter === marksBefore) {
+      const terms = [...new Set(query.split(/\s+/))]
+        .map((term) => term.trim())
+        .filter((term) => term.length >= 3);
+      terms.forEach((term) => {
+        highlight(escapeRegExp(term), mainEl);
+      });
+    }
 
     // CHA PATCH: jump directly to first highlighted hit in the loaded page.
-    // This ensures search clicks land on the actual matching text.
     const firstMatch = mainEl.querySelector("mark");
     if (firstMatch) {
       firstMatch.scrollIntoView({ block: "center", inline: "nearest" });

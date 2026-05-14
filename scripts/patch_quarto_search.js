@@ -23,10 +23,22 @@ function replaceOnce(contents, before, after, label) {
   return contents.replace(before, after);
 }
 
+function replaceAny(contents, befores, after, label) {
+  if (contents.includes(after)) {
+    return contents;
+  }
+  for (const before of befores) {
+    if (contents.includes(before)) {
+      return contents.replace(before, after);
+    }
+  }
+  throw new Error(`Patch anchor not found for ${label}`);
+}
+
 function patchSearchRuntime(contents) {
   let updated = contents;
 
-  const highlightBefore = `  // highlight matches on the page
+  const highlightBeforeOriginal = `  // highlight matches on the page
   if (query && mainEl) {
     // perform any highlighting
     highlight(escapeRegExp(query), mainEl);
@@ -37,7 +49,7 @@ function patchSearchRuntime(contents) {
     window.history.replaceState({}, "", replacementUrl);
   }`;
 
-  const highlightAfter = `  // highlight matches on the page
+  const highlightBeforePatchedV1 = `  // highlight matches on the page
   if (query && mainEl) {
     // perform any highlighting
     highlight(escapeRegExp(query), mainEl);
@@ -55,9 +67,39 @@ function patchSearchRuntime(contents) {
     window.history.replaceState({}, "", replacementUrl);
   }`;
 
-  updated = replaceOnce(
+  const highlightAfter = `  // highlight matches on the page
+  if (query && mainEl) {
+    // perform exact phrase highlighting first
+    const marksBefore = mainEl.querySelectorAll("mark").length;
+    highlight(escapeRegExp(query), mainEl);
+    const marksAfter = mainEl.querySelectorAll("mark").length;
+
+    // CHA PATCH: if exact phrase doesn't produce a visible hit, fallback
+    // to highlighting significant individual terms from the query.
+    if (marksAfter === marksBefore) {
+      const terms = [...new Set(query.split(/\\s+/))]
+        .map((term) => term.trim())
+        .filter((term) => term.length >= 3);
+      terms.forEach((term) => {
+        highlight(escapeRegExp(term), mainEl);
+      });
+    }
+
+    // CHA PATCH: jump directly to first highlighted hit in the loaded page.
+    const firstMatch = mainEl.querySelector("mark");
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ block: "center", inline: "nearest" });
+    }
+
+    // fix up the URL to remove the q query param
+    const replacementUrl = new URL(window.location);
+    replacementUrl.searchParams.delete(kQueryArg);
+    window.history.replaceState({}, "", replacementUrl);
+  }`;
+
+  updated = replaceAny(
     updated,
-    highlightBefore,
+    [highlightBeforeOriginal, highlightBeforePatchedV1],
     highlightAfter,
     "scroll to first highlighted match"
   );
