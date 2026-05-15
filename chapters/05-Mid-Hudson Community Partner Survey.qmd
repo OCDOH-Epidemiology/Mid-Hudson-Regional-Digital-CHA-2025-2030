@@ -68,9 +68,9 @@ The survey also showed that the top three barriers to people achieving better he
 
 According to survey responses, issues highly impacting health in Dutchess communities include mental health and substance use issues, chronic disease, and health disparities [@fig-dc-impact-hlth-issue].
 
-When considering the social determinants of health, issues highly impacting Dutchess communities include economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care [@fig-dc-impact-sdoh]. Within these social determinants of health categories, highly rated issues include poverty, anxiety and stress, and preventive services for chronic disease prevention and control see [@fig-dc-eco-wellbeing]-[@fig-dc-impact-hlthinsur-access].
+When considering the social determinants of health, issues highly impacting Dutchess communities include economic wellbeing, mental wellbeing and substance use, and health insurance coverage and access to care [@fig-dc-impact-sdoh]. Within these social determinants of health categories, highly rated issues include poverty, anxiety and stress, and preventive services for chronic disease prevention and control see [@fig-dc-eco-wellbeing] through [@fig-dc-impact-hlthinsur-access].
 
-Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money/funding was excluded from the question. Common responses included:
+Included in the survey was the opportunity for community partners to share what they thought were the underlying factors and barriers to solving the issues that they highlighted. Lack of money was excluded from the question. Common responses included:
 
 > -   Resources exist, but the community does not know that they exist or how to access them.
 >
@@ -276,19 +276,19 @@ One hundred and twenty-eight responses were collected from individuals working f
 
 Survey respondents considered the biggest health problems in populations served in Putnam County [@fig-pc-big-hlth-prob] to be:
 
-> 1\) Mental Health
+> - Mental Health
 >
-> 2\) Access to healthcare providers
+> - Access to healthcare providers
 >
-> 3\) Substance Misuse
+> - Substance Misuse
 
 Survey respondents thought the following would be most helpful to improve health of populations served in Putnam County [@fig-pc-help-improve-hlth]:
 
-> 1\) Mental Health Services
+> - Mental Health Services
 >
-> 2\) Transportation
+> - Transportation
 >
-> 3\) Affordable Housing
+> - Affordable Housing
 
 According to survey respondents, health screenings or education topics that would be most valuable to those they serve include mental health, chronic disease management, and drug and alcohol misuse [@fig-pc-help-hlth-screen-education].
 
@@ -341,11 +341,11 @@ In Rockland County, 135 survey responses were collected from community service p
 
 The results showed that the top three issues that affect health in Rockland County were see [@fig-rc-affect-health]:
 
-> -   Access to mental health providers
+> 1\) Access to mental health providers
 >
-> -   Access to affordable, decent, and safe housing
+> 2\) Access to affordable, decent, and safe housing
 >
-> -   Access to affordable specialty services/providers
+> 3\) Access to affordable specialty services/providers
 
 The survey also showed that the top three barriers to people achieving better health in Rockland County were see [@fig-rc-achieve-health].
 
@@ -500,19 +500,19 @@ The survey also identified that the top three barriers to people achieving bette
 
 When asked about the impact of health issues in Sullivan County, the providers identified the following as having the biggest impact on the health of the community see [@fig-sc-impact-hlth-issue]:
 
-> 1\) Chronic Disease
+> - Chronic Disease
 >
-> 2\) Mental Health and Substance Use Issues
+> - Mental Health and Substance Use Issues
 >
-> 3\) Health Disparities
+> - Health Disparities
 
 Providers also identified the most impactful topics among the social determinants of health see [@fig-sc-impact-sdoh]:
 
-> 1\) Mental Wellbeing and Substance Use (anxiety & stress, suicide, depression, substance use, adverse childhood experiences, healthy eating) (n=80)
+> - Mental Wellbeing and Substance Use (anxiety & stress, suicide, depression, substance use, adverse childhood experiences, healthy eating) (n=80)
 >
-> 2\) Economic Wellbeing (poverty, unemployment, nutrition security, housing stability & affordability) (n=77)
+> - Economic Wellbeing (poverty, unemployment, nutrition security, housing stability & affordability) (n=77)
 >
-> 3\) Health Insurance Coverage & Access to Care (access to & use of prenatal care, prevention of infant maternal mortality, preventive services for chronic disease prevention & control, oral health care) (n=54)
+> - Health Insurance Coverage & Access to Care (access to & use of prenatal care, prevention of infant maternal mortality, preventive services for chronic disease prevention & control, oral health care) (n=54)
 
 Within the broader social determinants of health, the specific topics rated as having the highest impact on health were anxiety & stress, poverty, and housing stability & affordability see [@fig-sc-impact-mhsu] through [@fig-sc-impact-hlthinsur-access].
 

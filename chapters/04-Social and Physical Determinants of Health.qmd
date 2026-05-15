@@ -292,9 +292,7 @@ Asset Limited, Income Constrained, Employed (ALICE) households are those earning
 
 The 2023 ALICE Household Survival Budget for New York State shows that the income needed to cover basic necessities ranges from \$35,652 per year for a single adult (\$17.80/hour) to \$104,472 for two adults with two children in childcare (\$52.20/hour). A two-adult, two-child household without paid childcare requires \$83,664 annually. Housing and childcare are the largest drivers for families with two children in care, those two items total \$3,782 per month. These amounts define the ALICE Threshold; county-level percentages below this threshold. [@tbl-alice-budget]
 
-
 {{< include _generated/objects/tbl-alice-budget.qmd >}}
-
 
 ::: {.callout-note collapse="true"}
 ## Source
@@ -336,7 +334,8 @@ The ALICE (Asset Limited, Income Constrained, Employed) threshold represents the
 
 High school completion is strongly linked to better health and longevity [@hp2030-high-school-graduation-2025]. People who don’t complete high school face limited employment prospects, lower wages, and a higher risk of poverty factors that contribute to worse health outcomes and a higher risk of death later in life [@hp2030-high-school-graduation-2025]. Graduation likelihood is shaped by individual, family, school, and community conditions; school climate and safety, access to supportive adults, and disciplinary practices are all associated with on-time graduation [@learning-policy-institute-suspensions-2022].
 
-In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan (lowest) to 91% in Putnam and Westchester (highest). Most counties exceeded the NYS average of 86%, Dutchess (87%), Orange (89%), Putnam (91%), Ulster (87%), and Westchester (91%), while Rockland matched the state rate (86%) and Sullivan fell below. From 2021–2023, rates were generally stable or edged down slightly, with the largest declines in Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%). [@fig-graduation-rate].
+In 2023, graduation rates in the M-H Region ranged from 76% in Sullivan (lowest) to 91% in Putnam and Westchester (highest). Most counties exceeded the NYS average of 86%, Dutchess (87%), Orange (89%), Putnam (91%), Ulster (87%), and Westchester (91%), while Rockland matched the state rate (86%) and Sullivan fell below. From 2021–2023, rates were generally stable or edged down slightly, with the largest declines in Sullivan (82% to 76%), Rockland (90% to 86%), and Putnam (94% to 91%). [@fig-graduation-rate] and [@tbl-graduation-rate].
+
 <!--Figure 11: "High School Graduation Rate, 2021–2023"-->
 {{< include _generated/objects/fig-graduation-rate.qmd >}}
 
@@ -358,7 +357,7 @@ Graduation rate data are reported for a 9th grade cohort, as of the 4th year of 
 
 In accordance with federal regulation, there is a two-part requirement regarding racial and ethnic designation. First, all students must be reported as Hispanic/Latino or not Hispanic/Latino. Second, all students must be reported with at least one race. Students who are reported as Hispanic/Latino, regardless of their race, will be counted as Hispanic/Latino for reporting purposes. Students who are reported as not Hispanic/Latino will be counted in the race category in which they are reported. Non-Hispanic students who are reported with more than one race category will be reported as Multiracial. 
 
-Racial and ethnic disparities in graduation rates persist across the M-H Region. In six of seven counties, White students graduate at higher rates than both Black and Hispanic students; the exception is Putnam, where Black students post the region’s highest rate (97%), exceeding White (95%) and Hispanic (80%) peers. The largest gaps occur between White and Hispanic students, 21 points in Sullivan (84% vs. 63%) and then 15 points in Putnam (95% vs 80%) and Rockland (96% vs. 81%). Disparities between White and Black students are greatest in Sullivan (18 points; 84% vs. 66%) and Dutchess (14 points; 92% vs. 78%), while Rockland (96% vs 90%) and Ulster (90% vs 84%) show one of the smallest White and Black gaps at 6 points. [@fig-graduation-by-race].
+Racial and ethnic disparities in graduation rates persist across the M-H Region. In six of seven counties, White students graduate at higher rates than both Black and Hispanic students; the exception is Putnam, where Black students post the region’s highest rate (97%), exceeding White (95%) and Hispanic (80%) peers. The largest gaps occur between White and Hispanic students, 21 points in Sullivan (84% vs. 63%) and then 15 points in Putnam (95% vs 80%) and Rockland (96% vs. 81%). Disparities between White and Black students are greatest in Sullivan (18 points; 84% vs. 66%) and Dutchess (14 points; 92% vs. 78%), while Rockland (96% vs 90%) and Ulster (90% vs 84%) show one of the smallest White and Black gaps at 6 points. [@fig-graduation-by-race] and [@tbl-graduation-by-race].
 <!--Figure 12: "High School Graduation Rate, by Race and Ethnicity, 2023"-->
 {{< include _generated/objects/fig-graduation-by-race.qmd >}}
 
@@ -395,7 +394,7 @@ The ACE items are a surveillance tool, not a diagnosis. They estimate how common
 
 Continuing education after high school, especially enrolling in and completing college, improves employment prospects and job quality, reduces the risk of unemployment or underemployment, and raises lifetime earnings [@hp2030-higher-education-2025]. A Social Security Administration analysis linking survey and administrative earnings records estimates that men with a bachelor's degree earn about \$900,000 more in median lifetime earnings than high school graduates and women about \$630,000 more; for graduate degrees, the gaps rise to \$1.5 million (men) and \$1.1 million (women). Even after adjusting for key socio-demographic factors, differences remain substantial (about \$655,000 for men and \$450,000 for women with a bachelor’s degree) [@ssa-education-earnings-2015]. These gains translate into better-paying jobs with fewer safety hazards and greater access to material and psychosocial resources (e.g., higher-quality housing, higher social status) and are associated with improved health and a lower risk of premature death [@hp2030-higher-education-2025].
 
-Westchester leads the region in degree completion, with the highest shares of residents holding a bachelor’s (26.0%) and a graduate/professional degree (26.5%), both above NYS (22.0% and 17.5%). Putnam (24.2%) and Rockland (23.2%) also exceed the state for bachelor’s attainment, while Dutchess (21.0%), Ulster (20.2%), Orange (18.2%), and Sullivan (17.0%) fall below. [@fig-educational-attainment].
+Westchester leads the region in degree completion, with the highest shares of residents holding a bachelor’s (26.0%) and a graduate/professional degree (26.5%), both above NYS (22.0% and 17.5%). Putnam (24.2%) and Rockland (23.2%) also exceed the state for bachelor’s attainment, while Dutchess (21.0%), Ulster (20.2%), Orange (18.2%), and Sullivan (17.0%) fall below. [@fig-educational-attainment] and [@tbl-educational-attainment].
 
 
 <!--Figure 13: "Rate of Higher Education Attainment, 2023"-->
@@ -423,7 +422,7 @@ The American Community Survey asks respondents what the highest degree or level 
 
 Literacy includes listening, speaking, reading, and writing skills, along with the ability to understand and work with numbers. Low literacy and language skills are associated with poorer outcomes in educational attainment, employment, and health. While limited English proficiency and low literacy differ from health literacy, both are barriers to accessing health care, resulting in lower utilization of health services [@hp2030-language-literacy-2025].
 
-Rockland County had the highest percentage of people aged five years and over who spoke English “less than very well” at 20.0% in 2023. Ulster County had the lowest percentage at 3.4% [@fig-language-proficiency]. Except for Rockland County, all other counties were lower than the NYS rate (13.3%).
+Rockland County had the highest percentage of people aged five years and over who spoke English “less than very well” at 20.0% in 2023. Ulster County had the lowest percentage at 3.4% [@fig-language-proficiency] and [@tbl-language-proficiency]. Except for Rockland County, all other counties were lower than the NYS rate (13.3%).
 <!--Figure 14: "Percentage of Population that Speaks English "Less Than Very Well", 5 Years and Older, 2021–2023"-->
 {{< include _generated/objects/fig-language-proficiency.qmd >}}
 
@@ -452,7 +451,7 @@ Civic participation includes activities in which groups or individuals interact 
 
 Disconnected youth are teenagers and young adults between the ages of 16 and 19 who are neither working nor attending school [@uwphi-disconnected-youth-2022]. This metric is an indicator for how young people are faring while transitioning into adulthood. This vulnerable population is cut off from resources, people, and experiences that help them gain knowledge, skills [@measure-of-america-disconnected-youth-2025], capital [@usda-nifa-disconnected-youth-4h-2017], and a sense of purpose [@hp2030-civic-participation-2025].
 
-Sullivan County had the highest percentage of disconnected youth ages 16–19 (24.0% in 2019–2023), while Westchester County had the lowest (5.0%); the NYS rate was 7.0% [@fig-disconnected-youth]. Since 2016–2020, Sullivan rose from 17.0% to 24.0% (peaking at 25.0% in 2018–2022). Ulster moved from 6.0% to 9.0%. Orange remained near 8–10% (8.0% most recent), Rockland ranged 4–6% (6.0% most recent), and Westchester stayed low at 4.0–5.0%.
+Sullivan County had the highest percentage of disconnected youth ages 16–19 (24.0% in 2019–2023), while Westchester County had the lowest (5.0%); the NYS rate was 7.0% [@fig-disconnected-youth] and [@tbl-disconnected-youth]. Since 2016–2020, Sullivan rose from 17.0% to 24.0% (peaking at 25.0% in 2018–2022). Ulster moved from 6.0% to 9.0%. Orange remained near 8–10% (8.0% most recent), Rockland ranged 4–6% (6.0% most recent), and Westchester stayed low at 4.0–5.0%.
 
 <!--Figure 15: "Percentage of Disconnected Youth, 16–19 Years Old, 2014–2023"-->
 {{< include _generated/objects/fig-disconnected-youth.qmd >}}
@@ -484,7 +483,7 @@ In the US, residential segregation between non-Hispanic Black and non-Hispanic W
 
 Data produced by *County Health Rankings & Roadmaps* around residential segregation uses the *American Community Survey* to measure the distribution of non-Hispanic Black and non-Hispanic White residents across census tracks. The index is used to measure residential segregation; zero represents complete integration, while 100 is complete segregation. The index score can also represent the percentage of either non-Hispanic Black or non-Hispanic White residents who would have to move to a different geographic area in order to produce a distribution that matches that of the larger area [@uwphi-residential-segregation-bw-2025].
 
-Across the Mid-Hudson Region, residential segregation between Black and White residents remains lower than the statewide level but continues to vary by county. For the most recent period (2019–2023), Westchester County had the highest index score at 63.0, though it was still below the New York State average of 75.0. Sullivan County recorded the lowest score in the region at 43.0, indicating greater levels of residential integration. Putnam County and Orange County showed steady increases in segregation in recent years. In contrast, Ulster County declined to 43.0 (2018–2022), tying with Sullivan for the lowest score. Overall, the Mid-Hudson Region continues to show lower segregation levels compared with the state as a whole, though disparities remain across counties. [@fig-residential-segregation].
+Across the Mid-Hudson Region, residential segregation between Black and White residents remains lower than the statewide level but continues to vary by county. For the most recent period (2019–2023), Westchester County had the highest index score at 63.0, though it was still below the New York State average of 75.0. Sullivan County recorded the lowest score in the region at 43.0, indicating greater levels of residential integration. Putnam County and Orange County showed steady increases in segregation in recent years. In contrast, Ulster County declined to 43.0 (2018–2022), tying with Sullivan for the lowest score. Overall, the Mid-Hudson Region continues to show lower segregation levels compared with the state as a whole, though disparities remain across counties. [@fig-residential-segregation] and [@tbl-residential-segregation].
 
 
 <!--Figure 16: "Index Score of Residential Segregation, 2013–2023"-->
@@ -514,7 +513,7 @@ s: Data are suppressed due to unreliable or missing data. Index of dissimilarity
 
 Cost is a prominent barrier to receiving health services and can deter people from seeking preventative care. The Survey of Income and Program Participation in 2023 showed that 16.4% of US households carried medical debt, meaning that people were unable to pay medical costs up front or when they received care [@census-sipp-medical-debt-2023].
 
-Within the M-H Region, the highest percentage of adults who did not receive medical care due to cost was reported in Putnam County at 9.9%. Sullivan County had the lowest percentage (4.9%) of adults who did not receive medical care due to cost. The M-H Region (7.4%), Rockland County (8.4%), Sullivan County (4.9%), Ulster County (5.3%), and Westchester County (8.3%) all had a similar or lower percentage than NYS (8.4%). Sullivan County (-76.6%) and Ulster County (-52.7%) had a significant percentage change observed between 2016 and 2021, indicating potential gains in both access to care and utilization. [@fig-medical-care-cost].
+Within the M-H Region, the highest percentage of adults who did not receive medical care due to cost was reported in Putnam County at 9.9%. Sullivan County had the lowest percentage (4.9%) of adults who did not receive medical care due to cost. The M-H Region (7.4%), Rockland County (8.4%), Sullivan County (4.9%), Ulster County (5.3%), and Westchester County (8.3%) all had a similar or lower percentage than NYS (8.4%). Sullivan County (-76.6%) and Ulster County (-52.7%) had a significant percentage change observed between 2016 and 2021, indicating potential gains in both access to care and utilization. [@fig-medical-care-cost] and [@tbl-adult-medical-care-cost].
 
 <!--Table 17: Percentage of Adults Who Did Not Receive Medical Care Due to Cost, 2016,2018,2021-->
 {{< include _generated/objects/fig-medical-care-cost.qmd >}}
@@ -543,7 +542,7 @@ Health insurance coverage is one of the largest factors affecting health care ac
 
 Health insurance coverage is one of the largest factors affecting health care access. Uninsured people are less likely to receive preventative services and treatments than those who are insured, including care for chronic conditions, dental care, immunizations, and well-child visits [@hhs-healthy-people-access-health-services-2025]. Several government programs, such as Medicaid and the Children’s Health Insurance Program, help provide low- and no-cost health insurance to eligible children. The US Census Bureau’s Small Area Health Insurance Estimates (SAHIE) program produces annual estimates of health insurance coverage for children under age 19 and adults ages 18 to 64. According to these estimates, adults are more likely than children to be without health insurance in the M-H Region.
 
-Sullivan County has the highest rate of children without health insurance (3.5%), and Putnam County has the lowest rate (2.4%). Dutchess (2.6%), Orange (2.7%), and Putnam Counties all have rates lower than NYS (2.8%). Rockland County (2.8%) and Westchester County (2.8%) have the same rate as NYS. Sullivan County has shown the greatest gains in coverage between 2020 and 2023, with a 14.6% decrease over the past four years [@fig-children-uninsured].
+Sullivan County has the highest rate of children without health insurance (3.5%), and Putnam County has the lowest rate (2.4%). Dutchess (2.6%), Orange (2.7%), and Putnam Counties all have rates lower than NYS (2.8%). Rockland County (2.8%) and Westchester County (2.8%) have the same rate as NYS. Sullivan County has shown the greatest gains in coverage between 2020 and 2023, with a 14.6% decrease over the past four years [@fig-children-uninsured] and [@tbl-children-uninsured].
 
 
 <!--Table 18: Percentage of Children Without Health Insurance, 2020-2023-->
@@ -564,7 +563,7 @@ Note: This indicator includes children under 19 years old.
 :::
 
 
-Dutchess County (94.4%) and Putnam County (94.9%) have the highest rate of adults with health insurance, and Ulster County has the lowest rate (92.0%). Adults in Dutchess County, Putnam County, and Westchester County (93.6%) all have a greater percentage of residents with insurance than NYS (93.2%). [@fig-adult-health-insured].
+Dutchess County (94.4%) and Putnam County (94.9%) have the highest rate of adults with health insurance, and Ulster County has the lowest rate (92.0%). Adults in Dutchess County, Putnam County, and Westchester County (93.6%) all have a greater percentage of residents with insurance than NYS (93.2%). [@fig-adult-health-insured] and [@tbl-adult-health-insured].
 
 
 <!--Table 19: Percentage of Adults with Health Insurance, 2020-2023-->
@@ -616,7 +615,7 @@ Primary care is effective for preventative care, early detection and treatment o
 
 When measuring the ratio of population to provider, a higher ratio means less providers per capita, implying less access.
 
-Sullivan County (3,070:1) had the highest ratio of residents to primary care providers. and the number of providers continues to decrease since 2019. Westchester County had the best resident to provider ratio (760:1). Westchester and Rockland (1,880:1) had better ratios than NYS (1,240:1). [@fig-primary-care-providers].
+Sullivan County (3,070:1) had the highest ratio of residents to primary care providers. and the number of providers continues to decrease since 2019. Westchester County had the best resident to provider ratio (760:1). Westchester and Rockland (1,880:1) had better ratios than NYS (1,240:1). [@fig-primary-care-providers] and [@tbl-primary-care-providers].
 
 <!--Figure 20: Ratio of Residents to Primary Care Providers, 2019-2021-->
 {{< include _generated/objects/fig-primary-care-providers.qmd >}}
@@ -636,7 +635,7 @@ https://www.countyhealthrankings.org/health-data/new-york?year=2024&measure=Prim
 Note: To interpret this indicator, the value provided is the number of residents to 1 primary care provider. This measure from the County Health Rankings are released each year but data are used from prior years where available. 
 :::
 
-Sullivan County had the highest ration of resisdents to dentists (2,410:1). Westchester County had the best resident to dentist ratio (910:1). Westchester and Rockland (1,060:1) had better ratios than NYS (1,200:1). Putnam County, Sullivan County, and Ulster County have seen improvements in the ratio between 2019 and 2022, with more dentists being available to residents. [@fig-dentists].
+Sullivan County had the highest ration of resisdents to dentists (2,410:1). Westchester County had the best resident to dentist ratio (910:1). Westchester and Rockland (1,060:1) had better ratios than NYS (1,200:1). Putnam County, Sullivan County, and Ulster County have seen improvements in the ratio between 2019 and 2022, with more dentists being available to residents. [@fig-dentists] and [@tbl-dentists].
 
 <!--Figure 21: Ratio of Residents to Dentists, 2019-2022-->
 {{< include _generated/objects/fig-dentists.qmd >}}
@@ -658,7 +657,7 @@ Note: To interpret this indicator, the value provided is the number of residents
 :::
 
 
-Sullivan County had the highest ration of resisdents to mental health providers (510:1). Westchester County had the best resident to mental health provider ratio (230:1). Westchester, Putnam (260:1), and Ulster (270:1) Counties had better ratios than NYS (310:1). All M-H Region Counites have seen improvements in the ratio between 2019 and 2022, with more mental health providers being available to residents. [@fig-mental-health-providers].
+Sullivan County had the highest ration of resisdents to mental health providers (510:1). Westchester County had the best resident to mental health provider ratio (230:1). Westchester, Putnam (260:1), and Ulster (270:1) Counties had better ratios than NYS (310:1). All M-H Region Counites have seen improvements in the ratio between 2019 and 2022, with more mental health providers being available to residents. [@fig-mental-health-providers] and [@tbl-mental-health-providers].
 
 <!--Figure 22: Ratio of Residents to Mental Health Providers, 2019-2022-->
 {{< include _generated/objects/fig-mental-health-providers.qmd >}}
@@ -684,7 +683,7 @@ Note: To interpret this indicator, the value provided is the number of residents
 
 Receiving regular primary care services is essential for chronic disease management and for the early detection and treatment of disease [@hp2030-access-primary-care-2025]. Having a usual source of care allows for the development of a continuous patient–provider relationship, which can lead to receipt of more preventive care and services as recommended. Lack of insurance, low numbers of providers per capita, limited access to transportation, inability to take time off from work, language-related barriers, and a lack of culturally competent physicians can all hinder access to regular primary care services [@hp2030-access-primary-care-2025].
 
-Putnam County had the highest percentage of adults who reported having a regular primary care provider (90.5%), while Sullivan County had the lowest percentage (76.9%) [@fig-adult-access-primary-care]. Orange County (88.9%), Putnam, Ulster County (89.5%), and Westchester County (84.9%) exceeded or were similar to the NYS rate (85.0%).
+Putnam County had the highest percentage of adults who reported having a regular primary care provider (90.5%), while Sullivan County had the lowest percentage (76.9%) [@fig-adult-access-primary-care] and [@tbl-adult-access-primary-care]. Orange County (88.9%), Putnam, Ulster County (89.5%), and Westchester County (84.9%) exceeded or were similar to the NYS rate (85.0%).
 
 
 <!--Figure 23: Percentage of Adults with a Regular Primary Care Provider, 2016-2023-->
@@ -714,7 +713,7 @@ Emergency departments (ED) are available 24 hours a day, 7 days a week and are i
 
 For those admitted to the hospital, many inpatient visits could be avoided if there were access to timely primary and preventive care. Potentially preventable hospitalizations (PPH) are inpatient stays for ambulatory care–sensitive conditions that might have been avoided with high-quality primary and preventive care. Other factors, such as overall access to care, socioeconomic status, and chronic disease prevalence and management, can also contribute to PPH admissions. By identifying avoidable conditions with high admission rates, the health care system can assess where changes can be made to improve efficiency and quality of care [@ahrq-pph-costs-2017].
 
-In the M-H Region there is a significant variation among PPH rates. Putnam County had the lowest rate (60.2)and Orange County had the highest rate (106.3). Orange and Sullivan County had rates exceeding NYS excluding NYC (92.7) and NYS (97.3). [@fig-pph]
+In the M-H Region there is a significant variation among PPH rates. Putnam County had the lowest rate (60.2)and Orange County had the highest rate (106.3). Orange and Sullivan County had rates exceeding NYS excluding NYC (92.7) and NYS (97.3). [@fig-pph] and [@tbl-pph].
 
 <!--Figure 24: Potentially Preventable Hospitalizations, 2020-2022-->
 {{< include _generated/objects/fig-pph.qmd >}}
@@ -735,7 +734,7 @@ Note: The number of potentially preventable hospitalizations includes residents 
 
 Looking at potentially preventable hospitalizations (PPH) by race is an important step in identifying health disparities and targeting interventions to improve access to health care and, ultimately, outcomes.
 
-In the M-H Region, Black non-Hispanic residents tend to experience significantly higher rates of PPH than White non-Hispanic residents. Dutchess County is the only county where White non-Hispanic residents consistently experience higher PPH rates. Otherwise, there are no consistent trends across the region. Orange County and Westchester County show a general decrease in the rate difference over time, while Sullivan County shows an increase between 2019 and 2022 [@fig-pph-black-white-nh]. When interpreting [@fig-pph-black-white-nh], a negative rate difference indicates that White non-Hispanic residents have a higher PPH rate than Black non-Hispanic residents, which suggests that Black non-Hispanic residents have fewer admissions that would be considered preventable.
+In the M-H Region, Black non-Hispanic residents tend to experience significantly higher rates of PPH than White non-Hispanic residents. Dutchess County is the only county where White non-Hispanic residents consistently experience higher PPH rates. Otherwise, there are no consistent trends across the region. Orange County and Westchester County show a general decrease in the rate difference over time, while Sullivan County shows an increase between 2019 and 2022 [@fig-pph-black-white-nh] and [@tbl-pph-black-white-nh]. When interpreting [@fig-pph-black-white-nh], a negative rate difference indicates that White non-Hispanic residents have a higher PPH rate than Black non-Hispanic residents, which suggests that Black non-Hispanic residents have fewer admissions that would be considered preventable.
 
 <!--Figure 25: Potentially Preventable Hospitalizations, Rate Difference Between
 Black Non-Hispanics and White Non-Hispanics, 2019–2022-->
@@ -806,7 +805,7 @@ Healthy dietary patterns are essential to living a healthy lifestyle. According 
 
 When measuring food access, travel time to supermarkets, availability of healthy foods, and food prices all play a role [@usda-ers-food-access-2025]. For people without a personal vehicle, convenient public transportation, or a supermarket within walking distance, finding fresh, healthy options can be a challenge. High grocery prices can deter people with lower socioeconomic status from purchasing healthy options, which can minimize food access. Low-income communities tend to have more difficulty accessing food, and a study in Detroit found that people living in predominantly Black low-income neighborhoods travel an average of 1.1 miles farther to the closest supermarket than people living in predominantly White low-income neighborhoods [@hp2030-access-foods-2025].
 
-The County Health Rankings and Roadmaps measure of the food environment accounts for proximity to healthy foods and income. The index is a scale that ranges from zero (worst) to 10 (best). Limited access to healthy foods estimates the percentage of the population that is low income and does not live close to a grocery store, and food insecurity estimates the percentage of the population that did not have access to a reliable source of food during the past year [@county-health-rankings-food-env-2025]. Ulster County had the lowest food environment index (8.1), while Westchester (9.3) and Putnam (9.0) counties had the highest. The majority of counties fell below NYS’ score of 8.7 except for Westchester and Putnam counties [@fig-food-environment].
+The County Health Rankings and Roadmaps measure of the food environment accounts for proximity to healthy foods and income. The index is a scale that ranges from zero (worst) to 10 (best). Limited access to healthy foods estimates the percentage of the population that is low income and does not live close to a grocery store, and food insecurity estimates the percentage of the population that did not have access to a reliable source of food during the past year [@county-health-rankings-food-env-2025]. Ulster County had the lowest food environment index (8.1), while Westchester (9.3) and Putnam (9.0) counties had the highest. The majority of counties fell below NYS’ score of 8.7 except for Westchester and Putnam counties [@fig-food-environment] and [@tbl-food-environment].
 
 <!--Figure 17: "Food Environment Index, 2025"-->
 {{< include _generated/objects/fig-food-environment.qmd >}}
@@ -830,11 +829,11 @@ The County Health Rankings measure of the food environment accounts for proximit
 :::
 
 
-Limited access to healthy foods and food insecurity are indicators which are both equally weighted in the Food Environment Index. To see a county comparison of food insecurity, see [@fig-food-insecurity] from above.
+Limited access to healthy foods and food insecurity are indicators which are both equally weighted in the Food Environment Index. To see a county comparison of food insecurity, see [@fig-food-insecurity] and [@tbl-food-insecurity] from above.
 
 The "limited access to healthy foods" indicator measures the percentage of the population that is low-income and does not live close to a grocery store. "Low income" is defined as census tracts where the poverty rate is 20% or greater, or the median family income is at or below 80% of the state's median income. "Low access" areas are defined as census tracts where at least 500 people, or 33% of the population, live more than 1 mile (urban area) or 10 miles (rural area) from a supermarket or large grocery store [@hp2030-access-foods-2025].
 
-Many M-H Counties experienced a decrease in the percentage of the population with low income and low access to food, which is a positive trend. Putnam County had the highest percentage of residents with limited access to healthy food (6.7%) and was almost five times that of Westchester County (1.4%). Most of the counties in the M-H Region fall above NYS (2.0%) excluding Westchester County. [@fig-limited-healthy-foods]
+Many M-H Counties experienced a decrease in the percentage of the population with low income and low access to food, which is a positive trend. Putnam County had the highest percentage of residents with limited access to healthy food (6.7%) and was almost five times that of Westchester County (1.4%). Most of the counties in the M-H Region fall above NYS (2.0%) excluding Westchester County. [@fig-limited-healthy-foods] and [@tbl-limited-healthy-foods].
 
 <!--Figure 18: "Percentage of Population with Limited Access to Healthy Foods, 2025"-->
 {{< include _generated/objects/fig-limited-healthy-foods.qmd >}}
@@ -864,7 +863,7 @@ Exposure to violence can also have negative impacts on mental health, with conse
 
 The NYS Division of Criminal Justice Services collects crime reports from police and sheriffs’ departments and submits them to the Federal Bureau of Investigation (FBI) as New York’s official crime statistics. Violent crime totals include reports of murder, rape, robbery, and aggravated assault.
 
-The M-H Region saw fluctuations in violent crime rates between 2018 and 2021. In 2021 all M-H Counties remained below the NYS without NYC rate and the NYS rate. Putnam County consistently had the lowest violent crime rate in the M-H Region from 2018 through 2021. Orange County has the highest rate (192.4 per 100,000). Sullivan County had the highest rates in 2018 and 2019 but has shown a consistent decrease over the four years. [@fig-violent-crime]
+The M-H Region saw fluctuations in violent crime rates between 2018 and 2021. In 2021 all M-H Counties remained below the NYS without NYC rate and the NYS rate. Putnam County consistently had the lowest violent crime rate in the M-H Region from 2018 through 2021. Orange County has the highest rate (192.4 per 100,000). Sullivan County had the highest rates in 2018 and 2019 but has shown a consistent decrease over the four years. [@fig-violent-crime] and [@tbl-violent-crime].
 
 <!--Figure 19: "Violent Crime Rate per 100,000 Population, 2018–2021"-->
 {{< include _generated/objects/fig-violent-crime.qmd >}}
@@ -891,7 +890,7 @@ Three environmental conditions that negatively impact population health include 
 
 Air pollution has been linked to several poor health outcomes, particularly those related to the respiratory system. Negative consequences resulting from exposure to fine particulate matter in the air include, but are not limited to, decreased lung function, chronic bronchitis, and premature death [@county-health-rankings-air-pollution-factors-125-2022]. Air particulate matter can come from a variety of sources, such as automobiles, industry, and forest fires.
 
-Across all M-H Region Counties and New York State, the average daily density of fine particulate matter generally declined between 2014 and 2020. Westchester County consistently has the highest levels, it also experienced a decline since 2014. Sullivan County and Orange County fluctuate between having the lowest levels. Only Sullivan County and Orange County have periodically had levels lower than NYS. [@fig-density-matter]
+Across all M-H Region Counties and New York State, the average daily density of fine particulate matter generally declined between 2014 and 2020. Westchester County consistently has the highest levels, it also experienced a decline since 2014. Sullivan County and Orange County fluctuate between having the lowest levels. Only Sullivan County and Orange County have periodically had levels lower than NYS. [@fig-density-matter] and [@tbl-density-matter].
 
 <!--Figure 20: "Average Daily Density of Fine Particulate Matter, 2014–2020"-->
 {{< include _generated/objects/fig-density-matter.qmd >}}
@@ -924,6 +923,7 @@ Maintaining water quality can be challenging. Sources of water contamination inc
 - Malfunctioning on-site wastewater treatment systems, such as septic systems [@cdc-drinking-water-causes-2024].
 
 Runoff can pose a risk to water quality and the health of people exposed to it. When it rains, water flows over impervious surfaces, such as pavement, and can pick up contaminants. Pollution can originate across large land areas or from a single point, such as an industrial pipe. Runoff can pick up sediment, nutrients, bacteria, pesticides, or petroleum byproducts from sources such as farms, waste, and roadways [@usgs-runoff-2018]. “The presence of certain contaminants in our water can lead to health issues, including gastrointestinal illness, reproductive problems, and neurological disorders. Infants, young children, pregnant women, the elderly, and people with weakened immune systems may be especially at risk for illness.” [@cdc-water-quality-health-2024]
+
 #### Lead Poisoning
 
 Lead affects every system of the body, and there is no safe blood lead level. Children are especially vulnerable to the negative impacts of lead exposure, which can lead to slowed growth and development, damage to the brain and nervous system, behavioral problems, and hearing and speech problems [@cdc-lead-health-effects-2024].
@@ -932,7 +932,7 @@ Lead exposure can occur from ingesting, coming in contact with, or breathing in 
 
 Sources of lead can include lead-based paints in homes built before 1978, consumer products such as certain jewelry or toys, aviation gas, working with stained glass, and water pipes that contain lead [@cdc-lead-prevention-sources-2024]. For children, lead-based paint is the most common source of lead exposure [@epa-childhood-lead-source-2024]. Populations at higher risk for lead exposure include children from low-income households, children less than six years old, immigrant and refugee children from less developed countries, pregnant people, and adults working in industries that expose them to lead [@cdc-lead-risk-factors-2024].
 
-New York State (NYS) requires health care providers to obtain a blood lead level for all children at age one and again at age two [@nysdoh-lead-2025]. Westchester County had the highest testing rate in the M-H Region, with 60.2% of children born in 2019 tested. Sullivan County had the lowest testing rate at 36.6%. Only Westchester County exceeded NYS' testing rate in all four years [@fig-lead-children].
+New York State (NYS) requires health care providers to obtain a blood lead level for all children at age one and again at age two [@nysdoh-lead-2025]. Westchester County had the highest testing rate in the M-H Region, with 60.2% of children born in 2019 tested. Sullivan County had the lowest testing rate at 36.6%. Only Westchester County exceeded NYS' testing rate in all four years [@fig-lead-children] and [@tbl-lead-children].
 
 <!--Figure 21: "Percentage of Children Tested for Lead at Least Twice Before 36 Months of Age, 2016–2019 Birth Cohorts"-->
 {{< include _generated/objects/fig-lead-children.qmd >}}
@@ -959,7 +959,7 @@ According to Healthy People 2030, housing quality refers to the physical conditi
 
 For this measure, severe housing problems are the percentage of households with one or more of the following housing problems: lack of complete kitchen facilities, lack of complete plumbing facilities, overcrowding, and severely cost-burdened households.
 
-Rockland County had the highest percentage (26.0%) of households with severe housing problems, three percent higher than that of NYS (23.0%). Putnam and Sullivan Counties had the lowest percentage (17.0% and 16.0%, respectively) of households with severe housing problems. [@fig-severe-housing]
+Rockland County had the highest percentage (26.0%) of households with severe housing problems, three percent higher than that of NYS (23.0%). Putnam and Sullivan Counties had the lowest percentage (17.0% and 16.0%, respectively) of households with severe housing problems. [@fig-severe-housing] and [@tbl-severe-housing]. 
 
 <!--Figure 22: "Percentage of Households with Severe Housing Problems, 2025"-->
 {{< include _generated/objects/fig-severe-housing.qmd >}}
@@ -984,7 +984,7 @@ Severe housing problems is the percentage of households with one or more housing
 
 Transportation can include walking, driving, biking, or utilizing public transportation, such as subways and buses [@hp2030-transportation-2025]. Access to transportation can affect all aspects of life including the ability to find or keep employment, the quantity and quality of food that can be accessed, and access to health care. Studies have shown that those with access to a car are less likely to miss appointments or delay care when compared to those relying on other forms of transportation [@sciencedirect-transport-access-healthcare-2020].
 
-Westchester County had the highest percentage of households with no available vehicles at 14.2%. Putnam County had the lowest percentage of households with no available vehicles at 4.2%. All counties within the M-H Region were below the NYS rate with residents having more access to vehicles. [@fig-no-vehicles]
+Westchester County had the highest percentage of households with no available vehicles at 14.2%. Putnam County had the lowest percentage of households with no available vehicles at 4.2%. All counties within the M-H Region were below the NYS rate with residents having more access to vehicles. [@fig-no-vehicles] and [@tbl-no-vehicles].
 
 <!--Figure 23: "Percentage of Households with No Available Vehicles, 2023"-->
 {{< include _generated/objects/fig-no-vehicles.qmd >}}
@@ -1009,7 +1009,7 @@ The American Community Survey asks respondents how many automobiles, vans, and t
 
 In addition to privately owned vehicles, modes of transportation can include walking, mass public transportation, and biking. Benefits of choosing mass public transportation, walking, and biking include protecting the environment by producing far less air pollution than cars and engaging in physical activity [@hp2030-transportation-2025]. However, these modes require individuals to rely more heavily on proper infrastructure, investment, and city planning to make travel safe and effective. Car-dependent cities and communities make it more difficult to use alternative modes of transportation to complete necessary daily tasks, such as going to the grocery store or getting to school, due to a lack of safe sidewalks and public transportation options [@sciencedirect-transport-access-healthcare-2020]. The transportation method people most often use to get to work can be an indicator of how car dependent an area is and how conducive it is to alternative modes of transportation.
 
-The majority of residents in the M-H Region report driving alone to work as their most common means of commuting. Sullivan County had the highest percentage of commuters driving alone to work (74.1%). Westchester County had a significantly larger share of commuters using public transportation than the rest of the M-H Region (17.8%), as well as the lowest percentage of commuters driving alone to work (51.9%). M-H Region residents were less likely to use public transportation or walk to work compared to NYS. An emerging trend of working from home was noted, with Putnam County (13.7)m Ulster County (15.3%) and Westchester County (17.3%) have the highest percentages in the M-H Region and exceeding NYS. [@fig-mode-to-work]
+The majority of residents in the M-H Region report driving alone to work as their most common means of commuting. Sullivan County had the highest percentage of commuters driving alone to work (74.1%). Westchester County had a significantly larger share of commuters using public transportation than the rest of the M-H Region (17.8%), as well as the lowest percentage of commuters driving alone to work (51.9%). M-H Region residents were less likely to use public transportation or walk to work compared to NYS. An emerging trend of working from home was noted, with Putnam County (13.7)m Ulster County (15.3%) and Westchester County (17.3%) have the highest percentages in the M-H Region and exceeding NYS. [@fig-mode-to-work] and [@tbl-mode-to-work].
 
 <!--Figure 24: "Modes of Transportation to Work, 2023"-->
 {{< include _generated/objects/fig-mode-to-work.qmd >}}
