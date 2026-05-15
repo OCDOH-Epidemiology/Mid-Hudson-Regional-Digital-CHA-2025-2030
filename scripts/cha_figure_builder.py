@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import warnings
 import textwrap
+import math
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -108,7 +109,10 @@ def _y_range(values: pd.Series, start_at_zero: bool, padding: float, is_bar_grap
     return [lower, upper]
 
 
-def _y_axis_tick_settings(values: pd.Series) -> dict[str, object]:
+def _y_axis_tick_settings(
+    values: pd.Series,
+    axis_range: list[float] | tuple[float, float] | None = None,
+) -> dict[str, object]:
     """
     Prefer whole-number y-axis ticks unless decimals are needed to show
     tight-range variation.
@@ -117,21 +121,48 @@ def _y_axis_tick_settings(values: pd.Series) -> dict[str, object]:
     if numeric.empty:
         return {}
 
-    integer_like = (numeric.sub(numeric.round()).abs() < 1e-9).all()
-    if integer_like:
-        return {"dtick": 1, "tickformat": ",.0f"}
+    def _nice_step(span: float, target_ticks: int = 12) -> float:
+        if span <= 0:
+            return 1.0
+        raw = span / max(target_ticks, 1)
+        magnitude = 10 ** math.floor(math.log10(raw))
+        normalized = raw / magnitude
+        if normalized <= 1:
+            nice = 1
+        elif normalized <= 2:
+            nice = 2
+        elif normalized <= 5:
+            nice = 5
+        else:
+            nice = 10
+        return nice * magnitude
 
-    span = float(numeric.max() - numeric.min())
-    # For broader ranges, keep whole-number ticks even if values include decimals.
-    if span >= 4:
-        return {"dtick": 1, "tickformat": ",.0f"}
+    integer_like = (numeric.sub(numeric.round()).abs() < 1e-9).all()
+    data_span = float(numeric.max() - numeric.min())
+    span = data_span
+    if axis_range and len(axis_range) == 2:
+        axis_span = float(axis_range[1]) - float(axis_range[0])
+        if axis_span > 0:
+            span = axis_span
+
+    if integer_like:
+        step = max(1.0, _nice_step(span))
+        if step == 10 and span <= 80:
+            step = 5.0
+        return {"dtick": step, "tickformat": ",.0f"}
 
     half_step_like = (numeric.mul(2).sub(numeric.mul(2).round()).abs() < 1e-9).all()
-    if half_step_like:
+    # If values are all .0/.5, keep that granularity only for tighter ranges.
+    if half_step_like and data_span <= 8:
         return {"dtick": 0.5, "tickformat": ",.1f"}
 
-    # Fallback for tight ranges with non-half-step decimals.
-    return {"tickformat": ",.1f"}
+    step = _nice_step(span)
+    if step == 10 and span <= 80:
+        step = 5.0
+    if step >= 1:
+        # Broader decimal ranges still read best with whole-number axis labels.
+        return {"dtick": step, "tickformat": ",.0f"}
+    return {"dtick": step, "tickformat": ",.1f"}
 
 
 def _coerce_year_axis(values: pd.Series | pd.DataFrame) -> tuple[pd.Series, dict[str, object]]:
@@ -378,7 +409,7 @@ def build_clustered_bar_figure(
         font_family=font_family,
         is_bar_graph=True,
     )
-    y_tick_settings = _y_axis_tick_settings(y_series)
+    y_tick_settings = _y_axis_tick_settings(y_series, y_range)
     fig.update_layout(
         barmode="group",
         bargap=0.30,
@@ -476,7 +507,7 @@ def build_stacked_bar_figure(
         barmode="stack",
         margin=dict(l=80, r=200, t=40, b=min(320, bottom_margin + 20)),
     )
-    fig.update_yaxes(**_y_axis_tick_settings(y_series))
+    fig.update_yaxes(**_y_axis_tick_settings(y_series, y_range))
     fig.update_xaxes(
         tickangle=0,
         automargin=True,
@@ -616,7 +647,7 @@ def build_simple_bar_figure(
         barmode="group",
         margin=dict(l=80, r=40, t=40, b=min(300, bottom_margin + 20)),
     )
-    fig.update_yaxes(**_y_axis_tick_settings(y_series))
+    fig.update_yaxes(**_y_axis_tick_settings(y_series, y_range))
     fig.update_xaxes(
         tickangle=0,
         automargin=True,
@@ -689,7 +720,7 @@ def build_horizontal_bar_figure(
         range=x_range,
         gridcolor="rgba(0, 0, 0, 0.15)",
         zerolinecolor="rgba(0, 0, 0, 0.2)",
-        **_y_axis_tick_settings(plot_df[value_col]),
+        **_y_axis_tick_settings(plot_df[value_col], x_range),
     )
     fig.update_yaxes(
         title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
@@ -788,7 +819,7 @@ def build_interactive_line_figure(
         height=height,
         font_family=font_family,
     )
-    fig.update_yaxes(**_y_axis_tick_settings(y_series))
+    fig.update_yaxes(**_y_axis_tick_settings(y_series, y_range))
     if x_axis_options:
         fig.update_xaxes(**x_axis_options)
     elif is_categorical_x:
