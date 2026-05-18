@@ -98,12 +98,25 @@ Tobacco use can also have disproportionate effects on diverse populations. For e
 
 ![2024 NYS Smokers Quitline statewide highlights graphic](../media/figure-168-nys-smokefree-statewide-highlights.png){#fig-nys-smokefree-statewide-highlights fig-alt="2024 NYS Smokers Quitline statewide highlights graphic" width="100%"}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Smokers’ Quitline, 2024
+https://www.nysmokefree.com/wp-content/uploads/2025/02/2024_SustainabilityReport_StatewideHighlights.pdf
+:::
+
 From 2016 to 2021, the percentage of adults who smoked cigarettes decreased in almost every county in the M-H Region, with the exception of Dutchess and Rockland Counties, NYS, and NYS excluding NYC. In 2021, Dutchess County had the highest percentage of adults who smoked cigarettes and Westchester County had the lowest percentage (17.4% and 6.3%, respectively). The Healthy People 2030 goal is to reduce cigarette smoking among adults to 6.1% [@hp2030-reduce-adult-cigarette-smoking-tu-02-2025]. [@fig-adult-currsmoke-percent]
 
 Figure 169 Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021
 
 <!--Figure 169: "Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-adult-currsmoke-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, May 2025
+https://www.health.ny.gov/statistics/brfss/expanded/
+:::
+
 
 ::: {.callout-note} 
 *: Percentage is unreliable due to large standard error.
@@ -151,6 +164,14 @@ From 2019 to 2020, ED visit rates for overdoses involving any opioid increased i
 
 {{< include _generated/objects/tbl-ed-visit-opioid-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Opioid Data Dashboard, May 2025 sourced from NY Statewide Planning and Research Cooperative System
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
+
+
 ::: {.callout-note}
 Note: Includes outpatient and admitted patient visits to the emergency department involving any opioid poisoning as the principal diagnosis
 or first-listed cause of injury.
@@ -162,6 +183,13 @@ Hospital discharges involving any opioid overdose have generally remained stable
 {{< include _generated/objects/fig-hospital-dc-opioid-aar.qmd >}}
 
 {{< include _generated/objects/tbl-hospital-dc-opioid-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Opioid Data Dashboard, May 2025 sourced from NY Statewide Planning and Research Cooperative System
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -177,6 +205,11 @@ This flattened trend is evident in the M-H Region, where in most counties the nu
 
 {{< include _generated/objects/tbl-treat-prog-opioid-crude.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+Data request from NYS Office of Addiction Services and Supports Client Data System, May 2025
+:::
+
 ::: {.callout-note}
 Note: This indicator includes people who were admitted to an OASAS-certified substance use disorder treatment program. A person is counted once if they were in treatment (received one or more services) during the calendar year. A unique person may receive multiple services or be in treatment for many years and, therefore, may be counted uniquely across one or more calendar years. Totals cannot be summed across years/rows because they are not mutually exclusive. The most recent data collected for the year of enrollment was used to determine the person's county of residence during the reported year. Any opioid use includes heroin use.
 :::
@@ -187,6 +220,12 @@ From 2019 to 2022, the rate of overdose deaths involving any opioid steadily inc
 {{< include _generated/objects/fig-OD-anyopioid-crude.qmd >}}
 
 {{< include _generated/objects/tbl-OD-anyopioid-crude.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -214,6 +253,12 @@ When overdose deaths are stratified by age, the rate of overdose death was highe
 
 {{< include _generated/objects/tbl-18to64-anyop-od-crude.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Opioid Data Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
+
 ::: {.callout-note}
 Note: This includes adults aged 18–64 years old. Includes all poisoning deaths involving opioids, all manners, using all causes of death.
 :::
@@ -223,6 +268,12 @@ Crude Rate per 100,000 Population, 2022"-->
 {{< include _generated/objects/fig-18to64-heroin-od-crude.qmd >}}
 
 {{< include _generated/objects/tbl-18to64-heroin-od-crude.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Opioid Data Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -234,6 +285,12 @@ Crude Rate per 100,000 Population, 2022"-->
 {{< include _generated/objects/fig-18to64-opioid-pain-crude.qmd >}}
 
 {{< include _generated/objects/tbl-18to64-opioid-pain-crude.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -249,6 +306,12 @@ From 2020 to 2023, prescription rates for opioid analgesics (pain relievers) dec
 
 {{< include _generated/objects/tbl-opioid-analgesic-rx-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
+
 ::: {.callout-note}
 Note: Includes Schedule II (Drugs with some medically acceptable uses, but with high potential for abuse and/or addiction. These drugs can be obtained through prescription.), III (Drugs with low to moderate potential for abuse and/or addiction, but less dangerous than Schedule I or II. These drugs can be obtained through prescription but generally are not available over the counter.), and IV (Drugs with viable medical use and low probability of use or misuse.) opioid analgesic prescriptions dispensed to state residents.
 :::
@@ -260,6 +323,12 @@ Opioid Use Disorder, Age-Adjusted Rate per 100,000 Population, 2020–2023"-->
 {{< include _generated/objects/fig-at-least-1-bup-aar.qmd >}}
 
 {{< include _generated/objects/tbl-at-least-1-bup-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, May 2025 sourced from NYS Prescription Monitoring Program
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/
+:::
 
 ::: {.callout-note}
 Note: Patients Who Received at Least One Buprenorphine Prescription for Opioid Use Disorder, Age-Adjusted Rate per 100,000 Population, 2020–2023
@@ -279,6 +348,12 @@ Compared to Those 15–19 Years Old, 2020–2022
 
 {{< include _generated/objects/tbl-15to19-suicide-mortal-crude.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/statistics/chac/indicators/index.htm
+:::
+
 ::: {.callout-note}
 *: The rate is unstable.
 Note: Three-year averages are used for counties and single-year rates are used for Mid-Hudson, NYS, and NYS excluding NYC. The ICD-10 codes used for suicide are: X60-X84, Y87.0.
@@ -290,6 +365,12 @@ Suicide mortality rates remained relatively flat for a few counties and NYS from
 {{< include _generated/objects/fig-suicide-mortal-aar.qmd >}}
 
 {{< include _generated/objects/tbl-suicide-mortal-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/statistics/chac/indicators/index.htm
+:::
 
 ::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines. Three-year averages are used for counties and single-year rates
