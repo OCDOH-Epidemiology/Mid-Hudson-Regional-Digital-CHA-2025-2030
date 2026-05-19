@@ -244,10 +244,11 @@ function main() {
     fs.existsSync(targetPath)
   );
   if (existingTargets.length === 0) {
-    throw new Error(
-      "Generated search runtime not found in expected locations: " +
+    console.log(
+      "Skipping quarto search patch; generated search runtime not found in expected locations: " +
         candidateTargetPaths.join(", ")
     );
+    return;
   }
 
   let changedCount = 0;

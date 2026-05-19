@@ -240,11 +240,33 @@ def _parse_flat_indicator_sheet(
         return config, pd.DataFrame(), {}, False
 
     data_col_end_idx = last_used_col + 1
-    raw_headers = [df.iloc[data_header_idx, j] for j in range(data_col_start_idx, data_col_end_idx)]
+    header_row_idx = data_header_idx
+    format_row_idx = data_header_idx - 1
+    raw_headers = [df.iloc[header_row_idx, j] for j in range(data_col_start_idx, data_col_end_idx)]
     headers = [_as_text(h) for h in raw_headers]
 
+    # Some sheets place format codes (integer/percent1/etc.) on the same row as
+    # "Enter Data" and put real headers on the next row.
+    nonempty_headers = [h for h in headers if h]
+    looks_like_format_header_row = bool(nonempty_headers) and all(
+        _as_text(h).lower() in _VALID_FORMAT_CODES for h in nonempty_headers
+    )
+    if looks_like_format_header_row and header_row_idx + 1 < len(df):
+        next_headers = [
+            _as_text(df.iloc[header_row_idx + 1, j])
+            for j in range(data_col_start_idx, data_col_end_idx)
+        ]
+        next_nonempty = [h for h in next_headers if h]
+        next_is_real_headers = bool(next_nonempty) and not all(
+            h.lower() in _VALID_FORMAT_CODES for h in next_nonempty
+        )
+        if next_is_real_headers:
+            format_row_idx = header_row_idx
+            header_row_idx = header_row_idx + 1
+            headers = next_headers
+
     # Detect two-row merged header pattern (multilevel table).
-    data_start_idx = data_header_idx + 1
+    data_start_idx = header_row_idx + 1
     auto_multilevel = False
     sub_header_row_idx = data_header_idx + 1
     explicit_multilevel = (
@@ -331,8 +353,8 @@ def _parse_flat_indicator_sheet(
 
     # Read per-column format rules from row above Enter Data.
     format_rules: dict[str, str] = {}
-    if data_header_idx > 0:
-        fmt_row_idx = data_header_idx - 1
+    if format_row_idx >= 0:
+        fmt_row_idx = format_row_idx
         for j in range(data_col_start_idx, data_col_end_idx):
             header_pos = j - data_col_start_idx
             if header_pos < len(headers):
