@@ -298,6 +298,13 @@ def render_table_object(
     source_df = model.data_frames[record.data_sheet].copy()
     source_df = _prepare_table_df(source_df, table_spec.format_rules)
     source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
+    # Some figure-oriented sheets use "County" as configured X metadata even when
+    # the first column values are calendar years. Keep table headers semantic.
+    if not source_df.empty:
+        first_col = source_df.columns[0]
+        first_col_text = _as_text(first_col).lower()
+        if first_col_text == "county" and _is_time_like_column(source_df[first_col]):
+            source_df = source_df.rename(columns={first_col: "Year"})
     if table_spec.has_multilevel_headers:
         source_df = _rebuild_multiindex(source_df)
     if is_pdf_render():
