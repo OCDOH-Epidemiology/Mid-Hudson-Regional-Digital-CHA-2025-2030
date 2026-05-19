@@ -125,7 +125,7 @@ def _detect_region_columns(df: pd.DataFrame) -> list[str]:
 def _resolve_show_data_labels(spec: Any) -> bool:
     if getattr(spec, "show_data_labels", None) is not None:
         return bool(spec.show_data_labels)
-    return spec.figure_type in {"clustered_bar", "stacked_bar", "simple_bar"}
+    return False
 
 
 def _load_model(workbook_path: str | Path | None) -> WorkbookModel:

@@ -375,7 +375,7 @@ def build_clustered_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
-    show_data_labels: bool = True,
+    show_data_labels: bool = False,
 ) -> go.Figure:
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
@@ -473,7 +473,7 @@ def build_stacked_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
-    show_data_labels: bool = True,
+    show_data_labels: bool = False,
 ) -> go.Figure:
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
@@ -549,75 +549,7 @@ def build_simple_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
-    show_data_labels: bool = True,
-) -> go.Figure:
-    series = y_cols or [col for col in df.columns if col != x_col]
-    if not series:
-        raise ValueError("simple_bar requires at least one y-series column.")
-    y_col = series[0]
-    x_axis_title = x_axis_title or x_col
-    value_label = y_axis_title or "Value"
-    palette = palette or CHA_COLOR_PALETTE
-
-    fig = go.Figure()
-    data_label_settings = _bar_data_label_settings(show_data_labels, hover_value_format, hover_suffix)
-    fig.add_trace(
-        go.Bar(
-            x=df[x_col],
-            y=df[y_col],
-            name=y_col,
-            marker=dict(color=palette[0]),
-            hovertemplate=(
-                f"{x_axis_title}: %{{x}}<br>"
-                f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
-                "<extra></extra>"
-            ),
-        )
-    )
-
-    y_series = pd.to_numeric(df[y_col], errors="coerce")
-    y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
-    _apply_layout(
-        fig=fig,
-        x_axis_title=x_axis_title,
-        y_axis_title=y_axis_title,
-        y_range=y_range,
-        width=width,
-        height=height,
-        font_family=font_family,
-        is_bar_graph=True,
-    )
-    fig.update_layout(
-        showlegend=False,
-        bargap=0.30,
-        paper_bgcolor="#f2f2f2",
-        plot_bgcolor="#f2f2f2",
-        margin=dict(l=80, r=40, t=40, b=95),
-    )
-    fig.update_yaxes(
-        gridcolor="rgba(0, 0, 0, 0.15)",
-        zerolinecolor="rgba(0, 0, 0, 0.2)",
-    )
-    fig.update_xaxes(gridcolor="rgba(0, 0, 0, 0)")
-    return fig
-
-
-def build_simple_bar_figure(
-    df: pd.DataFrame,
-    x_col: str,
-    y_cols: list[str] | None = None,
-    *,
-    x_axis_title: str | None = None,
-    y_axis_title: str,
-    start_at_zero: bool = True,
-    y_padding: float = 0.1,
-    palette: list[str] | None = None,
-    width: int = 1000,
-    height: int = 600,
-    font_family: str = CHA_FONT_FAMILY,
-    hover_value_format: str = ".1f",
-    hover_suffix: str = "",
-    show_data_labels: bool = True,
+    show_data_labels: bool = False,
 ) -> go.Figure:
     """
     Build a single-series bar chart.

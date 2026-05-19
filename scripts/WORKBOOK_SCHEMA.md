@@ -63,7 +63,7 @@ Optional columns:
 
 - `pivot_for_chart` (`TRUE`/`FALSE`, default `FALSE`)
 - `group_by` (`x_col`/`series`, optional; overrides `pivot_for_chart` when provided)
-- `show_data_labels` (`TRUE`/`FALSE`, optional; bar charts default to `TRUE` when blank)
+- `show_data_labels` (`TRUE`/`FALSE`, optional; bar charts default to `FALSE` when blank)
 
 Column explanations:
 
@@ -83,8 +83,8 @@ Column explanations:
 - `pivot_for_chart`: when `TRUE`, reshapes wide data before plotting so chart orientation can change without editing source data layout.
 - `group_by`: explicit grouping intent for bar charts.
 - `show_data_labels`: controls on-bar value labels for `clustered_bar`, `stacked_bar`, and `simple_bar`.
-  - when omitted/blank, bar charts show labels by default
-  - set `FALSE` to hide labels for dense charts
+  - when omitted/blank, bar charts hide labels by default
+  - set `TRUE` to show labels for selected charts
   - `x_col`: group bars by values in `x_col` (counties become x-axis after pivot)
   - `series`: group bars by existing series columns (no pivot; `x_col` stays on axis)
 
