@@ -256,6 +256,20 @@ def _prepare_categorical_x_axis(
     return raw_labels, wrapped_labels, tick_font_size, bottom_margin
 
 
+def _bar_data_label_settings(
+    show_data_labels: bool,
+    value_format: str,
+    value_suffix: str,
+) -> dict[str, object]:
+    if not show_data_labels:
+        return {}
+    return {
+        "texttemplate": f"%{{y:{value_format}}}{value_suffix}",
+        "textposition": "outside",
+        "cliponaxis": False,
+    }
+
+
 def _apply_layout(
     fig: go.Figure,
     x_axis_title: str,
@@ -361,6 +375,7 @@ def build_clustered_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
+    show_data_labels: bool = True,
 ) -> go.Figure:
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
@@ -374,6 +389,7 @@ def build_clustered_bar_figure(
     )
 
     fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(show_data_labels, hover_value_format, hover_suffix)
     for col in ordered:
         fig.add_trace(
             go.Bar(
@@ -390,6 +406,7 @@ def build_clustered_bar_figure(
                     f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                     "<extra></extra>"
                 ),
+                **data_label_settings,
             )
         )
 
@@ -397,11 +414,9 @@ def build_clustered_bar_figure(
     y_series = pd.Series(y_values)
     y_range = _y_range(y_series, start_at_zero, y_padding, is_bar_graph=True)
 
-    # Match CHA clustered-bar visual style used in report templates.
-    x_title_text = "" if str(x_axis_title).strip().lower() == "county" else x_axis_title
     _apply_layout(
         fig=fig,
-        x_axis_title=x_title_text,
+        x_axis_title=x_axis_title,
         y_axis_title=y_axis_title,
         y_range=y_range,
         width=width,
@@ -458,6 +473,7 @@ def build_stacked_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
+    show_data_labels: bool = True,
 ) -> go.Figure:
     series = y_cols or [col for col in df.columns if col != x_col]
     ordered = _ordered_series(series)
@@ -471,6 +487,7 @@ def build_stacked_bar_figure(
     )
 
     fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(show_data_labels, hover_value_format, hover_suffix)
     for col in ordered:
         fig.add_trace(
             go.Bar(
@@ -487,6 +504,7 @@ def build_stacked_bar_figure(
                     f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                     "<extra></extra>"
                 ),
+                **data_label_settings,
             )
         )
 
@@ -531,6 +549,7 @@ def build_simple_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
+    show_data_labels: bool = True,
 ) -> go.Figure:
     series = y_cols or [col for col in df.columns if col != x_col]
     if not series:
@@ -541,6 +560,7 @@ def build_simple_bar_figure(
     palette = palette or CHA_COLOR_PALETTE
 
     fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(show_data_labels, hover_value_format, hover_suffix)
     fig.add_trace(
         go.Bar(
             x=df[x_col],
@@ -597,6 +617,7 @@ def build_simple_bar_figure(
     font_family: str = CHA_FONT_FAMILY,
     hover_value_format: str = ".1f",
     hover_suffix: str = "",
+    show_data_labels: bool = True,
 ) -> go.Figure:
     """
     Build a single-series bar chart.
@@ -615,6 +636,7 @@ def build_simple_bar_figure(
     )
 
     fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(show_data_labels, hover_value_format, hover_suffix)
     fig.add_trace(
         go.Bar(
             x=x_values_wrapped,
@@ -627,6 +649,7 @@ def build_simple_bar_figure(
                 f"{value_label}: %{{y:{hover_value_format}}}{hover_suffix}"
                 "<extra></extra>"
             ),
+            **data_label_settings,
         )
     )
 

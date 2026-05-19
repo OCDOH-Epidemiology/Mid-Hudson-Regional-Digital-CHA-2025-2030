@@ -68,6 +68,7 @@ class FigureSpec:
     start_at_zero: bool
     hover_suffix: str
     pivot_for_chart: bool = False
+    show_data_labels: bool | None = None
 
 
 @dataclass(frozen=True)
@@ -490,6 +491,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                     if group_by_override is not None
                     else _as_bool(_config_value(config, "Pivot For Chart", False))
                 )
+                show_data_labels_raw = _config_value(config, "Show Data Labels", "")
                 figure_specs[object_id] = FigureSpec(
                     object_id=object_id,
                     figure_type=figure_type,
@@ -500,6 +502,11 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                     start_at_zero=_as_bool(_config_value(config, "Start at Zero", False)),
                     hover_suffix=_as_text(_config_value(config, "Hover Suffix", "%")),
                     pivot_for_chart=pivot_for_chart,
+                    show_data_labels=(
+                        _as_bool(show_data_labels_raw, default=False)
+                        if _as_text(show_data_labels_raw) != ""
+                        else None
+                    ),
                 )
             else:
                 has_multilevel = auto_multilevel or _as_bool(_config_value(config, "Multilevel Headers", False))
@@ -597,6 +604,11 @@ def _load_normalized_workbook(source_path: Path) -> WorkbookModel:
             start_at_zero=_as_bool(row.get("start_at_zero", False)),
             hover_suffix=_as_text(row.get("hover_suffix", "")),
             pivot_for_chart=pivot_for_chart,
+            show_data_labels=(
+                _as_bool(row.get("show_data_labels", False))
+                if str(row.get("show_data_labels", "")).strip() != ""
+                else None
+            ),
         )
 
     table_specs: dict[str, TableSpec] = {}

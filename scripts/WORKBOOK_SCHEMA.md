@@ -63,6 +63,7 @@ Optional columns:
 
 - `pivot_for_chart` (`TRUE`/`FALSE`, default `FALSE`)
 - `group_by` (`x_col`/`series`, optional; overrides `pivot_for_chart` when provided)
+- `show_data_labels` (`TRUE`/`FALSE`, optional; bar charts default to `TRUE` when blank)
 
 Column explanations:
 
@@ -81,6 +82,9 @@ Column explanations:
 - `hover_suffix`: text appended in hover labels (for example, `%`).
 - `pivot_for_chart`: when `TRUE`, reshapes wide data before plotting so chart orientation can change without editing source data layout.
 - `group_by`: explicit grouping intent for bar charts.
+- `show_data_labels`: controls on-bar value labels for `clustered_bar`, `stacked_bar`, and `simple_bar`.
+  - when omitted/blank, bar charts show labels by default
+  - set `FALSE` to hide labels for dense charts
   - `x_col`: group bars by values in `x_col` (counties become x-axis after pivot)
   - `series`: group bars by existing series columns (no pivot; `x_col` stays on axis)
 
@@ -111,6 +115,7 @@ Flat per-indicator workbook key names map to the same settings:
 - `X Column` -> `x_col`
 - `Group By` -> `group_by`
 - `Pivot For Chart` -> `pivot_for_chart`
+- `Show Data Labels` -> `show_data_labels`
 
 ### 3) `_table_specs` (required)
 

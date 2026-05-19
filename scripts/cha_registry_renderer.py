@@ -122,6 +122,12 @@ def _detect_region_columns(df: pd.DataFrame) -> list[str]:
     return region_cols
 
 
+def _resolve_show_data_labels(spec: Any) -> bool:
+    if getattr(spec, "show_data_labels", None) is not None:
+        return bool(spec.show_data_labels)
+    return spec.figure_type in {"clustered_bar", "stacked_bar", "simple_bar"}
+
+
 def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
     path = Path(workbook_path) if workbook_path else DEFAULT_WORKBOOK_PATH
     return load_cha_workbook(path)
@@ -487,6 +493,7 @@ def render_figure_object(
             start_at_zero=True,
             hover_value_format=".1f",
             hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "stacked_bar":
         return build_stacked_bar_figure(
@@ -498,6 +505,7 @@ def render_figure_object(
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
             hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "simple_bar":
         return build_simple_bar_figure(
@@ -509,6 +517,7 @@ def render_figure_object(
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
             hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "horizontal_bar":
         return build_horizontal_bar_figure(
