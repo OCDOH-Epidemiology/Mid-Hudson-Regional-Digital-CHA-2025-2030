@@ -69,28 +69,46 @@ In 2022, the percentage of deaths that were premature in the M-H Region (21%) wa
 
 {{< include _generated/objects/tbl-premature-death-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, March 2025 sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
+
 ::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines. Premature death includes deaths occurring before the age of 65
 :::
+:::
 
-There are significant disparities in premature death rates, with Black and Hispanic populations experiencing higher rates than other racial and ethnic groups. Figure 87 shows premature death as a percent difference between Black non-Hispanic and White non-Hispanic residents. Across the M-H Region, Black non-Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest difference was in Ulster County (25.3%) and the smallest was in Sullivan County (8.0%). The Prevention Agenda 2025–2030 sets an objective of 18.4% for this measure.
+There are significant disparities in premature death rates, with Black and Hispanic populations experiencing higher rates than other racial and ethnic groups. [@fig-premature-death-percent-diff-bnhvswnh] and [@tbl-premature-death-percent-diff-bnhvswnh] show premature death as a percent difference between Black non-Hispanic and White non-Hispanic residents. Across the M-H Region, Black non-Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest difference was in Ulster County (25.3%) and the smallest was in Sullivan County (8.0%). The Prevention Agenda 2025–2030 sets an objective of 18.4% for this measure.
 
 <!--Figure 87: "Premature Death as a Percent Difference Between Black Non-Hispanic and White Non-Hispanic Residents, 2019–2022"-->
 {{< include _generated/objects/fig-premature-death-percent-diff-bnhvswnh.qmd >}}
 
 {{< include _generated/objects/tbl-premature-death-percent-diff-bnhvswnh.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, March 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
+:::
+
 ::: {.callout-note}
 *: The rate is unstable.
 Note: Premature death includes deaths occurring before the age of 65. The percentage of premature deaths is calculated for both Black non-Hispanics and White non-Hispanics. Then, the difference is the Black non-Hispanic rate minus the White non-Hispanic rate. 
 :::
 
-[@fig-premature-death-percent-diff-hvswnh] shows premature death as a percent difference between Hispanic and White non-Hispanic residents. Across the M-H Region, Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest differences were in Sullivan and Putnam Counties (29.6% and 28.9%, respectively), and the smallest difference was in Orange County (17.2%). The Prevention Agenda 2025–2030 sets an objective of 17% for this measure.
+[@fig-premature-death-percent-diff-hvswnh] and [@tbl-premature-death-percent-diff-hvswnh] show premature death as a percent difference between Hispanic and White non-Hispanic residents. Across the M-H Region, Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest differences were in Sullivan and Putnam Counties (29.6% and 28.9%, respectively), and the smallest difference was in Orange County (17.2%). The Prevention Agenda 2025–2030 sets an objective of 17% for this measure.
 
 <!--Figure 88: "Premature Death as a Percent Difference Between Hispanic and White Non-Hispanic Residents, 2019–2022"-->
 {{< include _generated/objects/fig-premature-death-percent-diff-hvswnh.qmd >}}
 
 {{< include _generated/objects/tbl-premature-death-percent-diff-hvswnh.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, March 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
+:::
+
 
 ::: {.callout-note}
 Note: Premature death includes deaths occurring before the age of 65. The percentage of premature deaths is calculated for Hispanics and White non-Hispanics. Then, the difference is the Hispanic rate minus the White non-Hispanic rate
@@ -102,12 +120,17 @@ Note: Premature death includes deaths occurring before the age of 65. The percen
 
 #### Chronic Lower Respiratory Diseases
 
-Chronic Lower Respiratory Disease (CLRD) is a classification of diseases that affect the lungs and respiratory tract. These diseases include asthma, emphysema, chronic bronchitis, and chronic obstructive pulmonary disease (COPD) [@jama-clrd-definitions-2021]. CLRD was the fifth leading cause of death in the U.S. in 2023 [@cdc-data-brief-leading-causes-2024]. In 2020–2022, the CLRD hospitalization rate in the M-H Region was lower than that of NYS and NYS excluding NYC. Orange County had the highest rate of CLRD hospitalizations (13.8 per 10,000), followed by Dutchess and Sullivan Counties (12.0 and 11.8 per 10,000, respectively). Putnam County had the lowest CLRD hospitalization rate (8.1 per 10,000) [see Figure 89].
+Chronic Lower Respiratory Disease (CLRD) is a classification of diseases that affect the lungs and respiratory tract. These diseases include asthma, emphysema, chronic bronchitis, and chronic obstructive pulmonary disease (COPD) [@jama-clrd-definitions-2021]. CLRD was the fifth leading cause of death in the U.S. in 2023 [@cdc-data-brief-leading-causes-2024]. In 2020–2022, the CLRD hospitalization rate in the M-H Region was lower than that of NYS and NYS excluding NYC. Orange County had the highest rate of CLRD hospitalizations (13.8 per 10,000), followed by Dutchess and Sullivan Counties (12.0 and 11.8 per 10,000, respectively). Putnam County had the lowest CLRD hospitalization rate (8.1 per 10,000) [@fig-clrd-hospital-aar] and [@tbl-clrd-hospital-aar].
 
 <!--Figure 89: "Chronic Lower Respiratory Disease Hospitalization, Age-Adjusted Rate per 10,000 Population, 2020–2022"-->
 {{< include _generated/objects/fig-clrd-hospital-aar.qmd >}}
 
 {{< include _generated/objects/tbl-clrd-hospital-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NY Statewide Planning and Research Cooperative System https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 ::: {.callout-note}
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes for CLRD are: J40-J47.
@@ -120,6 +143,11 @@ In 2020–2022, CLRD mortality rates varied across the region’s seven counties
 
 {{< include _generated/objects/tbl-clrd-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from Vital Statistics of NYS https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. This indicator includes deaths with chronic lower respiratory disease as the primary cause of death. The ICD-10 codes for CLRD are: J40-J47.
 :::
@@ -131,6 +159,13 @@ When stratifying CLRD by race and ethnicity, disparities were not consistent bet
 
 {{< include _generated/objects/tbl-clrd-hospital-rande-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System
+https://www.health.ny.gov/statistics/community/minority/county/orange.htm
+:::
+
 ::: {.callout-note}
 s: Data are suppressed due to not meeting confidentiality criteria.
 Note: The ICD-10 codes for CLRD are: J40-J47.
@@ -140,6 +175,12 @@ Note: The ICD-10 codes for CLRD are: J40-J47.
 {{< include _generated/objects/fig-clrd-mortal-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-clrd-mortal-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/statistics/community/minority/county/orange.htm
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -153,31 +194,55 @@ Asthma is caused by airway restriction in the lungs resulting in difficulty brea
 
 There is no way to cure asthma, but it can be managed with medication and by avoiding triggers [@who-asthma-fact-sheet-2025]. Triggers can include environmental factors such as secondhand smoke, air pollution, and mold; infections; physical activity; and emotional stress [@cdc-asthma-control-2024]. Asthma is a serious burden on the health care system, accounting for over 900,000 emergency department visits and 94,000 inpatient hospital stays nationally [@cdc-asthma-most-recent-national-data-2023].
 
-In the U.S., 8.0% of adults have asthma [@cdc-asthma-most-recent-national-data-2023]. In 2021, this percentage varied across the seven counties in the M-H Region. According to Figure 93, Sullivan County had the highest percentage of adults with asthma (12.3%), while Rockland County had the lowest percentage (7.4%). Since 2016, Dutchess, Orange, Rockland, and Ulster Counties have had overall increases in the percentage of adults with asthma, while Putnam and Westchester Counties have had overall decreases. The percentages in Sullivan County, NYS, and NYS excluding NYC have stayed relatively stable.
+In the U.S., 8.0% of adults have asthma [@cdc-asthma-most-recent-national-data-2023]. In 2021, this percentage varied across the seven counties in the M-H Region. According to [@fig-brfss-adult-asthma] and [@tbl-brfss-adult-asthma], Sullivan County had the highest percentage of adults with asthma (12.3%), while Rockland County had the lowest percentage (7.4%). Since 2016, Dutchess, Orange, Rockland, and Ulster Counties have had overall increases in the percentage of adults with asthma, while Putnam and Westchester Counties have had overall decreases. The percentages in Sullivan County, NYS, and NYS excluding NYC have stayed relatively stable.
 
 <!--Figure 93: "Percentage of Adults with Asthma, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-brfss-adult-asthma.qmd >}}
 
 {{< include _generated/objects/tbl-brfss-adult-asthma.qmd >}}
 
-The rates of asthma hospitalization vary across the M-H Region and NYS. When looking at the recent three-year average from 2020–2022 in Figure 94, Westchester County had the highest asthma hospitalization rate at 5.9 per 10,000 population, while Rockland County had the lowest rate at 3.2 per 10,000 population. The rate across the whole M-H Region was similar to the rate across NYS excluding NYC (4.9 vs 4.2 per 10,000, respectively).
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, June 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data
+:::
+
+::: {.callout-note} 
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks
+respondents, “Has a doctor, nurse, or other health professional ever told you had asthma?” and “Do you still have asthma?”
+:::
+
+The rates of asthma hospitalization vary across the M-H Region and NYS. When looking at the recent three-year average from 2020–2022 in [@fig-asthma-hopsital-aar] and [@tbl-asthma-hopsital-aar], Westchester County had the highest asthma hospitalization rate at 5.9 per 10,000 population, while Rockland County had the lowest rate at 3.2 per 10,000 population. The rate across the whole M-H Region was similar to the rate across NYS excluding NYC (4.9 vs 4.2 per 10,000, respectively).
 
 <!--Figure 94: "Asthma Hospitalization, Age-Adjusted Rate per 10,000, 2020–2022"-->
 {{< include _generated/objects/fig-asthma-hopsital-aar.qmd >}}
 
 {{< include _generated/objects/tbl-asthma-hopsital-aar.qmd >}}
 
-::: {.callout-note}
-NNote: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 code for asthma is: J45.
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&
+p=ch&cos=33
 :::
 
-When stratifying the data by race and ethnicity, as shown in Figure 95, non-Hispanic Black adults had higher rates of asthma hospitalization than non-Hispanic White and Hispanic adults. This pattern was consistent throughout the M-H Region counties, as well as in NYS and NYS excluding NYC. Lowest rates were generally seen among non-Hispanic White adults. Rates for non-Hispanic Asian/Pacific Islander adults were unstable or suppressed across most of the M-H Region counties.
+::: {.callout-note}
+Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 code for asthma is: J45.
+:::
 
+When stratifying the data by race and ethnicity, as shown in [@fig-asthma-hopsital-rande-aar] and [@tbl-asthma-hopsital-rande-aar], non-Hispanic Black adults had higher rates of asthma hospitalization than non-Hispanic White and Hispanic adults. This pattern was consistent throughout the M-H Region counties, as well as in NYS and NYS excluding NYC. Lowest rates were generally seen among non-Hispanic White adults. Rates for non-Hispanic Asian/Pacific Islander adults were unstable or suppressed across most of the M-H Region counties.
 
 <!--Figure 95: "Asthma Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2020–2022"-->
 {{< include _generated/objects/fig-asthma-hopsital-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-asthma-hopsital-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://www.health.ny.gov/statistics/community/minority/county/orange.htm
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -185,12 +250,18 @@ s: Data are suppressed due to not meeting confidentiality criteria.
 Note: The ICD-10-CM code used for asthma is: J45.
 :::
 
-The Emergency Department (ED) is commonly used to treat asthma-related complications. When looking at those aged 0–17 years in the M-H Region [see Figure 96], in 2022 Sullivan County had the highest ED visit rate (104.1 per 10,000), while Rockland County and Putnam County had the lowest rates in the region (32.0 and 39.9 per 10,000, respectively). According to Figure 93, rates across all M-H Region counties, NYS, and NYS excluding NYC saw a sharp decrease from 2019 to 2020 and then steadily increased through 2022. In most cases, rates increased to near where they were before the COVID-19 pandemic, with the exception of Sullivan County, which has surpassed its pre-COVID-19 rate. All counties in the M-H Region met the objective outlined in the Prevention Agenda 2019–2024 of falling below 131.1 asthma ED visits per 10,000 among those aged 0–17 years by 2024.
+The Emergency Department (ED) is commonly used to treat asthma-related complications. When looking at those aged 0–17 years in the M-H Region [@fig-0to17-asthma-ed-rate] and [@tbl-0to17-asthma-ed-rate], in 2022 Sullivan County had the highest ED visit rate (104.1 per 10,000), while Rockland County and Putnam County had the lowest rates in the region (32.0 and 39.9 per 10,000, respectively). According to [@fig-brfss-adult-asthma] and [@tbl-brfss-adult-asthma], rates across all M-H Region counties, NYS, and NYS excluding NYC saw a sharp decrease from 2019 to 2020 and then steadily increased through 2022. In most cases, rates increased to near where they were before the COVID-19 pandemic, with the exception of Sullivan County, which has surpassed its pre-COVID-19 rate. All counties in the M-H Region met the objective outlined in the Prevention Agenda 2019–2024 of falling below 131.1 asthma ED visits per 10,000 among those aged 0–17 years by 2024.
 
 <!--Figure 96: "Asthma Emergency Department Visits, Age-Adjusted Rate per 10,000, 2019–2022"-->
 {{< include _generated/objects/fig-0to17-asthma-ed-rate.qmd >}}
 
 {{< include _generated/objects/tbl-0to17-asthma-ed-rate.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Source: NYS Asthma Dashboard, June 2025 sourced from NY Statewide Planning and Research Cooperative System
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/asthma/reports/#county
+:::
 
 ::: {.callout-note}
 † 2023 data not available for Mid-Hudson
@@ -203,12 +274,19 @@ Cardiovascular disease refers to several conditions that affect the heart and ot
 
 Key risk factors for cardiovascular disease include high blood pressure, high cholesterol, and smoking. Other risk factors include diabetes, obesity, unhealthy diet, physical inactivity, and excessive alcohol use [@cdc-heart-disease-risk-factors-2024]. Research also shows an association between mental health disorders, such as mood disorders, anxiety disorders, chronic stress, and Post-Traumatic Stress Disorder (PTSD), and heart disease through both behavioral and physiological pathways [@cdc-heart-disease-mental-health-2024].
 
-According to Figure 97, in 2021, Sullivan County had the highest percentage of adults with cardiovascular disease (limited to heart attack, coronary artery disease, and stroke) in the M-H Region at 7.4%, a decrease from the region-wide peak of 8.6% in 2018. In 2021, Rockland County had the lowest percentage of adults with cardiovascular disease in the M-H Region at 5.7%, and the largest decrease from 2018 to 2021 (from 8.0% to 5.7%, respectively). This was followed by Orange County, which decreased from 7.8% in 2018 to 6.6% in 2021. Putnam County saw the largest increase of any county in the M-H Region, rising from 4.5% in 2018 to 6.8% in 2021, followed closely by Ulster County, which increased from 4.5% in 2018 to 6.7% in 2021.
+According to [@fig-adult-cardiovasdz-percent] and [@tbl-adult-cardiovasdz-percent], in 2021, Sullivan County had the highest percentage of adults with cardiovascular disease (limited to heart attack, coronary artery disease, and stroke) in the M-H Region at 7.4%, a decrease from the region-wide peak of 8.6% in 2018. In 2021, Rockland County had the lowest percentage of adults with cardiovascular disease in the M-H Region at 5.7%, and the largest decrease from 2018 to 2021 (from 8.0% to 5.7%, respectively). This was followed by Orange County, which decreased from 7.8% in 2018 to 6.6% in 2021. Putnam County saw the largest increase of any county in the M-H Region, rising from 4.5% in 2018 to 6.8% in 2021, followed closely by Ulster County, which increased from 4.5% in 2018 to 6.7% in 2021.
 
 <!--Figure 97: "Percentage of Adults with Cardiovascular Disease, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-adult-cardiovasdz-percent.qmd >}}
 
 {{< include _generated/objects/tbl-adult-cardiovasdz-percent.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance
+System https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "Has a doctor, nurse, or other health professional ever told you that you had any of the following:” and “Ever told you that you had a heart attack also called a myocardial infarction?” and “Ever told you that you had angina or coronary heart disease?” Based on responses to these questions, a person has Cardiovascular Disease if they responded yes to either of these questions.
@@ -221,6 +299,12 @@ Recent data from 2019–2021 show that Sullivan County had the highest cardiovas
 
 {{< include _generated/objects/tbl-cardiovasdz-hospi-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, March 2025 sourced from NY Statewide Planning and Research Cooperative System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: The 2018 population estimates are also used to calculate 2019 and 2020 rates. The ICD-10 codes used for cardiovascular disease are: I00-I99.
 :::
@@ -232,6 +316,13 @@ From 2014–2021, the rates of cardiovascular mortality generally trended downwa
 {{< include _generated/objects/fig-cardiovasdz-mortal-aar.qmd >}}
 
 {{< include _generated/objects/tbl-cardiovasdz-mortal-aar.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, March 2025 sourced from Vital Statistics of NYS
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: This indicator includes deaths with cardiovascular disease as the primary cause of death. The ICD-10 codes for cardiovascular disease are: I00-I99.
@@ -249,6 +340,13 @@ From 2016 to 2021, the age-adjusted percentage of adults with physician-diagnose
 
 {{< include _generated/objects/tbl-adult-highbp-mddx-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+ NYSDOH Behavioral Risk Factor Surveillance System, March 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data
+:::
+
+
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "Have you ever been told by a doctor, nurse, or other health professional that you have high blood pressure?” Based on the responses to this question, a person has High Blood Pressure if they answered yes, and this excludes females who were told this only while they were pregnant.
 :::
@@ -265,6 +363,12 @@ Recent data from 2019–2021 show that Sullivan County had the highest stroke ho
 
 {{< include _generated/objects/tbl-cerebrovasdz-hospital-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, March 2025 sourced from NY Statewide Planning and Research Cooperative System
+Cooperative System https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
 :::
@@ -275,6 +379,12 @@ When stratified by race and ethnicity, the age-adjusted cerebrovascular disease 
 {{< include _generated/objects/fig-cerebrovasdz-hospital-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-cerebrovasdz-hospital-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://www.health.ny.gov/statistics/community/minority/county/index.htm
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -289,6 +399,12 @@ From 2018 to 2021, age-adjusted cerebrovascular disease mortality rates per 100,
 
 {{< include _generated/objects/tbl-cerebrovasdz-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, March 2025 sourced from Vital Statistics of NYS
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: This indicator includes deaths with cerebrovascular disease as the primary cause of death. The ICD-10 codes for cerebrovascular disease are: I60-I69.
 :::
@@ -299,6 +415,13 @@ When stratified by race and ethnicity, the age-adjusted cerebrovascular disease 
 {{< include _generated/objects/fig-cerebrovasdz-mortal-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-cerebrovasdz-mortal-rande-aar.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/statistics/community/minority/county/index.htm
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -315,6 +438,12 @@ Data from 2021 show that Sullivan County had the highest CHD hospitalization rat
 
 {{< include _generated/objects/tbl-coronary-heart-disease-hospital-aar.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 ::: {.callout-note}
 Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
 :::
@@ -325,6 +454,12 @@ When stratifying this data by race and ethnicity, trends are not consistent thro
 {{< include _generated/objects/fig-coronary-heart-disease-hospital-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-coronary-heart-disease-hospital-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity, February 2025
+https://www.health.ny.gov/community/health_equity/reports/county/county_list.htm
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -338,6 +473,13 @@ When looking at recent data from 2021, the heart attack hospitalization rate was
 
 {{< include _generated/objects/tbl-heartattack-hospital-aar.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, September 2025 sourced from NY Statewide Planning and Research
+Cooperative System, February 2025 https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/
+:::
+
 ::: {.callout-note}
 Note: Three-year averages are used for counties, and single-year estimates are used for Mid-Hudson and NYS.
 :::
@@ -348,6 +490,12 @@ CHD mortality rates have overall increased from 2018 to 2021 in most M-H Region 
 {{< include _generated/objects/fig-congheartfail-mortal-aar.qmd >}}
 
 {{< include _generated/objects/tbl-congheartfail-mortal-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, September 2025
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: Three-year age-adjusted rates for counties and single-year age-adjusted rates for NYS and NYS excluding NYC are used in both the
@@ -372,6 +520,13 @@ Stratifying by race and ethnicity, the trends vary by county. Non-Hispanic Black
 
 {{< include _generated/objects/tbl-congheartfail-mortal-rande.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity, September 2025
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
+
 ::: {.callout-note}
 *: The rate is unstable.
 :::
@@ -384,6 +539,13 @@ From 2018–2021, heart attack mortality rates have been highest in Sullivan Cou
 
 {{< include _generated/objects/tbl-heartattack-mortal-aar.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
 ::: {.callout-note}
 Note: Three-year averages are used for counties, and single-year estimates are used for NYS excluding NYC, and NYS.
 :::
@@ -394,6 +556,12 @@ When looking at congestive heart failure (CHF) mortality rates from 2018–2021,
 {{< include _generated/objects/fig-congheartfail-mortal-aar-2.qmd >}}
 
 {{< include _generated/objects/tbl-congheartfail-mortal-aar-2.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county 
+:::
 
 ::: {.callout-note}     
 Note: The ICD-10 code for congestive heart failure is: I50.
@@ -420,15 +588,17 @@ Figure 112: "Diabetes, Age-Adjusted Percentage of Adults with Prediabetes and Di
 
 {{< include _generated/objects/tbl-mddx-predm-dm-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data
+:::
+
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Have you ever been told by a doctor or other health professional that you have prediabetes or borderline diabetes?" This excludes females who were told this only while they were pregnant.
 :::
 
 In 2021, diabetes hospitalization rates varied across the seven counties in the M-H Region. According to [@fig-dm-hospital-rande-aar], Sullivan County had the highest hospitalization rate at 213.3 per 10,000 population and Putnam County had the lowest rate at 115.1 per 10,000 population. These rates are compared to the NYS at 196.6 per 10,000 population.
-
-::: {.callout-note}
-Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
-:::
 
 When stratifying this data by race and ethnicity, diabetes hospitalization rates were highest among the nonHispanic Black population in NYS and NYS excluding NYC, along with five out of seven counties in the M-H Region. However, in Sullivan County, non-Hispanic White adults had the highest hospitalization rate (188.1 per 10,000 population). Dutchess and Putnam Non-Hispanic White adults had the highest hospitalization rates [@fig-dm-hospital-rande-aar].
 
@@ -436,6 +606,12 @@ When stratifying this data by race and ethnicity, diabetes hospitalization rates
 {{< include _generated/objects/fig-dm-hospital-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-dm-hospital-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, April 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 Note: This indicator includes hospitalizations with diabetes as the primary and/or other diagnosis referred to as “any diagnosis.” The ICD10 codes for diabetes are: E10-E14.
@@ -447,6 +623,12 @@ To avoid the consequences of uncontrolled diabetes, many adults get their blood 
 {{< include _generated/objects/fig-highbs-dm-percent.qmd >}}
 
 {{< include _generated/objects/tbl-highbs-dm-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, April 2025 sourced from NY Statewide Planning and Research
+Cooperative System https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, " Have you had a test for high blood sugar or diabetes within the past three years?" This excludes females who were told this only while they were pregnant.
@@ -460,6 +642,12 @@ from 2018 to 2021 [@fig-dm-mortal-aar].
 
 {{< include _generated/objects/tbl-dm-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data
+:::
+
 ::: {.callout-note}
 Note: This indicator includes deaths with diabetes as the primary cause of death. The ICD-10 codes for diabetes are: E10-E14.
 :::
@@ -471,6 +659,12 @@ When stratifying data by race and ethnicity, diabetes mortality rates were highe
 {{< include _generated/objects/fig-dm-mortal-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-dm-mortal-rande-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, April 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -488,6 +682,12 @@ In 2021, among the seven counties in the M-H Region, Orange County had the highe
 
 {{< include _generated/objects/tbl-adult-oando-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data
+:::
+
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "About how much do you weigh without shoes?" and "About how tall are you without shoes?" Based on the responses to these questions, Body Mass Index is calculated using the formula: weight in kilograms divided by height in meters squared (kg/m2). Respondents are classified as obese based on BMI 30.00 or higher. Respondents are classified as overweight based on BMI between 25.00 and 29.9.
 :::
@@ -502,6 +702,12 @@ Recent data show that more than 40% of adults aged 20 years and older in the U.S
 
 {{< include _generated/objects/tbl-adult-obese-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data
+:::
+
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents "About how much do you weigh without shoes?" and "About how tall are you without shoes?" Based on the responses to these questions, Body Mass Index is calculated using the formula: weight in kilograms divided by height in meters squared (kg/m2). Respondents are classified as obese based on BMI 30.00 or higher. Respondents are classified as overweight based on BMI between 25.00 and 29.9.
 :::
@@ -512,6 +718,12 @@ In 2007, the Student Weight Status Category Reporting System (SWSCRS) was establ
 {{< include _generated/objects/fig-child-oando-percent.qmd >}}
 
 {{< include _generated/objects/tbl-child-oando-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from NYS Student Weight Status Category Reporting
+System https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 ::: {.callout-note}
 Note: Overweight is defined as a body mass index (BMI) at or above the 85th percentile and below the 95th percentile. Obesity is defined as BMI greater than or equal to the 95th percentile. Counties outside NYC: grades pre-K, K, 2nd, 4th, 7th, and 10th prior to the 2019–2020 school year; grades pre-K, K, 1st, 3rd, 5th, 7th, 9th, and 11th starting with the 2019–2020 school year; data collected over two school years. Due to changes in Student Weight Status Category Reporting System data collection during the 2019–2020 school year, estimates from the 2019–2021 school years may not be directly comparable to previous school years.
@@ -526,6 +738,14 @@ Cirrhosis occurs when scarring permanently damages the liver and hinders it from
 
 {{< include _generated/objects/tbl-cirrhosis-hospital-aar.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 code for cirrhosis is: K70, K73-K74.
 :::
@@ -536,6 +756,13 @@ Between 2014 and 2021, cirrhosis mortality rates fluctuated across M-H Region co
 {{< include _generated/objects/fig-cirrhosis-mortal-aar.qmd >}}
 
 {{< include _generated/objects/tbl-cirrhosis-mortal-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NY Statewide Planning and Research
+Cooperative System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: Three-year averages are used for counties and single-year rates are used for NYS. The ICD-10 code for cirrhosis is: K70, K73-K74.
@@ -552,6 +779,12 @@ Cancer is one of the leading causes of death across all seven counties in the M-
 
 {{< include _generated/objects/tbl-allca-incident-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYS Cancer Registry and Statistics
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: Incidence rates of cancers are based on reports from hospitals and other health facilities that diagnose and treat cancer patients. These data include only invasive malignant tumors. For breast and prostate cancers, late-stage incidence rates are presented. "Late stage" is defined as all cancers that have spread beyond the organ of origin at the time of diagnosis.
 :::
@@ -562,6 +795,13 @@ When all cancer incidence and mortality rates were stratified by sex, males had 
 {{< include _generated/objects/fig-allca-incident-mortal-sex-aar.qmd >}}
 
 {{< include _generated/objects/tbl-allca-incident-mortal-sex-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County and New York City Neighborhood Cancer Statistics Dashboard, June 2025 sourced from NYS Cancer
+Registry and Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
 
 ::: {.callout-note}
 Note: Cancer statistics are for invasive cancers only.
@@ -577,6 +817,12 @@ Of the seven counties in the M-H Region, Sullivan County had the highest colorec
 
 {{< include _generated/objects/tbl-colonrectca-incident-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYS Cancer Registry and Statistics
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
 :::
@@ -587,6 +833,13 @@ When stratifying by sex, males had higher colorectal cancer incidence rates acro
 {{< include _generated/objects/fig-colonrectca-incident-mortal-sex-aar.qmd >}}
 
 {{< include _generated/objects/tbl-colonrectca-incident-mortal-sex-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYS Cancer Registry and Statistics
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 codes for colon and rectum cancer are: C18, C19, C20 and C26.0.
 :::
@@ -597,6 +850,13 @@ When stratifying available data by race and ethnicity, rates differed in most co
 {{< include _generated/objects/fig-colorectalca-incidence-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-colorectalca-incidence-rande-aar.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, June 2025 sourced from NYS Cancer Registry and Statistics
+https://www.health.ny.gov/statistics/community/minority/county/
+:::
 
 ::: {.callout-note}
 s: Data are suppressed due to not meeting confidentiality criteria.
@@ -614,6 +874,12 @@ The Healthy People 2030 target for the proportion of adults who get screened for
 
 {{< include _generated/objects/tbl-adult-50to64-colorectalca-screening-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch&cos=33
+:::
+
 ::: {.callout-note}
 Note: For colonoscopy and sigmoidoscopy, the Behavioral Risk Factor Surveillance System asks respondents, “Colonoscopy and sigmoidoscopy are exams to check for colon cancer. Have you ever had either of these exams?” and “Have you had a colonoscopy, a sigmoidoscopy, or both?” and “How long has it been since your most recent colonoscopy?” A general question asks respondents, “Have you ever had any other kind of test for colorectal cancer, such as virtual colonoscopy, CT colonography, blood stool test, FIT DNA, or Cologuard test?” For CT colonography, respondents are asked, “A virtual colonoscopy uses a series of X-rays to take pictures of inside the colon. Have you ever had a virtual colonoscopy?” and “When was your most recent CT colonography or virtual colonoscopy?” For fecal immunochemical tests, respondents are asked, “One stool test uses a special kit to obtain a small amount of stool at home and returns the kit to the doctor or the lab. Have you ever had this test?” and “How long has it been since you had this test?” Based on responses to these questions, a person meets current United States Preventive Services Task Force guidance if they had a fecal occult blood test within the past year, a sigmoidoscopy within the past five years, or a colonoscopy within the past 10 years.
 :::
@@ -628,6 +894,13 @@ From 2018 to 2022, the highest rates of lung cancer incidence were in Orange, Pu
 
 {{< include _generated/objects/tbl-lungbronchca-incident-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS County and New York City Neighborhood Cancer Statistics Dashboard, April 2025 sourced from NYS Cancer
+Registry and Cancer Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 code for lung and bronchus cancer is: C34.
 :::
@@ -640,6 +913,14 @@ When stratifying by sex, lung cancer incidence was mixed across the seven counti
 
 {{< include _generated/objects/tbl-lungbronchca-incident-mortal-sex-aar.qmd >}}
 
+
+::: {.callout-note collapse="true"}
+## Source
+New York County and New York City Neighborhood Cancer Statistics Dashboard, April 2025 sourced from NYS Cancer
+Registry and Cancer Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 code for lung and bronchus cancer is: C34.
 :::
@@ -650,6 +931,13 @@ When stratifying these data by race and ethnicity, non-Hispanic White adults had
 {{< include _generated/objects/fig-lungca-incidence-rande-aar.qmd >}}
 
 {{< include _generated/objects/tbl-lungca-incidence-rande-aar.qmd >}}
+
+
+::: {.callout-note collapse="true"}
+## Source
+New York City Health Indicators by Race and Ethnicity, 2020-2022
+https://www.health.ny.gov/community/health_equity/reports/county/newyorkcity.htm
+:::
 
 ::: {.callout-note}
 Note: Lung Cancer Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022
@@ -666,6 +954,13 @@ When looking at Figure 132, the highest prostate cancer incidence rate was seen 
 
 {{< include _generated/objects/tbl-male-prostateca-incidence-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+New York County and New York City Neighborhood Cancer Statistics Dashboard, April 2025 sourced from NYS Cancer
+Registry and Cancer Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 code for prostate cancer is: C61.
 :::
@@ -681,6 +976,13 @@ In the U.S., the age-adjusted rate of breast cancer incidence from 2015 to 2019 
 
 {{< include _generated/objects/tbl-female-breastca-incidence-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+New York County and New York City Neighborhood Cancer Statistics Dashboard, April 2025 sourced from NYS Cancer
+Registry and Cancer Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
+
 ::: {.callout-note}
 Note: The ICD-10 code for breast cancer is: C50.
 :::
@@ -691,6 +993,12 @@ The decrease in breast cancer mortality rates over time can be attributed to pub
 {{< include _generated/objects/fig-female-breastca-screening-percent.qmd >}}
 
 {{< include _generated/objects/tbl-female-breastca-screening-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data
+:::
 
 ::: {.callout-note}
 Note: The Behavioral Risk Factor Surveillance System asks respondents, "Have you ever had a mammogram?" and "How long has it been since you had your last mammogram?" Based on responses to these questions, women aged 50 to 74 years who had a mammogram in the past two years meet the current United States Preventive Services Task Force guidance.
@@ -708,6 +1016,13 @@ When looking at the incidence and mortality rates of cervical cancer in Figure 1
 
 {{< include _generated/objects/tbl-cervutca-incident-mortal-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+New York County and New York City Neighborhood Cancer Statistics Dashboard, June 2025 sourced from NYS Cancer
+Registry and Statistics
+https://www.health.ny.gov/statistics/cancer/registry/ratebyCounty.htm
+:::
+
 ::: {.callout-note}
 s: Rates are not displayed if fewer than 16 cases or deaths are reported in a specific category during those 5 years.
 Note: Cancer statistics are for invasive cancers only. Rates are age-adjusted to the US Census Bureau's 2000 US standard population, Table P25-1130. Five-year age-adjusted rates. This indicator includes deaths with cervix uteri cancer as the primary cause of death. The ICD-10 code for cervix uteri cancer is: C53.
@@ -720,6 +1035,13 @@ Healthy People 2030 aims for 79.2% of women aged 21 to 65 to receive cervical ca
 {{< include _generated/objects/fig-cervutca-screening-percent.qmd >}}
 
 {{< include _generated/objects/tbl-cervutca-screening-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance
+System
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: The U.S. Preventive Services Task Force recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). The Behavioral Risk Factor Surveillance System asks respondents, “Have you ever had a Pap test?”, “How long has it been since you had your last Pap test?”, and “How long has it been since you had your last HPV test?”
@@ -745,6 +1067,13 @@ Most counties in the M-H Region, as well as NYS and NYS excluding NYC, displayed
 
 {{< include _generated/objects/tbl-24to35mo-child-vaccine-series-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, April 2025 sourced from NYS Immunization Information System, and Citywide
+Immunization Registry
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/reports/#county
+:::
+
 ::: {.callout-note}
 Note: Refers to the standard series of vaccinations recommended for children by age two. This series includes: 4 doses of DTaP (diphtheria, tetanus, and acellular pertussis), 3 doses of polio, 1 dose of MMR (measles, mumps, and rubella), 3 doses of Hib (Haemophilus influenzae type b), 3 doses of HepB (hepatitis B), 1 dose of varicella (chickenpox), and 4 doses of PCV (pneumococcal conjugate vaccine).
 :::
@@ -759,6 +1088,12 @@ COVID-19 mortality significantly declined from the beginning of the pandemic in 
 {{< include _generated/objects/fig-covid-mort-aar.qmd >}}
 
 {{< include _generated/objects/tbl-covid-mort-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, July 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 ::: {.callout-note}
 Note: This indicator includes deaths with coronavirus disease recorded as the underlying cause of death. The ICD-10 code for coronavirus
@@ -781,6 +1116,13 @@ From 2019 to 2024, all counties in the M-H Region, as well as NYS and NYS exclud
 
 {{< include _generated/objects/tbl-13yo-hpv-vaccine-complete-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, April 2025 sourced from NYS Immunization Information System, and Citywide
+Immunization Registry
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/reports/#county
+:::
+
 ::: {.callout-note}
 Note: Refers to human papillomavirus vaccines. Two doses are required for those starting the series between the ages of 9 and 14 years old.
 Three doses are required for those starting the series at 15 years or older, or those with a weakened immune system.
@@ -796,6 +1138,12 @@ ACIP recommends that everyone six months of age and older receive a flu vaccine 
 
 {{< include _generated/objects/tbl-adult-flu-immi-lastyear-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data
+:::
+
 ::: {.callout-note}
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "During the past 12 months, have you had either a flu vaccine that was sprayed in your nose or a flu shot injected into your arm?"
 :::
@@ -806,6 +1154,12 @@ In NYS, 66.8% of those aged 65 years and older received a flu immunization in 20
 {{< include _generated/objects/fig-65-flu-immi-percent.qmd >}}
 
 {{< include _generated/objects/tbl-65-flu-immi-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, June 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data
+:::
 
 ::: {.callout-note}
 *: Unreliable crude rate due to large standard error.
@@ -819,6 +1173,12 @@ Pneumococcal disease is caused by a type of bacteria that can lead to pneumonia,
 {{< include _generated/objects/fig-65-pneumo-immi-percent.qmd >}}
 
 {{< include _generated/objects/tbl-65-pneumo-immi-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, June 2025
+https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data
+:::
 
 ::: {.callout-note}
 *: Crude rate is unreliable due to large standard error.
@@ -842,6 +1202,12 @@ In the M-H Region, three-year average rates of newly diagnosed HIV cases remaine
 {{< include _generated/objects/fig-hiv-incident-aar.qmd >}}
 
 {{< include _generated/objects/tbl-hiv-incident-aar.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from NYS HIV Surveillance System
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 ::: {.callout-note}
 *: The rate is unstable.
@@ -869,6 +1235,13 @@ rates ranging from a low of 25 cases per 100,000 in 2018, to a high of 41 cases 
 
 {{< include _generated/objects/tbl-gono-incident-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Department of Health Office of Sexual Health and Epidemiology, May 2025 sourced from Sexually Transmitted Infections
+Surveillance Summary Reports, 2017-2023
+https://www.health.ny.gov/statistics/diseases/communicable/std/index.htm
+:::
+
 #### Chlamydia
 Chlamydia is the most frequently reported bacterial sexually transmitted infection (STI) in the United States.
 According to the Centers for Disease Control and Prevention (CDC), over 1.6 million cases of chlamydia were
@@ -891,8 +1264,14 @@ dropped in 2020 due to pandemic impacts on screening, and then resumed an upward
 
 {{< include _generated/objects/tbl-chlamy-incident-aar.qmd >}}
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
+## Source
+NYS Department of Health Office of Sexual Health and Epidemiology, May 2025 sourced from Sexually Transmitted Infections
+Surveillance Summary Reports, 2017-2023
+https://www.health.ny.gov/statistics/diseases/communicable/std/index.htm
+:::
 
+::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines.
 :::
 
@@ -915,6 +1294,13 @@ rates among the counties and Dutchess was the only county to see an increase fro
 
 {{< include _generated/objects/tbl-syph-early-aar.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Department of Health Office of Sexual Health and Epidemiology, May 2025 sourced from Sexually Transmitted Infections
+Surveillance Summary Reports, 2017-2023
+https://www.health.ny.gov/statistics/diseases/communicable/std/index.htm
+:::
+
 ::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines. Early syphilis includes non-primary and non-secondary stages.
 :::
@@ -932,6 +1318,13 @@ From 2020 through 2023, all counties in the M-H Region, as well as NYS, experien
 
 {{< include _generated/objects/tbl-lyme-disease.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Communicable Disease Annual Reports, June 2025 sourced from NYSDOH Communicable Disease Electronic
+Surveillance System
+https://health.ny.gov/statistics/diseases/communicable/
+:::
+
 ::: {.callout-note}
 Note: Lyme disease is tracked by the NYSDOH through surveillance systems. The number of Lyme disease cases is estimated using a combination of traditional surveillance and sampling methods. The case definition for Lyme disease changed in 2022. Data from before that time are not comparable.
 :::
@@ -948,6 +1341,13 @@ In most counties, the case rate increased from 2020 to 2021, except for Rockland
 
 {{< include _generated/objects/tbl-anaplasmosis.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Communicable Disease Annual Reports, June 2025 sourced from NYSDOH Communicable Disease Electronic
+Surveillance System
+https://health.ny.gov/statistics/diseases/communicable/
+:::
+
 ::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines.
 :::
@@ -961,6 +1361,13 @@ From 2020 through 2021, all counties in the region except Westchester experience
 {{< include _generated/objects/fig-babesiosis.qmd >}}
 
 {{< include _generated/objects/tbl-babesiosis.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Communicable Disease Annual Reports, June 2025 sourced from NYSDOH Communicable Disease Electronic
+Surveillance System
+https://health.ny.gov/statistics/diseases/communicable
+:::
 
 #### Rabies
 Rabies is a nearly 100% fatal viral disease that attacks the central nervous system, transmitted primarily through
@@ -976,12 +1383,24 @@ number of rabies positive wild animals (18), while Sullivan County reported the 
 <!--Table 18: "Animal Rabies Testing of Domestic Species†, 2024"-->
 {{< include _generated/objects/tbl-rabies-test-domestic.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Wadsworth Center Rabies Laboratory, May 2025
+Laboratory Submissions Rabies Testing Domestic and Wild Animal Species
+:::
+
 ::: {.callout-note}
 Note: †Domestic species include dogs, cats, ferrets, horses, donkeys, mules, cattle, sheep, goats, and pigs.
 :::
 
 <!--Table 19: "Animal Rabies Testing of Wild Species†, 2024"-->
 {{< include _generated/objects/tbl-rabies-test-wild.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Wadsworth Center Rabies Laboratory, May 2025
+Laboratory Submissions Rabies Testing Domestic and Wild Animal Species
+:::
 
 ::: {.callout-note}
 Note: †Wild species include bats, bears, bobcats, coyote, deer, fox, opossum, porcupine, rabbit, raccoon, rat, skunk, squirrel, weasel, and woodchuck.
@@ -994,6 +1413,11 @@ Prompt medical intervention is critical after suspected rabies exposure. Rabies 
 {{< include _generated/objects/fig-rabies-pep-rate.qmd >}}
 
 {{< include _generated/objects/tbl-rabies-pep-rate.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data request from NYSDOH Bureau of Communicable Disease Control, May 2025
+:::
 
 ::: {.callout-note}
 Note: Rates are calculated using population estimates from the U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate, Table B01003.
@@ -1017,6 +1441,12 @@ From 2014 to 2021, there were no marked changes in the percentage of women who r
 
 {{< include _generated/objects/tbl-early-pnc-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Early prenatal care is provided in the first trimester.
 :::
@@ -1026,10 +1456,15 @@ Note: Three-year averages were used for counties, while single-year estimates we
 
 {{< include _generated/objects/tbl-late-no-pnc-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Late prenatal care is provided in the third trimester.
 :::
-
 
 There are racial and ethnic disparities in prenatal care in the M-H Region. Non-Hispanic White women had the highest percentage of early prenatal care in every county except Rockland and Sullivan. In Rockland and Sullivan, non-Hispanic Asian and Pacific Islander women had the highest percentage of early prenatal care. Non-Hispanic Black and Hispanic women had slightly lower percentages of early prenatal care than non-Hispanic White and non-Hispanic Asian and Pacific Islander women, except in Putnam County, where non-Hispanic Black women had the second-highest percentage of early prenatal care [@fig-epc-rande-percent].
 
@@ -1037,6 +1472,12 @@ There are racial and ethnic disparities in prenatal care in the M-H Region. Non-
 {{< include _generated/objects/fig-epc-rande-percent.qmd >}}
 
 {{< include _generated/objects/tbl-epc-rande-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 Note: Early prenatal care is provided in the first trimester.
@@ -1051,6 +1492,12 @@ Among women aged 15 to 44 years, the 2021 pregnancy rate was highest in Rockland
 
 {{< include _generated/objects/tbl-15to44-preg-rate.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC.
 :::
@@ -1061,6 +1508,12 @@ Among women aged 15 to 44 years, the pregnancy rate varied by race and ethnicity
 {{< include _generated/objects/fig-15to44-preg-rate-rande.qmd >}}
 
 {{< include _generated/objects/tbl-15to44-preg-rate-rande.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 Note: Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths. Pregnancy rate is the total number of pregnancies to women of any age, per 1,000 female population aged 15 to 44 years.
@@ -1076,6 +1529,12 @@ The pregnancy rate in teens aged 15 to 19 years decreased statewide and in each 
 
 {{< include _generated/objects/tbl-15to19-teenpreg-rate.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Pregnancies are the sum of the number of live births, induced terminations of pregnancies, and all fetal deaths.
 :::
@@ -1086,6 +1545,12 @@ There are racial and ethnic disparities in teen pregnancy, with non-Hispanic Bla
 {{< include _generated/objects/fig-17-teenpreg-rande-rate.qmd >}}
 
 {{< include _generated/objects/tbl-17-teenpreg-rande-rate.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 *: Data are unstable due to fewer than 10 events in the numerator.
@@ -1099,6 +1564,12 @@ Most births in the M-H Region were covered by private insurance or Medicaid, wit
 {{< include _generated/objects/fig-financial-coverage-liveb-percent.qmd >}}
 
 {{< include _generated/objects/tbl-financial-coverage-liveb-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Vital Statistics of NYS, May 2025
+https://www.health.ny.gov/statistics/vital_statistics/2022/table13.htm
+:::
 
 ::: {.callout-note}
 Note: Other forms of coverage not shown include Indian Health, CHAMPUS, Other, and Not Stated. Medicaid includes births with Medicaid listed as secondary payer.
@@ -1120,6 +1591,12 @@ Healthy People 2030 set an objective to reduce the total number of preterm birth
 
 {{< include _generated/objects/tbl-preterm-births-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC.
 :::
@@ -1138,6 +1615,12 @@ All M-H Region counties fell below the overall NYS excluding NYC percentage of l
 
 {{< include _generated/objects/tbl-lbw-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 Note: Three-year averages were used for counties, while single-year estimates were used for NYS and NYS excluding NYC. Low birth weight includes babies weighing less than 2.5 kg (5 pounds, 8 ounces) at time of birth.
 :::
@@ -1148,6 +1631,12 @@ There are also racial and ethnic disparities in low birthweight births. In each 
 {{< include _generated/objects/fig-lbw-rande-percent.qmd >}}
 
 {{< include _generated/objects/tbl-lbw-rande-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://www.health.ny.gov/community/health_equity/reports/county/
+:::
 
 ::: {.callout-note}
 *: Data are unstable due to fewer than 10 events in the numerator.
@@ -1164,6 +1653,12 @@ One Healthy People 2030 objective is to reduce the rate of all infant deaths to 
 
 {{< include _generated/objects/tbl-infant-mortal-rate.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, May 2025 sourced from Vital Statistics of NYS
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/#
+:::
+
 ::: {.callout-note}
 *: The rate is unstable.
 Note: Three-year averages are used for counties and single-year rates are used for NYS and NYS excluding NYC. Infant mortality includes the death of a baby that occurs between the time it is born and 1 year of age.
@@ -1177,8 +1672,13 @@ In 2022, Ulster County had the highest rate of infants who were exclusively brea
 <!--Figure 163: "Percentage of Infants Who Are Exclusively Breastfed in the Hospital among All Infants, 2013–2022"-->
 {{< include _generated/objects/fig-hospital-exclusive-bf-percent.qmd >}}
 
-
 {{< include _generated/objects/tbl-hospital-exclusive-bf-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, June 2025
+https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch&cos=33
+:::
 
 ::: {.callout-note}
 Note: This includes the number of newborn infants who were fed only breast milk since birth while in the hospital, based on NYS residence, among live-born infants not admitted to the Neonatal Intensive Care Unit and not transferred to another hospital.
@@ -1198,6 +1698,12 @@ Compared to the overall population of Medicaid enrollees, those aged 2 to 20 yea
 
 {{< include _generated/objects/tbl-medicaid-1dental-visit-percent.qmd >}}
 
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, February 2025 sourced from NYS Medicaid Program
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
+
 ::: {.callout-note}
 Note: This includes the number of Medicaid enrollees who had a dental visit within the past 12 months.
 :::
@@ -1209,6 +1715,12 @@ in the Past 12 Months, 2019–2022"-->
 {{< include _generated/objects/fig-medicaid-dental-past12-percent.qmd >}}
 
 {{< include _generated/objects/tbl-medicaid-dental-past12-percent.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, February 2025 sourced from NYS Medicaid Program
+https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 To prevent long-term dental damage, it is essential to instill good hygiene habits during childhood. Compared to children who have good oral health, those with poor oral health are more likely to miss school and have lower grades in their classes [@cdc-childrens-oral-health-2022].
 

@@ -106,10 +106,10 @@ https://www.nysmokefree.com/wp-content/uploads/2025/02/2024_SustainabilityReport
 
 From 2016 to 2021, the percentage of adults who smoked cigarettes decreased in almost every county in the M-H Region, with the exception of Dutchess and Rockland Counties, NYS, and NYS excluding NYC. In 2021, Dutchess County had the highest percentage of adults who smoked cigarettes and Westchester County had the lowest percentage (17.4% and 6.3%, respectively). The Healthy People 2030 goal is to reduce cigarette smoking among adults to 6.1% [@hp2030-reduce-adult-cigarette-smoking-tu-02-2025]. [@fig-adult-currsmoke-percent]
 
-Figure 169 Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021
-
 <!--Figure 169: "Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-adult-currsmoke-percent.qmd >}}
+
+{{< include _generated/objects/tbl-adult-currsmoke-percent.qmd >}}
 
 ::: {.callout-note collapse="true"}
 ## Source

@@ -106,7 +106,7 @@ Source: Data request from Upstate NY Poison Center and NYC Poison Center, May 20
 ::: {.callout-note}
 Note: Rates calculated using population estimates from U.S. Census Bureau’s 2023 American Community Survey (ACS) 5-Year Estimate,
 Table B01003.
-::::
+:::
 
 ## Motor Vehicle Accidents
 
