@@ -29,13 +29,13 @@ if not CHA_WORKBOOK_PATH.exists():
     )
 ```
 
-Preventive health care is important across all age groups. However, it is especially important for children and adolescents to help them avoid preventable diseases and maintain good health throughout their lives. According to the US Census Bureau, 5.8% of the population in the Mid-Hudson (M-H) Region is under five years old; Rockland County has the highest percentage of children in this cohort (8.5%) and Ulster County has the lowest (4.4%) [see Table 3].
+Preventive health care is important across all age groups. However, it is especially important for children and adolescents to help them avoid preventable diseases and maintain good health throughout their lives. According to the US Census Bureau, 5.8% of the population in the Mid-Hudson (M-H) Region is under five years old; Rockland County has the highest percentage of children in this cohort (8.5%) and Ulster County has the lowest (4.4%) [@tbl-age].
 
 Children are at risk for developing certain diseases, including ambulatory care sensitive (ACS) conditions. These are conditions where ED use is thought to be avoidable by focusing on interventions in primary care [@journal-pediatrics-acs-conditions-2018]. Some ACS conditions include asthma, otitis media, gastroenteritis, and pneumonia.
 
 ## Asthma
 
-Asthma is caused by airway restriction in the lungs, resulting in difficulty breathing, wheezing, chest tightness, and coughing. It is a condition commonly found among children, but it can be managed and treated with medical care [see page 144]. Looking at the 2020–2022 hospitalization rate for those aged 0–4 years, the M-H Region had a higher hospitalization rate than NYS excluding NYC [see Figure 183].
+Asthma is caused by airway restriction in the lungs, resulting in difficulty breathing, wheezing, chest tightness, and coughing. It is a condition commonly found among children, but it can be managed and treated with medical care [see page 144]. Looking at the 2020–2022 hospitalization rate for those aged 0–4 years, the M-H Region had a higher hospitalization rate than NYS excluding NYC [@fig-asthma-hopsital-aar] and [@tbl-asthma-hopsital-aar].
 
 ## Gastroenteritis
 
@@ -63,6 +63,11 @@ Rate per 10,000 Population Aged 0–4 Years, 2020–2022
 {{< include _generated/objects/fig-agop-hosp-0-4.qmd >}}
 
 {{< include _generated/objects/tbl-agop-hosp-0-4.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, April 2025 sourced from NY Statewide Planning and Research Cooperative System https://apps.health.ny.gov/public/tabvis/PHIG_Public/chirs/reports/#county
+:::
 
 ::: {.callout-note}
 Note: The ICD-10 codes for otitis media are: H65.0, H65.1, H65.2, H65.3, H66.0, H66.1, and H66.2.
