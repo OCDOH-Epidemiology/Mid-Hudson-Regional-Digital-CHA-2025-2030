@@ -15,14 +15,14 @@ execute:
 ![Dutchess County map](../media/appendix-maps/appendix-b-dutchess-county-map.png){#fig-appendix-b-dutchess-county-map fig-alt="Dutchess County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part2.pdf)
 
-## Appendix C - Orange County Map {#sec-appendix-c-map}
+## Appendix C - Putnam County Map {#sec-appendix-c-map}
 
-![Orange County map](../media/appendix-maps/appendix-c-orange-county-map.png){#fig-appendix-c-orange-county-map fig-alt="Orange County map" width="100%"}
+![Putnam County map](../media/appendix-maps/appendix-c-putnam-county-map.png){#fig-appendix-c-putnam-county-map fig-alt="Putnam County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part3.pdf)
 
-## Appendix D - Putnam County Map {#sec-appendix-d-map}
+## Appendix D - Westchester County Map {#sec-appendix-d-map}
 
-![Putnam County map](../media/appendix-maps/appendix-d-putnam-county-map.png){#fig-appendix-d-putnam-county-map fig-alt="Putnam County map" width="100%"}
+![Westchester County map](../media/appendix-maps/appendix-d-westchester-county-map.png){#fig-appendix-d-westchester-county-map fig-alt="Westchester County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part4.pdf)
 
 ## Appendix E - Rockland County Map {#sec-appendix-e-map}
@@ -30,53 +30,53 @@ execute:
 ![Rockland County map](../media/appendix-maps/appendix-e-rockland-county-map.png){#fig-appendix-e-rockland-county-map fig-alt="Rockland County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part5.pdf)
 
-## Appendix F - Sullivan County Map {#sec-appendix-f-map}
+## Appendix F - Orange County Map {#sec-appendix-f-map}
 
-![Sullivan County map](../media/appendix-maps/appendix-f-sullivan-county-map.png){#fig-appendix-f-sullivan-county-map fig-alt="Sullivan County map" width="100%"}
+![Orange County map](../media/appendix-maps/appendix-f-orange-county-map.png){#fig-appendix-f-orange-county-map fig-alt="Orange County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part6.pdf)
 
-## Appendix G - Ulster County Map {#sec-appendix-g-map}
+## Appendix G - Sullivan County Map {#sec-appendix-g-map}
 
-![Ulster County map](../media/appendix-maps/appendix-g-ulster-county-map.png){#fig-appendix-g-ulster-county-map fig-alt="Ulster County map" width="100%"}
+![Sullivan County map](../media/appendix-maps/appendix-g-sullivan-county-map.png){#fig-appendix-g-sullivan-county-map fig-alt="Sullivan County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part7.pdf)
 
-## Appendix H - Westchester County Map {#sec-appendix-h-map}
+## Appendix H - Ulster County Map {#sec-appendix-h-map}
 
-![Westchester County map](../media/appendix-maps/appendix-h-westchester-county-map.png){#fig-appendix-h-westchester-county-map fig-alt="Westchester County map" width="100%"}
+![Ulster County map](../media/appendix-maps/appendix-h-ulster-county-map.png){#fig-appendix-h-ulster-county-map fig-alt="Ulster County map" width="100%"}
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part8.pdf)
 
 ## Appendix I - Mid-Hudson Region Community Partner Survey {#sec-appendix-i-community-partner-survey}
 
-[Mid-Hudson Region Community Partner Survey](<../media/appendix-docs/I - Community Provider Survey 2025.pdf>)
+[Click to view: Mid-Hudson Region Community Partner Survey](<../media/appendix-docs/I - Community Provider Survey 2025.pdf>)
 
 ## Appendix J - Mid-Hudson Region Community Partner Survey References {#sec-appendix-j-community-partner-survey-references}
 
-[Mid-Hudson Region Community Partner Survey References](<../media/appendix-docs/Mid-Hudson Region Community Partner Survey References.pdf>)
+[Click to view: Mid-Hudson Region Community Partner Survey References](<../media/appendix-docs/Mid-Hudson Region Community Partner Survey References.pdf>)
 
 ## Appendix K - Putnam County and Nuvance CBO and Partner Survey {#sec-appendix-k-putnam-nuvance-cbo-survey}
 
-[Putnam County and Nuvance CBO and Partner Survey](<../media/appendix-docs/K - Putnam CBO Survey_English_FINAL.pdf>)
+[Click to view: Putnam County and Nuvance CBO and Partner Survey](<../media/appendix-docs/K - Putnam CBO Survey_English_FINAL.pdf>)
 
 ## Appendix L - Mid-Hudson Regional Community Health Survey {#sec-appendix-l-mid-hudson-regional-community-health-survey}
 
-[Mid-Hudson Regional Community Health Survey](<../media/appendix-docs/L - Dutchess and Putnam HVHealth0325_FinalQnaire.pdf>)
+[Click to view: Mid-Hudson Regional Community Health Survey](<../media/appendix-docs/L - Dutchess and Putnam HVHealth0325_FinalQnaire.pdf>)
 
 ## Appendix M - Orange County Community Health Survey {#sec-appendix-m-orange-county-community-health-survey}
 
-[Orange County Community Health Survey](<../media/appendix-docs/M - 2024 Script (0524OCHealthWeb_Prn).pdf>)
+[Click to view: Orange County Community Health Survey](<../media/appendix-docs/M - 2024 Script (0524OCHealthWeb_Prn).pdf>)
 
 ## Appendix N - Orange County Community Asset Survey {#sec-appendix-n-orange-county-community-asset-survey}
 
-[Orange County Community Asset Survey](<../media/appendix-docs/N - Community Asset Survey ENG.pdf>)
+[Click to view: Orange County Community Asset Survey](<../media/appendix-docs/N - Community Asset Survey ENG.pdf>)
 
 ## Appendix O - Putnam County and Nuvance Community Health Experience Survey {#sec-appendix-o-putnam-nuvance-community-health-experience-survey}
 
-[Putnam County and Nuvance Community Health Experience Survey](<../media/appendix-docs/O - Putnam Community Health Experience Survey_English.pdf>)
+[Click to view: Putnam County and Nuvance Community Health Experience Survey](<../media/appendix-docs/O - Putnam Community Health Experience Survey_English.pdf>)
 
 ## Appendix P - Rockland County Community Health Assessment Survey {#sec-appendix-p-rockland-county-community-health-assessment-survey}
 
-[Rockland County Community Health Assessment Survey](<../media/appendix-docs/P - Rockland Community Health Assessment Survey_English Paper Version.pdf>)
+[Click to view: Rockland County Community Health Assessment Survey](<../media/appendix-docs/P - Rockland Community Health Assessment Survey_English Paper Version.pdf>)
 
 ## Appendix Q - Greater New York Hospital Association 2025 Community Health Needs Assessment Survey {#sec-appendix-q-gnyha-2025-community-health-needs-assessment-survey}
 
-[Greater New York Hospital Association 2025 Community Health Needs Assessment Survey](<../media/appendix-docs/Q - 2025 CHNA Collab Survey_English.pdf>)
+[Click to view: Greater New York Hospital Association 2025 Community Health Needs Assessment Survey](<../media/appendix-docs/Q - 2025 CHNA Collab Survey_English.pdf>)
