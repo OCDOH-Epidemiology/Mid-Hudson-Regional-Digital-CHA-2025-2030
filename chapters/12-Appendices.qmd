@@ -7,49 +7,49 @@ execute:
 
 ## Appendix A - Mid-Hudson Region Map {#sec-appendix-a-map}
 
-![](../media/appendix-maps/appendix-a-mid-hudson-region-map.png){fig-alt="Mid-Hudson Region map" width="100%"}
+![](../media/appendix-maps/midhudson.png){fig-alt="Mid-Hudson Region map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part1.pdf)
 
 ## Appendix B - Dutchess County Map {#sec-appendix-b-map}
 
-![](../media/appendix-maps/appendix-b-dutchess-county-map.png){fig-alt="Dutchess County map" width="100%"}
+![](../media/appendix-maps/dutchess.png){fig-alt="Dutchess County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part2.pdf)
 
 ## Appendix C - Orange County Map {#sec-appendix-c-map}
 
-![](../media/appendix-maps/appendix-c-orange-county-map.png){fig-alt="Orange County map" width="100%"}
+![](../media/appendix-maps/orange.png){fig-alt="Orange County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part6.pdf)
 
 ## Appendix D - Putnam County Map {#sec-appendix-d-map}
 
-![](../media/appendix-maps/appendix-d-putnam-county-map.png){fig-alt="Putnam County map" width="100%"}
+![](../media/appendix-maps/putnam.png){fig-alt="Putnam County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part3.pdf)
 
 ## Appendix E - Rockland County Map {#sec-appendix-e-map}
 
-![](../media/appendix-maps/appendix-e-rockland-county-map.png){fig-alt="Rockland County map" width="100%"}
+![](../media/appendix-maps/rockland.png){fig-alt="Rockland County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part5.pdf)
 
 ## Appendix F - Sullivan County Map {#sec-appendix-f-map}
 
-![](../media/appendix-maps/appendix-f-sullivan-county-map.png){fig-alt="Sullivan County map" width="100%"}
+![](../media/appendix-maps/sullivan.png){fig-alt="Sullivan County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part7.pdf)
 
 ## Appendix G - Ulster County Map {#sec-appendix-g-map}
 
-![](../media/appendix-maps/appendix-g-ulster-county-map.png){fig-alt="Ulster County map" width="100%"}
+![](../media/appendix-maps/ulster.png){fig-alt="Ulster County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part8.pdf)
 
 ## Appendix H - Westchester County Map {#sec-appendix-h-map}
 
-![](../media/appendix-maps/appendix-h-westchester-county-map.png){fig-alt="Westchester County map" width="100%"}
+![](../media/appendix-maps/westchester.png){fig-alt="Westchester County map" width="100%"}
 
 [Open full PDF](../pdfs/CHA%20Map/2025%20CHA%20County%20Municipality%20Maps_All_Part4.pdf)
 
