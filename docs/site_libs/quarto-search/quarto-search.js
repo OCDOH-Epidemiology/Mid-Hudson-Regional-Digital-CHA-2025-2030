@@ -44,27 +44,8 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
 
   // highlight matches on the page
   if (query && mainEl) {
-    // perform exact phrase highlighting first
-    const marksBefore = mainEl.querySelectorAll("mark").length;
+    // perform any highlighting
     highlight(escapeRegExp(query), mainEl);
-    const marksAfter = mainEl.querySelectorAll("mark").length;
-
-    // CHA PATCH: if exact phrase doesn't produce a visible hit, fallback
-    // to highlighting significant individual terms from the query.
-    if (marksAfter === marksBefore) {
-      const terms = [...new Set(query.split(/\s+/))]
-        .map((term) => term.trim())
-        .filter((term) => term.length >= 3);
-      terms.forEach((term) => {
-        highlight(escapeRegExp(term), mainEl);
-      });
-    }
-
-    // CHA PATCH: jump directly to first highlighted hit in the loaded page.
-    const firstMatch = mainEl.querySelector("mark");
-    if (firstMatch) {
-      firstMatch.scrollIntoView({ block: "center", inline: "nearest" });
-    }
 
     // fix up the URL to remove the q query param
     const replacementUrl = new URL(window.location);
@@ -82,9 +63,9 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
     }
   };
 
-  // CHA PATCH: keep highlight visible after landing from search.
-  // Do not clear on initial section change; clear on first user interaction.
+  // Clear search highlighting when the user scrolls sufficiently
   const resetFn = () => {
+    resetHighlighting("");
     window.removeEventListener("quarto-hrChanged", resetFn);
     window.removeEventListener("quarto-sectionChanged", resetFn);
   };
@@ -93,14 +74,6 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
   // on the page
   window.addEventListener("quarto-hrChanged", resetFn);
   window.addEventListener("quarto-sectionChanged", resetFn);
-
-  const clearOnInteraction = () => {
-    resetHighlighting("");
-    window.removeEventListener("pointerdown", clearOnInteraction, true);
-    window.removeEventListener("keydown", clearOnInteraction, true);
-  };
-  window.addEventListener("pointerdown", clearOnInteraction, true);
-  window.addEventListener("keydown", clearOnInteraction, true);
 
   // Responsively switch to overlay mode if the search is present on the navbar
   // Note that switching the sidebar to overlay mode requires more coordinate (not just
@@ -191,13 +164,9 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
           const reshapedItems = [];
           let count = 1;
           for (const [_key, value] of groupedItems) {
-            // CHA PATCH: prefer section anchors for top-level document links.
-          const firstItem = value[0];
-            const anchorItem = value.find((item) => item.href.includes("#"));
-            const preferredHref = anchorItem ? anchorItem.href : firstItem.href;
+            const firstItem = value[0];
             reshapedItems.push({
               ...firstItem,
-              href: preferredHref,
               type: kItemTypeDoc,
             });
 
@@ -1263,18 +1232,6 @@ let subSearchTerm = undefined;
 let subSearchFuse = undefined;
 const kFuseMaxWait = 125;
 
-function chapterOrderFromCrumbs(crumbs) {
-  if (!crumbs || crumbs.length === 0) {
-    return Number.POSITIVE_INFINITY;
-  }
-  const chapterMatch = crumbs[0].match(/chapter-number[^>]*>(\d+)/);
-  if (!chapterMatch) {
-    return Number.POSITIVE_INFINITY;
-  }
-  const order = Number(chapterMatch[1]);
-  return Number.isFinite(order) ? order : Number.POSITIVE_INFINITY;
-}
-
 async function fuseSearch(query, fuse, fuseOptions) {
   let index = fuse;
   // Fuse.js using the Bitap algorithm for text matching which runs in
@@ -1298,22 +1255,7 @@ async function fuseSearch(query, fuse, fuseOptions) {
   const resultsRaw = await index.search(query, fuseOptions);
   const now = performance.now();
 
-  // CHA PATCH: force chronological chapter ordering while preserving
-  // Fuse relevance order inside each chapter.
-  const sortedResultsRaw = resultsRaw
-    .map((result, originalIndex) => ({ result, originalIndex }))
-    .sort((a, b) => {
-      const chapterDelta =
-        chapterOrderFromCrumbs(a.result.item.crumbs) -
-        chapterOrderFromCrumbs(b.result.item.crumbs);
-      if (chapterDelta !== 0) {
-        return chapterDelta;
-      }
-      return a.originalIndex - b.originalIndex;
-    })
-    .map((entry) => entry.result);
-
-  const results = sortedResultsRaw.map((result) => {
+  const results = resultsRaw.map((result) => {
     const addParam = (url, name, value) => {
       const anchorParts = url.split("#");
       const baseUrl = anchorParts[0];
