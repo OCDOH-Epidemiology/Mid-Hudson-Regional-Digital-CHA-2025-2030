@@ -63,7 +63,7 @@ https://www.health.ny.gov/statistics/brfss/expanded/
 Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Based on responses to this question, BRFSS defines "poor mental health" as an adult over the age of 18 reporting 14 or more days to this question.
 :::
 
-One major disorder that can lead to poor mental health is depression. Depression is a mood disorder that causes a constant feeling of sadness or lack of interest in usual life activities. In 2021, the highest percentage of people reporting a depressive disorder was in Ulster County (24.1%), and the lowest was in Westchester County (12.4%) [@fig-adult-depressive-do-percent]. From 2016 to 2021, the percentage of people reporting a depressive disorder increased in all counties, the Mid-Hudson (M-H) Region, and NYS.
+One major disorder that can lead to poor mental health is depression. Depression is a mood disorder that causes a constant feeling of sadness or lack of interest in usual life activities. In 2021, the highest percentage of people reporting a depressive disorder was in Ulster County (24.1%), and the lowest was in Westchester County (12.4%) [see Figure 167]. From 2016 to 2021, the percentage of people reporting a depressive disorder increased in all counties, the Mid-Hudson (M-H) Region, and NYS.
 
 <!--Figure 167: "Percentage of Adults Reporting a Depressive Disorder, 2016, 2018, and 2021"-->
 {{< include _generated/objects/fig-adult-depressive-do-percent.qmd >}}
@@ -338,7 +338,7 @@ Note: Patients Who Received at Least One Buprenorphine Prescription for Opioid U
 ## Suicide
 Suicide is a serious public health problem that can have lasting harmful effects on individuals, families, and communities. It is associated with several risk factors, including experiences of bullying, sexual violence, and child abuse. In 2023, 12.8 million American adults considered attempting suicide, and over 49,000 died by suicide [@cdc-suicide-about-2025]. Protective factors, such as connectedness with family and friends and access to health care services, can help prevent suicide.
 
-Healthy People 2030 set a goal to reduce suicide rates to 12.8 suicides per 100,000 population. Four counties met this target, with three exceptions (Dutchess, Sullivan, and Ulster) [@fig-15to19-suicide-mortal-crude]. Suicide among young people is also a public health concern, especially in Ulster County, where the suicide mortality rate among teenagers aged 15 to 19 years was 12.0 per 100,000 population, though this rate is unstable.
+Healthy People 2030 set a goal to reduce suicide rates to 12.8 suicides per 100,000 population. Four counties met this target, with three exceptions (Dutchess, Sullivan, and Ulster) [see Figure 181]. Suicide among young people is also a public health concern, especially in Ulster County, where the suicide mortality rate among teenagers aged 15 to 19 years was 12.0 per 100,000 population, though this rate is unstable.
 
 
 <!--Figure 181: "Suicide Mortality, Crude Rate per 100,000 Total Population

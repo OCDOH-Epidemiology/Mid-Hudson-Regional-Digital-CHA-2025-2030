@@ -1,0 +1,12 @@
+<!-- indicator: fig-rccha-demo -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-rccha-demo
+#| fig-cap: 'Rockland County Community Health Assessment Demographics'
+#| fig-alt: 'Data visualization showing Rockland County Community Health Assessment Demographics.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-rccha-demo", workbook_path=CHA_WORKBOOK_PATH).show()
+```
