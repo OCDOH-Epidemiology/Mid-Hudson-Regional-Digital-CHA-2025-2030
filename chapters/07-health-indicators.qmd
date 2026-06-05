@@ -600,6 +600,12 @@ Note: The percentage is age-adjusted. An adult is a person aged 18 years or olde
 
 In 2021, diabetes hospitalization rates varied across the seven counties in the M-H Region. According to [@fig-dm-hospital-rande-aar], Sullivan County had the highest hospitalization rate at 213.3 per 10,000 population and Putnam County had the lowest rate at 115.1 per 10,000 population. These rates are compared to the NYS at 196.6 per 10,000 population.
 
+Figure 113: "Diabetes Hospitalization, Age-Adjusted Rate per 10,000, 2021"-->
+{{< include _generated/objects/fig-dm-hospital-aar.qmd >}}
+
+{{< include _generated/objects/tbl-dm-hospital-aar.qmd >}}
+
+
 When stratifying this data by race and ethnicity, diabetes hospitalization rates were highest among the nonHispanic Black population in NYS and NYS excluding NYC, along with five out of seven counties in the M-H Region. However, in Sullivan County, non-Hispanic White adults had the highest hospitalization rate (188.1 per 10,000 population). Dutchess and Putnam Non-Hispanic White adults had the highest hospitalization rates [@fig-dm-hospital-rande-aar].
 
 <!--Figure 114: "Diabetes Hospitalization, Age-Adjusted Rate per 10,000 by Race and Ethnicity, 2021"-->

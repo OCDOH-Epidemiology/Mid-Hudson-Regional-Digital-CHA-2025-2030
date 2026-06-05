@@ -40,7 +40,7 @@ book:
     collapse-level: 2
 
 bibliography: references.bib
-csl: https://www.zotero.org/styles/vancouver
+csl: vancouver.csl
 reference-location: section
 
 format:
