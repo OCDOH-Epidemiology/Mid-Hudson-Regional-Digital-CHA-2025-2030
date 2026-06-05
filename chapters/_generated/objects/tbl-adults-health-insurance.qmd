@@ -1,0 +1,11 @@
+<!-- indicator: tbl-adults-health-insurance -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-adults-health-insurance
+#| tbl-cap: 'Percentage of Adults with Health Insurance, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-adults-health-insurance", workbook_path=CHA_WORKBOOK_PATH)
+```

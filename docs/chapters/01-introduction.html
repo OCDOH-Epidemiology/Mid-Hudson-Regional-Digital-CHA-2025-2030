@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
   header.setAttribute("data-bs-target", ".cha-references-contents");
   header.setAttribute("aria-expanded", "false");
   header.setAttribute("aria-controls", "cha-references");
-  header.setAttribute("aria-label", "Toggle references");
+  header.setAttribute("aria-label", "Toggle footnote");
 
   var iconContainer = document.createElement("div");
   iconContainer.className = "callout-icon-container";
@@ -510,7 +510,7 @@ document.addEventListener("DOMContentLoaded", function () {
   srOnly.className = "screen-reader-only";
   srOnly.textContent = "Note";
 
-  var titleText = document.createTextNode("References");
+  var titleText = document.createTextNode("Footnote");
 
   titleContainer.appendChild(srOnly);
   titleContainer.appendChild(titleText);

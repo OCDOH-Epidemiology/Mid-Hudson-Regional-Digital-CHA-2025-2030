@@ -1,0 +1,11 @@
+<!-- indicator: tbl-children-24-35-months -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-children-24-35-months
+#| tbl-cap: 'Percentage of Children Aged 24–35 Months with the 4:3:1:3:3:1:4 Vaccine Series, 2019–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-children-24-35-months", workbook_path=CHA_WORKBOOK_PATH)
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-mv-injury-mortaltiy-re -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-mv-injury-mortaltiy-re
+#| fig-cap: 'Motor Vehicle Related Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022'
+#| fig-alt: 'Data visualization showing Motor Vehicle Related Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-mv-injury-mortaltiy-re", workbook_path=CHA_WORKBOOK_PATH).show()
+```

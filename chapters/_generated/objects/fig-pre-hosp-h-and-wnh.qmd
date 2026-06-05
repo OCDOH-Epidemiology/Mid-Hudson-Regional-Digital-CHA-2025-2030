@@ -1,0 +1,12 @@
+<!-- indicator: fig-pre-hosp-h-and-wnh -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pre-hosp-h-and-wnh
+#| fig-cap: 'Potentially Preventable Hospitalizations, Rate Difference Between Hispanics and White Non-Hispanics, 2016–2022'
+#| fig-alt: 'Data visualization showing Potentially Preventable Hospitalizations, Rate Difference Between Hispanics and White Non-Hispanics, 2016–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pre-hosp-h-and-wnh", workbook_path=CHA_WORKBOOK_PATH).show()
+```

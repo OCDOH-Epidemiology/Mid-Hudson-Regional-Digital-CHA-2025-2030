@@ -1,0 +1,11 @@
+<!-- indicator: tbl-low-birthweight-infants -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-low-birthweight-infants
+#| tbl-cap: 'Percentage of Low Birthweight Infants, 2014–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-low-birthweight-infants", workbook_path=CHA_WORKBOOK_PATH)
+```

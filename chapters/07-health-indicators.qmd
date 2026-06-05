@@ -72,11 +72,12 @@ In 2022, the percentage of deaths that were premature in the M-H Region (21%) wa
 ::: {.callout-note collapse="true"}
 ## Source
 NYS Prevention Agenda Tracking Dashboard, March 2025 sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
+:::
 
 ::: {.callout-note}
 Note: Y-axis does not begin at zero in order to clearly display trend lines. Premature death includes deaths occurring before the age of 65
 :::
-:::
+
 
 There are significant disparities in premature death rates, with Black and Hispanic populations experiencing higher rates than other racial and ethnic groups. [@fig-premature-death-percent-diff-bnhvswnh] and [@tbl-premature-death-percent-diff-bnhvswnh] show premature death as a percent difference between Black non-Hispanic and White non-Hispanic residents. Across the M-H Region, Black non-Hispanic residents experience premature death at a higher rate than White non-Hispanic residents. In 2022, the largest difference was in Ulster County (25.3%) and the smallest was in Sullivan County (8.0%). The Prevention Agenda 2025–2030 sets an objective of 18.4% for this measure.
 
@@ -312,7 +313,6 @@ Note: The 2018 population estimates are also used to calculate 2019 and 2020 rat
 From 2014–2021, the rates of cardiovascular mortality generally trended downward for most of the M-H Region counties. The exceptions were Dutchess County, which experienced an increase from 2020–2021 (213.6 to 220.2 per 100,000 population), as well as an overall increase from 2014 to 2021 (from 209.8 to 220.2 per 10,000 population), and Ulster County, which experienced an increase from 2020–2021 (from 218.6 to 224.5 per 10,000 population) but an overall decrease from 2014 to 2021 (from 228.8 to 224.5 per 10,000 population). By contrast, both NYS and NYS excluding NYC experienced overall decreases from 2014–2021 and from 2020–2021 [@fig-cardiovasdz-mortal-aar].
 
 <!--Figure 99: "Cardiovascular Mortality, Age-Adjusted Rate per 100,000 Population, 2014–2021"-->
-
 {{< include _generated/objects/fig-cardiovasdz-mortal-aar.qmd >}}
 
 {{< include _generated/objects/tbl-cardiovasdz-mortal-aar.qmd >}}

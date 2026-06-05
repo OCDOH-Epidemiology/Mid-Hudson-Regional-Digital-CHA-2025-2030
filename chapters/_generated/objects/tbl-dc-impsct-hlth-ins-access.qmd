@@ -1,0 +1,11 @@
+<!-- indicator: tbl-dc-impsct-hlth-ins-access -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dc-impsct-hlth-ins-access
+#| tbl-cap: 'The Impact of Health Insurance Coverage & Access to Care in Dutchess County (n = 100)'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-dc-impsct-hlth-ins-access", workbook_path=CHA_WORKBOOK_PATH)
+```

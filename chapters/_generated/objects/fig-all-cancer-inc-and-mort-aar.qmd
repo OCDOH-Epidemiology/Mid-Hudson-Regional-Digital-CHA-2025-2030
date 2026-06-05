@@ -1,0 +1,12 @@
+<!-- indicator: fig-all-cancer-inc-and-mort-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-all-cancer-inc-and-mort-aar
+#| fig-cap: 'All Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population, 2019–2021'
+#| fig-alt: 'Data visualization showing All Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population, 2019–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-all-cancer-inc-and-mort-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

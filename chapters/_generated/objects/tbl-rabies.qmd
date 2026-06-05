@@ -1,0 +1,11 @@
+<!-- indicator: tbl-rabies -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rabies
+#| tbl-cap: 'Animal Rabies Testing of Domestic Species†, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-rabies", workbook_path=CHA_WORKBOOK_PATH)
+```

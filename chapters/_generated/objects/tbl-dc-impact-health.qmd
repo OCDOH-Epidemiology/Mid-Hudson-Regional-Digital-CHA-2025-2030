@@ -1,0 +1,11 @@
+<!-- indicator: tbl-dc-impact-health -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dc-impact-health
+#| tbl-cap: 'The Impact of Health Issues in Dutchess County (n = 106)'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-dc-impact-health", workbook_path=CHA_WORKBOOK_PATH)
+```
