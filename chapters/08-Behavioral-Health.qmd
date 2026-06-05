@@ -246,12 +246,12 @@ Opioids Other than Methadone, Age-Adjusted Rate per 100,000 Population,
 Note: Includes poisoning deaths involving any opioid pain relievers (including illicitly produced opioids such as fentanyl), heroin, and synthetic opioids other than methadone, all manners, using all causes of death.
 :::
 
-When overdose deaths are stratified by age, the rate of overdose death was higher in most counties among adults aged 45 to 64 years compared with those aged 18 to 44 years across all three types of overdose deaths (any opioid, heroin, and opioid pain relievers) [@fig-18to64-anyop-od-crude - @fig-18to64-opioid-pain-crude]. This shows a shift from previous years, when overdose deaths were predominantly among adults aged 18 to 44 years. Sullivan County had the highest overdose death rates among adults aged 18 to 44 years caused by all three types (99.9, 11.5, and 99.9 per 100,000 population, respectively), as well as among adults aged 45 to 64 years (89.3, 23.5, and 89.3 per 100,000 population, respectively).
+When overdose deaths are stratified by age, the rate of overdose death was higher in most counties among adults aged 45 to 64 years compared with those aged 18 to 44 years across all three types of overdose deaths (any opioid, heroin, and opioid pain relievers) [@fig-oddeath-anydrug-crude-rate]- [@fig-18to64-opioid-pain-crude]. This shows a shift from previous years, when overdose deaths were predominantly among adults aged 18 to 44 years. Sullivan County had the highest overdose death rates among adults aged 18 to 44 years caused by all three types (99.9, 11.5, and 99.9 per 100,000 population, respectively), as well as among adults aged 45 to 64 years (89.3, 23.5, and 89.3 per 100,000 population, respectively).
 
 <!--Figure 176: "Overdose Deaths among Adults Involving Any Opioid, Crude Rate per 100,000 Population, 2022"-->
-{{< include _generated/objects/fig-18to64-anyop-od-crude.qmd >}}
+{{< include _generated/objects/fig-oddeath-anydrug-crude-rate.qmd >}}
 
-{{< include _generated/objects/tbl-18to64-anyop-od-crude.qmd >}}
+{{< include _generated/objects/tbl-oddeath-anydrug-crude-rate.qmd >}}
 
 ::: {.callout-note collapse="true"}
 ## Source
