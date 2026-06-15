@@ -1,0 +1,34 @@
+---
+description: Never change CHA workbook Object IDs or Figure IDs — breaks live site rendering
+alwaysApply: true
+---
+
+# CHA Workbook Object IDs Are Immutable
+
+The Excel data workbook (`data/raw/Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx`) drives all live figures and tables via `object_id` / `figure_id` values (e.g. `fig-dm-hospital-aar`, `tbl-sex`).
+
+**Never change, rename, bulk-replace, or “normalize” these IDs** in the workbook, generated includes, or chapter QMD cross-references unless the user explicitly requests a coordinated migration across the entire repo.
+
+Changing an ID in Excel without updating every `@fig-…` / `@tbl-…` reference and `chapters/_generated/objects/*.qmd` stub breaks live preview and the published site (“not found in workbook”).
+
+## Forbidden
+
+- Editing **Object ID** or **Figure ID** on an existing indicator sheet to a new value
+- Copying IDs from one sheet onto another (e.g. pointing `CVD Mort AAR` at `fig-adult-cardiovasdz-percent`)
+- Running scripts or sed/replace that rename `fig-*` / `tbl-*` IDs project-wide without verifying the workbook registry
+- Committing a workbook where Object IDs were mass-renamed (e.g. `tbl-sex` → `tbl-sex-population`)
+
+## Allowed
+
+- **Fill in blank** Object ID / Figure ID on a sheet that has no ID yet, using the ID already referenced in the chapter (e.g. set `tbl-five-lead-death-aar` on the sheet that holds that table’s data)
+- **Add new** indicators with new unique IDs (coordinate with chapter includes)
+- **Fix data** on a sheet without touching ID fields
+
+## Before touching the workbook
+
+1. Grep the repo for the target ID (`fig-…` / `tbl-…`) and confirm chapter/includes expect that exact string.
+2. After any workbook edit, verify: `python3 -c "from scripts.workbook_loader import load_cha_workbook; m=load_cha_workbook('data/raw/Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx'); print('tbl-sex' in m.registry)"` and spot-check IDs referenced in the chapter you care about.
+
+## Fixing a missing figure/table
+
+If rendering shows `Figure 'fig-…' not found in workbook`, the sheet’s metadata is wrong or empty—not that the ID should be changed elsewhere. Find the sheet with the correct **data**, then set its Object ID / Figure ID to match what the QMD already references.

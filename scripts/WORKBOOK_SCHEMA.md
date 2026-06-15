@@ -7,6 +7,15 @@ Use this schema to drive CHA table and figure rendering from an Excel workbook.
 - **Supported**: single Excel workbook (`.xlsx`) with metadata + data sheets.
 - **Note**: CSV-directory loading is not currently implemented in `scripts/workbook_loader.py`.
 
+## Object IDs are immutable
+
+**Do not change existing Object ID or Figure ID values** in the workbook (flat indicator sheets or `_registry`). Chapters, cross-references (`@fig-…`, `@tbl-…`), and `chapters/_generated/objects/*.qmd` depend on exact matches. Renaming IDs in Excel without a full-repo migration breaks live preview and the published site.
+
+- **Forbidden**: repointing a sheet’s IDs to another indicator, bulk-renaming IDs, or “normalizing” slug names.
+- **Allowed**: filling in blank IDs on the sheet that owns the data, using the ID the chapter already references; adding new indicators with new unique IDs.
+
+See `.cursor/rules/workbook-object-ids-immutable.mdc` for agent/editor policy.
+
 ## Naming rules
 
 - `object_id`: lowercase, hyphenated, unique across workbook.

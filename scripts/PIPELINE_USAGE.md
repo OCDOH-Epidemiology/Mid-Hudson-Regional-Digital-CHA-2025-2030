@@ -2,6 +2,8 @@
 
 This project supports a metadata-driven workflow where workbook metadata is the source of truth for indicator objects (figure/table/source).
 
+**Important:** Object ID and Figure ID values in the Excel workbook must not be changed once referenced in chapters. See `scripts/WORKBOOK_SCHEMA.md` (“Object IDs are immutable”) and `.cursor/rules/workbook-object-ids-immutable.mdc`.
+
 ## Default workflow (automatic object generation on render)
 
 `_quarto.yml` is configured with a `project.pre-render` hook that runs object generation before each render:
