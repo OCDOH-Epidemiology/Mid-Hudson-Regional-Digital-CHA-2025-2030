@@ -1,0 +1,12 @@
+<!-- indicator: fig-qol-rockland-county -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-qol-rockland-county
+#| fig-cap: 'Respondents'' Ratings of Quality of Life in Rockand County'
+#| fig-alt: 'Data visualization showing Respondents'' Ratings of Quality of Life in Rockand County.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-qol-rockland-county", workbook_path=CHA_WORKBOOK_PATH).show()
+```

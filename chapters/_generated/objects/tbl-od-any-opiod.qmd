@@ -1,0 +1,11 @@
+<!-- indicator: tbl-od-any-opiod -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-od-any-opiod
+#| tbl-cap: 'Overdose Deaths among Adults Involving Any Opioid, Crude Rate per 100,000 Population, 2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-od-any-opiod", workbook_path=CHA_WORKBOOK_PATH)
+```

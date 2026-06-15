@@ -1,0 +1,12 @@
+<!-- indicator: fig-live-birth-financ -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-live-birth-financ
+#| fig-cap: 'Percentage of Live Births by Financial Coverage, 2022'
+#| fig-alt: 'Data visualization showing Percentage of Live Births by Financial Coverage, 2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-live-birth-financ", workbook_path=CHA_WORKBOOK_PATH).show()
+```

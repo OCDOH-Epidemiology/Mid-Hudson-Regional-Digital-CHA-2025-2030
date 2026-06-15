@@ -1,0 +1,12 @@
+<!-- indicator: fig-colon-rectum-ind-mort-sex -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-colon-rectum-ind-mort-sex
+#| fig-cap: 'Colon and Rectum Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population by Sex, 2018–2022'
+#| fig-alt: 'Data visualization showing Colon and Rectum Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population by Sex, 2018–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-colon-rectum-ind-mort-sex", workbook_path=CHA_WORKBOOK_PATH).show()
+```

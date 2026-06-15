@@ -1,0 +1,11 @@
+<!-- indicator: tbl-all-medicaid-dental -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-all-medicaid-dental
+#| tbl-cap: 'Percentage of All Medicaid Enrollees with a Dental Visit in the Past 12 Months, 2019–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-all-medicaid-dental", workbook_path=CHA_WORKBOOK_PATH)
+```

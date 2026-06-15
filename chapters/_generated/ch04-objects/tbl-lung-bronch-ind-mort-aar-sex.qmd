@@ -1,0 +1,11 @@
+<!-- indicator: tbl-lung-bronch-ind-mort-aar-sex -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-lung-bronch-ind-mort-aar-sex
+#| tbl-cap: 'Lung and Bronchus Cancer Incidence and Mortality, Age-Adjusted Rates per 100,000 Population by Sex, 2015–2019'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-lung-bronch-ind-mort-aar-sex", workbook_path=CHA_WORKBOOK_PATH)
+```

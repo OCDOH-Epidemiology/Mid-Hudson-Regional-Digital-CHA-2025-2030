@@ -1,0 +1,12 @@
+<!-- indicator: fig-od-any-opiod -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-od-any-opiod
+#| fig-cap: 'Overdose Deaths among Adults Involving Any Opioid, Crude Rate per 100,000 Population, 2022'
+#| fig-alt: 'Data visualization showing Overdose Deaths among Adults Involving Any Opioid, Crude Rate per 100,000 Population, 2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-od-any-opiod", workbook_path=CHA_WORKBOOK_PATH).show()
+```

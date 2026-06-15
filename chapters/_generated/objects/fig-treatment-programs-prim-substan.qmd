@@ -1,0 +1,12 @@
+<!-- indicator: fig-treatment-programs-prim-substan -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-treatment-programs-prim-substan
+#| fig-cap: 'Individuals Enrolled in Treatment Programs Reporting Any Opioid as a Primary Substance, Crude Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Individuals Enrolled in Treatment Programs Reporting Any Opioid as a Primary Substance, Crude Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-treatment-programs-prim-substan", workbook_path=CHA_WORKBOOK_PATH).show()
+```

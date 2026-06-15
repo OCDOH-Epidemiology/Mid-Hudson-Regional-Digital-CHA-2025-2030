@@ -1,0 +1,12 @@
+<!-- indicator: fig-top-3-postiv -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-top-3-postiv
+#| fig-cap: 'Top 3 Factors that Make a Positive Contribution to Healthy Living in Rockland County'
+#| fig-alt: 'Data visualization showing Top 3 Factors that Make a Positive Contribution to Healthy Living in Rockland County.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-top-3-postiv", workbook_path=CHA_WORKBOOK_PATH).show()
+```

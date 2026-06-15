@@ -1,0 +1,12 @@
+<!-- indicator: fig-breastfed-infants -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-breastfed-infants
+#| fig-cap: 'Percentage of Infants Who Are Exclusively Breastfed in the Hospital among All Infants, 2013–2022'
+#| fig-alt: 'Data visualization showing Percentage of Infants Who Are Exclusively Breastfed in the Hospital among All Infants, 2013–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-breastfed-infants", workbook_path=CHA_WORKBOOK_PATH).show()
+```

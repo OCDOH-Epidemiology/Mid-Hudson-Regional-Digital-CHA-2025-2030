@@ -1,0 +1,11 @@
+<!-- indicator: tbl-leisure-time-physical-act-adult -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-leisure-time-physical-act-adult
+#| tbl-cap: 'Percentage of Adults Who Participated in Leisure Time Physical Activity in the Past 30 Days, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-leisure-time-physical-act-adult", workbook_path=CHA_WORKBOOK_PATH)
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-teen-preg-15-19 -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-teen-preg-15-19
+#| fig-cap: 'Teen Pregnancy, Rate per 1,000 Female Population 15–19 Years Old, 2014–2021'
+#| fig-alt: 'Data visualization showing Teen Pregnancy, Rate per 1,000 Female Population 15–19 Years Old, 2014–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-teen-preg-15-19", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,11 @@
+<!-- indicator: tbl-poor-mh-14 -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-poor-mh-14
+#| tbl-cap: 'Percentage of Adults with Poor Mental Health for 14 or More Days in the Last Month, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-poor-mh-14", workbook_path=CHA_WORKBOOK_PATH)
+```
