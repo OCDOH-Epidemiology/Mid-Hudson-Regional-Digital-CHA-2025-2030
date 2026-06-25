@@ -248,13 +248,32 @@ Files:
 
 ### Changes
 
-- Added a "Select language:" control on every page using Google's free
-  Website Translator widget (`InlineLayout.SIMPLE`), wired in via
-  `include-before-body` right after the skip link.
-- Suppressed Google's floating "translated by Google" top banner and its
-  hover-highlight styling so neither shifts the page or clashes with the
-  site's fixed header (`.goog-te-banner-frame`, `.goog-text-highlight` in
-  `theme.scss`).
+- Added a "Select language:" control on every page, wired in via
+  `include-before-body` right after the skip link, listing ~108 languages
+  (Google Translate's full supported set).
+- The control is a real native `<select>`, not Google's own click-to-open
+  widget. Google's Website Translator (`element.js` +
+  `InlineLayout.SIMPLE`) is still loaded and initialized, but its visual UI
+  is hidden (`.cha-google-widget { display: none; }`) — it only serves as
+  the underlying translation engine now. On `change`, our script sets the
+  `googtrans` cookie Google's engine reads (`/en/<lang>`, or clears it for
+  English) and reloads the page.
+  - Why not Google's own dropdown: it renders in a cross-origin iframe we
+    can't add search/filtering to, and its anchor-based trigger isn't as
+    keyboard/screen-reader friendly as a native `<select>`. A native select
+    gets free browser type-ahead (type "s" to jump through Spanish, Swahili,
+    Swedish...) and is announced correctly by every screen reader with no
+    extra ARIA.
+  - The select's value is re-synced from the `googtrans` cookie on load, so
+    it reflects the active language after the page reloads rather than
+    always resetting to "English".
+- Suppressed Google's injected banner/tooltip/menu chrome, which lands as
+  direct children of `<body>` with obfuscated class names that differ
+  depending on how translation was triggered. Targeted structurally
+  (`body > .skiptranslate`, `#goog-gt-tt`, `iframe.goog-te-banner-frame`)
+  rather than by a specific class, plus suppressed the hover-highlight
+  styling (`.goog-text-highlight` in `theme.scss`) so none of it shifts the
+  page or clashes with the site's fixed header.
 - Fixed a pre-existing bug in the chapter-transition click handler
   (`includes/skip-link-head.html`) that treated any same-page anchor click
   (including `href="#"`) as a navigation and forced a full page reload —
@@ -339,7 +358,6 @@ When adding new content, always:
   translated by the language selector — only live DOM text (headings, body
   copy, tables, SVG/HTML figure text, sidebar/TOC labels) is. Prefer
   HTML/SVG-based figures over raster images where translation matters.
-- The language selector's open menu renders in a third-party iframe we do
-  not control; it was spot-checked with axe-core in the closed state (the
-  control itself: 0 violations), but the open menu's internal markup is
-  outside our audit surface.
+- The language selector is a native `<select>` we fully control (axe-core:
+  0 violations on every audited page). Google's own widget UI is hidden and
+  never shown to users; only its translation engine runs in the page.
