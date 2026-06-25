@@ -250,6 +250,55 @@ span[id^="cite-"]:target {
   outline-offset: 2px;
 }
 
+/* Language selector (Google Translate) shown at the top of every page's content. */
+.cha-lang-select {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: var(--cha-primary-light);
+  border-bottom: 2px solid var(--cha-primary);
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+}
+
+.cha-lang-select-label {
+  font-weight: 600;
+  color: var(--cha-accent);
+}
+
+.cha-lang-select .goog-te-gadget-simple {
+  background-color: #ffffff;
+  border: 1px solid var(--cha-accent);
+  border-radius: 0;
+  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cha-lang-select .goog-te-gadget-simple:focus-within {
+  outline: 3px solid #1f2a37;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px #eaf5db;
+}
+
+/* Suppress the floating "translated by Google" top banner so it doesn't
+   overlap the fixed site header or shift the page when a language is chosen. */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Avoid Google's translation hover-highlight clashing with site link styling. */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
 /* Ensure clear focus visibility on all common interactive controls. */
 a:focus-visible,
 button:focus-visible,

@@ -1,0 +1,18 @@
+<div id="cha-lang-select" class="cha-lang-select" translate="no">
+  <span id="cha-lang-select-label" class="cha-lang-select-label">Select language:</span>
+  <div id="google_translate_element"></div>
+  <noscript>This site supports machine translation into other languages. Enable JavaScript to use the language selector.</noscript>
+</div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    "google_translate_element"
+  );
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>

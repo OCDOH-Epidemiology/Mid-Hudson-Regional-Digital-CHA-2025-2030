@@ -50,7 +50,9 @@ format:
       - theme.scss
     css: custom-citation-styles.css
     include-in-header: includes/skip-link-head.html
-    include-before-body: includes/skip-to-main.html
+    include-before-body:
+      - includes/skip-to-main.html
+      - includes/language-select.html
     include-after-body: references-dropdown.html
     toc: true
     toc-depth: 3

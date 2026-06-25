@@ -237,6 +237,50 @@ File: `includes/skip-link-head.html`
 
 ---
 
+## 12) Language Selector (Machine Translation)
+
+Files:
+
+- `includes/language-select.html`
+- `_quarto.yml`
+- `theme.scss`
+- `includes/skip-link-head.html`
+
+### Changes
+
+- Added a "Select language:" control on every page using Google's free
+  Website Translator widget (`InlineLayout.SIMPLE`), wired in via
+  `include-before-body` right after the skip link.
+- Suppressed Google's floating "translated by Google" top banner and its
+  hover-highlight styling so neither shifts the page or clashes with the
+  site's fixed header (`.goog-te-banner-frame`, `.goog-text-highlight` in
+  `theme.scss`).
+- Fixed a pre-existing bug in the chapter-transition click handler
+  (`includes/skip-link-head.html`) that treated any same-page anchor click
+  (including `href="#"`) as a navigation and forced a full page reload —
+  this silently broke the translate widget's own dropdown trigger.
+  `shouldAnimateNavigation` now skips the fade/reload for any same-pathname
+  target, not just ones with a non-empty hash.
+- Fixed skip-link/language-selector tab order: Quarto's book template
+  renders `include-before-body` content as the first children of `<main>`,
+  which sits in the DOM *after* the entire sidebar navigation and search
+  box. That buried both controls behind dozens of tab stops. The first
+  script in `includes/skip-link-head.html` now relocates the skip link and
+  `#cha-lang-select` to be the literal first two children of `<body>` on
+  every page load.
+
+### Why
+
+- Gives non-English speakers (Spanish is the largest non-English
+  language reported in the M-H Region per `chapters/03-demographics.qmd`)
+  a way to read the assessment without requiring a full manual translation
+  of every chapter, table, and figure caption.
+- A skip link or language switch that exists in the DOM but isn't reachable
+  until after 15+ chapter links and a search box defeats WCAG 2.4.1's
+  "bypass blocks" intent; both controls must be early, reliable tab stops.
+
+---
+
 ## Validation Performed
 
 ### Automated source audits
@@ -287,3 +331,15 @@ When adding new content, always:
   - zoom/reflow checks (200%)
   - screen reader pass (VoiceOver/NVDA/JAWS where possible)
   - plain-language editorial review
+- The language selector is machine translation, not professional/reviewed
+  translation. Treat it as a baseline accessibility aid, not a substitute
+  for professionally translated materials where accuracy is critical (e.g.
+  clinical guidance, legal notices).
+- Text baked into raster images (e.g. Matplotlib-rendered figures) is not
+  translated by the language selector — only live DOM text (headings, body
+  copy, tables, SVG/HTML figure text, sidebar/TOC labels) is. Prefer
+  HTML/SVG-based figures over raster images where translation matters.
+- The language selector's open menu renders in a third-party iframe we do
+  not control; it was spot-checked with axe-core in the closed state (the
+  control itself: 0 violations), but the open menu's internal markup is
+  outside our audit surface.

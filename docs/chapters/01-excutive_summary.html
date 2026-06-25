@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-59d722b0d079687c6600c5aa91245af3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-14980ee9c1dc84376ff7f2fb70d15f3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,16 +81,25 @@ gtag('config', 'G-Z90XTHLT7L', { 'anonymize_ip': true});
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".skip-link")) return;
-  var targetId = "quarto-document-content";
-  var link = document.createElement("a");
-  link.className = "skip-link";
-  link.href = "#" + targetId;
-  link.textContent = "Skip to main content";
-  if (document.body.firstChild) {
-    document.body.insertBefore(link, document.body.firstChild);
-  } else {
-    document.body.appendChild(link);
+  // Quarto's book template renders include-before-body content as the first
+  // children of <main>, which sits after the entire sidebar navigation and
+  // search box in DOM order. That buries the skip link and language selector
+  // behind dozens of other tab stops, defeating their purpose. Relocate both
+  // to the very start of <body> so they are always the first tab stops.
+  var skipLink = document.querySelector(".skip-link");
+  if (!skipLink) {
+    skipLink = document.createElement("a");
+    skipLink.className = "skip-link";
+    skipLink.href = "#quarto-document-content";
+    skipLink.textContent = "Skip to main content";
+  }
+  if (document.body.firstChild !== skipLink) {
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+
+  var langSelect = document.getElementById("cha-lang-select");
+  if (langSelect && skipLink.nextSibling !== langSelect) {
+    document.body.insertBefore(langSelect, skipLink.nextSibling);
   }
 });
 </script>
@@ -149,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var nextUrl = new URL(anchor.href, window.location.href);
     if (nextUrl.origin !== window.location.origin) return false;
-    if (nextUrl.pathname === window.location.pathname && nextUrl.hash) return false;
+    if (nextUrl.pathname === window.location.pathname) return false;
 
     return true;
   };
@@ -311,6 +320,24 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 <a class="skip-link" href="#quarto-document-content">Skip to main content</a>
+<div id="cha-lang-select" class="cha-lang-select" translate="no">
+  <span id="cha-lang-select-label" class="cha-lang-select-label">Select language:</span>
+  <div id="google_translate_element"></div>
+  <noscript>This site supports machine translation into other languages. Enable JavaScript to use the language selector.</noscript>
+</div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    "google_translate_element"
+  );
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async=""></script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
