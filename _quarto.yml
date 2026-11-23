@@ -49,7 +49,9 @@ format:
       - default
       - theme.scss
     css: custom-citation-styles.css
-    include-in-header: includes/skip-link-head.html
+    include-in-header:
+      - includes/skip-link-head.html
+      - includes/posthog.html
     include-before-body:
       - includes/skip-to-main.html
       - includes/language-select.html
