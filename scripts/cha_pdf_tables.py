@@ -112,7 +112,10 @@ def _column_width_units(series: pd.Series, header: str) -> int:
     max_cell_len = 0
     if not sample.empty:
         lengths = sample.map(lambda value: len(str(value).strip()))
-        max_cell_len = int(lengths.max() if not lengths.empty else 0)
+        # .max() may return a Series when df[col] is a DataFrame
+        # (duplicate column labels after flattening).
+        values = lengths.to_numpy().ravel()
+        max_cell_len = int(values.max()) if values.size else 0
     header_len = len(str(header).strip())
     effective = max(header_len, max_cell_len)
     # Cap contribution so one extreme value does not dominate.
